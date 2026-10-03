@@ -7261,6 +7261,331 @@ const LESSON_OVERRIDES = {
   ],
   smeChecked: false
 },
+
+  'art23-m1': {
+  title: 'What changes off-airport',
+  brief:
+    'The response clock, the authority and the objectives are all ' +
+    'different past the perimeter. Most of what you know does not travel.',
+  points: [
+    'Where a significant proportion of arrivals and departures takes place over water, swampy areas or other difficult terrain, the authority should ensure special procedures and equipment are available (§13.1.1).',
+    'Those facilities need not be on the airport or provided by it, if they can be made immediately available by off-airport agencies as part of the airport emergency plan (§13.1.1).',
+    'In all cases the authority must determine and specify in advance the response area for which it undertakes to provide a rescue service (§13.1.1).',
+    'Difficult terrain types: the sea or other large bodies of water; swamps or similar surfaces including tidal river estuaries; mountainous areas; desert areas; and locations subject to heavy seasonal snowfalls (§13.1.4).',
+    'The objectives of each operation must be to create conditions in which survival is possible and from which the total rescue operation can succeed (§13.1.3).',
+    'The first stage has as its objective removal of immediate hazards to survivors, their protection including first-aid treatment, and use of communications equipment to identify where additional rescue forces must respond. The emphasis is on rescue and need not include any firefighting capability (§13.1.3).',
+    'The inevitably extended response times of the first vehicles are likely to preclude effective firefighting operations if a fire situation exists in the impact stage (§13.1.3.1).',
+    'Plans should have regard to search and rescue organisation services under Annex 12 §4.2.1 so separate responsibilities are clearly delineated, and all operations and exercises should involve the rescue coordination centre (§13.1.2).',
+    'Training requirements reflect the terrain conditions (§13.1.5).'
+  ],
+  body: `
+    <h3>The scope decision, made in advance</h3>
+    <p>§13.1.1 sets a condition and a duty. The condition: <em>at airports where a significant proportion of aircraft arrivals and departures takes place over water, swampy areas or other forms of difficult terrain in the immediate vicinity of the airport and where conventional RFF vehicles may not be capable of an effective response</em>. The duty: <em>the airport or appropriate authority should ensure the availability of special procedures and equipment to deal with accidents which may occur in these areas</em>.</p>
+    <p>Two features worth noting. "A significant proportion" is the trigger — not all, not some. And the duty attaches to the <em>airport or appropriate authority</em>, which is a deliberate phrase: it accommodates States where this responsibility sits with a national body rather than the aerodrome operator.</p>
+    <p>Then the sentence that makes this a planning obligation rather than an equipment list: <strong>in all cases, the airport or appropriate authority must determine and specify in advance the response area for which it undertakes to provide a rescue service.</strong></p>
+    <p>In advance. Specified. So the first question is not "what could we do" — it is <em>where does our responsibility stop</em>. That line has to be drawn on a map, published, and briefed, because the alternative is discovering it on scene with survivors in the water and an aircraft between you and them.</p>
+
+    <h3>Who provides it, and who decides the boundary</h3>
+    <p>§13.1.1 permits the facility to be elsewhere: <em>these facilities need not be located on, or be provided by, the airport if they can be made immediately available by off-airport agencies as part of the airport emergency plan</em>. §13.1.3's underwater provisions repeat the point in more detail for the marine case.</p>
+    <p>And §13.1.2 draws the line with the national search and rescue organisation: <strong>in producing its detailed plan, the airport or appropriate authority should have regard to the services and facilities already provided by the search and rescue organization in accordance with 4.2.1 of Annex 12 — Search and Rescue, to ensure that the separate responsibilities for an aircraft accident in the vicinity of the airport are clearly delineated.</strong></p>
+    <p>So there are two organisations with potentially overlapping responsibility, and the plan has to say where one stops. Then the coordination requirement: <em>all operations, and any exercises conducted to test operational efficiency, should involve the relevant rescue coordination centre, to ensure the effective mobilization of all resources</em>.</p>
+    <p>Note that second one. The rescue coordination centre is involved in <strong>exercises</strong>, not only in real operations. That is ART-19's principle arriving from a different direction — a boundary between services that has never been exercised is a boundary that will be contested on scene.</p>
+
+    <h3>The objectives change, and that is the biggest difference</h3>
+    <p>§13.1.3 is the clause to read twice: <strong>the objectives of each operation must be to create conditions in which survival is possible and from which the total rescue operation can succeed. This concept anticipates that the initial, rapid response attendance may have to provide a preliminary level of succour while awaiting the arrival of a larger rescue force.</strong></p>
+    <p>Then the first stage's objectives, enumerated: <em>the removal of immediate hazards to survivors, their protection, including the first-aid treatment of injuries, and the use of communications equipment to identify the locations to which additional rescue forces must respond. The emphasis will be on rescue and need not include any firefighting capability.</em></p>
+    <p>Three tasks, and one deliberate omission. Remove immediate hazards. Protect and treat. Then — and this is the task that is easy to overlook on an aircraft fire callout — <strong>use communications equipment to identify the locations to which additional rescue forces must respond</strong>. Marking and communicating beats moving survivors, because moving them is what you do badly with insufficient resources.</p>
+    <p>And the omission is load-bearing: <em>the emphasis will be on rescue and need not include any firefighting capability.</em></p>
+
+    <h3>Why firefighting is excluded, not deprioritised</h3>
+    <p>§13.1.3.1 gives the reasoning, and it is a resource argument rather than a hazard one: <strong>if a fire situation has occurred in the impact stage of an accident, the inevitably extended response times of the first vehicles are likely to preclude effective firefighting operations.</strong></p>
+    <p>Read that carefully. It is not that fire is less important. It is that the response time has already exceeded the window in which firefighting is effective, so attempting it consumes resources that would otherwise create survival conditions. The doctrine is honest in a way that is uncomfortable: at that point, the fire is not your problem, and pretending otherwise is how a preliminary succour force becomes a second casualty.</p>
+    <p>Which is why the equipment list in §13.1.5 contains <em>no extinguishing agents</em>. It contains communications, navigation, medical first aid, life support including life-jackets and shelter and foil blankets and drinking water, lighting, and lines, boat hooks, megaphones, wire cutters and harness knives.</p>
+
+    <h3>Which terrain this actually applies to</h3>
+    <p>§13.1.4 lists the types, and it is broader than people assume: <em>a) the sea or other large bodies of water adjacent to the airport; b) swamps or other similar surfaces, including the estuaries of tidal rivers; c) mountainous areas; d) desert areas; and e) locations which are subject to heavy seasonal snowfalls.</em></p>
+    <p>Swamps and tidal river estuaries are the ones most services overlook, and they cover a great deal of real geography. A response area that includes an estuary is an amphibious and possibly diving problem, not a dry-land one.</p>
+
+    <h3>The seven things that change</h3>
+    <ol>
+      <li><strong>Your authority.</strong> Drawn on a map, specified in advance, delineated against the national SAR organisation.</li>
+      <li><strong>Your objectives.</strong> Survival conditions and succour, not firefighting. §13.1.3.</li>
+      <li><strong>Your equipment.</strong> A completely different list — no agents, life-support heavy. §13.1.5.</li>
+      <li><strong>Your vehicles.</strong> Helicopters, hovercraft, boats, amphibious, tracked and all-terrain. §13.1.6.</li>
+      <li><strong>Your training.</strong> <em>The training required by the personnel delegated to these duties will similarly reflect the terrain conditions</em> (§13.1.5).</li>
+      <li><strong>Your scale of provision.</strong> <em>The scale of provision of rescue equipment should be related to the capacities of the larger aircraft using the airport</em> (§13.1.3.1) — which is the same capacity principle as the critical area, applied to survivors rather than water.</li>
+      <li><strong>Your coordination.</strong> Rescue coordination centre, in exercises as well as operations. §13.1.2.</li>
+    </ol>
+
+    <blockquote>
+      <p><strong>SME action:</strong> draw the line. Establish and record, in advance as §13.1.1 requires, the response area within which your service undertakes to provide a rescue service — and obtain the delineation against your national search and rescue organisation under Annex 12 §4.2.1, with the rescue coordination centre involved. Then check the other side of it: is the rescue coordination centre included in your exercise programme for this response area, or only in the real-operations plan? §13.1.2 names both. Finally, confirm your crews have been briefed that the off-airport objective is survival and succour and need not include firefighting, because that is the belief most likely to arrive at a marine accident scene and it will shape their first ten minutes.</p>
+    </blockquote>
+  `,
+  refs: [
+    'ICAO Doc 9137 Part 1 — §13.1.1 special procedures and equipment for difficult terrain, provision by off-airport agencies, and the requirement to determine and specify in advance the response area',
+    'ICAO Doc 9137 Part 1 — §13.1.2 Annex 12 §4.2.1 search and rescue services, delineation of responsibilities, rescue coordination centre involved in operations AND exercises, Doc 9731 IAMSAR reference',
+    'ICAO Doc 9137 Part 1 — §13.1.3 objectives to create conditions in which survival is possible; first-stage objectives of removing immediate hazards, protecting and treating, and using communications to identify locations; emphasis on rescue and need not include any firefighting capability',
+    'ICAO Doc 9137 Part 1 — §13.1.3.1 extended response times precluding effective firefighting; scale of rescue equipment related to the capacities of the larger aircraft',
+    'ICAO Doc 9137 Part 1 — §13.1.4 types of difficult terrain; §13.1.5 basic equipment list and training reflecting terrain conditions',
+    'ICAO Annex 12 — Search and Rescue, §4.2.1 (referenced by §13.1.2; not reproduced by this platform)',
+    'Course ART-10 m1 — the rescue decision; ART-19 m2 — agencies and mutual aid'
+  ],
+  smeChecked: false
+},
+
+  'art23-m2': {
+  title: 'Access and water supply',
+  brief:
+    'The access route is the response time. Nothing else you own ' +
+    'matters if the vehicle cannot get there and cannot get home.',
+  points: [
+    'An assessment of approach and departure areas within 1 000 m of the runway threshold should be carried out to determine rescue options and suitable resources (§13.3.1).',
+    'Facilities housing specialist equipment need not be at the aerodrome if they can be made available within reasonable time frames by off-aerodrome agencies as detailed in the aerodrome emergency plan (§13.3.2).',
+    'Where RFF vehicles respond using the public highway, an assessment of the implications should be carried out, covering legal requirements, policies, driver competence and training, route pre-planning, and monitoring and review (§13.3.3).',
+    'Consideration should be given to direct access to runways, designated access routes, road maintenance, mitigating blocked routes, vehicle gross weight and maximum dimensions, trafficability in expected conditions, and gates or frangible sections in the security fence (§13.3.4).',
+    'Access and exit points need clear identification; retro-reflective tape or markers assist where access may be needed in darkness or low visibility (§13.3.4).',
+    'Provide sufficient vertical clearance from overhead obstructions for the largest RFF vehicles (§13.3.4(j)).',
+    'In marine incidents, floating fuel is to be expected and wind and water currents must be considered to prevent it moving into hazardous areas (§13.2.3).',
+    'Victims are more apt to be found downwind or downstream (§13.2.7).',
+    'A command post should be established at the most feasible location on an adjacent shore, positioned to facilitate in and out movement of water rescue vehicles (§13.2.12).'
+  ],
+  body: `
+    <h3>Assess 1 000 m, not the aerodrome boundary</h3>
+    <p>§13.3.1 sets the assessment area and the nine factors, and the area is the important part: <strong>an assessment of the approach and departure areas within 1 000 m of the runway threshold should be carried out to determine the options available for rescue, including suitable resources that should be provided.</strong></p>
+    <p>That is the same 1 000 m that §11.1.2 uses for the grid maps, and for the same reason — <em>studies of the ICAO accident incident data reporting (ADREP) system show that a large (more than 25 percent) portion of accidents occurred on the area (1 000 m long and 60 m width) beyond the runway end</em>.</p>
+    <p>So the assessment area is evidence-based, not administrative. More than a quarter of accidents happen there.</p>
+    <p>The nine factors from §13.3.1, which are a complete assessment method:</p>
+    <ol>
+      <li>the environment, in particular the topography and composition of the surface;</li>
+      <li>physical hazards and associated risks that exist within the area;</li>
+      <li>options for access and for RFF purposes;</li>
+      <li>hazards, risks and control measures of the options for rescue;</li>
+      <li>use of external services;</li>
+      <li>an analysis of the advantages and disadvantages of the options;</li>
+      <li>policies and procedures to define and implement practices;</li>
+      <li>competence standards to match the above;</li>
+      <li>monitoring, testing and review of the capability.</li>
+    </ol>
+    <p>Item 9 closes the loop: the assessment is not a document, it has a review cycle.</p>
+
+    <h3>The highway is a decision with consequences</h3>
+    <p>§13.3.3 addresses the case where RFF vehicles use the public highway, and it is a distinct planning problem because it puts your vehicles, your drivers and your response time inside somebody else's rules. <strong>Where RFF vehicles respond to accidents or incidents using the public highway, an assessment of the implications of such a response should be carried out.</strong></p>
+    <p>Five things it must cover: <em>a) legal requirements for vehicles and drivers; b) that suitable policies and procedures are in place; c) competence and training requirements for drivers; d) pre-planning of routes for suitability; and e) monitoring and review of such responses.</em></p>
+    <p>Item (a) is the one your service cannot determine alone — it is your State's vehicle and driving law, and the emergency vehicle exemptions in it. Items (c) and (d) are the ones most services get wrong: a driver qualified on the airfield is not automatically qualified on a public road with traffic, and a route that is fine in daylight is not fine at 03:00 in rain.</p>
+
+    <h3>§13.3.4 — ten physical constraints, each one a failure somebody predicted</h3>
+    <p>This is the most operationally useful list in Chapter 13, and every item is a way a response has failed or been delayed somewhere:</p>
+    <ul>
+      <li><strong>(a)</strong> Provide direct access to the operational runway(s).</li>
+      <li><strong>(b)</strong> Designate access routes to the response area, <em>considering debris and casualties</em>.</li>
+      <li><strong>(c)</strong> Maintain roads and access routes, <em>including construction activities</em>.</li>
+      <li><strong>(d)</strong> Mitigate the possibility of any public or private non-emergency vehicle blocking the progress of responding vehicles.</li>
+      <li><strong>(e)</strong> Take into account <em>the gross weight and maximum dimensions</em> of the RFF vehicles expected to use those routes, or any other responding vehicles.</li>
+      <li><strong>(f)</strong> Roads must be <em>capable of being traversed in expected conditions</em>.</li>
+      <li><strong>(g)</strong> Exit/access gates or frangible sections in the security fence, constructed to allow RFF vehicles to pass through <em>with minimal delay</em>.</li>
+      <li><strong>(h)</strong> Exit and access points clearly identified — <em>retro-reflective tape or markers will be of assistance where the aerodrome may need to be accessible during the hours of darkness or conditions of low visibility</em>.</li>
+      <li><strong>(i)</strong> Mitigation of impediments to RFF vehicle mobility.</li>
+      <li><strong>(j)</strong> <em>Provide sufficient vertical clearance from overhead obstructions for the largest RFF vehicles.</em></li>
+    </ul>
+    <p>Three of these are the ones I would put first for a walk-through. (e) — a route you use for the fleet you have now, but which a new vehicle will not fit down. (h) — a gate you find in daylight and cannot find at night. (j) — a height restriction nobody recorded because it was never a problem until it was.</p>
+    <p>And (d) deserves its own note: a non-emergency vehicle blocking the route is not hypothetical, and the mitigation is the aerodrome operator's responsibility rather than yours. If you have not raised blocked-route risk with your operator, that is a finding.</p>
+
+    <h3>Water supply, and it is not the same problem</h3>
+    <p>Off-airport, your hydrant network is behind you and §13.1.5's equipment list contains no agents. So water is a logistics question rather than an engineering one, and §13.3.2 is the provision: <em>the facilities that house this equipment need not be located on, or provided by, the aerodrome, if they can be made available within reasonable time frames by off-aerodrome agencies as detailed in the aerodrome emergency plan.</em></p>
+    <p>Note the standard's phrase: <strong>within reasonable time frames</strong>. Not "immediately". So your plan needs an answer to the question your crews will actually face — what is carried, and what can be obtained, and how long does it take to arrive. A tank on a trailer that takes forty minutes to come is a different capability from one that is five minutes away, and only one of them is a response.</p>
+
+    <h3>The marine case, because it is the one with detail</h3>
+    <p>§13.2 gives the substantive provisions and they are worth reading as a template, because the logic transfers even where you have no water.</p>
+    <p><strong>Fuel is to be expected (§13.2.3).</strong> <em>It can be anticipated that the impact of the aircraft into the water might rupture fuel tanks and lines. It is reasonable to assume that quantities of fuel will be found floating on the surface of the water.</em> And then three ignition and movement controls: <em>boats having exhausts at the waterline may present an ignition hazard if operated where this condition is present. Wind and water currents must be taken into consideration in order to prevent floating fuel from moving into areas where it would be hazardous. Care should be taken in the use of flares, flame floats or other pyrotechnics where fuel is present on the water.</em></p>
+    <p>That last one is a prohibition, not a caution — flares and flame floats on fuel-slicked water are an ignition source.</p>
+    <p><strong>Search direction (§13.2.7).</strong> <em>It should be anticipated that victims are more apt to be found downwind or downstream. This should be taken into consideration in planning the attack.</em> — a search-pattern fact that applies on land too.</p>
+    <p><strong>Command post (§13.2.12).</strong> <em>A command post should be established at the most feasible location on an adjacent shore. This should be located in a position to facilitate the in and out movement of water rescue vehicles.</em> — so the command post is chosen for vehicle flow, not for a good view.</p>
+
+    <h3>The access walk</h3>
+    <p>§13.3.4 is a checklist, and the way to use it is physically. Take your largest vehicle — the one with the greatest gross weight and dimensions — and drive the full route in daylight and again in darkness. Then walk the parts beyond the fence. Record: where it is tightest, where a gate is unmarked, where a tree or a cable is low, where a surface is soft after rain, and where a non-emergency vehicle habitually parks.</p>
+    <p>Then compare against §13.3.4. Every finding is a §13.3.1 assessment item, and every §13.3.1 assessment item you cannot evidence is a gap in the plan you are required to have.</p>
+
+    <blockquote>
+      <p><strong>SME action:</strong> four checks. First, confirm the §13.3.1 assessment of the approach and departure areas within 1 000 m of the runway threshold exists, covers all nine factors, and has a review cycle — factor (i) is monitoring, testing and review. Second, drive the access route in your largest vehicle, in daylight and in darkness, and record every constraint; confirm gross weight, maximum dimensions and vertical clearance are all checked against that vehicle. Third, if your vehicles use the public highway, produce the §13.3.3 assessment — legal requirements, policies, driver competence, pre-planned routes, monitoring and review. Fourth, check that every exit and access point in the security fence is identifiable at night, and that any gate or frangible section passes your largest vehicle with minimal delay.</p>
+    </blockquote>
+  `,
+  refs: [
+    'ICAO Doc 9137 Part 1 — §13.3.1 assessment of approach and departure areas within 1 000 m of the runway threshold and the nine assessment factors',
+    'ICAO Doc 9137 Part 1 — §13.3.2 facilities need not be at the aerodrome if available within reasonable time frames by off-aerodrome agencies',
+    'ICAO Doc 9137 Part 1 — §13.3.3 assessment of implications where RFF vehicles respond using the public highway',
+    'ICAO Doc 9137 Part 1 — §13.3.4 (a) to (j) direct access, designated routes, maintenance, blocked routes, gross weight and maximum dimensions, trafficability, gates and frangible sections, identification and retro-reflective markers, impediments to mobility, vertical clearance',
+    'ICAO Doc 9137 Part 1 — §13.2.3 floating fuel expected, exhausts at the waterline as an ignition hazard, wind and currents, care with flares and flame floats',
+    'ICAO Doc 9137 Part 1 — §13.2.7 victims more apt to be found downwind or downstream; §13.2.12 command post on an adjacent shore positioned for in and out movement of water rescue vehicles',
+    'ICAO Doc 9137 Part 1 — §11.1.2 grid maps to at least 1 000 m beyond the threshold and the ADREP finding on accidents beyond the runway end',
+    'Course ART-11 m1 — mental mapping and the six driver competencies',
+    'Course ART-25 — water supply, hydrants and sustainability'
+  ],
+  smeChecked: false
+},
+'art23-m3': {
+  title: 'Communications and mutual aid',
+  brief:
+    'Off-airport you have no discrete communication system, no ' +
+    'alerting system, and no guarantee of help.',
+  points: [
+    'Basic communications equipment may include equipment for visual signals; ideally a transmitter on the distress frequency provides a link with air traffic control and the emergency operations centre (§13.1.5(a)).',
+    'Navigation aids, medical first-aid equipment, life-support equipment including life-jackets, shelter, foil blankets and drinking water, lighting, lines, boat hooks, megaphones and tools are all in the basic equipment list (§13.1.5).',
+    'For successful liaison with helicopters, a communications link is essential, with control of the surface facility under the direction of a person familiar with helicopter operational requirements (§13.1.7(a)).',
+    'Helicopter downwash can cause serious distress to survivors in the water by creating turbulence (§13.1.7(a)).',
+    'In all operations where divers are in the water, the standard diver\'s flag should be flown and boats warned to exercise extreme caution (§13.2.5).',
+    'Divers must be highly trained in both scuba diving and underwater search and recovery techniques, with qualifications established by training and practical examination (§13.2.4).',
+    'In no instance should dragging and diving operations be conducted simultaneously (§13.2.11).',
+    'All operations and any exercises should involve the relevant rescue coordination centre (§13.1.2).',
+    'Annex 14 requires a predetermined response for specialist rescue services at aerodromes near water, swampy areas or difficult terrain, established, tested and assessed at regular intervals (§9.1.15).'
+  ],
+  body: `
+    <h3>You lose the things you rely on</h3>
+    <p>Annex 14 §9.2.39 requires a discrete communication system linking a fire station with the control tower, other fire stations and the RFF vehicles. §9.2.40 requires an alerting system operable from the fire station, other stations and the tower. <strong>All of that is inside the aerodrome fence.</strong></p>
+    <p>Past the fence you are on a public radio frequency, if you have one, and §13.1.5(a) sets what you should carry: <em>communications equipment, which may include equipment for visual signals. Ideally the use of a transmitter on the distress frequency will provide a link with air traffic control and the emergency operations centre.</em></p>
+    <p>Two things in that. A transmitter on the distress frequency, which is the link back to ATC and the EOC — so the notification pathway from ART-18 and ART-13 m3 still exists, just less well. And <em>visual signals</em>, which is worth taking seriously: in the terrain §13.1.4 describes, radio coverage is the first thing to fail and the last thing your training will have prepared you for.</p>
+
+    <h3>The full equipment list, which tells you the doctrine</h3>
+    <p>§13.1.5 lists the basic equipment and the list is itself the most useful teaching aid in Chapter 13, because what is absent is as informative as what is present:</p>
+    <ul>
+      <li><strong>(a)</strong> Communications equipment, possibly including visual signals; ideally a distress frequency transmitter linking ATC and the EOC.</li>
+      <li><strong>(b)</strong> Navigation aids.</li>
+      <li><strong>(c)</strong> Medical first-aid equipment.</li>
+      <li><strong>(d)</strong> Life-support equipment — <em>including life-jackets in marine situations, shelter, foil blankets and drinking water</em>.</li>
+      <li><strong>(e)</strong> Lighting equipment.</li>
+      <li><strong>(f)</strong> Lines, boat hooks, megaphones and tools, <em>e.g. wire cutters and harness knives</em>.</li>
+    </ul>
+    <p>No extinguishing agents. No turret feeds. Instead: shelter, foil blankets and drinking water, because per §13.1.3 the objective is creating conditions in which survival is possible and the first stage is succour. Harness knives because restraint is a hazard in both cabins and the water. Megaphones because you are managing a group of survivors on a beach and nobody can hear you.</p>
+    <p>And <em>drinking water</em> should not be overlooked. Survivors of a ditching who are not hypothermic still dehydrate, and the obvious rescue supplies rarely include it.</p>
+
+    <h3>Mutual aid, and who is actually available</h3>
+    <p>§13.1.1 permits facilities to be provided by off-airport agencies, and §13.1.7 makes the practical point: <em>in most states the more complex forms of vehicles are already in service with military formations or other forms of security organizations, from which valuable operational performance data may be available.</em></p>
+    <p>So the specialist capability you need probably already exists in your State — you are not procuring a hovercraft, you are arranging access to one. And the clause points at the thing that matters more than the vehicle: <strong>operational performance data</strong>. A vehicle you have not seen operate, whose crew you have not met, is a line in your plan rather than a capability.</p>
+    <p>Two follow-ons. §13.1.2 requires the rescue coordination centre involved in operations <em>and exercises</em>. And Annex 14 §9.1.15 recommends that at aerodromes near water, swampy areas or difficult terrain, the plan should include <em>the establishment, testing and assessment at regular intervals of a predetermined response for the specialist rescue services</em>. Predetermined, tested, assessed, at regular intervals — four obligations in one Recommendation.</p>
+
+    <h3>The vehicle types, and what each one adds</h3>
+    <p>§13.1.6 lists them: <em>a) helicopters; b) hovercraft; c) boats, of a number of types and capacities; d) amphibious vehicles; e) tracked vehicles; and f) all-terrain vehicles, including those employing ground-effect to minimize wheel-loadings.</em></p>
+    <p>Helicopters get the most detail, and the operational content is specific:</p>
+    <ul>
+      <li><em>For successful liaison with helicopters, in operations on land or in the water, a communications link is essential, with control of the surface facility under the direction of a person familiar with the operational requirements of helicopters.</em> — so somebody qualified is in charge of the surface side. That is a named post.</li>
+      <li><em>This will reduce the hazard to the helicopter, particularly at night, from obstructions and the movement of vehicles and personnel at the accident site.</em> — the accident site is a hazard to the aircraft.</li>
+      <li>They can drop life rafts, dinghies and other life-support equipment, and serve as <em>airborne control positions or as a source of floodlighting</em>.</li>
+      <li><strong>And the hazard to survivors:</strong> <em>the downwash from helicopters can cause serious distress to survivors in the water by creating turbulence.</em></li>
+      <li><em>It may therefore be necessary to link any helicopter rescue effort with a simultaneous surface operation.</em></li>
+      <li>And on cost: <em>the cost involved in housing, operating and maintaining a continuously-available rescue helicopter may preclude its provision at an airport facility but arrangements with military or commercial organizations should secure its availability.</em></li>
+    </ul>
+    <p>That last point is the honest one. A continuously available rescue helicopter at an airport is rarely affordable, and the standard's answer is arrangements rather than provision.</p>
+
+    <h3>Divers, where your service has them</h3>
+    <p>§13.2.4 and §13.2.5 set the standard, and it is high: <em>all divers who may be called for this type of service should be highly trained in both scuba diving and underwater search and recovery techniques</em>, with <em>the qualifications of the individual divers should be established by training and practical examination</em>. In areas without governmental or municipal underwater teams, <em>arrangements may be made with private diving clubs</em>.</p>
+    <p>Then the operational safety rule: <strong>in all operations where divers are in the water, the standard diver's flag should be flown and boats operating in the area should be warned to exercise extreme caution.</strong></p>
+    <p>And the one that prevents a fatal error: <strong>in no instance should dragging and diving operations be conducted simultaneously.</strong> A dragging wire across a dive area will kill the diver. That is a prohibition, and it is the kind of rule that exists because it has been broken.</p>
+
+    <h3>What to confirm before you need it</h3>
+    <ol>
+      <li><strong>Your boundary</strong> — §13.1.1, specified in advance, delineated against the national SAR organisation.</li>
+      <li><strong>Your equipment against §13.1.5</strong>, and specifically whether visual signalling capability is carried.</li>
+      <li><strong>Your specialist access</strong> — which organisation provides what, on what callout time, tested at regular intervals per §9.1.15.</li>
+      <li><strong>Your liaison posts</strong> — a named person for helicopter surface control per §13.1.7(a), and a rescue coordination centre contact.</li>
+      <li><strong>Your diver arrangements</strong> — trained and examined, with the flag procedure and the dragging prohibition briefed.</li>
+      <li><strong>Your exercises</strong> — §13.1.2 puts the rescue coordination centre in the exercise programme, not only the operations plan.</li>
+    </ol>
+
+    <blockquote>
+      <p><strong>SME action:</strong> audit your off-airport equipment against §13.1.5&rsquo;s six categories and identify what is missing — particularly visual signalling capability, navigation aids, shelter, foil blankets and drinking water, and harness knives. Then confirm three arrangements. Which organisation provides your specialist vehicles, on what callout time, and has that response been tested and assessed at regular intervals as §9.1.15 requires? Who is your named person for helicopter surface control under §13.1.7(a), and do they know the downwash hazard to survivors in the water? And is the rescue coordination centre in your <em>exercise</em> programme for this response area, as §13.1.2 requires, or only in the real-operations plan?</p>
+    </blockquote>
+  `,
+  refs: [
+    'ICAO Doc 9137 Part 1 — §13.1.5 basic equipment list including visual signals, distress frequency transmitter, navigation aids, medical first aid, life-support with life-jackets, shelter, foil blankets and drinking water, lighting, lines, boat hooks, megaphones, wire cutters and harness knives; training reflecting terrain conditions',
+    'ICAO Doc 9137 Part 1 — §13.1.1 facilities available immediately from off-airport agencies as part of the airport emergency plan',
+    'ICAO Doc 9137 Part 1 — §13.1.2 rescue coordination centre involved in all operations and any exercises; §13.1.6 the six vehicle types; §13.1.7 military and security formations as a source of operational performance data',
+    'ICAO Doc 9137 Part 1 — §13.1.7(a) helicopter liaison, communications link, surface facility under a person familiar with helicopter requirements, hazard to the helicopter from obstructions and vehicle movement, downwash causing turbulence to survivors, simultaneous surface operation, and arrangements rather than provision where cost precludes',
+    'ICAO Doc 9137 Part 1 — §13.2.4 diver training and practical examination; §13.2.5 standard diver\'s flag and boats warned; §13.2.11 no simultaneous dragging and diving',
+    'ICAO Annex 14 Volume I — §9.2.39 discrete communication system; §9.2.40 alerting system; §9.1.15 predetermined response for specialist rescue services, established, tested and assessed at regular intervals',
+    'Course ART-18 m1 — the alerting system; ART-13 m3 — notification pathways; ART-19 m2 — mutual aid'
+  ],
+  smeChecked: false
+},
+'art23-m4': {
+  title: 'Working an unstabilised scene',
+  brief:
+    'A floating cabin is the hardest scene in this curriculum. ' +
+    'It can sink while you are still assessing it.',
+  points: [
+    'The objectives of each operation must be to create conditions in which survival is possible and from which the total rescue operation can succeed (§13.1.3).',
+    'The first stage: removal of immediate hazards to survivors, their protection including first-aid treatment, and use of communications equipment to identify locations to which additional rescue forces must respond. The emphasis is on rescue and need not include any firefighting capability (§13.1.3).',
+    'Where occupied sections are found floating, great care must be exercised not to disturb their watertight integrity (§13.2.9).',
+    'Removal of occupants should be accomplished as smoothly and quickly as possible; any shift in weight or lapse in time may result in sinking (§13.2.9).',
+    'Rescuers should use caution so that they are not trapped and drowned in these situations (§13.2.9).',
+    'Where occupied sections are submerged there remains the possibility of enough trapped air to maintain life, and entry by divers should be made at the deepest point possible (§13.2.10).',
+    'Where fire is present, approach after wind direction and velocity, water current and swiftness are taken into consideration (§13.2.6).',
+    'Victims are more apt to be found downwind or downstream (§13.2.7).',
+    'In no instance should dragging and diving operations be conducted simultaneously (§13.2.11).',
+    'Helicopter surface facility under a person familiar with helicopter operational requirements; downwash causes serious distress to survivors in the water (§13.1.7(a)).'
+  ],
+  body: `
+    <h3>What makes this scene different from everything else you have done</h3>
+    <p>On the airfield the scene is stable. The aircraft is on the ground, chocked, and the ground does not move. Past the fence that assumption fails in several ways at once — and §13.2.9 is the provision that makes the difference concrete:</p>
+    <p><strong>Where occupied sections of aircraft are found floating, great care must be exercised to not disturb their watertight integrity. Removal of the occupants should be accomplished as smoothly and quickly as possible. Any shift in weight or lapse in time may result in their sinking. Rescuers should use caution so that they are not trapped and drowned in these situations.</strong></p>
+    <p>Three things in that sentence. <em>Do not disturb watertight integrity</em> — every action you take is a breach risk. <em>Smoothly and quickly</em> — the two requirements pull against each other, which is why it says both. And <em>any shift in weight or lapse in time</em> — your rescue is destabilising the thing you are rescuing from, and hesitation is not neutral, it is a contribution to sinking.</p>
+    <p>And then the sentence that should be briefed to every rescuer: <strong>rescuers should use caution so that they are not trapped and drowned in these situations.</strong> The hazard on this scene is not the aircraft. It is the aircraft landing on the person rescuing from it.</p>
+
+    <h3>Why "smoothly and quickly" and what it means in practice</h3>
+    <p>The apparent contradiction is real and it is resolvable, in one direction only: <strong>efficiently rather than cautiously.</strong></p>
+    <p>§13.1.3's first-stage objectives give you the order of tasks — <em>the removal of immediate hazards to survivors, their protection, including the first-aid treatment of injuries, and the use of communications equipment to identify the locations to which additional rescue forces must respond.</em> That is the sequence, and it is a sequence precisely because each step makes the next one safer.</p>
+    <p>So the tasks that reduce the hazard to the cabin come first: get people off it. Once occupancy is reduced the stability improves and the risk to rescuers falls. Every task that is not "get occupants off" is being done on a structure that is less stable by the minute, and it is being done by someone standing on it.</p>
+    <p>Which brings a discipline that runs against every instinct: <strong>mark before you enter, and communicate before you act.</strong> §13.1.3's third objective — using communications equipment to identify the locations to which additional rescue forces must respond — is not a reporting task. It is what allows a larger force to arrive and act on a scene you have made coherent.</p>
+
+    <h3>The submerged case, and the one piece of good news</h3>
+    <p>§13.2.10: <strong>where occupied sections of the aircraft are found submerged, there remains the possibility that there may be enough air trapped inside to maintain life. Entry by divers should be made at the deepest point possible.</strong></p>
+    <p>That first sentence is the reason it is worth a dive at all — an aircraft section that has gone under is not necessarily a fatality, and the trapped pocket can hold. And <em>the deepest point possible</em> is a counterintuitive instruction worth understanding: water that has entered from above pools at the lowest point, and that is where an air pocket, if there is one, will be.</p>
+    <p>Against that, §13.2.11 gives the search procedure and the prohibition. Where only the approximate location of the crash is established upon arrival, <em>divers should use standard underwater search patterns marking the locations of the major parts of the aircraft with marker buoys. If sufficient divers are not available, dragging operations should be conducted from surface craft.</em> And then: <strong>in no instance should dragging and diving operations be conducted simultaneously.</strong></p>
+
+    <h3>Where to look</h3>
+    <p>§13.2.7 is the clause that changes a search plan: <strong>it should be anticipated that victims are more apt to be found downwind or downstream. This should be taken into consideration in planning the attack.</strong></p>
+    <p>That is a search-pattern fact and it generalises well beyond water. Debris and survivors distribute along the wind vector. A search pattern that ignores it wastes the one resource you do not have.</p>
+
+    <h3>The fire case, and why the agent is never the point</h3>
+    <p>§13.2.6 governs approach: <em>where fire is present, approach should be made after wind direction and velocity, water current and swiftness are taken into consideration. Fire may be moved away from the area by using a sweeping technique with hose streams. Foam and other extinguishing agents should be used where necessary.</em></p>
+    <p>Wind, velocity, current and swiftness — four variables, and on water they do not agree with each other. The surface wind may oppose the current. A fire that is safe to approach on one face is driven onto your approach on the other.</p>
+    <p>And §13.2.3 establishes that fuel is to be expected: <em>it can be anticipated that the impact of the aircraft into the water might rupture fuel tanks and lines. It is reasonable to assume that quantities of fuel will be found floating on the surface of the water.</em> Three consequences — <em>boats having exhausts at the waterline may present an ignition hazard</em>, <em>wind and water currents must be taken into consideration in order to prevent floating fuel from moving into areas where it would be hazardous</em>, and <em>care should be taken in the use of flares, flame floats or other pyrotechnics where fuel is present on the water</em>.</p>
+    <p>And a detail that explains a lot of confusion: <em>calm surfaces will usually present more of a problem than choppy or rough surfaces.</em> A slick concentrates where the water is still, which is exactly where you would rather work.</p>
+    <p>But the discipline from §13.1.3.1 still governs the objective: <em>the inevitably extended response times of the first vehicles are likely to preclude effective firefighting operations</em>, and the emphasis <em>need not include any firefighting capability</em>. Fighting a marine fire with a first-response force is a resource decision, not a heroism one.</p>
+
+    <h3>The rule about the aircraft</h3>
+    <p>ART-09 m4 established the incident commander's size-up as the mechanism for changing a plan, and on a marine scene it is the same mechanism under worse conditions. §13.2.12 requires the command post <em>at the most feasible location on an adjacent shore</em>, positioned <em>to facilitate the in and out movement of water rescue vehicles</em>.</p>
+    <p>So the command post is ashore, chosen for vehicle flow, and it is some distance from the people doing the work. That is a communications problem and a workload problem, and both need solving deliberately rather than assumed.</p>
+    <p>§13.1.7(a) adds the aviation layer: <em>with control of the surface facility under the direction of a person familiar with the operational requirements of helicopters</em>, to reduce the hazard <em>particularly at night, from obstructions and the movement of vehicles and personnel at the accident site</em>. And <em>the downwash from helicopters can cause serious distress to survivors in the water by creating turbulence</em> — so a rescue aircraft over survivors in the water needs coordination with whoever is in the water with them.</p>
+
+    <h3>Working the scene</h3>
+    <ol>
+      <li><strong>Survival conditions first.</strong> §13.1.3's objective, before anything tactical.</li>
+      <li><strong>Immediate hazards.</strong> Then their protection and first aid.</li>
+      <li><strong>Occupants off the floating section</strong> — smoothly, quickly, and watching the stability. §13.2.9.</li>
+      <li><strong>Mark and communicate</strong> where additional forces are needed. §13.1.3.</li>
+      <li><strong>Search downwind or downstream</strong> from the outset, not afterwards. §13.2.7.</li>
+      <li><strong>Submerged sections</strong> — dive at the deepest point, and never drag and dive at once. §13.2.10, §13.2.11.</li>
+      <li><strong>Fire, only if controlling it serves survival.</strong> Approach on wind, velocity, current and swiftness. No pyrotechnics on a fuel slick. §13.2.6, §13.2.3.</li>
+      <li><strong>Protect your own.</strong> Nobody is lost to a sinking cabin.</li>
+    </ol>
+    <p>Step 8 is in the standard, in one clause, and it is the step with the highest casualty potential in this course.</p>
+
+    <blockquote>
+      <p><strong>SME action:</strong> confirm four things in writing. First, that your marine rescue procedure states that watertight integrity is not to be disturbed, and that the standard&rsquo;s own sequence — immediate hazards, protection and treatment, then mark and communicate — is written down rather than assumed. Second, that your crews have been briefed on the trapped-and-drowned hazard in §13.2.9, in the words of the standard rather than a paraphrase. Third, that your search pattern incorporates the downwind-or-downstream finding from §13.2.7 as a starting assumption. And fourth, that the prohibition on simultaneous dragging and diving operations is briefed to every diver and every surface craft operator, with the flag procedure from §13.2.5 alongside it. Then exercise it — §13.1.2 puts the rescue coordination centre in the exercise programme, and this is the scenario where an unexercised plan fails on the first real callout.</p>
+    </blockquote>
+  `,
+  refs: [
+    'ICAO Doc 9137 Part 1 — §13.1.3 objectives to create conditions in which survival is possible; first-stage objectives; emphasis on rescue and need not include any firefighting capability',
+    'ICAO Doc 9137 Part 1 — §13.1.3.1 extended response times precluding effective firefighting operations',
+    'ICAO Doc 9137 Part 1 — §13.2.3 floating fuel expected, exhausts at the waterline, wind and currents, pyrotechnics caution, calm surfaces more of a problem',
+    'ICAO Doc 9137 Part 1 — §13.2.6 approach after wind direction and velocity, water current and swiftness; sweeping technique with hose streams',
+    'ICAO Doc 9137 Part 1 — §13.2.7 victims more apt to be found downwind or downstream',
+    'ICAO Doc 9137 Part 1 — §13.2.9 floating occupied sections, watertight integrity, smooth and quick removal, shift in weight or lapse in time, rescuers cautioned against being trapped and drowned',
+    'ICAO Doc 9137 Part 1 — §13.2.10 trapped air maintaining life, entry at the deepest point possible; §13.2.11 search patterns and marker buoys, no simultaneous dragging and diving',
+    'ICAO Doc 9137 Part 1 — §13.2.12 command post on an adjacent shore positioned for in and out movement of water rescue vehicles; §13.1.7(a) helicopter surface facility and downwash',
+    'Course ART-09 m4 — tactical decision-making and size-up; ART-20 m1 — deviation discipline'
+  ],
+  smeChecked: false
+},
 };
 
 /**
