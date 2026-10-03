@@ -865,6 +865,525 @@ const LESSON_OVERRIDES = {
       'Your aerodrome SOP — wheel and brake fire tactics'
     ],
     smeChecked: false
+  },
+
+  /* ─────────────────────────────────────────────────────────────────────
+     ART-18 — Communications. Grounded in Doc 9137 Part 1 §2.9, §4.1, §4.2
+     and Chapter 12.3. The alerting lesson leads on the buzzer warning light,
+     which is the most useful detail in the chapter for anyone who has ever
+     sat in a watchroom wondering why the phone had not rung.
+     ───────────────────────────────────────────────────────────────────── */
+  'art18-m1': {
+    title: 'The aerodrome alerting system',
+    brief:
+      'The part of the whole operation that nobody practises, works perfectly, ' +
+      'or fails silently at the worst possible moment.',
+    points: [
+      'There are three independent ways to raise the alarm, and all three should work.',
+      'The ATC line to the main fire station must not route through an intermediate switchboard.',
+      'The buzzer has a warning light because a failed buzzer is silent. That light is the test.',
+      'The broadcast must carry location, aircraft type and preferential routing — not just "fire".',
+      'The master watchroom is continuously staffed. Satellite stations until their vehicles roll.',
+      'Nothing here works unless someone has deliberately broken it and watched it fail.'
+    ],
+    body: `
+      <h3>Why this lesson exists</h3>
+      <p>Every other part of the response is visible when it fails. A vehicle with
+      a broken pump, a turret that will not elevate, a crew that cannot reach the
+      aircraft — all of it announces itself. An alerting system fails
+      <em>silently</em>. Nobody arrives, and for a period the most expensive
+      equipment on the aerodrome sits in a building doing nothing.</p>
+      <p>The guidance is blunt about the dependency: the efficiency of an RFF
+      service is significantly dependent on the reliability and effectiveness of
+      its communication and alarm system, and the importance of prompt and clear
+      communications cannot be over-emphasised (§4.1.1).</p>
+
+      {{video:faa-intro-5}}
+
+      <h3>Three ways in</h3>
+      <p>An alerting system should be provided at a fire station, <strong>capable
+      of being operated from</strong> that station, any other fire station on the
+      aerodrome, and the airport control tower (§2.9.2). Three independent
+      origins, deliberately. A discrete communication system links the fire
+      station with the control tower, any other station, and the RFF vehicles
+      (§2.9.1) — <em>discrete</em> meaning dedicated, not shared through a general
+      telephone exchange.</p>
+      <p>Redundancy is only redundancy if all three paths are tested. An alerting
+      system that has never had its second and third origins exercised is a
+      hypothesis, not a capability.</p>
+
+      <h3>The warning light, and why it exists</h3>
+      <p>Calls normally originate from air traffic control. ATC should be linked
+      to the <em>main</em> fire station by a direct telephone line <strong>not
+      passing through any intermediate switchboard</strong>, so as to avoid delays
+      (§4.2.2). A switchboard in that path is a queue nobody can see.</p>
+      <p>That line normally has a distinctive buzzer in the watchroom — and is
+      <strong>safeguarded against buzzer defects by a warning light</strong>. Read
+      that again. The buzzer can fail, and when it fails it fails silently. The
+      warning light exists solely to tell you that the thing you are relying on to
+      announce an aircraft emergency has stopped announcing anything.</p>
+      <p>So: is your warning light working? Not can it work — is it lit right now,
+      and do you know what it looks like when it is healthy? This is a one-minute
+      weekly check that costs nothing and catches a failure mode that would
+      otherwise be invisible until it mattered.</p>
+
+      <h3>What the broadcast has to say</h3>
+      <p>Fire stations should have a public address system so that details of the
+      emergency can be conveyed to crew members — specifically
+      <strong>location, type of aircraft involved, and preferential routing for
+      RFF vehicles</strong> (§4.2.3).</p>
+      <p>That is the content. "There's a fire, everyone roll" fails three of the
+      four things a responding crew needs. Preferential routing in particular is
+      the one that cannot be derived on the move — it depends on which taxiway is
+      blocked, which is a fact only the watchroom holds.</p>
+      <p>Control of the PA normally sits in the master watchroom, which also
+      carries a switch for silencing the alarm system so it does not interfere
+      with the broadcast. Two systems, one room, and the person silencing one is
+      in the middle of using the other.</p>
+
+      <h3>Main and satellite</h3>
+      <p>Where there is more than one station, one is the main station and its
+      watchroom the <strong>master watchroom, continuously staffed</strong>. A
+      satellite station may have a watchroom with fewer facilities, commensurate
+      with its subordinate role, and is <em>usually staffed only until the
+      satellite's vehicles respond</em> (§4.2.1).</p>
+      <p>The same clause makes a point worth sitting with: the scope of facilities
+      in a watchroom should follow the workload, and if part of the mobilising
+      can be done elsewhere — the aerodrome telephone exchange room, an emergency
+      operations centre — then the fire station watchroom can be better equipped
+      for the job it actually has. Adding capability to the wrong room is a
+      common and expensive way of solving nothing.</p>
+
+      <h3>How to actually test this</h3>
+      <ul>
+        <li>Confirm the warning light is healthy and that someone can say what a
+        faulty one looks like.</li>
+        <li>Trace the ATC line and confirm no switchboard sits in the path.</li>
+        <li>Raise the alarm from the tower, from the satellite, and from the main
+        station, and confirm all three reach the people who must move.</li>
+        <li>Broadcast a test message containing location, aircraft type and
+        routing, and check the crews received all three.</li>
+        <li>Time it, and compare against your response time requirement.</li>
+      </ul>
+      <p>Do this as a scheduled activity, not as part of the full-scale exercise.
+      The exercise is too infrequent to be the only time you find out.</p>
+
+      <blockquote>
+        <p><strong>SME action:</strong> document your actual alerting architecture
+        — the three origins, the line routing, the buzzer and warning light
+        arrangement, the master and satellite establishment and staffing hours, and
+        what the PA broadcast contains. Then state how each is tested, how often,
+        by whom, and where the result is recorded. A capability nobody has tested
+        should be treated as absent.</p>
+      </blockquote>
+    `,
+    refs: [
+      'ICAO Doc 9137 Part 1 — §2.9 communication and alerting systems',
+      'ICAO Doc 9137 Part 1 — §4.1 emergency communications; §4.2 fire station communications',
+      'Your aerodrome emergency plan — alerting and communications',
+      'Course ART-19 — emergency planning and the full-scale exercise'
+    ],
+    smeChecked: false
+  },
+
+  'art18-m2': {
+    title: 'Radio discipline under pressure',
+    brief:
+      'Nearly every radio failure is a discipline failure, not a technical one.',
+    points: [
+      'Clear, concise and understandable, at all levels — that is the standard being applied.',
+      'There should be an aerodrome SOP for emergency communications defining lines of communication and specified frequencies.',
+      'Enough channels to carry command and support separately.',
+      'Confirm what you have been told. An unconfirmed instruction is not an instruction.',
+      'A long transmission is a second during which someone is not listening to the one that mattered.',
+      'Saying "say again" is a professional act. Guessing is not.'
+    ],
+    body: `
+      <h3>What the standard actually says</h3>
+      <p>The guidance puts it plainly: the success of an effective aircraft
+      intervention incident may depend on the transmission and reception of clear,
+      concise and understandable communications at all levels. Clearly
+      communicated information reduces confusion and helps to maximise the use of
+      available resources (§12.3.21).</p>
+      <p>Read that last clause carefully. Communications are not a support
+      function. They are the mechanism that decides whether your available
+      resources get used at all.</p>
+
+      <h3>The SOP is the standard, not you</h3>
+      <p>Every aerodrome should have a standard operating procedure for emergency
+      communications, defining <strong>lines of communication and specified
+      frequencies</strong> (§12.3.21). That means it is written down before the
+      incident, it names who talks to whom, and it names what frequency each of
+      those calls is made on.</p>
+      <p>If your communications are held together by who happens to remember the
+      arrangement, you do not have an SOP — you have a habit, and habits are
+      unavailable to the crew member who joined last month.</p>
+
+      <h3>Channels are a structural decision</h3>
+      <p>There must be enough channels to allow the command and support functions
+      to be carried separately, and the incident commander should be able to
+      communicate with other agencies on separate frequencies (§12.3.21).</p>
+      <p>Put every function on one net and the consequence is predictable: a
+      detailed exchange about a rescue winch blocks the turret position report
+      that was more urgent. Separate channels is not tidiness. It is the only
+      thing that makes the prioritisation real.</p>
+
+      <h3>How it degrades, and what to do about it</h3>
+      <p>Radio discipline fails under stress in a specific and predictable way. It
+      does not become vague — it becomes <em>long</em>. Under pressure people
+      transmit everything: the context, the justification, the doubt. Every extra
+      sentence is a second in which the net is occupied and the person who needed
+      to hear you did not.</p>
+      <ul>
+        <li><strong>Lead with what changes what the listener does.</strong>
+        Position, type of problem, what you need. Context after, or not at all.</li>
+        <li><strong>Confirm receipt of anything you are going to act on.</strong>
+        An unconfirmed instruction is an assumption you have not noticed you are
+        making.</li>
+        <li><strong>Use a consistent order every time.</strong> Under stress,
+        familiarity with the shape of a message is what lets a tired brain parse
+        it correctly the first time.</li>
+        <li><strong>Say "say again" freely.</strong> Asking again is cheap.
+        Acting on a misheard transmission is not.</li>
+      </ul>
+
+      <blockquote>
+        <p><strong>SME action:</strong> insert your actual SOP — the channel plan,
+        who holds which net, the priority order for a transmission, and your
+        standard formats for position, attack, emergency traffic and all-clear.
+        Then confirm your radios interoperate with ATC and with any mutual aid
+        agency you would actually be working with, and state how often that is
+        tested rather than assumed.</p>
+      </blockquote>
+    `,
+    refs: [
+      'ICAO Doc 9137 Part 1 — §12.3.21 communications',
+      'Your aerodrome SOP — emergency communications',
+      'Course ART-09 — command, and establishing contact between pilot and on-scene commander'
+    ],
+    smeChecked: false
+  },
+
+  'art18-m3': {
+    title: 'ATC coordination',
+    brief:
+      'Your response time is partly somebody else\'s response time. Plan for that.',
+    points: [
+      'ATC is normally the activating authority for an aircraft accident call.',
+      'If your alerting routes through ATC, your response time includes theirs.',
+      'In low visibility some form of navigational assistance may be required.',
+      'Vehicles can move in convoy, and ATC can direct the leading vehicle.',
+      'ATC closes the runway and activates you. You do not direct the aircraft.',
+      'A coordination failure and a communication failure look identical from the fire station.'
+    ],
+    body: `
+      <h3>A shared dependency</h3>
+      <p>Calls to the fire station for attendance at an aircraft accident normally
+      originate from air traffic control (§4.2.2). That makes ATC not merely a
+      neighbour but part of your response chain — and it means a delay in
+      activating you is a delay in your response time, and the requirement in
+      §2.7.1 does not care whose fault it was.</p>
+      <p>The provision the guidance asks for is <strong>direct</strong>
+      communication between ATC, or whatever the activating authority is, and the
+      fire station, to ensure prompt dispatch of vehicles in an aircraft emergency
+      (§4.1.2a). Direct, and on a line that avoids intermediate switchboards
+      (§4.2.2). Every element of that chain is something you can test.</p>
+
+      <h3>Guidance to the vehicles, not just to the station</h3>
+      <p>Provision is also required for communication between ATC and the RFF
+      crews <em>en route to, or in attendance at</em> an accident (§4.1.2b). Not
+      only the station — the crews.</p>
+      <p>And for low visibility, the guidance notes that some form of navigational
+      assistance may be required (§4.1.2b, referring to §2.7.5). This is worth
+      understanding rather than accepting. In poor visibility a perfectly
+      functioning crew driving correctly can still take far longer than your
+      response time requires, because the problem is navigation and not speed.
+      Know what assistance your service has available and how to ask for it.</p>
+
+      <h3>Convoy movement</h3>
+      <p>The guidance describes arrangements by which vehicles can move in convoy
+      and air traffic control can direct the leading vehicle or vehicles, with
+      accident site location provided by ATC and a collision avoidance facility
+      available either from equipment installed in the vehicles or from
+      surveillance radar.</p>
+      <p>Two things follow. First, leading a convoy is a real appointment with a
+      real responsibility, and ATC directing the lead vehicle does not transfer
+      your obligation to your own people. Second, collision avoidance is specified
+      as a function — from vehicle equipment or from ATC radar. Know which one you
+      are relying on, because they fail differently.</p>
+
+      <h3>Where the authority sits</h3>
+      <p>ATC closes the runway, activates your service, and manages the aircraft
+      and the movement area. You work the aircraft and the fire. Blurring that line
+      is how an RFF service ends up with two authorities giving contradictory
+      instructions to the same vehicle.</p>
+      <p>If you need the movement area cleared, or an aircraft repositioned, or
+      access granted across a surface you do not own — that is a request to ATC,
+      made clearly and early, not a manoeuvre you assume you have authority
+      for.</p>
+
+      <h3>Testing the boundary</h3>
+      <ul>
+        <li>Place a call from ATC to the watchroom and time it against your
+        response time requirement.</li>
+        <li>Confirm the crew-to-ATC channel works from inside a moving vehicle,
+        not only from the station.</li>
+        <li>Confirm your low-visibility navigational assistance exists and that
+        your crews know how to request it.</li>
+        <li>Run a joint exercise with ATC covering an aircraft accident response,
+        including the runway closure handover.</li>
+      </ul>
+
+      <blockquote>
+        <p><strong>SME action:</strong> record your actual arrangements with ATC —
+        who is the activating authority at your aerodrome, the direct-line
+        architecture and who to call when it fails, the crew-to-ATC channel, your
+        low-visibility assistance, and your convoy and collision-avoidance
+        arrangements. State how and how often each is tested. Confirm the position
+        against your State's requirements and the applicable AIP.</p>
+      </blockquote>
+    `,
+    refs: [
+      'ICAO Doc 9137 Part 1 — §4.1.2 emergency communications; §4.2.2 fire station communications',
+      'ICAO Doc 9137 Part 1 — §2.7 response times, vehicle guidance and collision avoidance',
+      'Your aerodrome emergency plan — coordination with air traffic control',
+      'Course ART-19 — full-scale exercise, which must include ATC'
+    ],
+    smeChecked: false
+  },
+
+  'art18-m4': {
+    title: 'Flight deck information exchange',
+    brief:
+      'The exchange that either prevents an unnecessary evacuation, or fails to ' +
+      'prevent a necessary one.',
+    points: [
+      'Establish direct contact between the pilot and the on-scene commander immediately.',
+      'Report exterior conditions — that report is what can prevent an unnecessary evacuation.',
+      'Once an evacuation is started it cannot be stopped.',
+      'An unnecessary evacuation can injure evacuees. So can a delayed one.',
+      'Flight crew must be told the aircraft particulars that dictate approach.',
+      'Crew visibility is restricted. Your external appraisal is a task with a timing and an owner.'
+    ],
+    body: `
+      <h3>Who is waiting on whom</h3>
+      <p>The guidance is explicit that RFF personnel should take immediate steps
+      to establish direct contact between the pilot and the on-scene commander,
+      so that all factors are properly considered before actions are initiated
+      (§12.3.21). It is often desirable to establish direct contact with the flight
+      crew for the same reason (§12.3.19), and the responsibilities of flight crew
+      and airport emergency personnel should be clearly defined (§12.3.20).</p>
+      <p>Two different parties, and the flight crew have restricted visibility.
+      Annex 6 requires operators to ensure their pilots are familiar with the
+      aerodrome and its emergency arrangements (§12.3.13) — so the pilot knows your
+      service, and you should assume they have been told what you are capable
+      of.</p>
+
+      {{diagram:vehicle-positioning}}
+
+      <h3>The report that changes the decision</h3>
+      <p>Here is the part worth teaching carefully. The guidance states that an
+      unnecessary evacuation may be prevented by RFF personnel communicating with
+      the flight crew on the appropriate frequency and giving a report on exterior
+      conditions (§12.3.27).</p>
+      <p>Two sentences in that paragraph matter enormously:</p>
+      <ul>
+        <li><strong>Once an evacuation is initiated it cannot be stopped.</strong>
+        There is no recall.</li>
+        <li><strong>An unnecessary evacuation can endanger and injure the
+        evacuees.</strong> Not merely waste time — injure people. Slides, wings,
+        wingtip navigation lights, a damaged door, an engine still running. Most
+        engine, wheel assembly and other minor exterior emergencies can be
+        controlled by RFF personnel without requiring one.</li>
+      </ul>
+      <p>So the value of your external appraisal is not just that the commander
+      makes a good decision. It is that a bad decision — evacuating an aircraft
+      that did not need it — is itself a safety event. That is the argument for
+      reporting early and accurately, and it motivates people in a way that "report
+      the situation" never has.</p>
+
+      <h3>What you must not do</h3>
+      <p>The same clause is equally firm about limits. RFF personnel
+      <strong>should not impede the evacuation</strong>, and should
+      <strong>not attempt to enter the fuselage</strong> — instead provide
+      assistance, and be prepared to assist those not capable of self-evacuation
+      (§12.3.27). Entry is a rescue task under command, not a spontaneous
+      act.</p>
+
+      <h3>When the engines are still running</h3>
+      <p>It may be necessary to keep at least one engine operating after the
+      aircraft has stopped, in order to provide lighting and communications aboard
+      (§12.3.23). That hampers rescue operations, and the guidance says it should be
+      considered as a problem rather than accepted as a cost.</p>
+      <p>The hazards it creates are specific. On reciprocating and turboprop
+      engines, extreme care must be taken to stay clear of the propeller arc. On
+      turbojets, extreme care in the area <em>ahead of the engine and for a
+      considerable distance behind it</em>. A running engine is not background
+      noise. It is a hazard that moves.</p>
+
+      <h3>Fire warnings you cannot judge from the flight deck</h3>
+      <p>It is often impossible for crew members to make an accurate appraisal of
+      aircraft fire warning indicators, and the guidance advises bringing the
+      aircraft to a complete stop and allowing RFF personnel to inspect the area
+      before parking — an inspection that can usually be greatly enhanced by
+      thermal imaging without opening compartment doors (§12.3.22).</p>
+      <p>If thermal imaging is among your capabilities, that is a capability the
+      flight deck cannot replicate, and it is worth saying so when briefing an
+      incoming crew.</p>
+
+      <h3>Aircraft particulars change the plan</h3>
+      <p>Wind, terrain, aircraft type and cabin configuration dictate approach
+      (§12.3.24). It is therefore necessary for flight crew to inform RFF
+      personnel of the details regarding the particular aircraft concerned. On
+      combined cargo-passenger aircraft the position is different again, and the
+      guidance says so.</p>
+      <p>Practically: the aircraft type determines your positioning plan, and the
+      flight deck is the only source of that information. If you have to ask for it
+      on arrival, the tactical plan you followed was somebody else's guess.</p>
+
+      <blockquote>
+        <p><strong>SME action:</strong> confirm your primary means of contacting
+        the flight deck, including whether intercom facilities are available on
+        the types you handle; state the format of your exterior condition report;
+        confirm the interagency position on evacuation authority and on entering
+        the fuselage, since this lesson follows ICAO and your State may differ; and
+        confirm whether thermal imaging is available and who is trained to
+        interpret it.</p>
+      </blockquote>
+    `,
+    refs: [
+      'ICAO Doc 9137 Part 1 — §12.3.13 to §12.3.24 flight crew and RFF coordination',
+      'ICAO Doc 9137 Part 1 — §12.3.27 evacuation determination and the unnecessary evacuation risk',
+      'ICAO Annex 6 Part I — operator responsibilities for pilot familiarity',
+      'Course ART-09 — size-up, and the first transmission'
+    ],
+    smeChecked: false
+  },
+
+  /* ─────────────────────────────────────────────────────────────────────
+     ART-16 m4 — withdrawal and re-attack. Grounded in Doc 9137 Part 1
+     Chapter 6.1 (protective clothing) and Chapter 12.3. The heat-load
+     trade-off in 6.1.1 is written up honestly because it is the factor that
+     decides what a South African crew can actually wear continuously.
+     ───────────────────────────────────────────────────────────────────── */
+  'art16-m4': {
+    title: 'Exposure protection, withdrawal and re-attack',
+    brief:
+      'Knowing when to stop is a decision, not a feeling. Set it before the ' +
+      'heat decides for you.',
+    points: [
+      'Protective clothing must let you do the job. Protection that prevents the job is not protection.',
+      'Helmets must let you hear words of command. Check that wearing it, not on a shelf.',
+      'Protective clothing is distinct from the service uniform and is worn in training too.',
+      'The three rescue tasks are not ranked, so withdrawal criteria must be set in advance.',
+      'Positioning for reflash is a forecast based on fuel state, not a formality.',
+      'Ventilation carries a risk of promoting fire in smouldering material.'
+    ],
+    body: `
+      <h3>Clothing that lets you work</h3>
+      <p>The requirement on protective clothing is not simply that it protects. It
+      is that it ensures the wearer is <em>able to perform the assigned
+      duties</em> (§6.1.1). Protection that prevents the job is not protection, it
+      is a different problem.</p>
+      <p>The guidance sets out three factors determining what is provided and when
+      it is worn, and all three are trade-offs:</p>
+      <ul>
+        <li><strong>Continuity of wear.</strong> To allow immediate response, some
+        or all elements may need to be worn throughout the tour of duty — and some
+        forms of clothing create dressing problems that cannot easily be solved
+        inside the crew compartment of a moving vehicle. If it cannot be dressed
+        in while the vehicle is moving, it will not be dressed in.</li>
+        <li><strong>Heat.</strong> Protective clothing restricts loss of body heat
+        through natural ventilation. In high ambient temperatures this matters, and
+        the guidance anticipates a deliberate compromise between the ultimate
+        degree of protection and a lesser but acceptable form designed for hot
+        climates. It states that this compromise does not expose operatives to
+        unacceptable risk — while making the compromise explicit and conscious
+        rather than accidental.</li>
+        <li><strong>Fit and hygiene.</strong> Clothing shared on an impersonal
+        issue basis creates sizing and hygiene problems, and real personal
+        objections. The guidance's solution is relatively inexpensive uniforms,
+        some requiring a special undergarment for complete protection, worn in
+        part through hours of duty so that issue can be personal and correctly
+        sized.</li>
+      </ul>
+      <p>In South Africa the second factor is not a footnote. Heat load is a real
+      constraint on how much protective clothing can be worn continuously, and the
+      honest design decision is a layered kit with a stated compromise rather than
+      one heavy suit that nobody wears properly.</p>
+
+      <h3>What the kit is, and what it is not</h3>
+      <p>Protective clothing is <strong>distinct from ordinary fire service
+      uniforms</strong> and is worn during firefighting activities
+      <strong>including training</strong> (§6.1.2). It protects against radiated
+      heat and against injury from impact or abrasion, and a measure of protection
+      from water ingress is desirable particularly for low-temperature operations. A
+      typical uniform is a helmet with visor, a suit — one-piece or jacket and
+      trousers — boots and gloves.</p>
+      <p>Worn in training, not only on incidents. A crew who only suit up during a
+      call will suit up slowly during the call.</p>
+
+      <h3>The helmet is a communications device</h3>
+      <p>Beyond impact, penetration, electrical conductivity and resistance to
+      deformation under heat absorption, the helmet requirements are operational
+      (§6.1.3). It should not give the wearer a sense of isolation, and it
+      <strong>must permit both speech and the reception of audible signals or
+      words of command</strong>. Ideally it works with respiratory protection and
+      incorporates radiotelephone receivers.</p>
+      <p>A helmet that muffles a crew command is a safety device that has become a
+      hazard. Check it while you are wearing it — visor down, radio on — not by
+      inspecting it on a shelf.</p>
+
+      <h3>Withdrawal</h3>
+      <p>The guidance is careful that the three principal rescue tasks —
+      protection, firefighting and rescue — are <strong>not specified in order of
+      priority</strong> (§12.3.5), and that if a fire situation exists within the
+      aircraft the sequence changes.</p>
+      <p>Which is precisely why withdrawal criteria cannot be invented on the day.
+      With no stated trigger, the trigger becomes whoever is hottest and least
+      willing to be the one who calls it. Decide in advance what ends an attack:
+      heat on the crew, loss of visibility, a structural change in the airframe,
+      the protective envelope failing, or the commander calling it. Write the list
+      down, and brief it to everyone rather than only to supervisors.</p>
+
+      <h3>Re-attack, and the fuel that decides it</h3>
+      <p>Vehicles should ideally be positioned so they can be repositioned in the
+      event of reflash, or on receipt of a change of tactical priority (§12.3.25).
+      That instruction is a forecast, and the forecast rests on fuel state, foam
+      application, whether the fuel is in the cells or the tank, and how long the
+      aircraft sat before anything was applied. Know the specifics for the type in
+      front of you.</p>
+      <p>Re-attack is a second attack against a known problem, not a first attack
+      with less left. If you withdraw, withdraw to a position you can attack
+      again from — and know what you are going back into.</p>
+
+      <h3>Ventilation is a two-edged act</h3>
+      <p>Post-accident ventilation matters, because smoke and fumes may be
+      unacceptable to occupants (§12.3.6–§12.3.8). But whenever ventilation is
+      introduced there is a risk of <strong>promoting fire in any smouldering
+      materials</strong> (§12.3.9). Removing smoke can feed a fire that was not
+      going to become one.</p>
+
+      {{video:faa-tact-5}}
+
+      <blockquote>
+        <p><strong>SME action:</strong> define your withdrawal criteria and
+        re-attack triggers in writing, name who holds the decision, and confirm
+        they are briefed to every crew member rather than only to supervisors.
+        State what is worn continuously during a tour of duty and what is
+        response-only, with the heat rationale for that split recorded. Confirm
+        reflash guidance per aircraft type, and your position on preserving the
+        accident site, which carries investigation and liability consequences long
+        after the incident has ended.</p>
+      </blockquote>
+    `,
+    refs: [
+      'ICAO Doc 9137 Part 1 — Chapter 6.1 protective clothing; 6.1.2 and 6.1.3 component requirements',
+      'ICAO Doc 9137 Part 1 — §12.3.5 task priority; §12.3.6 to §12.3.9 ventilation; §12.3.25 repositioning for reflash',
+      'Course ART-07 — PPE, SCBA and crew fitness',
+      'Course ART-09 — stand-down decisions'
+    ],
+    smeChecked: false
   }
 
 };
