@@ -4898,6 +4898,373 @@ const LESSON_OVERRIDES = {
   ],
   smeChecked: false
 },
+
+  'art06-m1': {
+  title: 'Vehicle types and capability',
+  brief:
+    'What each vehicle must be able to do, and the four kinds of vehicle ' +
+    'that are not what they look like.',
+  points: [
+    'Command vehicles have virtually no rescue or firefighting capability and are not RFF vehicles. Auxiliary water tank vehicles can be useful but cannot be described as primary vehicles (§5.2.1).',
+    'Annex 14 §9.2.41 sets the minimum vehicle count by category: categories 1–5 need one vehicle, 6–7 need two, 8–10 need three.',
+    'Satellite fire stations should be provided whenever the response time cannot be achieved from a single fire station (§9.2.37).',
+    'Table 5-1 splits vehicles at 4 500 L: above that, high and low discharge capability is required.',
+    'Below 4 500 L a monitor is optional for categories 1 and 2 and required for categories 3 to 9.',
+    'Acceleration: 0 to 80 km/h within 25 s below 4 500 L, within 40 s above. Top speed at least 105 km/h and 100 km/h respectively.',
+    'All-wheel drive and automatic or semi-automatic transmission are required on both classes.',
+    'The role of the vehicle is to reach the accident site quickly, protect evacuation paths, control any outbreak of fire and to initiate rescue (§5.2.2).'
+  ],
+  body: `
+    <h3>What counts as an RFF vehicle</h3>
+    <p>§5.2.1 draws the boundary explicitly, because airports buy vehicles that do not do the job. There are other vehicle types in use at airports, <em>such as command vehicles, used by officers in charge of a duty watch that have virtually no rescue or firefighting capability</em>. Some airports provide <em>auxiliary water tank vehicles, equipped with a pump and delivery hose, to replenish foam-producing vehicles at an aircraft accident. While these can provide a useful service, particularly where there are limited installed water supplies, they cannot be described as primary vehicles</em>.</p>
+    <p>That is not a criticism of either vehicle. A command vehicle is genuinely useful, and a water tanker genuinely solves a real problem where hydrant coverage is thin. But neither discharges agent on the fire, so neither counts towards the response capability the level determination assumes. Chapter 5 considers only the RFF vehicles.</p>
+
+    <h3>How many vehicles</h3>
+    <p>Annex 14 §9.2.41 sets the minimum number by category, and it is worth having memorised because it is short:</p>
+    <table class="calc">
+      <tr><th>Aerodrome category</th><th>RFF vehicles</th><th>Aerodrome category</th><th>RFF vehicles</th></tr>
+      <tr><td>1</td><td>1</td><td>6</td><td>2</td></tr>
+      <tr><td>2</td><td>1</td><td>7</td><td>2</td></tr>
+      <tr><td>3</td><td>1</td><td>8</td><td>3</td></tr>
+      <tr><td>4</td><td>1</td><td>9</td><td>3</td></tr>
+      <tr><td>5</td><td>1</td><td>10</td><td>3</td></tr>
+    </table>
+    <p>Two vehicles from category 6, three from category 8. And §9.2.37 is the provision that connects that number to your station layout: <strong>all rescue and firefighting vehicles should normally be housed in a fire station. Satellite fire stations should be provided whenever the response time cannot be achieved from a single fire station</strong>.</p>
+    <p>So vehicle count and station count are one decision, not two. A category 9 aerodrome needs three vehicles, and if one station cannot deliver the response time to the far end of the movement area, the answer is a satellite station — not a faster vehicle.</p>
+
+    <h3>The two vehicle classes</h3>
+    <p>Table 5-1 sets suggested minimum characteristics and splits vehicles at 4 500 litres of water. The differences are not cosmetic:</p>
+    <table class="calc">
+      <tr><th>Feature</th><th>Up to 4 500 L</th><th>Over 4 500 L</th></tr>
+      <tr><td>Monitor</td><td>Optional for cat 1–2; required cat 3–9</td><td>Required cat 3–9</td></tr>
+      <tr><td>Discharge capability</td><td>High</td><td><strong>High and low</strong></td></tr>
+      <tr><td>Monitor range</td><td>Appropriate to longest aeroplane</td><td>Appropriate to longest aeroplane</td></tr>
+      <tr><td>Handlines</td><td>Required</td><td>Required</td></tr>
+      <tr><td>Truck nozzles</td><td>Optional</td><td>Required</td></tr>
+      <tr><td>Bumper turret</td><td>Optional</td><td>Optional</td></tr>
+      <tr><td>Acceleration 0–80 km/h</td><td><strong>within 25 s</strong></td><td><strong>within 40 s</strong></td></tr>
+      <tr><td>Top speed</td><td>At least 105 km/h</td><td>At least 100 km/h</td></tr>
+      <tr><td>All-wheel drive</td><td>Required</td><td>Required</td></tr>
+      <tr><td>Transmission</td><td>Automatic/semi-automatic required cat 3–9</td><td>Required cat 3–9</td></tr>
+      <tr><td>Min. approach/departure angle</td><td>30°</td><td>30°</td></tr>
+      <tr><td>Min. static tilt angle</td><td>30°</td><td>28°</td></tr>
+    </table>
+    <p>Read the trade in the middle. The larger vehicle is <em>slower</em> — 40 seconds against 25, and a lower top speed — and has a slightly lower tilt angle. It exists because it carries more agent and can deliver it at variable rate. That is a deliberate design position: the vehicle that arrives first is not always the vehicle that delivers the most.</p>
+
+    <h3>The monitor, and why "high and low" matters</h3>
+    <p>Table 5-1 requires high and low discharge capability on the larger vehicle. §5.7.3 explains why the low setting earns its place: <em>the monitor operator must be able to assume the operating position while the vehicle is in motion and operate the monitor through at least 60 degrees either side of the central axis of the vehicle. Depression of the monitor should deliver foam at ground level not more than 12 m ahead of the vehicle while providing an elevation of not less than 30 degrees</em>.</p>
+    <p>Those are operationally specific numbers and they are worth knowing because they tell you what the driver and the monitor operator can actually do together. 60 degrees either side means the crew can cover the near flank of a fuselage without the vehicle repositioning. Ground level 12 m ahead with 30 degrees of elevation is a reach figure — it defines how close the vehicle can get before the monitor depresses into the fuel.</p>
+    <p>And §5.7.2 on crews: <em>the ability to maintain uninterrupted foam production while the vehicle is in motion at speeds up to 8 km/h is an essential design feature for all vehicles. In this mode, it will be impossible to deliver any complementary agent unless this is discharged through a monitor</em>. So foam-on-the-move is a design feature for every vehicle, and in that mode dry chemical is monitor-only.</p>
+
+    <h3>The role, stated as a sentence</h3>
+    <p>§5.2.2 is the cleanest statement of what a RFF vehicle is for: <em>the role of RFF vehicles is to reach the accident site quickly, protect evacuation paths, control any outbreak of fire and to initiate rescue</em>.</p>
+    <p>Four verbs, in that order. Note that <em>protect evacuation paths</em> comes second, before controlling fire — the same priority ordering that appears in the positioning provisions at §12.3.25(d). A vehicle that can reach a fire faster but cannot protect the slide is not a better vehicle.</p>
+
+    <h3>Where vehicles are not specified</h3>
+    <p>Two carve-outs from Chapter 5, both useful to know. §5.1.2 says the chapter does not consider <em>the specialized vehicles intended for use in difficult environments</em> — those are Chapter 13, and they are ART-23 off-airport response. Communications equipment is Chapter 4, which is ART-18. Station location and housing are Chapter 9. So if you are specifying a vehicle, three things that feel like vehicle questions are not, and chasing them in the wrong chapter wastes time.</p>
+
+    <blockquote>
+      <p><strong>SME action:</strong> produce your vehicle inventory against Annex 14 §9.2.41 — category, vehicles required, vehicles held, and vehicles out of service at any given time. Then confirm two things that catch services out. First, that a single vehicle out of service does not put you below the §9.2.41 minimum, and what happens if it does. Second, that your station layout actually achieves the response time to the far end of the movement area, or that you have the satellite station §9.2.37 contemplates. If you cannot answer the second from a measured response time, that is a planning finding.</p>
+    </blockquote>
+  `,
+  refs: [
+    'ICAO Doc 9137 Part 1 — §5.1.2 vehicles not covered by Chapter 5; §5.2.1 command vehicles and auxiliary water tank vehicles; §5.2.2 the role of RFF vehicles',
+    'ICAO Doc 9137 Part 1 — Table 5-1 suggested minimum characteristics, the 4 500 litre split, acceleration, top speed, all-wheel drive, transmission, tilt angle',
+    'ICAO Doc 9137 Part 1 — §5.7.2 foam production in motion up to 8 km/h; complementary agent monitor-only in that mode; §5.7.3 monitor operation 60 degrees either side, ground level 12 m ahead, elevation not less than 30 degrees',
+    'ICAO Annex 14 Volume I — §9.2.41 minimum number of RFF vehicles by category; §9.2.37 satellite fire stations',
+    'NFPA 414 — Standard for Aircraft Rescue and Fire Fighting Vehicles (listed for this course; not reproduced by this platform)',
+    'Your aerodrome manual — vehicle inventory and station layout'
+  ],
+  smeChecked: false
+},
+
+  'art06-m2': {
+  title: 'Permitted and prohibited uses',
+  brief:
+    'A vehicle has a job. Doing other jobs with it is how a service ends ' +
+    'up non-compliant without anybody deciding to be.',
+  points: [
+    'Vehicles must be capable of conveying and delivering at least the minimum quantities in Table 2-3 for the airport category (§5.3.1).',
+    'Agent specified at "useable contents" level, because the containment and delivery system must account for quantities that cannot be discharged (§5.7.1).',
+    'Foam production in motion up to 8 km/h is a design feature, but in that mode no complementary agent can be delivered except through a monitor (§5.7.2).',
+    'Discharging agent at training still counts as discharge. Vehicles must return to complete availability in the shortest possible time (§5.7.1).',
+    'Adding capability must not impair the primary role of the vehicle in aircraft firefighting (§5.1.3).',
+    'Complementary agent quantity on a vehicle may be all or part of the category requirement, with the disposition related to the number of vehicles deployed (§5.2.2).',
+    'A water tank vehicle can be useful where hydrant coverage is limited, but cannot be counted as a primary vehicle (§5.2.1).'
+  ],
+  body: `
+    <h3>Useable contents, not tank capacity</h3>
+    <p>§5.7.1 sets the specification rule that governs everything else: <em>the quantities and types of extinguishing agents should be expressed at the "useable contents" levels to ensure that the containment and delivery systems are designed to take account of those quantities of each agent which cannot be discharged</em>.</p>
+    <p>So when you specify or verify a vehicle, you are checking useable contents, not the size of the tank. The agent that cannot leave the tank — the heel in the tank, the concentrate that cannot be drawn below the pickup, the residue in the pipework — does not count. A vehicle with a 5 000 L tank that can only deliver 4 200 L is a 4 200 L vehicle.</p>
+
+    <h3>The minimum you must be able to deliver</h3>
+    <p>§5.3.1 is the hard floor: <em>where vehicles are provided, as proposed in Table 2-5, they must be capable of conveying and delivering at least the minimum quantities of extinguishing agents specified in Table 2-3, according to the airport category. The response time requirements specified in 2.7.1 should also be taken into account</em>.</p>
+    <p>Conveying <em>and</em> delivering. Carrying the agent is not the same as being able to put it on the fire at the required rate, and the vehicle specification has to satisfy both. That is why §5.7.1 continues that <em>any monitor designed to discharge foam must produce a foam of the specified quality, dependent on the type of concentrate used</em>, and that <em>the output, effective range and selective patterns of discharge must be related to the requirements of the airport RFF category and to the operational tactics to be employed by the crew</em>.</p>
+
+    <h3>Complementary agent is distributable</h3>
+    <p>§5.2.2 gives a flexibility that is often misunderstood as a loophole: <em>should the dual application of principal and complementary agents be considered, the quantity of complementary agent to be carried on a vehicle may be all, or some part of, that is required by the RFF category, the disposition of which to be related to the number of vehicles deployed at the airport</em>.</p>
+    <p>So the complementary agent may sit on one vehicle rather than being split across the fleet. The constraint is that the disposition has to be <em>related to the number of vehicles deployed</em> — it is a fleet decision, not a per-vehicle one. And §5.7.1 requires that complementary agents <em>must be capable of delivery through monitors or extended hose lines at the defined rates of discharge, with a variable discharge capability where this would enhance their fire suppression properties</em>.</p>
+
+    <h3>The restriction people trip over</h3>
+    <p>§5.7.2: <em>the ability to maintain uninterrupted foam production while the vehicle is in motion at speeds up to 8 km/h is an essential design feature for all vehicles. In this mode, it will be impossible to deliver any complementary agent unless this is discharged through a monitor.</em></p>
+    <p>So if you are rolling on scene applying foam from a side delivery line at 8 km/h, you cannot also knock down a running fuel fire with powder from a line on the same vehicle. The powder has to come through the monitor, or from another vehicle. That is a tactical constraint built into the hardware, and crews who have not thought about it discover it on scene.</p>
+
+    <h3>Training discharge is still discharge</h3>
+    <p>§5.7.1 makes this explicit and it is a routinely missed planning point: <em>where agents of all types are discharged, at accidents or in training, it is essential to return vehicles to complete availability in the shortest possible time</em>.</p>
+    <p>Every live-fire exercise, every discharge drill, every practice discharge takes a vehicle out of availability for the refill, de-water and check cycle. If your exercise programme is not planned against vehicle availability, your training schedule is quietly reducing your operational fleet. That is a planning finding, not a training finding.</p>
+
+    <h3>Adding capability has a limit</h3>
+    <p>§5.1.3 draws the line: <em>care must be taken so that in providing any additional capability, the primary role of the vehicle in aircraft firefighting is not impaired</em>.</p>
+    <p>And it sets out why the temptation exists — additional items are <em>desirable</em>, they <em>will also add to the cost of the vehicle and, in some cases, to the extent and complexity of the maintenance programmes</em>. So a vehicle that carries everything has a bigger maintenance burden and a crew that is slower to don, and both of those cost response time.</p>
+    <p>§5.1.1 gives the governing objective: <em>the objective of every study must be to acquire vehicles which will provide an effective and reliable service throughout their "operational lives". This can only be ensured by the selection of vehicles of proven performance and reliability, to be operated by trained personnel and supported by using programmes of preventive maintenance by qualified support personnel</em>.</p>
+
+    <h3>The three rules, stated plainly</h3>
+    <ol>
+      <li><strong>The primary role is aircraft firefighting.</strong> Everything else the vehicle does is secondary, and adding to it may not come at the cost of the primary.</li>
+      <li><strong>You must be able to deliver, not merely carry.</strong> Useable contents, at the Table 2-3 rate, within the response time.</li>
+      <li><strong>Every discharge, including training, costs availability.</strong> Plan the exercise programme against the vehicle count, not separately from it.</li>
+    </ol>
+
+    <blockquote>
+      <p><strong>SME action:</strong> for each vehicle, record useable agent quantities rather than tank capacity, and confirm they meet or exceed Table 2-3 for your category. Confirm where your complementary agent is carried and that its disposition is documented against the number of vehicles deployed. Then check the harder question: list every scheduled discharge — exercises, drills, practice — over a year, and calculate the vehicle-days consumed. Compare that against your §9.2.41 minimum. If the exercise programme would put you below the minimum on any day, that is the finding, and the fix is scheduling rather than equipment.</p>
+    </blockquote>
+  `,
+  refs: [
+    'ICAO Doc 9137 Part 1 — §5.1.1 objective of vehicle selection; §5.1.3 additional capability must not impair the primary role',
+    'ICAO Doc 9137 Part 1 — §5.2.2 disposition of complementary agent related to the number of vehicles deployed',
+    'ICAO Doc 9137 Part 1 — §5.3.1 conveying and delivering the Table 2-3 minimum quantities',
+    'ICAO Doc 9137 Part 1 — §5.7.1 useable contents levels, monitor output and complementary agent delivery rates, return to full availability after training discharge',
+    'ICAO Doc 9137 Part 1 — §5.7.2 foam production in motion to 8 km/h; complementary agent monitor-only in that mode',
+    'ICAO Annex 14 Volume I — §9.2.41 minimum number of RFF vehicles by category',
+    'Course ART-03 m2 — principal versus complementary agents'
+  ],
+  smeChecked: false
+},
+
+  'art06-m3': {
+  title: 'Pre-use checks and stop criteria',
+  brief:
+    'A check that cannot stop the vehicle is not a check. Decide the ' +
+    'stop criteria before the alarm, not during it.',
+  points: [
+    'All vehicles require regular inspection of every aspect of structure, systems and operational functions (§5.7.15).',
+    'Servicing and preventive maintenance will ensure, as far as is practicable, that the vehicle remains effectively available (§5.7.15).',
+    'The time to complete servicing is directly related to accessibility, and the vehicle design must provide that facility (§5.7.15).',
+    'Removable panels and suitable lifting connections must ensure that removal and replacement does not entail unacceptable extension of down-time (§5.7.15).',
+    'Vehicle foam tanks must be kept full while in operational service — partly filled tanks create stability problems when cornering at speed (§2.6.4).',
+    'Anti-corrosion treatments are essential in most airport environments, and should cover areas exposed to spilled concentrate or dry chemical (§5.7.15).',
+    'The crew compartment must allow safe conveyance with space to don protective clothing; the driver needs all-round visibility and communication with the monitor operator (§5.7.3).'
+  ],
+  body: `
+    <h3>The requirement is inspection, not a tick-box</h3>
+    <p>§5.7.15 is the governing clause and it is short: <em>all vehicles will require regular inspection of every aspect of their structure, systems and operational functions. Servicing and preventive maintenance will ensure, as far as is practicable, that the vehicle will remain effectively available</em>.</p>
+    <p>Two phrases carry weight. <em>Every aspect</em> — not the checklist items, the aspects. And <em>as far as is practicable</em> — which is a standard's way of acknowledging reality without excusing neglect: you are expected to achieve effective availability, and where you cannot, you are expected to be able to say why.</p>
+
+    <h3>Turnaround time is a design property</h3>
+    <p>§5.7.15 then makes the point that turns vehicle inspection into a vehicle specification question: <em>the time taken to complete these processes will be directly related to the accessibility of all the areas to be inspected and serviced and the design of the vehicle must provide this facility</em>.</p>
+    <p>And on major components: <em>in anticipation of the need to remove a major component, such as the engine, pump, tank or foam-making system, removable panels and suitable lifting connections must ensure that removal and replacement does not entail unacceptable extension of down-time</em>.</p>
+    <p>Read together, these say that a vehicle that is hard to inspect is a vehicle that will be unavailable for longer after every fault. Turnaround discipline (m5) is therefore partly a procurement decision that was made years ago.</p>
+
+    <h3>The readiness criteria that are hard</h3>
+    <p>Some checks are obvious. Some are not, and the ones that are not are where services fail. Three from the standard:</p>
+    <ul>
+      <li><strong>Tank full.</strong> §2.6.4: <em>vehicle foam tanks must be kept full at all times when the vehicle is in operational service because partially filled tanks will create stability problems when the vehicle is cornering at speed</em>. A half-full tank is a driving hazard before it is an agent problem.</li>
+      <li><strong>Stale protein.</strong> §2.6.4 and §8.1.1 both require periodic discharge and wash-through of protein systems so the tank does not contain stale foam, and §2.6.4 identifies the mechanism — <em>serious sludging problems can occur where protein foam is carried through oxidation and agitation if there is an air space above the surface of the foam</em>.</li>
+      <li><strong>Water chemistry.</strong> §8.1.11: water suitability <em>should be verified with the approval of the foam concentrate manufacturer</em>, and no additives without that approval. If your water source has changed, the foam you are producing has changed.</li>
+    </ul>
+
+    <h3>Corrosion is a foreseeable event, not bad luck</h3>
+    <p>§5.7.15 is unusually prescient: <em>anti-corrosion treatments are essential in most airport environments and these can be extended to protect areas which may be exposed to any deposits of foam concentrate or dry chemical agents which may be spilled during replenishment operations</em>.</p>
+    <p>So agent spillage during replenishment is expected by the standard, and the vehicle should be protected for it. That has a practical consequence worth checking: the under-chassis, walkway surfaces and the areas around the tank fill points are where spillage lands, and they should be protected in the design rather than discovered as corrosion.</p>
+
+    <h3>The crew compartment is a checked item</h3>
+    <p>§5.7.3 sets requirements that belong on a pre-use inspection because they are crew-safety properties, not vehicle properties: <em>the crew compartment must provide for the safe conveyance of the crew to an aircraft accident with sufficient space to facilitate the donning of elements of protective clothing. The driver must have all-round visibility, effective controls and instrumentation and some form of communication with the monitor operator during all firefighting operations</em>.</p>
+    <p>Sufficient space to don protective clothing is measurable — try it, with the crew who will actually do it, in the actual compartment, in the kit they actually wear. All-round visibility is checked by looking, not by assuming. The communication between driver and monitor operator is checked by using it.</p>
+
+    <h3>Writing your stop criteria</h3>
+    <p>The check itself is straightforward. The difficult part is deciding, in advance, which findings stop the vehicle rolling — because that decision is very hard to make at 02:00 with an aircraft inbound.</p>
+    <p>Build it in three classes, and write the class boundaries down:</p>
+    <ol>
+      <li><strong>Hard stop.</strong> No vehicle leaves. Examples: foam or water below the operational minimum; no operational agent; foam production system not producing to tolerance; SCBA sets incomplete or below pressure; no working radio; brakes or steering defect; tyres below limit; a safety defect on a crew item.</li>
+      <li><strong>Conditional roll.</strong> The vehicle may respond but cannot be relied upon for the full task, and command must be told before it rolls. Examples: one monitor of two inoperative; degraded foam performance within tolerance but at the edge; non-essential equipment missing; high/low discharge reduced to one setting.</li>
+      <li><strong>Operational defect.</strong> Vehicle rolls, defect is logged with a rectification time. Examples: a missing hand tool, a failed courtesy light, cosmetic corrosion.</li>
+    </ol>
+    <p>The value of the middle class is that it removes the argument from the alarm. When command knows the vehicle is degraded <em>before</em> it arrives, the tactical plan can be built around it. When the crew discovers it on scene, the plan was already wrong.</p>
+    <p>Whatever your classes, they must be in writing, agreed with the watch supervisor who authorises the roll, and briefed. A stop criterion that only the crew member who set it knows about is not a criterion.</p>
+
+    <h3>Recording the check</h3>
+    <p>Record the check with enough detail to be useful later: date, vehicle, the fault found, the class it fell into, who authorised the roll, and the rectification due. The trend is worth more than any single entry — three vehicles with the same pump pressure drift across a quarter is a maintenance finding, and three crews reporting the same brake judder is an operational one.</p>
+
+    <blockquote>
+      <p><strong>SME action:</strong> write your three classes of finding and the stop criteria in each, and get them agreed by the person who authorises the roll. Then test the list against reality: pick the five faults most likely on your fleet and confirm each has a defined class and a defined action. Finally, check two things that are structural rather than procedural — that the crew compartment genuinely allows your crew to don their protective clothing without leaving it, and that the driver and monitor operator can communicate during a discharge. If either fails, that is a finding about the vehicle, not the crew.</p>
+    </blockquote>
+  `,
+  refs: [
+    'ICAO Doc 9137 Part 1 — §5.7.15 regular inspection of every aspect; servicing and preventive maintenance; accessibility and down-time; anti-corrosion treatment including areas exposed to spilled agents',
+    'ICAO Doc 9137 Part 1 — §5.7.3 crew compartment space for donning protective clothing, driver all-round visibility, communication with the monitor operator',
+    'ICAO Doc 9137 Part 1 — §2.6.4 foam tanks kept full; stability when cornering at speed; sludging in protein foam; periodic discharge and wash through',
+    'ICAO Doc 9137 Part 1 — §8.1.11 water supply suitability verified with the foam concentrate manufacturer; additives require approval',
+    'NFPA 1901 — Road Vehicles (listed for this course; not reproduced by this platform)',
+    'Your operator SOP — pre-use inspection and defect classification'
+  ],
+  smeChecked: false
+},
+
+  'art06-m4': {
+  title: 'Operating limits',
+  brief:
+    'Gradients, side slopes, tilt angles, speeds and altitudes — the ' +
+    'vehicle will not tell you where the limit is. You will.',
+  points: [
+    'Minimum approach and departure angle is 30° on both Table 5-1 vehicle classes; minimum static tilt angle is 30° up to 4 500 L and 28° above.',
+    'Acceleration 0–80 km/h within 25 s (up to 4 500 L) and 40 s (over 4 500 L); top speed at least 105 and 100 km/h respectively.',
+    'Foam production in motion is specified up to 8 km/h. Beyond that, the spec does not claim it.',
+    'Altitude above 600 m may affect normally-aspirated engine performance; turbochargers may be necessary to meet acceleration and cruising speed specifications (§5.7.14).',
+    'Very high temperatures may necessitate additional engine cooling capacity; very low temperatures may require protection for the pump, plumbing and water tank (§5.7.14).',
+    'Unusual quantities of sand or dust may require augmented induction filtration (§5.7.14).',
+    'Emergency vehicles should be finished in a conspicuous colour, preferably red, in accordance with Annex 14 Vol I §6.2.2.2 (§5.7.13).',
+    'Vehicles operated in the aircraft manoeuvring area have an additional lighting requirement defined in Annex 14 Volume I Chapter 6 (§5.7.13).'
+  ],
+  body: `
+    <h3>The limits are in the specification, not on the vehicle</h3>
+    <p>Nothing on the outside of a fire appliance tells a driver that the approach angle is 30° or the static tilt angle is 28°. Those are specification figures, verified at acceptance, and from then on they are knowledge that has to be in the crew's head or in the SOP. This lesson is the list.</p>
+
+    <h3>Geometry and speed</h3>
+    <table class="calc">
+      <tr><th>Limit</th><th>Up to 4 500 L</th><th>Over 4 500 L</th></tr>
+      <tr><td>Acceleration 0–80 km/h</td><td>within 25 s</td><td>within 40 s</td></tr>
+      <tr><td>Top speed</td><td>at least 105 km/h</td><td>at least 100 km/h</td></tr>
+      <tr><td>Min. approach and departure angle</td><td>30°</td><td>30°</td></tr>
+      <tr><td>Min. static tilt angle</td><td>30°</td><td>28°</td></tr>
+      <tr><td>All-wheel drive</td><td>Required</td><td>Required</td></tr>
+      <tr><td>Transmission</td><td>Automatic/semi-automatic, required cat 3–9</td><td>Required cat 3–9</td></tr>
+    </table>
+    <p>All of these are Table 5-1 minimums, and §5.7.12 makes the important comment about them: <em>in some cases, the minimum characteristics provided are less demanding than those now available from vehicle manufacturers. In particular, accelerations, top speeds and static tilt angles of completed appliances now in service exceed these specifications</em>.</p>
+    <p>So a modern vehicle is better than the floor in most of these. That does not make the floor irrelevant — it makes it the number to quote when a vehicle is not delivered to spec, and the number your response-time modelling is built on.</p>
+
+    <h3>The one speed with a hard meaning</h3>
+    <p>§5.7.2: <em>the ability to maintain uninterrupted foam production while the vehicle is in motion at speeds up to 8 km/h is an essential design feature for all vehicles</em>.</p>
+    <p>Eight kilometres per hour. That is the specified envelope for foam production while moving. It is roughly a low-speed manoeuvre on the movement area, which makes sense — it is enough to reposition while applying. Above it, the specification makes no claim. And as §5.7.2 adds, <em>in this mode, it will be impossible to deliver any complementary agent unless this is discharged through a monitor</em>.</p>
+
+    <h3>Stability, and why the tilt angle differs</h3>
+    <p>The larger vehicle has a <em>lower</em> static tilt angle requirement — 28° against 30°. That is not an oversight; it reflects the mass distribution of a bigger tank and a longer wheelbase. But it connects directly to §2.6.4, which is the reason a partly filled tank is a hazard rather than an inefficiency: <em>partially filled tanks will create stability problems when the vehicle is cornering at speed</em>.</p>
+    <p>So the tilt angle and the tank level are the same subject viewed two ways. Drive the tank full, and you drive inside the figure the vehicle was built to. Drive it half empty on a wet taxiway, and you have spent the margin the manufacturer gave you.</p>
+
+    <h3>The local factors that change the numbers</h3>
+    <p>§5.7.14 lists three, and each is a specification question rather than a driving one:</p>
+    <ul>
+      <li><strong>Altitude.</strong> <em>The performance of normally-aspirated engines may be affected at altitudes above 600 m and the use of turbochargers may be necessary to achieve acceleration and cruising speed specifications</em>. If your aerodrome is above 600 m, the Table 5-1 acceleration and top speed figures are only achievable with a turbocharged engine — and that has to be established at specification, not discovered on the first response in January.</li>
+      <li><strong>Temperature.</strong> <em>Very high temperatures may necessitate additional capacity in the engine cooling system. Very low temperatures may require protective equipment for the vehicle including the firefighting pump, associated plumbing and the water tank</em>.</li>
+      <li><strong>Sand and dust.</strong> <em>Unusual quantities of sand or dust in the atmosphere, requiring augmented filtration in the induction system to the engine</em>. This one is about engine life as much as performance, and it is a maintenance finding before it is a response finding.</li>
+    </ul>
+    <p>And §5.6.2 adds the surface point: <em>the design and construction of the vehicle should be suitable for carrying its full load over all types of roads and unimproved surfaces on, and in the vicinity of, the airport in all reasonable weather conditions</em>. Full load, not part load. Unimproved surfaces, not just paved.</p>
+
+    <h3>Identity and lighting</h3>
+    <p>§5.7.13 handles the things that make your vehicle recognisable as an emergency vehicle: <em>the provision of audible and visual devices to identify an emergency vehicle should conform to national or local legislation, in addition to any standard lighting requirement of these regulations</em>, and <em>an additional lighting requirement for vehicles to be operated in the aircraft manoeuvring area is defined in Annex 14 — Aerodromes, Volume I — Aerodrome Design and Operations, Chapter 6</em>.</p>
+    <p>Then the one that gets checked at every audit: <em>airport emergency vehicles should be finished in a conspicuous colour, preferably red, in accordance with Annex 14, Volume I, 6.2.2.2</em>.</p>
+
+    <h3>Beyond the table</h3>
+    <p>§5.7.13 names what Table 5-1 does not cover: <em>braking performance, turning circle, tire equipment, interaxle clearance, exhaust emission and, as discussed in 5.6, dimensions</em>. And it sets the baseline for all of them: <em>these must meet or exceed national or local legislation, subject to such special dispensation as may be accorded to emergency vehicles</em>.</p>
+    <p>Note that structure. The baseline is your national road legislation, and any dispensation an emergency vehicle enjoys is an exception to it, not a replacement for it. When a vehicle is specified, the brake and turning-circle figures come from your own vehicle legislation — which this platform cannot supply and should not guess at. Annex 14 sets the manoeuvring-area lighting requirement and the colour; your road authority sets everything else.</p>
+
+    <blockquote>
+      <p><strong>SME action:</strong> put your fleet&rsquo;s actual verified limits on a card in every cab — acceleration, top speed, approach and departure angle, static tilt angle, and the 8 km/h moving-application speed. Then check the four site-specific items against your aerodrome: elevation above 600 m (and whether your engines are turbocharged), the temperature range the vehicle is specified for, whether sand or dust filtration is augmented, and whether the vehicle is specified for full load over unimproved surfaces. Then confirm the manoeuvring-area lighting requirement from Annex 14 Volume I Chapter 6 and the conspicuous colour requirement from §6.2.2.2 are both met.</p>
+    </blockquote>
+  `,
+  refs: [
+    'ICAO Doc 9137 Part 1 — Table 5-1 acceleration, top speed, approach and departure angle, static tilt angle, all-wheel drive, transmission',
+    'ICAO Doc 9137 Part 1 — §5.6.2 full load over all types of roads and unimproved surfaces in all reasonable weather conditions',
+    'ICAO Doc 9137 Part 1 — §5.7.2 foam production in motion up to 8 km/h; complementary agent monitor-only',
+    'ICAO Doc 9137 Part 1 — §5.7.12 minimum characteristics in Table 5-1 less demanding than current practice; stability and crew cab integrity',
+    'ICAO Doc 9137 Part 1 — §5.7.13 braking, turning circle, tyres, interaxle clearance, dimensions against national legislation; audible and visual devices; manoeuvring area lighting; conspicuous colour',
+    'ICAO Doc 9137 Part 1 — §5.7.14 altitude above 600 m; temperature extremes; sand and dust filtration',
+    'ICAO Doc 9137 Part 1 — §2.6.4 partially filled tanks create stability problems when cornering at speed',
+    'ICAO Annex 14 Volume I — §6.2.2.2 conspicuous colour, preferably red; Chapter 6 manoeuvring area vehicle lighting'
+  ],
+  smeChecked: false
+},
+
+  'art06-m5': {
+  title: 'Turnaround discipline',
+  brief:
+    'The second response is decided by how well you handled the first. ' +
+    'Refill, de-water, re-arm, re-crew — and the clock that governs all of it.',
+  points: [
+    'Where agents of all types are discharged, at accidents or in training, it is essential to return vehicles to complete availability in the shortest possible time (§5.7.1).',
+    'The duration and complexity of replenishment processes have a significant effect on vehicle availability (§5.7.1).',
+    'Replenishment processes must be designed for, not improvised on — §5.7.1 treats them as a specification item alongside agent and monitor design.',
+    'Reserves exist to make immediate complete recharge possible (§2.6.1) — 200% foam concentrate and 100% complementary agent.',
+    'A vehicle that is returning to service is still consuming response capability. Command should know when it is back, not assume it.',
+    'Training discharge counts as discharge. Exercise scheduling must be planned against the Annex 14 §9.2.41 vehicle minimum.',
+    'Protein systems require periodic full discharge and system wash-through (§2.6.4) — a turnaround step, not a maintenance-shop step.',
+    'The crew, not just the machine, has to be re-armed. SCBA sets, radios, harnesses and PPE are part of availability.'
+  ],
+  body: `
+    <h3>The clause that makes turnaround a design requirement</h3>
+    <p>§5.7.1 is where this whole lesson comes from: <em>it is essential to consider the replenishment processes associated with the principal and complementary agent systems as the duration and complexity of these processes have a significant effect on vehicle availability. Where agents of all types are discharged, at accidents or in training, it is essential to return vehicles to complete availability in the shortest possible time</em>.</p>
+    <p>Three things follow, and all three are unusual for a standard to say explicitly.</p>
+    <p>First, replenishment is a <em>specification</em> question, handled in the same paragraph as agent quantities, monitor output and discharge patterns. It is not an operational afterthought. Second, replenishment time is a direct measure of availability — which makes it a response capability, not a logistics statistic. Third, and most often missed: <em>training</em> discharge is included. Every live-fire exercise and every practice discharge puts a vehicle out of availability by exactly the same mechanism as a real incident.</p>
+
+    <h3>What "complete availability" means</h3>
+    <p>The standard does not define the term, which means your service does. Complete availability is the state in which the vehicle can perform its primary role without limitation. Build the definition from the primary role in §5.2.2 — reach the accident site, protect evacuation paths, control fire, initiate rescue — and work backwards.</p>
+    <ol>
+      <li><strong>Agents.</strong> Foam and water to the operational minimum, complementary agent to its minimum, concentrate sufficient for the full load per §5.7.1 useable-contents accounting.</li>
+      <li><strong>Systems.</strong> Foam production verified to tolerance after refill — induction percentage, and the tank confirmed full so §2.6.4 stability is preserved.</li>
+      <li><strong>Water.</strong> Tank full, and the source reconnected. A vehicle that has discharged and not refilled is a vehicle that cannot respond.</li>
+      <li><strong>Equipment.</strong> Hand lines, ladders, thermal imaging camera, rescue tool box, first aid, AED — checked present and undamaged after use.</li>
+      <li><strong>Crew.</strong> SCBA sets recharged or replaced, radios working and charged, harnesses inspected, PPE cleaned and dried.</li>
+      <li><strong>Paperwork.</strong> Agent consumption recorded, fault log updated, and the return-to-service time noted so the trend is visible.</li>
+    </ol>
+    <p>The crew line is the one that is usually implicit and should not be. A vehicle with full tanks and three responders whose SCBA sets are on the recharge rack is not in complete availability.</p>
+
+    <h3>The reserves exist for this</h3>
+    <p>§2.6.1 is explicit about what the reserve is for: <em>a reserve supply of foam concentrate equivalent to 200 per cent of the quantities of these agents identified in Table 2-3 should be maintained on the airport for vehicle replenishment purposes. This will permit an immediate complete recharge of the vehicles, if necessary, subsequent to an emergency and retention of a second complete recharge should another emergency occur before airport stocks can be replenished</em>.</p>
+    <p>Read that as two full recharges available at all times. That is why §9.3.1 wants the reserve stored in the fire station — a reserve across the airfield cannot complete a recharge inside the continuous application window.</p>
+    <p>And note the dependency chain in m4: protein systems need periodic complete discharge and wash-through (§2.6.4), which is a turnaround activity. So for protein, a full discharge is both an availability cost and a maintenance requirement. Doing it at end of shift while the reserve is on hand is better than doing it as a booked workshop job.</p>
+
+    <h3>Refill route and wheel spin</h3>
+    <p>The reserve is only useful if it can reach the vehicle. §5.7.15's accessibility provisions apply here as much as to inspection: the time to complete the process is related to how accessible the fill points are, and the design must provide the facility. So confirm:</p>
+    <ul>
+      <li>The route from the reserve store to the vehicle bay, at the station, with no gate or door delay.</li>
+      <li>The fill point accessible without a ladder or a man on the roof — and safe to use with the vehicle fully loaded.</li>
+      <li>The pump capable of refilling at the rate the turnaround requires, not just at the rate the specification claims under test conditions.</li>
+      <li>The de-water provision — where the water goes, and whether you are refuelling with the vehicle on a slope. §2.6.4's stability point applies during the turn as well as on response.</li>
+    </ul>
+
+    <h3>Command needs to know</h3>
+    <p>The last discipline, and the one that is purely cultural: <strong>a returning vehicle is not available until somebody says so.</strong> Command should be told when a vehicle is refilling, when it is re-arming, and when it is back — and should plan for the vehicle being out for the whole of that period, not for the part of it that looks quick.</p>
+    <p>This is where the response time maths quietly fails. A service that measures response time from the alarm, with three vehicles on the forecourt, has measured the best case. If the first incident of the day puts two vehicles into a two-hour turnaround, the second incident of the day is answered from a smaller fleet. §2.7.1 is the requirement; this is the quiet way it stops being met.</p>
+
+    <h3>A turnaround sheet that earns its keep</h3>
+    <p>Keep it per vehicle and per incident, with six numbers and two ticks:</p>
+    <ol>
+      <li>Time incident concluded.</li>
+      <li>Time refill started and finished.</li>
+      <li>Time foam system verified to tolerance.</li>
+      <li>Time re-armed — equipment and crew.</li>
+      <li>Time declared back in service.</li>
+      <li>Agent consumed, against the Table 2-3 figures.</li>
+      <li>Foam induction percentage measured after refill.</li>
+      <li>Faults found, class, and rectification due.</li>
+    </ol>
+    <p>Item 2 to item 5 is your actual turnaround time, measured rather than estimated. Item 7 is the one that catches proportioning drift the moment it starts, because a vehicle refilled with water that has changed will show it at the nozzle rather than three incidents later in a burn-back. And the trend across a quarter tells you whether your replenishment design or your reserve level is the constraint — which is exactly the question §5.7.1 tells you to be asking.</p>
+
+    <blockquote>
+      <p><strong>SME action:</strong> define &ldquo;complete availability&rdquo; for your service in writing, with the six elements above, and put it in your SOP rather than leaving it as understood practice. Then measure one real turnaround end to end, from incident concluded to declared back in service, and compare it against the continuous application window in §2.7.3. If your refill cannot complete inside that window, the reserve quantity, the pump rate or the fill point access is the constraint — and §5.7.15 says fix it in the design. Finally, add the turnaround time to your second-incident-of-the-day scenario and check the response time still holds with one vehicle down.</p>
+    </blockquote>
+  `,
+  refs: [
+    'ICAO Doc 9137 Part 1 — §5.7.1 replenishment processes have a significant effect on vehicle availability; return to complete availability in the shortest possible time after discharge at accidents or in training',
+    'ICAO Doc 9137 Part 1 — §2.6.1 foam concentrate reserve of 200 per cent permits an immediate complete recharge and retention of a second complete recharge; §2.6.2 complementary agent reserve 100 per cent',
+    'ICAO Doc 9137 Part 1 — §5.7.15 accessibility of areas to be inspected and serviced; down-time on major component removal',
+    'ICAO Doc 9137 Part 1 — §2.6.4 foam tanks kept full; stability when cornering at speed; protein periodic discharge and wash through',
+    'ICAO Doc 9137 Part 1 — §2.7.3 continuous agent application window; §5.2.2 the primary role of the vehicle',
+    'ICAO Annex 14 Volume I — §9.2.41 minimum number of RFF vehicles; §9.3.1 reserve of agents stored in the fire station',
+    'Course ART-01 m4 — the task resource analysis and continuous application before external assistance',
+    'Course ART-03 m4 — consumption under real conditions'
+  ],
+  smeChecked: false
+},
 };
 
 /**
