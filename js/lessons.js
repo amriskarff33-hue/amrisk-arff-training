@@ -599,6 +599,178 @@ const LESSON_OVERRIDES = {
   },
 
   /* ─────────────────────────────────────────────────────────────────────
+     ART-03 m3 — the calculation lesson. Every number below is taken from
+     Doc 9137 Part 1 and is cited to its clause. The 777-300ER worked
+     example reproduces the Table 2-4 category 9 row exactly when run with
+     that row's own dimensions, which is how you can prove the chain is
+     right rather than trusting it.
+     ───────────────────────────────────────────────────────────────────── */
+  'art03-m3': {
+    title: 'Discharge rate, duration and the maths',
+    brief:
+      'Where every water figure in ARFF comes from, worked end to end on a ' +
+      '777-300ER — and why the number you calculate is not the number you apply.',
+    points: [
+      'The calculation sizes your SERVICE. It is not an application quantity for one incident.',
+      'Critical area means the fire adjacent to the fuselage, not the whole fire.',
+      'AT from a piecewise formula on overall length and fuselage width; Ap is two-thirds of it.',
+      'Q1 is control in the practical critical area. Q2 is everything after, and it follows the aerodrome category.',
+      'Application rate depends on foam performance level. Level B halves the answer.',
+      'Response time is a separate constraint. Enough water at the wrong minute still fails.'
+    ],
+    body: `
+      <h3>Start with the concept, not the formula</h3>
+      <p>The critical area is the idea that makes the arithmetic legitimate. The
+      guidance is explicit that the objective is <em>not</em> to control or
+      extinguish the entire fire. It is to control only the area of fire adjacent
+      to the fuselage, in order to safeguard fuselage integrity and keep conditions
+      tolerable for occupants.</p>
+      <p>So a "777 fire" is not a quantity. It is a concept with a worst-case
+      assumption attached. Hold onto that, because it is where this calculation is
+      most often misused.</p>
+
+      <h3>Step 1 — theoretical critical area, A<sub>T</sub></h3>
+      <p>A rectangle: overall length of the aircraft by a width that steps up with
+      fuselage size (§2.4.5). For anything 24 m or longer — which includes every
+      widebody you will meet — the formula is:</p>
+      <p class="formula">A<sub>T</sub> = L × (30 m + W)</p>
+      <p>where L is the <strong>overall length</strong>, not the fuselage length, and
+      W is the <strong>maximum fuselage width</strong>. Overall length is used
+      deliberately: the whole aircraft has to be protected, because fire burning
+      through the skin puts the fire inside the fuselage, and T-tail aircraft carry
+      engines and exits out in that extended portion anyway (§2.4.4).</p>
+      <p>The wind asymmetry behind the 30 m is worth knowing: for aircraft of 24 m
+      or more, the area extends 24 m upwind and 6 m downwind (§2.4.3).</p>
+
+      <h3>Step 2 — practical critical area, A<sub>p</sub></h3>
+      <p>Seldom is the whole theoretical area actually alight, so capacity is
+      provided for a smaller area derived from a statistical analysis of real
+      accidents (§2.4.6):</p>
+      <p class="formula">A<sub>p</sub> = 0.667 × A<sub>T</sub></p>
+
+      {{diagram:water-quantity}}
+
+      <h3>Step 3 — Q1, water to control the fire</h3>
+      <p>§2.4.8 gives Q<sub>1</sub> = A × R × T, where R is the rate of application
+      and T the time of application. T is <strong>one minute</strong> — the control
+      time the whole method is built around.</p>
+      <p>R is not a constant. §2.3.5 sets it by foam performance level, and gives
+      these as the minimum rates at which control can be achieved within one
+      minute:</p>
+      <ul>
+        <li><strong>Performance level A</strong> — 8.2 L/min/m²</li>
+        <li><strong>Performance level B</strong> — 5.5 L/min/m²</li>
+        <li><strong>Performance level C</strong> — 3.75 L/min/m²</li>
+      </ul>
+
+      <h3>Step 4 — Q2, everything after control</h3>
+      <p>Q<sub>2</sub> is the water needed to hold control and finish off what is
+      left. The guidance is blunt that this <em>cannot be calculated exactly</em>,
+      because it depends on variables (§2.4.9). Instead it is taken as a percentage
+      of Q<sub>1</sub>, and — this is the part that catches people — the percentage
+      comes from the <strong>aerodrome category</strong>, not from the aircraft
+      (§2.4.10):</p>
+      <ul>
+        <li>Category 1 — 0% &nbsp;·&nbsp; Category 2 — 27% &nbsp;·&nbsp; Category 3 — 30%</li>
+        <li>Category 4 — 58% &nbsp;·&nbsp; Category 5 — 75% &nbsp;·&nbsp; Category 6 — 100%</li>
+        <li>Category 7 — 129% &nbsp;·&nbsp; Category 8 — 152%</li>
+        <li>Category 9 — 170% &nbsp;·&nbsp; Category 10 — 190%</li>
+      </ul>
+      <p>Q = Q<sub>1</sub> + Q<sub>2</sub> (§2.4.7). And the discharge rate your
+      vehicles must achieve is simply Q<sub>1</sub> delivered in one minute (§2.5.1).</p>
+
+      <h3>Worked — 777-300ER, performance level A foam, category 9 aerodrome</h3>
+      <p>Overall length 73.86 m, maximum fuselage width 6.20 m.</p>
+      <table class="calc">
+        <tr><th>Step</th><th>Working</th><th>Result</th><th>Clause</th></tr>
+        <tr><td>A<sub>T</sub></td><td>73.86 × (30 + 6.20) = 73.86 × 36.20</td><td>2 674 m²</td><td>2.4.5</td></tr>
+        <tr><td>A<sub>p</sub></td><td>0.667 × 2 674</td><td>1 783 m²</td><td>2.4.6</td></tr>
+        <tr><td>Q<sub>1</sub></td><td>1 783 × 8.2 × 1 min</td><td>14 624 L</td><td>2.4.8, 2.3.5</td></tr>
+        <tr><td>Q<sub>2</sub></td><td>1.70 × 14 624</td><td>24 860 L</td><td>2.4.10</td></tr>
+        <tr><td><strong>Q</strong></td><td>14 624 + 24 860</td><td><strong>39 484 L</strong></td><td>2.4.7</td></tr>
+        <tr><td>Discharge rate</td><td>Q<sub>1</sub> in one minute</td><td>14 624 L/min</td><td>2.5.1</td></tr>
+      </table>
+      <p>Split at your foam's mix ratio — at 3%, that is roughly 1 185 L of
+      concentrate and 38 299 L of water. Concentrate quantity is a
+      <em>separate</em> calculation, kept in proportion to the water carried
+      (§2.3.4), and on the aerodrome you hold a reserve of 200% of the Table 2-3
+      quantity for vehicle replenishment (§2.6.1).</p>
+
+      <h3>Check yourself against the table</h3>
+      <p>Run the same formula with the category 9 row's own dimensions — L = 76 m,
+      W = 7 m — and you get A<sub>T</sub> 2 812, A<sub>p</sub> 1 876, Q<sub>1</sub>
+      15 383 L, Q<sub>2</sub> 26 100 L, total 41 483 L. That is Table 2-4's
+      category 9 row, to the litre.</p>
+      <p>If your working reproduces it, your method is sound. Note also that the
+      real 777-300ER comes out <em>below</em> the category figure (39 484 L against
+      41 483 L) purely because its fuselage is narrower than the 7 m the table
+      assumes. The table is built on an average aeroplane per category; your
+      aircraft is not the average.</p>
+
+      <h3>Four traps</h3>
+      <ul>
+        <li><strong>Service size is not incident quantity.</strong> This number
+        establishes what your service must be able to hold and deliver. It assumes
+        the worst credible fire for that aircraft — effectively a full-length fuel
+        spill against the fuselage. An engine fire or a localised fuel fire does not
+        get the whole practical critical area. Applying 39 000 L because that is the
+        number in the manual is a serious error, and it is the single most common
+        misuse of this calculation.</li>
+        <li><strong>Foam performance level moves the answer by more than 2:1.</strong>
+        The same 777-300ER gives 39 484 L on level A foam, 26 483 L on level B and
+        18 057 L on level C. Never quote a water figure without the performance
+        level it assumes.</li>
+        <li><strong>Larger than average means recalculate.</strong> §2.3.7 requires
+        that from 1 January 2015, where operations by aeroplanes larger than the
+        average for the category are planned, the water quantities and discharge
+        rates are recalculated and increased accordingly. A 777 is exactly this
+        case. Table 2-4 exists for this purpose.</li>
+        <li><strong>Complementary agent substitution is not free.</strong> §2.3.11
+        takes 1 kg of complementary agent as equivalent to 1.0 L of water for level
+        A foam. Higher equivalencies need test evidence from your State, and any
+        other agent needs its substitution ratio checked. And mixing performance
+        levels at one aerodrome is discouraged because it corrupts the quantity
+        arithmetic (§2.3.10).</li>
+      </ul>
+
+      <h3>The constraint the calculation cannot see</h3>
+      <p>You can hold every litre above and still fail, because response time is
+      assessed separately (§2.7.1). The objective is two minutes, and not more than
+      three, to the end of each runway and to any other part of the movement area,
+      in optimum visibility and surface conditions.</p>
+      <p>Note precisely how that is measured: from the initial call to the time the
+      first responding vehicle is <em>in position to apply foam at a rate of at least
+      50 per cent of the Table 2-3 discharge rate</em>. Arriving is not the same as
+      arriving ready. And realistic times must come from vehicles responding from
+      their normal locations, not from positions adopted for the test.</p>
+      <p>Additional vehicles delivering the rest of the agent should arrive within
+      three minutes and no more than four, so that application is continuous
+      (§2.7.3). Continuous application is not a nicety — a foam blanket that is
+      allowed to break up has to be rebuilt from nothing.</p>
+
+      <blockquote>
+        <p><strong>SME action:</strong> confirm your aerodrome category and the k₂
+        percentage that follows from it; state the performance level of the foam
+        actually stocked and re-derive every figure on that basis; confirm which
+        aircraft types at your field exceed the category average and confirm the
+        recalculation under §2.3.7 has been done; and record your measured
+        response times against §2.7.1. Then check the whole set against your
+        State's requirements — Annex 14 Volume I Chapter 9 and, in South Africa,
+        CAR Part XI and the applicable SACAA CAPs, which may differ from the ICAO
+        figures given here.</p>
+      </blockquote>
+    `,
+    refs: [
+      'ICAO Doc 9137 Part 1 — §2.3.4 to §2.3.8 foam quantities and application rates; Table 2-3; Table 2-4',
+      'ICAO Doc 9137 Part 1 — §2.4.1 to §2.4.10 critical area and water calculation',
+      'ICAO Doc 9137 Part 1 — §2.5 discharge rates; §2.6 supply and storage; §2.7 response times',
+      'ICAO Annex 14 Volume I Chapter 9 — aerodrome rescue and firefighting',
+      'CAR Part XI and applicable SACAA CAPs — South African requirements'
+    ],
+    smeChecked: false
+  },
+
+  /* ─────────────────────────────────────────────────────────────────────
      ART-16 — the hot brake lesson. This is the worked example of a lesson
      that has to carry specific technique, so it cites Doc 9137 Part 1
      §12.2.3 and §12.2.4 directly and stays inside what they actually say.

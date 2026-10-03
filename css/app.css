@@ -368,6 +368,55 @@ html[data-theme="day"] .hero { background: linear-gradient(155deg, var(--navy) 0
 .prose h3 { margin-top: 1.5em; color: var(--text); }
 .prose > :first-child { margin-top: 0; }
 
+/* Worked calculations. A formula is the one thing in a lesson that a learner
+   may need to copy down, so it is set in mono and given its own panel rather
+   than left as running text. */
+.prose .formula {
+  font-family: var(--mono);
+  font-size: 1.02em;
+  color: var(--text);
+  text-align: center;
+  padding: 14px 12px;
+  margin: 1.1em 0;
+  border-radius: var(--radius-sm);
+  background: var(--surface-2);
+  border: 1px solid var(--line-soft);
+  overflow-x: auto;
+}
+.prose .calc {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.2em 0;
+  font-size: .88rem;
+  font-variant-numeric: tabular-nums;
+}
+.prose .calc th,
+.prose .calc td {
+  padding: 9px 10px;
+  text-align: left;
+  border-bottom: 1px solid var(--line-soft);
+  vertical-align: top;
+}
+.prose .calc th {
+  font-size: .72rem;
+  text-transform: uppercase;
+  letter-spacing: .07em;
+  color: var(--text-3);
+  font-weight: 600;
+}
+.prose .calc td:first-child { white-space: nowrap; color: var(--text); }
+.prose .calc td:nth-child(2) { color: var(--text-2); font-family: var(--mono); font-size: .95em; }
+.prose .calc td:last-child { white-space: nowrap; color: var(--text-3); font-size: .8em; }
+.prose .calc tr:last-child td { border-bottom: none; }
+.prose .calc tr:last-child td:nth-child(3) { color: var(--gold); }
+/* Narrow screens: drop the clause column rather than let the table scroll. */
+@media (max-width: 560px) {
+  .prose .calc th:last-child,
+  .prose .calc td:last-child { display: none; }
+  .prose .calc { font-size: .82rem; }
+  .prose .calc th, .prose .calc td { padding: 7px 6px; }
+}
+
 /* Draft banner — the safety-critical state, styled to be unmissable */
 .draft {
   display: flex; gap: 11px; align-items: flex-start;
