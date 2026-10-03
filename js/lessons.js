@@ -508,27 +508,143 @@ const LESSON_OVERRIDES = {
       your staffing is not entirely yours to choose.</p>
 
       <h3>How the number is arrived at</h3>
-      <p>It is not a headcount. The same section requires a Task Resource Analysis
-      completed for acceptance, and sets out the factors that assessment must take
-      into account — nine of them, and they are the honest answer to "why do we
-      carry that number":</p>
-      <ol>
-        <li>the types of aircraft using the aerodrome;</li>
-        <li>response times;</li>
-        <li>the type, design, capacity and discharge rate of the appliances to be
-        deployed;</li>
-        <li>the need to rescue aircraft occupants;</li>
-        <li>the need to operate ladders, breathing apparatus and rescue
-        equipment;</li>
-        <li>availability of water supplies;</li>
-        <li>the speed and scale of response of any mutual aid agency;</li>
-        <li>competency levels of all staff.</li>
-      </ol>
-      <p>And on the other side of the equation, Annex 14 §9.2.45 says the minimum
-      number of personnel should be determined by a task resource analysis with the
-      level of staffing documented in the Aerodrome Manual. If you cannot point to
-      the page of the manual that documents your staffing, that is the first gap to
+      <p>It is not a headcount. Annex 14 §9.2.45 says the minimum number of
+      personnel should be determined by a task resource analysis, with the level
+      of staffing documented in the Aerodrome Manual. If you cannot point to the
+      page of the manual that documents your staffing, that is the first gap to
       close.</p>
+      <p>The worked example regulation in the previous lesson names the factors
+      that assessment must take into account, and they are the honest answer to
+      "why do we carry that number": the types of aircraft using the aerodrome;
+      response times; the type, design, capacity and discharge rate of the
+      appliances to be deployed; the need to rescue aircraft occupants; the need to
+      operate ladders, breathing apparatus and rescue equipment; availability of
+      water supplies; the speed and scale of response of any mutual aid agency; and
+      the competency levels of all staff.</p>
+      <p>Those are the inputs. They are not the method.</p>
+
+      <h3>The method, in six phases</h3>
+      <p>A genuinely worked example of how a task resource analysis is actually
+      carried out comes from the United Kingdom — CAA CAP 1150, Information Paper
+      04, <em>Task and Resource Analysis</em> (January 2014). It is a UK document
+      and it does not bind you, but it is the clearest public description of the
+      method, so the shape is worth knowing.</p>
+      <p>The definition it works from is the one that makes the whole exercise
+      honest: the analysis identifies the minimum number of personnel required to
+      undertake the identified tasks <strong>in real time before supporting
+      external services are able to effectively assist</strong>. Note the words.
+      Mutual aid is not subtracted from your requirement, because a mutual aid
+      appliance arriving at eight minutes is not a resource for the first eight
+      minutes. Everything in the analysis happens before help arrives.</p>
+
+      <p>The six phases, and what each one actually produces:</p>
+      <ol>
+        <li><strong>Write the aim and the task list.</strong> Not a headcount —
+        a statement of what the service exists to do, followed by the tasks. The
+        published example lists them plainly: meet the required response time;
+        extinguish an external fire; protect escape slides and exit routes; assist
+        in the self-evacuation of the aircraft; create a survivable situation;
+        rescue trapped personnel; maintain post-fire security and control; and
+        preserve evidence. Every task needs somebody doing it, and the task list is
+        where the arithmetic starts.</li>
+        <li><strong>Choose credible worst-case accidents.</strong> Selected from
+        statistical analysis of previous accidents, drawing on international,
+        national and local data. One constraint worth noting: <strong>all incidents
+        should involve fire</strong>, because a feasible worst case has to be one
+        that genuinely requires the service you have.</li>
+        <li><strong>Identify the aircraft types.</strong> Grouped by common
+        configuration rather than by tail number — a long wide-body with multiple
+        decks and aisles is a different rescue problem from a single-aisle
+        high-density narrow-body, and the configuration is what drives the
+        resource, not the registration.</li>
+        <li><strong>Identify the worst location.</strong> This is the phase most
+        services skip and the one that finds the real answer, because your fastest
+        station is not necessarily the station that covers your worst case. A team
+        of experienced personnel who know the aerodrome scores candidate locations
+        against response time, route to the site, terrain, runway crossing
+        procedures, congestion on route, surface conditions, communications,
+        supplementary water supplies, adverse weather and low-visibility procedures,
+        and whether it is day or dark. <strong>An additional time delay is
+        estimated and recorded for each factor, and the location with the highest
+        additional response time is the worst case.</strong> That is a number, and
+        it is auditable.</li>
+        <li><strong>Correlate accident type, aircraft and location</strong> into
+        complete scenarios, agreed with the operator, the facilitator and, where
+        necessary, the regulator.</li>
+        <li><strong>Build the timeline.</strong> This phase is run as a
+        <strong>series of tabletop exercises or simulations</strong>, with a TRA
+        facilitator working with teams of experienced airport supervisors and
+        firefighters — not written at a desk. The scenarios are walked second by
+        second: receipt of the call, donning, turnout, route, arrival, positioning,
+        agent application, entry, rescue, evacuation, and the point at which
+        external services arrive. Who is committed to what, at what time.</li>
+      </ol>
+      <p>The result is recorded in a table or spreadsheet laid out so that it
+      answers six questions without anybody having to ask: the receipt of the
+      message and the dispatch of the response; the time, which <strong>starts at
+      the initial receipt of the call and continues until additional external
+      resources arrive</strong> or the facilitator ends it; the list of assessed
+      tasks, functions and priorities achieved; the resources — personnel, vehicles
+      and equipment — required for each task; comments for team members to record
+      findings; and the pinch points identified. If your analysis does not produce
+      that artefact, you have produced an opinion.</p>
+
+      <h3>Pinch points</h3>
+      <p>The reason the timeline is built second by second rather than summarised
+      is to find <strong>pinch points</strong> — the moments where the work
+      required exceeds the people available. A pinch point is not a slow patch. It
+      is a specific clock time at which somebody is needed in two places, and it is
+      the only objective basis on which you can say your crew complement should
+      be a larger number.</p>
+      <p>But a pinch point is a <em>question</em>, not automatically a finding, and
+      the worked example in the published analysis is instructive because of how it
+      was closed. A potential pinch point was identified with two named
+      firefighters. The conclusion was that the tasks they were performing were
+      nevertheless achievable, because those same two were already using a foam
+      hand line to maintain the evacuation route and were maintaining post-fire
+      control. That was recorded as a logical and achievable process for that
+      crew.</p>
+      <p>So the discipline is two questions, in order. First: is a person needed in
+      two places at the same clock time? Second: are the competing tasks actually
+      compatible, or merely assumed to be? The first is arithmetic. The second is
+      judgement, and it is the one that gets skipped — and skipping it in the
+      optimistic direction is how a crew complement becomes a fiction.</p>
+      <p>Read the whole thing back the other way, because it is the uncomfortable
+      direction too: if a service cannot identify a pinch point in its worst-case
+      scenario, the honest conclusion is not that the staffing is adequate but that
+      the scenario was never really worked through. A TRA that produces no pinch
+      points usually means the analysis stopped before Phase 6.</p>
+
+      <h3>What the method is not</h3>
+      <p>Two warnings from the same source, both worth having, because both are
+      common failure modes.</p>
+      <p><strong>Do not reach for the arithmetic first.</strong> A quantitative
+      risk assessment can support the conclusion, expressing risk reduction in
+      lives saved and even in monetary terms — but the published guidance is blunt
+      that this is <em>of little, if any, value in determining minimum levels of
+      personnel</em>. The number comes from the qualitative analysis of what people
+      must actually do, in real time. A spreadsheet that prices risk but never
+      opens the timeline is not a task resource analysis.</p>
+      <p><strong>Do not leave the human factors out.</strong> The analysis is
+      supposed to observe human factor principles to obtain optimum response:
+      workload, capabilities, functions, decision aids, environmental constraints,
+      team versus individual performance, training effectiveness, skill levels,
+      organisational structure, safety systems and protective equipment — and
+      <strong>fatigue and the need for adequate relief</strong>. A crew that is
+      theoretically sufficient at 03:00 on night four of a shift pattern is not
+      sufficient. The relief is part of the minimum, not an addition to it.</p>
+      <p>And one practical point that catches services out. If your service also
+      attends structural fires and road traffic accidents, the analysis must take
+      due regard to <strong>the inability of not meeting required response
+      times</strong>, and robust procedures have to be introduced to cover the gap
+      that creates. Adding the commitment does not add the crew; something has to
+      give, and it had better be a written decision rather than an incident.</p>
+
+      <h3>The one-sentence version</h3>
+      <p>If your response time is three minutes and the crew that arrives cannot
+      both apply agent at the required rate and get a rescue team into the aircraft
+      in that window, you have found your pinch point — and that number, not
+      anybody's preference, is the size of your operational crew.</p>
 
       <h3>Scene safety comes before the fire</h3>
       <p>Before anything else: who is hurt, what is falling, what is about to
@@ -552,10 +668,11 @@ const LESSON_OVERRIDES = {
     refs: [
       'ICAO Annex 14 Vol I — §9.2.44 sufficient trained and competent personnel, equipment at maximum capacity',
       'ICAO Annex 14 Vol I — §9.2.45 task resource analysis and staffing documented in the Aerodrome Manual',
-      'United Arab Emirates — GCAA CAR Part XI §13.3 extraneous duties, §13.5 the nine staffing factors, §13.7 no reduction without an accepted assessment, §13.8 supervisory grades, §13.9 authority-set minimum (worked example of principle, not your law)',
+      'United Arab Emirates — GCAA CAR Part XI §13.3 extraneous duties, §13.5 the staffing factors, §13.7 no reduction without an accepted assessment, §13.8 supervisory grades, §13.9 authority-set minimum (worked example of principle, not your law)',
+      'United Kingdom — CAA CAP 1150, Information Paper 04, Task and Resource Analysis (January 2014): the six-phase method, pinch points, the limitation of quantitative risk assessment, and human factors including fatigue and relief (a method illustration; not a binding requirement)',
       'Your national Civil Aviation Authority instrument — confirm the equivalent requirements that bind you',
-      'Your aerodrome emergency plan — organisation, command structure and call-out sections',
-      'Course ART-09 — emergency command and the incident command system',
+      'Your aerodrome manual — the page documenting your staffing level and the task resource analysis behind it',
+      'Course ART-09 m1 — the agreed command framework that the analysis assumes',
       'Course ART-08 — training and competency records'
     ],
     smeChecked: false
