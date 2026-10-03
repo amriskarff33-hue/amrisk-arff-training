@@ -4106,6 +4106,137 @@ const LESSON_OVERRIDES = {
   ],
   smeChecked: false
 },
+
+  'art16-m1': {
+  title: 'Attack selection',
+  brief:
+    'The attack is not chosen by habit. It is chosen by what is burning, ' +
+    'where it is, and what your appliance can actually reach.',
+  points: [
+    'The first question is not "what agent" but "what is burning and where". Engine, APU, fuel spill, cabin, cargo, electrical — each demands a different attack.',
+    'The built-in system is the first control. For engine and APU fires, the flight deck fire handle and the built-in extinguishing system are the primary attack. RFF is the backup.',
+    'Clean agents for screened fires (nacelle, APU, cargo). Foam for external fuel spill. Water for exposure cooling. Dry chemical for three-dimensional fires. They are not interchangeable.',
+    'Agent selection is constrained by reach. If your appliance cannot deliver the chosen agent to the seat of the fire from a safe position, you have selected the wrong agent or the wrong position.',
+    'Mixing agents on the same fire is a discipline, not a default. Two vehicles with different foam performance levels create a blanket with two drainage times — the weaker fails first (§2.3.10).',
+    'The attack ends when the fire is controlled, not when the tank is empty. Continuous application requires the second wave to arrive before the first wave runs dry (3–4 min, §2.7.3).'
+  ],
+  body: `
+    <h3>The attack is chosen by the fire, not by habit</h3>
+    <p>Every engine fire, APU fire, fuel spill, cabin fire, and cargo fire is a different problem. The attack — position, agent, technique — is selected by what is burning, where it is, and what your appliance can actually reach. "We always use foam" is not an attack selection; it is a default that will fail the moment the fire is not a fuel spill.</p>
+
+    <h3>The hierarchy of control</h3>
+    <p>For engine and APU fires, the built-in extinguishing system is the primary attack. The flight crew operates the fire handle; the built-in system discharges; the fire should be controlled. RFF's role is to stand by, protect exposures, and be ready if the built-in system fails or the fire has already escaped the compartment (§12.2.9).</p>
+    <p>Only when the built-in system is expended and the fire persists does external attack begin. And even then, the guidance is specific: clean agent through the access panel for a confined turbine fire; foam or water on adjacent structures to keep them cool; do not foam the intake or exhaust unless no other option (§12.2.10).</p>
+
+    <h3>Agent by fire type</h3>
+    <ul>
+      <li><strong>Engine fire (confined).</strong> Built-in system first. If failed, clean agent through access panel. Foam/water on adjacent structure.</li>
+      <li><strong>APU fire.</strong> Built-in system first. If failed, clean agent through APU access panel. Tail is high — you need reach.</li>
+      <li><strong>Fuel spill fire.</strong> Foam blanket from upwind/uphill. The practical critical area determines the quantity; the application rate determines the time (§2.3.5).</li>
+      <li><strong>Cabin/cargo fire.</strong> Clean agent (Halon replacement, CO₂) for screened areas. Water for exposure cooling. Interior attack only after ventilation, with SCBA, and with a charged line.</li>
+      <li><strong>Three-dimensional / running fuel fire.</strong> Dry chemical for rapid knockdown. Foam follows for blanket. The two are applied simultaneously in a dual-agent attack — but the dry chemical cloud can impede foam placement (§8.2.5).</li>
+      <li><strong>Electrical fire.</strong> CO₂ or clean agent. Do not use water or foam on live electrical equipment.</li>
+    </ul>
+
+    <h3>Reach is the constraint</h3>
+    <p>You have selected the right agent. Can your appliance deliver it? Engine heights up to 10.5 m (§12.2.15) may require elevated platforms, ladders, or extensible applicators. The APU in the tail cone is typically 6–10 m up. If your turret cannot reach the access panel from a safe position (upwind, outboard, not in the intake/exhaust zone), the attack fails before it starts.</p>
+    <p>The honest question before an engine fire is not "what agent" but "what can my appliance actually reach from where it can safely stand".</p>
+
+    <h3>Mixing agents on the same fire</h3>
+    <p>When two or more vehicles attack the same fire, their agent blankets must merge into a single continuous blanket. That requires:</p>
+    <ul>
+      <li>A pre-agreed sector division so the edge of one vehicle's sweep meets the edge of the next without overlap or gap.</li>
+      <li>Matching foam types and performance levels — mixing level A and level B on the same fire creates a blanket with two different drainage times, and the weaker section fails first (§2.3.10).</li>
+      <li>Communication so the incident commander can adjust sectors as the wind shifts.</li>
+    </ul>
+    <p>Dry chemical and foam on the same fire is a dual-agent attack — the powder knocks down the flame, the foam blankets the fuel. But the powder cloud can impede foam placement (§8.2.5). Sector the vehicles: dry chemical on the 3D fire, foam on the fuel surface.</p>
+
+    <h3>The attack is not over until the second wave arrives</h3>
+    <p>§2.7.3: additional vehicles should arrive within three minutes and no more than four minutes from the initial call so as to provide continuous agent application. A foam blanket that breaks up because the first wave ran dry and the second wave was late has to be rebuilt from nothing.</p>
+    <p>Continuous application is not a nicety. It is the difference between a fire that stays out and a fire that re-ignites on the apron at 03:00.</p>
+
+    <blockquote>
+      <p><strong>SME action:</strong> for each fire type at your aerodrome (engine, APU, fuel spill, cabin, cargo, electrical), state the primary agent, the secondary agent, the delivery method (turret, handline, HRET, access panel), the maximum reach height, and the safe position. Confirm foam performance level is standardised across the fleet. Verify the 3–4 minute second-wave arrival is met in exercises.</p>
+    </blockquote>
+  `,
+  refs: [
+    'ICAO Doc 9137 Part 1 — §12.2.8 confined piston engine fires; §12.2.9/12.2.10 confined turbine fires',
+    'ICAO Doc 9137 Part 1 — §12.2.11 intake and §12.2.12 exhaust danger distances; §12.2.15 access height',
+    'ICAO Doc 9137 Part 1 — §2.3.5 application rates; §2.3.10 mixing performance levels not encouraged',
+    'ICAO Doc 9137 Part 1 — §2.7.3 continuous application (3–4 minutes); §8.2.5 dry chemical/foam interaction',
+    'ICAO Doc 9137 Part 1 — §12.2.16 agent choice and operator notification',
+    'Course ART-03 — agents, quantities and discharge rates',
+    'Course ART-15 m2 — APU fires; m3 — attack positioning'
+  ],
+  smeChecked: false
+},
+
+  'art16-m2': {
+  title: 'Positioning and approach',
+  brief:
+    'The approach route is the first tactical decision. Uphill, upwind, ' +
+    'avoid the hazard zones — the first vehicle sets the route for everyone.',
+  points: [
+    'Approach with extreme caution: evacuating occupants, wreckage debris, fuel ponding, smoke that obscures vision. Never drive over aircraft wreckage (§12.3.25).',
+    'Position uphill and upwind. Fuel and vapours gather in low-lying areas. The wind direction and terrain are not background — they are the first constraints.',
+    'The first vehicle to arrive establishes the route for all vehicles behind it. If the first vehicle positions badly, the whole response inherits the error.',
+    'Protect egress routes first. The initial position should safeguard the evacuation path of occupants (§12.3.25(d)).',
+    'Do not block entry or exit areas that emergency vehicles may need (§12.3.25(c)). Do not drive through smoke that obscures potential evacuees (§12.3.25(a)).',
+    'Position so turrets can cover maximum fuselage, but egress protection comes before turret coverage. Re-positioning for reflash must be possible (§12.3.25(e)).'
+  ],
+  body: `
+    <h3>The approach is a tactical decision, not a drive</h3>
+    <p>Doc 9137 §12.3.25 lists the positioning priorities, and the first one is the approach: <strong>approach the scene with extreme caution. Watch for evacuating occupants, wreckage debris, fuel ponding and other hazards. Avoid driving through any smoke which obscures your vision and potential evacuees'. Avoid driving over any aircraft wreckage</strong>.</p>
+    <p>The wind direction and terrain matter. <strong>Consider terrain and slope, and the direction of the wind before entering. Attempt to position uphill and upwind to avoid fuel and vapours, which tend to gather in low-lying areas</strong> (§12.3.25). This is not advice — it is the positioning priority that every driver and officer should run through before the vehicle moves.</p>
+
+    <h3>The first vehicle constrains the rest</h3>
+    <p>§12.3.25 makes a point that is easy to miss: <strong>RFF apparatus often respond in single file, so the first fire appliance to reach the accident site establishes the route for the vehicles behind it, and may dictate the approach into their ultimate positions</strong>.</p>
+    <p>Which means the single most consequential positioning decision on the scene is made by whoever gets there first, usually at the least informed moment of the whole incident. This is why the approach route and the initial position must be rehearsed, not improvised.</p>
+
+    <h3>The positioning priorities, in order</h3>
+    <ol>
+      <li><strong>Approach with extreme caution.</strong> Watch for evacuating occupants, wreckage debris, fuel ponding, other hazards. Avoid smoke that obscures vision. Avoid driving over wreckage.</li>
+      <li><strong>Uphill and upwind.</strong> Avoid fuel and vapours in low-lying areas.</li>
+      <li><strong>Do not block entry/exit areas.</strong> Other emergency vehicles may need them.</li>
+      <li><strong>Protect egress routes.</strong> The initial position should safeguard the evacuation path of occupants. This comes before turret coverage of the fuselage.</li>
+      <li><strong>Re-positionable for reflash.</strong> Ideally, vehicles should be positioned so they can be repositioned in the event of reflash or on direction of the incident commander (§12.3.25(e)).</li>
+      <li><strong>Turret coverage.</strong> Position so turrets can cover a maximum amount of the aircraft fuselage (§12.3.25(f)).</li>
+      <li><strong>Incident commander's size-up.</strong> The IC considers what is happening, what is about to happen, and what to do to preserve life and property (§12.3.25(g)).</li>
+      <li><strong>Preserve the accident site.</strong> Give consideration to preserving the accident site for investigation (§12.3.25(h)).</li>
+    </ol>
+
+    <h3>Egress protection before turret coverage</h3>
+    <p>Read (d) against (f). Protecting egress comes before covering the fuselage. If you are covering the fuselage you are choosing not to protect an exit route, and that is a defensible choice in some circumstances — but it should be a choice somebody made, not an accident of where the first vehicle stopped.</p>
+
+    <h3>Sector division is pre-planned</h3>
+    <p>When multiple vehicles attack the same fire, their foam blankets must merge into a single continuous blanket. That requires:</p>
+    <ul>
+      <li>A pre-agreed sector division so the edge of one vehicle's sweep meets the edge of the next without overlap or gap.</li>
+      <li>Matching foam types and performance levels — mixing level A and level B on the same fire creates a blanket with two different drainage times, and the weaker section fails first (§2.3.10).</li>
+      <li>Communication so the incident commander can adjust sectors as the wind shifts.</li>
+    </ul>
+
+    <h3>The incident commander decides changes</h3>
+    <p>It is not the arriving crew, and it is not a matter of individual initiative. §12.3.25 is explicit: <strong>as part of the size-up process the incident commander would decide whether the tactical plan needs changing</strong>.</p>
+    <p>The first vehicle to arrive should be reporting what it sees and requesting a decision, not announcing one. If your crews routinely re-position themselves on arrival because they can see something the plan did not anticipate, that is a command problem — and it is also, read more generously, a signal that the plan needs updating.</p>
+
+    <h3>Re-positioning is part of the plan</h3>
+    <p>A vehicle that is boxed in by other vehicles, by terrain, or by its own hose lay cannot re-position. The initial positions must leave an exit route. The incident commander needs the option to move vehicles.</p>
+
+    <blockquote>
+      <p><strong>SME action:</strong> attach your positioning plan per aircraft type, drawn from your aerodrome's actual layout, taxiways, hardstanding and water points. Confirm sector assignments for your vehicle fleet, the foam type/performance level match, and the communication plan for wind-shift re-sectoring. Verify the first-vehicle route decision is briefed to every driver. Run a drill where the first vehicle deliberately takes a wrong position and the IC must redirect the following vehicles.</p>
+    </blockquote>
+  `,
+  refs: [
+    'ICAO Doc 9137 Part 1 — §12.3.25 positioning priorities (a) through (h); §12.3.21 first vehicle establishes route',
+    'ICAO Doc 9137 Part 1 — §2.3.5 application rates; §2.3.10 mixing performance levels not encouraged',
+    'ICAO Doc 9137 Part 1 — §2.7.3 continuous application (additional vehicles within 3–4 minutes)',
+    'ICAO Doc 9137 Part 1 — §12.2.8 to §12.2.16 engine and APU fire tactics',
+    'Your aerodrome emergency plan — pre-planned positioning and sector assignments',
+    'Course ART-09 m4 — working the emergency plan'
+  ],
+  smeChecked: false
+},
 };
 
 /**
