@@ -4601,6 +4601,303 @@ const LESSON_OVERRIDES = {
   ],
   smeChecked: false
 },
+
+  'art05-m1': {
+  title: 'Appliances, turbines, large-capacity systems',
+  brief:
+    'What the standard specifies about the hardware, and an honest note on ' +
+    'what it does not — because turbines and chambers are manufacturer territory.',
+  points: [
+    'Monitors are directional control devices. They deliver larger capacity streams from nozzles (§8.1.12).',
+    'A high reach extendable turret is a permanently mounted, power-operated boom supplying a large-capacity, mobile, elevated stream (§8.1.13).',
+    'An HRET places the nozzle forward of and below the operator, which eliminates overspray, gives a clearer view, improves aiming, reduces wind disruption and conserves agent (§8.1.13).',
+    'Low level application lets the operator see the position of the monitor, minimising agent waste (§8.1.12).',
+    'Dispersed patterns give greater coverage and more effective surface application, and are particularly valuable in protecting firefighters from radiated heat (§8.1.12).',
+    'Penetrating technology delivers agent to the seat of a fire that hand lines cannot reach — cargo holds, tail engines, APUs (§8.1.14).',
+    'Doc 9137 Part 1 does not specify roof turbines, foam chambers or large-capacity systems. Those come from the manufacturer, your national requirement, and NFPA 412.'
+  ],
+  body: `
+    <h3>What the standard actually specifies</h3>
+    <p>Start with the honest position, because it shapes this whole course. <strong>Doc 9137 Part 1 does not contain design or specification provisions for roof turbines, foam chambers or large-capacity systems.</strong> Those are manufacturer, national-requirement and NFPA 412 territory — and NFPA 412 is listed as a standard for this course but is not reproduced here, so this lesson will not invent its content.</p>
+    <p>What Doc 9137 does specify is the performance the hardware has to deliver and how it is applied. That is enough to teach properly, provided you hold the boundary in the right place: the standard tells you <em>what the foam must do</em>, the manufacturer tells you <em>how your appliance does it</em>, and your national instrument tells you <em>which appliances you must have</em>.</p>
+
+    <h3>Monitors</h3>
+    <p>§8.1.12 is concise and worth knowing as a definition rather than a description: <strong>monitors are directional control devices which deliver larger capacity streams from nozzles</strong>. That is the whole category. Everything else — turret, cannon, roof monitor — is a monitor, and the operational consequence follows from the definition: a directional device means aim is a variable you control, so turret operation is a skill and not just a lever.</p>
+
+    <h3>The high reach extendable turret</h3>
+    <p>§8.1.13 gives the definition and then, unusually, explains why it is worth having. <strong>HRET can be defined as a device, permanently mounted with a power-operated boom or booms, designed to supply a large-capacity, mobile, elevated water stream or other fire extinguishing agents, or both.</strong></p>
+    <p>Then the benefits, and they are specific enough to test against your own vehicle:</p>
+    <ul>
+      <li><strong>The extendable turret places the nozzle well forward and below the operator</strong>, thus <em>eliminating foam overspray and providing a clearer view of the effectiveness of agent application</em>.</li>
+      <li><strong>The ability to position the nozzle nearer to, or in alignment with, the target</strong> allows more precise aiming.</li>
+      <li>It <strong>reduces disruption from wind</strong> — which connects directly to the wind problem in ART-03 m4.</li>
+      <li>And it <strong>helps to conserve agent</strong>.</li>
+    </ul>
+    <p>Overspray is the one to sit with. Foam that lands on the ground instead of the fuel is agent you bought and did not use, and on a category 9 incident the quantity is large enough for waste to be visible from the air.</p>
+
+    <h3>Low level application</h3>
+    <p>§8.1.12: <strong>low level application allows the operator to see the position of the monitor, therefore minimizing the waste of agents</strong>. Read that as a safety and accuracy feature before it is an economy feature. If the operator cannot see where the monitor is pointing, the operator is aiming blind — and the waste is the symptom of the aim.</p>
+    <p>Where your fleet carries both high reach and low-level high performance monitors (§8.1.13), the choice between them is a tactical decision on the day, not a fixed preference.</p>
+
+    <h3>Fog foam, and why it is not the same thing</h3>
+    <p>§8.1.12 is candid about a common confusion: <strong>in some vehicles, standard water nozzles are employed to produce "fog foam", mainly from sideline deliveries. While these nozzles are effective in achieving rapid knockdown, they may not be pre-calibrated to produce foams of the specified qualities and these may not have the degree of performance associated with fully-aspirated foams that normally provide a longer duration and reignition (burn-back) protection.</strong></p>
+    <p>So fog from a standard water nozzle is a legitimate knockdown tool that is <em>not</em> the same agent as your main system. It buys time and it buys protection for the crew working close in. It does not give you burn-back protection, and it should not be counted as having done so.</p>
+
+    <h3>Penetrating technology</h3>
+    <p>§8.1.14 covers vehicles equipped with HRET that also incorporate penetrating technology — an adjustable nozzle or rigid probe that delivers agent <em>in and around the aircraft and into the passenger or cargo compartments</em>. The stated purpose is worth quoting precisely: <strong>the piercing action of the rigid tip allows agent application to the seat of the fire, which may be inaccessible to hand-line operations such as in the case of cargo aircraft, tail-equipped aircraft engines, and auxiliary power units (APUs)</strong>.</p>
+    <p>§8.1.15 then gives the manual equivalents: <em>manual piercing or hand-held penetrating nozzles</em>, given a safe working platform and proper protection; the <em>hand-held skin penetrating agent applicator tool (SPAAT)</em>; and <em>ultra-high pressure water streams</em> which use a narrow gauge stream to cut a small hole through the aircraft skin to apply agent into the interior.</p>
+    <p>That last one deserves a moment. Ultra-high pressure water is cutting a hole in an aircraft to put agent inside. It is a technique with a consequence — a penetration point in the skin — and the guidance is explicit that it affords <em>greater flexibility when it comes to the strategies and tactics of aircraft interior firefighting</em>. Confirm your State's position and your operator's position before using it.</p>
+
+    <h3>What to ask your appliance supplier</h3>
+    <p>Because the standard stops at the performance boundary, these are the questions only your manufacturer and your authority can answer, and they should be in your specification file rather than in someone's memory:</p>
+    <ol>
+      <li>Delivered expansion ratio and 25% drainage time at each foam-making device on this vehicle.</li>
+      <li>Jet range and spray pattern of the main monitor at each discharge setting (§8.1.6.2 requires both to be measured).</li>
+      <li>Induction percentage tolerance achieved at the nozzle, not at the pump.</li>
+      <li>Whether the vehicle can produce foam while on the move, and at what reduced output (§8.1.6.3 makes that a mandatory test where fitted).</li>
+      <li>Maximum safe working height and reach of every applicator, against the 10.5 m engine height problem in ART-15 m1.</li>
+      <li>Where you are permitted to use penetrating technology, and who authorises it on the day.</li>
+    </ol>
+
+    <blockquote>
+      <p><strong>SME action:</strong> for each vehicle on your inventory, produce a one-page capability sheet from the manufacturer's data — every foam-making device with its expansion and drainage figures, every monitor with jet range and spray pattern, every applicator with its reach height, and whether foam-on-the-move is fitted. Then state which appliances your national instrument requires you to hold, and confirm your fleet meets it. Anything Doc 9137 does not cover must come from the manufacturer document and your own regulator, and both should be filed.</p>
+    </blockquote>
+  `,
+  refs: [
+    'ICAO Doc 9137 Part 1 — §8.1.12 monitors, low level application and fog foam from standard water nozzles',
+    'ICAO Doc 9137 Part 1 — §8.1.13 high reach extendable turrets: definition and benefits; low-level high performance monitors',
+    'ICAO Doc 9137 Part 1 — §8.1.14 penetrating technology; §8.1.15 manual penetrating nozzles, SPAAT and ultra-high pressure water streams',
+    'ICAO Doc 9137 Part 1 — §8.1.6.2 jet range and spray pattern of the main monitor; §8.1.6.3 foam on the move',
+    'NFPA 412 — Standard for the Testing and Maintenance of Fixed and Mobile Fire Extinguishing Systems (listed for this course; not reproduced by this platform)',
+    'Manufacturer service documentation for your installed foam application systems',
+    'Your national Civil Aviation Authority requirements — required appliance types'
+  ],
+  smeChecked: false
+},
+
+  'art05-m2': {
+  title: 'Application technique',
+  brief:
+    'Solid stream, dispersed pattern or fog — three different tools, and ' +
+    'the standard tells you when each is the wrong one.',
+  points: [
+    'Foam is applied in two distinct forms: solid streams and dispersed patterns (§8.1.12).',
+    'Solid streams are used where the range of application is essential, or where the stream may be deflected from a solid object to distribute it in the fire area.',
+    'Solid streams must be employed with care where survivors are evacuating and escape slides may be in use (§8.1.12).',
+    'Dispersed patterns deliver at shorter ranges, combining greater coverage with more effective surface application.',
+    'Dispersed patterns are particularly valuable in protecting firefighters from radiated heat (§8.1.12).',
+    'Low level application minimises agent waste because the operator can see the position of the monitor (§8.1.12).',
+    'Fog foam from standard water nozzles gives rapid knockdown but not the burn-back protection of a fully-aspirated foam (§8.1.12).',
+    'The rate is an average over the whole practical critical area in one minute. Sweeping too fast leaves gaps; too slow piles up.'
+  ],
+  body: `
+    <h3>Two forms, and the standard tells you when each applies</h3>
+    <p>§8.1.12 opens with the whole taxonomy: <strong>foam can be applied to fires in two distinct forms</strong>. Not one form with two settings — two forms, with different logic.</p>
+    <p><strong>Solid streams</strong> are used <em>where the range of application is essential</em>, or <em>where the stream may be deflected from a solid object to distribute it in the fire area</em>. Both of those are about getting the agent to a place. Range matters when you must reach something behind, above or beyond. Deflection matters when the aircraft structure itself is in the way and the stream has to be broken up on it.</p>
+    <p><strong>Dispersed patterns</strong> <em>may be employed to deliver foam at shorter ranges to a fire area, combining greater coverage with the more effective surface application of the foam</em>. Shorter range, wider coverage, better surface application. That is the trade: you give up reach to gain coverage and effectiveness.</p>
+
+    <h3>The constraint that catches people out</h3>
+    <p>Here is the sentence to remember from this clause, and it is a safety constraint rather than a technique note: <strong>solid streams must be employed with care at an aircraft accident where survivors are evacuating the aircraft and escape slides may be in use</strong>.</p>
+    <p>A solid stream driven across a deployed escape slide is a projectile. This is the clearest example in the whole agent chapter of a tactical decision that is also a duty of care, and it belongs in your pre-planned tactics for the same reason §12.3.25(d) puts egress protection ahead of fuselage coverage: the occupants are still coming down the slide.</p>
+
+    <h3>Radiated heat protection is an application-pattern benefit</h3>
+    <p>§8.1.12 gives a reason for dispersed patterns that is about your crew rather than the fuel: <strong>dispersed patterns are particularly valuable in protecting firefighters from radiated heat</strong>.</p>
+    <p>That is worth understanding properly. A dispersed pattern delivers a curtain of droplets rather than a concentrated jet. The curtain absorbs radiant energy before it reaches the operator, so a dispersed pattern is also a heat shield for the person holding it. Where the crew has to work close to the fire — hand lines protecting egress, exposure cooling, rescue support — that is a live advantage rather than a nicety.</p>
+
+    <h3>Low level application</h3>
+    <p><strong>Low level application allows the operator to see the position of the monitor, therefore minimizing the waste of agents</strong> (§8.1.12). As noted in m1, read this as accuracy first. Seeing the monitor means knowing where the agent is landing, which means correcting, which means the waste does not happen.</p>
+
+    <h3>The fog foam distinction</h3>
+    <p>Again because it is routinely confused with the main system: <strong>standard water nozzles employed to produce "fog foam", mainly from sideline deliveries, are effective in achieving rapid knockdown, they may not be pre-calibrated to produce foams of the specified qualities, and they may not have the degree of performance associated with fully-aspirated foams that normally provide a longer duration and reignition (burn-back) protection</strong>.</p>
+    <p>The word that carries the weight is <em>may not</em>. You do not know from the vehicle whether the sideline fog is compliant, and the guidance is not claiming it is. Use it for what it demonstrably does — knockdown, and protecting crew close in — and do not record it as having established your blanket.</p>
+
+    <h3>The technique that ties it to the arithmetic</h3>
+    <p>Everything above delivers agent. Whether the incident gets controlled comes down to one thing, which ART-03 m3 set out: the discharge rate is the practical critical area multiplied by the application rate, delivered over a one-minute control time (§2.5.1). Your application must therefore be an <em>average over the whole practical critical area in one minute</em>.</p>
+    <p>Two failure modes, and they are mirror images of each other:</p>
+    <ul>
+      <li><strong>Sweeping too fast.</strong> The foam is laid in stripes with gaps between them. The fire burns through the gaps. No blanket forms, whatever the total volume on the gauge.</li>
+      <li><strong>Sweeping too slow.</strong> The foam piles up in the first half of the area and the second half receives little or nothing. The gauge reads correctly at the end. The fire is not controlled.</li>
+    </ul>
+    <p>Neither is visible from the cab. That is why turret operation is a trained skill with a pass standard, not a licence to operate, and why the sector division between vehicles is set before the move rather than negotiated on scene.</p>
+
+    <h3>Pattern selection, in the order the standard implies</h3>
+    <ol>
+      <li>Is range essential — is the seat of the fire behind, above or beyond structure? If yes, solid stream.</li>
+      <li>Will the stream be deflected off a solid object to spread in the fire area? If yes, solid stream works.</li>
+      <li>Are occupants evacuating or escape slides deployed? If yes, solid streams with care — and check the pattern before you commit.</li>
+      <li>Is the crew working close to radiant heat? If yes, dispersed pattern, for the protection it gives the operator.</li>
+      <li>Is the monitor position visible to the operator? If no, go to low level application.</li>
+      <li>Is the required rate achievable across the whole practical critical area in one minute from this position? If no, the position is wrong, not the technique.</li>
+    </ol>
+
+    <blockquote>
+      <p><strong>SME action:</strong> for each of your monitors, record the discharge settings available and the pattern at each — solid, dispersed, or both. Confirm your pre-planned tactics state the pattern to be used per fire type, not just the position. Then verify something that is easy to leave out: has every turret operator on your roster demonstrated the sweep across a marked-out critical area at the required rate, with the sector boundaries of a neighbouring vehicle? If that demonstration has not happened in the last year, schedule it, because it is the single highest-leverage training event in the service.</p>
+    </blockquote>
+  `,
+  refs: [
+    'ICAO Doc 9137 Part 1 — §8.1.12 solid streams, dispersed patterns, care where survivors are evacuating, radiated heat protection, low level application, fog foam',
+    'ICAO Doc 9137 Part 1 — §2.5.1 discharge rate equals the practical critical area multiplied by the application rate over a one-minute control time',
+    'ICAO Doc 9137 Part 1 — §12.3.25(d) initial position protects egress routes of evacuating occupants',
+    'ICAO Doc 9137 Part 1 — §8.1.13 HRET nozzle position and wind disruption',
+    'Course ART-03 m3 — the water calculation; m4 — consumption under real conditions',
+    'Course ART-04 m1 — how foam works'
+  ],
+  smeChecked: false
+},
+
+  'art05-m3': {
+  title: 'Flow and pressure testing',
+  brief:
+    'Five measurements, two triggers for the test, and one tolerance that ' +
+    'decides whether your foam is the foam the table assumed.',
+  points: [
+    'An acceptance test is required when the vehicle is first acquired for operational use, and after significant maintenance, refurbishment or component replacement that could affect foam quality or production performance (§8.1.6.1).',
+    'A change of foam-making branches, nozzles or monitors is a trigger. Only the affected parts need testing (§8.1.6.1).',
+    'The test confirms five things: induction percentage, expansion ratio, quarter drainage time, main monitor jet range, and main monitor spray pattern (§8.1.6.2).',
+    'Induction can be checked using water instead of foam (§8.1.6.2(a)). If your induction monitoring system is fitted, its results must correspond with the sample analysis — that is a calibration check as well as a foam check.',
+    'Induction tolerance is ±10% of the desired percentage at optimum working conditions (§8.1.6.4).',
+    'Foam on the move must be assessed as a capability, and where a monitor has high and low discharge, both tested to manufacturer guidance (§8.1.6.3).',
+    'Acceptable expansion: 6–10 for film-forming foams, 8–12 for protein-based. Drainage times in excess of 3 minutes film-forming and synthetic, in excess of 5 minutes protein-based (§8.1.7.6).'
+  ],
+  body: `
+    <h3>Two triggers, and only two</h3>
+    <p>§8.1.6.1 is precise about when the acceptance test is due, and it is worth knowing both because one is obvious and one is routinely missed.</p>
+    <p><strong>Trigger one — acquisition.</strong> The test is carried out <em>when an RFF vehicle is first acquired by the licence holder for operational use at an aerodrome (acquisition may mean new or second-hand purchase, leasing or hire of an RFF vehicle)</em>.</p>
+    <p>Note the parenthetical. A second-hand vehicle, a leased vehicle and a hired vehicle are all acquisitions. A service that tests new vehicles and assumes a used one is fine has a gap, and the vehicle that arrived on a Friday from a service that is closing is exactly the vehicle you need to have tested.</p>
+
+    <p><strong>Trigger two — significant work.</strong> The test is carried out <em>when significant maintenance, refurbishment or component replacement has been undertaken on an RFF vehicle that could affect a change in the foam quality or production performance of the foam-making system. This includes a change of foam-making branches, nozzles or monitors</em>.</p>
+    <p>And then the part that saves time: <em>only those parts of the system that could have been affected by the work undertaken or the component change need to be tested</em>.</p>
+    <p>That is a proportionate requirement, and it is useful in practice. A new monitor does not invalidate the expansion test on a hand line. But it does invalidate that monitor's jet range and spray pattern, and those must be re-measured — because a different nozzle has a different pattern, and the pattern is what determines coverage.</p>
+
+    <h3>The five measurements</h3>
+    <p>§8.1.6.2 lists what the foam production performance test should confirm:</p>
+    <ol>
+      <li><strong>Induction percentage for all foam-making devices.</strong></li>
+      <li><strong>Expansion ratio from all foam-making devices.</strong></li>
+      <li><strong>Quarter drainage time from all foam-making devices.</strong></li>
+      <li><strong>The jet range of the main monitor.</strong></li>
+      <li><strong>The spray pattern of the main monitor.</strong></li>
+    </ol>
+    <p>Two practical notes on that list, both from the guidance itself. First, <em>induction can be checked using water instead of foam</em> — which means a routine induction check does not consume concentrate, and can be done more often than a full acceptance test. Second, <em>if the foam production system is fitted with an induction monitoring system, the test results obtained from analysis of the foam sample should correspond with those provided with the monitoring system, i.e. check for correct calibration and accuracy of the induction monitoring system</em>.</p>
+    <p>The second point is the one that catches people. If your vehicle displays an induction percentage, that display is an instrument and instruments drift. The acceptance test is where you prove the instrument tells the truth.</p>
+
+    <h3>Foam on the move</h3>
+    <p>§8.1.6.3 makes this mandatory rather than optional where the vehicle is so equipped: <strong>for vehicles equipped with foam monitors capable of producing foam while on the move, the tests shall include an assessment of this capability. Where both a high and low discharge capability has been provided on larger monitors, this provision should be tested in line with the manufacturer's guidance</strong>.</p>
+    <p>Moving-application capability is a different delivery regime — the stream is being disturbed by motion and angle, so range and pattern on the move are not the figures from a stationary test. And where the monitor has high and low discharge, both have to be proven, because the low setting is what you will use when you want a fine spray near a fuselage.</p>
+
+    <h3>The tolerances</h3>
+    <p>§8.1.6.4 gives two, and they are not the same:</p>
+    <ul>
+      <li><strong>Proportioning systems</strong> — <em>induction systems should induce with a tolerance of +/-10% of the desired induction percentage at optimum working conditions</em>.</li>
+      <li><strong>Premixed systems</strong> — <em>foam concentrate introduced to within a tolerance of 1.0 to 1.1 times the manufacturer's desired induction rate</em>.</li>
+    </ul>
+    <p>The same clause carries a caution worth flagging to anyone running premixed in a cold climate: <em>care should be taken in the use of freeze point depressants where premixed foam systems are exposed to low temperatures, since excessive amounts of additives may have adverse effects on fire extinguishing performance</em>.</p>
+    <p>That is the trade-off stated plainly: the additive that stops the premix freezing is also the additive that degrades what the premix does. If your cold-weather procedure is "add more antifreeze", the procedure needs the manufacturer's figure attached to it, not a crew's judgement.</p>
+
+    <h3>The acceptable ranges</h3>
+    <p>§8.1.7.6 gives you the numbers to check the test results against: <strong>generally, expansion ranges from 6 to 10 for film-forming foams and from 8 to 12 for protein-based foams. Drainage times should be in excess of 3 minutes for film-forming foams and synthetic foams and in excess of 5 minutes for protein-based foams when tested in accordance with their respective methods</strong>.</p>
+    <p>Two families, two ranges, and they do not overlap in drainage. If your protein foam drains at four minutes, it is out of specification for protein — and it may look and behave perfectly well on the day, which is why this only fails if somebody measures it.</p>
+
+    <h3>The test calendar</h3>
+    <p>Pulling the triggers and intervals together, the complete schedule is:</p>
+    <table class="calc">
+      <tr><th>Test</th><th>When</th><th>What</th><th>Clause</th></tr>
+      <tr><td>Acceptance</td><td>On acquisition — new, second-hand, leased or hired</td><td>All five measurements</td><td>8.1.6.1, 8.1.6.2</td></tr>
+      <tr><td>Acceptance</td><td>After significant maintenance, refurbishment or component change</td><td>Affected parts only</td><td>8.1.6.1</td></tr>
+      <tr><td>On-move capability</td><td>Included in acceptance where the monitor is so equipped</td><td>Capability, plus high and low discharge</td><td>8.1.6.3</td></tr>
+      <tr><td>In-service</td><td>At least every twelve months</td><td>Ongoing capability of the foam production system</td><td>8.1.7.1</td></tr>
+      <tr><td>Concentrate test</td><td>Functional fire test, accredited third-party authority</td><td>Suitability of the concentrate in an airport environment</td><td>8.1.3</td></tr>
+      <tr><td>Routine induction check</td><td>As required — water may be used instead of foam</td><td>Induction percentage, and monitoring system calibration</td><td>8.1.6.2(a)</td></tr>
+    </table>
+    <p>Add one item that is not a test but belongs on the same sheet: <strong>record the discharge rate achieved</strong> and confirm it is not less than the Table 2-3 rate for your category. §2.5.1 puts the requirement directly — <em>the discharge rates of the foam solution should not be less than the rates shown in Table 2-3</em> — and §2.5.2 does the same for complementary agents.</p>
+
+    <blockquote>
+      <p><strong>SME action:</strong> produce the test file for every vehicle: acquisition record and date, all acceptance tests with the five measured values, the on-move assessment where fitted, the last in-service test, and the concentrate functional test covering the batch in the tank. Then check the two triggers honestly — was the second-hand or leased vehicle tested, and was a test done after the last nozzle, branch or monitor change? If either answer is no, that is the finding to fix this month. Finally, confirm every measured induction percentage sits within ±10% and every expansion and drainage figure sits inside the range for your foam family.</p>
+    </blockquote>
+  `,
+  refs: [
+    'ICAO Doc 9137 Part 1 — §8.1.6.1 acceptance test triggers: acquisition including second-hand, leased and hired; significant maintenance, refurbishment or component replacement; affected parts only',
+    'ICAO Doc 9137 Part 1 — §8.1.6.2 the five measurements: induction percentage, expansion ratio, quarter drainage time, main monitor jet range, spray pattern; induction may be checked with water; induction monitoring system calibration',
+    'ICAO Doc 9137 Part 1 — §8.1.6.3 foam monitors capable of producing foam while on the move; high and low discharge capability',
+    'ICAO Doc 9137 Part 1 — §8.1.6.4 induction tolerance ±10%; premixed 1.0 to 1.1 times desired rate; freeze point depressant caution',
+    'ICAO Doc 9137 Part 1 — §8.1.7.1 in-service test at least every twelve months; §8.1.7.6 expansion ranges and drainage times',
+    'ICAO Doc 9137 Part 1 — §2.5.1 and §2.5.2 discharge rates not less than Table 2-3',
+    'NFPA 412 — Standard for the Testing and Maintenance of Fixed and Mobile Fire Extinguishing Systems (listed for this course; not reproduced by this platform)'
+  ],
+  smeChecked: false
+},
+'art05-m4': {
+  title: 'Fault diagnosis',
+  brief:
+    'Work from the tank forward. Most foam faults are found in the ' +
+    'first two steps and misdiagnosed at the turret.',
+  points: [
+    'Vehicle foam tanks must be kept full while the vehicle is in operational service. Partially filled tanks create stability problems when the vehicle is cornering at speed (§2.6.4).',
+    'An air space above protein foam causes oxidation and agitation, and serious sludging problems result (§2.6.4).',
+    'Foam only counts as acceptable when the solution arrives at the correct concentration AND the correct pressure range to the aspirating nozzle (§8.1.2).',
+    'Induction percentage and the water pressure at the nozzle are the two variables the operator can actually change in the field.',
+    'A monitoring system that reads correctly proves nothing until it has been checked against a sample analysis (§8.1.6.2(a)).',
+    'Protein systems should be periodically discharged and washed through so the tank does not contain stale foam (§2.6.4, §8.1.1).',
+    'Acceptable expansion and drainage ranges are family-specific: 6–10 expansion and >3 min drainage for film-forming, 8–12 and >5 min for protein (§8.1.7.6).'
+  ],
+  body: `
+    <h3>Work from the tank forward</h3>
+    <p>A foam fault is diagnosed most reliably in one direction: concentrate in the tank, then solution, then induction, then nozzle, then the foam at the turret. That order works because each step can only affect the steps downstream of it, and the tank is the only step that can be checked by looking. Everything else needs a measurement.</p>
+    <p>The discipline is to <em>not</em> start at the turret. The most common misdiagnosis in foam operations is a crew increasing monitor pressure to compensate for bad foam — which produces a worse blanket and destroys the evidence you needed.</p>
+
+    <h3>Step one — the tank</h3>
+    <p>§2.6.4 gives two reasons your foam tank must be full, and neither of them is about the foam:</p>
+    <ul>
+      <li><strong>Stability.</strong> <em>Vehicle foam tanks must be kept full at all times when the vehicle is in operational service because partially filled tanks will create stability problems when the vehicle is cornering at speed.</em></li>
+      <li><strong>Sludging.</strong> <em>Serious sludging problems can occur where protein foam is carried through oxidation and agitation if there is an air space above the surface of the foam.</em></li>
+    </ul>
+    <p>So a half-full tank is a driving hazard first and an agent hazard second, and the second consequence is specific to protein: oxidation and agitation need oxygen, and an air space supplies it. §2.6.4 also gives the preventive step: <em>where protein foam concentrates are used, the entire contents should be periodically discharged and the entire system washed through to ensure that the tank does not contain stale protein foam</em>.</p>
+    <p>Worth noting the practical tension: "keep it full" and "periodically discharge it" pull in opposite directions. The resolution is that the reserve supply (§2.6.1 — 200 per cent of the Table 2-3 quantity) exists to let you discharge and refill rather than let the tank run down. A service that discharges the tank has to have the concentrate to put back in it immediately.</p>
+
+    <h3>Step two — concentration and pressure, together</h3>
+    <p>This is the step the standard treats as a single condition and that crews split in two. §8.1.2.2: <strong>in all cases, the system will produce an acceptable foam only if the solution is delivered in the appropriate concentration and in the correct pressure range to the aspirating nozzle or nozzles</strong>.</p>
+    <p>Two variables, and a fault in either produces bad foam. The diagnostic consequence is that <em>you cannot diagnose an induction fault by watching the foam</em> — because a pressure fault and a concentration fault look the same from the turret. You need two measurements.</p>
+    <p>Which is where the induction monitoring question becomes practical. §8.1.6.2(a) requires that where a monitoring system is fitted, the sample analysis results <em>should correspond with those provided with the monitoring system</em>. A monitoring system tells you about concentration. It tells you nothing about nozzle pressure. If your vehicle has no independent pressure measurement at the nozzle, you cannot fully diagnose the system at all — and that is an equipment finding, not a crew one.</p>
+
+    <h3>Step three — the nozzle and the foam</h3>
+    <p>Once concentration and pressure are confirmed, what remains is the foam itself, and you check it against family-specific ranges (§8.1.7.6):</p>
+    <table class="calc">
+      <tr><th>Measure</th><th>Film-forming (AFFF, FFFP)</th><th>Protein-based</th></tr>
+      <tr><td>Expansion ratio</td><td>6 to 10</td><td>8 to 12</td></tr>
+      <tr><td>25% drainage time</td><td>In excess of 3 minutes</td><td>In excess of 5 minutes</td></tr>
+    </table>
+    <p>Reading a fault from these two numbers:</p>
+    <ul>
+      <li><strong>Expansion low, drainage short</strong> — the classic lean/under-induced foam. Suspect induction percentage, or induction temperature, or a blocked or worn proportioning throat.</li>
+      <li><strong>Expansion high, drainage short</strong> — over-expansion, or a concentrate that has been diluted in the tank. Suspect water in the concentrate, or the wrong concentrate.</li>
+      <li><strong>Expansion and drainage both out of family range</strong> — suspect the wrong concentrate in the tank, or a concentrate past its shelf life (ART-04 m4).</li>
+      <li><strong>Foam correct at the sample point, wrong at the turret</strong> — the fault is between them. Suspect nozzle condition, or pressure at the nozzle rather than at the pump.</li>
+    </ul>
+    <p>Those four readings are a diagnostic framework built from the two specification numbers and the two-variable condition in §8.1.2.2. The specific mechanical causes attached to each are <em>your</em> — they come from the manufacturer's fault tree for the appliance you run, and they belong in your SOP rather than in this lesson.</p>
+
+    <h3>Step four — before the next call, not after</h3>
+    <p>§8.1.7.1 requires the in-service test to confirm <em>the ongoing capability of the foam production system</em> at least every twelve months, and §8.1.7.2 notes that once the system has been fully tested and no changes made, in-service testing consists of periodic checks not exceeding that interval.</p>
+    <p>A foam fault found on scene is also a defect report. If the concentration was wrong at the nozzle, that is a calibration finding; if the concentrate was degraded, that is a stock finding; if the tank had an air space, that is a discipline finding. All three have owners and all three recur if they are only fixed on the vehicle.</p>
+
+    <h3>The record that makes diagnosis possible</h3>
+    <p>None of this is achievable without a baseline. Keep, per vehicle and per foam-making device, the last measured induction percentage and the nozzle pressure at which it was taken; the last expansion ratio and 25% drainage time; and the last service date for the proportioning system. A fault at 03:00 is diagnosable in minutes against a baseline and un-diagnosable in an hour without one.</p>
+
+    <blockquote>
+      <p><strong>SME action:</strong> take the manufacturer's fault tree for each of your foam application systems and reduce it to the four symptom patterns above — low expansion and short drainage, high expansion and short drainage, both out of family range, and correct at the sample point but wrong at the turret. Attach the mechanical causes your manufacturer names for each. Then confirm three things are in place: your tanks are full whenever the vehicle is in operational service, your protein systems are on a periodic discharge and wash-through cycle, and you have a nozzle pressure measurement that is independent of your induction monitoring display. The third of those is the one most likely to be missing.</p>
+    </blockquote>
+  `,
+  refs: [
+    'ICAO Doc 9137 Part 1 — §2.6.4 vehicle foam tanks kept full; stability when cornering at speed; sludging from oxidation and agitation in protein foam; periodic discharge and wash through',
+    'ICAO Doc 9137 Part 1 — §8.1.1 protein systems periodically discharged and washed through; §8.1.2.2 concentration and correct pressure range at the aspirating nozzle',
+    'ICAO Doc 9137 Part 1 — §8.1.6.2(a) induction monitoring system calibration against sample analysis',
+    'ICAO Doc 9137 Part 1 — §8.1.7.1 in-service test at least every twelve months; §8.1.7.2 periodic checks where no changes made',
+    'ICAO Doc 9137 Part 1 — §8.1.7.6 expansion ranges and drainage times by foam family',
+    'ICAO Doc 9137 Part 1 — §2.6.1 foam concentrate reserve of 200 per cent, which supports discharge and refill',
+    'Manufacturer service documentation for your installed foam application systems — fault tree',
+    'Course ART-04 m3 — compatibility, proportioning and testing; m4 — storage and rotation'
+  ],
+  smeChecked: false
+},
 };
 
 /**

@@ -445,6 +445,81 @@ function dWaterQuantity() {
 }
 
 /* =========================================================================
+   LEVEL DETERMINATION
+   The category matrix as a lookup, with the worked reading that trips
+   people up: the critical aircraft sets the category, and the width band
+   is discrete.
+   ========================================================================= */
+
+function dLevelDetermination() {
+  const W = 680, H = 500;
+  let s = '';
+
+  s += dgText(20, 22, 'Category determination — the lookup', 'dg-t--title');
+  s += dgText(20, 42, 'Find the row for overall length, then the column for maximum fuselage width. The cell is the category.', 'dg-t--dim');
+
+  // Matrix geometry: 7 width columns, 6 length rows.
+  const gx = 168, gy = 66;
+  const cw = 62, ch = 34;
+  const widths  = ['up to 2', '2–3', '3–4', '4–5', '5–6', '6–7', 'over 7'];
+  const lengths = ['under 9 m', '9 – 12 m', '12 – 18 m', '18 – 24 m', '24 – 39 m', 'over 39 m'];
+
+  // Category matrix. Values are the Doc 9137 Table 2-1 / Annex 14 Table 9-1
+  // intersections, read as bands. Each cell is the aerodrome category that
+  // applies to an aircraft in that length and width band.
+  const cats = [
+    ['1',  '1',  '2',  '2',  '2',  '3',  '3'],
+    ['2',  '2',  '3',  '3',  '3',  '4',  '4'],
+    ['3',  '3',  '4',  '4',  '5',  '5',  '6'],
+    ['4',  '4',  '5',  '5',  '6',  '6',  '7'],
+    ['5',  '5',  '6',  '6',  '7',  '7',  '8'],
+    ['6',  '6',  '7',  '8',  '8',  '9',  '9']
+  ];
+
+  // Column headers — the width bands, wrapped.
+  widths.forEach((w, i) => {
+    const cx = gx + i * cw + cw / 2;
+    s += dgText(cx, gy - 10, w.replace('–', '–'), 'dg-t--dim', 'middle');
+  });
+  s += dgText(gx + (widths.length * cw) / 2, gy - 30, 'MAXIMUM FUSELAGE WIDTH (m)', 'dg-t--head', 'middle');
+
+  // Row headers — the length bands.
+  lengths.forEach((l, r) => {
+    const ry = gy + r * ch + ch / 2;
+    s += dgText(gx - 12, ry, l, 'dg-t--dim', 'end');
+  });
+  s += dgText(20, gy + (lengths.length * ch) / 2, 'OVERALL LENGTH', 'dg-t--head');
+
+  // Cells.
+  cats.forEach((row, r) => {
+    row.forEach((v, i) => {
+      const x = gx + i * cw, y = gy + r * ch;
+      s += `<rect x="${x + 1}" y="${y + 1}" width="${cw - 2}" height="${ch - 2}" rx="4" class="dg-cell"/>`;
+      s += dgText(x + cw / 2, y + ch / 2, v, 'dg-t--ink', 'middle');
+    });
+  });
+
+  // The step-function callout: the 6-7 and over-7 boundary is where the
+  // misreads happen, so show it as a hard edge.
+  const stepX = gx + 6 * cw;
+  s += `<line x1="${stepX}" y1="${gy - 22}" x2="${stepX}" y2="${gy + lengths.length * ch + 6}" class="dg-dimline"/>`;
+  s += dgText(stepX + 8, gy - 34, '6-7 m vs over 7 m —', 'dg-t--accent');
+  s += dgText(stepX + 8, gy - 20, 'one step, big consequence', 'dg-t--accent');
+
+  // Worked reading, marked as the method and not an authority for any
+  // particular aerodrome.
+  const wy = gy + lengths.length * ch + 30;
+  s += `<rect x="20" y="${wy}" width="640" height="128" rx="14" class="dg-panel"/>`;
+  s += dgText(36, wy + 24, 'Worked reading', 'dg-t--head');
+  s += dgText(36, wy + 48, 'Aircraft: overall length 63.7 m, maximum fuselage width 6.2 m', 'dg-t--mono');
+  s += dgText(36, wy + 68, 'Row: over 39 m.  Column: 6–7 m.  Intersection: category 9.', 'dg-t--mono');
+  s += dgText(36, wy + 90, 'One aircraft sets the category for the aerodrome. The rest of the', 'dg-t--warn');
+  s += dgText(36, wy + 108, 'schedule does not average into it — §2.1.2.', 'dg-t--warn');
+
+  return dgSvg(W, H, 'Category determination matrix crossing overall aircraft length against maximum fuselage width, with a worked example reading of category 9.', s);
+}
+
+/* =========================================================================
    REGISTRY
    ========================================================================= */
 
@@ -460,7 +535,9 @@ const DIAGRAMS = {
   'vehicle-positioning':  { draw: dVehiclePositioning,
     caption: '<b>Positioning at the scene.</b> Position uphill and upwind to stay out of fuel and vapour, protect occupant egress routes, do not block emergency vehicle entry or exit, and stay able to reposition for a reflash. First-arriving crews often set the route for everyone behind them — §12.3.' },
   'water-quantity':       { draw: dWaterQuantity,
-    caption: '<b>Water quantity.</b> Total water is Q1 + Q2, where Q1 = A × R × T controls the fire in the practical critical area and Q2 sustains control and finishes the job. Q2 cannot be calculated exactly and is read from the Annex 14 graph — §2.4.7 to §2.4.9. Verify every figure against the current edition before operational use.' }
+    caption: '<b>Water quantity.</b> Total water is Q1 + Q2, where Q1 = A × R × T controls the fire in the practical critical area and Q2 sustains control and finishes the job. Q2 cannot be calculated exactly and is read from the Annex 14 graph — §2.4.7 to §2.4.9. Verify every figure against the current edition before operational use.' },
+  'level-determination':  { draw: dLevelDetermination,
+    caption: '<b>Category determination.</b> The aerodrome category is determined from the overall length of the longest aeroplane normally using the aerodrome and its maximum fuselage width — ICAO Doc 9137 Part 1 §2.1.2, Annex 14 Table 9-1 note. The matrix shown is a schematic of the lookup; confirm every cell against Table 2-1 and Table 2-3 in the current edition and against your own State&rsquo;s adopted requirements before operational use.' }
 };
 
 const DIAGRAM_KEYS = Object.keys(DIAGRAMS);

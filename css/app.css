@@ -593,6 +593,7 @@ html[data-theme="day"] .hero { background: linear-gradient(155deg, var(--navy) 0
 .dg-brake  { fill: var(--copper); stroke: var(--copper-deep); stroke-width: 1.6; }
 .dg-panel { fill: var(--surface); stroke: none; }
 .dg-chip   { fill: var(--slate); stroke: none; }
+.dg-cell   { fill: var(--slate); stroke: var(--line-soft); stroke-width: 1; }
 
 /* Text */
 .dg-t {
