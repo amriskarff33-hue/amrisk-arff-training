@@ -17,7 +17,7 @@
    Bump CACHE_VERSION to ship new content. The old cache is dropped on activate.
    ========================================================================= */
 
-const CACHE_VERSION = 'amrisk-arff-v4';
+const CACHE_VERSION = 'amrisk-arff-v5';
 
 const SHELL = [
   './',
@@ -62,6 +62,28 @@ self.addEventListener('activate', (event) => {
   })());
 });
 
+/**
+ * Match a request against the cache, tolerating cache-buster query strings.
+ *
+ * index.html loads scripts as `js/app.js?v=4`, but SHELL precaches the plain
+ * path `js/app.js`. Cache Storage compares the full URL including the query,
+ * so an exact match alone misses every precached asset and the shell only
+ * appears to work because the runtime fetch happened to stash the versioned
+ * URL while the network was still up. On a device that loses connectivity the
+ * moment it installs, that fallback is not there — and the app loads blank.
+ *
+ * Every resource here is uniquely identified by its path; no two files share
+ * a path with a meaningful difference in query, so falling back to a
+ * path-only match is safe here and is what makes the precache authoritative.
+ */
+async function matchShell(cache, request) {
+  const exact = await cache.match(request);
+  if (exact) return exact;
+
+  const url = new URL(request.url);
+  return (await cache.match(url.pathname)) || (await cache.match(request, { ignoreSearch: true }));
+}
+
 self.addEventListener('fetch', (event) => {
   const { request } = event;
 
@@ -100,7 +122,7 @@ self.addEventListener('fetch', (event) => {
   // Everything else: stale-while-revalidate.
   event.respondWith((async () => {
     const cache = await caches.open(CACHE_VERSION);
-    const cached = await cache.match(request);
+    const cached = await matchShell(cache, request);
 
     const network = fetch(request).then((res) => {
       if (res && res.ok && res.type === 'basic') cache.put(request, res.clone());
