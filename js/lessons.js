@@ -6177,6 +6177,412 @@ const LESSON_OVERRIDES = {
   ],
   smeChecked: false
 },
+
+  'art19-m1': {
+  title: 'Plan structure and ownership',
+  brief:
+    'A plan is a set of instructions plus a means of proving they work. ' +
+    'Both halves are required, and one without the other is worthless.',
+  points: [
+    'An aerodrome emergency plan shall be established at an aerodrome, commensurate with the aircraft operations and other activities conducted there (Annex 14 §9.1.1).',
+    'The plan shall provide for coordination of actions in an emergency occurring at an aerodrome or in its vicinity (§9.1.2).',
+    'The plan shall coordinate the response or participation of all existing agencies which could be of assistance (§9.1.3).',
+    'The plan shall observe human factors principles to ensure optimum response by all participating agencies (§9.1.6).',
+    'The plan document should include at least: types of emergencies planned for; agencies involved; responsibility and role of each agency, the emergency operations centre and the command post; names and telephone numbers; and a grid map (§9.1.5).',
+    'A fixed emergency operations centre and a mobile command post should be available, with a person assigned to each (§9.1.7, §9.1.10).',
+    'The plan shall contain procedures for periodic testing and for reviewing results in order to improve its effectiveness (§9.1.12).',
+    'Once an accident has occurred, direction and control of the RFF operation must be left to the airport fire service officer-in-charge (§11.1.1).',
+    'The chief link in the organization is between the RFF service and air traffic control, and the closest possible liaison must be maintained at all times (§11.1.1).'
+  ],
+  body: `
+    <h3>Two requirements, not one</h3>
+    <p>§11.1.1 is the paragraph that makes an aerodrome emergency plan a real requirement rather than a binder: <strong>the plan should include a set of instructions dealing with the arrangements designed to meet emergency conditions and steps that should be taken to see that the provisions of the instructions are periodically tested. Only in this way can it be established whether the organization is capable of coping with every likely contingency and that the authorities, as well as each individual, services and agencies concerned, will be acquainted and familiar with the action to be taken.</strong></p>
+    <p>Instructions <em>and</em> periodic testing. The first half is what every aerodrome has. The second half is what makes the first half mean anything, and the standard is blunt about why: without testing you cannot establish whether the organization is capable of coping with every likely contingency.</p>
+    <p>Annex 14 makes the testing half normative. §9.1.12: <strong>the plan shall contain procedures for periodic testing of the adequacy of the plan and for reviewing the results in order to improve its effectiveness.</strong> Two obligations in one clause — test it, then review the results <em>in order to improve</em>. Testing without review is a record, not a process.</p>
+
+    <h3>What the plan must cover</h3>
+    <p>Annex 14 §9.1.5 gives the minimum content, and it is a short list worth checking against your own document:</p>
+    <ol>
+      <li><strong>Types of emergencies planned for.</strong> Note 1 to §9.1.2 lists them: aircraft emergencies, sabotage including bomb threats, unlawfully seized aircraft, dangerous goods occurrences, building fires, natural disaster and public health emergencies. Public health is named explicitly — increased risk of travellers or cargo spreading a serious communicable disease, and severe outbreak affecting a large proportion of aerodrome staff.</li>
+      <li><strong>Agencies involved in the plan.</strong></li>
+      <li><strong>Responsibility and role of each agency, the emergency operations centre and the command post, for each type of emergency.</strong></li>
+      <li><strong>Names and telephone numbers</strong> of offices or people to be contacted in the case of a particular emergency.</li>
+      <li><strong>A grid map of the aerodrome and its immediate vicinity.</strong></li>
+    </ol>
+    <p>Item 3 is the one that does the work — role <em>per type of emergency</em>, not a general organisation chart. And §9.1.3 widens the agency list usefully: on the aerodrome, ATC, RFF, aerodrome administration, medical and ambulance, aircraft operators, security and police; off the aerodrome, fire departments, police, health authorities, military, harbour patrol or coast guard.</p>
+
+    <h3>Two coordination facilities, two jobs</h3>
+    <p>Annex 14 §9.1.7 to §9.1.11 separate the roles, and confusing them is a common structural failure:</p>
+    <ul>
+      <li><strong>Emergency operations centre</strong> (§9.1.8) — <em>should be a part of the aerodrome facilities and should be responsible for the overall coordination and general direction of the response to an emergency</em>.</li>
+      <li><strong>Command post</strong> (§9.1.9) — <em>should be a facility capable of being moved rapidly to the site of an emergency, when required, and should undertake the local coordination of those agencies responding to the emergency</em>.</li>
+      <li><strong>People</strong> (§9.1.10) — <em>a person should be assigned to assume control of the emergency operations centre and, when appropriate, another person the command post.</em></li>
+      <li><strong>Communications</strong> (§9.1.11) — adequate systems linking the command post and the emergency operations centre <em>with each other and with the participating agencies</em>.</li>
+    </ul>
+    <p>Overall coordination and general direction at the EOC; local coordination at the scene from the command post. That is the same tactical/operational split the UAE worked example in ART-09 m1 showed, arriving from a different direction. Note §9.1.10 says "when appropriate" for the command post — so it is a role someone is assigned to, not a facility that is always occupied.</p>
+
+    <h3>The human factors obligation</h3>
+    <p>§9.1.6 is short and easy to miss because it sits between the content list and the facilities list: <strong>the plan shall observe human factors principles to ensure optimum response by all existing agencies participating in emergency operations.</strong></p>
+    <p>A <em>shall</em>, in a clause about a document. Read it as what it is: the plan has to be written for humans to execute under pressure, and the standard points you to Doc 9683, the Human Factors Training Manual, for the principles. This is the same discipline as ART-09 m1's task resource analysis assuming a command framework — a plan that ignores human factors is a plan that assumes a crew that does not exist.</p>
+
+    <h3>Who commands, and where the plan stops</h3>
+    <p>§11.1.1 is precise about the boundary: <strong>in the event of an emergency situation, an emergency vehicle responding to the emergency must be given priority over all other surface movement traffic. Once an accident has occurred, the direction and control of the RFF operation must be left to the airport fire service officer-in-charge.</strong></p>
+    <p>So the plan covers everything up to the accident. After the accident, it hands over to a person on the ground. That is the seam where planning failures become operational ones — a plan that tries to keep controlling after the OIC is in command, or an OIC who is still waiting for the plan to tell him what to do.</p>
+
+    <h3>The link the standard calls chief</h3>
+    <p>One sentence deserves to be read aloud to every planning meeting: <strong>the chief link in the organization is that between RFF service and air traffic control, and it is essential that the closest possible liaison between these two services be maintained at all times.</strong></p>
+    <p>Not an important link — <em>the chief link</em>. It is the link where the response clock starts (ART-18 m1), where the intercom coordination happens (ART-15 m4), and where the evacuation determination is communicated. That is worth a named person on each side and a standing arrangement, not an agreement that exists only in the plan document.</p>
+
+    <h3>Ownership, plainly</h3>
+    <p>A plan without a named owner decays. §9.1.3 assigns the plan's scope to "the appropriate authority", §9.1.5 gives it minimum content, and §9.1.10 names people for the two coordination facilities. What your service must add is the rest: who reviews the plan on what cycle, who owns the grid maps and the contact list, who schedules the exercises in §9.1.13, and who closes the corrective actions that come out of them. Those are four jobs with four names, and if none of them is yours, the plan is not being maintained.</p>
+
+    <blockquote>
+      <p><strong>SME action:</strong> take your current plan and check it against Annex 14 §9.1.5 item by item — types of emergency, agencies, roles <em>per type</em>, contacts, grid map. Then against §9.1.7 to §9.1.11: is there a fixed EOC and a mobile command post, are people assigned to both, and do they talk to each other and to the agencies? Then check the two clauses that are easiest to have on paper and absent in practice — §9.1.6 human factors, and §9.1.12 procedures for periodic testing <em>and reviewing the results</em>. Finally, name the four owners above and confirm the RFF–ATC chief link has a person at each end.</p>
+    </blockquote>
+  `,
+  refs: [
+    'ICAO Annex 14 Volume I — §9.1.1 a plan shall be established commensurate with the aircraft operations and activities',
+    'ICAO Annex 14 Volume I — §9.1.2 coordination of actions and the list of example emergencies; §9.1.3 coordination of all existing agencies; §9.1.4 rescue coordination centre',
+    'ICAO Annex 14 Volume I — §9.1.5 minimum plan content including a grid map; §9.1.6 human factors principles; §9.1.7 to §9.1.11 EOC, command post, assigned persons and communications',
+    'ICAO Annex 14 Volume I — §9.1.12 procedures for periodic testing and reviewing results to improve effectiveness',
+    'ICAO Doc 9137 Part 1 — §11.1.1 instructions plus periodic testing, sequence of duties, RFF and ATC as the chief link, priority for emergency vehicles, direction left to the airport fire service officer-in-charge',
+    'ICAO Doc 9137 — Part 7 Airport Services Manual, Airport Emergency Planning (referenced by Annex 14 §9.1 note and §9.1.13 note 2; not reproduced by this platform)',
+    'ICAO Doc 9683 — Human Factors Training Manual (referenced by Annex 14 §9.1.6 note; not reproduced by this platform)',
+    'Course ART-18 m1 — where the response clock starts; ART-09 m1 — command structures'
+  ],
+  smeChecked: false
+},
+
+  'art19-m2': {
+  title: 'Agencies and mutual aid',
+  brief:
+    'Everyone at the scene arrives with a different idea of who is in ' +
+    'charge. The plan is what stops that mattering.',
+  points: [
+    'Local fire agencies should be included in aircraft RFF training activities at the airport by participating in drills, tests and aircraft familiarization programmes (§11.1.9).',
+    'Where local fire agency crews arrive first, the airport officer-in-charge should consult with the other officer-in-charge on what has not been completed and identify what assistance is required (§11.1.10).',
+    'After evacuation is completed, all agencies should concentrate on final extinguishment (§11.1.10).',
+    'Local fire agencies should be tied in closely with airport emergency alarm services, preferably by direct line telephone (§11.1.11).',
+    'Ambulance and medical response should be automatic; services should be available during all operating periods on an identical schedule with the companion activity (§11.1.12).',
+    'The RFF crew should concentrate on fire safety at the crash scene (§11.1.10).',
+    'Response times of all mutual aid agencies should be determined for adverse weather conditions and, where possible, improved (§11.1.7(b)).',
+    'Rendezvous points and staging areas must be prearranged and identified on the grid maps (§11.1.1, §11.1.3).'
+  ],
+  body: `
+    <h3>The failure this course exists to prevent</h3>
+    <p>Two competent services arrive at the same aircraft fire, and both believe they are running it. That is not a training failure, it is a planning failure, and §11.1.10 addresses it by naming the conversation:</p>
+    <p><strong>When local fire agency crews arrive at the scene of an aircraft fire first, they should know how to proceed with the fire suppression work. In such situations, upon arrival of the specialized airport equipment and personnel, the officer-in-charge of the airport emergency crew should consult with the other officer-in-charge on what efforts have not been successfully completed and then identify what assistance is required to bring the incident to a successful conclusion.</strong></p>
+    <p>Notice what is being asked. Not "the airport service takes over" — a takeover is an argument. A <em>consultation</em>, on two specific questions: what has not been done, and what help do you need. That framing assumes the arriving agency has been working competently, which is both true and the thing that keeps the conversation professional.</p>
+
+    <h3>Two priorities, and the sequence between them</h3>
+    <p>The same clause gives the priority structure, and it is short enough to memorise: <strong>the RFF crew should concentrate on the (fire) safety at the crash scene. After evacuation is completed, all agencies should concentrate on final extinguishment required.</strong></p>
+    <p>So there are two objectives with an order. Fire safety at the scene belongs to the airport RFF crew — protecting egress, protecting the aircraft, protecting occupants still in it. Final extinguishment belongs to everyone, and only after evacuation is complete.</p>
+    <p>That sequencing is also where external services have real work to do early. An external crew that arrives and begins final extinguishment during evacuation is taking resources away from the objective that matters most. The plan should say so explicitly, because neither service will infer it.</p>
+
+    <h3>Mutual aid is a training arrangement, not a paperwork arrangement</h3>
+    <p>§11.1.9 makes the requirement, and it is a strong one: <strong>local fire agencies should be included in aircraft RFF training activities conducted at the airport by participating in drills, tests and aircraft familiarization programmes. Such activities should be specifically pointed towards increasing the utility of local fire defence personnel in handling off-airport accidents and assisting in a mutual aid capacity at on-airport accidents.</strong></p>
+    <p>Three participations, not one. Drills, tests <em>and</em> aircraft familiarisation. And the purpose is named in both directions: off-airport accidents, which is often the external service's only aviation experience, and mutual aid at the airport, which is often the aerodrome's only assumption about them.</p>
+    <p>And the standard is honest that this has to be real: <em>confidence in handling aircraft fires can only be attained by following the requirements in accordance with the principles of chapter 14 — training.</em> A mutual aid agreement signed by two services who have never exercised together is a list of phone numbers.</p>
+
+    <h3>Ambulance: automatic, and matching your hours</h3>
+    <p>§11.1.12 sets two requirements that are frequently missed:</p>
+    <ul>
+      <li><strong>Automatic response.</strong> <em>Response of such aid to an aircraft accident site should be automatic.</em> Not dispatched on request if the RFF commander remembers to ask.</li>
+      <li><strong>Matching schedule.</strong> <em>Such services should be available during all operating periods on an identical schedule with the companion activity.</em> Your medical response must cover the hours you fly, not the hours the provider's staff rota conveniently runs.</li>
+    </ul>
+    <p>And the note on demonstrating commitment, which is a useful planning test: where a permanent airport-based ambulance service is not feasible, <em>commitment by the ambulance service provider(s) can also be demonstrated by the activation, deployment and response of resources during full-scale aircraft crash exercises.</em></p>
+    <p>So an exercise is how you test the mutual aid commitment you cannot otherwise verify. That connects straight into m3.</p>
+
+    <h3>Rendezvous and staging, defined</h3>
+    <p>§11.1.1 defines both, and the definitions are the difference between a plan and a gesture:</p>
+    <p><strong>Rendezvous point</strong> — <em>a prearranged reference point, i.e. road junction, crossroad or other specified place, to which personnel/vehicles responding to an emergency situation initially proceed to receive directions to staging areas and/or the accident/incident site.</em></p>
+    <p><strong>Staging area</strong> — <em>a prearranged, strategically placed area, where support response personnel, vehicles and other equipment can be held in readiness for use during an emergency. Normally, one of the staging areas is located in the vicinity of the fire station.</em></p>
+    <p>Read the distinction carefully. The rendezvous point is where you go to <em>be given directions</em>. The staging area is where you wait until you are needed. Conflating them means external vehicles pile up at the accident site instead of at a staging area, and the site becomes unusable — which is a hazard to the aircraft and to your own crews.</p>
+    <p>And §11.1.1 adds: <em>it is recommended that a process be established to assist responding external agencies with directions to the designated rendezvous point.</em> A process, in advance, for people who do not know your aerodrome.</p>
+
+    <h3>The grid maps, because they are what makes it work</h3>
+    <p>§11.1.2 to §11.1.4 are detailed, and the reason they are detailed is that a rendezvous point nobody can find is not a rendezvous point.</p>
+    <ul>
+      <li>Grid maps <strong>should reflect a distance of at least 1 000 m beyond the threshold and the airport perimeter</strong> (§11.1.2) — justified by the accident data, since a large portion of accidents occurred in the area beyond the runway end.</li>
+      <li><strong>Two maps are recommended</strong> (§11.1.3): one of the airport showing access roads, water supplies, rendezvous points, staging areas, railways, highways and difficult terrain; and one of surrounding communities showing medical facilities, access roads and rendezvous points within approximately 8 km of the airport centre.</li>
+      <li><strong>Grids must not conflict and must be immediately identifiable to all participating agencies</strong> — and where two or more airports are closely located, grid preparation may need coordinating (§11.1.3, §11.1.4).</li>
+      <li><strong>Copies</strong> (§11.1.4) at the emergency operations centre, airport operations office, ATC tower, airport and local fire stations, all local hospitals, police stations, local telephone exchanges — <em>and on all RFF vehicles and such other supporting vehicles required to respond</em>.</li>
+      <li><strong>Instruction classes on the use of such maps should be held periodically</strong> (§11.1.4).</li>
+    </ul>
+    <p>That last one is the item that turns a map from a drawing into a tool, and it is the cheapest item in this whole course.</p>
+
+    <h3>The access and perimeter details</h3>
+    <p>Two provisions from §11.1.5 that are cheap and decisive: <strong>the responsible parties should be kept informed as to any impairment of the emergency access roads, such as their being closed for repairs or unusable because of high water, snow</strong> — and <strong>if the airport is fenced, keys to gate locks should be carried on each piece of emergency apparatus by airport police/security and other appropriate local authorities.</strong></p>
+    <p>That last one deserves a moment. Every vehicle in the fleet carries a key to a gate that may be the only way in, and nobody thinks about it until the fence is in the way at 03:00. Add it to the pre-use check.</p>
+
+    <h3>Bad-weather mutual aid</h3>
+    <p>§11.1.7(b) is the one to check against your own agreements: <strong>determine the response times of all mutual aid agencies which are an integral part of the airport emergency planning process during adverse weather conditions and, where possible, seek to improve them.</strong></p>
+    <p>Because a mutual aid response time measured on a dry day with clear roads is not the number that applies when the aircraft is down in low visibility in January. Measure it in the conditions it will be used in, and improve it or plan around it.</p>
+
+    <blockquote>
+      <p><strong>SME action:</strong> four checks. First, have the external services who will attend an aircraft accident at your aerodrome ever participated in a drill, a test and an aircraft familiarisation session there — §11.1.9 names all three. If any is missing, that is the finding. Second, do your mutual aid agreements and your plan state the §11.1.10 consultation pattern — other OIC consulted on what is incomplete and what assistance is needed — rather than a takeover? Third, is your medical response automatic and available on an identical schedule to your own operations (§11.1.12)? And fourth, walk the grid map: is your rendezvous point findable by someone who has never been to your aerodrome, is it marked on the community map as well as the airport map, and do all your vehicles carry it and a perimeter gate key?</p>
+    </blockquote>
+  `,
+  refs: [
+    'ICAO Doc 9137 Part 1 — §11.1.1 calling municipal services, direction left to the airport fire service officer-in-charge, rendezvous point and staging area definitions, process to assist external agencies to the rendezvous point',
+    'ICAO Doc 9137 Part 1 — §11.1.2 grid maps to at least 1 000 m beyond threshold and perimeter, justified by accident data; §11.1.3 two recommended maps and grid coordination',
+    'ICAO Doc 9137 Part 1 — §11.1.4 distribution of map copies including on all RFF vehicles, and periodic instruction classes on their use',
+    'ICAO Doc 9137 Part 1 — §11.1.5 notification of emergency access road impairment; perimeter gate keys carried on each piece of emergency apparatus',
+    'ICAO Doc 9137 Part 1 — §11.1.7(b) mutual aid response times in adverse weather conditions; §11.1.8 to §11.1.10 mutual aid programme, local agency participation in drills, tests and familiarisation, the officer-in-charge consultation, RFF fire safety priority and final extinguishment after evacuation',
+    'ICAO Doc 9137 Part 1 — §11.1.11 direct line telephone tie-in and equipment appropriate to aircraft RFF; §11.1.12 ambulance and medical services, automatic response, identical schedule, demonstration by exercise activation',
+    'Course ART-09 m1 — command structures and unified command',
+    'Course ART-18 m1 — the alerting system'
+  ],
+  smeChecked: false
+},
+
+  'art19-m3': {
+  title: 'Designing a full-scale exercise',
+  brief:
+    'Two options, both normative, and a scenario that has to be ' +
+    'credible or it tests nothing.',
+  points: [
+    'Option A: a full-scale aerodrome emergency exercise at intervals not exceeding two years, with partial emergency exercises in the intervening year to ensure deficiencies found are corrected (Annex 14 §9.1.13(a)).',
+    'Option B: a series of modular tests commencing in the first year and concluding in a full-scale exercise at intervals not exceeding three years, reviewed thereafter or after an actual emergency (Annex 14 §9.1.13(b)).',
+    'Full-scale exercise purpose: ensure the adequacy of the plan to cope with different types of emergencies. Partial exercise: the adequacy of the response of individual participating agencies and components such as the communications system. Modular tests: concentrated effort on specific components (§9.1.13 note 1).',
+    'Where two or more airports are closely located, grid map preparation may need to be coordinated (§11.1.4).',
+    'Local fire agencies should participate in drills, tests and aircraft familiarization programmes (§11.1.9).',
+    'Commitment by an ambulance provider without a permanent airport-based service can be demonstrated by activation, deployment and response of resources during a full-scale aircraft crash exercise (§11.1.12).',
+    'Detailed guidance on airport emergency planning is in Doc 9137 Part 7, which this platform does not reproduce.',
+    'Exercise scheduling must be planned against the Annex 14 §9.2.41 vehicle minimum — every discharge at training costs availability (ART-06 m2).'
+  ],
+  body: `
+    <h3>An honest boundary first</h3>
+    <p>Annex 14 §9.1.13 note 2 states that guidance material on airport emergency planning is available in the Airport Services Manual, <strong>Doc 9137 Part 7</strong>. That document covers exercise design in detail, and this platform does not have it and will not invent its contents.</p>
+    <p>What this lesson does is give you the requirement from Annex 14, which is normative and self-contained, plus the scenario-design logic from the task resource analysis in ART-01 m4 — which is where the substance of a credible scenario actually comes from.</p>
+
+    <h3>The two options, and what each one is for</h3>
+    <p>§9.1.13 sets the plan shall be tested by conducting <strong>(a)</strong> <em>a full-scale aerodrome emergency exercise at intervals not exceeding two years and partial emergency exercises in the intervening year to ensure that any deficiencies found during the full-scale aerodrome emergency exercise have been corrected</em>; <strong>or (strong><em>a series of modular tests commencing in the first year and concluding in a full-scale aerodrome emergency exercise at intervals not exceeding three years</em>; <strong>and reviewed thereafter, or after an actual emergency, so as to correct any deficiency found during such exercises or actual emergency.</strong></p>
+    <p>Read the difference. Option A is a full-scale exercise every two years with a partial in between — the partial's stated job is to <em>ensure the deficiencies from the last full-scale have been corrected</em>. Option B spreads the effort as modular tests and runs full-scale on a three-year cycle.</p>
+    <p>And note the last clause, which is easy to overlook: <strong>reviewed thereafter, or after an actual emergency.</strong> An actual emergency triggers a review whether or not you were due an exercise. That is the standard telling you that a real event is evidence, and ignoring it wastes the most expensive data you will ever collect.</p>
+
+    <h3>What each type of test is for</h3>
+    <p>Note 1 to §9.1.13 is the most useful part, because it stops people running the wrong kind of test:</p>
+    <ul>
+      <li><strong>Full-scale exercise</strong> — <em>to ensure the adequacy of the plan to cope with different types of emergencies</em>. The whole plan, end to end.</li>
+      <li><strong>Partial exercise</strong> — <em>to ensure the adequacy of the response to individual participating agencies and components of the plan, such as the communications system</em>. One agency or one component.</li>
+      <li><strong>Modular tests</strong> — <em>to enable concentrated effort on specific components of established emergency plans</em>. One component, deeply.</li>
+    </ul>
+    <p>So a service that runs a full-scale exercise to test its radio link has chosen the wrong instrument. A partial exercise tests exactly that, is cheaper, and does not consume a vehicle fleet for a night.</p>
+
+    <h3>Building a scenario that tests something</h3>
+    <p>The full-scale exercise's purpose is <em>different types of emergencies</em> — plural, and different. That is the design constraint. If you exercise the same scenario three years running, you have tested whether the plan handles the accident you already know about, which is the one thing it most certainly does handle.</p>
+    <p>The scenario-design method is in ART-01 m4. Recapping the five relevant phases of the CAP 1150 six-phase method:</p>
+    <ol>
+      <li><strong>Task list and aim.</strong> Write the task list the way §11.1.2 of Doc 9137 does it — meet the response time, extinguish an external fire, protect escape slides and exit routes, assist self-evacuation, create a survivable situation, rescue trapped personnel, maintain post-fire security, preserve evidence.</li>
+      <li><strong>Credible worst case, involving fire.</strong> §2.3 selection requires a realistic, feasible accident, and all incidents should involve fire to represent a feasible worst-case scenario that would require an RFF response. And it should be one you have not already exercised.</li>
+      <li><strong>One aircraft type, chosen as a representative of a configuration.</strong> A long widebody with multiple decks and aisles is a different exercise from a single-aisle high-density narrowbody.</li>
+      <li><strong>A location.</strong> Scored against the contributors that make a location worst-case: response time, route to the site, terrain, runway crossing procedures, taxiway congestion, surface conditions, communications, supplementary water supplies, adverse weather, day or darkness. Estimate the additional time delay for each and take the highest.</li>
+      <li><strong>Correlate them</strong> into a complete scenario and analyse it as a timeline, looking for pinch points.</li>
+    </ol>
+
+    <h3>Pinch points are the exercise agenda</h3>
+    <p>This is the useful part. §12.3.25 already told you that <em>tactical decision-making starts at the time when the alert tone is sounded</em> — so an exercise that injects the scenario when the vehicles are already rolling has missed the part that matters.</p>
+    <p>So: inject from the initial call. Then the exercise questions are the ones the task resource analysis already produces:</p>
+    <ul>
+      <li>Where is the pinch point, and is it a real one or a task-compatibility question?</li>
+      <li>Does the aircraft's arrival match the plan, or did the first vehicle improvise?</li>
+      <li>Did the second wave arrive inside the three-to-four minute window that continuous application depends on?</li>
+      <li>Was the fuel covered area blanketed before any door was opened?</li>
+      <li>Was protection available at the moment of opening, per §12.3.3.1?</li>
+      <li>Did RFF and ATC establish contact, and did the flight deck tell them what the emergency was (§12.3.12, §12.3.19)?</li>
+      <li>Did the external agency find the rendezvous point, and did the OIC consultation in §11.1.10 happen?</li>
+    </ul>
+
+    <h3>Include the people who will arrive</h3>
+    <p>Two provisions that make an exercise worth running. §11.1.9 requires <strong>local fire agencies included in aircraft RFF training activities by participating in drills, tests and aircraft familiarization programmes</strong> — so the external agency should be in the exercise, not briefed on it afterwards.</p>
+    <p>And §11.1.12 gives an exercise a second, planning-specific purpose: where a permanent airport-based ambulance service is not feasible, <em>commitment by the ambulance service provider can be demonstrated by the activation, deployment and response of resources during full-scale aircraft crash exercises</em>.</p>
+    <p>So the exercise is how you verify the mutual aid you cannot otherwise verify. That is worth more than a night of realism for its own sake.</p>
+
+    <h3>The cost you must plan for</h3>
+    <p>ART-06 m2 makes the point that every discharge at training puts a vehicle out of availability, and §5.7.1 treats return to complete availability as a design requirement. An exercise that discharges foam is consuming your §9.2.41 vehicle minimum for the duration.</p>
+    <p>So exercise scheduling is an availability planning task, not a training preference. Run it against a forecast of concurrent maintenance, and be able to state what your vehicle position is while it runs.</p>
+
+    <h3>Safety in the exercise itself</h3>
+    <p>Not covered in the provisions I hold, so stated as a requirement rather than detailed: a live-fire or fuel exercise on an aerodrome carries real risk to the participants and to anyone who does not know it is happening. Confirm your exercise safety arrangements — exclusion zones, airside access, ATC notification, ground handling, and the medical provision — against your own State's requirements and your Part 7 guidance. <strong>This platform does not supply exercise safety rules and will not guess at them.</strong></p>
+
+    <blockquote>
+      <p><strong>SME action:</strong> first confirm which option you are running — §9.1.13(a) two-year full-scale with partials between, or (b) modular tests concluding in a full-scale on a three-year cycle — and write the choice and its justification into the plan. Then take your next full-scale scenario and check it against the CAP 1150 phases: is it a type you have not exercised recently, at a location you have scored as worst-case, involving fire, with the clock started at the initial call rather than at vehicle arrival? Then confirm the external agencies are participating rather than observing, and that your ambulance provider's commitment is being demonstrated by activation and deployment. Finally, state your vehicle position for the duration of the exercise against the §9.2.41 minimum.</p>
+    </blockquote>
+  `,
+  refs: [
+    'ICAO Annex 14 Volume I — §9.1.13 the plan shall be tested by (a) full-scale exercise at intervals not exceeding two years with partial exercises in the intervening year, or (b) modular tests concluding in a full-scale exercise at intervals not exceeding three years, reviewed thereafter or after an actual emergency',
+    'ICAO Annex 14 Volume I — §9.1.13 note 1 purposes of full-scale, partial and modular tests; note 2 guidance is in Doc 9137 Part 7',
+    'ICAO Annex 14 Volume I — §9.1.12 procedures for periodic testing and reviewing results; §9.2.41 minimum number of RFF vehicles',
+    'ICAO Doc 9137 Part 1 — §11.1.9 local fire agencies participating in drills, tests and aircraft familiarization; §11.1.12 ambulance commitment demonstrated by activation, deployment and response during full-scale exercises',
+    'ICAO Doc 9137 Part 1 — §11.1.4 grid map coordination where airports are closely located',
+    'United Kingdom — CAA CAP 1150, Information Paper 04, Task and Resource Analysis (January 2014): the six-phase method used here for scenario design, and pinch points',
+    'Course ART-01 m4 — the task resource analysis, phase by phase',
+    'Course ART-06 m2 — training discharge as an availability cost',
+    'Course ART-16 m2 — the tactical plan and the first vehicle',
+    'ICAO Doc 9137 — Part 7 Airport Services Manual, Airport Emergency Planning (referenced by Annex 14; not reproduced by this platform)'
+  ],
+  smeChecked: false
+},
+
+  'art19-m4': {
+  title: 'Evaluation and corrective action',
+  brief:
+    'An exercise with no corrective actions is entertainment. ' +
+    'The standard requires testing and reviewing in order to improve.',
+  points: [
+    'The plan shall contain procedures for periodic testing of the adequacy of the plan AND for reviewing the results in order to improve its effectiveness (Annex 14 §9.1.12).',
+    'Option A partial exercises exist specifically to ensure that deficiencies found during the full-scale exercise have been corrected (§9.1.13(a)).',
+    'The plan shall be reviewed after a full-scale exercise, or after an actual emergency, so as to correct any deficiency found (§9.1.13).',
+    'A pinch point must be assessed for task compatibility, not just recorded — the published worked example closed one as achievable because the competing tasks were compatible.',
+    'Real incidents are evidence. A real emergency triggers a review whether or not an exercise was due.',
+    'Human factors principles apply to the review as much as to the plan (§9.1.6).',
+    'Evaluation belongs inside the safety management system, not beside it.',
+    'Guidance on evaluation and corrective action is in Doc 9137 Part 7, which this platform does not reproduce.'
+  ],
+  body: `
+    <h3>Two obligations in one clause</h3>
+    <p>§9.1.12 is short and it is the whole of this lesson: <strong>the plan shall contain procedures for periodic testing of the adequacy of the plan and for reviewing the results in order to improve its effectiveness.</strong></p>
+    <p>Three verbs — testing, reviewing, improving. And the phrase that does the work is <em>in order to improve its effectiveness</em>. Testing without review produces a record. Review without improvement produces a document nobody has changed. The purpose clause is not decorative; it is the thing that fails first.</p>
+
+    <h3>The corrective loop the standard builds in</h3>
+    <p>Look at how §9.1.13(a) is constructed, because the design is instructive: <em>a full-scale aerodrome emergency exercise at intervals not exceeding two years <strong>and partial emergency exercises in the intervening year to ensure that any deficiencies found during the full-scale aerodrome emergency exercise have been corrected</strong></em>.</p>
+    <p>The intervening partial exercise has a named job: <strong>to ensure the deficiencies found last time have been corrected.</strong> So the cycle is not exercise, exercise, exercise. It is exercise, then a year spent closing what it found, then exercise again with that closure as the pass condition.</p>
+    <p>A service that treats the intervening partial exercise as just another test has missed the mechanism. Ask of every partial exercise: which specific findings from the last full-scale is this closing?</p>
+    <p>And §9.1.13 closes with the second trigger: <strong>reviewed thereafter, or after an actual emergency, so as to correct any deficiency found during such exercises or actual emergency.</strong> A real accident is a review trigger on its own. It is also the most valuable test you will ever run — every assumption in the plan has just been tested against reality for free.</p>
+
+    <h3>What a finding actually is</h3>
+    <p>Use the pinch point concept from ART-01 m4, because it is the only worked example of a finding being assessed that I hold, and it shows the discipline.</p>
+    <p>A pinch point is a specific clock time at which somebody is needed in two places. Finding one is step one. The published example then did something most exercise reports skip: it assessed the competing tasks and concluded they <em>were</em> achievable, because the two firefighters concerned were already using a foam hand line to maintain the evacuation route and were maintaining post-fire control. That was recorded as a logical and achievable process for that crew.</p>
+    <p>So a finding has two tests:</p>
+    <ol>
+      <li><strong>Is a person needed in two places at the same clock time?</strong> That is arithmetic.</li>
+      <li><strong>Are the competing tasks genuinely compatible, or merely assumed to be?</strong> That is judgement, and it is the test that gets skipped.</li>
+    </ol>
+    <p>Skip the second and you generate findings that are wrong, then actions that waste effort, and — worse — a report nobody trusts next time. Every finding you raise has to survive both tests.</p>
+
+    <h3>Finding classes, so the actions are real</h3>
+    <p>A corrective action needs an owner and a date. Classify each finding so the action follows from the class rather than from who happened to be in the room:</p>
+    <ul>
+      <li><strong>Plan defect</strong> — the plan says the wrong thing or omits something. Action: amend the plan, reissue, re-brief.</li>
+      <li><strong>Equipment or resource gap</strong> — a required item absent, unserviceable or insufficient. Action: procure, resupply, reallocate.</li>
+      <li><strong>Competence gap</strong> — a task that a person or service could not perform. Action: training, familiarisation, or including the party in the next exercise.</li>
+      <li><strong>Interface failure</strong> — two services or two functions that did not connect. Action: revise the agreement, the liaison arrangement, or the call-out.</li>
+      <li><strong>False positive</strong> — assessed and closed as achievable or as a task-compatibility question. Action: none, but <strong>record the reasoning</strong>, because the next exercise will find the same thing again.</li>
+    </ul>
+    <p>The false positive class is the one that keeps an honest system. If your corrective action log contains only failures, either your scenarios are all easy or your evaluators are not being honest. The CAP 1150 example is valuable precisely because it is a finding that was examined and closed.</p>
+
+    <h3>The review itself</h3>
+    <p>Three things a review must produce that a debrief does not:</p>
+    <ol>
+      <li><strong>A decision on every finding</strong> — accepted as a finding, or closed as achievable, with the reasoning recorded either way.</li>
+      <li><strong>An action with an owner and a date</strong> for every accepted finding. A finding with no owner is an observation.</li>
+      <li><strong>A statement of what will be tested in the next exercise</strong>, and specifically which findings from this one will be verified as closed.</li>
+    </ol>
+    <p>And hold the review to §9.1.6: <em>the plan shall observe human factors principles to ensure optimum response by all existing agencies participating in emergency operations.</em> That applies to your evaluators as much as to your crews. A review conducted by people who were not on scene, with no representation from the external agencies who were, will produce findings about communication that are really findings about who was in the room.</p>
+
+    <h3>Putting it inside the safety management system</h3>
+    <p>ICAO Annex 19 — Safety Management — is listed for this course and is not reproduced here, so this is a statement of principle rather than of requirement: emergency exercise findings and their corrective actions belong in the same corrective action system as everything else, with the same tracking, the same escalation and the same management review. A separate exercise action log drifts from the real risk picture, because the two logs are prioritised by different people with different views of what matters.</p>
+    <p>Which also means the exercise is a source of safety data, not a compliance exercise. If your organisation treats it as the latter, the findings will be shaped to be survivable rather than accurate.</p>
+
+    <h3>The cheapest control in the system</h3>
+    <p>§11.1.4 requires that <strong>instruction classes on the use of such maps should be held periodically</strong>, where such maps are the grid maps. That is the lowest-cost corrective action available to any aerodrome — a scheduled class, an hour, and every user of the map made more capable. If your corrective action log is empty of cheap actions, the problem is more likely in the review than in the service.</p>
+
+    <blockquote>
+      <p><strong>SME action:</strong> take your last exercise report and answer four questions. Does every finding carry a decision and a reason, including the ones closed as achievable? Does every accepted finding carry an owner and a date? And does your next scheduled partial exercise name which specific findings it will verify as closed — §9.1.13(a) gives it that job specifically. Finally, is your exercise corrective action in the same tracking system as the rest of your safety management, or is it a separate log that a different person owns? Then add the cheapest item on the list: a periodic instruction class on the grid maps, with a date in the plan, per §11.1.4.</p>
+    </blockquote>
+  `,
+  refs: [
+    'ICAO Annex 14 Volume I — §9.1.12 procedures for periodic testing and for reviewing the results in order to improve effectiveness',
+    'ICAO Annex 14 Volume I — §9.1.13 partial exercises in the intervening year to ensure deficiencies found have been corrected; review after an actual emergency',
+    'ICAO Annex 14 Volume I — §9.1.6 human factors principles applied to all participating agencies',
+    'ICAO Doc 9137 Part 1 — §11.1.4 instruction classes on the use of grid maps should be held periodically',
+    'United Kingdom — CAA CAP 1150, Information Paper 04 (January 2014): pinch point identification and the worked example of a pinch point assessed and closed as achievable because the competing tasks were compatible',
+    'ICAO Annex 19 — Safety Management (listed for this course; not reproduced by this platform)',
+    'Course ART-01 m4 — the task resource analysis and pinch points; ART-20 m1 — deviation discipline',
+    'Course ART-19 m3 — designing the exercise'
+  ],
+  smeChecked: false
+},
+'art19-m5': {
+  title: 'From exercise to real readiness',
+  brief:
+    'The test of the plan is not the exercise. It is the incident ' +
+    'afterwards, when nobody is watching and the report is written.',
+  points: [
+    'The plan shall be reviewed after an actual emergency, as well as after exercises (§9.1.13).',
+    'A real emergency is evidence gathered at no cost and under the worst possible conditions — treat it as data.',
+    'The plan shall observe human factors principles to ensure optimum response (§9.1.6).',
+    'Vehicle availability after a real incident depends on turnaround time, which is a design property not a crew failing (ART-06 m5, §5.7.1).',
+    'The second incident of the day is answered from whatever fleet is left after the first (ART-06 m5).',
+    'On completion of the rescue, exercise as much care as possible so movements do not destroy evidence — and do not drive along the wreckage trail if alternative access exists (§12.5.6).',
+    'Aviation fuels and hydraulic fluids can cause dermatitis by skin contact. Wash thoroughly with soap and water, and change and decontaminate clothing promptly (§12.5.8).',
+    'Preserving the accident site and informing the operator of the agent used are tasks that survive the incident and belong in the plan (§12.5.5, §12.2.16).',
+    'Psychological support after a major crisis is both a welfare and a business continuity matter (§18.5.1).'
+  ],
+  body: `
+    <h3>The incident is the best exercise you will ever run</h3>
+    <p>§9.1.13 makes it a requirement: the plan is reviewed <em>thereafter, or after an actual emergency</em>. So the review trigger is not only the calendar.</p>
+    <p>And the reason to take it seriously rather than treat it as paperwork is in §11.1.1: <em>only in this way can it be established whether the organization is capable of coping with every likely contingency and that the authorities, as well as each individual, services and agencies concerned, will be acquainted and familiar with the action to be taken.</em></p>
+    <p>An exercise proves the plan under conditions you chose. A real incident proves it under conditions you did not. Every assumption in the plan — about times, about people, about what will work when it is wet and dark and someone is hurt — has just been tested at no cost and with the strongest possible motivation to answer honestly.</p>
+
+    <h3>What to capture, before memory fades</h3>
+    <p>Within days, while the detail is still accurate:</p>
+    <ol>
+      <li><strong>Actual times.</strong> Alert to response. Response to first application. First vehicle arrival to all appliances in position. External extinguishment. Control achieved. Turnaround complete. Compare against §2.7.1 and §12.3.25 — the plan says the clock starts at the initial call and that the first vehicle establishes the route.</li>
+      <li><strong>What was not in the plan.</strong> Not what went wrong — what nobody had written down. The thing you did that was not in the plan and that worked. That belongs in the next version.</li>
+      <li><strong>Which agencies actually arrived, and when.</strong> Against the §11.1.2 response times, especially in the weather conditions you got rather than the ones you planned for (§11.1.7(b)).</li>
+      <li><strong>Whether the interfaces held.</strong> RFF and ATC — the link §11.1.1 calls chief. Flight deck contact per §12.3.19. The §11.1.10 officer-in-charge consultation if an external service was there first.</li>
+      <li><strong>Consumption against the table.</strong> The checklist in ART-03 m4: wind, expansion and drainage at the nozzle, proportioning at the pump, sweep technique, per-vehicle time to run dry and time to return after replenishment, total against Table 2-3.</li>
+      <li><strong>Turnaround.</strong> End of incident to declared back in service, per vehicle — ART-06 m5's six numbers. This is the number that decides your second-incident capability.</li>
+    </ol>
+
+    <h3>The tasks that outlive the incident</h3>
+    <p>Three things from this curriculum are tasks with owners that run past the end of the event, and all three are routinely dropped when everyone is tired:</p>
+    <ul>
+      <li><strong>Preserve the accident site.</strong> §12.5.5: <em>the wreckage of an aircraft involved in an accident, including controls, shall not be disturbed or moved</em>. And §12.3.25(h) lists giving consideration to preserving the accident site among the positioning priorities — so it was a decision during the incident, not just a rule after it.</li>
+      <li><strong>Inform the operator of the agent used.</strong> §12.2.16, so they may take preventive action against corrosion. A clean agent attack or a magnesium water application both need this.</li>
+      <li><strong>Care after completion.</strong> §12.5.6: <em>on completion of the initial rescue operation, it is important that the RFF personnel exercise as much care as possible to ensure their movements do not destroy evidence which may be of value in the investigation.</em> And it gives the example that is worth briefing, because it is a routing decision every crew makes without thinking: <em>movement of ambulance and RFF vehicles should not be made along the wreckage trail if alternative access is possible.</em> Everybody's judgement is worse at that point, and driving your own vehicle over the evidence you spent the whole incident protecting is an error nobody notices in the moment.</li>
+      <li><strong>Decontaminate.</strong> §12.5.8: <em>aviation fuels and hydraulic fluids may cause dermatitis by contact with the skin. RFF personnel who have had these fluids spilled on them should be washed thoroughly with soap and water as soon as possible. Wet clothing and uniforms should be changed and decontaminated promptly.</em> That last clause is a task with an owner — wet contaminated clothing does not go back into the crew compartment, which is the same decontamination rule as ART-07 m2.</li>
+    </ul>
+
+    <h3>Afterwards, the fleet question</h3>
+    <p>ART-06 m5 makes the point and it is the most reliable way readiness quietly fails: a returning vehicle is not available until somebody says so, and the second incident of the day is answered from whatever is left.</p>
+    <p>So after a real incident, the review has two halves. The first is the plan, the tactics and the interfaces — everything in ART-19 m4. The second is the operational position: how many vehicles are actually available now, against the §9.2.41 minimum, and for how long.</p>
+    <p>If a single incident takes you below the minimum for two hours, that is a finding about vehicle numbers or replenishment capacity or the reserve level — not a finding about the incident. §5.7.1 already treats replenishment as a specification item with a significant effect on vehicle availability, and ART-01 m4 already requires fatigue and relief to be considered in the staffing case. A real incident is where those three meet.</p>
+
+    <h3>The welfare finding</h3>
+    <p>§18.5.1 states it as an operational matter rather than only a welfare one: it is essential to also provide psychological treatment for RFF personnel after a major crisis <strong>both from a welfare perspective and also from a business continuity standpoint</strong>.</p>
+    <p>Read the second reason. Psychological harm after a major incident does not affect only the individual. It affects the roster you are already stretched on, and the crew covering while that person is off. It is an availability finding as well as a welfare one, which is precisely why it belongs in the plan and the review rather than in a policy document nobody opens after a bad week.</p>
+
+    <h3>Closing the loop</h3>
+    <p>So the full cycle, and each arrow has an owner:</p>
+    <ol>
+      <li><strong>Test</strong> — §9.1.13(a) full-scale at intervals not exceeding two years with partials between, or (b) modular tests concluding in full-scale on a three-year cycle.</li>
+      <li><strong>Review</strong> — §9.1.12, testing and reviewing <em>in order to improve</em>. Every finding gets a decision and a reason.</li>
+      <li><strong>Act</strong> — every accepted finding gets an owner and a date, in the same corrective action system as the rest of your safety management.</li>
+      <li><strong>Verify closure</strong> — the intervening partial exercise names which findings it is closing (§9.1.13(a)).</li>
+      <li><strong>Trigger on reality</strong> — review after an actual emergency (§9.1.13), capturing times, gaps, agency performance, consumption and turnaround.</li>
+      <li><strong>Re-issue and re-brief</strong> — because a plan nobody has re-read since the last amendment is a plan nobody is executing.</li>
+    </ol>
+
+    <blockquote>
+      <p><strong>SME action:</strong> check your plan against the six arrows above and name an owner for each. Then answer the harder one: after your last real incident, was the plan reviewed — and if not, what stopped it? Common answers are that nobody was assigned to own the review, that the report went to management without findings being extracted, or that everyone was too tired. All three are fixable, and all three will recur. Then take the six data groups in this lesson and confirm each has a home: who records actual times, who records what was not in the plan, who records agency performance, who records agent consumption against the table, who records turnaround per vehicle, and who arranges the §18.5.1 support and follows it up.</p>
+    </blockquote>
+  `,
+  refs: [
+    'ICAO Annex 14 Volume I — §9.1.13 review after a full-scale exercise or after an actual emergency, so as to correct any deficiency found',
+    'ICAO Annex 14 Volume I — §9.1.12 procedures for periodic testing and reviewing results to improve effectiveness; §9.1.6 human factors principles',
+    'ICAO Doc 9137 Part 1 — §11.1.1 the purpose of testing, that the organization is capable of coping with every likely contingency',
+    'ICAO Doc 9137 Part 1 — §11.1.7(b) mutual aid response times in adverse weather conditions; §11.1.10 the officer-in-charge consultation',
+    'ICAO Doc 9137 Part 1 — §12.2.16 inform operators of the nature of the agent used; §12.3.19 direct contact with the flight crew; §12.3.25 positioning and the clock starting at the alert tone',
+    'ICAO Doc 9137 Part 1 — §12.5.5 wreckage not to be disturbed; §12.5.6 care after completion so movements do not destroy evidence, and no vehicle movement along the wreckage trail where alternative access exists; §12.5.8 decontamination of fuel and hydraulic fluid exposure',
+    'ICAO Doc 9137 Part 1 — §18.5.1 psychological support after a major crisis from a welfare and a business continuity standpoint',
+    'Course ART-06 m5 — turnaround discipline and the second incident; ART-03 m4 — consumption accounting',
+    'Course ART-19 m4 — evaluation and corrective action'
+  ],
+  smeChecked: false
+},
 };
 
 /**
