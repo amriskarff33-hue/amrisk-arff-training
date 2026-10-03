@@ -3490,8 +3490,205 @@ const LESSON_OVERRIDES = {
       'Course ART-18 — communications'
     ],
     smeChecked: false
-  }
+},
+'art03-m1': {
+  title: 'The level tables, properly read',
+  brief:
+    'The category table is the contract between your airport and the standard. ' +
+    'Most services read the number and miss the conditions attached to it.',
+  points: [
+    'The table (Doc 9137 Part 1 Table 2-3 / Annex 14 Table 9-1) is the minimum your service must hold. It is not a recommendation.',
+    'Category is determined by the longest aircraft and its fuselage width, not by the fleet average. One aircraft can set your category.',
+    'Performance level of foam (A, B, C) changes every water figure in the row. You must quote the level with the number.',
+    'The table assumes an average aircraft per category. Larger-than-average operations require a recalculation under §2.3.7.',
+    'Response time is a separate column in the same table. Holding the water is not enough; it must arrive in the time window.',
+    'The water quantity in the table is for the service, not for one incident. The practical critical area is a worst-case assumption, not a targeting instruction.'
+  ],
+  body: `
+    <h3>The table is the contract</h3>
+    <p>Open Doc 9137 Part 1 at Table 2-3. Or Annex 14 Volume I at Table 9-1. They are the same table, and that table is the minimum your service must hold and deliver. It is not a recommendation and it is not a suggestion. If your aerodrome is category 7, the figures in the category 7 row are what you must be able to deploy.</p>
 
+    <h3>How the category is decided</h3>
+    <p>The determination method is given in Doc 9137 §2.1.2: <strong>the airport category for RFF should be based on the overall length of the longest aeroplanes normally using the airport and their maximum fuselage width</strong>. The airport category should be determined using Table 2-1 by categorising the aeroplanes using the airport, by first evaluating their overall length and maximum fuselage width.</p>
+    <p>That is it. One aircraft, if it is the longest and widest in the schedule, sets the category for the entire aerodrome. There is no averaging, no weighting by movement count, and no discretion in the table itself. If you have a weekly 777 and everything else is a 737, you are category 8 or 9 depending on the 777 variant. The fleet mix is irrelevant to the table; it only matters to the staffing arithmetic in ART-01 m4.</p>
+
+    <h3>The width step function</h3>
+    <p>The width bands are discrete: up to 2 m, 2–3 m, 3–4 m, 4–5 m, 5–6 m, 6–7 m, and above 7 m. A fuselage of 6.20 m is in the 6–7 m band. A fuselage of 7.01 m is in the >7 m band. That 0.01 m difference moves the category up by one step on some length bands, and it moves the water quantity by roughly 25% — because the critical area formula uses (30 + W) and the percentage for Q2 jumps at the next category. Measure it correctly.</p>
+
+    {{diagram:level-determination}}
+
+    <h3>The row you read must name the foam</h3>
+    <p>Every number in the table is predicated on a foam performance level. Doc 9137 §2.3.5 states: <strong>the amounts of water specified for foam production are predicated on an application rate of 8.2 L/min/m² for a foam meeting performance level A, 5.5 L/min/m² for a foam meeting performance level B and 3.75L/min/m² for a foam meeting performance level C. These application rates are considered to be the minimum rates at which control can be achieved within one minute</strong>.</p>
+    <p>The table is usually printed for level A foam. If you stock level B, every water figure in the row must be multiplied by 5.5 / 8.2 (approximately 0.67). If you stock level C, multiply by 3.75 / 8.2 (approximately 0.46). Never quote a water quantity without naming the performance level it assumes. And do not mix performance levels at one aerodrome — §2.3.10 states: <strong>there may be aerodromes that use more than one type of performance level foams, such as a combination of level A and B foams, which could lead to error in quantity calculation or replenishment. The use of a combination of different performance level foams at an aerodrome is therefore not encouraged.</strong></p>
+
+    <h3>The table assumes an average aircraft</h3>
+    <p>Table 2-4 in Doc 9137 lists a representative aircraft per category with a specific length and width. That representative aircraft is used to derive the numbers in Table 2-3. If your actual aircraft exceeds the representative dimensions for the category — which is common with modern widebodies — §2.3.7 requires: <strong>from 1 January 2015, at aerodromes where operations by aeroplanes larger than the average size in a given category are planned, the quantities of water shall be recalculated and the amount of water for foam production and the discharge rates for foam solution shall be increased accordingly</strong>. This is a <em>shall</em> provision, not a suggestion. The table is the floor; your actual fleet may raise the ceiling.</p>
+
+    <h3>Response time is in the same table</h3>
+    <p>Doc 9137 §2.7.1 states: <strong>the operational objective of the RFF service should be to achieve response times of two minutes and not exceeding three minutes to the end of each runway, as well as to any other part of the movement area, in optimum conditions of visibility and surface conditions</strong>. Response time is considered to be the time between the initial call to the RFF service and the time when the first responding vehicle(s) is(are) in position to apply foam at a rate of at least 50 per cent of the discharge rate specified in Table 2-3.</p>
+    <p>The guidance also requires additional vehicles to arrive within three minutes and no more than four, so that application is continuous (§2.7.3): <strong>any other vehicles required to deliver the amounts of extinguishing agents specified in Table 2-3 should arrive in three minutes and no more than four minutes from the initial call so as to provide continuous agent application</strong>. A foam blanket that breaks up because the second wave arrived late has to be rebuilt from nothing.</p>
+
+    <h3>What the table is not</h3>
+    <p>The water quantity in the table is for the <em>service</em>, not for one incident. It is calculated against the practical critical area of a worst-case fuel spill against the fuselage. An engine fire, an APU fire, a wheel fire — none of these get the whole practical critical area. Applying the table quantity to a localised fire is a serious error and the single most common misuse of this calculation.</p>
+
+    <blockquote>
+      <p><strong>SME action:</strong> identify the longest and widest aircraft in your current schedule and confirm the category it sets; state the foam performance level actually stocked and confirm the table row you are using matches it; confirm whether any aircraft exceeds the category average and whether the §2.3.7 recalculation has been done; record your measured response times against the table column; and check all of this against your State's adopted requirements, which may differ from the ICAO table.</p>
+    </blockquote>
+  `,
+  refs: [
+    'ICAO Doc 9137 Part 1 — §2.1.2 category determination by longest aeroplane and maximum fuselage width; Table 2-1 and Table 2-3',
+    'ICAO Doc 9137 Part 1 — §2.3.5 foam performance levels and application rates (8.2 / 5.5 / 3.75L/min/m²)',
+    'ICAO Doc 9137 Part 1 — §2.3.7 recalculation for larger-than-average aircraft (shall provision from 1 January 2015)',
+    'ICAO Doc 9137 Part 1 — §2.3.10 use of combination of different performance level foams not encouraged',
+    'ICAO Doc 9137 Part 1 — §2.7.1 response time objective (two minutes, not exceeding three); §2.7.3 continuous application (additional vehicles within 3–4 minutes)',
+    'ICAO Annex 14 Volume I — §9.2.2 to §9.2.4 level determination; §9.2.27 and §9.2.28 response time Standard and Recommended Practice; Table 9-1',
+    'Your national Civil Aviation Authority requirements — confirm which instrument and issue binds you'
+  ],
+  smeChecked: false
+},
+'art03-m2': {
+  title: 'Principal versus complementary agents',
+  brief:
+    'They are not interchangeable. The standard defines what each does, and ' +
+    'the substitution ratios are where most services lose the plot.',
+  points: [
+    'Principal agent (foam) controls and extinguishes. Complementary agent (dry chemical) knocks down three-dimensional and running fuel fires. They do different jobs.',
+    'Substitution is not free. 1 kg complementary agent = 1.0 L water for level A foam only (§2.3.11). Higher ratios need test evidence from your State.',
+    'Using different foam performance levels at one aerodrome is not encouraged — it leads to error in quantity calculation or replenishment (§2.3.10).',
+    'Complementary agent totals are given by aerodrome category in Table 2-3 (45 kg at Cat 1 up to 450 kg at Cat 8–10), not per vehicle.',
+    'Total agent carried = principal agent quantity + complementary agent quantity. They are not netted against each other except in replenishment at the approved ratio.',
+    'The foam concentrate reserve is 200% of the Table 2-3 quantity for vehicle replenishment (§2.3.4, §2.6.1). Complementary agent reserve is 100% (§2.6.2).'
+  ],
+  body: `
+    <h3>Two agents, two jobs</h3>
+    <p>The distinction is not academic. Doc 9137 §2.3.1 defines the principal agent as the agent used to control and extinguish the fire — and for aviation that is foam. The complementary agent is dry chemical powder, and its role is specifically to achieve rapid knockdown of <strong>three-dimensional fires</strong> (engine, APU, running fuel) where foam alone is too slow to penetrate the flame envelope.</p>
+    <p>This is why the standard gives them separate calculations, separate carriage requirements, and separate replenishment rules. Treating them as a single pool of "agent" is the error that leaves a crew with foam when they need powder, or powder when they need foam.</p>
+
+    <h3>Principal agent — the foam calculation you already know</h3>
+    <p>The water quantity Q from the critical area method (lesson m3) is the principal agent requirement. That gives the water volume. The foam concentrate is then calculated at the mix ratio of the foam you stock — typically 3%, 1% or 0.5% — and §2.3.4 requires the concentrate quantity to be kept in proportion to the water carried.</p>
+    <p>And there is a reserve. §2.3.4 / §2.6.1 require a foam concentrate reserve of <strong>200 per cent of the quantities of these agents identified in Table 2-3</strong> for vehicle replenishment purposes. That is not 200% of what is in the vehicles — it is 200% of the table figure. If the table says 1 185 L of concentrate, the reserve is 2 370 L, and the total concentrate you must hold is the sum.</p>
+
+    <h3>Complementary agent — the dry chemical totals</h3>
+    <p>Table 2-3 lists the complementary agent quantity by aerodrome category (column 8): 45 kg at category 1, 90 kg at category 2, 135 kg at categories 3–4, 180 kg at category 5, 225 kg at categories 6–7, and 450 kg at categories 8–10. These are the <em>total</em> quantities to be provided at the aerodrome, not per vehicle. The standard does not specify a per-vehicle minimum in Doc 9137; that allocation is left to national requirements or the aerodrome's own vehicle establishment.</p>
+    <p>§2.6.2 also specifies a complementary agent reserve: <strong>100 per cent of the quantity identified in Table 2-3</strong>.</p>
+
+    <h3>Substitution is not one-for-one without proof</h3>
+    <p>This is the clause that catches services out. §2.3.11 says:</p>
+    <ul>
+      <li>For foam <strong>performance level A</strong>, <strong>1 kg of a complementary agent shall be taken as equivalent to 1.0 L of water for production of a foam meeting performance level A</strong>.</li>
+      <li><strong>Higher equivalencies for complementary agents may be used if results of tests conducted on the complementary agents used by the State have indicated higher efficiencies</strong>.</li>
+      <li>When any other complementary agent is used, the substitution ratios need to be checked.</li>
+    </ul>
+    <p>Read that carefully. If you stock level B or C foam and want to substitute dry chemical for water, you cannot assume 1 kg = 1 L. You need test evidence from your Civil Aviation Authority. The 1:1 ratio is only for level A foam. And if you are using a different complementary agent (not standard dry chemical), you need its own ratio.</p>
+
+    <h3>The two totals are separate</h3>
+    <p>There is no netting. The service must hold the full principal agent quantity AND the full complementary agent quantity. You do not subtract one from the other. The only place substitution appears is in the <em>replenishment</em> arithmetic — if you use complementary agent to knock down a running fuel fire, the water you save can be accounted against the foam replenishment, but only at the approved ratio.</p>
+
+    <h3>Mixing performance levels is not encouraged</h3>
+    <p>§2.3.10 is direct: <strong>there may be aerodromes that use more than one type of performance level foams, such as a combination of level A and B foams, which could lead to error in quantity calculation or replenishment. The use of a combination of different performance level foams at an aerodrome is therefore not encouraged.</strong></p>
+    <p>If one vehicle carries level A and another carries level B, the discharge rate calculations, the water quantities, and the substitution ratios all become ambiguous. Standardise on one performance level per aerodrome.</p>
+
+    <blockquote>
+      <p><strong>SME action:</strong> list every vehicle and the agent it carries (foam type, performance level, mix ratio, concentrate volume; complementary agent type and mass); confirm the complementary agent total from Table 2-3 for your category is met; state the substitution ratio you are using and the test evidence from your State if it is not 1 kg = 1 L for level A; confirm the foam concentrate reserve (200% of table quantity) and complementary agent reserve (100% of table quantity) are held; and confirm no mixing of performance levels at the aerodrome.</p>
+    </blockquote>
+  `,
+  refs: [
+    'ICAO Doc 9137 Part 1 — §2.3.1 principal and complementary agent definitions',
+    'ICAO Doc 9137 Part 1 — §2.3.4 foam concentrate proportion; §2.3.5 performance levels; Table 2-3 complementary agent totals by category',
+    'ICAO Doc 9137 Part 1 — §2.3.10 combination of different performance level foams not encouraged; §2.3.11 substitution ratios (1 kg = 1.0 L for level A; higher ratios need State test evidence)',
+    'ICAO Doc 9137 Part 1 — §2.6.1 foam concentrate reserve (200% of Table 2-3); §2.6.2 complementary agent reserve (100% of Table 2-3)',
+    'ICAO Annex 14 Volume I — §9.2.8 to §9.2.10 extinguishing agents (principal and complementary)',
+    'Your national Civil Aviation Authority requirements — confirm substitution ratios, test evidence requirements, and any per-vehicle carriage minimums'
+  ],
+  smeChecked: false
+},
+'art03-m4': {
+  title: 'Consumption under real conditions',
+  brief:
+    'The table is a laboratory figure. Wind, temperature, foam quality, ' +
+    'application technique and vehicle dynamics change what actually happens.',
+  points: [
+    'The table assumes optimum visibility and surface conditions. Real conditions are never optimum.',
+    'Wind degrades the foam blanket. The critical area formula already assumes 24 m upwind / 6 m downwind for large aircraft (§2.4.3), but sustained wind above 10 km/h increases real consumption significantly.',
+    'Foam quality at the nozzle is not foam quality in the drum. Proportioning errors, degraded concentrate, and water supply characteristics all reduce the expansion and drainage time that the application rate assumes (§8.1.11).',
+    'Application technique matters. Sweeping too fast leaves gaps; too slow wastes agent. The rate is an average over the whole practical critical area in one minute — not a peak at one spot.',
+    'Multiple vehicles must coordinate. If two vehicles attack the same sector, the foam blankets merge and you waste water; if they leave a gap, the fire breaths through it.',
+    'Temperature affects concentrate viscosity and proportioning accuracy. Cold weather procedures are not optional — they are the difference between a working foam blanket and water with bubbles.',
+    'The reserve exists for a reason. §2.6.1 requires 200% concentrate reserve. Vehicles will need to replenish, and the time to do it is part of the continuous application requirement (§2.7.3).'
+  ],
+  body: `
+    <h3>The table is a laboratory figure</h3>
+    <p>Everything in Table 2-3 / Table 9-1 is derived under controlled assumptions: level ground, no wind, concentrate at specification, proportioning at the stated ratio, application by a trained operator in a standard vehicle, and the fire being a uniform pool over the practical critical area. Real incidents meet none of those perfectly. This lesson is about the gap between the table and the tarmac.</p>
+
+    <h3>Wind is the first thief</h3>
+    <p>The critical area formula already builds in a wind asymmetry — for aircraft 24 m or longer, the theoretical critical area extends <strong>from the fuselage to a distance of 24 m upwind and 6 m downwind</strong> (§2.4.3). That is the geometric assumption. But sustained wind above approximately 10 km/h does three things the formula does not see:</p>
+    <ul>
+      <li>It stretches the foam blanket, thinning it on the upwind edge where the fire is hottest.</li>
+      <li>It increases the drainage rate — the water separates from the bubbles faster, and the blanket loses its sealing capability.</li>
+      <li>It pushes the agent off-target, so a higher proportion of the discharged foam never reaches the fuel surface.</li>
+    </ul>
+    <p>There is no simple multiplier in the standard for wind. The practical answer is that your foam performance level should have margin. If you are at the edge of what level B foam can do on a still day, you will fail on a windy one. This is why many aerodromes specify level A foam even when the table would allow level B.</p>
+
+    <h3>Foam at the drum is not foam at the nozzle</h3>
+    <p>The application rates in §2.3.5 (8.2 / 5.5 / 3.75 L/min/m²) assume the foam meets the specification at the nozzle. Three things break that assumption before the agent leaves the turret:</p>
+    <ul>
+      <li><strong>Proportioning error.</strong> A 3% foam at 2.5% or 3.5% changes expansion and drainage time enough to move the effective performance level by half a grade. §8.1.7.4 requires induction systems to induce with a tolerance of ±10% of the desired induction percentage at optimum working conditions.</li>
+      <li><strong>Degraded concentrate.</strong> Foam concentrate has a shelf life. Old stock, stock stored in sunlight, stock that has been frozen and thawed — all produce lower expansion and faster drainage. §8.1.7.1 requires: <strong>the in-service test of equipment should be carried out in accordance with the manufacturers instructions: a) to ensure the ongoing capability of the foam production system; and b) should be performed at least every twelve months</strong>.</li>
+      <li><strong>Water supply characteristics.</strong> §8.1.11 states: <strong>the quality of foam produced by a vehicle system may be affected by the characteristics of the local water supply. It is important to acquire an adequate clear water supply, the suitability of which should be verified with the approval of the foam concentrate manufacturer. No corrosion inhibitors, freezing point depressants or other additives should be used in the water supply without prior consultation with, and the approval of, the foam concentrate manufacturer</strong>. Hard water, salt water, water with surfactants from previous wash-down — all interfere with the foam chemistry.</li>
+    </ul>
+    <p>If your proportioning system has not been calibrated in the last twelve months, and your concentrate has not been tested in the last twelve months, the number in the table is not the number you are producing.</p>
+
+    <h3>Technique is a multiplier</h3>
+    <p>The rate is an average over the whole practical critical area in one minute. That means the operator must sweep the turret such that every square metre of the area receives the design application rate averaged over the minute. Two failure modes:</p>
+    <ul>
+      <li><strong>Sweeping too fast.</strong> The foam is laid in stripes with gaps. The fire burns through the gaps and the blanket never forms.</li>
+      <li><strong>Sweeping too slow.</strong> The foam piles up in the first half of the area and the second half gets nothing. The total volume discharged looks right on the gauge, but the fire is not controlled.</li>
+    </ul>
+    <p>This is why the standard requires continuous application (§2.7.3) and why training on the turret is not optional. A crew that can hit the rate on a calm day with a clean system will still fail if the operator has never practised the sweep.</p>
+
+    <h3>Multiple vehicles, one blanket</h3>
+    <p>When two or more vehicles attack the same fire, their foam blankets must merge into a single continuous blanket. That requires:</p>
+    <ul>
+      <li>A pre-agreed sector division so the edge of one vehicle's sweep meets the edge of the next without overlap or gap.</li>
+      <li>Matching foam types and performance levels — mixing level A and level B on the same fire creates a blanket with two different drainage times, and the weaker section fails first. §2.3.10 states that the use of a combination of different performance level foams at an aerodrome is not encouraged because it could lead to error in quantity calculation or replenishment.</li>
+      <li>Communication so the incident commander can adjust sectors as the wind shifts.</li>
+    </ul>
+
+    <h3>Temperature and cold weather</h3>
+    <p>Concentrate viscosity rises as temperature falls. Below approximately 5°C, proportioning systems that are calibrated at 20°C will under-dose unless they have temperature compensation. The foam that reaches the nozzle will be lean, and the blanket will drain fast. Cold weather procedures — heating the concentrate tank, recalibrating the proportioner, or using a winter-rated concentrate — are not optional. They are the difference between a working foam blanket and water with bubbles.</p>
+
+    <h3>The reserve is not a decoration</h3>
+    <p>§2.6.1 requires a foam concentrate reserve of 200% of the Table 2-3 quantity for vehicle replenishment. This is not a theoretical figure. In a real incident, the first wave of vehicles discharges their load in the first minutes. The second wave must arrive within three to four minutes (§2.7.3) and the first wave must replenish and return or be replaced. The reserve is what feeds the replenishment. If you do not hold it, continuous application stops when the first vehicles run dry.</p>
+
+    <h3>Consumption accounting</h3>
+    <p>The honest way to close this lesson is to give you a checklist for your next exercise or real event. Record these and compare them to the table:</p>
+    <ol>
+      <li>Wind speed and direction at the scene, and whether the foam blanket held on the upwind edge.</li>
+      <li>Foam expansion ratio and 25% drainage time measured at the nozzle during the event (or the last calibration if you cannot measure live).</li>
+      <li>Concentrate batch number, age, and last test result.</li>
+      <li>Proportioning ratio measured at the pump during the event.</li>
+      <li>Water source and quality — verified with the foam concentrate manufacturer per §8.1.11.</li>
+      <li>Turret sweep speed and sector assignments per vehicle.</li>
+      <li>Time each vehicle ran dry and time it returned to the fire after replenishment.</li>
+      <li>Total water and concentrate consumed versus the table figure for the category.</li>
+    </ol>
+    <p>If your consumed quantity is within 10% of the table figure under real conditions, your system is tight. If it is 50% over, find the leak — it is usually proportioning, technique, or wind, not the table.</p>
+
+    <blockquote>
+      <p><strong>SME action:</strong> run a full-consumption exercise with your actual fleet, foam, water and operators. Measure everything in the checklist above. Compare to the table figure for your category and foam performance level. Document the delta and the reasons. Then confirm your cold weather procedures are written, tested, and match the concentrate you actually stock.</p>
+    </blockquote>
+  `,
+  refs: [
+    'ICAO Doc 9137 Part 1 — §2.4.3 wind asymmetry in critical area (24 m upwind / 6 m downwind); §2.4.8 application rate and time',
+    'ICAO Doc 9137 Part 1 — §2.3.5 foam performance levels; §8.1.3 to §8.1.6 foam specifications; §8.1.7 in-service testing (12-month interval, ±10% induction tolerance); §8.1.11 water supply quality verified with manufacturer',
+    'ICAO Doc 9137 Part 1 — §2.3.10 combination of different performance level foams not encouraged; §2.7.3 continuous application (additional vehicles within 3–4 minutes)',
+    'ICAO Doc 9137 Part 1 — §2.6.1 foam concentrate reserve (200% of Table 2-3); §2.7.3 additional vehicle arrival',
+    'ICAO Annex 14 Volume I — §9.2.30 to §9.2.33 extinguishing agents; §9.2.35 response time',
+    'Your foam manufacturer data sheet — shelf life, temperature limits, proportioning tolerance',
+    'Your national Civil Aviation Authority requirements — confirm any additional reserves or testing mandates'
+  ],
+  smeChecked: false
+},
 };
 
 /**

@@ -54,7 +54,22 @@ def main():
         action = 'replaced'
     else:
         close = src.rindex('\n};')
-        new = src[:close + 1] + '\n  ' + block + '\n' + src[close + 1:]
+        # Ensure the current last entry has a trailing comma before we insert
+        # Find the last entry's closing brace (the one immediately before };)
+        obj_start = src.index('const LESSON_OVERRIDES = {')
+        before_close = src[obj_start:close]
+        # Match the last `  }` or `  },` before the end
+        last_brace = list(re.finditer(r"^[ \t]*\},?[ \t]*$", before_close, re.M))
+        if last_brace:
+            last = last_brace[-1]
+            last_abs = obj_start + last.start()
+            # If it doesn't end with comma, add one
+            if not src[last_abs:close].lstrip().startswith(','):
+                new = src[:last_abs] + '},' + src[last.end() + obj_start:close + 1] + '\n  ' + block + '\n' + src[close + 1:]
+            else:
+                new = src[:close + 1] + '\n  ' + block + '\n' + src[close + 1:]
+        else:
+            new = src[:close + 1] + '\n  ' + block + '\n' + src[close + 1:]
         action = 'inserted'
 
     # syntax gate before writing (node --check needs a .js extension)
