@@ -648,6 +648,8 @@ const LESSON_OVERRIDES = {
       accidents (§2.4.6):</p>
       <p class="formula">A<sub>p</sub> = 0.667 × A<sub>T</sub></p>
 
+      {{diagram:critical-area}}
+
       {{diagram:water-quantity}}
 
       <h3>Step 3 — Q1, water to control the fire</h3>
@@ -1256,6 +1258,156 @@ const LESSON_OVERRIDES = {
       'ICAO Doc 9137 Part 1 — §12.3.27 evacuation determination and the unnecessary evacuation risk',
       'ICAO Annex 6 Part I — operator responsibilities for pilot familiarity',
       'Course ART-09 — size-up, and the first transmission'
+    ],
+    smeChecked: false
+  },
+
+  /* ─────────────────────────────────────────────────────────────────────
+     ART-15 m1 — engine fires. Grounded in Doc 9137 Part 1 §12.2.8 to
+     §12.2.16. Two figures appear here and both are quoted exactly:
+     10 m from the intake (§12.2.11) and up to 500 m astern (§12.2.12).
+     The titanium case (§12.2.13) is the most counter-intuitive item in the
+     whole chapter — sometimes the correct action is to let it burn.
+     ───────────────────────────────────────────────────────────────────── */
+  'art15-m1': {
+    title: 'Engine fuel, oil and hydraulic systems',
+    brief:
+      'Engine fires punish both over-commitment and the wrong agent. Two of ' +
+      'the surprises here are that water is often the wrong tool, and that ' +
+      'sometimes the correct action is to let it burn.',
+    points: [
+      'Stay at least 10 m clear of the front and side intake, and up to 500 m astern.',
+      'Never position directly below the engine — running fuel, melted metal, ground fire.',
+      'Engines can be 10.5 m up. Your attack position depends on your reach.',
+      'Clean agents beat water and foam inside the nacelle. Water and foam go on adjacent structures.',
+      'Do not put foam into a turbine intake or exhaust unless there is no other option.',
+      'Titanium cannot be extinguished with conventional agents — sometimes you let it burn out.',
+      'Tell the operator what agent you used. Corrosion is a consequence you created.'
+    ],
+    body: `
+      <h3>The geometry decides where you can stand</h3>
+      <p>Before any tactical discussion, the physical constraints. RFF personnel
+      should stay <strong>at least 10 m from the front and side intake</strong>
+      of a turbine engine to avoid being ingested, and remain
+      <strong>up to 500 m from the rear</strong> depending on the size of the
+      aeroplane to avoid the jet blast danger area (§12.2.11, §12.2.12).</p>
+
+      {{diagram:jet-blast-zones}}
+
+      <p>The 500 m figure is the one that catches people, because it scales with
+      the aeroplane rather than being a fixed number, and because it is measured
+      from the rear. An engine idling on the stand is not the hazard. An engine
+      running at power after a survivable failure is.</p>
+
+      <h3>Never underneath</h3>
+      <p>The guidance is unambiguous that personnel and vehicles operating at an
+      engine fire <strong>should not position themselves immediately below the
+      engine</strong>, where they may be at risk from running fuel, melted metal or
+      ground fire situations (§12.2.15).</p>
+      <p>Operating positions outboard, in front of, or to the rear of the engine
+      will permit agents to be delivered — provided there is a suitable
+      applicator, or the range and pattern of the discharge can actually deliver
+      the chosen agent effectively.</p>
+      <p>That proviso is the whole problem. Engine heights of up to
+      <strong>10.5 m</strong> may be encountered, and they will require ladders,
+      elevated working platforms on the appliance, and extensible applicators
+      (§12.2.15). So the honest question before an engine fire is not "what agent"
+      but "what can my appliance actually reach from where it can safely
+      stand".</p>
+
+      <h3>The agent question, which is not the one people expect</h3>
+      <p>For a fire confined within the nacelle of a piston engine that the
+      aircraft extinguishing system cannot control, <strong>clean agents should be
+      applied first</strong>, because they are more effective than water or foam
+      <em>inside</em> the nacelle. Foam or water spray goes on the
+      <strong>outside</strong>, to keep adjacent aircraft structures cool (§12.2.8).</p>
+      <p>Two separate jobs, two different agents, and conflating them wastes the
+      opportunity. Water and foam inside the nacelle are less effective than a
+      clean agent; water and foam on the surrounding structure are what stops
+      this becoming a fuselage fire.</p>
+      <p>Dry chemical may be used, but may cause further damage to the
+      aeroplane (§12.2.8). For a confined turbine fire outside the combustion
+      chambers, the built-in extinguishing system is the best control; a clean
+      agent only if the fire persists after that system is expended and the
+      turbine has shut down (§12.2.9).</p>
+      <p>And the caution that catches crews out: <strong>foam should not be used
+      in the intake or exhaust of a turbine engine</strong> unless control cannot
+      be secured with other agents and the fire appears to be in danger of
+      spreading (§12.2.10). That is a narrow exception, not a general licence.</p>
+
+      <h3>Titanium: sometimes the answer is to let it burn</h3>
+      <p>This is the most counter-intuitive instruction in the chapter and it is
+      worth learning properly rather than skimming. Some engines have titanium
+      parts which, <strong>if ignited, cannot be extinguished with the conventional
+      extinguishing agents available to most RFF crews</strong> (§12.2.13).</p>
+      <p>So pouring agent into a titanium fire is not achieving anything. If these
+      fires are contained within the nacelle, it should be possible to
+      <strong>allow them to burn out without seriously threatening the aircraft
+      itself</strong> — provided two conditions hold:</p>
+      <ul>
+        <li>there are no external flammable vapour-air mixtures which could be
+        ignited by the flames or hot engine surfaces; and</li>
+        <li>foam or water spray is available to maintain the integrity of the
+        nacelle and surrounding exposed aircraft structures.</li>
+      </ul>
+      <p>Read that correctly. Burning out is permitted only while the fire stays
+      <em>inside</em> the nacelle and only while you can hold the structure cool
+      around it. Those two preconditions are continuous judgements, not a
+      one-off decision — the moment either fails, the calculus changes
+      completely.</p>
+
+      <h3>Fires the flight deck cannot see</h3>
+      <p>It is often impossible for crew members to make an accurate appraisal of
+      aircraft fire warning indicators, and the guidance advises bringing the
+      aircraft to a complete stop and allowing RFF personnel to inspect the area
+      before parking — an inspection usually greatly enhanced by thermal imaging
+      without opening compartment doors (§12.3.22).</p>
+      <p>For a confined turbine fire the guidance also notes the value of the
+      engine continuing to turn over, provided it is safe to do so from the
+      viewpoint of evacuation and other safety considerations (§12.2.9). You will
+      need to stand clear of the exhaust — and you may still have to protect
+      combustibles from the exhaust flames.</p>
+
+      <h3>Exposures first</h3>
+      <p>Where an engine fire situation has developed, <strong>priority will be
+      given to exposures</strong> (§12.2.16). Not the engine. The fire you were
+      sent to is contained; the aircraft around it is what you save.</p>
+
+      <h3>The bit that is easy to forget entirely</h3>
+      <p>The choice of agent is a matter for local decision, but the operational
+      objective is always rapid fire control with the minimum consequential
+      damage from the firefighting itself (§12.2.16). Clean agents, dry chemical
+      powder and, to a lesser extent, CO<sub>2</sub> can achieve control in the
+      screened areas within an engine without contaminating components and
+      ancillary systems.</p>
+      <p>And then the sentence that closes the incident: <strong>it is important
+      to inform aircraft operators of the nature of the agent used</strong> when
+      the incident is concluded, so that they may take preventive action against
+      corrosion or other effects as the situation may require (§12.2.16).</p>
+      <p>That is a real task with an owner. A clean agent protects the airframe
+      and quietly schedules a corrosion inspection. Somebody has to tell the
+      operator. Confirm who does that on your aerodrome, and that it happens.</p>
+
+      <blockquote>
+        <p><strong>SME action:</strong> for the engine types based at your
+        aerodrome, confirm which have titanium components and what your position
+        is on the burn-out tactic for them, including who judges the two
+        preconditions. Confirm which clean agents your appliances actually carry
+        and their application arrangements inside a nacelle. State your maximum
+        safe working height and what reaches it — elevated platforms, ladders,
+        extensible applicators — and your rule for the 10 m intake and the
+        up-to-500 m astern exclusion, including how that is enforced when several
+        vehicles are working. Finally, name who notifies the operator of the agent
+        used.</p>
+      </blockquote>
+    `,
+    refs: [
+      'ICAO Doc 9137 Part 1 — §12.2.8 confined piston engine fires',
+      'ICAO Doc 9137 Part 1 — §12.2.9 and §12.2.10 confined turbine fires; agent application',
+      'ICAO Doc 9137 Part 1 — §12.2.11 intake and §12.2.12 exhaust danger distances',
+      'ICAO Doc 9137 Part 1 — §12.2.13 titanium fire control; §12.2.15 positioning and access height; §12.2.16 agent choice',
+      'ICAO Doc 9137 Part 1 — §12.3.22 aircraft fire warnings and thermal imaging',
+      'Aircraft type documentation for the types based at your aerodrome'
     ],
     smeChecked: false
   },
