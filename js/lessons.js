@@ -5546,6 +5546,334 @@ const LESSON_OVERRIDES = {
   ],
   smeChecked: false
 },
+'art10-m1': {
+  title: 'The rescue decision',
+  brief:
+    'Protection, firefighting and rescue are not ranked. Fire inside ' +
+    'the aircraft comes first — and that is the only absolute in the list.',
+  points: [
+    'The three tasks — protection, firefighting and rescue — are not specified in order of priority (§12.3.5).',
+    'If a fire situation exists within the aircraft, it is essential to control this before any other operation can commence (§12.3.5).',
+    'If there is no fire but trim and upholstery are decomposing from residual heat, the decomposition must be stopped by water spray and the environment made habitable by ventilation (§12.3.5).',
+    'A precautionary blanketing of the fuel covered area is a priority task for the first arriving vehicle(s) (§12.3.3).',
+    'Protection must be available when opening doors and windows, to guard against and maintain escape paths in the event of a sudden outbreak of fire (§12.3.3.1).',
+    'Air crew must remain primarily responsible for the aircraft and its occupants; the final determination to evacuate is left to their discretion provided they can function normally (§12.3.20).',
+    'RFF personnel must make immediate appraisal of the external portion of the aircraft and report unusual conditions to the air crew (§12.3.20).',
+    'In the event air crew are unable to function, the RFF personnel will be responsible for initiating necessary action (§12.3.20).'
+  ],
+  body: `
+    <h3>The list is deliberately unordered</h3>
+    <p>§12.3.5 is the clause this whole course turns on: <strong>these three tasks are not specified in order of priority</strong>. Protection, firefighting and rescue. No ranking, and that is not an omission — a ranking would produce a crew that treats protection as third because it is listed third.</p>
+    <p>The same clause then gives the one absolute: <strong>if a fire situation exists within the aircraft it will be essential to control this before any other operation can commence.</strong></p>
+    <p>So the decision structure is not a ranking of three tasks. It is a single question with two branches:</p>
+    <ul>
+      <li><strong>Is there a fire situation inside the aircraft?</strong> If yes, control it first. Everything else waits.</li>
+      <li><strong>No fire, but is trim or upholstery decomposing from residual heat?</strong> If yes, stop the decomposition with water spray and make the environment habitable by natural or induced ventilation. You are still dealing with an immediate hazard, just a slower one.</li>
+      <li><strong>Neither.</strong> Then the three tasks really are co-equal and the sequence is your incident commander's judgement, made against the airframe in front of you.</li>
+    </ul>
+
+    <h3>Why residual heat is in this lesson</h3>
+    <p>That second branch is the one crews get wrong, because there is no flame to justify the urgency. §12.3.5: <em>if there is no fire but trim and upholstery materials are decomposing because of residual heat, the decomposition must be stopped by the use of water-spray and the environment made habitable by natural or induced ventilation.</em></p>
+    <p>Decomposing trim is how a survivable aircraft becomes a casualty list. The heat is already inside the structure, radiating into materials that will then ignite — and they will do it after your crew has been released, on the apron, with nobody watching. This is the physical basis for the reflash discipline in ART-09 m5 and ART-16 m4.</p>
+
+    <h3>What the first vehicle does</h3>
+    <p>§12.3.3 states the priority task for whoever arrives first: <strong>a precautionary blanketing of the fuel covered area will be a priority task for the first arriving RFF vehicle(s)</strong>.</p>
+    <p>Precautionary. That is the operative word — this is a protective action taken on the expectation of a fire that may not arrive, not an attack on a fire that exists. It is also why the first vehicle's crew must be competent on the suppression equipment before anything else happens: §12.3.4 requires that <em>the crew for the first vehicle of a multi-vehicle response should be proficient enough to ensure the operation of the fire suppression equipment and to provide assistance with evacuation</em>.</p>
+    <p>And §12.3.3.1 gives the second first-vehicle task, and it is a safety constraint: <strong>protection must be available when opening doors and windows of aircraft for evacuation to guard against and maintain escape paths in the event there is a sudden outbreak of fire</strong>.</p>
+    <p>Protection <em>available</em> — ready to be applied at the moment of opening. Not applied afterwards. The crew that opens a door to an aircraft with no foam blanket in place has converted a contained situation into an uncontained one, and §12.3.14 explains why: <em>crew members and RFF personnel should be aware of the dangers associated with the indiscriminate opening of doors or emergency exits which might permit entry of flames or toxic gases into the fuselage of the aircraft</em>.</p>
+
+    <h3>Who decides</h3>
+    <p>§12.3.20 sets the division with unusual care. Crew: <strong>since conditions and facilities differ greatly on most airports, crew members must remain primarily responsible for the aircraft and its occupants. The final determination to evacuate from the aircraft and the manner in which evacuation shall be carried out must be left to the discretion of the crew, provided they are able to function in a normal manner.</strong></p>
+    <p>Two conditions are bundled in there and both matter. The determination is the crew's — and the <em>manner</em> is theirs too, not yours. But it is theirs <em>provided they are able to function in a normal manner</em>, which is the hinge.</p>
+    <p>RFF: <strong>it will be their duty and responsibility to assist the air crew in any way possible. Since air crew visibility is restricted, RFF personnel should make immediate appraisal of the external portion of the aircraft and report unusual conditions to the air crew. Protection to the overall operation is the primary responsibility of the RFF personnel. In the event air crew are unable to function, the RFF personnel will be responsible for initiating necessary action.</strong></p>
+    <p>So the handover is explicit and it is a duty, not a courtesy. And note what RFF's job is <em>not</em>: it is not to decide the evacuation, it is to appraise the exterior and report. That report is the thing that makes the crew's decision informed — silence from RFF removes information the pilot is entitled to and relying on.</p>
+
+    <h3>Keeping the report worth making</h3>
+    <p>§12.3.12 describes what normally happens in flight: <em>the commander will in all probability state the nature of the incident, e.g. power plant fire, bomb threat, cabin fire, etc., and a plan for coping with the incident</em>. And §12.3.19 makes the link to establish: <em>it is often desirable to establish direct contact with the flight crew members. Most airport emergency equipment carries two-way radios, operating on ground control frequency. Prearrangement with the control tower will ensure that the aircraft changes to this frequency, if time and the nature of the emergency permit</em>.</p>
+    <p>So the report is worth making because the crew is listening for it and has told you what they are dealing with. Exterior conditions, fuel state, egress routes clear or obstructed, fire where and how big. That is the input to the determination in §12.3.20.</p>
+
+    <blockquote>
+      <p><strong>SME action:</strong> write your decision sequence down in the order above and confirm every crew member can state it. Then check three things. First, does your first-arriving crew have a documented method for precautionary blanketing the fuel covered area before any door is opened, and is the equipment to do it on the first vehicle? Second, has anyone in your service ever actually applied water spray and ventilation to a decomposing-trim aircraft with no visible flame, or is that a theoretical branch of your decision tree? Third, confirm the radio arrangements with your tower for establishing contact with the flight crew — §12.3.19 depends on a prearrangement, and if there is not one, that is the gap to close before it is needed.</p>
+    </blockquote>
+  `,
+  refs: [
+    'ICAO Doc 9137 Part 1 — §12.3.3 precautionary blanketing of the fuel covered area; §12.3.3.1 protection available when opening doors and windows',
+    'ICAO Doc 9137 Part 1 — §12.3.4 first vehicle crew proficiency; §12.3.5 the three tasks not in order of priority, fire control first, decomposition from residual heat',
+    'ICAO Doc 9137 Part 1 — §12.3.12 and §12.3.13 crew efforts towards a common goal; §12.3.14 dangers of indiscriminate opening of doors or emergency exits',
+    'ICAO Doc 9137 Part 1 — §12.3.19 direct contact with flight crew, radios on ground control frequency, prearrangement with the tower',
+    'ICAO Doc 9137 Part 1 — §12.3.20 division of responsibilities: crew determine evacuation, RFF appraise the exterior and initiate action if the crew cannot function',
+    'Course ART-09 m4 — working the emergency plan; m5 — stand-down and reflash',
+    'Course ART-16 m4 — withdrawal criteria and re-attack'
+  ],
+  smeChecked: false
+},
+
+  'art10-m2': {
+  title: 'Airframe access points',
+  brief:
+    'Doors, hatches, over-wing exits and the ones you can cut. ' +
+    'Knowing which is which before you need it is the whole job.',
+  points: [
+    'Rescue operations should be accomplished through regular doors and hatches wherever possible (§12.1.11).',
+    'RFF personnel must be trained in forcible entry procedures and provided with the necessary tools (§12.1.11).',
+    'Misuse of forcible entry tools has resulted in unnecessary fuel spills increasing the fire hazard (§12.1.11).',
+    'Aircraft are normally equipped with emergency exit devices — slides, ropes — in addition to the need for a vehicle with stairs if the normal devices fail or for RFF entry (§12.3.15).',
+    'Emergency evacuation slides provide much more rapid evacuation than conventional steps or stairs where speed is essential, so it is preferable to use the aircraft equipment (§12.3.17).',
+    'RFF personnel should stand by at the foot of slides to aid exiting persons to their feet and direct them to a staging area a safe distance from the scene (§12.3.17).',
+    'Over-wing evacuees normally slide off the rear edge of the wing or down extended flaps, and should be assisted to prevent leg injuries (§12.3.18).',
+    'Doors and exits must not be opened indiscriminately — this may permit entry of flames or toxic gases into the fuselage (§12.3.14).'
+  ],
+  body: `
+    <h3>Regular doors and hatches first</h3>
+    <p>§12.1.11 sets the order of preference and the caution in the same breath: <strong>rescue operations should be accomplished through regular doors and hatches wherever possible but RFF personnel must be trained in forcible entry procedures and be provided with the necessary tools.</strong></p>
+    <p>Then the note that should be read by every crew member: <em>in a number of cases, misuse of forcible entry tools has resulted in unnecessary fuel spills increasing the fire hazard.</em></p>
+    <p>That is a fire-service truth stated plainly by ICAO. Forcible entry is a technique, and a badly placed cut through a fuel line or a damaged skin panel will create a fuel spill on an aircraft that did not previously have one. Trained crews know where the tanks and the lines are. That knowledge is the tool.</p>
+
+    <h3>The aircraft's own equipment, first</h3>
+    <p>§12.3.15 sets the expectation: <strong>aircraft are normally equipped with emergency exit devices (i.e. slides, ropes etc.), in addition, rescue personnel may want to include a vehicle with stairs in the event the normal evacuation devices fail to operate or for RFF personnel to enter the aircraft.</strong></p>
+    <p>And §12.3.17 gives the reason to reach for the aircraft's own equipment before yours: <strong>the use of emergency evacuation slides will usually provide a much more rapid evacuation than conventional steps or stairs where speed of evacuation is essential, therefore, it is preferable to use the aircraft equipment.</strong></p>
+    <p>Where speed is essential — which is the ordinary case — the slide the aircraft was designed with beats the stair you brought. The stair is the fallback for when the slide does not deploy, and for RFF personnel entering.</p>
+
+    <h3>What the crew at the foot of the slide is for</h3>
+    <p>§12.3.17 continues: <strong>RFF personnel should stand by at the foot of the slides to aid exiting persons to their feet and direct them to a staging area a safe distance from the scene.</strong></p>
+    <p>Two tasks, both easy to skip and both consequential. Getting evacuees <em>to their feet</em> — a person leaving a slide is seated, unsteady, and frequently cannot stand unaided, which means they are a trip hazard for the person behind them and a casualty risk for themselves. And directing them to a staging area a safe distance from the scene, which is what keeps evacuees out of the working area and out of the second wave of an incident.</p>
+    <p>Neither task is dramatic. Both are more valuable than most of what else is happening at that moment, and both are the first thing dropped when a crew is stretched.</p>
+
+    <h3>Over-wing exits</h3>
+    <p>§12.3.18: <strong>evacuees using over-wing exits for evacuation will normally slide off the rear edge of the wing or down the wing flaps (if extended), and they should be given assistance to prevent leg injuries, then directed to a safe distance from the scene.</strong></p>
+    <p>The rear edge of the wing, or the flaps if extended. That detail decides where your receiving crew stands and how they position their hands. And the stated injury risk is leg injury — which tells you what you are there to prevent: a controlled descent onto the ground rather than a drop, and a pair of hands on a person who has landed awkwardly.</p>
+
+    <h3>The constraint that governs all of it</h3>
+    <p>Every access decision sits underneath §12.3.14: <strong>crew members and RFF personnel should be aware of the dangers associated with the indiscriminate opening of doors or emergency exits which might permit entry of flames or toxic gases into the fuselage of the aircraft.</strong></p>
+    <p>That is why §12.3.3.1 requires protection to be available when opening doors and windows. The sequence is: protection in place, then open. Never the other way round. An exit opened into a fuel fire pulls flame and hot gas into the fuselage and removes the escape route it was supposed to provide.</p>
+
+    <h3>Building your access knowledge per type</h3>
+    <p>The standard gives principles; the type-specific detail is in the manufacturer's rescue and fire fighting chart, and this is where the chart earns its place. For each aircraft type at or transiting your aerodrome, establish and record:</p>
+    <ol>
+      <li>Every normal access point — doors, hatches, cargo doors, and which of them open from outside.</li>
+      <li>Every emergency exit, and how it is operated from outside if the slide or arming mechanism has failed.</li>
+      <li>Where the fuel tanks and fuel lines are, so that forcible entry does not create a spill.</li>
+      <li>Which cuts are structural-only and which are near a tank, a hydraulic reservoir, or a composite structure.</li>
+      <li>Whether the aircraft has a jettison feature, and what it does.</li>
+      <li>The flight deck access route, and how to open the flight deck door from outside.</li>
+    </ol>
+    <p>Item 3 is the one that connects directly to the §12.1.11 warning, and item 6 is the one your crew needs for the intercom coordination in ART-15 m4.</p>
+
+    <blockquote>
+      <p><strong>SME action:</strong> take the types on your current schedule and confirm you hold a current rescue and fire fighting chart for each. Then check three things that are commonly assumed rather than verified. Do you know where the fuel tanks and lines are on each type, in enough detail to plan a cut? Can your crew open the flight deck door from outside for each type? And does each type in your fleet have emergency exit devices you have actually seen deploy — or are you relying on the manual? An exit mechanism nobody has watched work is an exit mechanism you do not have. Feed every finding into your pre-planned tactics.</p>
+    </blockquote>
+  `,
+  refs: [
+    'ICAO Doc 9137 Part 1 — §12.1.11 rescue through regular doors and hatches wherever possible; training in forcible entry; misuse of tools creating fuel spills',
+    'ICAO Doc 9137 Part 1 — §12.3.14 dangers of indiscriminate opening of doors or emergency exits permitting entry of flames or toxic gases',
+    'ICAO Doc 9137 Part 1 — §12.3.15 emergency exit devices and the vehicle with stairs for failed devices or RFF entry',
+    'ICAO Doc 9137 Part 1 — §12.3.17 evacuation slides provide more rapid evacuation where speed is essential; RFF personnel at the foot of the slides aiding evacuees to their feet and directing them to a staging area',
+    'ICAO Doc 9137 Part 1 — §12.3.18 over-wing exits, sliding off the rear edge of the wing or down extended flaps, assistance to prevent leg injuries',
+    'Manufacturer aircraft rescue and fire fighting charts for your fleet mix',
+    'Course ART-15 m4 — flight deck coordination and intercom'
+  ],
+  smeChecked: false
+},
+'art10-m3': {
+  title: 'Stabilisation before access',
+  brief:
+    'A moving aircraft injures the rescuers, not the occupants. ' +
+    'Nothing is accessed until the thing is still.',
+  points: [
+    'Rescue of aircraft occupants is a priority and should proceed with the greatest possible speed (§12.1.12).',
+    'Speed does not outrank the airframe being stable. A rescue from an unstable aircraft transfers the risk to your crew.',
+    'Ventilation of the aircraft is the only satisfactory means of creating a survivable atmosphere (§12.3.6).',
+    'Whenever ventilation is introduced there is a risk of promoting fire in any smouldering materials within the aircraft or where there is accelerated airflow (§12.3.9).',
+    'Personnel equipped with charged hose lines terminating in hand-controlled water-spray nozzles must be available to meet any sudden outbreak of fire (§12.3.9).',
+    'Decomposition from residual heat must be stopped with water spray even where there is no visible fire (§12.3.5).',
+    'The accident site must be considered for preservation from the outset, not after the rescue is complete.',
+    'Chocks, wedges and tarpaulins are category-scaled rescue equipment items in the standard table — stabilisation is resourced, not improvised.'
+  ],
+  body: `
+    <h3>Speed, and what it does not override</h3>
+    <p>§12.1.12 sets the priority: <strong>rescue of aircraft occupants is a priority and should proceed with the greatest possible speed.</strong> That is the correct instinct and it is the standard's own.</p>
+    <p>It is also the sentence most often read as an override. Speed of rescue does not mean speed of access into an aircraft that is still moving, still settling, or still shedding load. An airframe that shifts during an entry does not injure the occupant you were reaching — it injures the crew reaching for them. The way to reconcile speed with safety is not to slow down; it is to fix the airframe quickly so that access can then be fast.</p>
+    <p>So the sequence is: stabilise, then access, then move quickly. What you must never do is access first and stabilise afterwards, because the casualty you create belongs to your own service.</p>
+
+    <h3>Ventilation, and the atmosphere it creates</h3>
+    <p>§12.3.6 explains why the airframe has to be survivable before anyone is put inside it: <strong>it is important to create a survivable atmosphere within the aircraft as soon as is practicable, to protect any occupants who may be unable to escape and to facilitate search and rescue operations by RFF personnel. Smoke and fumes will impair vision, make movement difficult and may rapidly prove fatal to all occupants. If making entry into the aircraft, self-contained breathing apparatus (SCBA) should be worn; ventilation of the aircraft is the only satisfactory means of...</strong></p>
+    <p>The clause ends by naming ventilation as the only satisfactory means of achieving that atmosphere. Not a filter, not a respirator as a substitute — you cannot scrub a survivable atmosphere out of a cabin by breathing through a filter. You have to change the air.</p>
+    <p>§12.3.7 gives the natural method and its limitation: <em>it would, in suitable circumstances, be possible to use natural ventilation, by opening the doors and windows of the aircraft on the upwind and downwind sides, thus permitting a flow of air through the aircraft. The moveable portions of flight deck windows can also be used provided that the door to the flight deck is kept open.</em> And then the catch: <em>the limitations of natural ventilation are that there may be smouldering materials outside the aircraft on the upwind side which will contaminate</em> — the air you draw in is not necessarily clean air.</p>
+    <p>§12.3.8 gives the mechanical answer: <em>a suitably designed unit can be sited at a point where it receives clean air which is then delivered to the aircraft. Portable fans (smoke ejectors) may be carried on RFF vehicles.</em> Position the intake where the air is clean and deliver into the cabin — do not extract the smoke and hope the vacuum is enough.</p>
+
+    <h3>The trade every ventilation decision makes</h3>
+    <p>§12.3.9 is the clause that makes ventilation a decision rather than a task: <strong>whenever ventilation is introduced, there will be the risk of promoting fire in any smouldering materials within the aircraft or at any point external to the aircraft where there is an accelerated airflow. Personnel equipped with charged hose lines terminating in hand-controlled water-spray nozzles must be available to meet any sudden outbreak of fire.</strong></p>
+    <p>Read that as a whole. You are deliberately introducing air to a space that may contain smouldering material. That can promote a fire that was not going to become one. And the standard's answer is not caution — it is <em>a charged line and a hand-controlled nozzle, ready, at the moment you start the fan</em>.</p>
+    <p>So the required posture is: charged, crewed, hand-controlled, positioned, and then start the air. If nobody is on the nozzle when the fan starts, the ventilation has not been safely set up.</p>
+    <p>This pairs with §12.3.5's residual heat branch. Airflow over decomposing trim promotes the decomposition. The water spray and the ventilation are not alternatives — the spray stops the decomposition, the ventilation makes the space habitable, and you need both, in that order of setup.</p>
+
+    <h3>Stabilisation is resourced equipment</h3>
+    <p>Worth noting because it is easy to treat as improvisation: the standard's equipment table lists <strong>chocks and wedges – various sizes</strong> and a <strong>tarpaulin – lightweight</strong> as items whose quantity scales with aerodrome category, from one set at categories 1–2 up to three at categories 6–10.</p>
+    <p>So chocking the aircraft and protecting the scene from the weather are resourced, scaled tasks, not things a crew improvises from what is to hand. If your inventory does not reflect that scaling, that is a resourcing finding.</p>
+
+    <h3>The scene is evidence from the outset</h3>
+    <p>Two provisions sit alongside stabilisation and pull in opposite directions from the urgency of the moment. §12.3.25(h) requires that consideration should be given to preserving the accident site, among the positioning priorities, and §12.5.5 requires that <em>the wreckage of an aircraft involved in an accident, including controls, shall not be disturbed or moved</em> until the requirement has been satisfied.</p>
+    <p>Stabilising an aircraft does not generally conflict with that — you are not moving it. But be deliberate about where the chocks go and what you cut away, because every one of those is a decision that will be examined later, and the honest answer to "why was that cut there" is much easier to give if it was a decision rather than a reflex.</p>
+
+    <h3>The order to brief</h3>
+    <ol>
+      <li><strong>Scene safe to approach.</strong> Fire controlled or blanketed, fuel known, engines accounted for. §12.3.5 and §2.3.23 in ART-09 m5.</li>
+      <li><strong>Aircraft stabilised.</strong> Chocked, engine where applicable, no risk of movement or shedding.</li>
+      <li><strong>Atmosphere being made survivable.</strong> Natural or mechanical ventilation started with a charged hand-controlled line crewed and ready.</li>
+      <li><strong>Decomposition stopped.</strong> Water spray on residual heat in trim and upholstery where applicable.</li>
+      <li><strong>Then access.</strong> Through regular doors and hatches wherever possible, with protection available at the moment of opening.</li>
+    </ol>
+    <p>Steps 3 and 4 run together and in that order of setup. Step 5 is where speed applies.</p>
+
+    <blockquote>
+      <p><strong>SME action:</strong> confirm four things. Do you hold, and have you deployed, smoke ejectors or equivalent — and does your crew know where the clean-air intake position is on each type you handle, so the fan is not drawing from smouldering material on the upwind side? Is a charged hand-controlled water-spray line crewed and positioned <em>before</em> ventilation starts, as a written sequence rather than an intention? Are chocks and wedges stocked to the category-scaled quantity, and are they used as a briefed step? And has anyone in your service actually stabilised a moving or settling airframe, or is that a theoretical part of the plan?</p>
+    </blockquote>
+  `,
+  refs: [
+    'ICAO Doc 9137 Part 1 — §12.1.12 rescue of occupants as a priority with the greatest possible speed',
+    'ICAO Doc 9137 Part 1 — §12.3.5 decomposition from residual heat must be stopped by water spray and the environment made habitable',
+    'ICAO Doc 9137 Part 1 — §12.3.6 creating a survivable atmosphere as soon as is practicable; SCBA for entry; ventilation the only satisfactory means',
+    'ICAO Doc 9137 Part 1 — §12.3.7 natural ventilation by opening doors and windows upwind and downwind; flight deck windows with the door open; smouldering material on the upwind side as the limitation',
+    'ICAO Doc 9137 Part 1 — §12.3.8 mechanically-induced ventilation, portable fans and smoke ejectors, positioning to receive clean air',
+    'ICAO Doc 9137 Part 1 — §12.3.9 risk of promoting fire whenever ventilation is introduced; charged hose lines with hand-controlled water-spray nozzles must be available',
+    'ICAO Doc 9137 Part 1 — Table 5-2 chocks and wedges and tarpaulin scaled by aerodrome category; §12.3.25(h) consideration should be given to preserving the accident site; §12.5.5 wreckage not to be disturbed',
+    'Course ART-09 m4 — positioning priorities; m5 — stand-down'
+  ],
+  smeChecked: false
+},
+
+  'art10-m4': {
+  title: 'Extrication methods',
+  brief:
+    'Saws, spreaders, lifting gear and the judgement to know which one. ' +
+    'The tool is chosen by the seat, not by the toolbox.',
+  points: [
+    'Power-operated tools are required, ideally from a common source serving all powered tools (§12.3.10(b)).',
+    'A rotary saw for major cutting; a reciprocating saw or percussion chisel for more precise cuts, including cuts close to a trapped person (§12.3.10(b)).',
+    'Alternative cutting devices or a vehicle-mounted power source are not excluded provided any alternative offers equivalent operational facilities (§12.3.10(b)).',
+    'Hand tools include wire and bolt cutters, screwdrivers, crowbars, hammers and axes, with the full extent related to aircraft types operated and trained support personnel available (§12.3.10(c)).',
+    'Forcing equipment, usually hydraulically operated, for bending, lifting or cutting, typically adapted industrial kits assembled from components (§12.3.10(d)).',
+    'Ultra-high pressure water streams can pierce the aircraft skin to apply agent into the interior (§8.1.15).',
+    'RFF personnel equipped with charged hose lines and hand-controlled water-spray nozzles must be available whenever ventilation is introduced (§12.3.9).',
+    'Hand-held skin penetrating agent applicator tool (SPAAT) and manual penetrating nozzles are recognised alternatives (§8.1.15).'
+  ],
+  body: `
+    <h3>Match the tool to the cut, not to the inventory</h3>
+    <p>§12.3.10(b) specifies the division of work and it is a sensible one: <strong>ideally a common source should serve all powered tools, including a rotary saw for major cutting and a reciprocating saw or percussion operated chisel for more precise cuts, including those which may be made close to a trapped person.</strong></p>
+    <p>Two distinct jobs. A rotary saw is for opening structure quickly — a bulkhead, a floor beam, a cargo door frame. A reciprocating saw or percussion chisel is for the cut next to a person: controlled, precise, and workable in the confined space where somebody's arm is trapped.</p>
+    <p>Read the phrase carefully — <em>including those which may be made close to a trapped person</em>. That is the standard telling you that the precision tools are a safety requirement, not a convenience. Cutting close to a person is where a tool's momentum, its start-up, and its failure mode become somebody's injury.</p>
+    <p>And the flexibility clause: <em>the provision of alternative cutting devices or the use of a vehicle-mounted power source is not excluded provided any alternative offers equivalent operational facilities.</em> So battery tools are acceptable — provided they genuinely offer equivalent capability. Under this clause, on the day, in the aircraft, a battery saw that runs for four minutes is not equivalent, and whoever decided otherwise did not do the comparison.</p>
+
+    <h3>Hand tools are not the backup, they are the first option</h3>
+    <p>§12.3.10(c): <strong>hand tools, including wire and bolt cutters, screw-drivers of appropriate sizes and designs, crowbars, hammers and axes.</strong> And the scoping note: <em>the full extent of hand tool requirements must be related to the types of aircraft operating and the availability of trained support personnel.</em></p>
+    <p>Half the list is for releasing mechanisms rather than cutting structure. Wire and bolt cutters release latches. Screwdrivers of appropriate sizes release fasteners. A crowbar is for a pry that should not have a saw in it at all — and a pry near structure that is already cut weakens what is left.</p>
+    <p>Powered tools have a power source that can fail, run down, or foul. On a fuel-soaked apron in the dark, the hand tools are the tools that still work. Confirm the crew carries the ones matched to the latches on your fleet, not the ones that came with the vehicle.</p>
+
+    <h3>Lifting and spreading</h3>
+    <p>§12.3.10(d) covers the equipment that moves structure rather than cutting it: <strong>forcing equipment, usually hydraulically operated, for bending, lifting or cutting operations. It is usual to employ adapted industrial kits which can be assembled from a selection of components to provide a variety of lengths of tubular shaft on which the hydraulic ram attachment may exert a force.</strong></p>
+    <p>"Assembled from a selection of components" is the design intent — modular shafts and rams so the same kit covers different geometries. That has a training consequence: the crew must know which combination reaches the job, before they are on scene. Hydraulic equipment is heavy and it is assembled under pressure, on a casualty's time.</p>
+    <p>And lifting is not only for extrication. Structural collapse after impact can trap a crew member on an aircraft, and the same kit is the answer. The standard's equipment table lists one range of ladders, two rescue ladders, and one rescue tool box with contents per category range — the ladder is available, and the toolbox is a category-scaled resource.</p>
+
+    <h3>Two water-based options</h3>
+    <p>Two techniques in §8.1.15 use water as a cutting tool rather than a suppressing agent, and both are genuine extrication options.</p>
+    <ul>
+      <li><strong>Ultra-high pressure water streams</strong> — <em>developed using a narrow gauge water stream to "cut" a small hole through the aircraft skin to apply agent into the interior of an aircraft</em>. It pierces the skin, and the guidance notes the piercing action of a rigid tip <em>allows agent application to the seat of the fire, which may be inaccessible to hand-line operations such as in the case of cargo aircraft, tail-equipped aircraft engines, and auxiliary power units (APUs)</em>.</li>
+      <li><strong>SPAAT and manual penetrating nozzles</strong> — <em>manual piercing or hand-held penetrating nozzles, given a safe working platform and proper protection, can deliver many of the same firefighting tactics and strategies described for HRETs</em>; and <em>hand-held skin penetrating agent applicator tool (SPAAT) is one of a variety of manual penetration tools available to firefighters</em>.</li>
+    </ul>
+    <p>These are firefighting penetrations, not extrication tools. They are listed here because the same penetration principle appears, and because your service's position on penetrating an aircraft skin — a hole in an airframe — is a decision with a State and operator dimension that this platform does not supply.</p>
+
+    <h3>What else goes in with the rescue crew</h3>
+    <p>§12.3.10 lists the rest, and two items carry safety constraints rather than capability:</p>
+    <ul>
+      <li><strong>Lighting</strong> — <em>preferably operating from a portable generator</em>, with both area lighting and smaller units at working locations. And: <em>caution should be used when operating portable power sources in a fuel vapour atmosphere and when operating with electricity in a wet environment.</em> Both conditions are present at an aircraft accident.</li>
+      <li><strong>Respiratory protection</strong> — <em>which may consist of an SCBA</em>, consistent with §6.2.1.</li>
+      <li><strong>Communication</strong> — telephones and radios on the RFF frequency, providing two-way communication with other emergency vehicles, air traffic control, CTAF when ATC is not operating, and the flight crew where that arrangement has been established.</li>
+    </ul>
+
+    <blockquote>
+      <p><strong>SME action:</strong> build a per-type extrication card for each aircraft at or transiting your aerodrome: access points, fuel tank and line locations, the tool combination for the likely entrapments, and the emergency exit operations from outside. Then verify against your actual inventory three things. Does your powered tool set cover the precision cuts the standard describes as needed close to a trapped person, or only the bulk cuts? Are the hydraulic forcing combinations your crew can assemble the ones you need for the types you handle — and has anyone assembled them under instruction? And do the hand tools match the latch and fastener types on your fleet? Finally, confirm your stated position on penetrating aircraft skin for agent application, and that your authority agrees with it.</p>
+    </blockquote>
+  `,
+  refs: [
+    'ICAO Doc 9137 Part 1 — §12.3.10 rescue equipment requirements: lighting and power source caution in fuel vapour; power-operated tools with a common source, rotary saw for major cutting, reciprocating saw or percussion chisel for cuts close to a trapped person; alternative devices requiring equivalent operational facilities; hand tools; hydraulic forcing equipment; respiratory protection; communication',
+    'ICAO Doc 9137 Part 1 — §12.3.9 charged hose lines with hand-controlled water-spray nozzles available whenever ventilation is introduced',
+    'ICAO Doc 9137 Part 1 — §8.1.15 manual piercing and hand-held penetrating nozzles; SPAAT; ultra-high pressure water streams cutting a hole through the aircraft skin; §8.1.14 piercing to the seat of the fire',
+    'ICAO Doc 9137 Part 1 — Table 5-2 ladders, rescue ladder, rescue tool box and contents by aerodrome category; seat belt/harness cutting tool',
+    'ICAO Doc 9137 Part 1 — §12.1.11 training in forcible entry and the fuel spill hazard',
+    'Manufacturer aircraft rescue and fire fighting charts for your fleet mix',
+    'Your national Civil Aviation Authority requirements — any restriction on penetrating aircraft structure'
+  ],
+  smeChecked: false
+},
+
+  'art10-m5': {
+  title: 'Rescue hazards',
+  brief:
+    'The hazards that are specific to getting somebody out of an ' +
+    'aircraft — and the ones that injure the rescuers rather than the occupants.',
+  points: [
+    'Smoke and fumes impair vision, make movement difficult and may rapidly prove fatal to all occupants (§12.3.6).',
+    'SCBA must be worn when making entry into the aircraft (§12.3.6).',
+    'Evacuees sliding down a slide need assistance to their feet and direction to a staging area a safe distance from the scene (§12.3.17).',
+    'Over-wing evacuees should be given assistance to prevent leg injuries (§12.3.18).',
+    'Opening doors or emergency exits indiscriminately may permit entry of flames or toxic gases into the fuselage (§12.3.14).',
+    'Ventilation carries a risk of promoting fire in smouldering materials within the aircraft or where there is accelerated airflow (§12.3.9).',
+    'Portable power sources require caution in a fuel vapour atmosphere and when operating with electricity in a wet environment (§12.3.10(a)).',
+    'Misuse of forcible entry tools has resulted in unnecessary fuel spills increasing the fire hazard (§12.1.11).',
+    'A seat belt or harness cutting tool is a listed item — trapped occupants are restrained and the restraint is part of the hazard (§12.3.10, Table 5-2).'
+  ],
+  body: `
+    <h3>The atmosphere is the hazard that gets you</h3>
+    <p>§12.3.6 states the mechanism plainly: <strong>smoke and fumes will impair vision, make movement difficult and may rapidly prove fatal to all occupants.</strong></p>
+    <p>Read the three clauses in order, because they escalate. Impaired vision means you cannot find the exit. Difficult movement means you cannot reach it at the speed the situation requires. And fatal to <em>all</em> occupants — meaning the people who cannot self-evacuate are the ones whose survival depends on someone entering.</p>
+    <p>And the requirement that follows: <em>if making entry into the aircraft, self-contained breathing apparatus (SCBA) should be worn</em>. Not "consider", not "where the smoke is heavy". Worn, for entry. ART-07 m1 covers why the equipment must be right for the atmosphere; this is the clause that obliges it.</p>
+
+    <h3>The hazards that live in the extrication itself</h3>
+    <ul>
+      <li><strong>Uncontrolled descent.</strong> §12.3.17: RFF personnel <em>should stand by at the foot of the slides to aid exiting persons to their feet and direct them to a staging area a safe distance from the scene</em>. The hazard is both directions — the evacuee who cannot stand is a fall risk to themselves and an obstruction to the person behind.</li>
+      <li><strong>Over-wing exits.</strong> §12.3.18: evacuees <em>should be given assistance to prevent leg injuries</em>. A named injury mechanism, which tells you exactly what your receiving crew is for.</li>
+      <li><strong>Restraint.</strong> Table 5-2 lists a <em>seat belt/harness cutting tool</em> among the rescue toolbox contents. Trapped occupants are still restrained, and the restraint is a hazard until it is cut.</li>
+    </ul>
+
+    <h3>The hazards the rescue creates</h3>
+    <p>This is the category crews underrate, because these are hazards <em>you</em> make rather than ones you find:</p>
+    <ul>
+      <li><strong>Opening a door into a fire.</strong> §12.3.14: <em>crew members and RFF personnel should be aware of the dangers associated with the indiscriminate opening of doors or emergency exits which might permit entry of flames or toxic gases into the fuselage.</em></li>
+      <li><strong>Cutting a fuel line.</strong> §12.1.11: <em>in a number of cases, misuse of forcible entry tools has resulted in unnecessary fuel spills increasing the fire hazard.</em> Your rescue attempt has created the fire you were called to.</li>
+      <li><strong>Starting ventilation.</strong> §12.3.9: introducing air to a space with smouldering material can promote fire. §12.3.10(a) adds another: <em>caution should be used when operating portable power sources in a fuel vapour atmosphere and when operating with electricity in a wet environment.</em> Both of those are present at an aircraft accident with foam on the ground.</li>
+    </ul>
+
+    <h3>The hazards nobody sees</h3>
+    <p>Two that are easy to omit because they are not dramatic:</p>
+    <p><strong>Fatigue, in a confined space.</strong> A rescue task in a smoke-filled cabin with SCBA on is short-duration maximum effort in a hot confined environment. That is the anaerobic profile from ART-07 m4, and the fitness that supports it is a precondition, not a bonus. The crew that is unfit cannot complete the task, and a crew part-way through a task with no reserve is a crew that has to stop at the worst moment.</p>
+    <p><strong>Confined space and the rescue of the rescuers.</strong> The scene is dark, tight, hot, and full of loose structure. A responder can be trapped or injured inside an aircraft as easily as an occupant. If your emergency plan assumes every rescue is one-way, it does not assume reality. The same applies after the occupant is out: the aircraft is not safer once it is empty of passengers, because you are still in it.</p>
+
+    <h3>What the briefing owes the crew</h3>
+    <ol>
+      <li><strong>The atmosphere.</strong> What is in the air, what your equipment protects against, and what it does not.</li>
+      <li><strong>The restraint.</strong> Where each occupant is likely to be restrained, and which tool cuts it.</li>
+      <li><strong>The structure.</strong> Where the fuel is, and where you are permitted to cut.</li>
+      <li><strong>The egress.</strong> How you get out, and with whom — including the person who is watching for the structure moving.</li>
+      <li><strong>The stop.</strong> The criteria that end the attempt, agreed before you start. ART-16 m4 sets these out: with no stated trigger, the trigger becomes whoever is hottest and least willing to be the one who calls it.</li>
+      <li><strong>The rescue of the rescuers.</strong> Who is outside, who is watching, and what happens if you do not come out.</li>
+    </ol>
+    <p>Items 4 and 6 are the ones missing from most briefings. A crew that does not know its egress is committed to getting in. A crew that does not know somebody is watching for it is committed to staying in.</p>
+
+    <blockquote>
+      <p><strong>SME action:</strong> run a tabletop on your own pre-planned rescue for a specific type, and ask the crew six questions — what is the atmosphere, where is each occupant restrained, where is the fuel, what is our egress, what are our stop criteria, and who is watching for us. Answer any of those you cannot, and treat each as a finding. Then confirm two physical things: is there a seat belt or harness cutting tool on every rescue vehicle, and does your crew know which tool cuts which restraint on the types you handle. Finally, confirm your emergency plan addresses the rescue of responders, and that the incident command structure in ART-09 m1 gives someone that job explicitly rather than by implication.</p>
+    </blockquote>
+  `,
+  refs: [
+    'ICAO Doc 9137 Part 1 — §12.3.6 smoke and fumes impair vision, make movement difficult and may rapidly prove fatal; SCBA for entry',
+    'ICAO Doc 9137 Part 1 — §12.3.14 indiscriminate opening of doors or emergency exits permitting entry of flames or toxic gases',
+    'ICAO Doc 9137 Part 1 — §12.3.9 risk of promoting fire when ventilation is introduced; §12.3.10(a) caution with portable power sources in fuel vapour and in wet environments',
+    'ICAO Doc 9137 Part 1 — §12.3.17 assistance at the foot of the slides and direction to a staging area; §12.3.18 assistance at over-wing exits to prevent leg injuries',
+    'ICAO Doc 9137 Part 1 — §12.1.11 misuse of forcible entry tools resulting in fuel spills; §12.3.10 rescue equipment requirements; Table 5-2 seat belt/harness cutting tool',
+    'Course ART-07 m1 — what SCBA protects you from; m4 — fitness and anaerobic demand',
+    'Course ART-16 m4 — withdrawal criteria and re-attack'
+  ],
+  smeChecked: false
+},
 };
 
 /**
