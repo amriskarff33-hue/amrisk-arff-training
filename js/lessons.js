@@ -7586,6 +7586,439 @@ const LESSON_OVERRIDES = {
   ],
   smeChecked: false
 },
+
+  'art12-m1': {
+  title: 'Fuel properties and vapour behaviour',
+  brief:
+    'This course does not give you a flash point table. It gives you ' +
+    'the behaviour that the flash point table exists to explain.',
+  points: [
+    'The rupture of fuel tanks in a crash and consequent spillage of highly volatile fuels present a high degree of probability of ignition if the liquid contacts hot metal parts of the aircraft, or because of sparks caused by movement of wreckage or disturbance of the electrical circuit (§1.1.2).',
+    'Fires may also occur through the discharge of accumulated electrostatic charges at the time of ground contact or during fuelling operations (§1.1.2).',
+    'A distinctive characteristic of aircraft fires is their tendency to reach lethal intensity within a very short time (§1.1.2).',
+    'Foam is intended to provide an air-excluding blanket which prevents volatile flammable vapours from mixing with air or oxygen; it must flow freely, resist disruption by wind, heat or flame, and reseal ruptures in an established blanket (§8.1.1).',
+    'Film-forming foam (FFFP) acts as a surface barrier to exclude air and prevent vapourization, suppressing combustible vapours; the film is self-sealing following mechanical disruption and continues as long as a reservoir of foam remains (§8.1).',
+    'There may be enough residual heat in turbine aircraft engines to ignite fuel vapours up to 30 minutes after shutdown, or 10 minutes on piston engines (§12.1.9).',
+    'Where a titanium fire is contained within the nacelle, it may be allowed to burn out provided there are no external flammable vapour-air mixtures that the flames or hot engine surfaces could ignite, and foam or water spray is available to protect the nacelle and surrounding structure (§12.2.13).',
+    'Boundary: no document in this platform\'s source library states a flash point, fire point or flammable limit for any aviation fuel. AC 150/5230-4C lists "knowledge of fuel types and their flash points" as a required training element but does not give the values.'
+  ],
+  body: `
+    <h3>Why this lesson does not open with a table of numbers</h3>
+    <p>A flash point table looks like the answer and is not. Nobody extinguishes a fuel fire by reading a number. The number exists so that people who handle fuel all day long can keep a mental model of how close they are to trouble — and the operational question on a wing at night is not the number, it is <em>where the vapour is right now and what is hot enough or sparkable enough to set it off</em>.</p>
+    <p>So this lesson starts from the behaviour, because the behaviour is what the standard actually writes down. Note one thing before we begin: <strong>no document in this platform's source library states a flash point, fire point or flammable limit for any aviation fuel.</strong> The two documents that come closest are honest about their own limits, and pretending otherwise would be the worst possible outcome for a safety course. We come back to that at the end.</p>
+
+    <h3>Three ways a fuel fire starts, all in one sentence</h3>
+    <p>§1.1.2 is worth reading as a whole because it packs the ignition case into a single paragraph:</p>
+    <p><strong>The rupture of fuel tanks in an aircraft crash and the consequent spillage of highly volatile fuels, and other flammable liquids used by aircraft, present a high degree of probability of ignition if these liquids come into contact with hot metal parts of the aircraft or because of sparks caused by the movement of wreckage or disturbance of the electrical circuit. Fires may also occur through the discharge of accumulated electrostatic charges at the time of ground contact or during fuelling operations.</strong></p>
+    <p>Three mechanisms, and each one has a corresponding action:</p>
+    <ul>
+      <li><strong>Hot metal.</strong> Contact with hot parts of the aircraft. Action: cool metal, and know where it is hot.</li>
+      <li><strong>Sparks from wreckage movement and electrical disturbance.</strong> This is not a static phenomenon — it is metal dragging across metal, and wiring being torn. Action: no spark-producing operation near an unblanketed pool. That is not only a fuelling rule, it is a rescue rule, and ART-10's extrication tools sit inside it.</li>
+      <li><strong>Electrostatic discharge at ground contact or during fuelling.</strong> Covered in ART-12 m3.</li>
+    </ul>
+    <p>Then the sentence that justifies the response time requirement in ART-01 and ART-02: <strong>a distinctive characteristic of aircraft fires is their tendency to reach lethal intensity within a very short time.</strong> Not "develop" — reach lethal intensity. That is why the whole category system is built around a two-minute water application and why your response time objective is not a comfort measure.</p>
+
+    <h3>What foam is actually for, which is not what most people think</h3>
+    <p>§8.1.1 states the mechanism, and it is more precise than "smothering":</p>
+    <p><strong>Foam used for aircraft RFF is primarily intended to provide an air-excluding blanket which prevents volatile flammable vapours from mixing with air or oxygen. To perform this function a foam must flow freely over the fuel surface, must resist disruption due to wind or exposure to heat or flame and should be capable of resealing any ruptures caused by the disturbance of an established blanket.</strong></p>
+    <p>Three words in there do the work: <strong>volatile flammable vapours</strong>. Foam is not extinguishing liquid burning. It is separating vapour from oxygen. That reframes the whole subject — you are not fighting a fire on the fuel, you are maintaining a barrier between a gas and the air it needs.</p>
+    <p>And then three performance requirements, each of which is a failure mode you will meet:</p>
+    <ul>
+      <li><em>Flow freely over the fuel surface</em> — if it will not flow it does not blanket. This is why the practical critical area is about two thirds of the theoretical (§2.4.3 to §2.4.6), and why you cannot assume full coverage from a calculated rectangle.</li>
+      <li><em>Must resist disruption due to wind or exposure to heat or flame</em> — a blanket that breaks up lets vapour and air meet again, which is re-ignition.</li>
+      <li><em>Should be capable of resealing any ruptures</em> — self-sealing is the difference between a transient disturbance and a loss of control. This is the specific behaviour that separates an FFFP from an AFFF on a fuel spill.</li>
+    </ul>
+
+    <h3>Film-forming foam, and why it is the agent of choice on a spill</h3>
+    <p>§8.1 describes the FFFP mechanism and it is worth having precisely, because it explains a choice you will be asked to justify:</p>
+    <p><strong>Expanded foams generated from FFFP solutions have fast spreading characteristics and act as surface barriers to exclude air and prevent vapourization, thus suppressing combustible vapours. This film, which can spread over fuel surfaces not covered with foam, is self-sealing following mechanical disruption and continues as long as there remains a reservoir of foam for its production.</strong></p>
+    <p>Three words there carry the operational weight: <em>fast spreading</em>, <em>not covered with foam</em>, and <em>reservoir</em>. The film reaches fuel that no blanket has reached. It keeps working from the reservoir you laid, and it stops when the reservoir is gone — which is why the FFFP blanket still has to <em>cover the fuel surface to ensure extinction</em>, as §8.1 says: <strong>to ensure extinction, however, an FFFP blanket should cover the fuel surface, as is the practice with other foams.</strong></p>
+    <p>So the film is an advantage at the margin, not a substitute for the blanket. A crew that believes "FFFP spreads, so we can lay a thin patch" is reading half the clause.</p>
+    <p>And the spill claim, which §8.1 states directly: <strong>this foam is highly effective on fuel spills because it is fluid, film forming and has oleophobic properties.</strong> Oleophobic means it will not be wetted by or sink into the hydrocarbon — which is exactly the property you need when the fuel is a large flat pool rather than a burning aircraft.</p>
+
+    <h3>The clock that starts when the engine shuts down</h3>
+    <p>This is the single most useful number in this lesson and it is easy to misremember. §12.1.9:</p>
+    <p><strong>There may be enough residual heat in turbine aircraft engines to ignite fuel vapours up to 30 minutes after shutdown or 10 minutes on piston engines.</strong></p>
+    <p>Thirty minutes. A turbine engine that has been shut down for twenty minutes is still a credible ignition source for fuel vapour. Ten minutes on a piston engine — and piston engines appear in training aircraft, at general aviation aerodromes, and on the ramp.</p>
+    <p>The operational consequence sits in the same clause: <em>should spill of a flammable liquid occur without fire breaking out, it is important to eliminate as many ignition sources as possible while the spill is being neutralized or covered with foam. Engine ignition sources should be made inert or cooled.</em> Inert or cooled — that is the action, and it applies to an aircraft that is not burning, which is the situation crews most often treat as safe.</p>
+    <p>This also sets a clock on your own response. A spill under a wing is being handled in the shadow of an engine that could take another twenty-five minutes to become uninvolved, and the foam you are laying at minute three is protecting you as much as the fuel.</p>
+
+    <h3>The vapour-air mixture clause, which is doing more work than it looks</h3>
+    <p>§12.2.13 concerns titanium fires, and titanium is a different problem in every way. But the condition it attaches is a general one:</p>
+    <p><strong>Some engines have titanium parts which, if ignited, cannot be extinguished with the conventional extinguishing agents available to most RFF crews. If these fires are contained within the nacelle, it should be possible to allow them to burn out without seriously threatening the aircraft itself as long as: a) there are no external flammable vapour-air mixtures which could be ignited by the flames or hot engine surfaces; and b) foam or water spray is available to maintain the integrity of the nacelle and surrounding exposed aircraft structures.</strong></p>
+    <p>Read the condition rather than the conclusion. "It is acceptable to let a titanium fire burn out" is only ever true subject to two things, and both are yours to establish:</p>
+    <ol>
+      <li><strong>No external flammable vapour-air mixture</strong> — not a guess, an observation. Fuel vapour outside the nacelle, formed where the flames or hot engine surfaces could reach it.</li>
+      <li><strong>Foam or water spray available to protect the nacelle and surrounding exposed structure</strong> — available, positioned, and in your hands. The burn-out decision depends on a resource you have already committed.</li>
+    </ol>
+    <p>This is the doctrine ART-20 teaches in general form: the decision to let something burn is never a decision about the fire. It is a decision about everything else in the critical area.</p>
+
+    <h3>The boundary, stated plainly</h3>
+    <p>This platform will not give you flash point, fire point or flammable limit values, because:</p>
+    <ul>
+      <li><strong>Doc 9137 Part 1 does not state them.</strong> It does not give a number for any fuel property. It describes behaviour and ignition mechanisms, which is what this lesson has taught.</li>
+      <li><strong>AC 150/5230-4C names them as a training requirement but does not supply them.</strong> Its §3.1.1 orientation element includes <em>"Knowledge of fuel types and their flash points"</em> — so it is certain your crews are expected to know them. The document does not give them, because the values live in the fuel specification and the supplier's quality documentation.</li>
+      <li><strong>Where the values live.</strong> §15.1 directs you onward: <em>further information on internationally accepted petroleum and aviation industry fuel practices, including fuel quality control and operations, can be found in the Manual on Civil Aviation Jet Fuel Supply (Doc 9977).</em> Doc 9977 is not in this library. AC 150/5230-4C's own references point the same way — NFPA 407 for servicing practice, and fuel quality control procedures for the product.</li>
+    </ul>
+    <p>That is a gap, and it is a gap in your library rather than in the doctrine. The correct response is to obtain the fuel specification your supplier is working to and the supplier's own handling data, and to teach the numbers from that. Inventing plausible-looking flash points would be the most dangerous thing this course could do, because a plausible wrong number is undetectable at the point of use.</p>
+
+    <blockquote>
+      <p><strong>SME action:</strong> obtain from your fuel supplier, and add to this course's reference set: the fuel specification and quality limits your service is actually supplied against, the flash point and related values stated in it, and the supplier's own handling and spill procedure. §15.1 states that the guidance in Doc 9137 is <em>not intended to replace fuel supplier operator procedures</em>, so your supplier's document is the operative one and ours is not a substitute. Then confirm the two things §12.1.9 makes your responsibility: that crews know the residual-heat window in their operation — 30 minutes for turbine engines, 10 minutes for piston engines — and that the means of making an engine ignition source inert or cooled is a documented action on your spill procedure rather than an improvisation. Finally, if your operation includes piston-engine aircraft, confirm 10 minutes is briefed; it is the number most services omit.</p>
+    </blockquote>
+  `,
+  refs: [
+    'ICAO Doc 9137 Part 1 — §1.1.2 rupture of fuel tanks and spillage of highly volatile fuels, ignition by hot metal parts, sparks from movement of wreckage or disturbance of the electrical circuit, electrostatic discharge at ground contact or during fuelling, and tendency to reach lethal intensity within a very short time',
+    'ICAO Doc 9137 Part 1 — §8.1.1 foam as an air-excluding blanket preventing volatile flammable vapours from mixing with air or oxygen; flow freely, resist disruption, reseal ruptures',
+    'ICAO Doc 9137 Part 1 — §8.1 film-forming fluoroprotein foam: fast spreading, surface barrier excluding air and preventing vapourization, suppressing combustible vapours, self-sealing film continuing as long as a reservoir remains, blanket must still cover the fuel surface to ensure extinction, highly effective on fuel spills because fluid, film forming and oleophobic',
+    'ICAO Doc 9137 Part 1 — §12.1.9 residual heat in turbine aircraft engines sufficient to ignite fuel vapours up to 30 minutes after shutdown or 10 minutes on piston engines; eliminate ignition sources while neutralising or covering with foam; engine ignition sources made inert or cooled',
+    'ICAO Doc 9137 Part 1 — §12.2.13 titanium fire contained within the nacelle may burn out provided no external flammable vapour-air mixtures could be ignited and foam or water spray is available to protect nacelle and surrounding exposed structure',
+    'ICAO Doc 9137 Part 1 — §15.1 note reference to Doc 9977, Manual on Civil Aviation Jet Fuel Supply, for fuel quality control and operations; material not intended to replace fuel supplier operator procedures',
+    'FAA AC 150/5230-4C — §3.1.1(d) "Knowledge of fuel types and their flash points" listed as a mandatory element of fuel safety training programs, values not supplied in the circular; §1.2 NFPA 407 Standard for Aircraft Fuel Servicing identified as the underlying source',
+    'Course ART-04 m1 — extinguishing agents; ART-16 m3 — agent application and blanket integrity; ART-02 — critical area and response time'
+  ],
+  smeChecked: false
+},
+
+  'art12-m2': {
+  title: 'Refuelling operations and controls',
+  brief:
+    'Nine precautions, two of them absolute, one of them a condition you must ' +
+    'call your own service over — and a position on the stand that keeps all ' +
+    'three possible.',
+  points: [
+    'The airport authority, the aircraft operator and the fuel supplier each has responsibilities for the safety measures taken during fuelling operations, and the material in Doc 9137 is not intended to replace fuel supplier operator procedures (§15.1).',
+    'Aircraft fuelling operations should be done outdoors, and bonding and/or grounding as appropriate should be done in accordance with §15.4 (§15.2(a), (b)).',
+    'Fuelling vehicles should be positioned so RFF access is not interrupted, a cleared path is maintained for rapid removal from the aircraft in an emergency, they do not obstruct evacuation from occupied portions in the event of a fire, and the vehicle engines are not under the wing (§15.2(c)1 to 4).',
+    'All vehicles performing aircraft servicing functions other than fuel servicing, such as baggage trucks, should not be driven or be parked under aircraft wings while fuelling is in progress (§15.2(d)).',
+    'Open flames and lighted open flame devices should be prohibited on the apron and in other locations within 15 m of any aircraft fuelling operation — including lighted cigarettes, cigars and pipes, exposed flame heaters, welding or cutting torches, and flare pots (§15.2(e)). Lighters and matches should not be carried or used (§15.2(f)).',
+    'Extreme caution should be used when fuelling during lightning and electrical storms, and fuelling operations should be suspended during severe lightning disturbances in the immediate vicinity of the airport (§15.2(g)).',
+    'When any part of an aircraft undercarriage is abnormally heated, the airport RFF service should be called and fuelling should not take place until the heat has dissipated (§15.2(h)).',
+    'Portable fire extinguishing equipment suitable for at least initial intervention in a fuel fire, with trained personnel, a means of quickly summoning the RFF service in the event of a fire or major fuel spill, and regular inspection to a fully serviceable condition — §15.2(i) and Annex 14 §9.6.1.',
+    'An aircraft shall not be refuelled when passengers are embarking, on board or disembarking unless it is properly staffed by qualified personnel ready to initiate and direct an evacuation by the most practical and expeditious means available (§15.3.1).'
+  ],
+  body: `
+    <h3>First, who owns this</h3>
+    <p>§15.1 opens by distributing responsibility, and it is worth reading carefully because it tells you where your service sits:</p>
+    <p><strong>The airport authority, the aircraft operator and the fuel supplier each has responsibilities in respect of the safety measures to be taken during fuelling operations.</strong></p>
+    <p>Three parties, not one. Then the sentence that protects you from over-reaching and from under-reaching in equal measure: <strong>it is important to note that this material is not intended to replace fuel supplier operator procedures which are usually developed to meet requirements imposed by special equipment, national regulations, etc.</strong></p>
+    <p>So two conclusions. Your RFF service has a real role, but it is a supporting and enforcing role, not the owner of the fuelling operation. And the supplier's written procedure — not this chapter, and not this course — is the operative document for the people doing the work. If your service cannot produce the supplier's procedure on request, that is a finding.</p>
+
+    <h3>The nine general precautions, and which ones will actually stop you</h3>
+    <p>{{diagram:fuelling-stand}}</p>
+    <p>§15.2 opens with <em>the following general precautionary measures should be taken during aircraft fuelling operations</em>. The list is short enough to memorise and heavy enough to deserve memorising. Take it in the order it appears, because the order is roughly the order of consequence.</p>
+
+    <h3>(a) and (b) — outdoors, and bonded or grounded</h3>
+    <p><strong>Airplane fuelling operations should be done outdoors</strong>, and <strong>bonding and/or grounding, as appropriate, should be done in accordance with 15.4</strong>.</p>
+    <p>The first is unambiguous and is a hangar rule rather than an apron rule. The second is a requirement with a dead reference, and ART-12 m3 deals with it in full — because §15.4 is cross-referenced by §15.2(b) and does not appear anywhere in Part 1. Do not let that gap become a gap in your procedure.</p>
+
+    <h3>(c) — the positioning requirements, which are geometry</h3>
+    <p>Four conditions, all on the same piece of apron, all simultaneously required:</p>
+    <ol>
+      <li><strong>Accessibility to aircraft by RFF vehicles is not interrupted.</strong></li>
+      <li><strong>A cleared path is maintained to permit rapid removal of fuelling vehicles from an aircraft in an emergency.</strong></li>
+      <li><strong>They do not obstruct evacuation from occupied portions of the aircraft in the event of a fire.</strong></li>
+      <li><strong>The vehicle engines are not under the wing.</strong></li>
+    </ol>
+    <p>Condition 4 exists for the reason in ART-12 m1: a hot engine can ignite fuel vapour. Conditions 1 and 2 exist because of the response time requirement — a fuelling vehicle parked across the RFF route costs you minutes you have already proved you do not have. Condition 3 is about the occupants, and it is the one that gets violated by well-meaning ground staff who park a belt loader to make their own job easier.</p>
+    <p>The diagram above draws all four onto one stand. Look at the shape of it: a fuelling vehicle that sits <em>outside</em> the wing, in the open, with a clear line out, and with two separate routes — one in for RFF and one out for passengers — that do not cross it.</p>
+
+    <h3>(d) — the other vehicles, which is where the rules get broken</h3>
+    <p><strong>All vehicles performing aircraft servicing functions other than fuel servicing (e.g. baggage trucks, etc.) should not be driven or be parked under aircraft wings while fuelling is in progress.</strong></p>
+    <p>Read that as a prohibition on both <em>driven</em> and <em>parked</em>. Not just parking — driving. A baggage truck crossing under a wing during fuelling is inside the zone even at walking pace.</p>
+    <p>In practice this is an enforcement problem, not a knowledge problem. Every apron team knows the rule. What makes it work is the fuelling operator having the standing to stop a ramp, and the ramp teams knowing that the fuel bowser is about to arrive. If your service is ever asked to enforce this, the lever you have is the pre-shift brief and the stand allocation.</p>
+
+    <h3>(e) and (f) — 15 m, and the list is not obvious</h3>
+    <p><strong>Open flames and lighted open flame devices should be prohibited on the apron and in other locations within 15 m of any aircraft fuelling operation.</strong></p>
+    <p>Two parts. <em>On the apron</em> — a standing prohibition, not a distance-dependent one. <em>And in other locations within 15 m</em> — so the rule reaches beyond the apron surface to any location near the operation.</p>
+    <p>The value of the enumeration that follows is that several of the four items are not things anyone thinks of as "flames" during a normal turn:</p>
+    <ul>
+      <li>lighted cigarettes, cigars, pipes;</li>
+      <li>exposed flame heaters;</li>
+      <li>welding or cutting torches, etc.;</li>
+      <li><strong>flare pots or other open flame lights.</strong></li>
+    </ul>
+    <p>That last one should stop you. An <em>exposed flame heater</em> and a <em>flare pot</em> are both legitimate items on an airside in cold or low-visibility conditions, and both are inside the 15 m. A kit issued to a stand in winter has to be checked against this list, not against people's assumptions.</p>
+    <p>And §15.2(f) is separate and stricter in a different direction: <strong>cigarette lighters or matches should not be carried or used by anyone while engaged in aircraft fuelling operations.</strong> Not lit. Carried. A crew member with a lighter in a pocket is inside the rule.</p>
+
+    <h3>(g) — lightning, and this one is a suspension</h3>
+    <p><strong>Extreme caution should be used when fuelling during lightning and electrical storms. The fuelling operations should be suspended during severe lightning disturbances in the immediate vicinity of the airport.</strong></p>
+    <p>Two requirements of different strengths, and the second is absolute. "Extreme caution" governs the fringe; "should be suspended" governs severe local disturbance. The test is proximity — <em>in the immediate vicinity of the airport</em> — which means a decision made with weather information your service does not own.</p>
+    <p>That is a genuine gap worth closing: who tells you, on what trigger, and what is your authority to stop? If the answer is "the fuel supplier decides", then your service has no input into a decision that affects its own response. Confirm that chain exists and is written down.</p>
+
+    <h3>(h) — the one that is a call to your own service</h3>
+    <p><strong>When any part of an aircraft undercarriage is abnormally heated, the airport RFF service should be called and fuelling should not take place until the heat has dissipated.</strong></p>
+    <p>This is the clause where your service appears in someone else's procedure as a resource. And notice the sequence it establishes: <em>called</em>, and fuelling does not take place <em>until the heat has dissipated</em>. Not until it looks better. Not until the tow moves. Until the heat has gone.</p>
+    <p>That is ART-11's hot brake content arriving on the ramp. A gear that has been static for a while, an aircraft that has just taxied in, a brake that has been held — each is a candidate for abnormally heated undercarriage, and each is a case where a fuelling bowser should not be connected.</p>
+    <p>Two things worth confirming with your crews. That they know this call is theirs to expect and that attending is not optional. And that the vehicle they arrive in has what it needs to cool a wheel — because a fuel fire under a wing with a thermally damaged brake is a very different problem from one over intact metal.</p>
+
+    <h3>(i) and Annex 14 §9.6.1 — the portable extinguisher, and it is a Standard</h3>
+    <p>§15.2(i) and Annex 14 §9.6.1 say the same thing in different registers, and Annex 14 is where it becomes binding:</p>
+    <p><strong>Portable fire extinguishing equipment suitable for at least initial intervention in the event of a fuel fire and personnel trained in its use shall be readily available, and there shall be a means of quickly summoning the rescue and firefighting service in the event of a fire or major fuel spill. It should be ensured by regular inspection and maintenance that this equipment is maintained in a fully serviceable condition.</strong> — §15.2(i)</p>
+    <p>Annex 14 §9.6.1 carries it under Standards, in the same terms: <em>fire extinguishing equipment suitable for at least initial intervention in the event of a fuel fire and personnel trained in its use shall be readily available during the ground servicing of an aircraft, and there shall be a means of quickly summoning the rescue and firefighting service in the event of a fire or major fuel spill.</em></p>
+    <p>Note the words <strong>initial intervention</strong>. The portable extinguisher is the first thirty seconds, owned by the fuel operator, not a substitute for your vehicle. And note that <em>readily available</em> plus <em>trained</em> plus <em>fully serviceable</em> plus <em>a means of quickly summoning</em> are four separate obligations. A serviceable extinguisher in a locked cabinet on the far side of the stand satisfies one of them.</p>
+
+    <h3>Fuelling with passengers aboard — the strongest set of rules in the chapter</h3>
+    <p>§15.3 governs the case where passengers are embarking, on board or disembarking while fuelling takes place, and the language hardens: these are precautions that <strong>must</strong> be observed, not should.</p>
+    <p><strong>An aircraft shall not be refuelled when passengers are embarking, on board or disembarking unless it is properly staffed by qualified personnel ready to initiate and direct an evacuation of the aeroplane by the most practical and expeditious means available.</strong> — §15.3.1</p>
+    <p>"Properly staffed by qualified personnel ready to <em>initiate and direct</em> an evacuation." Both verbs. Someone who can start it and someone who is in charge of it. That is a staffing standard, not a sentiment, and it is the answer to every time-saving pressure that says the turnaround can be shortened.</p>
+    <p>Then §15.3.2, mirrored as a Standard in Annex 14 §9.6.2: <strong>when aircraft refuelling operations take place while passengers are embarking, on board or disembarking, ground equipment shall be positioned so as to allow a) the use of a sufficient number of exits for expeditious evacuation; and b) a ready escape route from each of the exits to be used in an emergency.</strong></p>
+    <p>Sufficient number of exits, and a ready escape route from each. Not from the nearest one. From each of them.</p>
+    <p>Then §15.3.3, which is the operating detail and the part crews should be able to recite:</p>
+    <ul>
+      <li><strong>(a)</strong> Passengers should be warned that refuelling will take place and that they must not smoke, operate switches or otherwise produce sources of ignition.</li>
+      <li><strong>(b)</strong> The illuminated "no smoking" signs and exit lighting should be switched on.</li>
+      <li><strong>(c)</strong> Aircraft equipped with integral stairs should have them deployed, or if aircraft stairways are used, these should be positioned at each of the main doors normally used for passenger embarkation or disembarkation which should be open or ajar and free from obstruction.</li>
+      <li><strong>(d)</strong> If, during refuelling, the presence of fuel vapour is detected in the aircraft interior, or any other hazard arises, refuelling and all cleaning activities using electrical equipment within the aircraft should be stopped until conditions permit resumption.</li>
+      <li><strong>(e)</strong> Where passengers are embarking or disembarking during refuelling, their route should avoid areas where fuel vapours are likely to be present and this movement should be under the supervision of a responsible person.</li>
+    </ul>
+    <p>Read (a) again: <em>must not smoke, operate switches or otherwise produce sources of ignition</em>. Operating switches. A passenger who presses a call button, or a crew member who works a cabin service panel, is creating an ignition source in a space that may be above its flash point. That is the whole reason (d) exists — fuel vapour can be detected <em>inside the cabin</em>, which means the concentration can get there without anyone seeing anything.</p>
+    <p>And (e) is a supervision requirement, not a signposting one. A named responsible person, watching a route, for the duration.</p>
+
+    <h3>Training and records — the other jurisdiction's example</h3>
+    <p>AC 150/5230-4C is a United States document and it is framed throughout in 14 CFR Part 139 terms, so it is not binding on you. It is included here as a worked example of what a fuel safety training regime looks like when one is written down properly, and its <em>structure</em> is the transferable part.</p>
+    <p>Its required training elements run: orientation including fuel types and their flash points; basic safety practices; bonding; public protection including ramp fuelling procedures and situations requiring cessation of fuelling; fire classification and extinguisher types with a monthly inspection routine; access control to storage areas; fire safety in fuel farms; fire safety in mobile fuelers, pits and cabinets; misfuelling prevention; and hand-held extinguisher training.</p>
+    <p>Two features are worth borrowing regardless of jurisdiction:</p>
+    <ul>
+      <li><strong>Hand-held extinguisher training is refreshed on a fixed cycle.</strong> The circular requires every fuelling person, not only the supervisor, to receive it every 24 consecutive calendar months, and it accepts classroom training with a realistic training device where live fire is not practicable — <em>the use of a live fire exercise is not required</em> — but the device must approximate the weight and discharge characteristics of the real extinguisher.</li>
+      <li><strong>Records demonstrate continuity, not just attendance.</strong> It requires enough retained records to show that training has been maintained <em>for all employees during the time they are authorized to handle aviation fuels</em>, and it is explicit that a 24-month lookback may require retaining records longer.</li>
+    </ul>
+    <p>That second point is the one services get wrong. An attendance sheet proves a person was trained on a date. A continuity record proves they were still trained last month, which is what you need to know at three in the morning.</p>
+
+    <h3>What we do not have</h3>
+    <p>This library contains no official video on aircraft fuelling operations, and no fuel servicing standard. AC 150/5230-4C identifies <strong>NFPA 407, Standard for Aircraft Fuel Servicing</strong> as the source it works from throughout, and NFPA 407 is not here. The substance of the fuelling procedure therefore lives with your fuel supplier under §15.1, and this lesson gives you the standard's requirements plus the geometry — not the supplier's method.</p>
+
+    <blockquote>
+      <p><strong>SME action:</strong> seven confirmations, in the order they would fail you. One: obtain the fuel supplier&rsquo;s written fuelling and spill procedure and confirm §15.2&rsquo;s nine precautions and §15.3&rsquo;s passenger provisions are all reflected in it. Two: confirm that refuelling is suspended on severe lightning in the immediate vicinity, and write down who tells you, on what trigger, and whether you have authority to stop the operation. Three: confirm your crews know §15.2(h) is a call <em>to them</em> — an abnormally heated undercarriage means RFF attend and fuelling does not proceed until the heat has dissipated. Four: walk an active stand during fuelling and check the 15 m zone against §15.2(e) — including exposed flame heaters and flare pots, which are on the list and are not usually thought of as flames; check that no lighter or match is carried on the fuelling operation. Five: verify that portable extinguishers are <em>readily available</em>, that their users are trained, that they are on a real inspection cycle, and that the means of quickly summoning the RFF service works from where the fuelling vehicle actually stands. Six: if refuelling with passengers aboard is permitted in your operation, verify the staffing standard in §15.3.1 — qualified personnel ready to initiate <em>and direct</em> an evacuation — and that §15.3.3(b) illuminated no-smoking signs and exit lighting are actually on, since that is the version of the requirement that gets dropped under time pressure. Seven: check your fuelling personnel records demonstrate continuity of training for the whole period each person has been authorised to handle fuel, not just attendance on a course date.</p>
+    </blockquote>
+  `,
+  refs: [
+    'ICAO Doc 9137 Part 1 — §15.1 responsibilities of the airport authority, aircraft operator and fuel supplier; material not intended to replace fuel supplier operator procedures; note reference to Doc 9977',
+    'ICAO Doc 9137 Part 1 — §15.2 (a) outdoors, (b) bonding and/or grounding in accordance with 15.4, (c) fuelling vehicle positioning with the four conditions, (d) other servicing vehicles not driven or parked under wings, (e) open flames and lighted open flame devices prohibited on the apron and within 15 m with the enumerated list, (f) lighters and matches not carried or used, (g) extreme caution in lightning and suspension during severe lightning disturbances, (h) abnormally heated undercarriage and the call to the RFF service, (i) portable extinguishing equipment, trained personnel, means of summoning RFF, regular inspection',
+    'ICAO Doc 9137 Part 1 — §15.3.1 refuelling with passengers embarking, on board or disembarking only if properly staffed by qualified personnel ready to initiate and direct an evacuation; §15.3.2 ground equipment positioned for a sufficient number of exits and a ready escape route from each; §15.3.3 (a) to (e) passenger warning, illuminated no smoking signs and exit lighting, stairs deployed or positioned at main doors and open or ajar, stop refuelling on detection of fuel vapour in the interior, supervised route avoiding areas where fuel vapours are likely to be present',
+    'ICAO Annex 14 Volume I — §9.6.1 ground servicing of aircraft, fire extinguishing equipment for at least initial intervention and means of quickly summoning the RFF service (Standard); §9.6.2 ground equipment positioned for sufficient exits and ready escape routes during refuelling with passengers embarking, on board or disembarking (Standard)',
+    'FAA AC 150/5230-4C — §1.2 NFPA 407 Standard for Aircraft Fuel Servicing identified as the underlying source; §3.1 mandatory training elements including bonding, public protection, fire classification and extinguishers, access control, fuel farm fire safety, mobile fuellers and misfuelling prevention; hand-held extinguisher training every 24 consecutive calendar months with realistic training device where live fire is not required; §5.2 recordkeeping demonstrating continuity of training for the time employees are authorized to handle aviation fuels. United States document, framed in 14 CFR Part 139 terms — included as a worked example of training-regime structure, not as a requirement.',
+    'Course ART-12 m1 — fuel properties and vapour behaviour; m3 — bonding, earthing and static; m4 — spill response; ART-11 m2 — hot brakes and wheels; ART-18 m1 — the alerting system'
+  ],
+  smeChecked: false
+},
+
+  'art12-m3': {
+  title: 'Bonding, earthing and static',
+  brief:
+    'The requirement is in the standard. The method it points to is not. ' +
+    'This lesson is honest about that gap and precise about everything else.',
+  points: [
+    '§15.2(b) requires that bonding and/or grounding, as appropriate, should be done in accordance with §15.4.',
+    '§15.4 is not reproduced in Part 1. Chapter 15\'s table of contents lists only §15.1, §15.2 and §15.3, and the reference "15.4" occurs exactly once in the whole of Part 1 — in the §15.2(b) cross-reference itself.',
+    '§15.1 states that the material is not intended to replace fuel supplier operator procedures, which are usually developed to meet requirements imposed by special equipment and national regulations — so the operative bonding method is the supplier\'s and your State\'s, not this platform\'s.',
+    'Fires may occur through the discharge of accumulated electrostatic charges at the time of ground contact or during fuelling operations (§1.1.2).',
+    'Engine ignition sources should be made inert or cooled, and there may be enough residual heat in turbine engines to ignite fuel vapours up to 30 minutes after shutdown, or 10 minutes on piston engines (§12.1.9).',
+    'Some rescue saws are operated by a small internal combustion engine, giving complete mobility but with a minor risk of introducing an ignition source in an area which may have fuel vapour concentrations (§5.7.8).',
+    'Engines are not to be under the wing; other servicing vehicles are not to be driven or parked under wings; open flames and lighted open flame devices are prohibited on the apron and within 15 m; lighters and matches are not to be carried or used; fuelling is suspended during severe lightning disturbances (§15.2(c)4 to (g)).',
+    'AC 150/5230-4C requires bonding to be taught with definitions from NFPA 407, the physics of bonding, how to ground versus how to bond, where and how to bond, types of bonding equipment, correct bonding procedures, and static electricity. NFPA 407 is not in this library.'
+  ],
+  body: `
+    <h3>The state of the source, before anything else</h3>
+    <p>§15.2(b) is a short clause and it is the only requirement in Chapter 15 that points outside Chapter 15:</p>
+    <p><strong>Bonding and/or grounding, as appropriate, should be done in accordance with 15.4.</strong></p>
+    <p>And then the finding, which you should know before you rely on this course for anything: <strong>§15.4 is not in Part 1.</strong> Chapter 15's table of contents lists three sections — §15.1 introduction, §15.2 general precautionary measures, §15.3 additional precautionary measures when passengers remain on board or embark/disembark — and stops. The string "15.4" appears exactly once in the whole of Doc 9137 Part 1, and it is the cross-reference in §15.2(b) itself.</p>
+    <p>So the standard sets the requirement, points at a method, and does not carry the method in this part. Two consequences follow, and they are the reason this lesson is shaped the way it is.</p>
+    <p>First, <strong>this course will not teach you a bonding procedure.</strong> Not because bonding is unimportant, but because the source we hold does not contain one, and a plausible-looking sequence invented to fill the hole would be worse than nothing — it would be undetectable at the point of use and it would carry this platform's authority when it has none.</p>
+    <p>Second, <strong>the method is not missing from your operation, it is missing from our library.</strong> §15.1 tells you where it lives: <em>it is important to note that this material is not intended to replace fuel supplier operator procedures which are usually developed to meet requirements imposed by special equipment, national regulations, etc.</em> So the operative bonding instruction is the fuel supplier's written procedure, shaped by the equipment fitted to your dispensers and by your State's rules. That document is the one your crews must be trained and assessed against.</p>
+
+    <h3>What the requirement is for</h3>
+    <p>Even without §15.4, the hazard is stated plainly in §1.1.2, and it is worth understanding because it tells you what a bonding procedure is trying to achieve:</p>
+    <p><strong>Fires may also occur through the discharge of accumulated electrostatic charges at the time of ground contact or during fuelling operations.</strong></p>
+    <p>Two distinct events in one sentence. <em>At the time of ground contact</em> — an aircraft arriving, touching down, and discharging accumulated charge through a wheel or a bonding point. <em>During fuelling operations</em> — charge generated by flow through the fuel, by filter and valve surfaces, and by tank entry, in a system that is otherwise a source of flammable vapour.</p>
+    <p>Note what this is not. It is not the only ignition mechanism, and ART-12 m1 sets out the others. Static is the one that is easiest to eliminate and most often left unmanaged, because it produces no visible sign before it operates.</p>
+
+    <h3>The other side of the same discipline: hot, not just sparky</h3>
+    <p>Bonding removes a charge. It does not remove heat. §12.1.9 puts both in one clause because fuelling crews need both:</p>
+    <p><strong>Should spill of a flammable liquid occur without fire breaking out, it is important to eliminate as many ignition sources as possible while the spill is being neutralized or covered with foam. Engine ignition sources should be made inert or cooled. There may be enough residual heat in turbine aircraft engines to ignite fuel vapours up to 30 minutes after shutdown or 10 minutes on piston engines.</strong></p>
+    <p>Bonding is half the ignition-source problem. The other half is thermal, it has a clock on it, and no amount of good bonding addresses it. A perfectly bonded fuelling operation with an uncooled engine under the wing still has an ignition source sitting in the fuel vapour.</p>
+    <p>This is the same reasoning as ART-15's engine fire content and ART-11's hot brake work, arriving in a place where people do not expect it. The wing is where your crews spend fuelling-shift attention, and it is also where a shut-down engine can still be a problem for half an hour.</p>
+
+    <h3>Your own equipment is an ignition source, and the manual says so</h3>
+    <p>Here is a clause worth more attention than it usually gets. §5.7.8 is about specifying rescue tools and it contains this:</p>
+    <p><strong>Some rescue saws are operated by a small internal combustion engine, giving complete mobility but with a minor risk of introducing an ignition source in an area which may have fuel vapour concentrations.</strong></p>
+    <p>Read it again in context. This is not about fuelling. It is about the rescue equipment your vehicle carries, being driven by a crew member into a crash site where fuel has spilled and vapour may be present — and about the fact that the mobility advantage was knowingly accepted against that risk.</p>
+    <p>The same clause sets out the alternative: pneumatic chisels on a compressed-air cylinder, and more complex tools on pneumatic, hydraulic or electrical power, where the power source is either installed equipment or a portable unit carried in the vehicle. <em>Some of these have to be suspended in doorways or at windows by means of an adjustable bar</em> — which is itself an ignition-relevant detail for a rescuer working in a fuel vapour environment.</p>
+    <p>So the practical questions for your service are: which powered tools do you carry, which of them have internal combustion engines, and does your crew know that fact before they are choosing one at a scene with an unblanketed fuel spill? That is a training point that belongs in ART-08 and ART-10 as much as here.</p>
+
+    <h3>The prohibitions that do the work when bonding is perfect</h3>
+    <p>Bonding is a control on charge. It is not the only control on ignition sources, and §15.2 gives four others. They matter here because they are the ones that survive a bonding failure.</p>
+    <ul>
+      <li><strong>Engines not under the wing (§15.2(c)4).</strong> A fuelling vehicle engine under the wing is a running internal combustion engine inside the fuel vapour zone. §15.2(c)4 exists for this reason.</li>
+      <li><strong>No other servicing vehicles driven or parked under wings (§15.2(d)).</strong> Baggage loaders and belt loaders have engines, and they arrive in numbers.</li>
+      <li><strong>No open flames or lighted open flame devices on the apron and within 15 m (§15.2(e))</strong> — and the enumeration includes exposed flame heaters, welding or cutting torches and flare pots, none of which people think of as flames in an operational sense.</li>
+      <li><strong>No cigarette lighters or matches carried or used by anyone engaged in fuelling (§15.2(f)).</strong> Carried, not lit.</li>
+    </ul>
+    <p>And §15.2(g), which is the atmospheric case and the only one with a suspension: <strong>extreme caution should be used when fuelling during lightning and electrical storms. The fuelling operations should be suspended during severe lightning disturbances in the immediate vicinity of the airport.</strong></p>
+    <p>A fuel discharge is a liquid, and the fuelling vehicle and its equipment are a conductive path. That is the configuration where static and lightning overlap, and it is why the requirement escalates from caution to suspension as the disturbance becomes local and severe.</p>
+
+    <h3>What a bonding curriculum should contain</h3>
+    <p>AC 150/5230-4C is a United States document framed in 14 CFR Part 139 terms. It is not binding on you. But it does set out what it considers a complete bonding element in a fuel safety curriculum, and that list is a reasonable specification for what your own programme should be producing:</p>
+    <ul>
+      <li>Definitions as contained in NFPA 407.</li>
+      <li>Physics of bonding — what, when and why.</li>
+      <li>How to ground versus how to bond.</li>
+      <li>Where and how to bond.</li>
+      <li>Types of bonding equipment.</li>
+      <li>Correct bonding procedures.</li>
+      <li>Static electricity.</li>
+    </ul>
+    <p>Three features in that list are the ones most curricula under-deliver, and they are worth naming even without the underlying standard.</p>
+    <p><strong>"How to ground versus how to bond"</strong> is listed as a distinction to be taught. That implies the two are not interchangeable — they serve different purposes and are not substitutes for one another, and a crew that treats them as the same action will get one of them wrong.</p>
+    <p><strong>"Types of bonding equipment"</strong> implies more than one type exists and that choosing between them is a judgement. A single cable and a single clamp is not a complete answer to that element.</p>
+    <p><strong>"Correct bonding procedures"</strong> implies there are incorrect ones that people do in good faith. Which means assessment has to demonstrate the procedure, not just awareness of it.</p>
+    <p>The same circular places "protection from sources of ignition" as the first element of public protection, and requires placarding to NFPA 407 and NFPA 704 for fuel storage areas. <strong>Neither NFPA 407 nor NFPA 704 is in this library.</strong></p>
+
+    <h3>What this course will and will not give you</h3>
+    <p>Stated plainly, so nobody is caught out:</p>
+    <ul>
+      <li><strong>Will give you:</strong> the requirement and its exact wording (§15.2(b)); the verified fact that §15.4 is absent from Part 1; the electrostatic ignition mechanism (§1.1.2); the thermal companion hazard and its clock (§12.1.9); every other ignition-source prohibition in §15.2; the powered-rescue-tool ignition risk in §5.7.8; and a specification for what your bonding curriculum must cover.</li>
+      <li><strong>Will not give you:</strong> the content of §15.4, the bonding procedure itself, the distinction between grounding and bonding in the technical sense, the types of bonding equipment, or any conductor or resistance value. These require NFPA 407 and the fuel supplier's procedure, neither of which is in this library.</li>
+    </ul>
+    <p>That second list is not a gap to be filled by whoever is available to write lessons. It is a gap to be filled by obtaining two documents. Until they are obtained, this lesson should be treated as covering the hazard and the requirement, and no more.</p>
+
+    <h3>Closing the gap</h3>
+    <p>Three documents, and the order matters because the first two are prerequisites for reading the third:</p>
+    <ol>
+      <li><strong>NFPA 407, Standard for Aircraft Fuel Servicing.</strong> The binding industry standard for the procedure. AC 150/5230-4C works from it throughout and cites it for definitions and placarding. It is not in this library.</li>
+      <li><strong>NFPA 704, Standard for the Identification of the Hazards of Materials for Public Safety.</strong> The placarding standard the AC points to. Also not in this library.</li>
+      <li><strong>Your fuel supplier's operator procedure</strong> under §15.1 — developed for the equipment actually fitted to your dispensers and your State's requirements. This is the document your crews are assessed against, and it is the one that closes the §15.4 gap in practice.</li>
+    </ol>
+    <p>Then audit your own position against it: what bonding and grounding equipment is on each fuelling vehicle, who inspects it, and on what cycle. Is it recorded per vehicle? Does a damaged or missing cable take the dispenser out of service, or does it get noted? §15.2(i)'s logic — <em>regular inspection and maintenance that this equipment is maintained in a fully serviceable condition</em> — applies to the extinguisher in that clause, and the principle generalises to anything on the vehicle whose absence removes a control.</p>
+
+    <blockquote>
+      <p><strong>SME action:</strong> this lesson is deliberately incomplete and the incompleteness is the finding. Close it by obtaining NFPA 407 and NFPA 704 into the reference library, and by obtaining the fuel supplier&rsquo;s operator procedure, which §15.1 identifies as the document this material does not replace. Until NFPA 407 is held, treat bonding training as covered by your supplier&rsquo;s procedure and nothing else. Then four operational checks. One: confirm the bonding and grounding equipment fitted to every fuelling vehicle, and that its inspection and replacement cycle is written down and evidenced — including what happens to a vehicle when a cable or clamp is damaged or missing. Two: confirm the bonding step is a documented, assessed action in the fuelling procedure, not a habit that some drivers perform and others skip. Three: brief crews on §5.7.8 — identify which powered rescue tools on your vehicles have internal combustion engines, and confirm they know that before selecting a tool at a scene with an unblanketed fuel spill. Four: confirm §12.1.9&rsquo;s thermal companion is briefed alongside bonding, including the 30-minute turbine and 10-minute piston figures, because a bonded fuelling operation still has a hot engine under the wing and the bonding step does nothing about it.</p>
+    </blockquote>
+  `,
+  refs: [
+    'ICAO Doc 9137 Part 1 — §15.2(b) bonding and/or grounding, as appropriate, in accordance with 15.4. NOTE: Chapter 15 contents list only §15.1, §15.2 and §15.3; the reference "15.4" occurs once in Part 1, in this cross-reference. §15.4 is not reproduced in Part 1.',
+    'ICAO Doc 9137 Part 1 — §15.1 material not intended to replace fuel supplier operator procedures developed to meet requirements imposed by special equipment and national regulations',
+    'ICAO Doc 9137 Part 1 — §1.1.2 fires may occur through the discharge of accumulated electrostatic charges at the time of ground contact or during fuelling operations',
+    'ICAO Doc 9137 Part 1 — §12.1.9 eliminate as many ignition sources as possible while the spill is being neutralized or covered with foam; engine ignition sources made inert or cooled; residual heat in turbine engines sufficient to ignite fuel vapours up to 30 minutes after shutdown or 10 minutes on piston engines',
+    'ICAO Doc 9137 Part 1 — §5.7.8 rescue tool power sources; some pneumatic chisels use a compressed-air cylinder; some rescue saws are operated by a small internal combustion engine giving complete mobility but with a minor risk of introducing an ignition source in an area which may have fuel vapour concentrations; pneumatic, hydraulic and electrical alternatives; adjustable bars suspending tools in doorways or at windows',
+    'ICAO Doc 9137 Part 1 — §15.2(c)4 vehicle engines not under the wing, (d) other servicing vehicles not driven or parked under wings, (e) open flames and lighted open flame devices prohibited on the apron and within 15 m, (f) lighters and matches not carried or used, (g) extreme caution in lightning and suspension during severe lightning disturbances',
+    'FAA AC 150/5230-4C — §3.1 paragraph 3 bonding element: definitions as contained in NFPA 407, physics of bonding (what/when/why), how to ground versus how to bond, where and how to bond, types of bonding equipment, correct bonding procedures, static electricity; paragraph 4 public protection including protection from sources of ignition and placarding per NFPA 407 and NFPA 704. United States document framed in 14 CFR Part 139 terms — included as a worked example of curriculum structure, not as a requirement.',
+    'NOT HELD IN THIS LIBRARY — NFPA 407 Standard for Aircraft Fuel Servicing; NFPA 704 Standard for the Identification of the Hazards of Materials for Public Safety. Both are required to complete the bonding procedure content and are listed above as gaps rather than filled.',
+    'Course ART-12 m1 — fuel properties and vapour behaviour; m2 — refuelling operations and controls; m4 — spill response; ART-15 m1 — engine fires; ART-11 m2 — hot brakes and wheels'
+  ],
+  smeChecked: false
+},
+
+  'art12-m4': {
+  title: 'Spill response',
+  brief:
+    'A spill with no fire is the easier accident and the more frequently ' +
+    'mishandled one, because nothing is burning and everyone relaxes.',
+  points: [
+    'Should spill of a flammable liquid occur without fire breaking out, it is important to eliminate as many ignition sources as possible while the spill is being neutralized or covered with foam, and engine ignition sources should be made inert or cooled (§12.1.9).',
+    'There may be enough residual heat in turbine aircraft engines to ignite fuel vapours up to 30 minutes after shutdown, or 10 minutes on piston engines (§12.1.9).',
+    'A continuous water supply is essential and is usually not available at all points; provisions should be in place to ensure that the required fire flow be maintained, and prearrangements should include additional emergency resources (§12.1.10).',
+    'Broken fuel, hydraulic fluid (flammable type), alcohol and oil lines should be plugged or crimped when possible to reduce the amount of spill and extent of fire (§12.1.13).',
+    'If the source of heat and fire cannot be controlled, fuel tanks exposed but not involved should be protected by appropriate agents to prevent involvement or explosion (§12.1.14).',
+    'Rescue operations should be accomplished through regular doors and hatches wherever possible; misuse of forcible entry tools has in a number of cases resulted in unnecessary fuel spills increasing the fire hazard (§12.1.11).',
+    'The "no smoking" rule must be rigidly enforced at the scene of the accident and in the immediate vicinity (§12.1.16).',
+    'Film-forming foam is highly effective on fuel spills because it is fluid, film forming and has oleophobic properties (§8.1).',
+    'There shall be a means of quickly summoning the rescue and firefighting service in the event of a fire or major fuel spill (§15.2(i), Annex 14 §9.6.1).',
+    'Boundary: no document in this library states a spill size threshold at which ARFF must be called, or a containment or cleanup procedure. AC 150/5230-4C states the structure — control and contain a limited quantity, contact ARFF for a large quantity, follow local spill reporting procedures — and refers to NFPA 407, which is not held.'
+  ],
+  body: `
+    <h3>The accident where nothing is burning</h3>
+    <p>§12.1.9 is the opening instruction and it is written for the case everyone finds easier than they should:</p>
+    <p><strong>Should spill of a flammable liquid occur without fire breaking out, it is important to eliminate as many ignition sources as possible while the spill is being neutralized or covered with foam. Engine ignition sources should be made inert or cooled.</strong></p>
+    <p>Two activities running at once, and the sentence is structured so that they overlap. You are not supposed to finish clearing ignition sources and then start dealing with the spill. The ignition sources are being eliminated <em>while</em> the spill is neutralised or blanketed — because the spill is the thing making every ignition source significant.</p>
+    <p>And the ordering inside that: eliminate ignition sources <em>while</em> neutralising. Neither waits for the other. Written as a sequence it becomes "find the leak, then look for ignition sources", which is the wrong procedure, because the leak does not wait while you look.</p>
+
+    <h3>Why an unburnt aircraft is not a safe aircraft</h3>
+    <p>The second sentence of §12.1.9 is the one that catches crews out, because it describes a hazard on an aircraft with nothing wrong with it:</p>
+    <p><strong>There may be enough residual heat in turbine aircraft engines to ignite fuel vapours up to 30 minutes after shutdown or 10 minutes on piston engines.</strong></p>
+    <p>An aircraft parked, shut down, with fuel on the ground under it, still has an ignition source inside the fuel vapour. Thirty minutes for a turbine engine; ten for a piston. <em>Engine ignition sources should be made inert or cooled</em> is the action, and it is a deliberate physical task with a technique — not a form of words.</p>
+    <p>Put the two clauses together and the reasoning is: the spill has created a flammable atmosphere in a place that contains a hot object. Your job is to break that pairing. Cool the engine, or make it inert, while you cover the fuel.</p>
+
+    <h3>Agent choice: why FFFP is the one for a spill</h3>
+    <p>ART-12 m1 covered the mechanism; here it is the choice. §8.1 states it directly:</p>
+    <p><strong>This foam is highly effective on fuel spills because it is fluid, film forming and has oleophobic properties.</strong></p>
+    <p>Three properties, and each answers a specific failure mode of a spill:</p>
+    <ul>
+      <li><em>Fluid</em> — it spreads over a flat pool. A spill is a flat pool; that is its geometry, and foam that will not spread cannot blanket it.</li>
+      <li><em>Film forming</em> — the film can travel across fuel that no blanket has reached, it is self-sealing after mechanical disruption, and it continues while a reservoir remains.</li>
+      <li><em>Oleophobic</em> — it is not wetted by or sink into the hydrocarbon. This is the property that distinguishes a spill application from a structural one.</li>
+    </ul>
+    <p>But do not over-read it. §8.1 says in the same passage that <em>to ensure extinction, however, an FFFP blanket should cover the fuel surface, as is the practice with other foams.</em> A film is an advantage at the edges, not a substitute for a blanket over the pool. Agent selection beyond this — the ARFF vehicle's agent versus portable equipment, and the fire class of the fuel involved — is ART-04 and ART-16.</p>
+
+    <h3>Water, and the assumption that fails</h3>
+    <p>§12.1.10 is short and it identifies the single most common planning error on a spill response:</p>
+    <p><strong>A continuous water supply is essential and is usually not available at all points. Provisions should be in place to ensure that the required fire flow be maintained. It is important that prearrangements also include additional emergency resources.</strong></p>
+    <p>"Usually not available at all points." That is the standard telling you that the assumption your response plan quietly makes is wrong. A spill can be anywhere on a large apron, and the hydrant coverage you sized for the critical area of an aircraft accident does not follow the aircraft around the stand.</p>
+    <p>Two requirements, and the second is the one that gets skipped. Provisions in place to maintain the required fire flow — that is a design and maintenance matter (ART-25). And <em>prearrangements</em> that include <em>additional emergency resources</em> — that is a mutual aid matter (ART-19), agreed in advance with a named party, a known callout time and a known capability.</p>
+    <p>A spill response that has run out of water at minute four because the nearest hydrant was two stands away is not a resource failure. It is a plan that assumed something the standard explicitly warns against.</p>
+
+    <h3>Reduce the spill before you fight it</h3>
+    <p>§12.1.13 is a short clause that should be in every crew's hands:</p>
+    <p><strong>Broken fuel, hydraulic fluid (flammable type), alcohol and oil lines should be plugged or crimped when possible to reduce the amount of spill and extent of fire.</strong></p>
+    <p>Four fluids, and the parenthetical matters — <em>flammable type</em> hydraulic fluid, because not all of it is. And the objective stated is twofold: reduce the amount of spill, and reduce the extent of fire. Plugging a line is simultaneously a spill control and a fire control, which is why it ranks above containment work.</p>
+    <p>"When possible" is doing real work. It may not be possible, and the clause sets no priority against your own safety or against rescue of occupants. It is not a justification for a crew to enter an unsafe area to reach a broken line.</p>
+    <p>Then §12.1.14, which is the protection task when suppression is not achievable: <strong>if the source of heat and fire cannot be controlled, fuel tanks exposed but not involved should be protected by appropriate agents to prevent involvement or explosion.</strong></p>
+    <p>Note <em>exposed but not involved</em>. This is the cool tank next to the burning one — ART-11's discipline applied to fuel, and ART-20's principle: when you cannot stop the first thing, protect the second thing from the first. And <em>prevent involvement <strong>or explosion</strong></em> — two outcomes, because an uninvolved tank can still fail catastrophically without having caught.</p>
+
+    <h3>The spill you cause yourself</h3>
+    <p>§12.1.11 carries a Note that is the most useful warning in this lesson, because it describes your own equipment failing to help:</p>
+    <p><strong>Rescue operations should be accomplished through regular doors and hatches wherever possible but RFF personnel must be trained in forcible entry procedures and be provided with the necessary tools.</strong></p>
+    <p>Note.— <em>in a number of cases, misuse of forcible entry tools has resulted in unnecessary fuel spills increasing the fire hazard.</em></p>
+    <p>Read that carefully. The standard does not say crews are slow at forcible entry. It says that <em>misuse</em> of the tools — cutting where a door would open, cutting a tank, cutting a line — has repeatedly created the spill that the crew was then exposed to. In a fuel fire this is not a training inconvenience; it converts a survivable accident into an unsurvivable one, and it does so in the most exposed phase of the operation.</p>
+    <p>Two consequences. First, the training requirement is real and ART-10 covers the technique, but the assessment should include <em>where</em> you cut as much as <em>how</em>. Second, in a confirmed fuel spill with no fire, a rescue that requires forcible entry through a fuel-bearing structure needs to be a deliberate decision rather than a default.</p>
+
+    <h3>The rule that is never relaxed</h3>
+    <p>§12.1.16 is one sentence and it applies here more than anywhere else in Chapter 12, because a spill concentrates vapour in an area with people standing around it:</p>
+    <p><strong>The "no smoking" rule must be rigidly enforced at the scene of the accident and in the immediate vicinity.</strong></p>
+    <p><em>Rigidly enforced</em>, <em>and in the immediate vicinity</em>. On a spill the immediate vicinity is the zone where the action is, and the people most likely to light a cigarette are the ones who have just driven up, got out, and are looking for a cigarette. This is an enforcement duty with a named owner and it never stops applying because there is no fire.</p>
+
+    <h3>Getting called, and getting there</h3>
+    <p>§15.2(i) and Annex 14 §9.6.1 both require it, and Annex 14 makes it a Standard:</p>
+    <p><strong>There shall be a means of quickly summoning the rescue and firefighting service in the event of a fire or major fuel spill.</strong></p>
+    <p><em>Major fuel spill</em> is the trigger, and here is the honest boundary: <strong>no document in this library defines that threshold.</strong> Neither Doc 9137 Part 1 nor Annex 14 quantifies it. Nor does AC 150/5230-4C — it lists as training elements <em>control spill and containment (limited quantity)</em> and <em>spill (large quantity), contact aircraft rescue and firefighting</em>, which establishes that the distinction exists and then relies on local procedure and on NFPA 407 for the number.</p>
+    <p>So your threshold is a local decision, and the honest thing is to make it explicitly and write it down, rather than to leave each fuelling operator to interpret "major". For guidance on what it should be informed by, AC 150/5230-4C's surrounding elements name the factors: product leaks and contamination, emergency procedures and notifications, follow local spill reporting procedures, use proper PPE in the event of a spill, cleanup procedures, and the effects of weather on fuelling operations.</p>
+    <p>Weather is the last of those and the most easily overlooked. A spill in cold conditions, or in wind, changes containment, changes vapour distribution, and changes whether your foam blanket holds — §8.1's requirement to <em>resist disruption due to wind</em> is not a laboratory property, it is the reason a spill on a windy day is a different job from the same spill on a calm one.</p>
+
+    <h3>The marine case, because the same logic applies twice as hard</h3>
+    <p>ART-23 covers this in full, but two of §13.2.3's provisions belong here as well because they are spill provisions:</p>
+    <p><strong>It can be anticipated that the impact of the aircraft into the water might rupture fuel tanks and lines. It is reasonable to assume that quantities of fuel will be found floating on the surface of the water.</strong> — §13.2.3</p>
+    <p>And then: <em>boats having exhausts at the waterline may present an ignition hazard if operated where this condition is present. Wind and water currents must be taken into consideration in order to prevent floating fuel from moving into areas where it would be hazardous. Care should be taken in the use of flares, flame floats or other pyrotechnics where fuel is present on the water.</em></p>
+    <p>Read against §12.1.9 and the parallel is exact. Eliminate ignition sources while covering the spill — at the waterline that means the boat's own exhaust, and it means no flares on a fuel slick. Reduce the movement of the fuel — at sea that means wind and current rather than your own hose streams. And note the detail that inverts the usual assumption: <em>calm surfaces will usually present more of a problem than choppy or rough surfaces</em>, because the slick concentrates where the water is still.</p>
+
+    <h3>Working a spill</h3>
+    <ol>
+      <li><strong>Eliminate ignition sources and cover the spill at the same time.</strong> Not in sequence. §12.1.9.</li>
+      <li><strong>Make the engine inert or cooled.</strong> Thirty minutes of turbine residual heat, ten on piston. §12.1.9.</li>
+      <li><strong>Plug or crimp broken fuel, flammable-type hydraulic, alcohol and oil lines</strong> when possible, without putting anyone at risk. §12.1.13.</li>
+      <li><strong>Protect exposed but uninvolved fuel tanks</strong> with appropriate agents to prevent involvement or explosion. §12.1.14.</li>
+      <li><strong>Ensure the fire flow is maintainable</strong> before you commit to a water demand you cannot sustain. §12.1.10.</li>
+      <li><strong>Blanket with foam — FFFP where your fleet carries it</strong> — covering the surface, not just filming the edges. §8.1.</li>
+      <li><strong>Enforce no smoking rigidly</strong> in the immediate vicinity. §12.1.16.</li>
+      <li><strong>Use regular doors and hatches.</strong> Assess any forcible entry against the spill you might cause. §12.1.11.</li>
+    </ol>
+
+    <blockquote>
+      <p><strong>SME action:</strong> four confirmations, and one gap to close. One: define <em>major fuel spill</em> in your own written procedure, with the number, and confirm every fuelling operator on your aerodrome is working to it rather than to their own interpretation. Neither Doc 9137 Part 1 nor Annex 14 supplies that figure — Annex 14 §9.6.1 requires the means of quickly summoning the RFF service but does not quantify the spill, so this threshold is yours to set and must be set deliberately. Two: confirm your water supply arrangements for a spill that is not located at a hydrant, since §12.1.10 states plainly that a continuous supply is usually not available at all points and requires prearrangements for additional emergency resources — name the party, the callout time and the capability. Three: brief and assess crews on §12.1.13 — the four fluids, including that the hydraulic fluid is specified as <em>flammable type</em> — and on §12.1.14, protecting exposed but uninvolved fuel tanks against involvement <em>and explosion</em>. Four: reassess forcible entry training with the §12.1.11 note in front of you, so that assessment covers <em>where</em> a cut is made and not only how, and so that a fuel spill with no fire is recognised as a reason to pause before cutting. Then obtain NFPA 407 to supply the containment and cleanup detail this lesson identifies as absent, and add it to the reference library alongside ART-12 m3.</p>
+    </blockquote>
+  `,
+  refs: [
+    'ICAO Doc 9137 Part 1 — §12.1.9 eliminate as many ignition sources as possible while the spill is being neutralized or covered with foam; engine ignition sources made inert or cooled; residual heat in turbine engines sufficient to ignite fuel vapours up to 30 minutes after shutdown or 10 minutes on piston engines',
+    'ICAO Doc 9137 Part 1 — §12.1.10 a continuous water supply is essential and is usually not available at all points; provisions to ensure the required fire flow be maintained; prearrangements should include additional emergency resources',
+    'ICAO Doc 9137 Part 1 — §12.1.11 rescue through regular doors and hatches wherever possible; personnel must be trained in forcible entry and provided with the necessary tools; note on misuse of forcible entry tools resulting in unnecessary fuel spills increasing the fire hazard',
+    'ICAO Doc 9137 Part 1 — §12.1.13 broken fuel, hydraulic fluid (flammable type), alcohol and oil lines plugged or crimped when possible to reduce the amount of spill and extent of fire; §12.1.14 fuel tanks exposed but not involved protected by appropriate agents to prevent involvement or explosion',
+    'ICAO Doc 9137 Part 1 — §12.1.16 the "no smoking" rule must be rigidly enforced at the scene of the accident and in the immediate vicinity',
+    'ICAO Doc 9137 Part 1 — §8.1 film-forming foam highly effective on fuel spills because fluid, film forming and oleophobic; blanket must still cover the fuel surface to ensure extinction; foam must resist disruption due to wind or exposure to heat or flame',
+    'ICAO Doc 9137 Part 1 — §15.2(i) and Annex 14 Volume I §9.6.1 a means of quickly summoning the rescue and firefighting service in the event of a fire or major fuel spill. NOTE: neither document defines a size threshold for "major".',
+    'ICAO Doc 9137 Part 1 — §13.2.3 floating fuel expected after impact into water; exhausts at the waterline as an ignition hazard; wind and water currents to prevent floating fuel moving into hazardous areas; care with flares, flame floats or other pyrotechnics; calm surfaces more of a problem than choppy or rough surfaces',
+    'FAA AC 150/5230-4C — §3.1 paragraph 7 fire safety in fuel farm and storage areas: leak and spill prevention, product leaks and contamination, emergency procedures and notifications, follow local spill reporting procedures, use proper PPE in the event of a spill, control spill and containment (limited quantity), spill (large quantity) contact aircraft rescue and firefighting, cleanup procedures, effects of weather on fuelling operations. United States document framed in 14 CFR Part 139 terms — structure of a spill procedure, not a requirement, and NFPA 407 is not held.',
+    'Course ART-12 m1 — fuel properties and vapour behaviour; m2 — refuelling operations and controls; m3 — bonding, earthing and static; ART-04 m2 — agent selection; ART-16 — agent application; ART-20 m2 — protecting what is not yet involved'
+  ],
+  smeChecked: false
+},
 };
 
 /**

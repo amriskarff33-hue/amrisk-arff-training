@@ -520,6 +520,108 @@ function dLevelDetermination() {
 }
 
 /* =========================================================================
+   8. FUELLING STAND — PROHIBITED AND REQUIRED POSITIONS
+   Doc 9137 Part 1 §15.2: the fuelling vehicle is positioned so RFF access is
+   not interrupted, a cleared path is kept for rapid removal, and evacuation
+   from occupied portions is not obstructed; engines are not under the wing;
+   other servicing vehicles are not driven or parked under wings; open flames
+   are prohibited within 15 m. That is a plan-view geometry problem, so it is
+   drawn here rather than described in prose.
+   The 15 m is quoted from §15.2(e). The circle is drawn to make it legible
+   on a 680-unit-wide canvas and is NOT to scale.
+   ========================================================================= */
+function dFuellingStand() {
+  const W = 680, H = 620;
+
+  /* A numbered badge, so the drawing stays uncluttered and the wording lives
+     in one legend instead of in leader lines across the artwork. */
+  const badge = (x, y, n) =>
+    `<circle cx="${x}" cy="${y}" r="12" class="dg-chip"/>` +
+    dgText(x, y + 0.5, String(n), 'dg-t--chip', 'middle');
+
+  let s = '';
+  s += dgText(20, 22, 'Fuelling stand — prohibited and required positions', 'dg-t--title');
+  s += dgText(20, 42, 'Doc 9137 Part 1 §15.2. Plan view, nose to the right. Not to scale.', 'dg-t--dim');
+
+  // Apron.
+  s += `<rect x="20" y="58" width="640" height="396" rx="10" class="dg-ground"/>`;
+
+  // Under-wing keep-out, drawn under the wing so the shape still reads.
+  s += `<rect x="290" y="78" width="108" height="148" rx="10" class="dg-keepout"/>`;
+  s += `<rect x="290" y="270" width="108" height="148" rx="10" class="dg-keepout"/>`;
+
+  // The 15 m exclusion circle, centred on the fuelling operation. Reaches the
+  // aft fuselage on purpose: the zone is bigger than most people picture.
+  s += `<circle cx="176" cy="160" r="94" class="dg-keepout"/>`;
+  s += dgText(176, 78, '15 m', 'dg-t--danger', 'middle');
+
+  // Aircraft.
+  s += `<rect x="248" y="220" width="206" height="56" rx="28" class="dg-solid"/>`;
+  s += `<path d="M454,248 l24,-13 l0,26 z" class="dg-solid"/>`;
+  s += `<path d="M262,224 L226,178 L250,178 L268,224 Z" class="dg-solid"/>`;
+  s += `<path d="M262,272 L226,318 L250,318 L268,272 Z" class="dg-solid"/>`;
+  s += `<path d="M352,220 L300,86 L338,86 L324,220 Z" class="dg-solid"/>`;
+  s += `<path d="M352,276 L300,410 L338,410 L324,276 Z" class="dg-solid"/>`;
+
+  // Engines, crossed out.
+  s += `<rect x="356" y="132" width="60" height="22" rx="11" class="dg-tyre"/>`;
+  s += `<rect x="356" y="342" width="60" height="22" rx="11" class="dg-tyre"/>`;
+  s += `<path d="M359,134 L413,152 M413,134 L359,152" class="dg-bad" stroke-width="2.8" fill="none"/>`;
+  s += `<path d="M359,344 L413,362 M413,344 L359,362" class="dg-bad" stroke-width="2.8" fill="none"/>`;
+
+  // Main gear — the undercarriage §15.2(h) is about.
+  s += `<rect x="314" y="276" width="12" height="16" rx="4" class="dg-tyre"/>`;
+
+  // Fuelling vehicle, inside the zone.
+  s += `<rect x="128" y="136" width="92" height="48" rx="7" class="dg-vehicle"/>`;
+  s += dgText(174, 128, 'FUELLING VEHICLE', 'dg-t--head', 'middle');
+
+  // Cleared path for rapid removal, leaving the zone.
+  s += dgArrow(78, 160, 126, 160, 'dg-good', 2.8);
+  s += badge(58, 160, 1);
+
+  // RFF access — not interrupted.
+  s += dgText(504, 84, 'RFF ACCESS', 'dg-t--accent');
+  s += badge(486, 106, 2);
+  s += dgArrow(504, 106, 656, 106, 'dg-accent', 3);
+
+  // Egress from occupied portions, not obstructed.
+  s += dgArrow(404, 224, 470, 200, 'dg-good', 2.6);
+  s += dgArrow(404, 276, 470, 300, 'dg-good', 2.6);
+  s += badge(486, 250, 3);
+  s += dgText(506, 254, 'EGRESS', 'dg-t--good');
+
+  // Badges for the zone, the wing and the undercarriage.
+  s += badge(110, 226, 5);
+  s += badge(280, 394, 4);
+  s += badge(348, 292, 6);
+
+  // Leader for the aircraft label.
+  s += dgAxis(496, 206, 458, 238);
+  s += dgText(502, 202, 'AIRCRAFT', 'dg-t--dim');
+
+  // Legend. The wording is the standard's, cited per row.
+  const ly = 468;
+  s += `<rect x="20" y="${ly}" width="640" height="140" rx="14" class="dg-panel"/>`;
+  const rows = [
+    ['1', '§15.2(c)2 — a cleared path is maintained to permit rapid removal of the fuelling vehicle from the aircraft in an emergency'],
+    ['2', '§15.2(c)1 — the fuelling vehicle is positioned so that accessibility to the aircraft by RFF vehicles is not interrupted'],
+    ['3', '§15.2(c)3 — it does not obstruct evacuation from occupied portions of the aircraft in the event of a fire'],
+    ['4', '§15.2(c)4 — vehicle engines are not under the wing.  §15.2(d) — other servicing vehicles are not driven or parked under wings'],
+    ['5', '§15.2(e), (f) — no open flame or lighted open flame device within 15 m; lighters and matches not carried or used'],
+    ['6', '§15.2(h) — abnormally heated undercarriage: the RFF service is called and fuelling does not take place until the heat dissipates']
+  ];
+  rows.forEach((r, i) => {
+    const y = ly + 26 + i * 20;
+    s += `<circle cx="42" cy="${y - 4}" r="10" class="dg-chip"/>`;
+    s += dgText(42, y - 3.5, r[0], 'dg-t--chip', 'middle');
+    s += dgText(62, y, r[1], 'dg-t--dim');
+  });
+
+  return dgSvg(W, H, 'Plan view of an aircraft stand during fuelling, showing the 15 metre no-open-flame zone centred on the fuelling vehicle, the under-wing keep-out with engines crossed out, the cleared path for rapid removal, the unobstructed RFF access route and the egress arrows from occupied portions of the aircraft.', s);
+}
+
+/* =========================================================================
    REGISTRY
    ========================================================================= */
 
@@ -537,7 +639,9 @@ const DIAGRAMS = {
   'water-quantity':       { draw: dWaterQuantity,
     caption: '<b>Water quantity.</b> Total water is Q1 + Q2, where Q1 = A × R × T controls the fire in the practical critical area and Q2 sustains control and finishes the job. Q2 cannot be calculated exactly and is read from the Annex 14 graph — §2.4.7 to §2.4.9. Verify every figure against the current edition before operational use.' },
   'level-determination':  { draw: dLevelDetermination,
-    caption: '<b>Category determination.</b> The aerodrome category is determined from the overall length of the longest aeroplane normally using the aerodrome and its maximum fuselage width — ICAO Doc 9137 Part 1 §2.1.2, Annex 14 Table 9-1 note. The matrix shown is a schematic of the lookup; confirm every cell against Table 2-1 and Table 2-3 in the current edition and against your own State&rsquo;s adopted requirements before operational use.' }
+    caption: '<b>Category determination.</b> The aerodrome category is determined from the overall length of the longest aeroplane normally using the aerodrome and its maximum fuselage width — ICAO Doc 9137 Part 1 §2.1.2, Annex 14 Table 9-1 note. The matrix shown is a schematic of the lookup; confirm every cell against Table 2-1 and Table 2-3 in the current edition and against your own State&rsquo;s adopted requirements before operational use.' },
+  'fuelling-stand':      { draw: dFuellingStand,
+    caption: '<b>Fuelling stand geometry.</b> Positioning requirements while fuelling is in progress — ICAO Doc 9137 Part 1 §15.2. The 15 m figure is quoted from §15.2(e); the circle is drawn large enough to read on the page and is <b>not to scale</b>. Bonding and grounding under §15.2(b) are referred to §15.4, which is not reproduced in Part 1 — see lesson ART-12 m3.' }
 };
 
 const DIAGRAM_KEYS = Object.keys(DIAGRAMS);
