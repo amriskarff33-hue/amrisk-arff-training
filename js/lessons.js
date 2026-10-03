@@ -3689,6 +3689,238 @@ const LESSON_OVERRIDES = {
   ],
   smeChecked: false
 },
+'art02-m1': {
+  title: 'Aircraft categories',
+  brief:
+    'Category is not a label. It is the single number that scales every ' +
+    'downstream requirement — water, foam, vehicles, discharge rate, response time.',
+  points: [
+    'Category is determined by the longest aircraft and its fuselage width. One aircraft can set the category for the whole aerodrome.',
+    'The category table (Doc 9137 Table 2-1 / Annex 14 Table 9-1 note) is a discrete step function. A 0.01 m width difference can jump the category.',
+    'Overall length is used, not fuselage length. The whole aircraft must be protected because fire through the skin puts the fire inside.',
+    'Category 1 to 10 maps to increasing aircraft size. There is no category 0 and no category above 10.',
+    'The fleet mix is irrelevant to the table. The longest, widest aircraft in the schedule sets the category.',
+    'Changing the schedule can change the category. The determination must be revisited when the operation changes.'
+  ],
+  body: `
+    <h3>Category is the input to everything</h3>
+    <p>If you get the category wrong, every number that follows is wrong — the water quantity, the foam concentrate, the complementary agent, the number of vehicles, the discharge rate, the response time objective. The category is the single scalar that scales the entire service.</p>
+
+    <h3>How the category is determined</h3>
+    <p>The method is given in Doc 9137 §2.1.2: <strong>the airport category for RFF should be based on the overall length of the longest aeroplanes normally using the airport and their maximum fuselage width</strong>. The airport category should be determined using Table 2-1 by categorising the aeroplanes using the airport, by first evaluating their overall length and maximum fuselage width.</p>
+    <p>This is a two-step lookup:</p>
+    <ol>
+      <li>Find the <strong>overall length</strong> of the longest aircraft in normal operations. Use the overall length (tip to tail), not the fuselage length. Doc 9137 §2.4.4 states: <strong>the overall length of the aircraft is considered appropriate for the theoretical critical area as the entire length of aircraft must be protected from burning. If not, the fire could burn through the skin and enter the fuselage. Also, other aircraft such as T-tail aircraft often have engines or exit points in this extended portion</strong>.</li>
+      <li>Find the <strong>maximum fuselage width</strong> of that aircraft.</li>
+      <li>Enter Table 2-1 (Doc 9137) / Table 9-1 note (Annex 14) with those two numbers. The length bands are the rows; the width bands are the columns. The intersection gives the category.</li>
+    </ol>
+
+    <h3>The width step function</h3>
+    <p>The width bands are discrete and unforgiving:</p>
+    <ul>
+      <li>Up to 2 m</li>
+      <li>Over 2 m up to 3 m</li>
+      <li>Over 3 m up to 4 m</li>
+      <li>Over 4 m up to 5 m</li>
+      <li>Over 5 m up to 6 m</li>
+      <li>Over 6 m up to 7 m</li>
+      <li>Over 7 m</li>
+    </ul>
+    <p>A fuselage of 6.20 m is in the 6–7 m band. A fuselage of 7.01 m is in the >7 m band. That 0.01 m difference moves the category up by one step on some length bands, and it moves the water quantity by roughly 25% — because the critical area formula uses (30 + W) and the percentage for Q2 jumps at the next category. Measure it correctly.</p>
+
+    {{diagram:level-determination}}
+
+    <h3>Length bands</h3>
+    <p>The length bands are: up to 9 m, over 9 m up to 12 m, 12–18 m, 18–24 m, 24–28 m, 28–39 m, 39–44 m, 44–49 m, 49–61 m, over 61 m. Each band combined with the width band gives the category 1 through 10.</p>
+    <p>There is no category 0 and no category above 10. If you have an aircraft longer than 61 m with a fuselage wider than 7 m, you are category 10 — the table stops there. Any larger operation still uses the category 10 figures as a minimum, with the §2.3.7 recalculation for larger-than-average aircraft.</p>
+
+    <h3>The fleet mix does not average</h3>
+    <p>This is the most common misunderstanding. If you have a weekly 777 and everything else is a 737, you are category 8 or 9 depending on the 777 variant. The fleet mix — movement counts, frequency, seasonal variation — is irrelevant to the table. It only matters to the staffing arithmetic in ART-01 m4 (task resource analysis). The table asks one question: what is the longest, widest aircraft that uses this aerodrome in normal operations?</p>
+
+    <h3>When to re-evaluate</h3>
+    <p>If the schedule changes — a new aircraft type, a variant with a longer fuselage or wider body, the retirement of the current critical aircraft — the category must be re-determined. Annex 14 §9.2.3 requires the level of protection to be appropriate to the aerodrome category. A category that was correct last year but wrong this year is a finding.</p>
+
+    <blockquote>
+      <p><strong>SME action:</strong> list every aircraft type in your current schedule with its overall length and maximum fuselage width. Identify the critical aircraft (longest, then widest). Confirm the category from Table 2-1. Then check: has the schedule changed since the last determination? If the critical aircraft is retired, what is the new critical aircraft and does the category drop?</p>
+    </blockquote>
+  `,
+  refs: [
+    'ICAO Doc 9137 Part 1 — §2.1.2 category determination by longest aeroplane and maximum fuselage width; Table 2-1',
+    'ICAO Doc 9137 Part 1 — §2.4.4 overall length rationale (T-tail aircraft); §2.3.7 recalculation for larger-than-average',
+    'ICAO Annex 14 Volume I — §9.2.2 to §9.2.4 level determination; Table 9-1 note',
+    'Your aerodrome schedule — current aircraft types, dimensions and movements',
+    'Your national Civil Aviation Authority requirements — confirm any additional determination criteria'
+  ],
+  smeChecked: false
+},
+'art02-m2': {
+  title: 'The determination method',
+  brief:
+    'Step by step from schedule to level. No shortcuts, no "about right" — ' +
+    'the method is the defence against an auditor.',
+  points: [
+    'The determination is a repeatable process: critical aircraft → dimensions → table lookup → category → level.',
+    'Category and level are not the same thing. Category is the aircraft size; level is the service capability. They are linked by Table 2-3 / Table 9-1.',
+    'The level table gives the minimum usable amounts of extinguishing agents, discharge rates, and complementary agents for that category.',
+    'Aerodromes must provide the level of protection corresponding to their category. Operating below the table is non-compliance.',
+    'The determination must be documented. An undocumented category is a finding.',
+    'Where operations involve aircraft larger than the category average, §2.3.7 requires recalculation and increased capability — this is a shall, not a may.'
+  ],
+  body: `
+    <h3>From schedule to level in four steps</h3>
+    <ol>
+      <li><strong>Identify the critical aircraft.</strong> From the current schedule, find the longest aircraft normally using the aerodrome. If multiple aircraft share the longest length, use the one with the greatest fuselage width.</li>
+      <li><strong>Measure the dimensions.</strong> Overall length (tip to tail) and maximum fuselage width. Use the manufacturer's published data or the airport's own measurements — not the flight manual's "cabin length" or similar.</li>
+      <li><strong>Look up the category.</strong> Enter Doc 9137 Table 2-1 (or Annex 14 Table 9-1 note) with length and width. The intersection is the category (1–10).</li>
+      <li><strong>Read the level requirements.</strong> Turn to Doc 9137 Table 2-3 / Annex 14 Table 9-1. The row for your category gives: principal agent quantity (water for foam), foam concentrate, complementary agent, discharge rate, and response time. These are the minimums your service must hold and deliver.</li>
+    </ol>
+    <p>That is the entire method. It is arithmetic, not opinion. If you can show the measurement, the table lookup, and the table row, you have a defensible determination.</p>
+
+    <h3>Category versus level — do not confuse them</h3>
+    <p>Category is a property of the <em>aircraft</em>. Level is a property of the <em>service</em>. The category table (Table 2-1) says "this aircraft is category 7". The level table (Table 2-3) says "category 7 requires 18 200 L water, 7 900 L/min discharge rate, 225 kg complementary agent, and a response time of 2–3 minutes".</p>
+    <p>They are linked but distinct. The category is determined once from the aircraft. The level requirements are read from the table. A common error is to say "we are a category 7 airport" when the question was "what level of service do you provide". The answer is the table row, not the category number.</p>
+
+    <h3>The level table is a minimum, not a target</h3>
+    <p>Doc 9137 Table 2-3 is titled "Minimum useable amounts of extinguishing agents". The word <em>minimum</em> is deliberate. You may hold more. You may not hold less. Annex 14 §9.2.5 states: <strong>the level of protection to be provided for rescue and fire fighting shall be appropriate to the aerodrome category</strong>. "Appropriate" means at least the table row.</p>
+    <p>Operating below the table is non-compliance. There is no "we're close enough" — if the table says 18 200 L and you hold 16 000 L, you are below the standard.</p>
+
+    <h3>The determination must be documented</h3>
+    <p>An undocumented category is a finding. The aerodrome manual (or equivalent State document) should record: the critical aircraft identified, its dimensions, the table lookup, the resulting category, and the level of protection provided. If an auditor asks "how did you arrive at category 7" and the answer is "we've always been category 7", that is a finding.</p>
+
+    <h3>Larger-than-average aircraft — the shall provision</h3>
+    <p>§2.3.7 is unambiguous: <strong>from 1 January 2015, at aerodromes where operations by aeroplanes larger than the average size in a given category are planned, the quantities of water shall be recalculated and the amount of water for foam production and the discharge rates for foam solution shall be increased accordingly</strong>.</p>
+    <p>This is a <em>shall</em>. If your critical aircraft exceeds the representative dimensions in Table 2-4 for your category, you must recalculate. The representative aircraft in Table 2-4 are averages for the category. A 777-300ER in category 9 has a narrower fuselage (6.20 m) than the category average (7 m), so it comes in below the table figure. But an A380 in category 10 exceeds the average — the recalculation is mandatory.</p>
+    <p>The recalculation uses the formulae in Table 2-4 (which are the same critical area / practical critical area / Q1 / Q2 formulae from ART-03). The result replaces the table figure for your aerodrome.</p>
+
+    <blockquote>
+      <p><strong>SME action:</strong> produce the documented determination: critical aircraft, dimensions, table lookup, category, table row. Then check: does any aircraft in the schedule exceed the Table 2-4 representative dimensions for your category? If yes, confirm the §2.3.7 recalculation has been done and the increased quantities are held. If the determination has never been documented, write it now.</p>
+    </blockquote>
+  `,
+  refs: [
+    'ICAO Doc 9137 Part 1 — §2.1.2 category determination; Table 2-1; Table 2-3 minimum useable amounts; Table 2-4 representative aircraft and recalculation formulae; §2.3.7 larger-than-average recalculation (shall)',
+    'ICAO Annex 14 Volume I — §9.2.2 to §9.2.5 level of protection appropriate to category; Table 9-1',
+    'Your aerodrome manual — documented category determination and level of protection',
+    'Your national Civil Aviation Authority requirements — confirm any additional documentation or approval requirements'
+  ],
+  smeChecked: false
+},
+'art02-m3': {
+  title: 'Factors justifying a higher level',
+  brief:
+    'The table is the floor. These are the reasons you build above it — ' +
+    'each one must be documented, not asserted.',
+  points: [
+    'The table assumes an average aircraft per category. Operations by larger aircraft trigger mandatory recalculation (§2.3.7).',
+    'Traffic density matters. High movement rates with simultaneous operations may require more vehicles to sustain continuous application.',
+    'Terrain and access routes can add response time. If the worst-case route exceeds the table assumption, you need more vehicles stationed closer.',
+    'Adverse weather operations (low visibility, contaminated surfaces) increase response time and reduce effective discharge — the service must compensate.',
+    'Mutual aid cannot be subtracted from your requirement. External services arrive after the critical window (§2.7.1).',
+    'A higher level must be documented in the aerodrome manual with the assessment that supports it.'
+  ],
+  body: `
+    <h3>The table is the floor, not the ceiling</h3>
+    <p>Doc 9137 Table 2-3 / Annex 14 Table 9-1 gives the <em>minimum</em> for the category. The standard explicitly identifies factors that can and should drive the service above the table. None of these are optional once the factor exists — the assessment must be done, and the capability increased.</p>
+
+    <h3>1. Larger-than-average aircraft (Doc 9137 §2.3.7)</h3>
+    <p>This is the only factor with a <em>shall</em>. If your critical aircraft exceeds the representative dimensions in Table 2-4 for your category, you must recalculate the water quantities and discharge rates and increase your capability accordingly. This is not optional and it is not a "higher level" in the category sense — it is the same category with a higher requirement.</p>
+
+    <h3>2. Traffic density and simultaneous operations</h3>
+    <p>The table assumes a single incident response. An aerodrome with high movement rates, simultaneous runway operations, or multiple critical aircraft on the ground at the same time may need more vehicles to sustain continuous application if the first wave is committed. The task resource analysis in ART-01 m4 is where this is worked through, but the level determination must consider whether the table's vehicle count (implied by the discharge rate and quantity) is sufficient for the actual traffic pattern.</p>
+
+    <h3>3. Terrain, access routes and station location</h3>
+    <p>The response time in the table is measured in optimum conditions on the movement area. If your worst-case route involves unpaved surfaces, steep gradients, water crossings, or active runway crossings that add delay, the table's response time may not be achievable from the current station locations. The options are: relocate the station, add a satellite station, or increase the vehicle count so that the response time is met from the existing stations. This is a level decision because it changes the resource requirement.</p>
+
+    <h3>4. Adverse weather and low visibility operations</h3>
+    <p>Annex 14 §9.2.29 Note 2 states that the response time is in optimum visibility and surface conditions. If the aerodrome operates in low visibility (Category II/III approaches) or on contaminated runways, the actual response time will be longer. The service must either demonstrate that the response time is still met in those conditions, or increase the capability (more vehicles, better positioned) to compensate. This is a level decision.</p>
+
+    <h3>5. Mutual aid is not your requirement</h3>
+    <p>Doc 9137 §2.7.1 and the task resource analysis definition (§10.5.2) both make this clear: the minimum personnel and vehicle requirement is what must be achieved <em>in real time before supporting external services are able to effectively assist</em>. Mutual aid arriving at 8, 12 or 15 minutes is not a resource for the first 8, 12 or 15 minutes. You cannot subtract mutual aid from your level requirement.</p>
+
+    <h3>6. Environmental and regulatory factors</h3>
+    <p>Some States impose additional requirements — larger reserves, specific foam types, additional vehicle classes, or mandatory satellite stations for certain categories. These are not in the ICAO table but they are binding if your State requires them. The level determination must include a check of State requirements.</p>
+
+    <h3>How to document it</h3>
+    <p>Every factor that drives you above the table must appear in the aerodrome manual (or equivalent State document) with:</p>
+    <ul>
+      <li>The factor identified (e.g., "A380 operations exceed category 10 representative dimensions").</li>
+      <li>The assessment method (e.g., "§2.3.7 recalculation using actual A380 dimensions").</li>
+      <li>The resulting increased quantities and discharge rates.</li>
+      <li>The resource decision (e.g., "one additional major foam vehicle stationed at the south station").</li>
+    </ul>
+    <p>An auditor who sees a service holding 25% more water than the table should find a documented assessment explaining why. If the assessment is missing, the extra water looks like waste rather than a decision.</p>
+
+    <blockquote>
+      <p><strong>SME action:</strong> review your current operation against the six factors above. For each factor that applies, write the assessment and the resulting resource decision. If you are holding more than the table minimum, confirm there is a documented assessment for every increment. If you are holding exactly the table minimum, confirm no factor applies that should drive you higher.</p>
+    </blockquote>
+  `,
+  refs: [
+    'ICAO Doc 9137 Part 1 — §2.3.7 larger-than-average recalculation (shall); §2.7.1 response time in optimum conditions; §10.5.2 task resource analysis before external assistance',
+    'ICAO Annex 14 Volume I — §9.2.5 level of protection appropriate to category; §9.2.29 Note 2 response time in optimum conditions',
+    'Your aerodrome manual — documented assessments for any level increase',
+    'Your national Civil Aviation Authority requirements — confirm any State-mandated increases above the ICAO table'
+  ],
+  smeChecked: false
+},
+'art02-m4': {
+  title: 'Reduction, conditions and documentation',
+  brief:
+    'You can operate at a reduced level, but the standard makes you pay ' +
+    'for the privilege — in paper, in conditions, and in residual capability.',
+  points: [
+    'A level reduction is a formal, documented decision — never verbal, never informal, never "just for today".',
+    'Annex 14 §9.2.5/9.2.6 permits reduction only when movements of the highest-category aircraft are below 700 in the busiest consecutive three months, and only one level down.',
+    'The reduced level must be published in the AIP (Annex 14 §2.11.1). If it is not published, it does not exist.',
+    'Reduced level means reduced capability. You must still meet the response time for the reduced level, and you must be able to scale back up when the critical aircraft returns.',
+    'Changes in level must be notified to ATS and AIS (Annex 14 §2.11.3). A reduction without notification is not a reduction.',
+    'A reduction that cannot be reversed within a defined time is not a reduction — it is a downgrade, and the aerodrome category must be re-determined.'
+  ],
+  body: `
+    <h3>Reduction is a privilege, not a right</h3>
+    <p>The standard allows a reduced level of protection, but it surrounds the permission with conditions that make it more work to maintain the reduction than to just hold the full level. That is deliberate. A reduction is a formal, documented, conditional decision with real penalties written into it. It is never informal.</p>
+
+    <h3>The threshold and the permission</h3>
+    <p>Annex 14 §9.2.5/9.2.6 states: <strong>where the number of movements of the aeroplanes in the highest category normally using the aerodrome is less than 700 in the busiest consecutive three months, the level of protection provided shall be not less than one category below the determined category</strong>. Note: either a take-off or a landing constitutes a movement.</p>
+    <p>That is the only quantitative threshold in the standard. "Shall be not less than one category below" means a category 9 aerodrome with qualifying low movements may operate at level 8, but not level 7. And the 700 movements is measured in the <em>busiest consecutive three months</em>, not annually. If your critical aircraft has a seasonal peak that exceeds 700 in any three-month window, no reduction is permitted.</p>
+
+    <h3>The conditions are not optional</h3>
+    <p>The standard surrounds the reduction with mandatory conditions:</p>
+    <ol>
+      <li><strong>Publication in the AIP.</strong> Annex 14 §2.11.1: <strong>information concerning the level of protection provided at an aerodrome for aircraft rescue and firefighting purposes shall be made available</strong>. The reduced level, the conditions, and the critical aircraft movement count must be published in the Aeronautical Information Publication. If it is not in the AIP, the reduction does not exist for the purposes of the standard.</li>
+      <li><strong>Notification to ATS and AIS.</strong> Annex 14 §2.11.3: <strong>changes in the level of protection normally available at an aerodrome for rescue and firefighting shall be notified to the appropriate air traffic services units and aeronautical information services units</strong> to enable those units to provide the necessary information to arriving and departing aircraft. When such a change has been corrected, the above units shall be advised accordingly.</li>
+      <li><strong>Response time for the reduced level.</strong> The response time does not get a reduction. You must still meet the response time for the reduced level (which has its own table row). If reducing the vehicle count makes the response time unachievable, the reduction is invalid.</li>
+      <li><strong>Reinstatement trigger.</strong> If the critical aircraft movements exceed the threshold, the full level must be reinstated immediately. The reduction is conditional on the movement count staying below 700 in the busiest three months.</li>
+    </ol>
+
+    <h3>What "reduced level" actually means</h3>
+    <p>A one-level reduction means you use the table row for the next category down. If you are category 9 (36 400 L water, 13 500 L/min discharge), a reduction puts you on the category 8 row (27 300 L, 10 800 L/min). That is roughly 25% less water and 20% less discharge rate.</p>
+    <p>And you must be able to scale back up. The standard requires that when the critical aircraft returns (or the movements exceed the threshold), the full level is reinstated. This means you must either maintain the vehicles and agent for the full level in reserve, or have a documented plan to acquire them within a defined time. A reduction that cannot be reversed is not a reduction — it is a downgrade, and the category must be re-determined.</p>
+
+    <h3>The trap: seasonal operations</h3>
+    <p>A common scenario: the critical aircraft operates seasonally (e.g., a winter charter). The aerodrome wants to reduce level in the off-season. The standard permits this only if the conditions are met for the period of reduction — including the AIP publication, ATS/AIS notification, and the three-month movement window. You cannot just "turn down" the service for three months and turn it back up. The AIP entry must be amended, the units notified, and the assessment must cover the specific period.</p>
+    <p>If the seasonal operation is regular and the busiest three-month window exceeds 700 movements, no reduction is permitted at all. The threshold is the busiest consecutive three months, not an annual average.</p>
+
+    <h3>How it goes wrong</h3>
+    <ul>
+      <li><strong>Verbal agreement with the CAA.</strong> Not in the AIP? Not a reduction.</li>
+      <li><strong>Reduction without ATS/AIS notification.</strong> §2.11.3 is not optional. The tower and the AIS must know the current level so they can inform arriving aircraft.</li>
+      <li><strong>No trigger for reinstatement.</strong> The critical aircraft returns early, and the service is still at the reduced level. That is a finding.</li>
+      <li><strong>Response time not re-checked.</strong> The reduced level has its own response time column. If you reduced the vehicle count, can you still meet the time? If not, the reduction is invalid.</li>
+      <li><strong>Annual average instead of busiest three months.</strong> The threshold is the busiest consecutive three months. An annual average below 700 does not qualify if any three-month window exceeds it.</li>
+    </ul>
+
+    <blockquote>
+      <p><strong>SME action:</strong> if your aerodrome operates a reduced level, produce the file: the movement count for the busiest three months, the AIP entry, the ATS/AIS notification record, the response time verification for the reduced level, and the reinstatement trigger. If any piece is missing, the reduction is not valid. If you are considering a reduction, start with the busiest three-month movement count of the critical aircraft — if it exceeds 700, stop, the standard does not permit it.</p>
+    </blockquote>
+  `,
+  refs: [
+    'ICAO Annex 14 Volume I — §9.2.5/9.2.6 level reduction (700 movements in busiest 3 months, one level down); §2.11.1 level of protection shall be made available; §2.11.3 changes shall be notified to ATS and AIS',
+    'ICAO Annex 14 Volume I — §9.2.5 recommendation: level should equal category; Note: either a take-off or a landing constitutes a movement',
+    'ICAO Doc 9137 Part 1 — Table 2-3 minimum useable amounts by category; Table 2-4 representative aircraft',
+    'Your Aeronautical Information Publication (AIP) — published reduced level entry',
+    'Your national Civil Aviation Authority requirements — confirm the reduction acceptance process and any additional conditions'
+  ],
+  smeChecked: false
+},
 };
 
 /**

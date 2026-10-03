@@ -17,7 +17,7 @@
    Bump CACHE_VERSION to ship new content. The old cache is dropped on activate.
    ========================================================================= */
 
-const CACHE_VERSION = 'amrisk-arff-v14';
+const CACHE_VERSION = 'amrisk-arff-v15';
 
 const SHELL = [
   './',
