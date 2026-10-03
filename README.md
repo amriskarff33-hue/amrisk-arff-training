@@ -18,21 +18,21 @@ The **course content is a scaffold.** What exists today:
 
 | Built | Not built |
 |-------|-----------|
-| All 25 course structures | Lesson body text (70 of 107 written) |
+| All 25 course structures | Lesson body text (75 of 107 written) |
 | All learning outcomes | SME verification of the technical claims |
 | All governing standards references | Questions beyond the 30 seeded |
 | Seven technical diagrams | Video of your own crews and equipment |
 | 18 verified FAA training videos | SME-reviewed local footage |
 | Full assessment engine | Content review sign-off |
 
-**Fully written courses (16 of 25):** ART-01 ARFF Foundations & the Regulatory
+**Fully written courses (17 of 25):** ART-01 ARFF Foundations & the Regulatory
 Framework, ART-02 Determining the Required ARFF Level, ART-03 Levels 1-10 Agents
 Vehicles & Discharge Rates, ART-04 Extinguishing Agents, ART-05 Foam Systems
 Chambers & Turbines, ART-08 RFF Personnel Training & Competency, ART-09 Emergency
 Command & On-Scene Command, ART-15 Aircraft Engine APU & Fuel System Fires, ART-16
 Firefighting Tactics & Agent Application, ART-18 Communications Alerting & ATC, and
 ART-06 RFF Vehicles & Emergency Appliances, ART-07 PPE SCBA & Crew Fitness, ART-10 Aircraft Rescue Access & Extrication, ART-11 Aircraft Familiarisation
-& Live Fire, ART-19 Aerodrome Emergency Planning & Full-Scale Exercise,
+& Live Fire, ART-19 Aerodrome Emergency Planning & Full-Scale Exercise, ART-13 Dangerous Goods & Hazardous Cargo,
 and ART-20 Responding to the
 Unexpected.
 

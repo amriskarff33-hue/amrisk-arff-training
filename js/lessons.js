@@ -6583,6 +6583,394 @@ const LESSON_OVERRIDES = {
   ],
   smeChecked: false
 },
+'art13-m1': {
+  title: 'The regulatory framework',
+  brief:
+    'Doc 9284 and Annex 18 govern what may be carried. RFF response is ' +
+    'governed by what is on your aircraft — and your State decides the rest.',
+  points: [
+    'The types of dangerous goods permitted for carriage and the conditions are explained in the ICAO Technical Instructions (Doc 9284), which pursuant to Annex 18 are to be applied by all Contracting States (§12.4.1).',
+    'Civilian shipments are regulated in the United States by 49 CFR Part 175 and internationally by the IATA Dangerous Goods Regulations, which are based upon Doc 9284 (§12.4.2).',
+    'Certain dangerous goods presenting extreme hazards are forbidden from transport by air under any circumstances (§12.4.3).',
+    'Other less dangerous varieties may be transported under an exemption, but only with the specific approval of all States concerned — origin, transit, destination and over-flight (§12.4.3).',
+    'Only goods of relatively limited hazard are permitted aboard passenger aircraft; the remainder are restricted to cargo aircraft only (§12.4.3).',
+    'Dangerous goods are divided into nine classes reflecting the type of hazard they present to transport workers and emergency response personnel (§12.4.4).',
+    'In some classes the goods are further divided into divisions, expressed by a decimal point after the class number (§12.4.6).',
+    'The order in which the nine classes are listed does not imply a relative degree of hazard (§12.4.5 note).'
+  ],
+  body: `
+    <h3>The chain, and where your responsibility begins</h3>
+    <p>§12.4.1 sets out the framework: the types of dangerous goods permitted for carriage, and the conditions under which they may be carried, <em>are explained in the ICAO Technical Instructions for the Safe Transport of Dangerous Goods by Air (Doc 9284) which, pursuant to the provisions of Annex 18 — the Safe Transport of Dangerous Goods by Air are to be applied by all Contracting States</em>.</p>
+    <p>So the chain is: Annex 18 obliges States to apply Doc 9284; Doc 9284 sets what may be carried and under what conditions; national law enforces it.</p>
+    <p>§12.4.2 then gives the national layer: in the United States, 49 CFR Part 175; internationally, the IATA Dangerous Goods Regulations, which <em>are based upon the Technical Instructions</em>. So your crew will encounter IATA documentation on international sectors whether or not the State is IATA itself, and an IATA Dangerous Goods Regulations-compliant shipment is one built on Doc 9284.</p>
+    <p><strong>This platform does not reproduce Doc 9284, Annex 18, IATA DGR or any national instrument, and will not invent their contents.</strong> What this course does is tell you which document settles which question, so that when you need an answer you go to the right place — and which questions the RFF service must be able to answer from the aircraft itself.</p>
+
+    <h3>Forbidden, exempt, and restricted</h3>
+    <p>§12.4.3 draws three categories, and the middle one is the operational trap:</p>
+    <ul>
+      <li><strong>Forbidden.</strong> <em>Certain types of dangerous goods presenting extreme hazards are forbidden from transport by air under any circumstances.</em></li>
+      <li><strong>Exempt.</strong> <em>Other less dangerous varieties, although normally forbidden for transport by air, may be transported under certain conditions under the terms of an "exemption", but only with the specific approval of all States concerned</em> — that is, states of origin, transit, destination and over-flight.</li>
+      <li><strong>Restricted.</strong> <em>Of those types normally permitted to be transported by air only those of a relatively limited degree of hazard are permitted aboard passenger aircraft with the remaining, more dangerous goods, restricted to transport aboard cargo aircraft only.</em></li>
+    </ul>
+    <p>The exemption category is why §12.4.13.1 tells you to make an effort to ascertain the classification of explosives aboard an aircraft: <em>since in certain cases explosives of other than division 1.4 which could pose a risk of mass detonation in a fire, may be carried under an exemption issued by the States concerned.</em></p>
+    <p>So "that is normally forbidden, so we will not have it" is not a safe assumption. And the consequence for you is that the explosive classification you are told is a Division 1.4 article needs verifying against the crew's information (§12.4.10), because mass detonation in a fire is not something you can assess from the outside.</p>
+
+    <h3>Nine classes, and the note that matters</h3>
+    <p>§12.4.5 lists them. Read them, then read the note, because the note is the one that prevents a mistake:</p>
+    <ol>
+      <li><strong>Explosives.</strong></li>
+      <li><strong>Gases</strong> — compressed, liquefied, dissolved under pressure or deeply refrigerated.</li>
+      <li><strong>Flammable liquids.</strong></li>
+      <li><strong>Flammable solids</strong> — substances liable to spontaneous combustion, or which in contact with water emit flammable gases.</li>
+      <li><strong>Oxidizing substances; organic peroxides.</strong></li>
+      <li><strong>Toxic and infectious substances.</strong></li>
+      <li><strong>Radioactive materials.</strong></li>
+      <li><strong>Corrosives.</strong></li>
+      <li><strong>Miscellaneous dangerous articles or substances</strong> which, during air transport, present a danger not covered by other classes.</li>
+    </ol>
+    <p><strong>Note.</strong> <em>The order in which these classes are listed does not imply a relative degree of hazard.</em></p>
+    <p>So Class 9 is not the least dangerous class — it is a residual class, and it contains lithium batteries, dry ice, magnets and expandable polystyrene beads. A crew who treats "class 9" as trivial has a problem, and ART-14 exists because of exactly that.</p>
+    <p>§12.4.6 explains divisions: <em>in some classes, dangerous goods are further divided into divisions. The division is expressed by placing a decimal point after the class number</em>. So 5.2 rather than Class 5 — and <em>reference is made only to the division and not to the class</em>. Which means a load document saying 5.2 is telling you an organic peroxide, not "something in class 5".</p>
+
+    <h3>What this means for your service</h3>
+    <p>The framework determines four things you must be able to do:</p>
+    <ol>
+      <li><strong>Read the notification.</strong> The load document is covered in m3. You cannot skip it because the documentation regime is not your responsibility — §12.4.10 exists precisely so that dangerous goods information reaches the aerodrome.</li>
+      <li><strong>Recognise the package.</strong> Labels and markings are covered in m2. They exist so that "emergency response personnel can immediately recognize the nature of the hazards" (§12.4.8).</li>
+      <li><strong>Associate a class with a behaviour.</strong> That is m4 — and several classes have a behaviour that reverses your default, most importantly water-reactive material.</li>
+      <li><strong>Know your State's position.</strong> Which instruments bind you, what your national requirements add to or replace in the international framework, and how you report. That is the SME action on this lesson.</li>
+    </ol>
+    <p>And one standing habit from §12.4.13.1: <em>rff personnel should be familiar with local air cargo loading procedures.</em> Where freight is loaded tells you where it will be when it burns, and no crew learns that from a DG document.</p>
+
+    <blockquote>
+      <p><strong>SME action:</strong> identify, from your own State&rsquo;s requirements, the four instruments that bind you: Annex 18 as applied domestically, Doc 9284 as adopted, the IATA DGR for international sectors if applicable, and your national civil aviation dangerous goods regulations. Record the citation and issue date for each — your service is currently unable to state, with a document reference, what governs a specific shipment on a specific sector. Then confirm your familiarity with local air cargo loading procedures, which §12.4.13.1 requires and which determines where the load will be on scene.</p>
+    </blockquote>
+  `,
+  refs: [
+    'ICAO Doc 9137 Part 1 — §12.4.1 Doc 9284 applied by all Contracting States pursuant to Annex 18; §12.4.2 49 CFR Part 175 in the United States and IATA DGR internationally, based upon Doc 9284',
+    'ICAO Doc 9137 Part 1 — §12.4.3 forbidden, exemption with approval of all States concerned, passenger and cargo aircraft restrictions; §12.4.13.1 explosives of other than division 1.4 may be carried under exemption and the effort to ascertain classification',
+    'ICAO Doc 9137 Part 1 — §12.4.4 the nine classes; §12.4.5 the class list with the note that the order does not imply a relative degree of hazard; §12.4.6 divisions expressed by a decimal point',
+    'ICAO Doc 9137 Part 1 — §12.4.13.1 familiarity with local air cargo loading procedures',
+    'ICAO Annex 18 — The Safe Transport of Dangerous Goods by Air (referenced by §12.4.1; not reproduced by this platform)',
+    'ICAO Doc 9284 — Technical Instructions for the Safe Transport of Dangerous Goods by Air (referenced by §12.4.1; not reproduced by this platform)',
+    'IATA Dangerous Goods Regulations (listed for this course; not reproduced by this platform)',
+    'Your national Civil Aviation Authority dangerous goods requirements — identify the instrument and issue that bind you'
+  ],
+  smeChecked: false
+},
+
+  'art13-m2': {
+  title: 'Classes, labels and markings',
+  brief:
+    'Nine classes, a residual ninth, and a warning about the water ' +
+    'that is your default and their problem.',
+  points: [
+    'Packages are marked with the proper shipping name and the corresponding 4-digit United Nations (UN) number (§12.4.8).',
+    'Packages bear one or more hazard labels, 100 mm × 100 mm square on point, with a distinctive symbol and colour (§12.4.8).',
+    'Markings and labels enable emergency response personnel to immediately recognise the nature of the hazards (§12.4.8).',
+    'Class 1 explosives normally permitted aboard aircraft are classified in Division 1.4; the effects are largely confined to the package unless the package has been degraded by fire (§12.4.13).',
+    'Only Division 1.4 compatibility group S explosives are normally permitted aboard passenger aircraft (§12.4.13.1).',
+    'Gas cylinders pose a significant risk if they rupture or are exposed to direct fire contact (§12.4.14).',
+    'Flammable liquids give off a flammable vapour at a temperature of not more than 60.5 °C; their vapours are usually heavier than air and most such liquids will float in water (§12.4.15).',
+    'Flammable solids may react violently with water or air, so RFF personnel must be cautious when using water as an extinguishing agent (§12.4.16).',
+    'Oxidizing substances are not necessarily combustible but may cause or contribute to the combustion of other material; organic peroxides may explode when mixed with jet fuel (§12.4.17).'
+  ],
+  body: `
+    <h3>What the package tells you</h3>
+    <p>§12.4.8 is the clause that makes the labelling regime operational: <strong>packages of dangerous goods are required to be marked with the "proper shipping name" of the dangerous goods, as listed in the Technical Instructions, and with the corresponding 4-digit "United Nations (UN) number", used to identify the substance. The package is also required to bear one or more hazard labels. These labels are in the form of a 100 mm × 100 mm square on point, with a distinctive symbol and colour.</strong></p>
+    <p>And the stated purpose: <em>these package markings and labels enable emergency response personnel to immediately recognize the nature of the hazards presented by any dangerous goods that may be encountered.</em></p>
+    <p>So three things to read on a package in the first seconds: the <strong>UN number</strong> (which identifies the substance precisely), the <strong>proper shipping name</strong> (which tells you what it is in words), and the <strong>hazard label</strong> (which tells you the class at a glance). The 100 mm diamond is sized to be read from a distance and at an angle, which is exactly when you will be reading it.</p>
+
+    <h3>Class by class, as it behaves on scene</h3>
+    <p>Now the part that matters operationally. For each class, §12.4 tells you what the responders need to know, and several of these reverse your default approach.</p>
+
+    <h3>Class 1 — explosives, and what Division 1.4 actually means</h3>
+    <p>§12.4.13 gives a definition that is worth knowing precisely, because it tells you how much to worry: <strong>the types of explosives normally permitted aboard passenger or cargo aircraft would be classified in Division 1.4. By definition, this division is comprised of explosive articles or substances which present no significant hazard in the event of accidental ignition or initiation during transport. The effects are largely confined to the package (unless the package has been degraded by fire) and no projection of fragments of appreciable size or range is to be expected. An external fire should not result in an instantaneous explosion of virtually the entire contents of the package.</strong></p>
+    <p>Read the parenthetical carefully — <em>unless the package has been degraded by fire</em>. So an intact Division 1.4 package in an aircraft fire stays where it is, and a burnt-through one does not. Package integrity is the variable.</p>
+    <p>§12.4.13.1 adds that only Division 1.4 <strong>compatibility group S</strong> is normally permitted on passenger aircraft — explosives for which, even when the package is degraded by fire, blast and projection effects are limited to the extent that they <em>do not significantly hinder firefighting or other emergency response efforts in the immediate vicinity of the package</em>.</p>
+
+    <h3>Class 2 — gases, and heat that finds the weakest point</h3>
+    <p>§12.4.14: <strong>cylinders of compressed or liquefied gases may present a risk of explosion if involved in an aircraft fire. These cylinders are normally constructed to standards similar to those to which oxygen or air cylinders installed in aircraft are constructed and pose a significant risk if they rupture or are exposed to direct fire contact.</strong></p>
+    <p>So the hazard is heat acting on a pressure vessel. That connects to ART-11 m4's honest boundary — this platform does not supply pressure vessel behaviour, and your mitigation is distance, cooling of adjacent structure, and not putting people where the cylinder is.</p>
+
+    <h3>Class 3 — flammable liquids, and why they are bigger than gases</h3>
+    <p>§12.4.15 gives the definition — liquids that <em>give off a flammable vapour at a temperature of not more than 60.5 °C</em> — and then the operational point: <strong>typically, flammable liquids will cause bigger fires than flammable gases as they are more concentrated.</strong></p>
+    <p>And two properties that drive your positioning: <em>the vapours of many flammable liquids are also usually heavier than air</em>, and <em>most of such liquids will float in water</em>. Heavier-than-air vapour collects in low ground and in the fuselage. Floating-on-water means a spill spreads on the foam blanket and on any water you apply, so a fuel spill on your foam is not contained by it.</p>
+    <p>Then the reassurance that makes this tractable: <em>methods used to extinguish fires involving jet fuel can be similarly used for flammable liquid</em>. So Class 3 is the class your training has actually covered.</p>
+
+    <h3>Class 4 — flammable solids, where water is the problem</h3>
+    <p>§12.4.16: <strong>flammable solids refer to all solids and substances which are liable for spontaneous combustion, or substances which emit flammable vapours on contact with air, moisture or water, which may lead to fire or explosion. As most of these materials may react violently with water or air, rff personnel must be cautious when using water as an extinguishing agent.</strong></p>
+    <p>This is the one that reverses your reflex. Water is your default agent on an aircraft fire, and on Class 4 material it may make the fire worse. Read the label before you open the line.</p>
+
+    <h3>Class 5 — oxidizers and peroxides</h3>
+    <p>§12.4.17 separates two things that behave differently: <strong>oxidizing substances are not necessarily combustible, but may cause or contribute to the combustion of other material.</strong> So a Class 5 package is not necessarily burning itself — it is making everything near it burn better.</p>
+    <p>And organic peroxides: <em>thermally unstable and may undergo exothermic (and explosive), self-accelerating decomposition. They are sensitive to heat, shock, impact or friction, and react dangerously with other substances, i.e. may cause an explosion when mixed with jet fuel.</em></p>
+
+    <h3>Class 9 is not the trivial class</h3>
+    <p>§12.4.21 gives the examples: <em>dry ice, molten sulphur, polychlorinated biphenyls, batteries containing lithium, magnets</em>. And §12.4.5 calls Class 9 <em>miscellaneous dangerous articles or substances which, during air transport, present a danger not covered by other classes</em>.</p>
+    <p>It is a residual class, not a severity ranking — which is exactly what the note to §12.4.5 warns against assuming. Lithium batteries sit here, and ART-14 treats them separately because they warrant it.</p>
+
+    <h3>The reading habit</h3>
+    <p>On scene, in this order: read the hazard label for the class, read the UN number for the specific substance, read the proper shipping name in words, and check whether the package is intact or fire-damaged. Then ask the one question that decides your approach for Classes 4 and 5: <em>does water make this worse?</em></p>
+    <p>And if you can get it, the crew's information (§12.4.10) — because the notification tells you the stowage location, which tells you how many packages you are dealing with and how they are packed together.</p>
+
+    <blockquote>
+      <p><strong>SME action:</strong> build a reference card for your service: the nine classes with one line each on behaviour rather than definition — particularly the four that change your approach, being Division 1.4 explosives (package integrity is the variable), Class 2 gases (heat on a pressure vessel), Class 4 flammable solids (water may react violently) and Class 5 oxidizers (may cause combustion of other material, and organic peroxides may detonate when mixed with jet fuel). Add a section for the UN numbers and proper shipping names your aerodrome actually handles — take them from your recent manifests, not from a textbook list. Then confirm your crew can read a 100 mm diamond label from a distance and at an angle, because that is how they will actually see it.</p>
+    </blockquote>
+  `,
+  refs: [
+    'ICAO Doc 9137 Part 1 — §12.4.8 package markings and labels: proper shipping name, 4-digit UN number, 100 mm square hazard labels with distinctive symbol and colour',
+    'ICAO Doc 9137 Part 1 — §12.4.13 Division 1.4 explosives, effects confined to the package unless degraded by fire; §12.4.13.1 Division 1.4 compatibility group S for passenger aircraft',
+    'ICAO Doc 9137 Part 1 — §12.4.14 gas cylinders risk of explosion if ruptured or exposed to direct fire contact; §12.4.15 flammable liquids, 60.5 °C, heavier-than-air vapours, float on water, jet fuel methods applicable',
+    'ICAO Doc 9137 Part 1 — §12.4.16 flammable solids may react violently with water or air; §12.4.17 oxidizing substances and organic peroxides',
+    'ICAO Doc 9137 Part 1 — §12.4.21 miscellaneous dangerous goods examples including batteries containing lithium; §12.4.5 note on class order not implying relative hazard',
+    'ICAO Doc 9137 Part 1 — §12.4.10 information by pilot-in-command including stowage location',
+    'Course ART-11 m4 — composite, lithium and metal hazards; ART-03 m4 — consumption under real conditions'
+  ],
+  smeChecked: false
+},
+
+  'art13-m3': {
+  title: 'Reading the load document',
+  brief:
+    'The notification tells you what is aboard and where it is stowed. ' +
+    'It is the only document that tells you both.',
+  points: [
+    'The shipper must provide the operator with a transport document containing the proper shipping name, hazard class or division number, UN number and subsidiary risk of the goods (§12.4.9).',
+    'From that document the operator prepares a notification to the pilot-in-command, providing the hazards aboard AND the location in the aircraft where the dangerous goods have been loaded (§12.4.9).',
+    'The notification must be provided to the aircraft commander as early as practicable before departure and must be readily available in flight (§12.4.9).',
+    'On an in-flight emergency the pilot-in-command should inform the appropriate air traffic services unit, for the information of aerodrome authorities and RFF services, of any dangerous goods on board (§12.4.10).',
+    'If the situation permits the information should include proper shipping names, class and subsidiary risks, the compatibility group for Class 1, and the quantity of each type, plus the stowage location (§12.4.10).',
+    'If a lengthy message is impossible, the dangerous goods on board may be identified by transmitting the UN numbers (§12.4.10).',
+    'Hazard labels and package markings can help identify the types of dangerous goods involved and the nature and seriousness of the hazard (§12.4.22.1).',
+    'Unit load devices containing dangerous goods carry a tag indicating which hazard classes are inside, usually with a red striped border (§12.4.12).'
+  ],
+  body: `
+    <h3>Two documents, and the one that reaches you</h3>
+    <p>§12.4.9 sets out the chain, and the important part is the second half. When dangerous goods are offered for transport, <em>the shipper must provide to the operator a transport document</em> containing the <strong>proper shipping name, hazard class or division number, UN number and subsidiary risk</strong> of the goods.</p>
+    <p>Then: <em>from this document, the operator prepares a notification to the pilot-in-command that provides the information relative to the hazards of the dangerous goods aboard the aircraft to the pilot, as well as the location in the aircraft where the dangerous goods have been loaded.</em></p>
+    <p>That second document is yours. Four content items from the transport document — proper shipping name, class or division, UN number, subsidiary risk — plus the one that matters operationally, <strong>the stowage location</strong>.</p>
+    <p>And the availability requirement: <em>the notification to the pilot-in-command must be provided to the aircraft commander as early as practicable before departure and must be readily available in flight.</em> Readily available in flight is the clause that matters at 03:00 — if it is in a locked binder in the terminal, it has not been provided.</p>
+
+    <h3>Why the stowage location is the most useful field</h3>
+    <p>Four fields tell you what the substance is. One tells you what you are dealing with in terms of quantity, separation and difficulty of access.</p>
+    <p>An aircraft hold containing three pallet positions of one substance is a different incident from a main-deck mixed load of nine. The first is concentrated, packaged, and — for many freighters — equipped with its own fire suppression. The second is dispersed through a deck you are trying to make survivable. §12.4.12 describes the packaging:</p>
+    <p><em>On cargo-carrying aircraft, hazardous freight is usually placed in unit load devices, which are aircraft containers, aircraft pallets, and which may be secured with a net.</em> And: <em>as a general rule, most dangerous goods on the main deck of cargo aircraft are loaded in the most forward location.</em></p>
+    <p>So the forward part of the main deck is where the concentration usually is, and that is where your crew is least likely to want to be working — which is a positioning fact before it is a DG fact.</p>
+
+    <h3>The tag on the container</h3>
+    <p>§12.4.12 gives you a package-level shortcut. <em>Unit load devices containing dangerous goods will have a small tag wired to the outside or placed in a plastic window, indicating which of the nine hazard classes are shipped inside. The tag will usually have a "red striped" border.</em></p>
+    <p>That is the fastest recognition available on a freighter: you do not need to get inside the container to know what is in it. Look for the tag. And note the same clause's other feature: <em>special discharge nozzles located inside the container are coupled to a portable extinguisher by a connection on the exterior of the unit. Flight personnel can manually discharge extinguishing agent into the container without having to open it.</em></p>
+    <p>That is a capability your crew should know about before they are standing at a burning ULD wondering whether to open it. Confirm what your fleet carries, where the connection points are, and who is trained to use them.</p>
+
+    <h3>Getting the information to you on scene</h3>
+    <p>§12.4.10 is the in-flight pathway, and it is a sequence worth understanding:</p>
+    <ol>
+      <li>An in-flight emergency occurs.</li>
+      <li>The pilot-in-command informs the appropriate air traffic services unit — <em>for the information of aerodrome authorities and RFF services</em> — of any dangerous goods on board.</li>
+      <li>If the situation permits, the information includes proper shipping names, class and subsidiary risks, <strong>the compatibility group for Class 1</strong>, and the quantity of each type, <em>as well as the location where they are stowed</em>.</li>
+      <li><em>If a lengthy message is impossible, the dangerous goods on board may be identified by transmitting the UN numbers.</em></li>
+    </ol>
+    <p>Two practical points. The communication is to ATC, and it is <em>for the information of</em> RFF services — so it is forwarded, and your service's radio discipline (ART-18 m2) determines whether that information actually reaches you intact. And step 4 is the one that makes it workable under pressure: the UN numbers alone are enough to identify the substances, because they are the identifiers on the packages anyway.</p>
+    <p>So the practical arrangement your service needs: a means of getting that notification to whoever is on scene, fast, and a means of recording it. ART-18 m3 covers notification and alerting; the gap this lesson fills is what you do with the document when you have it.</p>
+
+    <h3>What to do with the document, in order</h3>
+    <ol>
+      <li><strong>Class and division</strong> — decides the response posture (m2).</li>
+      <li><strong>UN number and proper shipping name</strong> — identifies the substance precisely.</li>
+      <li><strong>Subsidiary risk</strong> — the secondary hazard, which can be the one that gets you. A flammable liquid with a toxic subsidiary risk is a health problem as well as a fire problem (§12.4.18).</li>
+      <li><strong>Quantity</strong> — determines whether this is a localised incident or a scene-wide one.</li>
+      <li><strong>Stowage location</strong> — where you will be working, and what is around it.</li>
+      <li><strong>Compatibility group</strong> for Class 1 — required in the pilot's information and meaningful when you have more than one explosive package.</li>
+    </ol>
+    <p>Take a copy. After the incident the notification, the manifest and what you actually found are three different datasets, and the differences are investigation findings.</p>
+
+    <h3>When the document is not available</h3>
+    <p>It sometimes is not — a general aviation aircraft, a diverted flight, a notification that did not get forwarded. §12.4.22.1 provides the fallback: <em>hazard labels and package markings (see 12.4.8) can be of assistance in identifying the types of dangerous goods involved as well as the nature and seriousness of the hazard they present.</em></p>
+    <p>So the packages themselves remain a source, which is exactly why the 100 mm diamond is sized for distance. What you lose is quantity and stowage location — and those are the two fields that most change the response.</p>
+
+    <blockquote>
+      <p><strong>SME action:</strong> trace the actual route a dangerous goods notification takes from the operator to your crew on scene, and time it. Confirm three things. Who is notified at your aerodrome when a notification is expected, and on what means — §12.4.10 reaches ATC and is forwarded, so confirm what your service receives and how. Where is the notification held, and is it <em>readily available in flight</em> as §12.4.9 requires, or is it in a terminal binder? And does your freighter operation have the ULD discharge connection points identified, with crew trained to use them without opening the container? That last one is a capability you own and nobody else will verify for you.</p>
+    </blockquote>
+  `,
+  refs: [
+    'ICAO Doc 9137 Part 1 — §12.4.9 transport document contents, operator notification to the pilot-in-command including stowage location, and readily available in flight',
+    'ICAO Doc 9137 Part 1 — §12.4.10 information by pilot-in-command on an in-flight emergency, via air traffic services for the information of aerodrome authorities and RFF services; UN numbers where a lengthy message is impossible',
+    'ICAO Doc 9137 Part 1 — §12.4.12 unit load devices, the hazard class tag with red striped border, exterior-connected special discharge nozzles, and most dangerous goods on the main deck loaded in the most forward location',
+    'ICAO Doc 9137 Part 1 — §12.4.22.1 damaged and leaking packages, hazard labels and markings as an identification fallback',
+    'ICAO Doc 9137 Part 1 — §12.4.8 package markings and labels',
+    'Course ART-18 m2 — radio discipline; m3 — notification and alerting',
+    'Course ART-13 m2 — classes, labels and markings'
+  ],
+  smeChecked: false
+},
+
+  'art13-m4': {
+  title: 'Responding to a DG incident',
+  brief:
+    'Four classes reverse your default. Two classes are more health ' +
+    'problem than fire problem. Know which is which before you open a line.',
+  points: [
+    'RFF personnel should use proper procedures and operations, including scene size-up, to ensure they are protected from the effects of dangerous goods; SCBA as a minimum should always be worn (§12.4.11).',
+    'As far as possible RFF personnel should stay positioned upwind and out of smoke, fumes and dust (§12.4.11).',
+    'Class 4 flammable solids may react violently with water or air — caution when using water as an extinguishing agent (§12.4.16).',
+    'Class 6 toxic substances: fight the fire from a maximum distance, as it is more of a health hazard than a fire hazard (§12.4.18).',
+    'Class 7 radioactive: fires handled the same as toxic fires; the fire and its air currents and the use of foam, water or chemicals can spread radioactive materials around the accident site (§12.4.19).',
+    'Class 8 corrosives: PPE should be worn by all RFF personnel when these substances are present; some produce toxic gases when decomposed by very high temperatures (§12.4.20).',
+    'Damaged and leaking packages pose a significant risk; once initial rescue is completed special precautions should be taken and pre-identified trained personnel assembled (§12.4.22.1).',
+    'After rescue, contact with food or drinking water means do not use it; public health and veterinary authorities should be informed; exposed persons are removed and transported for decontamination (§12.4.22.2).'
+  ],
+  body: `
+    <h3>The first two minutes</h3>
+    <p>§12.4.11 gives the whole approach, and it is short: <strong>RFF personnel should use proper procedures and operations in response (i.e. scene size-up/assess the situation), to ensure they are protected from the effects of dangerous goods. As with any fire, however, personal protective clothing, including breathing apparatus (as a minimum), should always be worn. As far as possible, RFF personnel should stay positioned upwind and out of smoke, fumes and dust.</strong></p>
+    <p>Three requirements: size up, protect, stay upwind and out of the dust. The dust point is specific to DG — cargo packaging breaks up, and the particulate is part of the hazard. Which connects to ART-07 m1: if composite or other particulate is in play, §6.2.4 applies and the respiratory requirement may be a filtered facepiece rather than air.</p>
+
+    <h3>The four classes that reverse your default</h3>
+    <p>Water and foam are correct for most of an aircraft fire. Four classes make them wrong, incomplete, or dangerous:</p>
+    <ul>
+      <li><strong>Class 4 — flammable solids.</strong> <em>As most of these materials may react violently with water or air, RFF personnel must be cautious when using water as an extinguishing agent.</em> Your reflex agent is the hazard.</li>
+      <li><strong>Class 5 — oxidizers and organic peroxides.</strong> Oxidizers <em>are not necessarily combustible, but may cause or contribute to the combustion of other material</em>; organic peroxides <em>may cause an explosion when mixed with jet fuel</em>. So on an aircraft, jet fuel is already present.</li>
+      <li><strong>Class 1 Division 1.4 — explosives.</strong> <em>Unless the package has been degraded by fire</em>, the effects are confined to the package. A burnt-through package is a different object.</li>
+      <li><strong>Class 2 — gas cylinders.</strong> Heat on a pressure vessel. Not an agent problem but a positioning one.</li>
+    </ul>
+    <p>The question that settles all four: <em>does water make this worse?</em> Read the label, or get the notification, before applying agent to a package you have not identified.</p>
+
+    <h3>The two classes that are a health problem first</h3>
+    <p>These two are the ones that change what you are doing rather than how.</p>
+    <p><strong>Class 6 — toxic and infectious substances.</strong> §12.4.18 gives the definition and then the operational instruction: <em>if these substances are present at the scene of fire, it is advisable to fight the fire from a maximum distance as it is more of a health hazard than a fire hazard.</em></p>
+    <p>Maximum distance. That is a different tactical posture from closing with a monitor to apply foam on the critical area. The tension between the two is real and it is a command decision, not a crew one — and it has to be made early, because it determines where the vehicles stop.</p>
+    <p>Then the post-incident requirements in §12.4.22.2, which are specific and easy to miss: <em>food or drinking water that may have been in contact with the material should not be used. The public health and veterinary authorities should be informed immediately. Any person exposed to these dangerous goods should be removed from the scene of the occurrence and transported for decontamination as soon as possible to the appropriate medical facilities.</em></p>
+
+    <p><strong>Class 7 — radioactive materials.</strong> §12.4.19: <em>fires involving radioactive materials should be handled in the same manner as fires involving toxic materials. Standard protective clothing and respiratory protection provides some protection against radioactive contamination but, not however, from some direct radiation effects. Fires and the air currents they create, and the use of foam, water or chemicals to suppress fire, can spread radioactive materials around the accident site.</em></p>
+    <p>Read the third sentence carefully. It indicts your suppression activity: <strong>the fire, the air currents, and your own foam, water or chemicals spread contamination around the scene.</strong> So your firefighting makes the contamination problem worse, which changes the objectives — containment and protection rather than a clean knockdown. And <em>RFF personnel working at an aircraft incident scene or impact area should be utilizing the appropriate personal protective equipment and receive the appropriate level of decontamination immediately after their duties are completed.</em></p>
+
+    <h3>§12.4.19.1 — the radiological procedure, in eight steps</h3>
+    <p>The clause gives a general procedure, and it is worth having as a checklist because it is exactly the kind of thing a crew will not invent under pressure:</p>
+    <ol>
+      <li>Notify the nearest authority concerned with atomic energy, or the nearest military base or civil defence organisation, immediately — <em>they may be able to respond with a radiological team</em>.</li>
+      <li>Wrap injured persons in blankets or other covering to reduce the possible spread of contamination, and transport them immediately to medical facilities, instructing the driver or attendant that the patients may be radioactively contaminated.</li>
+      <li>Sequester other persons who may have had contact until examined by radiological teams.</li>
+      <li><strong>Identify but do not handle</strong> suspected material until monitored and released by radiological emergency teams. Clothing and tools used at the scene should be retained in isolation.</li>
+      <li>Do not use food or drinking water that may have been in contact with material from the accident.</li>
+      <li>Only properly attired RFF personnel should remain on the scene; all others kept as far away as possible.</li>
+      <li>Notify all hospitals immediately so radioactive decontamination areas can be established.</li>
+      <li>Cordon off packages of radioactive material; cover loose materials with plastic sheets or tarpaulins to minimise dispersion by wind or rain.</li>
+    </ol>
+
+    <h3>Class 8 — corrosives</h3>
+    <p>§12.4.20: <em>substances in this class may, in their original state, damage living tissues severely. These corrosives can also release vapour that may irritate the nose and eyes. A few of these substances may produce toxic gases when decomposed by very high temperatures.</em> And: <strong>PPE should be worn by all RFF personnel when these substances are present at the scene of a fire.</strong></p>
+    <p>Note the third point — decomposition at very high temperatures produces toxic gases, so a corrosive package in a fire may add a respiratory hazard to the one you already have.</p>
+
+    <h3>After the rescue</h3>
+    <p>§12.4.22.1 sets the transition, and it is a distinct phase of the incident: <em>dangerous goods packages not consumed in or affected by an aircraft fire may be found damaged and leaking at an accident site. Such damaged and leaking packages may pose a significant risk of injury or adverse health effects to aircraft occupants and RFF personnel.</em></p>
+    <p>Then: <strong>once initial rescue operations are completed, special precautions should be taken with such packages and, if necessary, pre-identified trained personnel assembled to deal with the problems involved.</strong></p>
+    <p>So there is a second half to a DG incident that begins when the rescue ends, it is resourced (pre-identified trained personnel), and it is not the same task as the rescue. Identify who those trained personnel are, now, because "if necessary" is not a time to be finding out.</p>
+
+    <h3>The response, summarised</h3>
+    <ol>
+      <li><strong>Size up before committing.</strong> Notification, labels, ULD tags — or nothing.</li>
+      <li><strong>Protect first.</strong> PPE and breathing apparatus as a minimum; upwind and out of smoke, fumes and dust.</li>
+      <li><strong>Identify the class</strong> and decide whether your agent is safe. Classes 4 and 5 are where it is not.</li>
+      <li><strong>Classes 6 and 7: distance first.</strong> Health hazard, not fire hazard. And know that your suppression spreads contamination.</li>
+      <li><strong>Protect the aircraft</strong> on the usual terms — the critical area work is not suspended because the load is dangerous.</li>
+      <li><strong>After the rescue, change phase.</strong> Damaged and leaking packages, pre-identified trained personnel, decontamination.</li>
+      <li><strong>Notify.</strong> Public health and veterinary authorities for Class 6; all hospitals and the atomic energy authority for Class 7.</li>
+    </ol>
+    <p>Step 5 is worth stating because it is the step that gets dropped. A DG incident is still an aircraft fire, and the fuselage, the egress routes and the occupants still govern. The dangerous goods change how you fight it, not whether.</p>
+
+    <blockquote>
+      <p><strong>SME action:</strong> four checks. First, confirm your crews can state, from a label alone, whether water is safe — and that they know Classes 4 and 5 are the answer when it is not. Second, identify who the <em>pre-identified trained personnel</em> are for the post-rescue phase that §12.4.22.1 requires, and confirm they are identified now rather than during an incident. Third, confirm your notification route for Class 7 to the nearest atomic energy authority, military base or civil defence organisation, and your hospital notification list — §12.4.19.1 requires both immediately and neither is a document you write during the incident. Fourth, confirm your decontamination arrangements, because §12.4.19 and §12.4.22.2 both require decontamination immediately after duties are completed and both apply to your own personnel.</p>
+    </blockquote>
+  `,
+  refs: [
+    'ICAO Doc 9137 Part 1 — §12.4.11 general response, size-up, breathing apparatus as a minimum, stay upwind and out of smoke, fumes and dust',
+    'ICAO Doc 9137 Part 1 — §12.4.16 flammable solids and caution with water; §12.4.17 oxidizing substances and organic peroxides',
+    'ICAO Doc 9137 Part 1 — §12.4.18 toxic and infectious substances, fight the fire from a maximum distance; §12.4.22.2 food and drinking water not to be used, public health and veterinary authorities informed, exposed persons removed for decontamination',
+    'ICAO Doc 9137 Part 1 — §12.4.19 radioactive materials handled as toxic fires, suppression spreading contamination, decontamination immediately after duties; §12.4.19.1 the eight-step general procedure',
+    'ICAO Doc 9137 Part 1 — §12.4.20 corrosives, toxic gases on decomposition, PPE for all personnel',
+    'ICAO Doc 9137 Part 1 — §12.4.22.1 damaged and leaking packages after the rescue, special precautions and pre-identified trained personnel',
+    'ICAO Doc 9481 — Emergency Response Guidance for Aircraft Incidents Involving Dangerous Goods (referenced by §12.4.22.3; not reproduced by this platform)',
+    'Course ART-07 m1 — what SCBA protects you from; ART-16 m1 — attack selection',
+    'Course ART-24 — emergency medical response and casualty care'
+  ],
+  smeChecked: false
+},
+'art13-m5': {
+  title: 'Aircraft carrying dangerous goods',
+  brief:
+    'Passenger or cargo. That single fact changes what may be aboard, ' +
+    'and therefore what can be in your hold on the way to you.',
+  points: [
+    'Only dangerous goods of a relatively limited degree of hazard are permitted aboard passenger aircraft; the remainder are restricted to cargo aircraft only (§12.4.3).',
+    'Only Division 1.4 compatibility group S explosives are normally permitted aboard passenger aircraft (§12.4.13.1).',
+    'Materials that can only be shipped on cargo aircraft have "cargo aircraft only" labels on the shipment (§12.4.13.1).',
+    'Certain dangerous goods presenting extreme hazards are forbidden from transport by air under any circumstances (§12.4.3).',
+    'Certain DG must be accessible to the crew in flight in case of a leak or fire (§12.4.12).',
+    'Unit load devices may have special colours and an integral fire suppression capability, with special discharge nozzles coupled to a portable extinguisher on the exterior (§12.4.12).',
+    'As a general rule, most dangerous goods on the main deck of cargo aircraft are loaded in the most forward location (§12.4.12).',
+    'RFF personnel should be familiar with local air cargo loading procedures (§12.4.13.1).',
+    'Dangerous goods are carried on both passenger and cargo flights (§12.4.1).'
+  ],
+  body: `
+    <h3>The question to ask first</h3>
+    <p>Before anything else about a load: <strong>passenger or cargo?</strong> The answer changes what may be aboard, so it changes what you are dealing with before you know what it is.</p>
+    <p>§12.4.3 draws the line: <em>of those types of dangerous goods normally permitted to be transported by air only those of a relatively limited degree of hazard are permitted aboard passenger aircraft with the remaining, more dangerous goods, restricted to transport aboard cargo aircraft only.</em></p>
+    <p>And §12.4.1 opens with the fact that underpins it: <strong>dangerous goods are frequently carried in commercial transport aircraft, on both passenger and cargo flights.</strong> So a passenger aircraft incident is a dangerous goods incident in a different and narrower sense — and "there are no dangerous goods on this one" is only true if you have established which type of aircraft it was.</p>
+
+    <h3>The three exclusions, stated precisely</h3>
+    <ol>
+      <li><strong>Forbidden outright.</strong> <em>Certain types of dangerous goods presenting extreme hazards are forbidden from transport by air under any circumstances</em> (§12.4.3).</li>
+      <li><strong>Exempt by agreement.</strong> Goods normally forbidden may travel <em>under certain conditions under the terms of an "exemption", but only with the specific approval of all States concerned (i.e. states of origin, transit, destination and over-flight)</em> (§12.4.3).</li>
+      <li><strong>Cargo only.</strong> Everything else outside the passenger-permitted list.</li>
+    </ol>
+    <p>The middle one is the operational trap, and §12.4.13.1 spells it out for explosives: <em>since in certain cases explosives of other than division 1.4 which could pose a risk of mass detonation in a fire, may be carried under an exemption issued by the States concerned.</em></p>
+    <p>So the assumption "explosives on an aircraft are Division 1.4 and therefore confined to their package" has an exception, and the standard's response is an instruction rather than a rule: <strong>where circumstances permit, an effort should be made to ascertain the classification of any explosives aboard an aircraft, e.g. through information provided by the crew</strong> (§12.4.13.1).</p>
+
+    <h3>Reading "cargo aircraft only"</h3>
+    <p>§12.4.13.1 explains the label: <em>the Technical Instructions will identify which dangerous goods can only be shipped on cargo aircraft and which can be shipped on both cargo and passenger aircraft. Materials that can only be shipped on cargo aircraft will have "cargo aircraft only" labels on the shipment.</em></p>
+    <p>So the package tells you the operational fact, and it is the same fact as the aircraft type. If you are told a "cargo aircraft only" package is aboard a passenger aircraft, something in the chain has failed and that is worth knowing.</p>
+
+    <h3>The freighter's fire suppression, and where the cargo sits</h3>
+    <p>§12.4.12 is the paragraph that matters most on a freighter, and it has three operational facts in it.</p>
+    <p><strong>Unit load devices.</strong> <em>On cargo-carrying aircraft, hazardous freight is usually placed in unit load devices, which are aircraft containers, aircraft pallets, and which may be secured with a net.</em> So the package boundary is the ULD boundary — what you are approaching is a container, not a loose package.</p>
+    <p><strong>Specialised ULDs with integral suppression.</strong> <em>Some air carriers use specially modified unit load devices for transporting certain dangerous goods on the main deck of freighter aircraft. These containers may have special colors and include an integral fire suppression capability.</em></p>
+    <p><strong>Discharge from outside.</strong> <em>Special discharge nozzles located inside the container are coupled to a portable extinguisher by a connection on the exterior of the unit. Flight personnel can manually discharge extinguishing agent into the container without having to open it.</em></p>
+    <p>That last one is a genuine tactical option and it is the reason the colour coding matters. Confirm for your operation: which ULD types are in use, what the special colours are, where the exterior connection points are, what agent the portable extinguisher is, and who is trained to use it. Then put it in your pre-planned tactics for a freighter fire, because the answer to "do we open it" should be written down rather than argued.</p>
+
+    <h3>Where the load will be</h3>
+    <p>One sentence decides a lot: <em>as a general rule, most dangerous goods on the main deck of cargo aircraft are loaded in the most forward location</em> (§12.4.12).</p>
+    <p>So on a freighter, assume the concentration of DG is forward on the main deck. That has three consequences: it is near where the flight deck and the forward holds are, so an incident there affects crew access; it is where the main deck loading is densest, so your working area is constrained; and the forward position is the one you may need to reach to get occupants out.</p>
+    <p>Also from §12.4.12: <em>certain dangerous goods must be accessible to the crew in flight in case of a leak or fire.</em> So the load is deliberately not uniformly distributed — check which items are required to be accessible, because that tells you where the crew will already have been looking.</p>
+
+    <h3>The one instruction aimed at you</h3>
+    <p>§12.4.13.1 closes with a line that belongs in your SOP: <strong>RFF personnel should be familiar with local air cargo loading procedures.</strong></p>
+    <p>Not the DG regulations — the <em>loading procedures</em>. Where freight goes, whether ULDs are netted, how a mixed main-deck load is configured, whether dangerous goods are segregated from cargo that will burn with them, and what your freighters carry as standard. None of that is in a dangerous goods regulation, and all of it determines what you find.</p>
+
+    <h3>The profile that goes in the pre-planned tactics</h3>
+    <ol>
+      <li><strong>Aircraft type and category</strong> — passenger or freighter.</li>
+      <li><strong>What that type may legally carry</strong>, and what it typically does carry.</li>
+      <li><strong>ULD types in use</strong>, including any with integral suppression, their colour coding and their exterior discharge points.</li>
+      <li><strong>Where the load will be</strong> — most DG forward on the main deck; items required to be crew-accessible.</li>
+      <li><strong>The DG actually handled</strong> — take the UN numbers and proper shipping names from your own recent manifests, not from a textbook.</li>
+      <li><strong>Who the trained personnel are</strong> for the post-rescue phase, per §12.4.22.1.</li>
+    </ol>
+
+    <blockquote>
+      <p><strong>SME action:</strong> produce a one-page dangerous goods profile for each aircraft type that operates, or transits, at your aerodrome — passenger or freighter, what that type may carry, and what it actually carries according to your recent manifests. For every freighter type, record the ULD types in use, any with integral suppression, their colour coding, and the location of the exterior discharge connection with the agent used. Confirm that item is written into your pre-planned tactics so the question of opening a burning ULD is answered in advance. And take §12.4.13.1 literally: walk the cargo handling operation, learn the local loading procedures, and record what you learned.</p>
+    </blockquote>
+  `,
+  refs: [
+    'ICAO Doc 9137 Part 1 — §12.4.1 dangerous goods frequently carried on both passenger and cargo flights',
+    'ICAO Doc 9137 Part 1 — §12.4.3 forbidden, exemption with approval of all States concerned, passenger and cargo aircraft restrictions',
+    'ICAO Doc 9137 Part 1 — §12.4.12 unit load devices, specially modified ULDs with integral fire suppression, exterior-connected special discharge nozzles, crew accessibility of certain DG, and most DG on the main deck loaded in the most forward location',
+    'ICAO Doc 9137 Part 1 — §12.4.13.1 Division 1.4 compatibility group S on passenger aircraft, effort to ascertain explosives classification, cargo aircraft only labels, familiarity with local air cargo loading procedures',
+    'ICAO Doc 9137 Part 1 — §12.4.22.1 pre-identified trained personnel for the post-rescue phase',
+    'Course ART-11 m1 — your fleet mix',
+    'Course ART-13 m2 — classes and labels; m3 — reading the load document; m4 — responding to a DG incident'
+  ],
+  smeChecked: false
+},
 };
 
 /**
