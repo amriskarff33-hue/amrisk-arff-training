@@ -18,7 +18,7 @@ The **course content is a scaffold.** What exists today:
 
 | Built | Not built |
 |-------|-----------|
-| All 25 course structures | Lesson body text (5 of 107 written) |
+| All 25 course structures | Lesson body text (11 of 107 written) |
 | All learning outcomes | SME verification of the technical claims |
 | All governing standards references | Questions beyond the 30 seeded |
 | Six technical diagrams | Video of your own crews and equipment |
