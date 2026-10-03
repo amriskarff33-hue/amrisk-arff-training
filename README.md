@@ -216,6 +216,21 @@ returning learners keep running the old build from the service worker cache.
 `activate` handler deletes every other one. The `?v=` query is only there to
 bypass the HTTP cache on GitHub Pages.
 
+There is a one-line script so this is not a thing to remember:
+
+```sh
+./deploy/pages.sh "describe the change"
+```
+
+It checks syntax, bumps both cache-busters, commits, pushes, waits for Pages,
+and confirms the CDN is serving the new build.
+
+**One expected delay.** A learner whose service worker is already active sees
+the *previous* build on their next load and the new one on the load after. That
+is stale-while-revalidate working as intended — the worker returns the cached
+copy immediately and refreshes it in the background. For this audience it is a
+feature, not a bug: a lesson should never change halfway through a sitting.
+
 ### Checking that offline actually works
 
 A service worker's console is invisible from the page, so a precache that fails
