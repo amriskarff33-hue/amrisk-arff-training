@@ -4237,6 +4237,370 @@ const LESSON_OVERRIDES = {
   ],
   smeChecked: false
 },
+
+  'art04-m1': {
+  title: 'How foam actually works',
+  brief:
+    'An instructor-acceptable answer in four properties, plus the four ' +
+    'concentrate families and why they behave differently on your vehicle.',
+  points: [
+    'Foam works by excluding air, not by cooling. It prevents volatile flammable vapours mixing with air or oxygen (§8.1.1).',
+    'Four properties decide whether foam works: it must flow freely over the fuel surface, resist disruption from wind or heat, reseal ruptures, and retain water (§8.1.1).',
+    'The four concentrate families are protein, AFFF, fluoroprotein and FFFP. They are not interchangeable and three of the four are incompatible with each other.',
+    'AFFF and FFFP form a water film on the fuel surface that spreads beyond the foam itself. That is the mechanism, and it is why they behave differently.',
+    'Expansion ratio and drainage time are the measurable properties. Expansion is how much foam you get; drainage is how fast the water leaves it.',
+    'The quantity needed is calculated from the practical critical area — the same concept as ART-03 m3, and the reason the table figure is a service size.'
+  ],
+  body: `
+    <h3>Foam excludes air. That is the whole mechanism</h3>
+    <p>Doc 9137 §8.1.1 is precise: <strong>foam used for aircraft RFF is primarily intended to provide an air-excluding blanket which prevents volatile flammable vapours from mixing with air or oxygen</strong>. Everything else — the expansion, the drainage time, the resealing — is a means to maintaining that exclusion.</p>
+    <p>This is worth internalising because it explains why foam behaves the way it does. A fuel fire is not extinguished by removing heat. It is extinguished by removing the oxygen the vapour needs. Water alone cools, and cooling a large fuel pool takes an impossible quantity. Foam does something different and much cheaper.</p>
+
+    <h3>Four properties, all required</h3>
+    <p>§8.1.1 then sets out what a foam must do to perform that function:</p>
+    <ul>
+      <li><strong>Flow freely over the fuel surface.</strong> A blanket that cannot spread does not cover.</li>
+      <li><strong>Resist disruption due to wind or exposure to heat or flame.</strong> This is the wind problem from ART-03 m4, stated as a foam property rather than an operator problem.</li>
+      <li><strong>Reseal any ruptures</strong> caused by disturbance of an established blanket. Self-healing is the property that makes a blanket survivable rather than fragile.</li>
+      <li><strong>Retain water.</strong> Its water retention properties determine resistance to thermal exposure and provide limited cooling to aircraft structure the foam adheres to.</li>
+    </ul>
+    <p>The last one is genuinely useful to know, because it is the only cooling foam does. If you are relying on foam to cool structure, you are relying on water retention, and that is a limited effect.</p>
+
+    <h3>The two measurable numbers</h3>
+    <p>Chapter 8 specifies foam on two physical measures, and both appear in the acceptance criteria:</p>
+    <ul>
+      <li><strong>Expansion ratio</strong> — the volume of foam produced from a given volume of solution. Higher is not automatically better; it trades against stability and drainage.</li>
+      <li><strong>Drainage time</strong> — how long the water takes to leave the foam. The 25% drainage time is the standard measure. A foam that drains fast stops sealing; a foam that drains slowly stays put but does not cool.</li>
+    </ul>
+    <p>§8.1.6 requires the delivered foam to produce expansions and 25 per cent drainage times of acceptable levels, and gives the acceptable expansion ranges. If your vehicle is producing foam outside those ranges, the agent in your tank is not the agent the table assumed.</p>
+
+    <h3>The four concentrate families</h3>
+    <p>§8.1.1 describes four types. The differences are not academic — they determine what you can mix, what you can use alongside, and what your proportioner must be set to.</p>
+
+    <p><strong>Protein foam.</strong> Protein hydrolysate plus stabilising additives and inhibitors — against freezing, corrosion, bacterial decomposition, and viscosity. Used at 3, 5 and 6 per cent by volume. Robust and durable, with no film-forming action.</p>
+
+    <p><strong>Aqueous film forming foam (AFFF).</strong> A fluorinated surfactant with foam stabiliser, used up to 6 per cent or premixed. Its distinguishing mechanism: <em>by the drainage of a chemically impregnated fluid from the foam, it provides a film on the fuel surface capable of containing fuel vapour</em>. The film spreads over fuel surfaces not even covered with foam, and is self-healing. That is why AFFF tolerates forceful application and contaminated foam better than protein.</p>
+    <p>AFFF also behaves differently in a way that affects your crews: <em>the foam produced does not have the density and visual appearance of foams produced from protein or fluoroprotein concentrates and training will be necessary to accustom firefighters to its effectiveness</em>. AFFF looks thin and watery. It works. Crews who have only ever seen protein foam often discount it.</p>
+
+    <p><strong>Fluoroprotein foam (conventional).</strong> Protein with a concentration of synthetic fluorinated surfactant, giving better performance than ordinary protein foams as well as <em>resistance to breakdown by chemical powders</em>. Used at 3 and 6 per cent. The powder resistance matters — it is why fluoroprotein is the family that survives a dual-agent attack.</p>
+
+    <p><strong>Film forming fluoroprotein (FFFP).** Protein together with film-forming fluorinated surfactants, capable of forming water solution films on the surface of flammable liquids and adding oleophobic properties. The film <em>can spread over fuel surfaces not covered with foam, is self-healing</em>, and the expanded foam has fast spreading characteristics, acting as surface barriers to exclude air and prevent vaporisation.</p>
+
+    <h3>What this means for the agent in your tank</h3>
+    <p>§8.1.1 is emphatic that the manufacturer of the foam-making equipment should be consulted as to the correct concentrate for any particular system, and that <em>the proportioners installed must be properly designed and/or set for the concentrate being used</em>. Your proportioner is calibrated for a specific concentrate at a specific percentage. Changing concentrate without recalibrating the proportioner does not give you a different foam — it gives you the wrong foam.</p>
+    <p>And the quantity is not a free choice. The amount of foam needed to safeguard fuselage integrity adjacent to a fire is calculated using the practical critical area concept — which is why the table figure in ART-03 is a service size, and why a localised engine fire does not get the whole area.</p>
+
+    <blockquote>
+      <p><strong>SME action:</strong> state the concentrate family and mix percentage your vehicles are set to, and confirm the proportioner is calibrated for that exact concentrate. Record the measured expansion ratio and 25% drainage time at the nozzle from your last acceptance test. Confirm the concentrate in the tank matches the concentrate in the reserve store — a vehicle converted to AFFF while the reserve is protein is a finding waiting to happen.</p>
+    </blockquote>
+  `,
+  refs: [
+    'ICAO Doc 9137 Part 1 — §8.1.1 foam: air-excluding blanket, four required properties, protein / AFFF / fluoroprotein / FFFP concentrate families',
+    'ICAO Doc 9137 Part 1 — §8.1.2 methods of foam production; §8.1.3 to §8.1.5 foam quality and specifications; §8.1.6 foam performance acceptance test; §8.1.6.4 induction tolerance',
+    'ICAO Doc 9137 Part 1 — §2.4 critical area and the practical critical area calculation',
+    'Your foam concentrate manufacturer data sheet — expansion, drainage time, mixing ratio, shelf life',
+    'Course ART-03 m3 — the water calculation and the practical critical area'
+  ],
+  smeChecked: false
+},
+
+  'art04-m2': {
+  title: 'The agent selection matrix',
+  brief:
+    'What each agent is good at, what it is useless against, and the two ' +
+    'things about dry chemical that crews consistently get wrong.',
+  points: [
+    'Complementary agents do not generally have any substantial cooling effect. Extinguishment by them may well be only transient (§8.2.1).',
+    'Danger of flashback or reignition occurs when foam is not available to secure a fire. Complementary agent alone is not control — it is knockdown (§8.2.1).',
+    'Dry chemical is most effective on concealed fires where foam may not penetrate: engine fires, freight holds, beneath wings, and running fuel fires where foam is ineffective (§8.2.1).',
+    'A dense cloud of discharged dry chemical limits visibility and affects respiration. It can impede evacuation and rescue (§8.2.2).',
+    'Dry chemical powder can be highly corrosive when applied to metal surfaces and electrical componentry (§8.2.5).',
+    'Dry chemical powders are normally BC type and are not designed for flammable metal fires, which require specialised agents (§8.2.4).',
+    'Halons are banned. CO2 is only 1.5 times the weight of air and is therefore seriously affected outdoors by wind and convection (§8.2.6, §8.2.8).',
+    'Annex 14 requires the complementary agent to be a dry chemical powder suitable for hydrocarbon fires, with care taken to ensure compatibility with the foam (§9.2.10).'
+  ],
+  body: `
+    <h3>The line between the two agent families</h3>
+    <p>Annex 14 §9.2.8 requires that <strong>both principal and complementary agents should normally be provided at an aerodrome</strong>, and §9.2.10 states that <strong>the complementary extinguishing agent should be a dry chemical powder suitable for extinguishing hydrocarbon fires</strong> — with a note that when selecting dry chemical powders for use with foam, <em>care must be exercised to ensure compatibility</em>.</p>
+    <p>So the selection is not free. Annex 14 names the family for you. What you choose within it, and how it interacts with your foam, is your responsibility.</p>
+
+    <h3>What the name "complementary" is telling you</h3>
+    <p>Doc 9137 §8.2.1 explains it better than any instructor could. Complementary agents <strong>do not generally have any substantial cooling effect on liquids or materials involved in fire</strong>. In a major fire situation, <strong>extinguishment achieved by complementary agents may well only be transient and danger of "flashback" or reignition may occur when foam is not available to secure a fire</strong>.</p>
+    <p>Then the reason for the name: <strong>while they may have the capability of rapid fire suppression (when applied at a sufficient rate), it is generally necessary to apply a principal agent simultaneously or at least before flashback can occur in order to achieve permanent control</strong>.</p>
+    <p>Read that as the whole doctrine. Dry chemical buys you time. Foam secures what the powder knocked down. Dry chemical alone on a fuel spill is a delayed failure, not an extinguishment.</p>
+
+    <h3>Where dry chemical genuinely wins</h3>
+    <p>The same clause gives the honest answer, and it is a specific list rather than a general claim: complementary agents <strong>are particularly effective on concealed fires (e.g. engine fires) in aircraft freight holds and beneath wings, where foams may not penetrate and on running fuel fire situations, on which foams are ineffective</strong>.</p>
+    <p>Three distinct jobs in that sentence, and each is a place foam fails:</p>
+    <ul>
+      <li><strong>Concealed fires</strong> inside compartments and under fairings, where foam cannot reach the seat of the fire.</li>
+      <li><strong>Freight holds and beneath wings</strong> — enclosed volumes with structural barriers between you and the fuel.</li>
+      <li><strong>Running fuel fires</strong>, on which foam is ineffective. A jet of burning fuel is not a pool; you cannot blanket a stream.</li>
+    </ul>
+    <p>This is the opposite of the common crew belief that dry chemical is a general-purpose agent. It is a specialist agent for three specific geometric problems.</p>
+
+    <h3>The two things crews get wrong</h3>
+    <p><strong>One: the cloud.</strong> §8.2.2: <strong>due regard must be made to the problems which may arise when large quantities of complementary agents are discharged rapidly. A dense cloud of the agent may impede aircraft evacuation or rescue operations by limiting the visibility and affecting the respiration of those exposed to the effects</strong>.</p>
+    <p>That is a live safety constraint, not a footnote. If you discharge a large quantity into a cabin or an area where people are still evacuating, you have made the rescue harder. §8.2.4 adds the specific case: <strong>when large quantities of dry chemical powders are discharged rapidly, limited visibility will also reduce the effective placement of foam in a dual-agent attack</strong> — so the cloud does not just obscure people, it defeats your own foam.</p>
+
+    <p><strong>Two: corrosion.</strong> §8.2.5: <strong>it should be noted that dry chemical powder can be highly corrosive when applied to metal surfaces and electrical componentry</strong>.</p>
+    <p>That is why §12.2.16 requires the operator to be informed of the nature of the agent used when the incident concludes — so they may take preventive action against corrosion. A clean agent attack on an engine is a corrosion inspection scheduled, not a problem solved.</p>
+
+    <h3>What dry chemical is not for</h3>
+    <p>§8.2.4 is clear: the dry chemical powders normally provided for aircraft RFF applications <strong>are not specifically designed or intended for use on flammable metal fires, which require specialized agents</strong>. In aircraft RFF operations they are normally of the "BC" type — effective against flammable liquids and electrical fires — and should comply with ISO 7202.</p>
+    <p>So if the fuel is magnesium, sodium, lithium or titanium, dry chemical is not your agent and neither is foam. That is ART-14 territory and it is a specialist response.</p>
+
+    <h3>The banned and the awkward options</h3>
+    <p><strong>Halogens are gone.</strong> §8.2.6: in line with the 1987 Montreal Protocol on substances that deplete the ozone layer, <strong>the production of halon 1211, 1301 and 2402 has been banned since 1994</strong>. They may still be found in some aircraft fixed installations — which is an argument for knowing what is fitted to the types you handle, not an argument for stocking them.</p>
+
+    <p><strong>CO<sub>2</sub> is an indoor agent.</strong> §8.2.7 describes two traditional uses: rapid knockdown of small fires, and flooding concealed fires in areas inaccessible to foam. It <em>should not be used on fires involving flammable metals</em>. Then §8.2.8 gives the limitation that decides where you can use it: <strong>CO<sub>2</sub> gas is only 1.5 times the weight of air and is therefore seriously affected in outdoor applications by the wind and the convection currents associated with a fire</strong>.</p>
+    <p>So CO<sub>2</sub> is a cabin and compartment agent, not an aircraft-side agent. §8.2.9 requires it to comply with ISO 5923.</p>
+
+    <h3>Annex 14 keeps it narrow</h3>
+    <p>§9.2.10 does the narrowing for you: dry chemical powder suitable for hydrocarbon fires. If your fleet operates lithium battery cargo — and ART-14 is on your curriculum — then your complementary agent is not matched to your worst-case fuel, and that gap needs an answer in your emergency plan rather than in the store room.</p>
+
+    <blockquote>
+      <p><strong>SME action:</strong> produce the agent selection matrix for your aerodrome: fire type, principal agent, complementary agent, application method, and the specific reason. Include the fires your current agents cannot handle — flammable metals, lithium, Halon in fixed installations — and state what the plan is for each. Confirm the dry chemical you stock is BC type to ISO 7202 and that its compatibility with your foam is established by test evidence, not assumed. Then check whether any of the types you handle carry fixed halon installations.</p>
+    </blockquote>
+  `,
+  refs: [
+    'ICAO Doc 9137 Part 1 — §8.2.1 what complementary agents do and do not do; flashback and reignition risk',
+    'ICAO Doc 9137 Part 1 — §8.2.2 the density and visibility problem; §8.2.4 dry chemical powders, BC type, ISO 7202, not for flammable metals, dual-agent interaction',
+    'ICAO Doc 9137 Part 1 — §8.2.5 dry chemical corrosivity; §8.2.6 halon ban; §8.2.7 and §8.2.8 CO2 use and wind limitation; §8.2.9 ISO 5923',
+    'ICAO Doc 9137 Part 1 — §12.2.16 inform operators of the nature of the agent used',
+    'ICAO Annex 14 Volume I — §9.2.8 both principal and complementary agents; §9.2.10 dry chemical powder for hydrocarbon fires and compatibility note',
+    'Course ART-14 — lithium battery hazards and response',
+    'Course ART-03 m2 — principal versus complementary agents'
+  ],
+  smeChecked: false
+},
+'art04-m3': {
+  title: 'Compatibility, proportioning and testing',
+  brief:
+    'Three subjects that decide whether the foam in your tank is the foam ' +
+    'the standard assumes. All three fail silently.',
+  points: [
+    'Foam liquids of different types or different manufacturers should not be mixed unless established as completely interchangeable and compatible (§8.1.1).',
+    'Incompatibility between dry chemical and protein foam destroys the foam blanket wherever the two agents are in contact (§8.1.1).',
+    'AFFF is compatible with all currently available dry chemical powder agents. Protein and fluoroprotein concentrates are incompatible with AFFF (§8.1.1).',
+    'Fluoroprotein foams are resistant to breakdown by chemical powders (§8.1.1(c)). Protein foams are not. This is a dual-agent decision, not a preference.',
+    'When converting a system to AFFF, a thorough flushing of the foam tank and total foam-making system is necessary beforehand (§8.1.1(b)).',
+    'Induction systems should induce within ±10% of the desired induction percentage at optimum working conditions (§8.1.6.4).',
+    'In-service testing of the foam production system should be performed at least every twelve months (§8.1.7.1).',
+    'Water suitability must be verified with the approval of the foam concentrate manufacturer (§8.1.11).'
+  ],
+  body: `
+    <h3>Compatibility is not a preference</h3>
+    <p>§8.1.1 states the rule plainly: <strong>foam liquids of different types or different manufacturers should not be mixed unless it is established that they are completely interchangeable and compatible</strong>.</p>
+    <p>And then it gives the consequence for the case that actually bites on scene, in the protein section: <strong>where a dry chemical powder is to be used as the complementary agent in conjunction with protein foam it is essential to determine the compatibility of these agents for simultaneous application. Incompatibility will result in the destruction of the foam blanket in areas where the two agents are in contact</strong>.</p>
+    <p>Read that consequence carefully. The failure is not gradual dilution. The blanket is destroyed where the agents touch. On a dual-agent attack that means you lose your foam precisely where you have just gained knockdown — the worst possible place to lose it.</p>
+
+    <h3>The compatibility map</h3>
+    <p>§8.1.1 gives you the map, family by family:</p>
+    <ul>
+      <li><strong>AFFF</strong> — <em>compatible with all currently available dry chemical powder agents</em>. This is the strongest compatibility position of the four.</li>
+      <li><strong>Protein and fluoroprotein</strong> — <em>incompatible with AFFF concentrates and they should not be mixed</em>, although foams produced from these concentrates, separately generated, <em>may be applied to a fire in sequence or simultaneously</em>.</li>
+      <li><strong>Fluoroprotein</strong> — gives <em>resistance to breakdown by chemical powders</em>, and compatibility <em>should be established by a test programme although it is known that compatibility is a characteristic of most fluoroprotein foams</em>.</li>
+    </ul>
+    <p>Note the distinction the standard draws carefully: incompatible <em>as concentrates in the same tank</em>, but compatible <em>as separately generated foams applied in sequence or simultaneously</em>. Those are different operations and the standard permits the second while prohibiting the first.</p>
+    <p>The practical question for your service: which family is in your tanks, and is your complementary agent compatible with it for simultaneous application? If you are running protein foam, you need that compatibility established before you run a dual-agent attack — not during it.</p>
+
+    <h3>Conversion is a job, not a fill-up</h3>
+    <p>If you change concentrate family, the standard is specific about what has to happen. For AFFF: <em>a thorough flushing of the foam tank and the total foam-making system will be necessary before the introduction of the AFFF concentrate</em>, and <em>afff concentrates may be used in equipment normally used for protein or fluoroprotein foam production, but conversion should not be undertaken without consultation with the manufacturer or supplier of the afff concentrate or rff vehicle</em>.</p>
+    <p>And there is a hardware consequence: <em>some changes in the foam-making systems of vehicles, particularly aspirating nozzles, where used, may be necessary to achieve the optimum properties of afff foams</em>.</p>
+    <p>For protein there is a related discipline: <em>to ensure that the tank does not contain stale protein foam, the entire contents should be discharged periodically and the entire system washed through</em>.</p>
+
+    <h3>Proportioning is where the tank and the turret diverge</h3>
+    <p>§8.1.2 covers methods of foam production: premixed solutions, or a proportioning system delivering a predetermined concentration. Then the condition that governs whether the result is acceptable foam: <strong>in all cases, the system will produce an acceptable foam only if the solution is delivered in the appropriate concentration and in the correct pressure range to the aspirating nozzle or nozzles</strong>.</p>
+    <p>Two variables, not one. A correctly proportioned solution at the wrong nozzle pressure does not produce compliant foam. §8.1.6.4 then sets the tolerance: <strong>induction systems should induce with a tolerance of +/-10% of the desired induction percentage at optimum working conditions</strong>.</p>
+    <p>Ten per cent sounds tight until you realise what sits at the other end of it. Going from 3% to 3.3% is within tolerance and is a measurably different foam. That is the whole reason the acceptance test exists.</p>
+
+    <h3>The acceptance test is a fire test</h3>
+    <p>§8.1.8 sets out the method, and the tray sizes tell you what each performance level has to achieve:</p>
+    <ul>
+      <li><strong>Performance level A</strong> — extinguish a 2.8 m² fire.</li>
+      <li><strong>Performance level B</strong> — 4.5 m².</li>
+      <li><strong>Performance level C</strong> — 7.3 m².</li>
+    </ul>
+    <p>Table 8-1 then gives the performance requirement for each level side by side, and the three figures are worth knowing separately because they answer three different questions:</p>
+    <table class="calc">
+      <tr><th>Measure</th><th>Level A</th><th>Level B</th><th>Level C</th></tr>
+      <tr><td>Fire size</td><td>≈ 2.8 m² circular</td><td>≈ 4.5 m² circular</td><td>≈ 7.32 m² circular</td></tr>
+      <tr><td>Fuel</td><td>Kerosene</td><td>Kerosene</td><td>Kerosene</td></tr>
+      <tr><td>Preburn time</td><td>60 s</td><td>60 s</td><td>60 s</td></tr>
+      <tr><td>Extinguishing time</td><td>≤ 60 s</td><td>≤ 60 s</td><td>≤ 60 s</td></tr>
+      <tr><td>Total application time</td><td>120 s</td><td>120 s</td><td>120 s</td></tr>
+      <tr><td>25% reignition time</td><td>≥ 5 min</td><td>≥ 5 min</td><td>≥ 5 min</td></tr>
+    </table>
+    <p>Note what the level does <em>not</em> change: extinguishing time, total application time and reignition time are identical across all three. What the level changes is the <strong>fire size the foam has to hold</strong> — and that is why level A buys you margin in wind, in technique, and in the mistakes that a real incident contains and a test pan does not.</p>
+    <p>The fire is kerosene on a water substrate in every case, preburned for 60 seconds before application. And §8.1.8.3 fixes the conditions: <strong>air temperature ≥ 15 °C, foam solution temperature ≥ 15 °C, wind velocity ≤ 3 m/s, and the test shall not be carried out in conditions of precipitation, if outdoors</strong>.</p>
+    <p>§8.1.8.3 fixes the conditions those tests must be run in — and that matters in a hot climate, because a test run in summer may not satisfy the temperature floor without controlled cooling.</p>
+
+    <h3>Three tests, three different things</h3>
+    <ul>
+      <li><strong>Acceptance test (§8.1.6)</strong> — the delivered foam from your vehicle, confirming induction percentage, spray pattern, monitor jet range, and (for vehicles that can produce foam on the move) that capability. §8.1.6.3 makes the moving-vehicle test a requirement where the vehicle is so equipped.</li>
+      <li><strong>In-service test (§8.1.7)</strong> — periodic, confirming <em>the ongoing capability of the foam production system</em>, and <em>should be performed at least every twelve months</em>. §8.1.7.2 notes that once fully tested and assuming no changes, in-service testing consists of periodic checks not exceeding that interval.</li>
+      <li><strong>Concentrate test</strong> — §8.1.3 requires <em>functional fire tests to determine the suitability of a foam concentrate in an airport environment</em>, and §8.1.3 notes these should be conducted by a suitable and accredited third-party testing authority. That is a different test from the vehicle's, and both are needed.</li>
+    </ul>
+    <p>And §8.1.11 for the water: <strong>the quality of foam produced by a vehicle system may be affected by the characteristics of the local water supply. It is important to acquire an adequate clear water supply, the suitability of which should be verified with the approval of the foam concentrate manufacturer</strong>. Plus: <em>no corrosion inhibitors, freezing point depressants or other additives should be used in the water supply without prior consultation with, and the approval of, the foam concentrate manufacturer</em>.</p>
+
+    <blockquote>
+      <p><strong>SME action:</strong> produce the compatibility evidence for your own pairing — your concentrate family and your dry chemical — and confirm it is established by test, not assumption. Then produce the test calendar: last and next acceptance test, last and next in-service test, last concentrate functional fire test, and the manufacturer approval for your local water. If any of those is missing or expired, that is the finding to fix first. Finally, if you have ever converted a vehicle between concentrate families, confirm the tank and system flush and the aspirating nozzle check were both done.</p>
+    </blockquote>
+  `,
+  refs: [
+    'ICAO Doc 9137 Part 1 — §8.1.1 compatibility of concentrate families and dry chemical; flushing on conversion; periodic discharge of protein systems',
+    'ICAO Doc 9137 Part 1 — §8.1.2 methods of foam production and concentration/pressure conditions',
+    'ICAO Doc 9137 Part 1 — §8.1.3 to §8.1.5 foam quality, functional fire tests, accredited third-party testing authority',
+    'ICAO Doc 9137 Part 1 — §8.1.6 foam performance acceptance test; §8.1.6.3 moving-vehicle capability; §8.1.6.4 induction tolerance ±10%',
+    'ICAO Doc 9137 Part 1 — §8.1.7 in-service test at least every twelve months; §8.1.8 fire test method and tray areas; §8.1.10 performance requirements; §8.1.11 water supply',
+    'Your foam concentrate manufacturer — compatibility statements, water suitability approval, conversion procedure',
+    'Your national Civil Aviation Authority requirements — confirm any additional testing or certification mandates'
+  ],
+  smeChecked: false
+},
+
+  'art04-m4': {
+  title: 'Storage, shelf life and rotation',
+  brief:
+    'The reserve is a controlled substance with a rotation rule. ' +
+    'First in, first out is not administration — it is fire performance.',
+  points: [
+    'Reserves are mandatory: 200% of the Table 2-3 foam concentrate quantity and 100% of the complementary agent quantity, held at the aerodrome (§2.6.1, §2.6.2).',
+    'The reserve should be stored in the fire station(s) — §9.3.1. A reserve across the airfield does not serve the response window.',
+    'Avoid extremes of temperature for foam concentrate (§8.3.1(a)). In a hot climate this is a design requirement, not a note.',
+    'Use stocks in order of receipt (§8.3.1(a) and (b)). Shelf life is finite and rotation is how you avoid discovering otherwise.',
+    'Keep concentrate in the manufacturer containers or a suitable on-site bulk storage facility until required (§8.3.1(a)).',
+    'Drums, bladders and large above-ground tanks should be suitably contained in case of a spill (§8.3.1(a)).',
+    'Where more than one type of concentrate is in use, containers should be suitably marked (§8.3.1(a)).',
+    'For dry chemical: replace and seal the lids of partly used containers, keeping the powder dry and free from contaminants (§8.3.1(b)).',
+    'A drum that has been opened and resealed is not a fresh drum. The functional fire test result applies to the drum you actually put in the tank.'
+  ],
+  body: `
+    <h3>The reserve is a requirement, not prudence</h3>
+    <p>§2.6.1 and §2.6.2 together give the arithmetic: a reserve supply of foam concentrate equivalent to <strong>200 per cent of the quantities of these agents identified in Table 2-3</strong> should be maintained on the airport for vehicle replenishment purposes, and the complementary agent reserve is <strong>100 per cent, respectively, of the quantity identified in Table 2-3</strong>.</p>
+    <p>And §9.3.1 says where it lives: the reserve of agents shall be stored in the fire station(s). That is the operative word. A reserve in a store across the airfield is not available inside the three-to-four-minute replenishment window that continuous application depends on (§2.7.3). The reserve that is too far away is not a reserve.</p>
+
+    <h3>Storage conditions for foam concentrate</h3>
+    <p>§8.3.1 notes that conditions of storage are frequently specified by manufacturers or suppliers, including the intended shelf lives, and then sets out what the general aim should be. For foam concentrate:</p>
+    <ul>
+      <li><strong>Avoid extremes of temperature.</strong></li>
+      <li><strong>Use stocks in order of receipt.</strong></li>
+      <li><strong>Keep concentrate in the manufacturer's containers</strong> or a suitable on-site bulk storage facility until required for use, where applicable.</li>
+      <li><strong>Contain spill risk.</strong> Where drums, bladders or large above-ground tanks are used, they should be suitably contained in case of a spill.</li>
+      <li><strong>Mark the containers</strong> where more than one type of foam concentrate is in use.</li>
+    </ul>
+    <p>Every one of those five is a small, cheap, auditable control. A service that cannot produce a stock list showing date of receipt against date of opening has no shelf-life control at all — and shelf life is what turns a compliant agent into a non-compliant one without anybody noticing.</p>
+
+    <h3>Storage conditions for dry chemical</h3>
+    <p>Two rules, both consequences of a failure mode:</p>
+    <ul>
+      <li><strong>Use stocks in order of receipt.</strong></li>
+      <li><strong>Replace and seal the lids of any partly used containers</strong>, ensuring the powder is <em>kept dry and free from contaminates</em>.</li>
+    </ul>
+    <p>Dry chemical that has absorbed moisture will cake. Caked powder does not flow, and a container that will not discharge under load is a complementary agent you do not have. That failure is invisible on an inventory check and total on scene.</p>
+
+    <h3>Why rotation is a performance control</h3>
+    <p>§8.1.3 requires <em>functional fire tests to determine the suitability of a foam concentrate in an airport environment</em>. That is a test of the concentrate, and it is done by sample. The chain from drum to scene then runs: sample passes the functional fire test → the drum in your vehicle is from that batch and within shelf life → proportioner calibrated for that concentrate → induction within ±10% (§8.1.6.4) → in-service test confirms the system is still producing it (§8.1.7.1, every twelve months).</p>
+    <p>Break any link and the agent in your tank is not the agent the table assumed. That is why <em>use stocks in order of receipt</em> is written into the standard rather than left to a stock controller's discretion. Rotation is the mechanism that keeps the tested batch and the used batch the same batch.</p>
+
+    <h3>The hot climate problem, stated honestly</h3>
+    <p>Avoid extremes of temperature is a short clause with a long tail. Foam concentrate stored in an uninsulated shed at ambient temperature through a hot summer is at the top of its range for months. Concentrate viscosity rises as temperature falls, and concentrate stored at high temperature ages faster — which is why manufacturers publish storage temperature limits and why the standard defers to them rather than inventing a number.</p>
+    <p>The practical questions your service has to answer: what temperature range does your manufacturer specify, is your store inside it, is it measured, and what is your action when it goes outside? A store with a maximum thermometer and no procedure attached to the reading does not satisfy the requirement.</p>
+
+    <h3>The audit trail worth building</h3>
+    <p>None of this needs a system. It needs a sheet. For each concentrate and dry chemical product held:</p>
+    <ol>
+      <li>Product, family, manufacturer, batch number.</li>
+      <li>Date of receipt, and the position in the rotation order.</li>
+      <li>Date first opened or drawn from, and by whom.</li>
+      <li>Manufacturer shelf life and your calculated expiry date.</li>
+      <li>Functional fire test result for that batch, or the sample test it is covered by.</li>
+      <li>Storage location and the temperature range recorded for that location.</li>
+      <li>For dry chemical: lid sealed on return, free from contaminants, confirmed.</li>
+    </ol>
+    <p>That sheet answers, in one place, the three questions an inspector always asks: is it in date, has it been tested, and has it been stored correctly. A service without it can answer all three and a service with it cannot.</p>
+
+    <blockquote>
+      <p><strong>SME action:</strong> walk the reserve store this week with a clipboard, not a checklist. Count what is actually there against what the 200% and 100% figures require. Then check four things on each container: is it marked, is it in date, is it from the correct rotation position, and has it been stored within the manufacturer's temperature range? Finally, confirm the reserve is physically inside the fire station and that the replenishment route from store to vehicle can be completed inside the window continuous application depends on. If it cannot, the reserve is decorative.</p>
+    </blockquote>
+  `,
+  refs: [
+    'ICAO Doc 9137 Part 1 — §2.6.1 foam concentrate reserve 200 per cent; §2.6.2 complementary agent reserve 100 per cent; §2.7.3 continuous application window',
+    'ICAO Doc 9137 Part 1 — §8.3.1 conditions of storage of extinguishing agents, foam concentrate and dry chemical powders',
+    'ICAO Doc 9137 Part 1 — §9.3.1 reserve of agents stored in the fire station(s)',
+    'ICAO Doc 9137 Part 1 — §8.1.3 functional fire tests and accredited third-party testing authority; §8.1.6.4 induction tolerance; §8.1.7.1 twelve-month in-service test',
+    'Your foam concentrate manufacturer data sheet — shelf life and storage temperature range',
+    'Your aerodrome emergency plan — agent storage and replenishment'
+  ],
+  smeChecked: false
+},
+
+  'art04-m5': {
+  title: 'Environmental drivers in agent choice',
+  brief:
+    'One hard prohibition in the standard, one family of agents whose ' +
+    'composition is fluorinated, and a regulatory position you must ' +
+    'establish rather than inherit from this platform.',
+  points: [
+    'The one absolute environmental prohibition in the standard is halon: production banned since 1994 under the Montreal Protocol (§8.2.6).',
+    'Halons may still be fitted as fixed installations in some aircraft. Knowing what is fitted is an operational fact you need; stocking them is not an option.',
+    'AFFF and FFFP contain fluorinated surfactants (§8.1.1(b), §8.1.1(d)). That is a composition fact from the standard, not a regulatory claim.',
+    'This platform does not state what your State requires regarding fluorinated agents. That is your authority to determine and your SME to verify.',
+    'Salt or brackish water in the foam solution interacts with tank structure, surface treatment and plumbing. The standard requires consultation with the concentrate manufacturer (§8.1.1(b)).',
+    'Dry chemical is highly corrosive on metal and electrical componentry (§8.2.5). That is a maintenance and environmental driver as much as an airframe one.',
+    'Dry chemical is not for flammable metal fires (§8.2.4). Lithium, magnesium, sodium and titanium need specialised agents.',
+    'Agent choice has operational and environmental consequences that outlast the incident — and both belong in the aerodrome emergency plan.'
+  ],
+  body: `
+    <h3>What the standard actually says about the environment</h3>
+    <p>Very little, and the little it says is absolute. §8.2.6: <strong>in line with the 1987 Montreal Protocol on substances that deplete the ozone layer, the production of halon 1211, 1301 and 2402 has been banned since 1994</strong>. That is not guidance and it is not a recommendation — it is a production ban, and it is the single hard environmental prohibition in the extinguishing-agent chapter.</p>
+    <p>Then the operational footnote that matters for you: <strong>halons are therefore no longer discussed in this document but may still be found in some aircraft fixed installations</strong>. So the halogen question for a modern service is not "shall we stock halon" — it is "what is fitted to the types we handle". That is an aircraft familiarisation question, and it belongs in ART-11.</p>
+
+    <h3>The fluorinated families, stated as composition</h3>
+    <p>Two of the four concentrate families are built on fluorinated chemistry, and the standard says so plainly:</p>
+    <ul>
+      <li><strong>AFFF</strong> (§8.1.1(b)) — concentrates consisting basically of <em>a fluorinated surfactant with foam stabilizer</em>.</li>
+      <li><strong>FFFP</strong> (§8.1.1(d)) — <em>protein together with film forming fluorinated surfactants</em>.</li>
+      <li><strong>Fluoroprotein</strong> (§8.1.1(c)) — protein with <em>a concentration of synthetic fluorinated surfactant</em>.</li>
+    </ul>
+    <p>Only protein foam (§8.1.1(a)) is built without fluorinated surfactant. That is the composition picture, taken directly from the standard.</p>
+    <p>What this platform deliberately will not do is tell you what your State requires about those compounds. That is not an oversight — it is the same discipline applied to the national regulations throughout this curriculum. <strong>This platform does not know which State you are in and will not guess.</strong> If your authority regulates fluorinated extinguishing agents, restricts them, phases them out, or requires disclosure on discharge, that is your determination to make and your SME to verify against your own instrument.</p>
+
+    <h3>The water chemistry driver</h3>
+    <p>This one is fully sourced and easy to overlook. §8.1.1(b), on AFFF: <strong>it is also important to discuss with the manufacturer or supplier the use of an afff concentrate in extremes of temperature or where salt or brackish water may be used in the solution, with particular regard to any possibility of interaction between the tank structure, any surface treatment or the associated plumbing of the system</strong>.</p>
+    <p>So if your supply is brackish, coastal or saline, that conversation is not optional — and it is a conversation with the manufacturer, not one to be resolved by the crew on shift. §8.1.11 covers the other half: water suitability <em>should be verified with the approval of the foam concentrate manufacturer</em>, and <em>no corrosion inhibitors, freezing point depressants or other additives should be used in the water supply without prior consultation with, and the approval of, the foam concentrate manufacturer</em>.</p>
+
+    <h3>Consequences that outlast the incident</h3>
+    <p>Two drivers that are not environmental in the narrow sense but produce the same long-tail obligations:</p>
+    <p><strong>Corrosion from dry chemical.</strong> §8.2.5: dry chemical powder <em>can be highly corrosive when applied to metal surfaces and electrical componentry</em>. §12.2.16 then makes it a task with an owner — the operator must be informed of the nature of the agent used so they may take preventive action. That is a maintenance consequence created by your choice of agent on the day.</p>
+    <p><strong>Gaps your current agents cannot fill.</strong> §8.2.4: dry chemical powders normally provided for aircraft RFF <em>are not specifically designed or intended for use on flammable metal fires, which require specialized agents</em>. If lithium battery cargo moves through your aerodrome, your stock does not cover your worst case. That gap needs a plan — a specialist response, mutual aid, or a cargo policy — rather than a note in a store room.</p>
+
+    <h3>How to close this properly</h3>
+    <p>This lesson is deliberately short on prescription, because the honest position is that the standard gives you the composition and the prohibition, and everything else is a regulatory determination you must make. Close it with these five, in writing:</p>
+    <ol>
+      <li><strong>Your State's position on fluorinated agents.</strong> Identify the instrument, the current requirement, and any phase-out or restriction dates. Record the citation.</li>
+      <li><strong>Your fleet's halon exposure.</strong> Which types are based or transit your field with fixed halon installations, and what that means for your crew.</li>
+      <li><strong>Your water chemistry.</strong> Supply source, salinity, and the manufacturer's written position on it for your concentrate.</li>
+      <li><strong>Your uncovered fires.</strong> Flammable metals, lithium, and anything else your current agents cannot handle, each with a named response.</li>
+      <li><strong>Your post-incident obligations.</strong> Who notifies the operator, what they are told, and how the corrosion inspection is tracked to completion.</li>
+    </ol>
+
+    <blockquote>
+      <p><strong>SME action:</strong> items 1 and 2 are the two this platform cannot do for you. Establish your State's position on fluorinated extinguishing agents and record the instrument and clause. Confirm whether any aircraft types at your field carry fixed halon installations. Then confirm items 3, 4 and 5 from your own records — the water chemistry letter from your concentrate manufacturer, the list of fires your agents cannot handle with their response, and the agent-notification procedure. If item 1 cannot be answered from your own authority, that is the first call to make.</p>
+    </blockquote>
+  `,
+  refs: [
+    'ICAO Doc 9137 Part 1 — §8.2.6 halon production ban under the 1987 Montreal Protocol; halons may remain in some fixed installations',
+    'ICAO Doc 9137 Part 1 — §8.1.1(a) protein foam without fluorinated surfactant; §8.1.1(b) AFFF fluorinated surfactant, temperature and salt/brackish water consultation; §8.1.1(c) fluoroprotein; §8.1.1(d) FFFP film-forming fluorinated surfactants',
+    'ICAO Doc 9137 Part 1 — §8.1.11 water supply suitability verified with the foam concentrate manufacturer; additives require approval',
+    'ICAO Doc 9137 Part 1 — §8.2.4 dry chemical not for flammable metal fires; §8.2.5 dry chemical corrosivity; §12.2.16 inform operators of the agent used',
+    'Your national Civil Aviation Authority and environmental regulator — the instrument and clause governing fluorinated extinguishing agents in your State',
+    'Your foam concentrate manufacturer — water chemistry suitability letter',
+    'Course ART-14 — lithium battery hazards and response'
+  ],
+  smeChecked: false
+},
 };
 
 /**

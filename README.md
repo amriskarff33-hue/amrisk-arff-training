@@ -18,18 +18,20 @@ The **course content is a scaffold.** What exists today:
 
 | Built | Not built |
 |-------|-----------|
-| All 25 course structures | Lesson body text (26 of 107 written) |
+| All 25 course structures | Lesson body text (43 of 107 written) |
 | All learning outcomes | SME verification of the technical claims |
 | All governing standards references | Questions beyond the 30 seeded |
 | Six technical diagrams | Video of your own crews and equipment |
 | 18 verified FAA training videos | SME-reviewed local footage |
 | Full assessment engine | Content review sign-off |
 
-**Fully written courses (5 of 25):** ART-01 ARFF Foundations & the Regulatory
-Framework, ART-08 RFF Personnel Training & Competency, ART-09 Emergency Command &
-On-Scene Command, ART-18 Communications, Alerting & Air Traffic Coordination, and
-ART-20 Responding to the Unexpected. Partly written: ART-03 (1 of 4), ART-15
-(1 of 4), ART-16 (2 of 4).
+**Fully written courses (9 of 25):** ART-01 ARFF Foundations & the Regulatory
+Framework, ART-02 Determining the Required ARFF Level, ART-03 Levels 1-10 Agents
+Vehicles & Discharge Rates, ART-04 Extinguishing Agents, ART-08 RFF Personnel
+Training & Competency, ART-09 Emergency Command & On-Scene Command, ART-15
+Aircraft Engine APU & Fuel System Fires, ART-16 Firefighting Tactics & Agent
+Application, ART-18 Communications Alerting & ATC, and ART-20 Responding to the
+Unexpected.
 
 **No unreviewed content is ever presented as fact.** Every lesson without written
 body content renders a visible **"Lesson not yet written"** banner. Every assessment
@@ -43,7 +45,7 @@ unfinished.
 
 ### About the national regulations quoted here
 
-Lessons in ART-01, ART-08, ART-09 and ART-18 quote **GCAA CAR Part XI — Aerodrome
+Lessons in ART-01, ART-02, ART-04, ART-08, ART-09, ART-15 and ART-18 quote **GCAA CAR Part XI — Aerodrome
 Emergency Services, Facilities and Equipment** in detail: the two-minute response
 time, the category-by-fuselage-width rule, the training needs analysis and
 frequency analysis, the Structured Learning Programme, the Certificate of
