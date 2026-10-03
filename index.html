@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="night">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>AM RISK AND TRAINING — Aviation &amp; ARFF Training</title>
+<meta name="description" content="Offline aviation, airport rescue and fire fighting training. 25 courses, fully offline.">
+<meta name="theme-color" content="#051223">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="assets/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="assets/icon-180.png">
+<link rel="stylesheet" href="css/app.css?v=4">
+</head>
+<body>
+
+<!-- ── Offline / persistence banner ─────────────────────────────────── -->
+<div id="banner" class="banner" hidden></div>
+
+<!-- ── App bar ──────────────────────────────────────────────────────── -->
+<header class="appbar">
+  <button class="appbar__back" id="navBack" hidden aria-label="Go back">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+  </button>
+
+  <div class="appbar__brand">
+    <img src="assets/logo.png" alt="" class="appbar__logo" width="34" height="34">
+    <div class="appbar__titles">
+      <strong>AM RISK <span>AND</span> TRAINING</strong>
+      <small id="appbarSub">Aviation &amp; ARFF Training</small>
+    </div>
+  </div>
+
+  <button class="appbar__theme" id="themeToggle" aria-label="Switch day / night theme" title="Day / night">
+    <svg viewBox="0 0 24 24" aria-hidden="true" class="i-moon"><path d="M20 14.5A8.5 8.5 0 0 1 9.5 4a8.5 8.5 0 1 0 10.5 10.5z" fill="currentColor"/></svg>
+    <svg viewBox="0 0 24 24" aria-hidden="true" class="i-sun"><circle cx="12" cy="12" r="4.2" fill="currentColor"/><g stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 2.5v2M12 19.5v2M2.5 12h2M19.5 12h2M5.2 5.2l1.4 1.4M17.4 17.4l1.4 1.4M18.8 5.2l-1.4 1.4M6.6 17.4l-1.4 1.4"/></g></svg>
+  </button>
+</header>
+
+<!-- ── Main region: every view renders here ─────────────────────────── -->
+<main id="view" class="view" tabindex="-1"></main>
+
+<!-- ── Bottom tab bar ───────────────────────────────────────────────── -->
+<nav class="tabbar" aria-label="Main">
+  <button class="tab is-active" data-tab="home">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 11l8-6.5 8 6.5" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/><path d="M6.2 10.2V19h11.6v-8.8" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    <span>Home</span>
+  </button>
+  <button class="tab" data-tab="learn">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5.5A1.5 1.5 0 0 1 5.5 4H11v16H5.5A1.5 1.5 0 0 1 4 18.5z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M20 5.5A1.5 1.5 0 0 0 18.5 4H13v16h5.5a1.5 1.5 0 0 0 1.5-1.5z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg>
+    <span>Learn</span>
+  </button>
+  <button class="tab" data-tab="progress">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4.5 19.5a9.5 9.5 0 1 1 15 0" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"/><path d="M12 14.5l3.5-4" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"/></svg>
+    <span>Progress</span>
+  </button>
+  <button class="tab" data-tab="coach">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3.5l1.9 4.3 4.6.5-3.4 3.1.95 4.6L12 13.9l-4.05 2.1.95-4.6L5.5 8.3l4.6-.5z" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></svg>
+    <span>Coach</span>
+  </button>
+</nav>
+
+<!-- Classic scripts, loaded in dependency order and sharing one global scope.
+     Deliberately NOT ES modules: modules are blocked by CORS over file://, and
+     this platform must run from a bare double-click as well as from a server.
+     The ?v=3 on each is the cache-buster — bump it (in all four tags and the
+     stylesheet) whenever you ship changed assets, or returning learners keep
+     running the old build. -->
+<script src="js/curriculum.js?v=4"></script>
+<script src="js/lessons.js?v=4"></script>
+<script src="js/store.js?v=4"></script>
+<script src="js/diagrams.js?v=4"></script>
+<script src="js/videos.js?v=4"></script>
+<script src="js/app.js?v=4"></script>
+</body>
+</html>

@@ -1,0 +1,13 @@
+# local / scratch
+.DS_Store
+*.log
+*.tmp
+*.bak
+
+# node / tooling
+node_modules/
+
+# SME-recorded video: large binaries, add deliberately (see README "Recording your own video")
+media/*.mp4
+media/*.mov
+media/*.m4v

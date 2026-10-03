@@ -1,0 +1,24 @@
+{
+  "name": "AM RISK AND TRAINING — Aviation & ARFF Training",
+  "short_name": "AM RISK Training",
+  "description": "Offline aviation, airport rescue and fire fighting training. 25 courses from ARFF foundations to emergency command.",
+  "id": "/arff-training/",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#051223",
+  "theme_color": "#051223",
+  "categories": ["education", "productivity"],
+  "icons": [
+    { "src": "assets/icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any" },
+    { "src": "assets/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "assets/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "assets/icon-maskable.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ],
+  "shortcuts": [
+    { "name": "Catalogue", "url": "./index.html#/learn" },
+    { "name": "My Progress", "url": "./index.html#/progress" },
+    { "name": "Coach", "url": "./index.html#/coach" }
+  ]
+}

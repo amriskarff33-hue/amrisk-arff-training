@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="AM Risk and Training">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0C264E"/>
+      <stop offset="1" stop-color="#051223"/>
+    </linearGradient>
+    <linearGradient id="flame" x1="0" y1="1" x2="0" y2="0">
+      <stop offset="0" stop-color="#835552"/>
+      <stop offset="1" stop-color="#D08A6A"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="512" height="512" rx="112" fill="url(#bg)"/>
+
+  <!-- shield -->
+  <path d="M256 96l124 46v122c0 82-52 136-124 158-72-22-124-76-124-158V142z"
+        fill="none" stroke="#B36B51" stroke-width="15" stroke-linejoin="round" opacity=".85"/>
+
+  <!-- flame -->
+  <path d="M256 168c34 46 58 78 58 116a58 58 0 0 1-116 0c0-24 12-42 30-62 2 18 12 26 20 28-4-32 6-58 8-82z"
+        fill="url(#flame)"/>
+
+  <!-- wordmark -->
+  <text x="256" y="424" text-anchor="middle" font-family="Inter, Helvetica, Arial, sans-serif"
+        font-size="52" font-weight="800" letter-spacing="7" fill="#EAF1F8">ARFF</text>
+  <text x="256" y="458" text-anchor="middle" font-family="Inter, Helvetica, Arial, sans-serif"
+        font-size="21" font-weight="600" letter-spacing="11" fill="#B36B51">AM RISK</text>
+</svg>
