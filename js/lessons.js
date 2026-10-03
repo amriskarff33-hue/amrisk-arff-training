@@ -5265,6 +5265,287 @@ const LESSON_OVERRIDES = {
   ],
   smeChecked: false
 },
+
+  'art07-m1': {
+  title: 'What SCBA protects you from — and does not',
+  brief:
+    'The atmosphere is the hazard, and the hazard is different on every ' +
+    'aircraft you might be asked to enter.',
+  points: [
+    'Firefighters entering any environment in which fire is present during an aircraft incident, and during overhaul operations, should be protected with self-contained respiratory equipment (§6.2.1).',
+    'This applies equally to aircraft comprising aluminium and composite fibre materials (§6.2.1).',
+    'A modern cabin interior is synthetic. In fire or charring it produces carbon monoxide, hydrogen chloride, chlorine, hydrogen cyanide and carbonyl chloride (phosgene) (§6.2.2).',
+    'Composite fibre in fire can produce hydrogen cyanide, hydrogen chloride, hydrogen sulfide, hydrogen fluoride, acrolein and nitrogen dioxide (§6.2.3).',
+    'Composite fibre in high impact without fire — a crash landing — can release minute particles into the atmosphere (§6.2.4).',
+    'Industrial smoke masks and some limited-capacity compressed air equipment are unlikely to meet the requirements of these operations (§6.2.5).',
+    'The equipment must be adequate in both basic function and operational duration for the tasks involved (§6.2.5).',
+    'Competence in wearing the equipment is a requirement in its own right, not a by-product of having it (§6.2.6).'
+  ],
+  body: `
+    <h3>When respiratory protection is required</h3>
+    <p>§6.2.1 sets the trigger: <strong>firefighters entering any environment in which fire is present during an aircraft incident, as well as during overhaul operations, should be protected with self-contained respiratory equipment. This applies equally to aircraft that comprise aluminium and composite fibre materials.</strong></p>
+    <p>Note two things. First, the trigger is <em>the environment</em>, not the job title — overhaul counts, so the crew working a cooled aircraft at 04:00 is in scope exactly as much as the crew making the initial attack. Second, the aluminium/composite point is explicit, and it is there because a decade ago the answer was "aluminium, so it's fine".</p>
+
+    <h3>Why a cabin is not just smoke</h3>
+    <p>§6.2.2 is the reason the equipment is self-contained rather than filtered: <strong>the cabin interior of modern passenger aircraft comprises synthetic materials which, during fire or charring, will produce dangerous toxic gases. Such gases include carbon monoxide, hydrogen chloride, chlorine, hydrogen cyanide and carbonyl chloride (phosgene).</strong></p>
+    <p>Six named gases, and only one of them is the obvious one. A filtered respirator is designed to take out particular substances; it is not designed for an atmosphere containing phosgene and hydrogen cyanide in unknown concentration. And carbon monoxide in a fire atmosphere is exactly the gas that a particulate filter does nothing about, because it is not a particulate.</p>
+    <p>So the guidance states that firefighters <em>required to enter a smoke-filled cabin or other toxic environment will need self-contained respiratory equipment of an approved design for the anticipated environment</em>. That phrase — <strong>approved design for the anticipated environment</strong> — is doing real work. Approved for what, and for where.</p>
+
+    <h3>Composite fibre, and the one that catches people</h3>
+    <p>§6.2.3: <strong>composite fibre, if involved in fire, can produce dangerous substances such as hydrogen cyanide, hydrogen chloride, hydrogen sulfide, hydrogen fluoride, acrolein and nitrogen dioxide</strong>. And §6.2.4 covers the case that is easier to miss: <strong>composite fibre, if involved in high impact, such as an aircraft crash landing without the presence of fire, may become damaged to the extent minute particles of composite fibres are released into the atmosphere. Firefighters required to enter an area where minute particles of composite fibre are present will need self-contained breathing apparatus or, as a minimum, full face respirators with the appropriate filtration filters.</strong></p>
+    <p>Read those two together. §6.2.3 is a <em>fire</em> hazard requiring self-contained equipment. §6.2.4 is a <em>non-fire</em> hazard — a high-impact landing with no fire at all — where full face respirators with appropriate filtration are acceptable as a minimum.</p>
+    <p>That distinction matters operationally. The scenario the crew will actually face at a 03:00 call is often the non-fire one: aircraft damaged, no flames, but composite structure broken down into airborne fibre. Treating that as a no-respiratory-protection scenario because there is no fire is the failure.</p>
+
+    <h3>Adequate in function and in duration</h3>
+    <p>§6.2.5 draws the line and names what does not cross it: <strong>it is essential to ensure that the respiratory equipment selected is adequate in terms of its basic function, and its operational duration for the tasks involved. Industrial smoke masks and certain types of limited capacity compressed air equipment are unlikely to meet the stringent requirements of these operations.</strong></p>
+    <p>Two tests, both required. <em>Basic function</em> — does the equipment do what it is for. <em>Operational duration</em> — does it last as long as the task, which for a cabin entry under a foam blanket with a casualty in tow is a calculation, not a guess. A set rated at 15 minutes is fine for a search and useless for an extrication if nobody has counted the elapsed time.</p>
+
+    <h3>Competence is part of the equipment</h3>
+    <p>§6.2.6 is the clause that separates a service with breathing apparatus from a service that can use it: <strong>it is essential to develop and maintain a high level of competence in those firefighters appointed to wear respiratory equipment. This competence must include the most stringent procedures for the inspection, testing and maintenance of the equipment. If the highest standards are not achieved and maintained by regular training, the equipment can become ineffective and present a serious hazard to the wearer.</strong></p>
+    <p>Note the causal direction. It is not that the equipment fails and therefore competence is needed. It is that <em>without</em> competence and maintenance, the equipment itself becomes the hazard to the wearer. The set is a tool that can injure the person using it.</p>
+    <p>So §6.2.7 closes the loop: <strong>wherever self-contained respiratory equipment is operated, adequate arrangements must be made for the recharging of air cylinders with pure air and a quantity of spare parts should be hand-held to ensure the continuous availability of the service.</strong> Recharging with pure air, spare parts hand-held, continuous availability — all three, because a set that is on a compressor queue is not available.</p>
+
+    <h3>Deciding whether to enter</h3>
+    <p>The standard tells you what the equipment is for. It does not give you an entry decision, and that is correct — an entry decision belongs to the incident commander in front of the actual atmosphere, informed by the fire behaviour, the aircraft type and the state of the airframe.</p>
+    <p>What this lesson can give you is the question to ask before the alarm rather than after it: for each aircraft type you handle, do you know whether it is aluminium, composite, or both; do you know what your equipment is approved for; and does your service hold equipment rated for the duration of the longest entry you would authorise?</p>
+
+    <blockquote>
+      <p><strong>SME action:</strong> for each aircraft type based at or transiting your aerodrome, establish whether it is aluminium, composite or mixed, and record the toxic products identified for it in fire and in high-impact-without-fire. Then confirm three equipment facts against your manufacturer&rsquo;s data and your State&rsquo;s approval: the equipment is approved for the anticipated environment, its rated duration, and the duration of the longest entry you would authorise. If the rated duration is less than your longest authorised entry, that is a finding and the answer is either shorter entries or better equipment — not a hope. Finally, confirm the pure-air recharge arrangement and where spare parts are held.</p>
+    </blockquote>
+  `,
+  refs: [
+    'ICAO Doc 9137 Part 1 — §6.2.1 respiratory protection where fire is present and during overhaul, including aluminium and composite fibre aircraft',
+    'ICAO Doc 9137 Part 1 — §6.2.2 synthetic cabin interiors and the toxic gases produced in fire or charring',
+    'ICAO Doc 9137 Part 1 — §6.2.3 composite fibre toxic products in fire; §6.2.4 composite fibre particles in high impact without fire',
+    'ICAO Doc 9137 Part 1 — §6.2.5 adequacy in basic function and operational duration; industrial smoke masks and limited capacity compressed air equipment',
+    'ICAO Doc 9137 Part 1 — §6.2.6 competence in the use of respiratory equipment; §6.2.7 pure air recharge, hand-held spare parts, continuous availability',
+    'Manufacturer instructions for your specific self-contained breathing apparatus',
+    'NFPA 6001 — Selection and Maintenance of Self-Contained Breathing Apparatus (listed for this course; not reproduced by this platform)',
+    'Course ART-24 — emergency medical response and casualty care'
+  ],
+  smeChecked: false
+},
+
+  'art07-m2': {
+  title: 'Donning, doffing and buddy checks',
+  brief:
+    'The kit is specified to be worn in part, throughout the tour of duty. ' +
+    'Donning in a moving vehicle is the constraint that decides everything.',
+  points: [
+    'Protective clothing must be provided, maintained and readily available for instant use (§6.1.1).',
+    'Some forms of protective clothing create dressing problems which cannot easily be solved within the crew compartment of a moving vehicle (§6.1.1(a)).',
+    'If it cannot be dressed in while the vehicle is moving, it will not be dressed in.',
+    'Protective clothing is distinct from ordinary fire service uniforms and is worn during firefighting activities including training (§6.1.2).',
+    'Protective clothing provides protection from radiated heat and from injuries arising from impact or abrasion; a measure of protection from water ingress is desirable in low temperature operations (§6.1.2).',
+    'A typical protective uniform consists of a helmet with visor, a suit (one piece or jacket and trousers), boots and gloves (§6.1.2).',
+    'The helmet must permit both speech and the reception of audible signals or words of command (§6.1.3).',
+    'Shared impersonal issue creates sizing and hygiene problems and real personal objections (§6.1.1(c)).'
+  ],
+  body: `
+    <h3>Instant use is the design requirement</h3>
+    <p>§6.1.1 opens with the requirement: <strong>it is essential that all personnel operating at an aircraft fire be provided with protective clothing which will ensure the wearer is able to perform the assigned duties. This clothing should be provided, maintained and readily available for instant use.</strong></p>
+    <p>"Able to perform the assigned duties" is doing the work. The test is not protection in the abstract; it is whether the wearer can do the job while wearing it. And <em>readily available for instant use</em> is a specification on your uniform, not on the store room.</p>
+
+    <h3>The moving-vehicle constraint</h3>
+    <p>§6.1.1(a) gives the first of three factors, and it is the one that decides the whole design: <strong>the extent to which it is necessary to wear continuously all, or some elements of, the protective clothing so as to ensure immediate response when a call for attendance at an aircraft accident is received. Some forms of protective clothing create dressing problems which cannot easily be solved within the crew compartment of a moving vehicle.</strong></p>
+    <p>State the consequence plainly, because it is worth more than the clause: <strong>if it cannot be dressed in while the vehicle is moving, it will not be dressed in.</strong> Not "it will be dressed in slowly", not "it will be done badly". Not dressed in.</p>
+    <p>So the question "what do we wear under the turnout gear" is really "what can a dressed person put on in a moving cabin, in the dark, in the position they are actually sitting in". Test that with the crew who do it, in the seats they occupy, not in a station corridor.</p>
+
+    <h3>Heat is the second factor, and it is a design compromise</h3>
+    <p>§6.1.1(b): <strong>assuming that some elements of the protective clothing must be worn at all times during a tour of duty, there will be significant effects on the wearers in locations with high ambient temperatures. This is due to the nature of protective clothing and its inevitable restriction on the loss of body heat through natural ventilation processes. This suggests that there may have to be a compromise solution between the ultimate degree of protection offered by some forms of clothing and a lesser, but acceptable, form of protection which can be provided by clothing specifically designed for use in areas with high ambient temperatures. This compromise does not expose operatives to unacceptable risk but does ensure that immediate response to a call is feasible.</strong></p>
+    <p>That is unusually candid, and the important sentence is the last one. <em>This compromise does not expose operatives to unacceptable risk</em> — the standard is saying a lesser but designed-for-purpose item is still acceptable protection. And <em>immediate response to a call is feasible</em> — the compromise exists to protect the response time, not to economise.</p>
+    <p>The practical reading: in a hot climate, a single heavy suit worn continuously is the wrong answer, because it fails factor (a) and creates heat load that degrades judgement. A layered kit with a stated compromise is the right answer. Write the compromise down. An undocumented compromise is an accident; a documented one is a decision your own SMEs made.</p>
+
+    <h3>Sizing is the third factor, and it is a personnel issue</h3>
+    <p>§6.1.1(c) names the problem honestly rather than pretending it away: <strong>it is essential to recognize the problems which will arise for aesthetic and hygienic reasons if clothing has to be shared on an "impersonal issue" basis. Apart from the practical difficulties of ensuring that each wearer is provided with clothing of the correct size, in these circumstances there may well be strong personal objections to this practice.</strong></p>
+    <p>The guidance's solution is worth noting because it is a design answer rather than an administrative one: <strong>the acquisition of relatively inexpensive uniforms, some of which require a special form of undergarment for complete protection, which can be worn in part throughout hours of duty without discomfort. Adequate protection can be provided and clothing issues may then be possible on a personal basis, ensuring correct sizing and eliminating the personal difficulties described above.</strong></p>
+    <p>Cheaper uniform, worn over a proper undergarment, issued personally. That gives correct sizing and removes the hygiene objection, and it does it by making the worn-in-part layer inexpensive rather than by compromising the outer protection.</p>
+
+    <h3>What the uniform actually is</h3>
+    <p>§6.1.2 defines the scope and then the list: <strong>protective clothing is distinct from ordinary fire service uniforms and is worn during firefighting activities, including training. It is designed to provide the firefighter with protection from radiated heat and from injuries arising from impact or abrasion during operational activities. A measure of protection from the ingress of water is also desirable particularly in low temperature operations. A typical protective uniform consists of a helmet, with visor, a suit, either in one piece or in a jacket and trousers combinations, boots and gloves.</strong></p>
+    <p>Two things to hold onto. It is <em>worn during training</em> — a crew who only suit up for incidents will suit up slowly for incidents. And "a measure of protection from the ingress of water" is a <em>measure</em>, listed as desirable and particularly for low temperature, which tells you it is the weakest of the four protections and the one most often traded.</p>
+
+    <h3>The helmet is a communications device</h3>
+    <p>§6.1.3 is where this becomes operational. Beyond impact, penetration, electrical conductivity and resistance to deformation under heat, <strong>it should not give the wearer a sense of isolation, and it must permit both speech and the reception of audible signals or words of command.</strong></p>
+    <p>A helmet that muffles a crew command has stopped being protective and started being a hazard. Check it the way it will be used — worn, visor down, radio on, with a colleague talking — not by inspecting it on a shelf.</p>
+
+    <h3>Doffing and the contamination problem</h3>
+    <p>The standard's donning provisions are clear; its doffing provisions are not in Chapter 6 in comparable detail. That is an honest gap, and it means doffing discipline is yours to define.</p>
+    <p>Build it around three principles that follow from what Chapter 6 does say:</p>
+    <ul>
+      <li><strong>Contaminated clothing does not go back into the crew compartment.</strong> A suit that has been in a smoke-filled cabin and is then carried in a closed vehicle contaminates the people and the equipment in that vehicle for the rest of the shift.</li>
+      <li><strong>SCBA is last off and stays on until the atmosphere is confirmed.</strong> §6.2.1 includes overhaul operations in the respiratory protection requirement, so doffing is not the moment the environment becomes safe — it is the moment you have left it.</li>
+      <li><strong>Facepiece hygiene is a real task.</strong> The whole apparatus is compromised by a contaminated facepiece, and that is exactly the equipment that must work next time.</li>
+    </ul>
+    <p>And a fourth, which is the same point as the buddy check: doffing is where buddy systems fail, because the urgency is over and attention moves on.</p>
+
+    <blockquote>
+      <p><strong>SME action:</strong> test the moving-vehicle constraint directly. Have your crew don each element in their actual seats, in the dark, in a moving vehicle, and time it. Any element that cannot be completed that way is either part of the worn-in-continuously layer or it is not part of the response kit. Then write down your heat compromise explicitly — which items are worn continuously, which only on response, and what the heat rationale is. Finally, define your doffing and decontamination sequence, confirm contaminated clothing does not re-enter the crew compartment, and brief it.</p>
+    </blockquote>
+  `,
+  refs: [
+    'ICAO Doc 9137 Part 1 — §6.1.1 protective clothing enabling the wearer to perform assigned duties, readily available for instant use, and the three factors: continuity of wear and dressing problems in a moving vehicle; heat and the compromise solution; impersonal issue, sizing and hygiene',
+    'ICAO Doc 9137 Part 1 — §6.1.2 protective clothing distinct from ordinary uniforms, worn including in training; radiated heat, impact and abrasion, water ingress; the typical uniform list',
+    'ICAO Doc 9137 Part 1 — §6.1.3 helmet requirements including speech and audible signals or words of command',
+    'ICAO Doc 9137 Part 1 — §6.2.1 respiratory protection including during overhaul operations',
+    'NFPA 600 — Personal Protective Equipment for Fire and Emergency Services (listed for this course; not reproduced by this platform)',
+    'Manufacturer instructions for your specific personal protective equipment',
+    'Course ART-16 m4 — exposure protection and withdrawal'
+  ],
+  smeChecked: false
+},
+
+  'art07-m3': {
+  title: 'Inspection, maintenance and records',
+  brief:
+    'SCBA is the one piece of equipment that can kill the person using it, ' +
+    'silently, if the records stop.',
+  points: [
+    'Competence must include the most stringent procedures for inspection, testing and maintenance (§6.2.6).',
+    'If standards are not achieved and maintained by regular training, the equipment can become ineffective and present a serious hazard to the wearer (§6.2.6).',
+    'Adequate arrangements must be made for recharging air cylinders with pure air (§6.2.7).',
+    'A quantity of spare parts should be hand-held to ensure continuous availability (§6.2.7).',
+    'Protective clothing must be provided, maintained and readily available for instant use (§6.1.1). Maintenance is part of availability, not an afterthought.',
+    'NFPA 6001 governs SCBA selection and maintenance in your State. This platform does not reproduce it.',
+    'The record is the control. If the facepiece seal, cylinder pressure and service history are not written down somewhere, no inspection regime exists.'
+  ],
+  body: `
+    <h3>The clause that makes this a safety-critical lesson</h3>
+    <p>§6.2.6 states the standard and the consequence in one sentence: <strong>it is essential to develop and maintain a high level of competence in those firefighters appointed to wear respiratory equipment. This competence must include the most stringent procedures for the inspection, testing and maintenance of the equipment. If the highest standards are not achieved and maintained by regular training, the equipment can become ineffective and present a serious hazard to the wearer.</strong></p>
+    <p>Three claims, and the third is the one that reframes everything. Not just "the equipment might fail" — the equipment can <em>become a hazard to the wearer</em>. A breathing set that passes an air test and has a degraded facepiece seal, or a cylinder that passes a pressure test and has a compromised valve, does not announce itself. It fails at the moment of use, on the wearer, usually in the worst possible circumstances.</p>
+    <p>"Most stringent" is also doing work. Not the same standard applied to all equipment across the service — the most stringent available procedure for this equipment, because the consequence of failure is borne by the person wearing it.</p>
+
+    <h3>Three provisions the standard makes explicitly</h3>
+    <ul>
+      <li><strong>Pure air for recharge.</strong> §6.2.7: <em>adequate arrangements must be made for the recharging of air cylinders with pure air</em>. The word is <em>pure</em>. Compressed air quality matters, because a cylinder filled from a compressor with inadequate filtration introduces contaminants the wearer then breathes under load.</li>
+      <li><strong>Spare parts hand-held.</strong> <em>a quantity of spare parts should be hand-held to ensure the continuous availability of the service.</em> Hand-held means carried by the service, not held in a store across the airfield. The same availability logic as the agent reserve in ART-06 m5.</li>
+      <li><strong>Continuous availability.</strong> The stated purpose of both provisions. A set that is on a compressor queue or awaiting a part is not available.</li>
+    </ul>
+
+    <h3>Protective clothing is in scope too</h3>
+    <p>§6.1.1 does not separate provision from maintenance: <strong>this clothing should be provided, maintained and readily available for instant use.</strong> Three obligations in one sentence, and the middle one is the one that gets dropped first.</p>
+    <p>For clothing, maintenance is not only cleaning. It is: correct sizing maintained as the wearer changes; heat degradation and UV exposure tracked on outer layers; seams and closures checked; boots and gloves inspected for the abrasion damage they are specified to protect against; and the undergarment system kept stocked if you have adopted the §6.1.1(c) compromise.</p>
+    <p>A service that has adopted the layered compromise in m2 must maintain the layers as a <em>system</em>. A good outer suit over a missing undergarment is not a good suit.</p>
+
+    <h3>What NFPA 6001 covers, and what this lesson does not</h3>
+    <p>NFPA 6001 — <em>Selection and Maintenance of Self-Contained Breathing Apparatus</em> — is listed for this course. It governs cylinder requalification intervals, fill procedures, facepiece selection, and the full maintenance regime in the United States.</p>
+    <p><strong>This platform does not reproduce it, and will not invent its contents.</strong> What this lesson can do is tell you which decisions are yours and which come from that document and your State, so that when you open your own standard you know what you are looking for:</p>
+    <ul>
+      <li>Cylinder requalification interval and hydrostatic test requirements.</li>
+      <li>Air quality specification for compressed breathing air, and compressor filtration standard.</li>
+      <li>Facepiece selection and fit-testing requirements.</li>
+      <li>Annual service scope and who is permitted to perform it.</li>
+      <li>Record retention period for each set.</li>
+    </ul>
+    <p>Those five are the specification. The rest of this lesson is about the regime you build around them.</p>
+
+    <h3>The record is the control</h3>
+    <p>The failure mode in SCBA programmes is not usually a skipped inspection. It is a record that stops being filled in, so that when a set is issued nobody can say when it was last serviced, what its cylinder history is, or whether the facepiece has ever been fit-tested for the person now wearing it.</p>
+    <p>Per set, maintain and keep:</p>
+    <ol>
+      <li><strong>Set identity</strong> — manufacturer, model, serial, mask size, cylinder serial and capacity.</li>
+      <li><strong>Cylinder</strong> — date of manufacture, date of last hydrostatic test, next test due, all fills with air quality confirmation.</li>
+      <li><strong>Service history</strong> — every intervention: date, nature of work, any damage, parts replaced.</li>
+      <li><strong>Facepiece</strong> — fit test date for each wearer assigned, and the result.</li>
+      <li><strong>Air consumption</strong> — recorded per entry where the wearer can estimate it, so that a growing shortfall shows up before it becomes an emergency.</li>
+      <li><strong>Crew check</strong> — the pre-use check, by whom, and the pressure and alarm reading observed.</li>
+    </ol>
+
+    <h3>The pre-use check that actually happens</h3>
+    <p>Whatever the manufacturer specifies, the crew check must be the same every time and must be recorded. At minimum, and in the manufacturer's order:</p>
+    <ul>
+      <li>Cylinder pressure, and that the contents are what the gauge claims — not a gauge reading taken from another set.</li>
+      <li>Facepiece condition and seal: lens, webbing, face cushion, and the seal check the manufacturer specifies.</li>
+      <li>Alarm activation at the specified test pressure.</li>
+      <li>Valve and regulator function.</li>
+      <li>Harness, straps and any quick-release.</li>
+      <li>Any entry that indicates the set should not be issued.</li>
+    </ul>
+    <p>Two details that matter more than they look. The alarm test at the specified pressure is what tells you the wearer will be warned, and it is the item most often skipped under time pressure. And the set is withdrawn on <em>any</em> doubt — a crew who are unsure about a facepiece take a different set, and the set in question goes on the bench instead of into the next call.</p>
+
+    <blockquote>
+      <p><strong>SME action:</strong> take your SCBA register and answer four questions. Can you produce, for every set issued, its cylinder test date and air quality record? Can you produce a fit test for every wearer? Can you name who performs the annual service and what your standard requires them to do? And is there a set that has been issued in the last month with a defect noted but no rectification date? Each of those with no answer is the finding. Then confirm the pure-air recharge arrangement, the air quality specification being met, and where the hand-held spare parts actually are.</p>
+    </blockquote>
+  `,
+  refs: [
+    'ICAO Doc 9137 Part 1 — §6.2.6 competence including the most stringent inspection, testing and maintenance procedures; equipment can become a hazard to the wearer',
+    'ICAO Doc 9137 Part 1 — §6.2.7 recharging air cylinders with pure air; spare parts hand-held for continuous availability',
+    'ICAO Doc 9137 Part 1 — §6.1.1 protective clothing provided, maintained and readily available for instant use',
+    'NFPA 6001 — Selection and Maintenance of Self-Contained Breathing Apparatus (listed for this course; not reproduced by this platform)',
+    'NFPA 600 — Personal Protective Equipment for Fire and Emergency Services (listed for this course; not reproduced by this platform)',
+    'Manufacturer instructions for your specific self-contained breathing apparatus — service scope and crew check sequence',
+    'Your national Civil Aviation Authority requirements — confirm which SCBA standard and issue bind you'
+  ],
+  smeChecked: false
+},
+'art07-m4': {
+  title: 'Heat stress, fatigue and impairment',
+  brief:
+    'Fitness is not a paperwork exercise. It decides whether you are the ' +
+    'person who can be trusted with a decision at hour fourteen.',
+  points: [
+    'All RFF personnel must possess a minimum level of physical fitness and medical fitness to perform the tasks associated with these operations (§10.4.1).',
+    'Optimum fitness means being able to carry out RFF activities safely, successfully and without undue fatigue (§10.4.1).',
+    'The key fitness components are aerobic fitness, anaerobic fitness, flexibility and medical fitness (§10.4.1).',
+    'The physical fitness assessment should be conducted at least once a year (§10.4.5).',
+    'Medical fitness assessments should be conducted for pre-employment entry and ongoing for existing staff; frequency determined by each agency (§10.4.6).',
+    'Medical fitness assessments should identify underlying medical conditions that may pose a risk during physically demanding activities (§10.4.6).',
+    'Fatigue is greatly influenced by the shift system (§18.5.5). Sufficient rest must be ensured despite the need for 24-hour operational readiness.',
+    'RFF management must accept that not all personnel can perform at the same level of physical fitness standards (§18.5.3).'
+  ],
+  body: `
+    <h3>What fitness is for</h3>
+    <p>§10.4.1 gives both the requirement and its measure: <strong>as the nature of RFF operations involves periods of intense physical activity, all RFF personnel have to possess a minimum level of physical fitness and medical fitness to be able to perform the tasks associated with these operations.</strong> And then the definition that keeps it honest: optimum fitness and medical fitness <em>would mean that a firefighter is able to carry out RFF activities safely, successfully and without undue fatigue</em>.</p>
+    <p>"Without undue fatigue" is the operative test. A fit person who fatigues after twenty minutes of work has a fitness problem relative to the task, regardless of any score they achieved in a test.</p>
+
+    <h3>Four components, two of which are aerobic and anaerobic opposites</h3>
+    <table class="calc">
+      <tr><th>Component</th><th>What it is</th><th>Typical activity</th><th>Clause</th></tr>
+      <tr><td>Aerobic</td><td>Sustained exercise at low to moderate or high intensity; VO₂ dependent; governs endurance</td><td>Walking, jogging, cycling, rope skipping, stair climbing, swimming</td><td>10.4.2</td></tr>
+      <tr><td>Anaerobic</td><td>High energy for seconds or minutes; muscular strength, speed, power</td><td>Heavy weight lifting, sprinting, power swimming, rapid bursts</td><td>10.4.3</td></tr>
+      <tr><td>Flexibility</td><td>Moving limbs and joints to specific positions at end of normal range; reduces injury risk in cramped positions</td><td>Slow controlled stretching</td><td>10.4.4</td></tr>
+      <tr><td>Medical</td><td>Absence of underlying conditions that may pose a risk during physically demanding activity</td><td>Assessment, not exercise</td><td>10.4.1, 10.4.6</td></tr>
+    </table>
+    <p>The aerobic/anaerobic distinction is not academic. An RFF response is a sprint — moving equipment, donning, entering, dragging a casualty — inside a longer endurance demand. A crew that is aerobically fit but has no anaerobic capacity struggles with the first thirty seconds of maximum effort, which is exactly when the response time is being measured.</p>
+
+    <h3>The annual assessment</h3>
+    <p>§10.4.5 sets the frequency and the population: <strong>the physical fitness assessment should also be conducted at least once a year. The physical fitness assessment should be conducted for pre-employment entry as a firefighter as well as ongoing physical fitness assessments for existing RFF staff to ensure they are maintaining their level of physical fitness.</strong></p>
+    <p>Medical follows the same shape but with agency-set frequency (§10.4.6): <strong>medical fitness assessments specific to RFF services should be developed. The medical fitness assessments should be conducted for pre-employment entry as a firefighter as well as ongoing medical fitness assessments for existing staff. The frequency of medical fitness assessments should be determined by each agency.</strong></p>
+    <p>Note "each agency" — the standard deliberately leaves the frequency to you, and therefore leaves you accountable for it. And the purpose is specific: <em>the medical fitness assessments should be used to identify any underlying medical conditions, which may pose a risk to the individual firefighter during physically demanding activities</em>.</p>
+
+    <h3>Not everyone is the same, and that is not a problem</h3>
+    <p>§18.5.3 is a management statement disguised as a fitness statement, and it is one services find difficult: <strong>to ensure that RFF personnel are able to perform their roles effectively, thought needs to be put into designing an appropriate physical fitness programme to condition them for the physical rigours of the job. In the process of designing any physical fitness programmes, due consideration must be given to individual human limitations. RFF management must also accept that not all personnel can perform at the same level of physical fitness standards. The key is to establish the minimum physical fitness requirements of a firefighter and design a programme that can best replicate these demands.</strong></p>
+    <p>Establish the <em>minimum</em>, then build a programme that reaches it. Not a single elite standard that excludes people from the service, and not no standard at all. The clause is telling management to stop treating fitness variation as a problem to be solved and start treating it as a design input.</p>
+
+    <h3>Fatigue is a roster problem</h3>
+    <p>§18.5.5 is short and pointed: <strong>fatigue is one important factor that directly affects human performance and is greatly influenced by the shift system of RFF services. Besides the need to conform to local labour rules and regulations of individual States, there must be considerations to ensure that RFF personnel can have sufficient rest despite the need to be on 24-hour operational readiness at most airports.</strong></p>
+    <p>Two things follow. First, the shift system is not an administrative detail that sits outside the safety case — it <em>is</em> a fatigue control, and its design is a safety decision with a named owner. Second, "conform to local labour rules" is not the end of the requirement. The standard asks for consideration of sufficient rest <em>despite</em> 24-hour readiness, which means the roster has to be designed around the human, not the labour rule.</p>
+    <p>And note the connection to ART-01 m4: the task resource analysis requires that fatigue and adequate relief be considered as part of the staffing justification. The roster and the crew complement are the same question.</p>
+
+    <h3>Noise, and the thing you stop noticing</h3>
+    <p>§18.5.4 covers the hazard that is omnipresent and invisible: <strong>noise is an important human factor that is omnipresent in an airport environment and cannot be ignored. Most fire stations are located within close proximity to the runway and aircraft movement areas, thus exposing RFF personnel to constant loud noises. Besides posing as disruptive interferences during the transmission of messages, long-term and regular exposure to noise can have serious implications on one's health (e.g. temporary, partial or permanent hearing loss). To address this issue, RFF services should issue and mandate the use of suitable hearing protection devices. In addition, personnel who are subjected to constant exposure to noise should be sent for regular noise induced deafness (NID) hearing tests.</strong></p>
+    <p>Read the operational sentence first: noise is a <em>disruptive interference during the transmission of messages</em>. That is the immediate RFF problem — you miss a word of command. The health consequence follows from it.</p>
+
+    <h3>Psychological harm, treated as an operational reality</h3>
+    <p>§18.5.1 makes the point that is most often omitted and most consequential: <strong>airport operators and RFF services must also not neglect the mental and psychological well-being of emergency responders such as RFF personnel who may suffer from post-traumatic stress disorders. Appropriate counselling of psychological therapy may need to be provided to RFF personnel who responded to such emergencies and who subsequently were not able to cope with the stress they faced thereafter.</strong></p>
+    <p>And then the reason an operational plan should care: <em>it will therefore be essential to also provide psychological treatment for RFF personnel after a major crisis both from a welfare perspective and also from a business continuity standpoint</em>.</p>
+    <p>Read that phrase carefully — <strong>business continuity</strong>. Psychological harm after a major incident does not only affect the individual. It affects the crew who have to cover while that person is off, and the roster you were already stretched on. It is an availability problem as well as a welfare one, which is exactly why it belongs in the emergency plan rather than in a policy document.</p>
+
+    <blockquote>
+      <p><strong>SME action:</strong> produce the fitness programme from §18.5.3: state your <em>minimum</em> physical fitness requirement, the assessment that measures it, and the programme that builds to it. Confirm the annual physical assessment is actually happening for every serving member, and confirm the medical assessment frequency your agency has determined — and that it looks for the underlying conditions §10.4.6 names, not just gross fitness. Then review the shift system as a fatigue control: hours worked before a night duty, rest between shifts, and what happens after a major incident. Finally, confirm hearing protection is issued and mandated, and that NID testing is arranged for exposed personnel. If any of these is a policy on paper with no record behind it, that is the finding.</p>
+    </blockquote>
+  `,
+  refs: [
+    'ICAO Doc 9137 Part 1 — §10.4.1 minimum physical and medical fitness; optimum fitness defined as carrying out activities safely, successfully and without undue fatigue; the four key components',
+    'ICAO Doc 9137 Part 1 — §10.4.2 aerobic fitness; §10.4.3 anaerobic fitness; §10.4.4 flexibility; §10.4.5 physical fitness assessment at least once a year, pre-employment and ongoing',
+    'ICAO Doc 9137 Part 1 — §10.4.6 medical fitness assessments, pre-employment and ongoing, frequency determined by each agency, identifying underlying medical conditions posing a risk',
+    'ICAO Doc 9137 Part 1 — §18.5.1 psychological support for RFF personnel after a major crisis, welfare and business continuity; §18.5.3 not all personnel can perform at the same level, establish the minimum',
+    'ICAO Doc 9137 Part 1 — §18.5.4 noise as a human factor, interference with message transmission, hearing protection and NID testing; §18.5.5 fatigue and the shift system',
+    'NFPA 1561 — Emergency Services Personnel Occupational Health and Safety (listed for this course; not reproduced by this platform)',
+    'Course ART-01 m4 — the task resource analysis, including fatigue and relief'
+  ],
+  smeChecked: false
+},
 };
 
 /**
