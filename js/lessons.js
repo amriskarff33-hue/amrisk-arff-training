@@ -3921,6 +3921,191 @@ const LESSON_OVERRIDES = {
   ],
   smeChecked: false
 },
+
+  'art15-m2': {
+  title: 'APU fires',
+  brief:
+    'The APU is a small turbine with a big fire problem — hidden, ' +
+    'fuel-fed, and often discovered late.',
+  points: [
+    'The APU is a gas turbine engine, usually in the tail cone. It has its own fuel, oil and hydraulic systems and its own fire detection and extinguishing system.',
+    'An APU fire warning is often the first indication — the crew may not see or smell anything until the warning triggers.',
+    'The built-in extinguishing system is the primary control. If it fails or is expended, the fire is now an external turbine fire.',
+    'External attack on an APU is constrained by access: the tail is high, the intake and exhaust are small, and the fire is often screened by structure.',
+    'Do not position in the intake or exhaust path. The intake suction and exhaust blast are real hazards even at ground idle.',
+    'Clean agent through the access panel is the preferred external application. Do not foam the intake or exhaust unless no other option (§12.2.10).'
+  ],
+  body: `
+    <h3>What the APU actually is</h3>
+    <p>The Auxiliary Power Unit is a small gas turbine engine, typically located in the tail cone of the aircraft. It has its own fuel supply, its own oil system, its own hydraulic system, and its own fire detection and extinguishing system. When the aircraft is on the ground, the APU provides electrical power and bleed air for air conditioning and engine start. In flight, it is a backup power source.</p>
+    <p>Because it is a turbine, the same fundamentals apply: intake suction, exhaust blast, fuel-fed fire, and a built-in extinguishing system that is the first and best line of defence.</p>
+
+    <h3>The detection problem</h3>
+    <p>An APU fire is often discovered by the flight deck warning system before anyone on the ground sees smoke. The APU compartment is enclosed, and the fire may be contained by the built-in system — or it may have already breached the compartment. The guidance notes that the crew may not be able to make an accurate appraisal of fire warning indicators, and advises bringing the aircraft to a complete stop and allowing RFF to inspect (§12.3.22).</p>
+    <p>For the RFF crew, this means: treat every APU fire warning as a live fire until you have physically confirmed otherwise. The thermal imaging camera is the tool that changes "we think it's out" into "we know it's out" without opening the compartment.</p>
+
+    <h3>The built-in system is primary</h3>
+    <p>Doc 9137 §12.2.9 states: for a confined turbine fire outside the combustion chambers, <strong>the built-in extinguishing system is the best control</strong>. A clean agent is only applied if the fire persists after the built-in system is expended and the turbine has shut down.</p>
+    <p>So the sequence is: flight crew operates the APU fire handle → built-in system discharges → fire should be controlled. Your role is to stand by, protect exposures, and be ready if the built-in system fails or the fire has already escaped the compartment.</p>
+
+    <h3>When the fire escapes the compartment</h3>
+    <p>If the APU fire has breached the tail cone, you are dealing with an external turbine fire. The constraints are:</p>
+    <ul>
+      <li><strong>Access.</strong> The tail is high — typically 6–10 m above ground. Your appliance must reach it (elevated platform, ladder, extensible applicator). §12.2.15 notes engine heights up to 10.5 m.</li>
+      <li><strong>Intake and exhaust.</strong> The APU intake is on the upper fuselage or the tail cone; the exhaust is at the tail. Stay out of the intake suction zone (≥10 m) and the exhaust blast zone (up to 500 m depending on aircraft size) — §12.2.11, §12.2.12.</li>
+      <li><strong>Screened fire.</strong> The tail structure may screen the fire from direct application. You may need to apply agent through the APU access panel or the exhaust, not at the open fire.</li>
+    </ul>
+    <p>The external attack guidance for turbine engines applies: clean agent through the access panel; foam or water spray on adjacent structures to keep them cool; do not put foam into the intake or exhaust unless control cannot be secured with other agents and the fire is in danger of spreading (§12.2.10).</p>
+
+    <h3>Fuel supply</h3>
+    <p>The APU draws from the aircraft fuel system. The flight crew's action on the fire handle should isolate the APU fuel supply. Confirm this has happened — if the fuel is still feeding, no amount of agent will extinguish the fire. The fuel isolation is a flight deck action; your role is to verify it is done.</p>
+
+    <h3>Re-ignition and the post-fire phase</h3>
+    <p>An APU fire that has been controlled can re-ignite if fuel is still leaking and hot surfaces remain. The guidance on titanium (§12.2.13) is relevant — some APUs have titanium components. If the fire is contained and the two preconditions hold (no external vapour mixtures, structure kept cool), the burn-out tactic may apply.</p>
+    <p>And the operational objective remains: rapid fire control with minimum consequential damage. Inform the operator of the agent used (§12.2.16).</p>
+
+    <blockquote>
+      <p><strong>SME action:</strong> for the aircraft types at your aerodrome, confirm the APU location (tail cone, cargo bay, elsewhere), the access panel arrangement, the clean agent your appliances carry and how it is delivered into the APU compartment, the maximum reach height, and your procedure for confirming fuel isolation from the flight deck. State who judges the burn-out preconditions for an APU fire.</p>
+    </blockquote>
+  `,
+  refs: [
+    'ICAO Doc 9137 Part 1 — §12.2.9 confined turbine fires; built-in system is best control',
+    'ICAO Doc 9137 Part 1 — §12.2.10 foam in turbine intake/exhaust (narrow exception)',
+    'ICAO Doc 9137 Part 1 — §12.2.11 intake and §12.2.12 exhaust danger distances',
+    'ICAO Doc 9137 Part 1 — §12.2.13 titanium fire control; §12.2.15 positioning and access height',
+    'ICAO Doc 9137 Part 1 — §12.2.16 agent choice and operator notification',
+    'ICAO Doc 9137 Part 1 — §12.3.22 aircraft fire warnings and thermal imaging',
+    'Aircraft rescue and firefighting charts for the types based at your aerodrome'
+  ],
+  smeChecked: false
+},
+
+  'art15-m3': {
+  title: 'Attack selection and positioning',
+  brief:
+    'The attack is not "spray and pray". It is a sequence: approach, ' +
+    'position, agent, technique — each step decided, not assumed.',
+  points: [
+    'The approach route is the first tactical decision. Uphill, upwind, avoid fuel pooling, avoid driving through smoke or over wreckage.',
+    'Positioning is dictated by the fire type and the agent. Engine fire = upwind/outboard, clean agent through access. Fuel spill = uphill/upwind, foam blanket from distance.',
+    'The first vehicle sets the route for everyone behind it. If the first vehicle positions badly, the whole response inherits the error.',
+    'Sector division is pre-planned, not improvised. Vehicle A covers left nacelle/outboard, Vehicle B covers right nacelle/outboard, Vehicle C covers exposures.',
+    'Turret sweep must achieve the design application rate over the whole practical critical area in one minute. Too fast = gaps; too slow = pile-up.',
+    'Continuous application means the second wave arrives before the first wave runs dry (3–4 minutes). A broken blanket is rebuilt from nothing.'
+  ],
+  body: `
+    <h3>The approach is a tactical decision, not a drive</h3>
+    <p>Doc 9137 §12.3.25 lists the positioning priorities, and the first one is the approach: <strong>approach the scene with extreme caution. Watch for evacuating occupants, wreckage debris, fuel ponding and other hazards. Avoid driving through any smoke which obscures your vision and potential evacuees'. Avoid driving over any aircraft wreckage</strong>.</p>
+    <p>The wind direction and terrain matter. <strong>Consider terrain and slope, and the direction of the wind before entering. Attempt to position uphill and upwind to avoid fuel and vapours, which tend to gather in low-lying areas</strong> (§12.3.25). This is not advice — it is the positioning priority that every driver and officer should run through before the vehicle moves.</p>
+
+    <h3>The first vehicle constrains the rest</h3>
+    <p>§12.3.25 makes a point that is easy to miss: <strong>RFF apparatus often respond in single file, so the first fire appliance to reach the accident site establishes the route for the vehicles behind it, and may dictate the approach into their ultimate positions</strong>.</p>
+    <p>Which means the single most consequential positioning decision on the scene is made by whoever gets there first, usually at the least informed moment of the whole incident. This is why the approach route and the initial position must be rehearsed, not improvised.</p>
+
+    <h3>Positioning by fire type</h3>
+    <p>The correct position depends on what you are fighting:</p>
+    <ul>
+      <li><strong>Engine fire.</strong> Upwind and outboard of the engine. Clean agent through the access panel or cowling. Foam/water on adjacent structure. Do not position below the engine. Do not enter the intake or exhaust zone.</li>
+      <li><strong>APU fire.</strong> Upwind of the tail. Clean agent through the APU access panel. Foam/water on adjacent tail structure. The tail is high — you need reach.</li>
+      <li><strong>Fuel spill fire.</strong> Uphill and upwind of the spill. Foam blanket applied from distance, sweeping to merge into a continuous blanket. Do not drive through the spill.</li>
+      <li><strong>Cabin/cargo fire.</strong> Upwind of the fuselage. Protect egress routes first. Agent application through windows/doors or via HRET. Interior attack only after ventilation and with SCBA.</li>
+    </ul>
+
+    <h3>Sector division is pre-planned</h3>
+    <p>When multiple vehicles attack the same fire, their foam blankets must merge into a single continuous blanket. That requires:</p>
+    <ul>
+      <li>A pre-agreed sector division so the edge of one vehicle's sweep meets the edge of the next without overlap or gap.</li>
+      <li>Matching foam types and performance levels — mixing level A and level B on the same fire creates a blanket with two different drainage times (§2.3.10).</li>
+      <li>Communication so the incident commander can adjust sectors as the wind shifts.</li>
+    </ul>
+    <p>The guidance is explicit: <strong>initial position of vehicles should be to protect egress routes of evacuating aircraft occupants</strong> (§12.3.25(d)). The incident commander should consider what is happening, what is about to happen, and what to do to preserve life and property (§12.3.25(g)).</p>
+
+    <h3>Turret technique is the delivery</h3>
+    <p>The discharge rate in the table is Q1 in one minute. That means the operator must sweep the turret such that every square metre of the practical critical area receives the design application rate averaged over the minute. Two failure modes:</p>
+    <ul>
+      <li><strong>Sweeping too fast.</strong> The foam is laid in stripes with gaps. The fire burns through the gaps and the blanket never forms.</li>
+      <li><strong>Sweeping too slow.</strong> The foam piles up in the first half of the area and the second half gets nothing. The total volume looks right on the gauge, but the fire is not controlled.</li>
+    </ul>
+    <p>This is why the standard requires continuous application (§2.7.3) and why training on the turret is not optional. A crew that can hit the rate on a calm day with a clean system will still fail if the operator has never practised the sweep.</p>
+
+    <h3>Re-positioning is part of the plan</h3>
+    <p>§12.3.25(e) states: <strong>ideally, vehicles should be positioned so they can be repositioned in the event of reflash or on direction of the incident commander</strong>. A vehicle that is boxed in by other vehicles, by terrain, or by its own hose lay cannot re-position. The incident commander needs the option to move vehicles — which means the initial positions must leave an exit route.</p>
+
+    <blockquote>
+      <p><strong>SME action:</strong> attach your positioning plan per aircraft type and fire type (engine, APU, fuel spill, cabin). Confirm it is drawn from your aerodrome's actual layout, taxiways, hardstanding and water points. Confirm sector assignments for your vehicle fleet, the foam type/performance level match, and the communication plan for wind-shift re-sectoring. Verify your turret operators have all demonstrated the sweep at the required rate on the actual appliances.</p>
+    </blockquote>
+  `,
+  refs: [
+    'ICAO Doc 9137 Part 1 — §12.3.25 positioning priorities (a) through (h); §12.3.21 first vehicle establishes route',
+    'ICAO Doc 9137 Part 1 — §2.3.5 application rates; §2.3.10 mixing performance levels not encouraged',
+    'ICAO Doc 9137 Part 1 — §2.7.3 continuous application (additional vehicles within 3–4 minutes)',
+    'ICAO Doc 9137 Part 1 — §12.2.8 to §12.2.16 engine and APU fire tactics',
+    'Your aerodrome emergency plan — pre-planned positioning and sector assignments',
+    'Course ART-03 m4 — consumption under real conditions'
+  ],
+  smeChecked: false
+},
+
+  'art15-m4': {
+  title: 'Running engines and flight deck coordination',
+  brief:
+    'The engine is still running. The crew is still inside. You are ' +
+    'attacking the fire while the aircraft is still an aircraft.',
+  points: [
+    'A running engine is a hazard zone — intake suction, exhaust blast, rotating parts. The distances in §12.2.11/12.2.12 are not suggestions.',
+    'The flight crew controls the engine. You cannot shut it down; they must. Coordination is not optional — it is the only way the hazard goes away.',
+    'The engine may need to stay running to provide lighting and communications for evacuation (§12.3.23). That hampering rescue is a documented trade-off, not a mistake.',
+    'Communicate on the flight deck intercom if available. The jack is usually under the forward fuselage behind an access door. Radio near a running engine may not work.',
+    'If the flight crew cannot function, RFF initiates the necessary action. Protection of the operation is the primary responsibility of the RFF service (§12.3.27).',
+    'Do not enter the fuselage once evacuation is initiated. Assist those who cannot self-evacuate; do not impede the evacuation (§12.3.27).'
+  ],
+  body: `
+    <h3>The engine does not stop for you</h3>
+    <p>An engine fire on the ground often means the engine is still running — or the flight crew has shut it down but the turbine is still spooling down, or the APU is still running to power the evacuation. The hazards do not vanish when the fire handle is pulled:</p>
+    <ul>
+      <li><strong>Intake suction.</strong> §12.2.11: stay at least 10 m from the front and side intake. The suction can ingest personnel, equipment, and loose debris.</li>
+      <li><strong>Exhaust blast.</strong> §12.2.12: stay up to 500 m from the rear depending on aircraft size. The blast is hot, high-velocity, and can knock a person down or flip a lightweight vehicle.</li>
+      <li><strong>Rotating parts.</strong> Even a spooling-down turbine can sever a limb. The nacelle is not a safe working area until the engine has fully stopped and the flight crew confirms it.</li>
+    </ul>
+    <p>These distances are not suggestions. They are the boundaries of the hazard zone. Working inside them requires a specific, briefed, and supervised reason.</p>
+
+    <h3>You do not control the engine — the flight deck does</h3>
+    <p>The flight crew controls the fuel, the ignition, the shutdown, and the fire handle. The RFF crew controls the agent, the position, and the attack. The two must be coordinated, and the guidance is explicit about how:</p>
+    <ul>
+      <li>§12.3.21: <strong>the Incident Commander should have the ability to communicate with other agencies on separate frequencies</strong>. Radios should have enough channels for command and support functions.</li>
+      <li>§12.3.22: <strong>where aircraft engines are running it may be difficult to communicate with the pilot by radio</strong>. Most aircraft are equipped with intercom systems where jacks are generally located under the forward portion of the aircraft, behind an access door. RFF personnel should be aware of this means of communication and carry the necessary headset and microphone to plug in.</li>
+    </ul>
+    <p>This is not a nice-to-have. If you cannot talk to the flight deck, you cannot confirm fuel isolation, engine shutdown, or evacuation status. You are attacking blind.</p>
+
+    <h3>The engine may need to stay running</h3>
+    <p>§12.3.23 states: <strong>it may be necessary to keep at least one engine operating after the aircraft has come to a stop, in order to provide lighting and communications aboard the aircraft</strong> — and this will hamper rescue operations to some extent. On turbo-jet engines, extreme care must be exercised in the immediate area ahead and for a considerable distance behind the engine.</p>
+    <p>This is a deliberate trade-off. The flight crew may decide the engine stays running to power the evacuation. That means you are working with a live engine. The hazard zone is active, the exhaust is hot, and the intake is sucking. Your positioning must account for it — you do not get to choose the engine state, you only get to choose where you stand.</p>
+
+    <h3>When the flight crew cannot function</h3>
+    <p>§12.3.27 provides for the case where the air crew are unable to function: <strong>in that event, RFF personnel are responsible for initiating the necessary action. Protection of the operation is the primary responsibility of the RFF service throughout</strong>.</p>
+    <p>That is a significant transfer of responsibility. It is exactly the kind of thing that goes wrong when nobody has said out loud that it has happened. Practise stating it — literally the words, not the meaning.</p>
+
+    <h3>Evacuation: you assist, you do not enter</h3>
+    <p>Once an evacuation is initiated, it cannot be stopped. The guidance is clear on RFF's role: <strong>RFF personnel should not impede the evacuation and should not attempt to enter the fuselage</strong>, but instead provide assistance and be prepared to assist those not capable of self-evacuation (§12.3.27).</p>
+    <p>Read that sequence carefully. Not impede. Do not enter. Provide assistance. The instinct to get in there and help is exactly the instinct that turns a survivable evacuation into a casualty list. If you are about to enter a fuselage with occupants still evacuating, you have misread your task.</p>
+
+    <h3>The intercom is your lifeline</h3>
+    <p>Carry the headset. Know where the jack is. Plug in and talk to the flight deck. Confirm: engine status, fuel isolation, fire handle status, evacuation decision, number of souls on board, and any injuries. If the radio does not work near the running engine, the intercom is your only link.</p>
+
+    <blockquote>
+      <p><strong>SME action:</strong> for the aircraft types at your aerodrome, confirm the intercom jack location and the headset/microphone your crews carry. Confirm the procedure for confirming engine status and fuel isolation with the flight deck. State your rule for working in the intake/exhaust hazard zone with a running engine. Confirm who has the authority to declare "flight crew unable to function" and transfer responsibility to RFF. Run a drill where the flight deck is simulated and the IC must coordinate via intercom while managing the attack.</p>
+    </blockquote>
+  `,
+  refs: [
+    'ICAO Doc 9137 Part 1 — §12.2.11 intake danger distance (≥10 m); §12.2.12 exhaust danger distance (up to 500 m)',
+    'ICAO Doc 9137 Part 1 — §12.3.21 incident commander separate frequencies; §12.3.22 intercom with flight deck; §12.3.23 engine running for lighting/comms',
+    'ICAO Doc 9137 Part 1 — §12.3.26 evacuation determination (pilot decides with RFF input); §12.3.27 RFF initiates if crew unable; RFF does not enter fuselage',
+    'ICAO Doc 9137 Part 1 — §12.2.15 positioning below engine prohibited',
+    'Your aerodrome emergency plan — flight deck coordination and intercom procedures',
+    'Course ART-18 m1 — the alerting system and communications'
+  ],
+  smeChecked: false
+},
 };
 
 /**
