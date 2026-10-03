@@ -18,12 +18,18 @@ The **course content is a scaffold.** What exists today:
 
 | Built | Not built |
 |-------|-----------|
-| All 25 course structures | Lesson body text (18 of 107 written) |
+| All 25 course structures | Lesson body text (26 of 107 written) |
 | All learning outcomes | SME verification of the technical claims |
 | All governing standards references | Questions beyond the 30 seeded |
 | Six technical diagrams | Video of your own crews and equipment |
 | 18 verified FAA training videos | SME-reviewed local footage |
 | Full assessment engine | Content review sign-off |
+
+**Fully written courses (5 of 25):** ART-01 ARFF Foundations & the Regulatory
+Framework, ART-08 RFF Personnel Training & Competency, ART-09 Emergency Command &
+On-Scene Command, ART-18 Communications, Alerting & Air Traffic Coordination, and
+ART-20 Responding to the Unexpected. Partly written: ART-03 (1 of 4), ART-15
+(1 of 4), ART-16 (2 of 4).
 
 **No unreviewed content is ever presented as fact.** Every lesson without written
 body content renders a visible **"Lesson not yet written"** banner. Every assessment
@@ -34,6 +40,24 @@ verification"* warning when answered.
 This is deliberate. In a safety-critical training product, content that looks
 finished but has not been reviewed is worse than content that is visibly
 unfinished.
+
+### About the national regulations quoted here
+
+Lessons in ART-01, ART-08, ART-09 and ART-18 quote **GCAA CAR Part XI — Aerodrome
+Emergency Services, Facilities and Equipment** in detail: the two-minute response
+time, the category-by-fuselage-width rule, the training needs analysis and
+frequency analysis, the Structured Learning Programme, the Certificate of
+Competence, and the four-year maximum reassessment interval.
+
+That document is issued by the General Civil Aviation Authority of the **United
+Arab Emirates**. It is used here as a worked example of how a State adopts ICAO
+Annex 14 Chapter 9 into domestic law — because it is a clean, publicly available
+illustration — and it is labelled as such everywhere it appears.
+
+**It is not necessarily your law.** This platform does not know which State you
+are in and will not guess. Before any of those figures is taught, taught to your
+crew, or quoted to an inspector, find your own authority's instrument and confirm
+its issue number and date. Lesson ART-01 m5 has a checklist for doing that.
 
 ---
 

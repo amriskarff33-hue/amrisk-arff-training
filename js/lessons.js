@@ -49,41 +49,108 @@ const LESSON_OVERRIDES = {
   'art01-m1': {
     title: 'What the service is for',
     brief:
-      'Before the standards, the job. Rescue and fire fighting exists to save lives, ' +
-      'and everything else about the service is judged against that.',
+      'The primary objective, the three factors that actually decide outcomes, ' +
+      'and — just as important — what the service is not for.',
     points: [
-      'The service exists to rescue occupants and fight fire — and the two pull against each other under pressure.',
-      'A rescue and fire fighting service is an aerodrome service, not an airline function. The aerodrome provides it.',
-      'It is a preventive service too. Most of its value is delivered before anything burns.',
-      'Readiness is the product. The response is just the moment readiness gets tested.'
+      'The primary objective is to save lives at or in the immediate vicinity of the aerodrome.',
+      'The service creates survivable conditions, provides egress routes, and starts the rescue of those who cannot escape unaided.',
+      'Three factors decide effective rescue: the training received, the effectiveness of the equipment, and the speed with which both can be put into use.',
+      'Building fires, fuel farm fires and runway foaming are explicitly outside the requirement.',
+      'Firefighting capability exists to permit rescue — the ordering is not negotiable.',
+      'Read the scope exclusion before you decide a demand is not your problem.'
     ],
     body: `
-      <h3>The two jobs that pull against each other</h3>
-      <p>Every incident puts two objectives in front of you at once: <strong>rescue</strong>
-      the occupants, and <strong>suppress</strong> the fire. They compete for the same
-      water, the same crew and the same minutes. Neither is optional. Which one leads is a
-      decision, and the decision has to be made explicitly rather than inherited from
-      whoever moved first.</p>
+      <h3>The objective, in the regulator's words</h3>
+      <p>Annex 14 Volume I opens §9.2 — Rescue and firefighting — with an
+      introductory note that states the purpose better than any training text
+      manages to, and it is worth having memorised before you memorise anything
+      else in this course:</p>
+      <blockquote>
+        <p>The principal objective of a rescue and firefighting service is to save
+        lives in the event of an aircraft accident or incident occurring at, or in
+        the immediate vicinity of, an aerodrome. The rescue and firefighting
+        service is provided to create and maintain survivable conditions, to
+        provide egress routes for occupants and to initiate the rescue of those
+        occupants unable to make their escape without direct aid. <em>— Annex 14
+        Vol I, §9.2</em></p>
+      </blockquote>
+      <p>Three jobs, in order. <strong>Create and maintain survivable
+      conditions.</strong> <strong>Provide egress routes.</strong> <strong>Initiate
+      the rescue</strong> of those who cannot get out on their own. Note the
+      careful wording on that last one — <em>initiate</em>, not <em>complete</em>.
+      The service is required to start the rescue, and it will need other
+      organisations to finish it.</p>
+      <p>One further sentence in the same note widens the scope deliberately: the
+      rescue may require the use of equipment and personnel other than those
+      assessed primarily for rescue and firefighting purposes.</p>
 
-      <h3>A service, not a department</h3>
-      <p>In the ICAO framework this is an <em>aerodrome</em> service. The aerodrome operator
-      is accountable for providing it to the level the aircraft using the aerodrome
-      require. That accountability sits above the airline, above the fire service and,
-      on most aerodromes, above the airport manager — it is a regulatory obligation on
-      the aerodrome itself.</p>
+      <h3>The three factors that decide whether it works</h3>
+      <p>The note then names what actually determines the outcome, and the list
+      is short enough to be worth learning by heart:</p>
+      <blockquote>
+        <p>The most important factors bearing on effective rescue in a survivable
+        aircraft accident are: the training received, the effectiveness of the
+        equipment and the speed with which personnel and equipment designated for
+        rescue and firefighting purposes can be put into use. <em>— Annex 14 Vol I,
+        §9.2</em></p>
+      </blockquote>
+      <p>Training, equipment, speed. Not the third aircraft on the ramp. Not the
+      foam concentrate brand. Whatever else is debated in the station, those
+      three are what the standard says decides whether people survive.</p>
+      <p>Notice what is <em>not</em> on that list: the fire. Fire is the condition
+      you are trying to change, not a measure of your performance.</p>
 
-      <h3>Preventive, reactive, and the gap between them</h3>
-      <p>Most of what makes a service good happens when nothing is happening:
-      inspection, currency, drills, pre-incident planning, equipment that is actually
-      ready. A response is the visible part, and it is the smaller part of the work.</p>
+      <h3>And what the service is not for</h3>
+      <p>The same note draws a boundary, and boundary-setting clauses are the ones
+      new crew most often get wrong in both directions — calling for help that is
+      not coming, or declining work that is actually yours:</p>
+      <blockquote>
+        <p>Requirements to combat building and fuel farm fires, or to deal with
+        foaming of runways, are not taken into account. <em>— Annex 14 Vol I,
+        §9.2</em></p>
+      </blockquote>
+      <p>This is about how the aerodrome's level of protection is <em>sized</em>.
+      Nobody sized your water requirement for a terminal fire, and nobody is
+      asserting that you are incapable of putting one out. It means the
+      arithmetic in Table 9-2 contains no building-fire allowance — and an
+      expectation that your service will absorb a terminal fire as a matter of
+      course is an expectation the standard does not support.</p>
+
+      <h3>The ordering that follows from all this</h3>
+      <p>Doc 9137 Part 1 §14.6.1 draws the consequence in operational terms, and it
+      is the sentence to read to anyone who thinks of this as a firefighting job:</p>
+      <blockquote>
+        <p>The service to be provided is primarily a lifesaving organization, one,
+        however, that must be trained in firefighting because aircraft involved in
+        a serious accident are frequently involved in fire. The firefighting
+        operations must be directed to those measures which are necessary to permit
+        rescue to be carried out until all the occupants of the aircraft are
+        accounted for. <em>— Doc 9137 Part 1, §14.6.1</em></p>
+      </blockquote>
+      <p>Firefighting is the means. Rescue is the purpose. And the firefighting
+      continues until <strong>all occupants are accounted for</strong> — not until
+      the fire looks under control. That single sentence explains a great deal of
+      behaviour that otherwise looks excessive: precautionary measures at incidents
+      where no fire has broken out, continuing to apply agent after the visible
+      fire is out, and treating "is everyone out?" as the question that governs
+      rather than "is it out?".</p>
 
       <blockquote>
-        <p>Readiness is the product. The response is the moment it gets audited.</p>
+        <p><strong>SME action:</strong> confirm in your own service documents and
+        aerodrome emergency plan how the §9.2 scope exclusion is expressed locally
+        — specifically, what your service is expected to do about a building fire, a
+        fuel farm fire, or a runway contaminated with foam. State it explicitly,
+        because the exclusion in the Annex describes how the requirement is
+        <em>sized</em>, and services have historically differed on what it means in
+        practice.</p>
       </blockquote>
     `,
     refs: [
-      'ICAO Annex 14 Vol I — Ch 9, general provisions',
-      'ICAO Doc 9137 Part 1 — purpose and scope'
+      'ICAO Annex 14 Vol I — §9.2 introductory note: objective, the three factors, and the scope exclusion',
+      'ICAO Doc 9137 Part 1 — §14.6.1 the lifesaving objective and the ordering of firefighting to rescue',
+      'Course ART-01 m3 — the clause structure of Chapter 9',
+      'Course ART-09 — emergency command',
+      'Your aerodrome emergency plan — scope and responsibilities'
     ],
     smeChecked: false
   },
@@ -91,51 +158,131 @@ const LESSON_OVERRIDES = {
   'art01-m2': {
     title: 'The document hierarchy',
     brief:
-      'Five kinds of document, ranked. Most workplace disputes in this industry are ' +
-      'really hierarchy disputes wearing a disguise.',
+      'Five kinds of document, ranked — and a worked example showing that your ' +
+      'State is entitled to be stricter than the Annex.',
     points: [
-      'The Annex is the standard. It is written in standards language and it is not negotiable.',
-      'The Guidance material explains the Annex. It helps you apply it; it cannot add to or subtract from it.',
-      'The State adds requirements through its own regulations and Civil Aviation Authority guidance.',
-      'The operator SOP may be more demanding than the Annex — never less.',
-      'Your own judgement sits below all of it, and it matters most when the documents are silent.'
+      'A Standard uses shall. A Recommended Practice uses should. A Note is informative only.',
+      'A Standard binds Contracting States; impossibility of compliance triggers compulsory notification to ICAO under Article 38.',
+      'A Recommended Practice is desirable, and States endeavour to conform — but a State may promote one to a requirement.',
+      'Your national regulations are what bind you day to day, and they may exceed the Annex.',
+      'Guidance material explains a standard; it cannot add to or subtract from it.',
+      'An SOP may be more demanding than the requirement above it, never less.'
     ],
     body: `
-      <h3>Rank order</h3>
-      <ol>
-        <li><strong>The Annex</strong> — ICAO Annex 14 Volume I, Chapter 9. The standard.</li>
-        <li><strong>Guidance material</strong> — Doc 9137 Part 1. Explains intent and method.</li>
-        <li><strong>State requirements</strong> — regulations, rules and CAA guidance in your jurisdiction.</li>
-        <li><strong>Operator and aerodrome SOPs</strong> — how you will actually do it here.</li>
-        <li><strong>Your judgement</strong> — what to do when the documents do not cover it.</li>
-      </ol>
+      <h3>Learn the three verbs first</h3>
+      <p>Before ranking anything, learn what the words mean. Annex 14 defines its
+      own components, and the distinction is not academic — it decides whether
+      something is mandatory or merely desirable.</p>
+      <ul>
+        <li>A <strong>Standard</strong> is a specification "to which Contracting
+        States will conform in accordance with the Convention; in the event of
+        impossibility of compliance, notification to the Council is compulsory
+        under Article 38." Standards are written as <strong>shall</strong> or
+        <strong>must</strong>.</li>
+        <li>A <strong>Recommended Practice</strong> is one "to which Contracting
+        States will endeavour to conform" — desirable in the interest of safety,
+        regularity or efficiency. Recommended Practices are written as
+        <strong>should</strong>.</li>
+        <li>A <strong>Note</strong> is informative. It carries no requirement at
+        all, and it is very common to find Notes containing the most operationally
+        useful sentence in a clause.</li>
+      </ul>
+      <p>So when you read <em>Recommendation.—</em> at the start of a clause, you
+      are reading something the Annex would like you to do. When you read a bare
+      <em>shall</em>, you are reading something a Contracting State must
+      conform to — or formally notify ICAO that it cannot.</p>
 
-      <p>The FAA's own ARFF training series walks this hierarchy explicitly — Annex 14,
-      the advisory circulars that explain it, and Part 139 as the rule behind them. That
-      is the same structure every State works to, expressed in US regulation.</p>
+      <h3>The rank order, and where it is often got wrong</h3>
+      <ol>
+        <li><strong>ICAO Annex 14 Volume I, Chapter 9</strong> — the international
+        standard. Binding on States, not directly on you.</li>
+        <li><strong>Your national regulations</strong> — what actually binds you,
+        and what you will be inspected against.</li>
+        <li><strong>Guidance material</strong> — Doc 9137 Part 1 explains the
+        standard and gives the working. It cannot add to or subtract from it.</li>
+        <li><strong>Operator and aerodrome procedures</strong> — how it is done
+        here.</li>
+        <li><strong>Your judgement</strong> — what to do where the documents are
+        silent.</li>
+      </ol>
+      <p>Most people instinctively put their national regulations <em>below</em> the
+      Annex. That is wrong, and it is wrong in a way that costs you. A State
+      implements the Annex through its own law, and it is entirely free to adopt a
+      stricter figure than the international minimum. The Annex is a floor for
+      States; your national regulation is the ceiling you work to.</p>
 
       {{video:faa-intro-1}}
 
-      <h3>The rule that settles most arguments</h3>
-      <p>No SOP may be <em>less</em> demanding than the Annex or the State requirement. It may
-      be more demanding — a higher standard is always permitted. If you find an SOP that is
-      less demanding than the standard above it, that is a finding, and it should be raised
-      through your safety reporting system rather than quietly followed or quietly ignored.</p>
-
+      <h3>A worked example: the two-minute response time</h3>
+      <p>This is the cleanest illustration available, because an international
+      minimum and a national requirement are different numbers doing the same
+      job.</p>
+      <ul>
+        <li><strong>Annex 14 §9.2.27</strong> is a Standard. The operational
+        objective <em>shall</em> be a response time not exceeding
+        <strong>three minutes</strong> to any point of each operational runway, in
+        optimum visibility and surface conditions.</li>
+        <li><strong>Annex 14 §9.2.28</strong> is a Recommended Practice. The
+        objective <em>should</em> be not exceeding <strong>two minutes</strong> to
+        any point of each operational runway.</li>
+        <li><strong>GCAA CAR Part XI §10.1</strong> — the United Arab Emirates
+        national regulation — says the operational objective <em>shall</em> be a
+        response time not exceeding <strong>two minutes</strong> to any point of
+        each operational runway, in optimum visibility and surface conditions.</li>
+      </ul>
+      <p>So the State took the Recommended Practice and made it a requirement. In
+      that jurisdiction two minutes is not an ICAO minimum you are being asked to
+      aspire to — it is the legal obligation, and the three minutes in §9.2.27 is
+      <em>not</em> the target.</p>
       <blockquote>
-        <p>Both "just follow the SOP" and "the SOP is wrong so I did it my way" are failures.
-        The correct move is to report it and keep operating to the higher standard.</p>
+        <p><strong>Note the jurisdiction.</strong> CAR Part XI in this lesson is
+        the United Arab Emirates General Civil Aviation Authority document. It is
+        used here because it is a clean, publicly available worked example of how
+        a State adopts Annex 14 Chapter 9 — <em>not</em> because it is anybody's
+        law but theirs. Your own State's instrument is the one that binds you, and
+        the whole point of the example is that it need not match either the Annex
+        or another State. Confirm your own before quoting a number.</p>
+      </blockquote>
+      <p>The same clause also shows why the definitions matter. Both Annex clauses
+      measure response time in <em>optimum visibility and surface conditions</em>,
+      and §9.2.29 Note 2 defines that precisely: daytime, good visibility, no
+      precipitation, and a normal response route free of surface contamination such
+      as water, ice or snow. A clause you cannot apply is not a softer clause — it
+      is a clause you have to look up before you rely on it.</p>
+
+      <h3>The rule that settles most arguments</h3>
+      <p>No procedure may be <em>less</em> demanding than the requirement above it.
+      It may be more demanding — a higher standard is always permitted. If you find
+      a procedure that is less demanding than the standard or the regulation, that
+      is a finding, and it should be raised through your safety reporting system
+      rather than quietly followed or quietly ignored.</p>
+      <blockquote>
+        <p>Both "just follow the SOP" and "the SOP is wrong so I did it my way" are
+        failures. The correct move is to report it and keep operating to the higher
+        standard.</p>
       </blockquote>
 
       <h3>Nothing above you covers everything</h3>
-      <p>Documents are written for the common case. The fifth item on the list is not a
-      gap in the hierarchy — it is where a trained professional earns the qualification.
-      The gap between "the plan does not cover this" and "nobody thought about this" is
-      exactly where incidents live.</p>
+      <p>Documents are written for the common case. The fifth item on the list is
+      not a gap in the hierarchy — it is where a trained professional earns the
+      qualification. The gap between "the plan does not cover this" and "nobody
+      thought about this" is exactly where incidents live.</p>
+
+      <blockquote>
+        <p><strong>SME action:</strong> list the five document types for your own
+        service, with the exact title, edition and issue date of each — including
+        the version of Annex 14 and the issue of CAR Part XI you are working to.
+        Then confirm your own response time objective in writing, and record which
+        document sets it. If your service is meeting two minutes, say so with a
+        number and a date rather than a reputation.</p>
+      </blockquote>
     `,
     refs: [
-      'ICAO Annex 14 Vol I — Ch 9',
-      'ICAO Doc 9137 Part 1 — introduction and scope'
+      'ICAO Annex 14 Vol I — Foreword: Status of Annex components, the definitions of Standard and Recommended Practice',
+      'ICAO Annex 14 Vol I — Article 38 notification of differences',
+      'ICAO Annex 14 Vol I — §9.2.27, §9.2.28, §9.2.29 response time, and §9.2.29 Note 2 optimum conditions',
+      'United Arab Emirates — GCAA CAR Part XI §10.1 response time (worked example of a State tightening the Annex)',
+      'ICAO Doc 9137 Part 1 — Chapter 2, level of protection'
     ],
     smeChecked: false
   },
@@ -143,128 +290,436 @@ const LESSON_OVERRIDES = {
   'art01-m3': {
     title: 'Annex 14 Chapter 9, clause by clause',
     brief:
-      'A structural tour. You are not expected to memorise clause numbers — you are ' +
-      'expected to know where to look in under a minute.',
+      'A structural tour against the real clause numbering, so you can find the ' +
+      'answer in under a minute.',
     points: [
-      'The chapter moves from provision of the service, through level and equipment, to operational requirements and personnel.',
-      'Level requirements, vehicle and agent provisions, operational requirements and personnel provisions are four separate things.',
-      'Response time requirements are operational, not equipment, provisions.',
-      'Know which part of the chapter answers a given question before you need to answer it.'
+      'Chapter 9 is General, then Rescue and firefighting (§9.2), then disabled aircraft removal (§9.3) and wildlife hazard reduction (§9.4).',
+      '§9.2 runs in a fixed order: application, level, agents, rescue equipment, response time, access roads, stations, communications, vehicles, personnel.',
+      '"Do we have enough" and "will we get there" are different questions living in different clauses.',
+      '§9.2.42 and §9.2.43 are the training clauses. They are short, they use "shall", and they bind.',
+      'Almost every answer you will actually need is in §9.2.3 to §9.2.46.'
     ],
     body: `
-      <h3>How the chapter is organised</h3>
-      <p>Chapter 9 proceeds roughly as follows, and the order is deliberate:</p>
+      <h3>The shape of the chapter</h3>
+      <p>Annex 14 Volume I Chapter 9 is "Rescue and Fire Fighting", and it has four
+      parts:</p>
       <ol>
-        <li><strong>Purpose and scope</strong> — who the requirements bind.</li>
-        <li><strong>Level of service</strong> — how the required level is determined, and the conditions attaching to it.</li>
-        <li><strong>Provision at the required level</strong> — agents, quantities, discharge rates, vehicles and equipment.</li>
-        <li><strong>Operational requirements</strong> — response, communications, alerting, and the conditions under which the service stands down.</li>
-        <li><strong>Personnel, training and exercises</strong> — who is qualified, and what currency is required.</li>
+        <li><strong>§9.1 General</strong> — the emergency plan, plus provisions that
+        sit outside §9.2. §9.1.16 is worth knowing in its own right: an assessment of
+        the approach and departure areas <strong>within 1 000 m of the runway
+        threshold</strong> should be carried out to determine the options available
+        for intervention.</li>
+        <li><strong>§9.2 Rescue and firefighting</strong> — the whole service, in
+        forty-six clauses. This is where your answers are.</li>
+        <li><strong>§9.3 Disabled aircraft removal</strong> — a different subject
+        with its own requirements.</li>
+        <li><strong>§9.4 Wildlife strike hazard reduction</strong> — again a
+        separate subject.</li>
       </ol>
 
-      <h3>Why the structure matters on a night shift</h3>
-      <p>When the question is "are we allowed to stop pouring yet", that is an
-      <em>operational</em> question, and the answer is not in the equipment tables. When
-      the question is "do we have enough", that is level and provision. Half of the
-      avoidable friction in a real incident comes from looking in the wrong half.</p>
+      <h3>Inside §9.2, in order</h3>
+      <p>The internal order is deliberate, and it mirrors the order in which the
+      questions actually get asked:</p>
+      <ul>
+        <li><strong>Introductory note</strong> — the objective, the three factors that
+        decide outcomes, and the scope exclusion. Covered in lesson m1.</li>
+        <li><strong>General</strong> — §9.2.1, the duty to provide the service at all.
+        Its Note is important: an off-aerodrome fire station "is not precluded
+        provided the response time can be met".</li>
+        <li><strong>Application</strong> — §9.2.2, specialist rescue services where
+        the aerodrome is close to water, swampy areas or difficult terrain and a
+        significant portion of approach or departure operations takes place over
+        them.</li>
+        <li><strong>Level of protection to be provided</strong> — §9.2.3 to §9.2.7,
+        with Table 9-1. This is where the aerodrome category comes from.</li>
+        <li><strong>Extinguishing agents</strong> — §9.2.8 to §9.2.25, with
+        Table 9-2. The longest section: agents, quantities, application rates,
+        discharge rates, concentrate and complementary agents.</li>
+        <li><strong>Rescue equipment</strong> — §9.2.26 to §9.2.28.</li>
+        <li><strong>Response time</strong> — §9.2.29 to §9.2.30.</li>
+        <li><strong>Emergency access roads</strong> — §9.2.31 onwards.</li>
+        <li><strong>Fire stations</strong> — §9.2.37 and §9.2.38, including
+        satellite fire stations "whenever the response time cannot be achieved from a
+        single fire station".</li>
+        <li><strong>Communication and alerting systems</strong> — §9.2.39 and
+        §9.2.40.</li>
+        <li><strong>Number of rescue and firefighting vehicles</strong> —
+        §9.2.41 and its tabulation.</li>
+        <li><strong>Personnel</strong> — §9.2.42 to §9.2.46.</li>
+      </ul>
 
-      <p>The opening section of the FAA training series sets out this same structure
-      against the US regulatory equivalent. Useful as an overview even though the
-      citations will not match your State.</p>
+      <h3>The two questions that actually get asked</h3>
+      <p>Nearly every question on shift is one of two, and they live in different
+      halves of the section:</p>
+      <ul>
+        <li><strong>"Do we have enough?"</strong> — Level of protection and
+        Extinguishing agents, §9.2.3 to §9.2.25 with Tables 9-1 and 9-2. The worked
+        calculation is in Course ART-03.</li>
+        <li><strong>"Will we get there, and in time?"</strong> — Response time,
+        Emergency access roads and Fire stations, §9.2.29 to §9.2.38.</li>
+      </ul>
+      <p>Half the avoidable friction in a real incident comes from looking in the
+      wrong half, because "are we allowed to stop pouring yet" is an operational
+      question and its answer is not in the equipment tables.</p>
+
+      <h3>The two personnel clauses worth reading in full</h3>
+      <p>They are short, they are easy to skip, and they bind.</p>
+      <blockquote>
+        <p>All rescue and firefighting personnel shall be properly trained to perform
+        their duties in an efficient manner and shall participate in live fire drills
+        commensurate with the types of aircraft and type of rescue and firefighting
+        equipment in use at the aerodrome, including pressure-fed fuel fires.
+        <em>— Annex 14 Vol I, §9.2.42</em></p>
+      </blockquote>
+      <p>Note <em>shall</em>, and then note the last clause: <strong>pressure-fed
+      fuel fires</strong> are named explicitly, and the accompanying Note explains
+      that these are fires associated with fuel discharged under very high pressure
+      from a ruptured fuel tank. Live fire drills must cover them.</p>
+      <p>That is a specific, testable requirement, and it is one worth checking
+      against your own live fire programme without assuming.</p>
+      <blockquote>
+        <p>The rescue and firefighting personnel training programme shall include
+        training in human performance, including team coordination.
+        <em>— Annex 14 Vol I, §9.2.43</em></p>
+      </blockquote>
+      <p>Also <em>shall</em>. Human performance and team coordination are not
+      optional extras in an Annex Standard — they are a mandatory part of the
+      training programme. The Note points to the Human Factors Training Manual
+      (Doc 9683). Course ART-20 covers why that matters.</p>
+      <p>Two more in the same run: §9.2.45 says the minimum number of personnel should
+      be determined by a <strong>task resource analysis</strong>, with the level of
+      staffing documented in the Aerodrome Manual. §9.2.46 requires all responding
+      personnel to be provided with protective clothing and respiratory
+      equipment.</p>
+
+      <p>The opening section of the FAA training series sets out a comparable
+      structure against the US regulatory equivalent. Useful as an overview even
+      though the clause numbers will not match your State's.</p>
 
       {{video:faa-intro-prelude}}
 
       <blockquote>
-        <p><strong>SME action:</strong> this lesson deliberately carries no clause numbers or
-        figures, because a half-remembered clause reference is worse than none. Add the
-        exact clause structure for your edition of the Annex once checked against your
-        controlled copy.</p>
+        <p><strong>SME action:</strong> this lesson is written against Annex 14
+        Volume I, edition 8/11/18. Confirm that against your controlled copy and
+        record the edition you actually work to — clause numbering and thresholds
+        move between editions, and a citation from the wrong edition is worse than
+        no citation. Then check §9.2.42 specifically: does your live fire programme
+        include pressure-fed fuel fires, and is it evidenced? If not, that is a
+        finding against a Standard rather than a recommendation.</p>
       </blockquote>
     `,
-    refs: ['ICAO Annex 14 Vol I — Ch 9 (use your controlled copy for exact clauses)'],
+    refs: [
+      'ICAO Annex 14 Vol I — Chapter 9 structure, edition 8/11/18',
+      'ICAO Annex 14 Vol I — §9.1.16 assessment within 1 000 m of the runway threshold',
+      'ICAO Annex 14 Vol I — §9.2.42 live fire drills including pressure-fed fuel fires; §9.2.43 human performance',
+      'ICAO Annex 14 Vol I — §9.2.45 task resource analysis; §9.2.46 protective clothing',
+      'ICAO Doc 9683 — Human Factors Training Manual',
+      'Course ART-03 — the water calculation, worked'
+    ],
     smeChecked: false
   },
-
   'art01-m4': {
     title: 'Your role and accountability',
-    brief: 'Where you sit in the chain, and what you personally owe.',
+    brief:
+      'Where you sit in the chain, what you personally owe, and the things ' +
+      'that are easy to assume somebody else is handling.',
     points: [
-      'Know your station, your role and who commands you.',
+      'Know every link of your command line by name and role title. Most responders can describe the firefighting and cannot describe the command line.',
       'Accountability is personal. "The service should have" is not a defence.',
-      'Know your own currency at all times, without having to look it up.',
-      'Know who to escalate to and how, before you need it.'
+      'You are individually accountable for your own readiness: currency, equipment checks, fitness, and your actions on an incident.',
+      'Extraneous duties must not compromise your response. If they do, that is a finding, not a personal failing.',
+      'Scene safety comes before the fire. An injured responder turns one incident into two.',
+      'Know your own currency at all times without having to look it up, and know who to escalate to and how.'
     ],
     body: `
       <h3>The chain</h3>
-      <p>Every service has a line: a station or crew, a watch or shift supervisor, an
-      aerodrome duty manager, and the aerodrome operator. Know every link by name and
-      find out where your own service sits in it. Most responders can describe the
-      firefighting and cannot describe the command line.</p>
+      <p>Every service has a line: a station or crew, a watch or shift supervisor,
+      an aerodrome duty manager, and the aerodrome operator. Learn every link by name
+      and find out where your own service sits in it.</p>
+      <p>This sounds like trivia until the moment it is not. The two questions that
+      matter in the first ninety seconds are <em>who is in charge</em> and <em>who
+      do I report to</em>, and a crew that cannot answer either is a crew that has
+      already lost time it will never get back.</p>
 
-      <p>The airport emergency communications section of the FAA series below covers how
-      alerting and notification actually work on a real aerodrome — the part that is
-      almost never practised until it is needed.</p>
+      <p>The alerting side of this chain is covered properly in Course ART-18, and
+      the airport emergency communications material below covers how notification
+      actually works on a real aerodrome — the part almost never practised until it
+      is needed.</p>
 
       {{video:faa-intro-5}}
 
-      <h3>Personal accountability</h3>
-      <p>Individual responders are usually personally accountable for their own readiness
-      — their training currency, their equipment checks, their fitness, and their actions
-      on an incident. Shift-level or organisational accountability rarely protects an
-      individual who made an individual error.</p>
+      <h3>What you personally owe</h3>
+      <p>Individual responders are usually personally accountable for their own
+      readiness — their training currency, their equipment checks, their fitness,
+      and their actions on an incident. Shift-level or organisational accountability
+      rarely protects an individual who made an individual error.</p>
+      <p>There is a regulatory version of this too. Annex 14 §9.2.44 recommends
+      that during flight operations sufficient trained and competent personnel
+      should be designated to be readily available to ride the rescue and firefighting
+      vehicles and to operate the equipment <strong>at maximum capacity</strong>,
+      deployed so that minimum response times can be achieved and continuous agent
+      application at the appropriate rate can be fully maintained.</p>
+      <p>Read the phrase "at maximum capacity". It means one operator per function,
+      not one person doing three jobs at once. If your crew complement assumes a
+      driver is also the turret operator, the requirement is not being met — and
+      that is a staffing finding, not a crewwork problem to be solved harder.</p>
 
       {{video:faa-intro-4}}
 
+      <h3>The duty that quietly eats your readiness</h3>
+      <p>Here is a real one, and it catches experienced crews. If operational crew
+      are engaged on extraneous duties — sweeping, bird control, surface inspections
+      and the like — <strong>they must still be capable of meeting response times
+      while carrying out those duties</strong>, and no extraneous duty should create
+      conditions likely to affect individual or crew performance or introduce
+      additional hazards.</p>
+      <p>In the worked example national regulation that phrasing appears in GCAA CAR
+      Part XI §13.3 (United Arab Emirates, used here as an illustration of the
+      principle rather than as your law). The same clause is worth reading for what
+      it implies in practice:</p>
+      <ul>
+        <li>Being two hundred metres up a taxiway inspecting a light is not a neutral
+        act. It is a subtraction from your response.</li>
+        <li>If you are asked to absorb duties that break those conditions, the honest
+        response is to say so with a number, not to absorb them quietly.</li>
+        <li>And the people who should hear that are your supervisors and your safety
+        reporting system, not just the person who asked.</li>
+      </ul>
+
+      <h3>Supervision is part of the arithmetic</h3>
+      <p>The same regulation is unusually direct about supervisory grades, and the
+      point generalises well beyond one jurisdiction. Minimum staffing must include
+      an adequate number of competent supervisors and managers <strong>reflecting
+      the appropriate command structure</strong>, and the competence of supervisors
+      and managers in the roles applicable to their position has to be taken into
+      account when that level is set.</p>
+      <p>Then the sentence that is worth remembering: where the available staff
+      display limited capacity to use initiative, that deficiency must be made good
+      by the provision of additional staff of a <strong>superior grade</strong> who
+      will be responsible for exercising command.</p>
+      <p>That is a regulator saying out loud that command is a resourcing decision,
+      not a personality one. If your relief is thin, the answer is more senior
+      staffing, not better briefing.</p>
+      <p>Two related provisions from the same worked example: the agreed minimum
+      staffing level <strong>shall not be reduced without an assessment being
+      conducted and forwarded in writing for acceptance</strong>; and where the
+      authority considers the minimum staffing provided inappropriate for the level
+      of aircraft operation, it will assess and set the minimum itself. The floor on
+      your staffing is not entirely yours to choose.</p>
+
+      <h3>How the number is arrived at</h3>
+      <p>It is not a headcount. The same section requires a Task Resource Analysis
+      completed for acceptance, and sets out the factors that assessment must take
+      into account — nine of them, and they are the honest answer to "why do we
+      carry that number":</p>
+      <ol>
+        <li>the types of aircraft using the aerodrome;</li>
+        <li>response times;</li>
+        <li>the type, design, capacity and discharge rate of the appliances to be
+        deployed;</li>
+        <li>the need to rescue aircraft occupants;</li>
+        <li>the need to operate ladders, breathing apparatus and rescue
+        equipment;</li>
+        <li>availability of water supplies;</li>
+        <li>the speed and scale of response of any mutual aid agency;</li>
+        <li>competency levels of all staff.</li>
+      </ol>
+      <p>And on the other side of the equation, Annex 14 §9.2.45 says the minimum
+      number of personnel should be determined by a task resource analysis with the
+      level of staffing documented in the Aerodrome Manual. If you cannot point to
+      the page of the manual that documents your staffing, that is the first gap to
+      close.</p>
+
       <h3>Scene safety comes before the fire</h3>
-      <p>Before anything else: who is hurt, what is falling, what is about to happen. An
-      injured second responder turns one incident into two, and the second one is
-      entirely self-inflicted. The personnel-safety material in the FAA series below is
-      worth watching before you are standing at an aircraft with an engine running.</p>
+      <p>Before anything else: who is hurt, what is falling, what is about to
+      happen. An injured second responder turns one incident into two, and the
+      second one is entirely self-inflicted.</p>
+      <p>The personnel-safety material in the FAA series below is worth watching
+      before you are standing at an aircraft with an engine running.</p>
 
       <blockquote>
-        <p><strong>SME action:</strong> add your service's actual reporting line, role
-        titles and escalation numbers here.</p>
+        <p><strong>SME action:</strong> put your service's actual reporting line,
+        role titles and escalation numbers into this lesson. Then check three
+        things: is your staffing level documented in the Aerodrome Manual and
+        supported by a task resource analysis? Is your supervisory complement
+        sufficient for the command structure you actually run? And is anyone on your
+        shift routinely performing extraneous duties in a way that would breach
+        response time if the alarm sounded? That last one is worth asking plainly,
+        because the answer is usually "only slightly" and "only slightly" is a real
+        number.</p>
       </blockquote>
     `,
-    refs: ['Your aerodrome emergency plan — organisation and call-out sections'],
+    refs: [
+      'ICAO Annex 14 Vol I — §9.2.44 sufficient trained and competent personnel, equipment at maximum capacity',
+      'ICAO Annex 14 Vol I — §9.2.45 task resource analysis and staffing documented in the Aerodrome Manual',
+      'United Arab Emirates — GCAA CAR Part XI §13.3 extraneous duties, §13.5 the nine staffing factors, §13.7 no reduction without an accepted assessment, §13.8 supervisory grades, §13.9 authority-set minimum (worked example of principle, not your law)',
+      'Your national Civil Aviation Authority instrument — confirm the equivalent requirements that bind you',
+      'Your aerodrome emergency plan — organisation, command structure and call-out sections',
+      'Course ART-09 — emergency command and the incident command system',
+      'Course ART-08 — training and competency records'
+    ],
     smeChecked: false
   },
-
   'art01-m5': {
     title: 'Finding the answer',
-    brief: 'Method, so that a question under pressure does not become a guess.',
+    brief:
+      'Method, so that a question under pressure does not become a guess — and ' +
+      'how to find the one document that actually binds you.',
     points: [
-      'Decide whether the question is a standard question or a judgement question first.',
-      'For standard questions, go to the hierarchy top-down and cite what you used.',
-      'For judgement questions, say what you are assuming and state the decision out loud.',
+      'Sort the question first: what does the standard require, or what should we do here? They need different methods.',
+      'Your national Civil Aviation Authority instrument is what binds you. Annex 14 and Doc 9137 do not.',
+      'Find and record your own binding instrument, its title, its issue number and its date. Without all three you cannot cite it defensibly.',
+      'The worked example here is GCAA CAR Part XI (United Arab Emirates), chosen because it is a clean public illustration of adoption mechanics. It is not your law unless it is.',
+      'A worked example can be tighter than the Annex in specific places — check, do not assume.',
+      'When the documents are silent, silence is neither permission nor prohibition. State your assumptions and your decision.',
       'If the answer is not in the documents, that is a finding worth reporting.'
     ],
     body: `
       <h3>Two kinds of question</h3>
-      <p>Almost every question you will be asked splits cleanly into two. Sorting them
+      <p>Almost every question you will be asked splits cleanly in two. Sorting them
       first saves most of the time:</p>
       <ul>
-        <li><strong>"What does the standard require?"</strong> — There is a right answer and
-        it is written down. Find it, cite it, act.</li>
-        <li><strong>"What should we do here?"</strong> — There may be no written answer.
-        Decide, state your assumptions, state the decision, and be able to justify it.</li>
+        <li><strong>"What does the standard require?"</strong> — There is a right
+        answer and it is written down. Find it, cite it, act.</li>
+        <li><strong>"What should we do here?"</strong> — There may be no written
+        answer. Decide, state your assumptions, state the decision, and be able to
+        justify it.</li>
       </ul>
+
+      <h3>Start by finding your own binding instrument</h3>
+      <p>Everything else follows from this. Your national Civil Aviation Authority
+      publishes an instrument — a regulation, a rule, a CAR part, an advisory circular
+      — that <em>implements</em> Annex 14 Volume I Chapter 9 for your jurisdiction.
+      That document is what you are inspected against. Annex 14 and Doc 9137 are how
+      you understand it; they do not replace it.</p>
+      <p>Record four things, and keep the record where a crew member can find it:</p>
+      <ol>
+        <li>the exact title of the instrument;</li>
+        <li>the issuing authority;</li>
+        <li>the <strong>issue number and date</strong> — these matter, because these
+        documents are revised;</li>
+        <li>the section numbers that cover RFF, as a map.</li>
+      </ol>
+      <p>Three of those four are absent from most copies people actually keep, and
+      all three are what an inspector asks for first.</p>
+
+      <h3>A worked example, and what it is for</h3>
+      <p><strong>GCAA CAR Part XI — Aerodrome Emergency Services, Facilities and
+      Equipment</strong> is a good teaching example, and this platform uses it for
+      that reason. It is issued by the General Civil Aviation Authority of the
+      <strong>United Arab Emirates</strong>, and its own amendments history records
+      that it was introduced "based upon ICAO Annex 14". It therefore shows, clause
+      by clause, what it looks like when a State takes Chapter 9 and turns it into
+      domestic law.</p>
+      <p>It is not, however, anybody's law but the UAE's. It is quoted here as a
+      worked example of adoption mechanics — and the mechanics are the transferable
+      part, not the numbers.</p>
+      <p>Its section map is instructive because it maps so closely onto Annex 14
+      Chapter 9:</p>
+      <ul>
+        <li>level of protection to be provided (RFFS category); extinguishing agents;
+        storage of extinguishing agents; training foams;</li>
+        <li>rescue and fire-fighting appliances; foam production systems; rescue and
+        fire-fighting equipment; protective clothing and respiratory equipment;</li>
+        <li>response time; fire station; alerting and communications systems;</li>
+        <li>minimum number of RFF personnel; training and development;</li>
+        <li>difficult environs, the 1 000 metre area and access roads; water rescue
+        facilities; maintaining response capability in low visibility
+        conditions;</li>
+        <li>aerodrome emergency plan; use of 'zoning' to effect overall control at an
+        accident site; airport Silver Command Centre (tactical level); airport Bronze
+        Command (operational level); specialist equipment and procedures; medical
+        equipment; search and rescue coordination centres; maps.</li>
+      </ul>
+      <p>Three things a reader should notice in that map. It has a section on the
+      <em>aerodrome emergency plan</em> as a discrete obligation, not an implied one.
+      It has three consecutive sections on on-site command — zoning, Silver, Bronze.
+      And it treats the staffing question with its own instrument, requiring a Task
+      Resource Analysis completed for acceptance by the authority. Those are
+      structural choices, and they are the kind of thing worth asking your own
+      authority about.</p>
+      <p>One warning that matters more than it looks: that document carries the words
+      <strong>"UNCONTROLLED COPY WHEN DOWNLOADED — check with GCAA website to verify
+      current version before using"</strong> on its first page. Treat any copy you
+      have found yourself as a working aid, not as the law. This is a common pattern
+      in aviation regulation documents and you should look for the same warning on
+      your own.</p>
+
+      <h3>Where a national instrument is tighter than the Annex</h3>
+      <p>Reading a national instrument against Annex 14 Chapter 9 side by side is
+      genuinely useful, because some clauses have been tightened — and a
+      half-remembered Annex figure is then the wrong answer. Three examples from the
+      worked example, offered as illustrations of the <em>kind</em> of tightening to
+      look for:</p>
+      <ul>
+        <li><strong>Response time.</strong> Annex 14 §9.2.27 sets a Standard of three
+        minutes and §9.2.28 a Recommended Practice of two. CAR Part XI §10.1 says the
+        objective <em>shall</em> be two minutes — the Recommended Practice promoted
+        to a requirement.</li>
+        <li><strong>Category determination.</strong> CAR Part XI §2.3 provides that if
+        an aeroplane's fuselage width is greater than the maximum in column 3 of
+        Table 1 for the category selected on overall length, <strong>then the
+        category for that aeroplane shall actually be one category higher</strong>. A
+        wide-body can push you up a category on width alone.</li>
+        <li><strong>Reduced activity.</strong> CAR Part XI §2.4 requires that during
+        anticipated periods of reduced activity the level of protection available
+        shall be no less than that needed for the highest category of aeroplane
+        planned to use the aerodrome during that time, <em>irrespective of the
+        number of movements</em>. Annex 14 §9.2.3 allows a reduction below the
+        determined category where movements fall below 700 in the busiest
+        consecutive three months. If you are used to the Annex reading, a rule like
+        this will catch you.</li>
+      </ul>
+      <p>And CAR Part XI §2.5 to §2.7 add procedural duties around any change in the
+      level of protection normally available: it must be notified to air traffic
+      services and aeronautical information units so they can brief arriving and
+      departing aircraft, by radio and NOTAM; the RFFS Inspector of the authority's
+      responsible department must be advised at all times; and aerodromes should
+      develop contingency plans to limit the need for such changes in the first
+      place.</p>
+      <p>That last one is the useful pattern to steal regardless of jurisdiction.
+      Where a State requires you to <em>reduce</em> protection for any reason, good
+      regulation tends to require you to have a plan for not needing to.</p>
 
       <h3>When the documents are silent</h3>
       <p>Silence is not permission and it is not prohibition. It means the decision is
-      yours. Make it explicitly, write down what you assumed, and report it afterwards so
-      the next responder inherits a better document. That last step is the one people skip,
-      and it is the step that turns a responder into a service that improves.</p>
+      yours. Make it explicitly, write down what you assumed, and report it afterwards
+      so the next responder inherits a better document. That last step is the one
+      people skip, and it is the step that turns a responder into a service that
+      improves.</p>
 
       <h3>Coming up in this series</h3>
       <p>The FAA series closes with an overview of the whole response picture — airport
-      familiarization, aircraft familiarization, equipment, agents, evacuation and
-      operations, in sequence. Worth watching once end to end before you work through the
-      individual topics, because it is the only place they are joined up.</p>
+      familiarisation, aircraft familiarisation, equipment, agents, evacuation and
+      operations, in sequence. Worth watching once end to end before you work through
+      the individual topics, because it is the only place they are joined up. Read it
+      as US 14 CFR Part 139 material, which is a different jurisdiction from every
+      other source in this course.</p>
 
       {{video:faa-intro-11}}
+
+      <blockquote>
+        <p><strong>SME action:</strong> replace this lesson's worked example with
+        your own. Record the exact title, issuing authority, issue number and issue
+        date of the instrument that binds you, and the section numbers covering RFF.
+        Then list every place it is <em>stricter</em> than Annex 14 Chapter 9 — the
+        three above are the kind of thing to look for, and your reading may find
+        more. Finally, write down where a crew member should physically or
+        electronically go to look up a requirement in under a minute, and make sure
+        everyone on shift knows. If you have no controlled copy of your national
+        instrument, raising that with your authority is the first action item out of
+        this whole course.</p>
+      </blockquote>
     `,
-    refs: ['ICAO Annex 19 — Safety Management, hazard identification and reporting'],
+    refs: [
+      'Your national Civil Aviation Authority instrument implementing Annex 14 Vol I Chapter 9 — title, issue number, date, and section map',
+      'United Arab Emirates — GCAA CAR Part XI, Aerodrome Emergency Services, Facilities and Equipment, Issue 04 (worked example of adoption mechanics, not South African or any other law)',
+      'United Arab Emirates — GCAA CAR Part XI §2.3, §2.4, §2.5 to §2.7 level of protection and category determination',
+      'United Arab Emirates — GCAA CAR Part XI §10.1 response time',
+      'United Arab Emirates — GCAA CAR Part XI sections on training, zoning, Silver and Bronze command',
+      'ICAO Annex 14 Vol I — §9.2.3, §9.2.27, §9.2.28 for comparison',
+      'ICAO Annex 19 — Safety Management, hazard identification and reporting'
+    ],
     smeChecked: false
   },
 
@@ -279,14 +734,16 @@ const LESSON_OVERRIDES = {
   'art09-m1': {
     title: 'Command structures and when each applies',
     brief:
-      'A crew complement is not just a number of bodies. Some of those posts exist ' +
-      'specifically to command, and a crew with no one in them has no plan.',
+      'A crew complement is not just a number of bodies. Some of those posts ' +
+      'exist specifically to command, and a crew with nobody in them has no plan.',
     points: [
-      'Doc 9137 lists "instigate incident command structure" as a duty, not an optional extra.',
-      'Supervisory posts sit above firefighter posts in the crew complement. Know which post you hold.',
+      'Command is a post, not a personality. Instigating the incident command structure is a listed duty, not an optional extra.',
+      'Task resource analysis assumes an agreed command framework exists — you cannot staff an undefined command.',
+      'Watch commander, crew commander, firefighter: three different jobs, and any of them can be handed to you without warning.',
       'Command is established, never assumed. If nobody has said who is in charge, nobody is.',
-      'Relief of the commander must be said out loud and acknowledged.',
-      'The first person on scene commands until properly relieved — that is a duty, not a courtesy.'
+      'The first person on scene commands until properly relieved. That is a duty, not a courtesy.',
+      'Relief of the commander must be said out loud and acknowledged back.',
+      'The incident commander needs a channel to other agencies on a separate frequency from your own.'
     ],
     body: `
       <h3>Command is a post, not a personality</h3>
@@ -297,8 +754,27 @@ const LESSON_OVERRIDES = {
       coordinated, not merely done.</p>
       <p>Instigating the incident command structure appears in the guidance as a
       duty in its own right, listed alongside positioning appliances, using agents
-      and assisting evacuation. It is not something that happens after the real
-      work starts.</p>
+      and assisting evacuation. It is not something that happens after the real work
+      starts.</p>
+
+      <h3>You cannot staff a command you have not defined</h3>
+      <p>There is a link here that is easy to miss and expensive to get wrong. The
+      task resource analysis — the analysis that justifies your minimum staffing
+      level — <strong>assumes a command framework already exists</strong>. §10.5.2
+      requires a qualitative risk-based analysis of what your crew must achieve
+      <em>in real time before supporting external services are able to
+      effectively assist</em>, and §10.5.2.1 then says that <strong>the importance of
+      an agreed framework for incident command should form a primary part of the
+      considerations</strong>.</p>
+      <p>Read that as a sequence. You work out how many people you need by asking
+      what has to be done in the first minutes. Those tasks are tasks rather than
+      chores because somebody is organising them. So the command framework is an
+      input to the staffing number, not a decoration applied afterwards.</p>
+      <p>The practical consequence: a service that has never agreed its command
+      framework cannot produce a defensible staffing justification, and a service
+      that has agreed one can show its arithmetic. This is the same finding as the
+      one in Course ART-01 m4 — the staffing number and the command structure are
+      the same question.</p>
 
       <h3>Three levels, and they are not interchangeable</h3>
       <ul>
@@ -307,8 +783,8 @@ const LESSON_OVERRIDES = {
         <li><strong>Crew commander</strong> — commands a defined crew, or a defined
         part of the scene. The person who decides where your vehicle stops and what
         your crew does on arrival.</li>
-        <li><strong>Firefighter</strong> — owns a task, an appliance and the safety
-        of the people doing it.</li>
+        <li><strong>Firefighter</strong> — owns a task, an appliance and the safety of
+        the people doing it.</li>
       </ul>
       <p>Every one of those is a job you can be handed without warning. The crews
       that perform well are the ones where people have rehearsed taking a command
@@ -316,21 +792,67 @@ const LESSON_OVERRIDES = {
 
       <h3>Establishing and handing over command</h3>
       <p>Command has to be stated. The failure mode is not a bad commander — it is
-      two people each assuming the other has it, on a scene where nobody can see
-      the whole picture. State it, confirm it, and when command transfers, say who
-      is taking over and get an acknowledgement back.</p>
+      two people each assuming the other has it, on a scene where nobody can see the
+      whole picture. State it, confirm it, and when command transfers, say who is
+      taking over and get an acknowledgement back.</p>
       <p>Whoever arrives first is the commander until relieved. That is a duty, and
       discharging it well is what earns you the post next time.</p>
+      <p>And there is a precondition worth knowing, because it explains why command
+      feels shaky early in an incident. §14.6.1 puts it this way: compliance with
+      the initial action has to become <strong>instinctive</strong> before the
+      officer-in-charge is in a position to assume complete control of the
+      situation. Command cannot be bolted on top of a crew that has not yet made its
+      first actions automatic. The authority follows the readiness.</p>
+
+      <h3>A worked structure from one national regulation</h3>
+      <p>Command frameworks are not universal, and this is worth saying plainly
+      because crews often arrive from services that did it differently. GCAA CAR
+      Part XI — the United Arab Emirates instrument, offered here as a public
+      illustration rather than as your law — devotes three consecutive sections to
+      on-site command, which makes the shape unusually easy to see:</p>
+      <ul>
+        <li><strong>Zoning</strong>, used to effect overall control at an accident
+        site.</li>
+        <li><strong>Airport Silver Command Centre</strong>, at tactical level.</li>
+        <li><strong>Airport Bronze Command</strong>, at operational level.</li>
+        <li>A <strong>Mobile Command Post</strong> providing an operational scene
+        rendezvous point, which must be clearly identifiable to all attending
+        responders — by a red and white chequered flag, or a mast elevated red
+        strobe light for night operations.</li>
+      </ul>
+      <p>Two things to take from that rather than copy. First, the <em>tactical</em>
+      and <em>operational</em> levels are separated, which is a general principle
+      even where the labels differ: somebody thinks ahead, somebody runs the
+      incident, and confusing the two is a common failure. Second, the rendezvous
+      point is made physically identifiable, which is a cheap and effective answer
+      to the question every arriving crew has: <em>where do I report to?</em></p>
+
+      <h3>One channel is not enough</h3>
+      <p>Doc 9137 §12.3.21 puts it plainly: <strong>the Incident Commander should
+      have the ability to communicate with other agencies on separate
+      frequencies</strong> during the incident. Radios should have enough channels to
+      operate on to allow the necessary command and support functions.</p>
+      <p>That is not equipment trivia. It is the reason the commander can think
+      without filtering every word through your internal traffic. Keep the channels
+      separate.</p>
 
       <blockquote>
-        <p><strong>SME action:</strong> insert your aerodrome's actual establishment —
-        post titles, who holds them on each shift, and the relief arrangements.
-        The framework above is international; the establishment is yours.</p>
+        <p><strong>SME action:</strong> insert your aerodrome's actual
+        establishment — post titles, who holds them on each shift, and the relief
+        arrangements. Then answer two harder questions. Is your command framework
+        documented well enough that it was an input to your staffing justification,
+        rather than written afterwards? And can a crew arriving from outside find
+        your command post in under a minute, day or night?</p>
       </blockquote>
     `,
     refs: [
-      'ICAO Doc 9137 Part 1 — Chapter 12; crew complement tables in the level and equipment provisions',
-      'Your aerodrome emergency plan — organisation and establishment'
+      'ICAO Doc 9137 Part 1 — §10.5.2 and §10.5.2.1 Task Resource Analysis and the agreed command framework',
+      'ICAO Doc 9137 Part 1 — §12.3.21 the incident commander and separate frequencies',
+      'ICAO Doc 9137 Part 1 — §14.6.1 instinct before command',
+      'ICAO Doc 9137 Part 1 — crew complement tables in the level and equipment provisions',
+      'United Arab Emirates — GCAA CAR Part XI sections on zoning, Silver and Bronze command, and the Mobile Command Post (worked example of one framework)',
+      'Your aerodrome emergency plan — organisation and establishment',
+      'Course ART-01 m4 — accountability, supervision and the staffing arithmetic'
     ],
     smeChecked: false
   },
@@ -399,22 +921,27 @@ const LESSON_OVERRIDES = {
       </blockquote>
     `,
     refs: [
-      'ICAO Doc 9137 Part 1 — Chapter 12, size-up and the emergency communications provisions',
-      'Your aerodrome emergency plan — communications'
+      'ICAO Doc 9137 Part 1 — §12.3.25 size-up: what is happening, what is about to happen, what needs to be done',
+      'ICAO Doc 9137 Part 1 — §12.3.21 emergency communications, channels, intercom with the flight deck, and direct voice contact with the crew',
+      'ICAO Doc 9137 Part 1 — §12.3.22 the limits of visual appraisal and the use of thermal imaging',
+      'ICAO Annex 14 Vol I — §9.2.39 a discrete communication system linking stations, tower and vehicles',
+      'Your aerodrome emergency plan — communications, call signs and channel plan',
+      'Course ART-18 m1 — the alerting system, and where the response clock starts',
+      'Course ART-18 m2 — radio discipline'
     ],
     smeChecked: false
   },
-
   'art09-m3': {
     title: 'Unified command',
     brief:
       'Most incidents outgrow the fire service quickly. The hard part is deciding ' +
       'who decides what.',
     points: [
-      'The pilot-in-command makes the final determination on evacuation, with input from the RFF commander.',
-      'If the air crew cannot function, RFF initiates the necessary action.',
+      'The pilot-in-command makes the final determination on evacuation, with input from the RFF incident commander.',
+      'If the air crew cannot function, RFF initiates the necessary action. That transfer has to be said out loud.',
+      'RFF personnel must not impede an evacuation or enter the fuselage once one is initiated — you assist, you do not enter.',
       'The commander needs a separate channel to other agencies, not a shared one.',
-      'Unified command is not the same as a committee. Someone must still decide.',
+      'Unified command is not a committee. Somebody must still decide, at a named moment.',
       'Mutual aid arrangements settle the division of labour before the day you need them.'
     ],
     body: `
@@ -426,8 +953,19 @@ const LESSON_OVERRIDES = {
       <p>Read that carefully in both directions. The pilot decides, so the
       commander's job is to make the input worth having — a clear external
       appraisal, an honest statement of what the crew can reach and in what time.
-      Silence from RFF is not neutrality; it removes information the pilot is entitled
-      to and is relying on.</p>
+      Silence from RFF is not neutrality; it removes information the pilot is
+      entitled to and is relying on.</p>
+      <p>And there is a specific reason RFF should be reporting rather than quiet,
+      given in §12.3.27: <strong>an unnecessary evacuation may be prevented</strong>
+      by RFF personnel communicating with the flight crew on the appropriate
+      frequency and giving them a report on exterior conditions. Most engine,
+      wheel assembly and other minor exterior emergencies can be controlled by RFF
+      personnel without requiring an evacuation. An unnecessary evacuation can
+      injure the evacuees.</p>
+      <p>Then the reason to be careful about all of it: <strong>once an evacuation
+      is initiated it cannot be stopped</strong>. That single asymmetry — the
+      decision is cheap to make and impossible to undo — is why the appraisal you
+      give in the first ninety seconds carries so much weight.</p>
 
       <h3>The failover</h3>
       <p>The guidance also provides for the case where the air crew are unable to
@@ -436,52 +974,109 @@ const LESSON_OVERRIDES = {
       the RFF service throughout.</p>
       <p>That is a significant transfer of responsibility, and it is exactly the
       kind of thing that goes wrong when nobody has said out loud that it has
-      happened. Practise stating it.</p>
+      happened. Practise stating it — literally the words, not the meaning.</p>
+
+      <h3>What RFF does once evacuation is under way</h3>
+      <p>There is a discipline here that new crews get wrong by being helpful. RFF
+      personnel should <strong>not impede the evacuation and should not attempt to
+      enter the fuselage</strong>, but instead provide assistance and be prepared to
+      assist those not capable of self-evacuation.</p>
+      <p>Read that sequence carefully. Not impede. Do not enter. Provide assistance.
+      The instinct to get in there and help is exactly the instinct that turns a
+      survivable evacuation into a casualty list, and the manual is written to
+      restrain it. If you are about to enter a fuselage with occupants still
+      evacuating, you have misread your task.</p>
 
       <h3>Unified is not the same as shared</h3>
       <p>Once police, medical, security, the operator and mutual aid are on scene,
       you have several competent authorities with different statutory duties. Unified
       command reconciles them; it does not dissolve them. Somebody still has to say
-      "we are withdrawing" at a specific moment, and that person is not a committee.</p>
-      <p>Doc 9137 requires that the incident commander can communicate with other
-      agencies on separate frequencies. Keep them separate. Inter-agency radio is for
-      coordination, not for your own internal traffic.</p>
+      "we are withdrawing" at a specific moment, and that person is not a
+      committee.</p>
+      <p>Doc 9137 §12.3.21 requires that the incident commander can communicate with
+      other agencies on separate frequencies. Keep them separate. Inter-agency radio
+      is for coordination, not for your own internal traffic.</p>
+      <p>Most aerodromes that do this well separate two levels explicitly. Somebody
+      thinks ahead and sets objectives; somebody runs the incident and allocates
+      tasks. One national regulation makes that separation statutory, with a
+      tactical-level command centre and an operational-level command as distinct
+      entities — see the worked structure in lesson m1. Whatever your labels are,
+      the question is whether there is a named person thinking ahead and a named
+      person running it, and whether they are the same person on a quiet shift and
+      different people on a big one.</p>
+
+      <h3>The incident command board</h3>
+      <p>One practical artefact worth borrowing, because it is cheap and it is the
+      thing that makes a command record possible: an <strong>Incident Command
+      Board</strong>. In the worked example regulation, the planning and recording
+      of the plan is described as essential to a fluid and achievable operations
+      objective, and the board is used to keep up-to-date information on casualties
+      and rescues, for operational briefings to other responders, and as an
+      incident aid listing required actions at an aircraft incident.</p>
+      <p>All four uses matter and only the first is obvious. A whiteboard with
+      columns for units, tasks, casualties and hazards does something a radio
+      channel cannot: it makes the shared picture <em>visible</em>, so a crew
+      arriving at the command post can read the current state in three seconds
+      instead of asking three questions.</p>
+      <p>And the conclusion in the same document is the right note to end on: the
+      Airport Incident Commander <strong>does not, and should not, work alone</strong>.
+      The need for effective team performance on the incident ground remains vital,
+      and only by a careful assessment of the accident site can the hazards and
+      risks be limited and the area controlled.</p>
 
       <h3>Settle it before the incident</h3>
       <p>Who commands, who advises, who is told — and on what trigger authority
-      passes between services. Doc 9137 points to those in charge determining matters
-      in accordance with previous mutual aid arrangements. The operative word is
-      <em>previous</em>. Anything being decided for the first time during an incident
-      is being decided too late.</p>
+      passes between services. Doc 9137 points to those in charge determining
+      matters in accordance with previous mutual aid arrangements. The operative
+      word is <em>previous</em>. Anything being decided for the first time during an
+      incident is being decided too late.</p>
 
       <blockquote>
         <p><strong>SME action:</strong> insert your mutual aid agreements and the
         point at which authority transfers between services. Confirm the local
         position on evacuation authority, since this lesson follows ICAO and your
-        State requirements may differ.</p>
+        State's requirements may differ. Then check three things physically: is
+        there a command post, is it identifiable in daylight and at night, and is
+        there something on it that shows the current shared picture to a crew who has
+        just arrived?</p>
       </blockquote>
     `,
     refs: [
-      'ICAO Doc 9137 Part 1 — Chapter 12, evacuation determination and inter-agency coordination',
+      'ICAO Doc 9137 Part 1 — §12.3.26 and §12.3.27 evacuation determination, the RFF report, and the consequences of an unnecessary evacuation',
+      'ICAO Doc 9137 Part 1 — §12.3.21 the incident commander and separate frequencies',
+      'ICAO Doc 9137 Part 1 — Chapter 12, inter-agency coordination and previous mutual aid arrangements',
+      'United Arab Emirates — GCAA CAR Part XI on zoning, Silver and Bronze command, the Mobile Command Post and the Incident Command Board (worked example)',
       'Your mutual aid agreements',
       'Your aerodrome emergency plan — command and liaison'
     ],
     smeChecked: false
   },
-
   'art09-m4': {
     title: 'Working the emergency plan',
     brief:
       'The plan exists so that decisions arrive pre-made. Your job is to notice ' +
       'when the plan is the wrong plan.',
     points: [
-      'A documented tactical plan for positioning, known to every responder, is expected — not optional.',
+      'Tactical decision-making starts when the alert tone sounds, not when you arrive. It continues en route and on approach.',
+      'A documented tactical plan for positioning, known to every responder and practised, is expected — three obligations, and most services satisfy one.',
       'The first vehicle on scene establishes the route for everyone behind it.',
-      'Follow the plan until the picture contradicts it, then say so.',
+      'The incident commander decides, as part of size-up, whether the plan needs changing.',
       'Positioning must preserve egress, a way out for reflash, and turret coverage.',
+      'After the rescue, the accident site and the dead are subject to their own rules. Do not disturb either without authority.',
       'An undocumented plan is not a plan.'
     ],
     body: `
+      <h3>The clock starts at the alert, not at the scene</h3>
+      <p>The most useful sentence in §12.3.25 is about timing, and it changes how
+      the whole course feels: <strong>tactical decision-making starts at the time
+      when the alert tone is sounded</strong> and continues to be made both while
+      en route and during initial approach to the scene.</p>
+      <p>So you are not waiting to think. Size-up — what is happening, what is
+      about to happen, what needs to be done — and the correct tactics are being
+      worked out in the vehicle, in the minutes before you can see anything. That
+      is why the plan has to be automatic. You cannot begin thinking on arrival,
+      because you will already have committed yourself to an approach.</p>
+
       <h3>The plan should already exist</h3>
       <p>Doc 9137 expects a tactical plan for positioning RFF vehicles for the
       various aircraft types applicable to that aerodrome to be documented, known to
@@ -496,21 +1091,48 @@ const LESSON_OVERRIDES = {
       approach into their ultimate positions.</p>
       <p>Which means the single most consequential positioning decision on the scene
       is made by whoever gets there first, usually at the least informed moment of
-      the whole incident. This is why the plan has to be automatic, and why the first
-      crew departs from it only for a reason they can state out loud.</p>
+      the whole incident. This is why the plan has to be automatic, and why the
+      first crew departs from it only for a reason they can state out loud.</p>
+
+      <h3>Who decides to change it</h3>
+      <p>It is not the arriving crew, and it is not a matter of individual
+        initiative. §12.3.25 is explicit: <strong>as part of the size-up process the
+        incident commander would decide whether the tactical plan needs
+        changing</strong>.</p>
+      <p>That is a small clause with a large effect on crew behaviour. The first
+      vehicle to arrive should be reporting what it sees and requesting a decision,
+      not announcing one. If your crews routinely re-position themselves on arrival
+        because they can see something the plan did not anticipate, that is a
+        command problem — and it is also, read more generously, a signal that the
+        plan needs updating.</p>
 
       <h3>The positioning priorities</h3>
       <ul>
-        <li>Approach with extreme caution — watch for evacuating occupants,
-        wreckage, fuel ponding. Do not drive through smoke that obscures your vision
-        and theirs. Do not drive over wreckage.</li>
-        <li>Go uphill and upwind. Fuel and vapours gather in low-lying areas.</li>
-        <li>Do not block the entry or exit areas other emergency vehicles need.</li>
-        <li>Protect the egress routes of evacuating occupants first.</li>
-        <li>Stay repositionable, in case of reflash.</li>
-        <li>Cover as much of the fuselage as the turrets allow.</li>
-        <li>Preserve the accident site.</li>
+        <li><strong>(a)</strong> Approach the scene with extreme caution. Watch for
+        evacuating occupants, wreckage debris, fuel ponding and other hazards. Avoid
+        driving through any smoke which obscures your vision and potential
+        evacuees'. Avoid driving over any aircraft wreckage.</li>
+        <li><strong>(b)</strong> Consider terrain and slope, and the direction of the
+        wind before entering. Attempt to position uphill and upwind to avoid fuel and
+        vapours, which tend to gather in low-lying areas.</li>
+        <li><strong>(c)</strong> Do not block the entry or exit areas which emergency
+        vehicles may need to use.</li>
+        <li><strong>(d)</strong> Initial position of vehicles should be to protect
+        egress routes of evacuating aircraft occupants.</li>
+        <li><strong>(e)</strong> Ideally, position so vehicles can be repositioned in
+        the event of reflash, or on direction of the incident commander.</li>
+        <li><strong>(f)</strong> Position so turrets can cover a maximum amount of the
+        aircraft fuselage.</li>
+        <li><strong>(g)</strong> The incident commander should consider what is
+        happening, what is about to happen, and what to do to preserve life and
+        property.</li>
+        <li><strong>(h)</strong> Give consideration to preserving the accident
+        site.</li>
       </ul>
+      <p>Read (d) against (f). Protecting egress comes before covering the
+      fuselage. If you are covering fuselage you are choosing not to protect an exit
+      route, and that is a defensible choice in some circumstances — but it should
+      be a choice somebody made, not an accident of where the first vehicle stopped.</p>
 
       <h3>When the plan is the wrong plan</h3>
       <p>Following the plan is the default. Deviating is a decision, and it needs the
@@ -519,81 +1141,180 @@ const LESSON_OVERRIDES = {
       never said so, and the commander making the next decision on a picture nobody
       told them about.</p>
 
+      <h3>After the rescue: the rules change</h3>
+      <p>One of the most reliable ways to cause lasting damage to an incident is to
+      treat the whole event as a rescue until everyone is out and then keep
+      behaving that way. Chapter 12.5 sets out separate post-accident procedures, and
+      two of them are worth knowing by heart:</p>
+      <ul>
+        <li><strong>§12.5.5</strong> — the wreckage of an aircraft involved in an
+        accident, including controls, <strong>shall not be disturbed or moved</strong>
+        until the requirement has been satisfied. The clause that follows concerns
+        the authority to do so.</li>
+        <li><strong>§12.5.2 and §12.5.4</strong> — where removal of the bodies of
+        fatality injured occupants remaining in the wreckage is necessary after the
+        fire has been dealt with, and where circumstances permit, <strong>the area
+        should be photographed for future reference prior to any body
+        removal</strong>.</li>
+      </ul>
+      <p>Both of those exist because the scene is evidence. Crews who have been
+      working inside a burning aircraft for twenty minutes do not automatically
+      reclassify wreckage as salvage, and the handover into the post-accident phase
+      needs to be an explicit event with an explicit authority behind it.</p>
+      <p>And the last line of §12.5.6 is the one to remember as a person rather
+      than a procedure: on completion of the initial rescue operation, it is
+      important that RFF personnel exercise as much care as they did during it.
+      Everybody's judgement is worse than usual at that point, and the tasks in front
+      of you are quieter and easier to get wrong without noticing.</p>
+
       <blockquote>
         <p><strong>SME action:</strong> attach your own positioning plan per aircraft
         type, and confirm it is drawn from your aerodrome's actual layout, taxiways,
-        hardstanding and water points. Also confirm the local position on preserving
-        the accident site, which carries investigation and liability consequences.</p>
+        hardstanding and water points. Then confirm two things that are usually
+        assumed. Who has the authority to release the accident site after the
+        rescue, and how is that authority requested and recorded? And is your plan
+        actually practised, or only written — because §12.3.25 asks for three things
+        and only one of them is the writing.</p>
       </blockquote>
     `,
     refs: [
-      'ICAO Doc 9137 Part 1 — Chapter 12, positioning and tactical planning',
-      'Your aerodrome emergency plan — preplanned tactics',
+      'ICAO Doc 9137 Part 1 — §12.3.25 tactical decision-making, size-up, the positioning plan and the positioning priorities (a) to (h)',
+      'ICAO Doc 9137 Part 1 — §12.5.2, §12.5.4, §12.5.5 and §12.5.6 post-accident procedures and preservation of the accident site',
+      'Your aerodrome emergency plan — preplanned tactics, and the authority to release the accident site',
+      'Course ART-20 m1 — deviation discipline when the plan does not fit',
       'Course ART-19 — emergency planning and the full-scale exercise'
     ],
     smeChecked: false
   },
-
   'art09-m5': {
     title: 'Stand-down decisions',
     brief:
       'The decision to stop is the most consequential decision of the incident, ' +
-      'and the one most often made by default.',
+      'and it is the one most often made by default rather than by somebody.',
     points: [
       'Stand-down is a command decision. A crew cannot decide it alone.',
+      'The standard sets the order of priorities, not a checklist. Know which order.',
+      'The life-saving commitment is met when all occupants are accounted for — property protection comes after, not instead.',
+      '"It looks out" and "it is out" are different claims, and the difference is what thermal imaging is for.',
       'Reflash is why vehicles stay repositionable rather than parked.',
-      'The commander must be satisfied the fuel and fire risk has actually ended.',
-      'Preserving the accident site survives the incident.',
-      'The report is part of the job, not an afterthought.'
+      'Doc 9137 does not give you a stand-down doctrine. It expects you to have one. Write it.',
+      'The accident site survives the incident, and so does the record of what was decided.'
     ],
     body: `
       <h3>Who decides</h3>
       <p>Nobody individual stops pouring. Stand-down is a command decision, made by
       the incident commander, on advice. If you cannot name the person who will make
-      that call on your aerodrome, that is a gap worth closing now.</p>
+      that call on your aerodrome — and name the person who takes it when the
+      commander is inside a fuselage — that is a gap worth closing now, while nobody
+      is tired.</p>
 
-      <h3>Reflash is the reason for the positioning discipline</h3>
-      <p>The positioning guidance says vehicles should ideally be positioned so they
-      can be repositioned in the event of reflash. That instruction is a forecast.
-      Anyone who has stood at a burnt aircraft at 03:00 knows that "we thought it was
-      out" is a sentence people say afterwards.</p>
-      <p>Reflash risk is not a general worry — it is a function of fuel state, foam
-      application, whether the fuel is in the cells or the tank, and how long the
-      aircraft sat before anything was applied. Know the specifics for the type in
-      front of you.</p>
-
-      <h3>What "finished" actually requires</h3>
+      <h3>The order of priorities is sourced; the checklist is not</h3>
+      <p>Be clear about what the standards give you and what you have to supply
+      yourself, because this is a common source of misplaced confidence.</p>
+      <p>What <em>is</em> sourced is the order. Doc 9137 §14.6.1 states that when
+      the life saving commitment has been met <strong>it is necessary, of course, to
+      utilize all available resources to secure protection of property</strong>.
+      Read the structure of that sentence carefully, because it is the whole
+      doctrine in one line:</p>
       <ul>
-        <li>The fire is out, not merely suppressed — and the crew can see it is out.</li>
-        <li>Hot spots and concealed spaces have been checked, with the doors and
-        panels that need opening already open.</li>
-        <li>The fuel condition is known and no longer changing.</li>
-        <li>A watch is set before everyone stands down.</li>
-        <li>The accident site has been preserved.</li>
+        <li>the life-saving commitment is <em>met</em> at a defined point — all
+        occupants accounted for;</li>
+        <li>only <em>then</em> does property protection become the task;</li>
+        <li>and once it becomes the task, all available resources go to it.</li>
       </ul>
-      <p>Every one of those is a judgement. None of them should be made by the person
-      who is tired and wants to go home, alone, without saying it out loud.</p>
+      <p>Two crews fail this in opposite directions. One stops applying agent
+      because the visible fire is out, before anyone knows the occupants are all
+      accounted for. The other keeps pouring at a burning tail because nobody has
+      formally handed the objective over. Both are reading the standard
+      incorrectly.</p>
+      <p>What is <em>not</em> sourced is any detailed criteria for when a fire is
+      considered extinguished, what overhaul and hot-spot checking should consist
+      of, or how long a watch should be maintained. Doc 9137 mentions reflash once,
+      in a positioning clause, and does not develop it. That doctrine has to come
+      from your own procedures, your national requirements, and the manufacturer
+      guidance for the aircraft types you handle.</p>
+      <p>Write it down. A service that has an unwritten stand-down doctrine has a
+      doctrine — it just cannot explain it to an inspector, a new recruit, or
+      itself at 03:00.</p>
+
+      <h3>"It looks out" and "it is out"</h3>
+      <p>The manual is unusually direct about the limits of eyeballs. §12.3.22
+      observes that <strong>since it is often impossible for the crew members to
+      make an accurate appraisal of aircraft fire warning indicators</strong>, it is
+      advisable to bring the aircraft to a complete stop and allow RFF personnel to
+      inspect the area involved — and that <strong>this inspection can usually be
+      greatly enhanced by the use of thermal imaging equipment without having to
+      open aircraft compartment doors</strong>.</p>
+      <p>Two things follow. The first is that a crew standing near a running engine
+      cannot reliably judge the aircraft, which is why the recommendation is to bring
+      it to a stop and look properly rather than to interpret from the apron edge.
+      The second is that there is a specific, named piece of equipment for the
+      question "is there still fire in there", and the phrase "without having to
+      open aircraft compartment doors" tells you why it matters — the answer you
+      need is inside sealed voids.</p>
+      <p>That is the difference between a fire that is out and a fire that is out of
+      sight. Conceded fire in wing voids, belly fairings and cargo holds is the
+      standard reason a burnt aircraft re-ignifies on the apron.</p>
+
+      <h3>Reflash is a forecast, not a worry</h3>
+      <p>The positioning guidance says vehicles should ideally be positioned so they
+      can be repositioned in the event of reflash, or on direction of the incident
+      commander. That instruction is a forecast. It assumes somebody is already
+      thinking about a second event while the first is still running, and it is the
+      reason positioning discipline exists at all rather than being tidiness.</p>
+      <p>Reflash risk is not a general worry — it is a function of fuel state, foam
+      application, whether the fuel is in the cells or still in the tank, and how
+      long the aircraft sat before anything was applied. Know the specifics for the
+      type in front of you, per aircraft, in your own SOP.</p>
+      <p>Anyone who has stood at a burnt aircraft at 03:00 knows that "we thought it
+      was out" is a sentence people say afterwards rather than at the time.</p>
+
+      <h3>The scene is not safe until the engines are accounted for</h3>
+      <p>One more reason stand-down is a command decision rather than a visual one.
+      §12.3.23 notes that it may be necessary to keep at least one engine operating
+      after the aircraft has come to a stop, in order to provide lighting and
+      communications aboard the aircraft — and that this will hamper rescue
+      operations to some extent. On turbo-jet engines, extreme care must be
+      exercised in the immediate area ahead and for a considerable distance behind
+      the engine.</p>
+      <p>A scene with a live engine is not a scene anybody can relax in, and the
+      area behind a turbojet is not where people stand while they wait to be told
+      the job is finished.</p>
 
       <h3>Afterwards</h3>
-      <p>Preserving the accident site is listed as a consideration in the guidance,
-      and it outlives the incident — wreckage, loose articles and fluid evidence all
-      have consequences afterwards. So does the report. An incident that produced no
-      written record of what was decided, and why, will produce the same decision
-      again next time.</p>
+      <p>Preserving the accident site is listed as a consideration in the
+      positioning guidance, and it outlives the incident — wreckage, loose articles
+      and fluid evidence all have consequences afterwards. Chapter 12.5 sets out
+      separate post-accident procedures, and §12.5.5 is the hard one: the wreckage,
+      including controls, shall not be disturbed or moved until the requirement has
+      been satisfied. The last line of §12.5.6 is the one to hold on to as a person
+      rather than a procedure — on completion of the initial rescue operation, it is
+      important that RFF personnel exercise as much care as they did during it.</p>
+      <p>So does the report. An incident that produced no written record of what was
+      decided, and why, will produce the same decision again next time.</p>
 
       <blockquote>
-        <p><strong>SME action:</strong> define your stand-down criteria and the
-        re-attack triggers in writing, name who holds the decision, and confirm your
-        fuel-state and reflash guidance per aircraft type. Also record your accident
-        site preservation procedure and who is notified.</p>
+        <p><strong>SME action:</strong> this lesson is deliberately explicit about
+        what the standards do <em>not</em> give you, so the first action here is to
+        write the missing doctrine. Define, in your own documents: what evidences
+        that all occupants are accounted for; what evidences that the fire is out
+        rather than out of sight; what your overhaul and hot-spot check consists of;
+        what your reflash triggers are; how long a watch is maintained and by whom;
+        and who holds the stand-down decision in each shift pattern. Then state who
+        may release the accident site and how that authority is recorded.</p>
       </blockquote>
 
       {{video:faa-tact-1}}
     `,
     refs: [
-      'ICAO Doc 9137 Part 1 — Chapter 12, reflash, withdrawal and accident site preservation',
-      'Your aerodrome emergency plan — stand-down and re-attack',
-      'Course ART-16 — tactics, withdrawal and re-attack'
+      'ICAO Doc 9137 Part 1 — §14.6.1 the life-saving commitment and the order of property protection',
+      'ICAO Doc 9137 Part 1 — §12.3.22 thermal imaging and the limits of visual appraisal',
+      'ICAO Doc 9137 Part 1 — §12.3.23 hazard area with engines running, including the area astern of a turbojet',
+      'ICAO Doc 9137 Part 1 — §12.3.25 (e) positioning to allow repositioning on reflash; (h) preserving the accident site',
+      'ICAO Doc 9137 Part 1 — §12.5.5 and §12.5.6 post-accident procedures and care after completion',
+      'ICAO Annex 14 Vol I — §9.3 disabled aircraft removal: the regime that begins when the RFF incident ends',
+      'Your aerodrome emergency plan — stand-down, overhaul and re-attack',
+      'Course ART-16 m4 — exposure protection, withdrawal and re-attack'
     ],
     smeChecked: false
   },
@@ -757,9 +1478,10 @@ const LESSON_OVERRIDES = {
         aircraft types at your field exceed the category average and confirm the
         recalculation under §2.3.7 has been done; and record your measured
         response times against §2.7.1. Then check the whole set against your
-        State's requirements — Annex 14 Volume I Chapter 9 and, in South Africa,
-        CAR Part XI and the applicable SACAA CAPs, which may differ from the ICAO
-        figures given here.</p>
+        State's requirements — Annex 14 Volume I Chapter 9 and whatever national
+        instrument your Civil Aviation Authority enforces, which may differ from
+        the ICAO figures given here. This platform does not assume which State you
+        are in.</p>
       </blockquote>
     `,
     refs: [
@@ -767,7 +1489,7 @@ const LESSON_OVERRIDES = {
       'ICAO Doc 9137 Part 1 — §2.4.1 to §2.4.10 critical area and water calculation',
       'ICAO Doc 9137 Part 1 — §2.5 discharge rates; §2.6 supply and storage; §2.7 response times',
       'ICAO Annex 14 Volume I Chapter 9 — aerodrome rescue and firefighting',
-      'CAR Part XI and applicable SACAA CAPs — South African requirements'
+      'Your national Civil Aviation Authority requirements — confirm which instrument and issue binds you'
     ],
     smeChecked: false
   },
@@ -886,6 +1608,8 @@ const LESSON_OVERRIDES = {
       'The buzzer has a warning light because a failed buzzer is silent. That light is the test.',
       'The broadcast must carry location, aircraft type and preferential routing — not just "fire".',
       'The master watchroom is continuously staffed. Satellite stations until their vehicles roll.',
+      'Your response time clock starts at the point your own State and your own alerting arrangement define — confirm it.',
+      'Response time stops at first application of foam at 50% of the specified discharge rate — not at arrival on scene.',
       'Nothing here works unless someone has deliberately broken it and watched it fail.'
     ],
     body: `
@@ -956,6 +1680,35 @@ const LESSON_OVERRIDES = {
       for the job it actually has. Adding capability to the wrong room is a
       common and expensive way of solving nothing.</p>
 
+      <h3>Where the response clock starts</h3>
+      <p>If your service runs a central watchroom with more than one station, there
+      is a consequence that catches experienced crews out, because it is not
+      intuitive. GCAA CAR Part XI GM2 to §10.1 — from the United Arab Emirates
+      national regulations — states that where a central control facility, a Main
+      Watch room, is in operation with multiple fire stations,
+      <strong>the response time starts once the central control facility receives
+      the emergency call</strong>, not when the responding fire station receives
+      it.</p>
+      <p>That is one jurisdiction's rule, and your State's may differ, so check
+      yours. But if your arrangement resembles this at all, the arithmetic almost
+      certainly does too: every second between the call entering the master
+      watchroom and the call leaving it is a second charged to the response
+      objective. The satellite station's clock is not a fresh clock; it inherits
+      whatever the master watchroom has already spent.</p>
+      <p>Handovers, repeat-back discipline, writing things down before
+      transmitting — these are not administrative niceties. They are charged
+      directly against the response time.</p>
+      <p>The same Good Guidance Material sets out how response time is measured at
+      all, and the measurement point is the part people get wrong: it is the time
+      between the initial call to the service and the time when the first
+      responding appliance is in position to apply foam <strong>at a rate of at
+      least 50 per cent</strong> of the specified discharge rate. So the clock
+      stops at first application of foam, not at arrival on scene — and an
+      appliance that has arrived but is not yet capable of putting agent down at
+      half rate has not arrived. GM3 to the same clause adds that fire access lanes
+      from the fire station directly onto a runway are to be controlled by ATC,
+      with the required runway-ahead warnings clearly displayed.</p>
+
       <h3>How to actually test this</h3>
       <ul>
         <li>Confirm the warning light is healthy and that someone can say what a
@@ -982,6 +1735,7 @@ const LESSON_OVERRIDES = {
     refs: [
       'ICAO Doc 9137 Part 1 — §2.9 communication and alerting systems',
       'ICAO Doc 9137 Part 1 — §4.1 emergency communications; §4.2 fire station communications',
+      'United Arab Emirates — GCAA CAR Part XI §10.1 and GM1, GM2, GM3: measurement of response time, the central watchroom, and fire access lanes (worked example, not necessarily your rule)',
       'Your aerodrome emergency plan — alerting and communications',
       'Course ART-19 — emergency planning and the full-scale exercise'
     ],
@@ -1263,6 +2017,564 @@ const LESSON_OVERRIDES = {
   },
 
   /* ─────────────────────────────────────────────────────────────────────
+     ART-08 — Training and competency. Grounded in Doc 9137 Part 1
+     Chapter 14 (Training) and Chapter 18 (Human factors). §14.1.1 is the
+     argument the whole course rests on: RFF crews are rarely tested, so
+     training is the only assurance available.
+     ───────────────────────────────────────────────────────────────────── */
+  'art08-m1': {
+    title: 'Initial training',
+    brief:
+      'Why a meticulously planned training programme is not administrative ' +
+      'excellence but the only assurance that anybody will be any good at this.',
+    points: [
+      'RFF crews are almost never tested by a real event. Training is the only assurance there is.',
+      'The core programme has nine faculties. Know all nine, not just the firefighting one.',
+      'Scope should vary with the trainee. Simpler instruction is more likely to succeed.',
+      'Enthusiasm must not carry instruction past its practical application.',
+      'The service is primarily lifesaving. Firefighting is what makes lifesaving possible.',
+      'Firefighters are trained in firefighting to permit rescue, and only then protect property.'
+    ],
+    body: `
+      <h3>The reason this course exists</h3>
+      <p>Read §14.1.1 carefully, because it is the justification for everything
+      else in this course. Personnel whose duties consist solely of RFF services
+      for aircraft operations are <strong>infrequently</strong> called upon to face
+      a serious situation involving lifesaving at a major aircraft fire. They
+      will experience a few incidents and a larger number of standbys — but will
+      seldom be called upon to put their knowledge and experience to the test.</p>
+      <p>It follows that <strong>only by means of a most carefully planned and
+      rigorously followed programme of training</strong> can there be any
+      assurance that both personnel and equipment will be capable of dealing
+      with a major aircraft fire should the necessity arise.</p>
+      <p>That is the honest position. Your competence is not going to arrive
+      through experience, because experience will not happen. It has to be built
+      deliberately, in advance, on purpose.</p>
+
+      <h3>The nine faculties</h3>
+      <p>The core training programme is organised into nine faculties (§14.1.1):</p>
+      <ol>
+        <li>fire dynamics, toxicity and basic first aid;</li>
+        <li>extinguishing agents and firefighting techniques;</li>
+        <li>handling of vehicles, vessels and equipment;</li>
+        <li>airfield layout and aircraft construction;</li>
+        <li>operational tactics and manoeuvres;</li>
+        <li>emergency communication;</li>
+        <li>leadership performance;</li>
+        <li>physical fitness; and</li>
+        <li>auxiliary modules — rescue in difficult terrain, response to
+        biological or chemical threats, and so on.</li>
+      </ol>
+      <p>Most services invest heavily in faculties 2 and 5 and treat the rest as
+      overheads. Note that communication, leadership and physical fitness are
+      listed as core faculties in their own right — not as supporting subjects.
+      And note that faculty 4, airfield layout and aircraft construction, is the
+      one that most obviously belongs to the aerodrome you actually work.</p>
+
+      <h3>How it should be taught</h3>
+      <p>The core curriculum should include both initial and recurrent
+      instruction, and the scope should vary with the degree of intelligence of
+      the trainees (§14.1.2). In most cases, the guidance is blunt:
+      <strong>the simpler this form of instruction is kept, the more successful
+      it is likely to be</strong>.</p>
+      <p>That is a genuinely uncomfortable instruction for anyone who enjoys
+      teaching. Simpler is not the same as shallower — it means the instruction
+      is kept to what the trainee can actually use rather than what the
+      instructor finds interesting.</p>
+
+      <h3>Interest, without losing the plot</h3>
+      <p>There is a balancing instruction in the same clause, and it is worth
+      taking seriously rather than treating as a platitude. Enthusiasm generated
+      by the interest value of the subject should <em>not</em> be allowed to carry
+      the instruction beyond its practical application — but the officer
+      responsible for the training programme must endeavour to maintain the
+      interest and enthusiasm of the crew at all times.</p>
+      <p>Both halves matter. A course that runs long because the material is
+      fascinating has drifted from training into entertainment. A course nobody
+      engages with has failed regardless of its content. And there is real
+      material to sustain interest indefinitely: many factors affecting RFF
+      procedures at an aircraft accident can be anticipated, staged and
+      practised, and each new type of aircraft brings new problems that must be
+      assessed and incorporated into the programme (§14.1.2).</p>
+
+      <h3>What the training is actually for</h3>
+      <p>§14.6.1 gives the objective without ambiguity. Operational tactics
+      training establishes conditions in which aircraft occupants may be rescued
+      from an aircraft involved in, or liable to become involved in, fire. The
+      objective is to <strong>isolate the fuselage from the fire, cool the
+      fuselage, establish and maintain an escape route</strong>, and achieve the
+      degree of fire control necessary to permit rescue operations to proceed.</p>
+      <p>Then the sentence that should be read to every new recruit:</p>
+      <blockquote>
+        <p>The service to be provided is primarily a lifesaving organization, one,
+        however, that must be trained in firefighting because aircraft involved
+        in a serious accident are frequently involved in fire. The firefighting
+        operations must be directed to those measures which are necessary to
+        permit rescue to be carried out until all the occupants of the aircraft
+        are accounted for. This includes precautionary measures at those incidents
+        where no fire has broken out. When the life saving commitment has been
+        met it is necessary, of course, to utilize all available resources to
+        secure protection of property. <em>— §14.6.1</em></p>
+      </blockquote>
+      <p>Three things follow. Firefighting capability exists to enable rescue, not
+      the reverse. Firefighting continues until <strong>all occupants are
+      accounted for</strong> — not until the fire looks handled. And
+      precautionary measures apply at incidents where <em>no</em> fire has broken
+      out. Property protection comes last, and it comes last on purpose.</p>
+
+      <blockquote>
+        <p><strong>SME action:</strong> map your initial training against all nine
+        faculties and state honestly which are strong, which are thin, and which
+        are absent. Confirm the scope varies with trainee capability rather than
+        being one fixed course for everybody. And record your completion and
+        assessment standards, so that "initial training complete" means something
+        a State inspector could verify.</p>
+      </blockquote>
+    `,
+    refs: [
+      'ICAO Doc 9137 Part 1 — §14.1.1 the nine faculties; §14.1.2 method and scope of instruction',
+      'ICAO Doc 9137 Part 1 — §14.6.1 the objective of operational tactics training',
+      'ICAO Doc 9137 Part 1 — §14.10 auxiliary modules',
+      'ICAO Annex 14 Volume I Chapter 9; your State training requirements'
+    ],
+    smeChecked: false
+  },
+
+  'art08-m2': {
+    title: 'Recurrent training and currency',
+    brief:
+      'The failure mode is not forgetting. It is gradually concluding that ' +
+      'nothing has changed.',
+    points: [
+      'A few real incidents and a larger number of standbys is the whole of your live experience.',
+      'Routine aspects of training become less interesting over a long period of inaction.',
+      'The equipment serviceability check is the first duty to decay — watch for it.',
+      'Each new aircraft type brings new problems that must be assessed and added.',
+      'Currency is a system property, not a personal virtue.',
+      'If your recurrent programme has not changed in two years, it has stopped working.'
+    ],
+    body: `
+      <h3>Recurrence is not repetition</h3>
+      <p>§14.1.2 makes the point that recurrent instruction forms part of the core
+      curriculum alongside initial instruction — recurrence is not an optional
+      extra to be cut when the budget tightens.</p>
+      <p>But the more interesting warning in the same clause is about
+      attention rather than about syllabus. As certain routine aspects of
+      training become less interesting over a long period, it is essential that
+      the officer ensure <strong>each crew member realises the need for such
+      training</strong>.</p>
+      <p>The failure mode is not forgetting. A crew who have forgotten a
+      procedure will ask. The failure mode is a crew who have stopped believing
+      the procedure matters, and who perform it mechanically or not at all
+      because nothing has ever happened to prove otherwise.</p>
+
+      <h3>The duty that decays first</h3>
+      <p>The guidance offers a worked example, and it is the one most services
+      take for granted. It is a fundamental practice in the RFF service that
+      <strong>each crew member, when on duty, be satisfied that the equipment
+      which may be used is serviceable</strong>.</p>
+      <p>And then the observation that matters: this particular aspect of a crew
+      member's duty <em>could deteriorate after a long period of comparative
+      inaction</em>, unless that person is really convinced of the importance of
+      the task (§14.1.2).</p>
+      <p>This is the honest weak point in most services. The daily equipment
+      check is the least interesting task on the roster and the one with the
+      longest fuse. It is also the only thing standing between you and discovering
+      at 03:00 that the vehicle you have just driven to an aircraft accident has
+      a fault you knew about three weeks ago.</p>
+
+      <h3>Change is the enemy of a static syllabus</h3>
+      <p>Each new type of aircraft brings with it new problems which must be
+      assessed and incorporated into the training programme (§14.1.2). A fleet
+      change is a training event, not only a procurement event.</p>
+      <p>Think about what actually changes when a new type joins: door and panel
+      locations, the positioning plan, turret reach and arcs, the critical area
+      and therefore the agent quantity, cabin configuration and exit mix, engine
+      positions and intake hazards, and the fuel load state you should expect at
+      a hot brake or a rejected takeoff. Every one of those is a lesson, and
+      none of them arrive automatically with the aircraft.</p>
+
+      <h3>Building a system rather than an attitude</h3>
+      <p>Since assurance cannot come from incidents (§14.1.1), currency has to be
+      a property of the system rather than of individual diligence. That means
+      things you can inspect:</p>
+      <ul>
+        <li>a recurrent syllabus tied to the current fleet, the current threat
+        picture and the current equipment, reviewed on a stated cycle;</li>
+        <li>the equipment serviceability check recorded, not assumed — a
+        signature that can be audited later;</li>
+        <li>each new aircraft type admitted into the service with a defined
+        familiarisation package before it carries traffic;</li>
+        <li>cross-training, so that no single post depends on one person having
+        been on shift for nine years;</li>
+        <li>an honest gap review — what has not been practised in the last two
+        years, because that list is usually longer than anyone expects.</li>
+      </ul>
+
+      <blockquote>
+        <p><strong>SME action:</strong> state your recurrent cycle and what
+        triggers an out-of-cycle refresh. Confirm the equipment check is recorded
+        per crew member and auditable. List the aircraft types currently in
+        service and the date each was admitted, and confirm a familiarisation
+        package exists for each. Then produce the list of what your service has
+        <em>not</em> practised in the last two years, and decide which items on it
+        are unacceptable.</p>
+      </blockquote>
+    `,
+    refs: [
+      'ICAO Doc 9137 Part 1 — §14.1.1 infrequency of real events; §14.1.2 recurrence, interest and the serviceability check',
+      'ICAO Doc 9137 Part 1 — §14.5 airfield layout and aircraft construction',
+      'Your aerodrome emergency plan — training and currency commitments',
+      'Course ART-11 — aircraft familiarisation'
+    ],
+    smeChecked: false
+  },
+
+  'art08-m3': {
+    title: 'Competency assessment and records',
+    brief:
+      'Assessment at the individual and the team level, because a service of ' +
+      'individually competent people can still fail as a crew — and in South ' +
+      'Africa the regulator has already written down what the records must be.',
+    points: [
+      'Competency must be audited at individual and team level, not just individually.',
+      'Anything less than full efficiency is unacceptable, and dangerous both ways.',
+      'Do not become overly fixated with the hard skills. The soft components matter.',
+      'Human factors apply to written plans too — the emergency plan and tactical plans.',
+      'A national regulator may name the artefacts: a training needs analysis, a frequency analysis, an accepted training programme, a certificate of competence, and an accepted maintenance scheme. Find out yours.',
+      'Reassessment must happen within a maximum period of four years.',
+      'The regulator agrees with Doc 9137: competence cannot be measured at real incidents, because you do not get them.'
+    ],
+    body: `
+      <h3>Individual competence is not the same as an effective service</h3>
+      <p>The entire training programme must be designed to ensure that both
+      personnel and equipment are <em>at all times</em> fully efficient. The
+      guidance sets the bar without room for interpretation: <strong>anything less
+      than full efficiency is unacceptable</strong>, and may be dangerous both to
+      those in need of aid and to those seeking to give such aid (§14.1.3).</p>
+      <p>Note that it is dangerous <em>both ways</em>. An RFF service that is not
+      fully efficient endangers the occupants it is there to save, and also the
+      responders who go in after them. Worth saying to people, because every new
+      recruit has met the version of this argument that only mentions the
+      victims.</p>
+      <p>§14.1.3 then adds a second requirement that is routinely skipped: the
+      programme must build <strong>cohesiveness between key functional units</strong>
+      in order to deliver a consistent level of proficiency during emergencies. To
+      that end, RFF services should develop a <strong>competency audit
+      framework</strong> to assess the effectiveness of training at <em>both</em>
+      individual and team levels.</p>
+      <p>Team level is not a softer version of individual level. It is a different
+      thing. A service can be full of individually excellent firefighters who have
+      never worked together, and it will still fail.</p>
+
+      <h3>Do not over-invest in the hard skills</h3>
+      <p>§18.3.1 offers a caution that is easy to agree with and hard to act on. A
+      competent and professional RFF service must rely on a comprehensive and
+      relevant set of training modules, coupled with an internal audit framework to
+      check their effectiveness. But in promulgating that framework, one must
+      <strong>not be overly fixated with the "hard" skills component</strong> of the
+      training outcomes. Thought must be given to the soft human factor components
+      during both promulgation and execution. And the same applies to assessment: any
+      evaluation of operational effectiveness must take into account human factor
+      principles such as team coordination.</p>
+      <p>What that looks like in practice is that your assessment should not be
+      entirely a list of individual technical ticks. A crew that can each do their
+      task superbly, but cannot hand over command, brief a relief, or operate on one
+      channel together, has passed every individual assessment you have given
+      it.</p>
+
+      <h3>A worked example of the records a regulator asks for</h3>
+      <p>Doc 9137 tells you what good looks like. A national regulation tells you
+      what you must be able to produce on request. The clearest worked example
+      available in the public domain is <strong>GCAA CAR Part XI — Aerodrome
+      Emergency Services, Facilities and Equipment</strong>, issued by the General
+      Civil Aviation Authority of the <strong>United Arab Emirates</strong>, whose
+      amendments history records that it was built "based upon ICAO Annex 14".</p>
+      <p>Read it as a demonstration of adoption mechanics, not as your law. What it
+      shows is that a State which takes Chapter 9 seriously attaches
+      <em>named documents with an external counter-signature</em> — and knowing the
+      shape of those artefacts is what lets you recognise, or build, the equivalent
+      in your own service.</p>
+      <ul>
+        <li><strong>§13.1</strong> — the aerodrome shall appoint a
+        <strong>competent person</strong> to establish and effectively manage all
+        aspects of Rescue and Fire-Fighting Operations.</li>
+        <li><strong>§13.2</strong> — minimum staffing levels for all RFFS categories
+        operated by an aerodrome shall be <strong>agreed with the Authority</strong>
+        and promulgated in the Aerodrome Manual.</li>
+        <li><strong>§13.4</strong> — the minimum number of personnel shall be
+        determined by a <strong>Task Resource Analysis</strong>, conducted and
+        completed <strong>for acceptance by the Authority</strong>.</li>
+        <li><strong>§14.3</strong> — a <strong>training needs analysis shall be
+        conducted</strong> to identify the underpinning knowledge, understanding and
+        skills required to carry out the tasks of RFFS personnel, by role: firefighter,
+        crew supervisors, watch managers and senior officers. It must also include an
+        evaluation process measuring training outcomes against the programme's
+        published aims and objectives.</li>
+        <li><strong>§14.4</strong> — a <strong>frequency analysis shall be carried
+        out</strong> to determine the interval at which competence in each core
+        element should be assessed. All RFFS personnel shall be assessed in skills
+        and knowledge to ensure competency in role and task
+        <strong>within a maximum period of four years</strong>.</li>
+        <li><strong>§14.7</strong> — all personnel forming part of the operational
+        team shall hold a <strong>Certificate of Competence</strong> confirming they
+        possess the necessary standard of competence for their task and role.</li>
+        <li><strong>§14.8 and §14.9</strong> — personnel shall commence acquiring
+        competence through a <strong>Structured Learning Programme</strong>, and
+        Structured Learning Programmes <strong>shall be submitted to the Authority
+        for acceptance</strong>. On successful completion of the accepted programme,
+        a Certificate of Competence <strong>endorsed by the Authority</strong> is
+        issued.</li>
+        <li><strong>§14.10</strong> — competency shall be maintained through an
+        on-aerodrome <strong>Maintenance of Competency scheme accepted by the
+        Authority</strong>. Guidance on an acceptable scheme is at Appendix 2,
+        paragraph 5.</li>
+        <li><strong>§14.13</strong> — all fire officers shall be formally selected,
+        shall understand operational Incident Command, and shall hold a Certificate
+        of Competence for their rank or role.</li>
+      </ul>
+      <p>Note what that chain implies. This is not a training plan you keep
+      internally. A Structured Learning Programme goes to the regulator and comes
+      back <em>accepted</em>. A certificate comes back <em>endorsed</em>. The
+      maintenance scheme is <em>accepted</em>, not merely written. Your competence
+      system, in that jurisdiction, is a regulated artefact with an external
+      counter-signature.</p>
+      <p>Two drafting points to be aware of rather than confused by. CAR Part XI
+      §14.7 and §14.9 use "Certificate of <em>Competence</em>" while §14.13 uses
+      "Certificate of <em>Competency</em>"; they refer to the same thing. And §14.11
+      is worth reading separately — in addition to the formal training that leads to
+      the certificate, there is a standalone requirement that personnel
+      <em>maintain</em> their knowledge and skills of their operational function. The
+      certificate is the floor, not the end.</p>
+
+      <h3>The regulator's own version of the argument</h3>
+      <p>The most useful sentence in that section is §14.14, because it is a
+      regulator making the Doc 9137 §14.1.1 argument independently and in binding
+      language:</p>
+      <blockquote>
+        <p>Given the criticality of the function and the lack of opportunities for the
+        evaluation of operational competence during attendance at actual incidents
+        involving aircraft, there needs to be a process for the consistent measurement
+        of competence. <em>— GCAA CAR Part XI, §14.14</em></p>
+      </blockquote>
+      <p>Read that as an instruction rather than an observation. If a regulator has
+      already named the problem — you will not get the opportunities — then the
+      assessment process is not administrative overhead to be minimised. It is the
+      thing standing in for the experience you are not going to have.</p>
+
+      <h3>Written plans are subject to the same scrutiny</h3>
+      <p>§18.3.2 widens the scope in a direction that is easy to miss: human factors
+      principles are not confined to training programmes, and must also be given
+      consideration in the formulation of <strong>drawer plans</strong> — the
+      aerodrome emergency plan and the unit tactical plans of the RFF service.</p>
+      <p>A written plan is tested far less often than a training exercise, and
+      reviewed far less critically. Treat the plan review with the same rigour as a
+      competence assessment, and ask the awkward question: if this plan were executed
+      literally tonight by the crew on shift, would it work?</p>
+
+      <h3>Teamwork is the load-bearing element</h3>
+      <p>§18.4.1 is direct about it. As the success of any RFF operations relies very
+      much on teamwork, the importance of building mutual trust and team coordination
+      among staff during training <strong>cannot be overstressed</strong> — and the
+      manual tags it Liveware vs. Liveware, because it is the human factor that no
+      procedure or machine can substitute for.</p>
+      <p>Mutual trust is what lets a crew accept a tactical decision from a commander
+      they did not choose, act on information they cannot see, and hand over command
+      without hesitation. None of that works if the people involved have never done it
+      before, and none of it is assessed by watching one person.</p>
+
+      <h3>What a competency framework should actually produce</h3>
+      <ul>
+        <li>the artefacts above, current, in a folder, findable in under a
+        minute;</li>
+        <li>individual currency records showing <em>when</em> each competency was
+        last evidenced, not just that it was, with nothing older than four years;</li>
+        <li>team assessments — scenarios run as crews, against team objectives,
+        including command handover and relief;</li>
+        <li>an internal audit of the training programme itself, since the framework
+        is only as good as its ability to detect its own failure;</li>
+        <li>records that survive a staff change, an audit, and a regulator.</li>
+      </ul>
+
+      <blockquote>
+        <p><strong>SME action:</strong> build the checklist above against your own
+        regulator's requirements, not against the worked example — this platform
+        does not know which State you are in and will not guess. In particular,
+        establish and record: is there a written training needs analysis against the
+        named roles? Is there a frequency analysis, and does it respect a stated
+        maximum reassessment interval? Is there an equivalent of the Structured
+        Learning Programme, and has it been <em>accepted</em> by your authority? Is
+        the maintenance scheme accepted? Does every operational team member
+        physically hold a certificate of competence, and every officer one for their
+        rank? Record the gaps rather than summarising them away — the gaps are the
+        useful part of this exercise.</p>
+      </blockquote>
+    `,
+    refs: [
+      'ICAO Doc 9137 Part 1 — §14.1.3 competency audit framework, individual and team',
+      'ICAO Doc 9137 Part 1 — §18.3.1 and §18.3.2 human factors in training and in drawer plans',
+      'ICAO Doc 9137 Part 1 — §18.4.1 teamwork and mutual trust',
+      'United Arab Emirates — GCAA CAR Part XI §13.1, §13.2, §13.4, §14.3, §14.4, §14.7 to §14.11, §14.13, §14.14 (worked example of adoption mechanics)',
+      'United Arab Emirates — GCAA CAR Part XI Appendix 2 paragraph 5, guidance on an acceptable Maintenance of Competency scheme',
+      'ICAO Annex 14 Volume I Chapter 9 — §9.2.43 training in human performance and team coordination',
+      'Course ART-08 m4 — drills and live-fire currency'
+    ],
+    smeChecked: false
+  },
+
+  'art08-m4': {
+    title: 'Drills and live-fire currency',
+    brief:
+      'The test of tactics training is not whether you can describe the initial ' +
+      'action. It is whether you perform it without thinking.',
+    points: [
+      'Initial action must be instinctive — like hose-running — and follow even under stress.',
+      'Only then can the officer-in-charge assume complete control of the situation.',
+      'Main attack is mass application of foam; keep a suitable back-up agent for inaccessible pockets.',
+      'Live fire acclimatises crews to heat and smoke, which simulators cannot reproduce.',
+      'Pressure-fed fuel fires are named in Annex 14 §9.2.42 and CAR Part XI §14.5 — this is a requirement, not an aspiration.',
+      'Simulators are still valuable for vehicle handling, command and control.',
+      'Fitness training must match the intensity of the operations, not the fitness of the average person.'
+    ],
+    body: `
+      <h3>The standard is automatic, not competent</h3>
+      <p>§14.6.1 sets the test for operational tactics training, and it is a
+      demanding one. When personnel are well versed in handling firefighting
+      equipment, they should receive training in operational tactics to be
+      adopted at aircraft fires. This is a continuing commitment and must be
+      absorbed to the point where <strong>compliance with the initial action
+      called for is instinctive</strong> — in the same sense that hose-running to
+      a well-trained regular firefighter is automatic, and will therefore follow
+      even when working under stress.</p>
+      <p>That is the benchmark: the hose line, not the textbook. A crew who know
+      the correct initial action and have to <em>recall</em> it under stress have
+      not met it. Recall is what fails first.</p>
+      <p>And the consequence, which connects tactics training to command
+      training: <strong>only when this is achieved will the officer-in-charge be
+      in a position to assume complete control of the situation</strong>. Command
+      depends on the crew having made the first moves already, without being
+      told. A commander arriving at a scene where nothing has happened yet has no
+      control to assume.</p>
+
+      <h3>Mass application, and what backs it up</h3>
+      <p>The main attack on the fire should usually be by mass application of
+      foam, with the object of achieving maximum cooling and rapid suppression
+      (§14.6.2).</p>
+      <p>Because foam has limitations like any other agent, a suitable back-up
+      agent must be available for pockets of fire inaccessible to direct foam
+      application — generally dry chemical powder. And the guidance is specific
+      about where that back-up should and should not be used: confined to
+      <strong>running liquid fuel fires, fires in enclosed spaces such as wing
+      voids</strong>, or special fires such as an engine nacelle or undercarriage
+      well (§14.6.2).</p>
+
+      <h3>The approach</h3>
+      <p>Equipment should approach the accident site <strong>by way of the fastest
+      route</strong> in order to reach the site in the shortest possible time —
+      and this is <em>quite frequently not the shortest route</em>, because in
+      general it is preferable, where possible, to travel on a man-made surface
+      than to approach over rough ground or grassland (§14.6.4). The essence is
+      to ensure that RFF vehicles get there and are not subjected to unnecessary
+      hazards en route.</p>
+      <p>Then the detail that catches out experienced crews and new ones alike:
+      when nearing the scene, a careful watch must be maintained for occupants
+      who may be dashing away from the aircraft, or who may have been flung clear
+      and are lying injured in the approaches. This applies particularly at night
+      and calls for competent use of spot or search lights (§14.6.4).</p>
+      <p>People thrown clear of an aircraft survive. Finding them is not a
+      secondary task.</p>
+
+      <h3>Why live fire cannot be simulated away</h3>
+      <p>§18.4.2 draws a distinction that is easy to miss and expensive to get
+      wrong. For training to be as realistic as possible, <strong>live fire
+      training is crucial in helping personnel acclimatise to a heated and
+      smoke-filled environment</strong> — so that in an actual emergency they can
+      execute their tasks more confidently and effectively.</p>
+      <p>Smoke and heat are not knowledge. They are a physiological condition,
+      and the only reliable way to build tolerance to it is exposure. A crew who
+      have only ever worked in clean air will discover their limits at the worst
+      possible moment, which is the moment they are needed.</p>
+      <p>Note that this is not only good practice. Annex 14 §9.2.42 makes live
+      fire drills a <strong>shall</strong>, and it names the specific hazard:
+      drills must be commensurate with the types of aircraft and the type of RFF
+      equipment in use at the aerodrome, <strong>including pressure-fed fuel
+      fires</strong> — fires associated with fuel discharged under very high
+      pressure from a ruptured fuel tank.</p>
+      <p>That requirement is not left to national discretion in every case. GCAA CAR
+      Part XI §14.5 — the United Arab Emirates regulation, used here as a worked
+      example — repeats the requirement against <em>their</em> aerodrome and
+      equipment, again <strong>including pressure-fed fuel fires</strong>, and
+      adds <em>in accordance with Appendix 2</em>. §14.6 of the same document
+      requires that training facilities commensurate with the type and size of
+      aircraft using the aerodrome shall be provided <em>on the aerodrome</em>, so
+      that operational fire-fighting competency can be maintained.</p>
+      <p>Pressure-fed fuel fires deserve their own preparation. They are a
+      different hazard, not a bigger one: the fuel arrives as a high-velocity jet
+      rather than a burning pool, and the standard apparatus and standard agent
+      application approach do not obviously apply. If your live fire programme does
+      not cover them, that is a finding against a Standard in Annex 14 and against a
+      requirement in your national regulation — not a gap in an ideal
+      programme.</p>
+
+      <p>That said, the guidance does not put live fire above everything. Where
+      possible, <strong>simulators replicating different facets of RFF
+      operations</strong> — vehicle driving and operations, command and control,
+      and so on — should be available for training in a controlled, safe and
+      realistic environment. Use live fire for what only live fire teaches; use
+      simulators for the things you would otherwise practise dangerously or
+      expensively.</p>
+
+      <h3>Fitness that matches the job</h3>
+      <p>§14.9 ties physical fitness directly to operational effectiveness.
+      During protracted rescue operations, the ability of RFF personnel to
+      perform strenuous activities over an extended period of time influences the
+      overall operational effectiveness. Therefore, firefighters must be
+      <strong>aerobically and anaerobically fit</strong> to withstand the rigours
+      of a variety of operations.</p>
+      <p>But that is only half of it. The guidance is specific about how the
+      standard is set: physical fitness training requirements should be
+      <strong>designed to be commensurate with the equivalent fitness intensity
+      generated in the performance of RFF operations</strong> — which it lists
+      as the use of breathing apparatus, hand-lines, ladders, heavy equipment,
+      and other associated rescue operations such as casualty handling.</p>
+      <p>So the requirement is not general fitness. It is fitness that
+      replicates the actual demands. A crew that can run 10 km but cannot carry
+      a casualty, or work in breathing apparatus for the required duration, or
+      handle a charged hand-line up a ladder, has a fitness programme pointed at
+      the wrong problem.</p>
+      <p>§18.5.3 adds two constraints that are easy to overlook. Due
+      consideration must be given to individual human limitations, and
+      <strong>RFF management must accept that not all personnel can perform at
+      the same level of physical fitness standards</strong>. The key is to
+      establish the minimum requirements of a firefighter and design a programme
+      that can best replicate those demands — which means a standard that
+      everybody can actually meet, not one that quietly excludes people.</p>
+
+      <blockquote>
+        <p><strong>SME action:</strong> state your live-fire regime — frequency,
+        who may participate, the heat and smoke acclimatisation progression, the
+        medical provision and the stop criteria. State what your simulators or
+        equivalent controlled training cover. Confirm your fitness standard is
+        written against the specific demands of your operations rather than a
+        general standard, and that you test the tasks named in §14.9 rather than
+        only running times. Finally, confirm your crew reach the automatic
+        standard in §14.6.1 for the initial action, or record honestly that they
+        do not yet.</p>
+      </blockquote>
+    `,
+    refs: [
+      'ICAO Doc 9137 Part 1 — §14.6.1 instinctive initial action; §14.6.2 mass foam and back-up agent; §14.6.4 the approach',
+      'ICAO Doc 9137 Part 1 — §14.9 physical fitness commensurate with operational intensity',
+      'ICAO Doc 9137 Part 1 — §18.4.2 live fire and simulators',
+      'ICAO Annex 14 Vol I — §9.2.42 live fire drills including pressure-fed fuel fires',
+      'United Arab Emirates — GCAA CAR Part XI §14.5 live fire drills per Appendix 2; §14.6 training facilities (worked example)',
+      'Course ART-11 — live fire and aircraft familiarisation',
+      'Your aerodrome emergency plan — exercise and drill programme'
+    ],
+    smeChecked: false
+  },
+
+  /* ─────────────────────────────────────────────────────────────────────
      ART-15 m1 — engine fires. Grounded in Doc 9137 Part 1 §12.2.8 to
      §12.2.16. Two figures appear here and both are quoted exactly:
      10 m from the intake (§12.2.11) and up to 500 m astern (§12.2.12).
@@ -1534,6 +2846,531 @@ const LESSON_OVERRIDES = {
       'ICAO Doc 9137 Part 1 — §12.3.5 task priority; §12.3.6 to §12.3.9 ventilation; §12.3.25 repositioning for reflash',
       'Course ART-07 — PPE, SCBA and crew fitness',
       'Course ART-09 — stand-down decisions'
+    ],
+    smeChecked: false
+  },
+
+  /* ─────────────────────────────────────────────────────────────────────
+     ART-20 — Contingency decision making. Grounded in Doc 9137 Part 1
+     Chapter 18 (human factors), §11.2 (emergency classification), §12.3
+     and §13.3 (response beyond runway thresholds). These are the four
+     modules about the moments where nobody is going to tell you what to do.
+     ───────────────────────────────────────────────────────────────────── */
+  'art20-m1': {
+    title: 'When the plan does not fit',
+    brief:
+      'The plan is a default, not a script. Following it is a decision too — ' +
+      'and the dangerous version is silent drift.',
+    points: [
+      'The plan was written for the anticipated case. Reality is not obliged to be anticipated.',
+      'Human factors principles apply to written plans, not just training.',
+      '§14.10: train beyond the immediate operational responsibilities, while it is still cheap.',
+      'The first apparatus on scene sets the route for everyone behind it.',
+      'Deviating is a decision and needs the same discipline as any other: know what changed, state it, tell the commander, record it.',
+      'The dangerous failure is not deviating. It is deviating without saying so.',
+      'A plan that has never been questioned has not been tested.'
+    ],
+    body: `
+      <h3>Why you cannot learn this from incidents</h3>
+      <p>Start from the constraint established in Course 08. RFF crews are
+      infrequently called upon to face a serious situation involving lifesaving at
+      a major aircraft fire (§14.1.1). They will see a few incidents and a larger
+      number of standbys, and will seldom be put to the test.</p>
+      <p>Two consequences follow, and they pull in opposite directions. You
+      cannot rely on experience to teach you judgement, because experience will
+      not arrive. And you cannot rely on the plan to cover every case, because
+      the cases you have not seen are precisely the ones nobody wrote down.</p>
+
+      <h3>The plan is a written hypothesis</h3>
+      <p>§18.3.2 is the clause that makes this concrete, and it is routinely
+      overlooked: human factors principles are not confined to the development of
+      training programmes, and must also be considered in the formulation of
+      <strong>drawer plans</strong> — the aerodrome emergency plan and the unit
+      tactical plans.</p>
+      <p>So your tactical plan is subject to the same scrutiny as your training.
+      Who wrote it, when, about which aircraft, with what equipment, and does it
+      still describe your service?</p>
+      <p>§14.10 makes the same point from the other direction. Depending on the
+      operating environment it may be necessary for RFF crew to be trained in
+      difficult environments such as water rescue and biological or chemical
+      threats — but even where that is not necessary, it is worthwhile to
+      <strong>explore and train beyond the immediate operational
+      responsibilities</strong> in order to deal with unexpected contingencies at
+      or in the vicinity of the airport. Training for the contingency is the point
+      at which it is still cheap.</p>
+
+      <h3>Follow it until it is contradicted</h3>
+      <p>The tactical plan is the default because it was built from knowledge you
+      do not have in the moment: your fleet, your layout, your water points, your
+      turret arcs, your taxiways. Following it is correct by default even when you
+      cannot see why.</p>
+      <p>What is not correct is following it after the picture contradicts it. The
+      moment the aircraft is not where the plan assumed, the wind has shifted
+      past the plan's assumption, the fuel state differs, or the fire is not the
+      fire the plan described — that is when the plan has stopped being
+      informative, and continuing to follow it is obedience rather than
+      competence.</p>
+
+      <h3>Deviation has a discipline</h3>
+      <p>Changing plan is a decision, and it deserves the same rigour as any other
+      decision on the scene:</p>
+      <ul>
+        <li><strong>Know what changed.</strong> Not "this doesn't look right" —
+        the specific fact that differs from the assumption.</li>
+        <li><strong>State it.</strong> Say it on the net. An unstated deviation is
+        invisible to the commander and to everyone behind you.</li>
+        <li><strong>Tell the commander</strong>, who may be the person whose
+        remaining decisions depend on it.</li>
+        <li><strong>Record it afterwards.</strong> The incident where a crew
+        improvised intelligently and told nobody is worth nothing to the next
+        crew.</li>
+      </ul>
+      <p>And remember the asymmetry from Course 09: because apparatus often
+      respond in single file, the first vehicle establishes the route for those
+      behind it and may dictate the approach into their ultimate positions
+      (§12.3.25). A quiet deviation by the first crew constrains everyone who has
+      not yet arrived.</p>
+
+      <h3>Test the plan before you need it</h3>
+      <ul>
+        <li>Walk one aircraft type through the plan on paper and mark every
+        assumption it makes.</li>
+        <li>Then ask of each assumption: how old is this, and what would have to
+        have changed for it to be wrong?</li>
+        <li>Run the exercise with something deliberately different — wrong wind,
+        different aircraft, blocked taxiway — and see whether the plan survives
+        contact with a crew.</li>
+        <li>Revise. A plan with a review date that has passed is a plan with an
+        open question in it.</li>
+      </ul>
+
+      <blockquote>
+        <p><strong>SME action:</strong> record the date and author of each
+        tactical plan, the assumptions each makes, and its review cycle. Identify
+        which assumptions are fleet-specific and which would be invalidated by a
+        construction project, a new aircraft type, or a water point change — the
+        three things most likely to have happened quietly since it was
+        written.</p>
+      </blockquote>
+    `,
+    refs: [
+      'ICAO Doc 9137 Part 1 — §14.1.1 infrequency of real events',
+      'ICAO Doc 9137 Part 1 — §18.3.2 human factors and drawer plans',
+      'ICAO Doc 9137 Part 1 — §14.10 auxiliary modules and training beyond immediate responsibilities',
+      'ICAO Doc 9137 Part 1 — §12.3.25 tactical decision-making, positioning and the first vehicle',
+      'Course ART-09 — working the emergency plan',
+      'Your aerodrome emergency plan — tactical plans and their review cycle'
+    ],
+    smeChecked: false
+  },
+
+  'art20-m2': {
+    title: 'Off-airport response',
+    brief:
+      'Beyond the fence the problems change character, and a wheeled vehicle ' +
+      'that was the right tool on the runway may be the wrong one here.',
+    points: [
+      'Approach and departure areas within 1 000 m of the runway threshold should be assessed.',
+      'The assessment asks about nine things — environment, hazards, access, control measures, external services, and the governance tail.',
+      'A wheeled fire appliance is the constraint, and it is an absolute one.',
+      'Facilities need not be on the aerodrome — but a "reasonable time frame" has to be a number somebody committed to.',
+      'Public highway responses need their own assessment.',
+      'Somebody must hold absolute authority to decline a rescue operation.',
+      'The inter-agency exercise is where this actually gets validated.'
+    ],
+    body: `
+      <h3>An assessment, not an assumption</h3>
+      <p>§13.3.1 requires that an assessment of the approach and departure areas
+      <strong>within 1 000 m of the runway threshold</strong> be carried out to
+      determine the options available for rescue, including the suitable resources
+      that should be provided.</p>
+      <p>That is a defined area with a defined purpose. Not "the surrounds" in
+      general, and not an assumption that a vehicle can get anywhere on the
+      aerodrome because it can get everywhere on the runway.</p>
+
+      <h3>What the assessment has to answer</h3>
+      <p>§13.3.1 does not leave this to judgement. In considering the need for any
+      specialist rescue and access routes, it sets out <strong>nine</strong>
+      things to be considered:</p>
+      <ul>
+        <li><strong>(a) the environment</strong>, in particular the topography and
+        composition of the surface;</li>
+        <li><strong>(b) physical hazards</strong> and associated risks that exist
+        within the area;</li>
+        <li><strong>(c) options for access</strong> and for RFF purposes;</li>
+        <li><strong>(d) hazards, risks and control measures</strong> of the
+        options for rescue;</li>
+        <li><strong>(e) use of external services;</strong></li>
+        <li><strong>(f) an analysis of the advantages and disadvantages</strong>
+        of the options;</li>
+        <li><strong>(g) policies and procedures</strong> to define and implement
+        practices;</li>
+        <li><strong>(h) competence standards</strong> to match the above; and</li>
+        <li><strong>(i) monitoring, testing and review</strong> of the
+        capability.</li>
+      </ul>
+      <p>Read the list as a sequence rather than a checklist. You cannot choose an
+      access route (c) until you know what the surface will do to the vehicle and
+      the crew (a, b). You cannot pick control measures (d) until you have picked a
+      route. External services (e) are the last line, not the first, which means
+      they must be known in advance rather than dialled during the incident.</p>
+      <p>Then note (f) through (i), because they are the part most assessments
+      leave out and they are the part that makes the assessment a system rather
+      than an opinion. Weighing the options against each other, writing the
+      policy that implements the chosen one, setting the competence standard
+      required to deliver it, and reviewing whether any of that still holds — that
+      is four pieces of work that have to be done deliberately, and none of them
+      happen by accident.</p>
+
+      <h3>Where the vehicle cannot go</h3>
+      <p>Almost every off-airport problem reduces to one fact: you have wheeled
+      vehicles. Their range is limited by ground clearance, tyre pressure, surface
+      bearing strength, and traction. Everything else — access route, water point,
+      position for the turret, where you stage additional equipment — is
+      constrained by where the appliance can physically stand.</p>
+      <p>That has a consequence worth stating plainly. If your assessment finds
+      that the response route requires crossing ground an RFF vehicle cannot
+      cross, then the honest answer is not "the crew will manage". §13.3.2 makes
+      the provision explicit: aerodrome operators and RFF providers should ensure
+      the development of special procedures and the availability of equipment to
+      deal with accidents in these areas, and <strong>the facilities housing that
+      equipment need not be located on the aerodrome</strong> if they can be made
+      available within reasonable time frames by off-aerodrome agencies as
+      detailed in the aerodrome emergency plan.</p>
+      <p>That is permission to be honest about the gap — and it carries the
+      burden with it. "Reasonable time frame" has to be a number somebody
+      committed to, because on the day it is the difference between a capability
+      and a hope.</p>
+
+      <h3>Public highway responses</h3>
+      <p>There is a second assessment hiding in the same clause area. Where RFF
+      vehicles respond to accidents or incidents <strong>using the public
+      highway</strong>, §13.3.3 requires an assessment of the implications of
+      such a response to be carried out.</p>
+      <p>Aircraft accidents do not stop at the aerodrome boundary, and an
+      aerodrome with no public road nearby is rarer than it used to be. If your
+      off-airport assessment covers only the land you own, it is incomplete.</p>
+
+      <h3>Who is authorised to say no</h3>
+      <p>§13.4 addresses training for specialist rescue vehicles, and contains
+      the sentence that matters most in this whole area: it is essential to
+      create team leaders who will have the <strong>absolute authority to
+      determine when to mount a rescue operation</strong>. And then the reason
+      that authority has to be real:</p>
+      <blockquote>
+        <p>There may well be occasions when prudence will decree that operations
+        in intolerable conditions would merely add to the casualties without any
+        reasonable expectation of success. <em>— §13.4</em></p>
+      </blockquote>
+      <p>Going in to help is not automatically the right answer. Somebody has to
+      hold the authority to decline, and has to be able to use it without it
+      reading as cowardice afterwards. That is a leadership and culture question
+      long before it is a tactics question.</p>
+
+      <h3>External services</h3>
+      <p>Water, marsh, terrain, or a road that floods — each of these needs a
+      capability you probably do not own. The guidance requires their use to be
+      considered in the assessment, and Chapters 13.2 and 13.4 address water
+      response and the training that goes with it.</p>
+      <p>The trap is treating a mutual aid agreement as a capability. An agreement
+      is a piece of paper describing a resource that may be unavailable, unstaffed,
+      or unable to reach you. Confirm the arrangement is live, the resource exists,
+      and someone has practised using it.</p>
+
+      <h3>Validate it with people who are not you</h3>
+      <p>§13.5 requires inter-agency exercises, and for off-airport response that
+      is where this topic is genuinely proven rather than asserted. The service
+      that reads your assessment with fresh eyes is the local fire department, the
+      water rescue capability, or whoever else is named in it.</p>
+      <p>Then walk the route. Physically. An assessment is a document; a route
+      that has been driven by the people who will use it is knowledge.</p>
+
+      <blockquote>
+        <p><strong>SME action:</strong> produce the §13.3.1 assessment for your
+        own approach and departure areas, with a date and an author. Identify any
+        area where your current vehicles cannot reach and state plainly what
+        capability closes the gap. Confirm every external service in the
+        assessment is currently in force, and schedule the next inter-agency
+        exercise — and include an off-airport scenario in it rather than a runway
+        scenario.</p>
+      </blockquote>
+    `,
+    refs: [
+      'ICAO Doc 9137 Part 1 — §13.3.1 the nine assessment factors; §13.3.2 special procedures and off-aerodrome facilities; §13.3.3 public highway response',
+      'ICAO Doc 9137 Part 1 — §13.4 training and the authority to decline a rescue operation; §13.5 inter-agency exercises',
+      'ICAO Doc 9137 Part 1 — §13.2 accidents in the water',
+      'Your aerodrome emergency plan — off-airport response and mutual aid',
+      'Course ART-10 — rescue hazards'
+    ],
+    smeChecked: false
+  },
+
+  'art20-m3': {
+    title: 'Multiple and simultaneous incidents',
+    brief:
+      'Two events do not arrive one after the other. They arrive at once, ' +
+      'and the arithmetic is unforgiving.',
+    points: [
+      'Three classifications, and they mean different things: accident, full emergency, local standby.',
+      'Local standby includes bomb threats and other incidents — it can become a real one.',
+      'Know the minimum information you are owed: aircraft type, type of accident/incident, time and (grid) location.',
+      'Two events halve the capability available to each. That is arithmetic, not pessimism.',
+      'Holding a standby has a real cost, and it is not zero.',
+      'Decide deliberately which resource is committed and which is held — and say it aloud.'
+    ],
+    body: `
+      <h3>Three states, not one</h3>
+      <p>§11.2.1 classifies the aircraft emergencies for which services may be
+      required, and the distinction is operationally significant:</p>
+      <ul>
+        <li><strong>Aircraft accident</strong> — an accident which has occurred
+        on or in the vicinity of the aerodrome.</li>
+        <li><strong>Full emergency</strong> — instituted when an aircraft
+        approaching the aerodrome is, or is suspected to be, in such trouble that
+        there is danger of an accident.</li>
+        <li><strong>Local standby</strong> — instituted when an approaching
+        aircraft is known or suspected to have developed some defect, but the
+        problem is not such as would normally involve serious difficulty in
+        effecting a safe landing. <strong>This includes bomb threats and other
+        incidents.</strong></li>
+      </ul>
+      <p>The last point is the one that catches experienced crews. A local
+      standby is not a quiet nothing. It can be a security incident that turns
+      into an evacuation, and a service that treated it as a routine standby
+      posture will have spent the intervening time standing down.</p>
+
+      <h3>What you are owed, before you can decide anything</h3>
+      <p>For an aircraft accident, §11.2.3 sets what the RFF service should
+      receive <em>as a minimum</em>:</p>
+      <ul>
+        <li>type of aircraft;</li>
+        <li>type of accident/incident; and</li>
+        <li>time and (grid) location of the accident/incident.</li>
+      </ul>
+      <p>That is the basis for the whole tactical picture, and it is worth
+      insisting on all three. A call giving a type but no grid location cannot be
+      planned against. A call giving a grid location but no type cannot be sized
+      against — and sizing is the discipline from Course 03, where the whole
+      tactical plan depends on which aircraft it is.</p>
+      <p>Subsequent calls are expected to expand this: number of occupants, fuel
+      on board, aircraft operator, and any dangerous goods on board including
+      quantity and location if known (§11.2.3). That expansion matters for the
+      second incident as much as the first — fuel on board is often the first
+      useful number you get, and it is what tells you whether the standby is
+      worth keeping.</p>
+      <p>Note the full-emergency list in §11.2.4 is <em>longer</em> than the
+      accident list, not shorter: type of incident, aircraft type, fuel on board,
+      number of occupants including special occupants, nature of trouble, runway
+      to be used, estimated time of landing, and dangerous goods. A full emergency
+      gives you more information, and you have more time to use it. It is the
+      confirmed accident that arrives with three facts and no more.</p>
+      <p>§11.2.2 notes that for each of these states, ATC is expected to take
+      action as described, giving where necessary rendezvous point and airport
+      entrance to be used. For a full emergency that is the difference between
+      positioning at the runway end and positioning to intercept.</p>
+
+      <h3>The arithmetic</h3>
+      <p>Two events do not arrive sequentially. They arrive together, and the
+      capability available to each is the total divided by the number of
+      incidents in progress.</p>
+      <p>That has a consequence people avoid confronting: whichever incident you
+      choose to hold back for is one where the response is a second longer, with
+      fewer vehicles, and no reserve. If it turns into a major aircraft fire, the
+      service is now performing a single-incident response with half the resource
+      it sized for.</p>
+
+      <h3>What holding actually costs</h3>
+      <p>Both directions of error are serious, and they are not symmetric in the
+      eyes of the people involved.</p>
+      <ul>
+        <li><strong>Commit too early.</strong> The first incident turns out to be
+        minor, and the service committed to it has stripped the aerodrome. The
+        second event has nothing.</li>
+        <li><strong>Hold too long.</strong> The held incident becomes real, and
+        the first crew arrives at a major fire without the vehicles, the agent, or
+        the crew that sized the response.</li>
+      </ul>
+      <p>So the decision needs to be made deliberately and stated aloud — which
+      resource is committed, which is held, and on what trigger the held resource
+      moves. A trigger decided during the incident is a trigger decided too late,
+      for the same reason the withdrawal criteria in Course 16 have to be written
+      down in advance.</p>
+
+      <h3>What good looks like</h3>
+      <ul>
+        <li>a stated position for the common cases — two full emergencies, a
+        standby that escalates while a standby of another aircraft develops;</li>
+        <li>a named decision-maker, and a stated trigger for committing reserve
+        resource;</li>
+        <li>the interaction with ATC settled, including who calls for what;</li>
+        <li>the interaction with mutual aid, since two incidents is the situation
+        that assistance agreements exist for;</li>
+        <li>it exercised. Two-incident scenarios are the most valuable thing a
+        full-scale exercise can simulate.</li>
+      </ul>
+
+      <blockquote>
+        <p><strong>SME action:</strong> state your position for simultaneous and
+        multiple incidents: which resource is committed first, who decides, on
+        what trigger the held resource moves, and how this interacts with your
+        mutual aid arrangements. Confirm your crews know that local standby
+        includes bomb threats and other incidents, and are briefed on what
+        escalates it. Then confirm your exercise programme includes a
+        two-incident scenario, and record the result.</p>
+      </blockquote>
+    `,
+    refs: [
+      'ICAO Doc 9137 Part 1 — §11.2.1 emergency classification; §11.2.2 ATC action; §11.2.3 information supplied',
+      'ICAO Doc 9137 Part 1 — §11.1 airport emergency plan',
+      'Your aerodrome emergency plan — multiple incidents and resource commitment',
+      'Your mutual aid agreements',
+      'Course ART-19 — full-scale exercise'
+    ],
+    smeChecked: false
+  },
+
+  'art20-m4': {
+    title: 'Decision making under pressure',
+    brief:
+      'Most errors on an RFF scene are not bad decisions. They are good ' +
+      'decisions taken at the wrong interface.',
+    points: [
+      'Most crews are rarely tested by real events, so judgement must be built deliberately.',
+      'The SHEL model: people against hardware, software, colleagues and environment.',
+      'The interface matters as much as the components. A mismatch is a source of error.',
+      'Communication is possibly the most important human factor in the operation.',
+      'Station design and vehicle ergonomics are human-factors issues, not building issues.',
+      'Two pillars: operational effectiveness, and the safety and well-being of your own people.',
+      '§18.5 names the unglamorous items: PTSD counselling, hearing protection and NID tests, fatigue and shift systems.'
+    ],
+    body: `
+      <h3>Why this belongs in an ARFF course</h3>
+      <p>Because the precondition for every decision on your scene is the one in
+      §14.1.1: you are rarely called upon to face a serious situation involving
+      lifesaving at a major aircraft fire. Standbys and near-misses will not teach
+      you to decide under pressure, because they are not pressure.</p>
+      <p>Which means the skill has to be developed deliberately, in the
+      conditions where it can be developed safely — and that requires a framework
+      rather than encouragement.</p>
+
+      <h3>SHEL: four interfaces</h3>
+      <p>Chapter 18 applies the SHEL model to RFF, classifying the application of
+      human factors principles into four pairings of the person with their
+      surroundings (§18.2):</p>
+      <ul>
+        <li><strong>Liveware vs. Hardware</strong> — people and machines;</li>
+        <li><strong>Liveware vs. Software</strong> — people and procedures;</li>
+        <li><strong>Liveware vs. Liveware</strong> — people and colleagues;</li>
+        <li><strong>Liveware vs. Environment</strong> — people and workplace.</li>
+      </ul>
+      <p>And the observation that does the work:</p>
+      <blockquote>
+        <p>In this model the match or mismatch of the blocks (interface) is just
+        as important as the characteristics of the blocks themselves. A mismatch
+        can be a source of human error. <em>— Figure 18-1, the SHEL model as
+        modified by Hawkins</em></p>
+      </blockquote>
+      <p>That reframes the problem. Most errors on a scene are not bad decisions.
+      They are <em>correct</em> decisions made against an interface that does not
+      fit: a switch in the wrong place, a display in a different position from
+      the last appliance, a procedure written for a vehicle you no longer have, a
+      radio with controls the crew member cannot find under stress.</p>
+
+      <h3>Hardware you live with every shift</h3>
+      <p>§18.4.3 argues that RFF operations require proficiency in operating fire
+      vehicles and rescue equipment, and then draws out a consequence that is
+      often missed in procurement: the fire vehicle is a vital asset that
+      <strong>must be designed to take into account the human instinct and
+      intuition of the vehicle operator</strong>. Sufficient emphasis should be
+      placed on the design ergonomics of fire vehicles during the prefabrication
+      stage, in order to optimise human performance during training and
+      operations.</p>
+      <p>So controls move to the driver, not the manufacturer. Unless you are
+      involved in specifying a vehicle, you cannot fix this — but you can be the
+      person who raises it, and you certainly are the person who lives with it.</p>
+
+      <h3>The building is a human-factors issue too</h3>
+      <p>§18.4.4 is worth reading twice by anyone who has ever walked out of a
+      fire station to a vehicle. The design of fire stations is another important
+      factor that could affect the human performance of RFF personnel when
+      responding to aircraft accidents or incidents — tagged Liveware vs.
+      Environment, because the building is the interface. This is especially
+      relevant for large aerodromes which provide a high category of runway fire
+      protection. Fire stations in such aerodromes are typically larger, thus
+      <strong>requiring RFF personnel to travel a longer distance before
+      reaching their fire vehicles</strong>. Such considerations must therefore be
+      taken into account during the design phase so that the service is able to
+      meet the stipulated response time in the event of an aircraft
+      emergency.</p>
+      <p>Those extra seconds are added at the precise moment when the crew most
+      needs to be thinking about the aircraft instead — and they are added to the
+      response time in §2.7, which has a hard limit.</p>
+
+      <h3>Communication, and the last word</h3>
+      <p>§18.4.5 makes the strongest claim in the chapter: communication is
+      <strong>possibly the most important human factor in RFF operations</strong>.
+      Operational readiness and safety standards will be compromised without
+      effective communication among RFF personnel, air traffic control and
+      pilots.</p>
+      <p>And then the design requirement that follows, which is easy to miss
+      because it sounds like an obviousity: the type of communications equipment
+      and the transmission of messages must allow critical information to be
+      <strong>conveyed, assimilated, processed and executed</strong>. Four
+      distinct steps, and the last three are not the radio's job. Equipment that
+      transmits is not thereby sufficient. Training has to carry the rest, or the
+      information arrives and does nothing.</p>
+
+      <h3>Two pillars, and the second one is about you</h3>
+      <p>§18.3.3 splits human factors in RFF into operational effectiveness and
+      standards, and the safety and well-being of RFF personnel. Two pillars, and
+      the second is about the responders rather than the aircraft.</p>
+      <p>§18.5 is specific about what that involves, and it is worth reading
+      because the items are unglamorous, cheap and easy to skip:</p>
+      <ul>
+        <li><strong>§18.5.1</strong> — responders may suffer post-traumatic
+        stress disorders, and psychological treatment and counselling should be
+        provided after a major crisis, from a welfare <em>and</em> a business
+        continuity standpoint. It can be provided by trained colleagues or, more
+        likely, external medical institutions — and arrangements for the latter
+        should be formalised in mutual aid agreements or the aerodrome emergency
+        plan.</li>
+        <li><strong>§18.5.3</strong> — not all personnel can meet the same
+        physical fitness standard, and management has to accept that rather than
+        quietly managing around it.</li>
+        <li><strong>§18.5.4</strong> — noise is omnipresent because fire stations
+        sit close to the runway and movement areas. It disrupts message
+        transmission, and long-term regular exposure carries real health
+        implications. Suitable hearing protection must be issued and mandated, and
+        personnel subject to constant exposure should have regular noise-induced
+        deafness hearing tests.</li>
+        <li><strong>§18.5.5</strong> — fatigue is directly affected by the shift
+        system, and beyond local labour rules there must be consideration given
+        to ensuring sufficient rest despite the need to be on 24-hour
+        operational readiness.</li>
+      </ul>
+      <p>Every lesson in this course has been about capability. Keep the other
+      pillar in view while delivering it: heat, smoke, noise, adrenaline,
+      fatigue, near misses, and the cumulative effect of all of them. A service
+      that achieves operational effectiveness by degrading its people has moved
+      the cost rather than removed it.</p>
+
+      <blockquote>
+        <p><strong>SME action:</strong> walk your service through all four SHEL
+        pairings and record the mismatches you find — controls and displays on
+        your appliances, procedures written for equipment you no longer have,
+        familiarity within each crew, and station layout and travel distance.
+        Prioritise the mismatches that would most plausibly cause an error under
+        stress, and put a name and a date against each. Confirm your
+        communications assessment covers the full convey–assimilate–process–execute
+        chain rather than only whether the radio works.</p>
+      </blockquote>
+    `,
+    refs: [
+      'ICAO Doc 9137 Part 1 — §18.1 to §18.3 human factors principles and the SHEL model',
+      'ICAO Doc 9137 Part 1 — §18.4.3 vehicle ergonomics; §18.4.4 fire station design; §18.4.5 communication',
+      'ICAO Doc 9137 Part 1 — §18.5.1 psychological support; §18.5.3 fitness standards; §18.5.4 noise; §18.5.5 fatigue',
+      'ICAO Doc 9137 Part 1 — §14.1.1 why training must carry the capability',
+      'Course ART-18 — communications'
     ],
     smeChecked: false
   }
