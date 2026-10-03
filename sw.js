@@ -17,7 +17,7 @@
    Bump CACHE_VERSION to ship new content. The old cache is dropped on activate.
    ========================================================================= */
 
-const CACHE_VERSION = 'amrisk-arff-v5';
+const CACHE_VERSION = 'amrisk-arff-v6';
 
 const SHELL = [
   './',
@@ -42,17 +42,61 @@ self.addEventListener('install', (event) => {
   event.waitUntil((async () => {
     const cache = await caches.open(CACHE_VERSION);
     // addAll is atomic — one bad path would leave the learner with no offline
-    // app at all, so failures are logged per-file and tolerated instead.
+    // app at all, so failures are recorded per-file and tolerated instead.
+    const failures = {};
     await Promise.all(SHELL.map(async (url) => {
       try {
         await cache.add(new Request(url, { cache: 'reload' }));
       } catch (err) {
+        failures[url] = err && err.message ? err.message : String(err);
         console.warn('[sw] precache failed:', url, err);
       }
     }));
     await self.skipWaiting();
+    await writePrecacheReport(failures);
   })());
 });
+
+/**
+ * Record what the precache actually managed to store.
+ *
+ * A service worker's console is not visible from the page, so a precache that
+ * silently fails leaves a learner with an app that looks installed and is not.
+ * The report is written to its own cache entry, which the app can read on the
+ * Progress screen or from the browser console when offline behaviour is in
+ * question. Bumping CACHE_VERSION drops it with the rest of the old cache.
+ */
+async function writePrecacheReport(failures) {
+  try {
+    const cache = await caches.open(CACHE_VERSION);
+    const stored = await cache.keys();
+    const paths = stored.map((r) => new URL(r.url).pathname);
+    const missing = SHELL.filter((url) => {
+      const path = new URL(url, self.location.href).pathname;
+      return !paths.includes(path);
+    });
+    await cache.put(
+      new Request('./precache-report.json'),
+      new Response(
+        JSON.stringify(
+          {
+            version: CACHE_VERSION,
+            expected: SHELL.length,
+            stored: stored.length,
+            missing,
+            failures: failures || {},
+            at: new Date().toISOString()
+          },
+          null,
+          2
+        ),
+        { headers: { 'Content-Type': 'application/json' } }
+      )
+    );
+  } catch (err) {
+    console.warn('[sw] could not write precache report', err);
+  }
+}
 
 self.addEventListener('activate', (event) => {
   event.waitUntil((async () => {
