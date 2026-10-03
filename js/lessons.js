@@ -6971,6 +6971,296 @@ const LESSON_OVERRIDES = {
   ],
   smeChecked: false
 },
+
+  'art14-m1': {
+  title: 'Cell chemistry and why it matters',
+  brief:
+    'An honest boundary first: the standard tells you what a lithium ' +
+    'event does, not what the cells contain. That gap is yours to close.',
+  points: [
+    'Doc 9137 Part 1 §12.2.19 note explicitly limits its lithium guidance to batteries INSTALLED by the aircraft manufacturer as part of the aviation system, not batteries carried as cargo.',
+    'Cargo lithium batteries are Class 9 miscellaneous dangerous goods (§12.4.21).',
+    'The standard describes lithium behaviour, not cell chemistry. It contains no material on cathode chemistry, energy density or cell construction.',
+    'The mechanism the standard does give: each Li-ion battery contains numerous cells which, if they become overheated (a process known as thermal runaway), could lead to the emission of gas, smoke and the spillage of flammable electrolytes (§12.2.19.2).',
+    'Section 12.2.19.1 gives the advantage: Li-ion batteries provide greater electrical power than previous battery types while being smaller and lighter.',
+    'Chemistry-specific hazard data, thermal stability and agent guidance come from Doc 9284, the IATA DGR, Doc 9481 and the battery manufacturer — not from this manual.',
+    'Course ART-11 m4 covers the installed-battery provisions; this course covers cargo.'
+  ],
+  body: `
+    <h3>Say what this lesson cannot tell you</h3>
+    <p>This course is titled cell chemistry, and the honest position is that Doc 9137 Part 1 does not contain it. The manual has no material on cathode chemistry, energy density, cell construction, or the differences between battery chemistries. It contains no comparison of lithium chemistries, no thermal-stability data, and no chemistry-specific extinguishing guidance.</p>
+    <p><strong>That is not a gap in this lesson — it is a gap in the source.</strong> The chemistry questions live in Doc 9284, the IATA Dangerous Goods Regulations, ICAO Doc 9481 <em>Emergency Response Guidance for Aircraft Incidents Involving Dangerous Goods</em>, and the battery manufacturer's own technical data. This platform names those documents and does not reproduce or invent their contents.</p>
+    <p>So what follows is what the standard genuinely gives you, and — more usefully — the precise list of questions you must answer from those documents before your service can teach this properly.</p>
+
+    <h3>Two regimes, and the note that separates them</h3>
+    <p>§12.2.19 opens with a scope limit that is easy to read past: <strong>note.— this guidance relates to lithium-ion (Li-ion) batteries installed by the aircraft manufacturer as part of the aircraft's aviation system and not Li-ion batteries being carried as cargo.</strong></p>
+    <p>So there are two different problems and the manual only addresses one of them:</p>
+    <ul>
+      <li><strong>Installed batteries</strong> — the APU battery, flight-control backup, aircraft system batteries. §12.2.19 applies, and Course ART-11 m4 covers it. These are in the aircraft as aircraft.</li>
+      <li><strong>Cargo lithium batteries</strong> — batteries and battery-containing equipment carried as freight. These are dangerous goods, and §12.4.21 lists <em>batteries containing lithium</em> among the Class 9 examples.</li>
+    </ul>
+    <p>The distinction is not academic. An installed battery's hazard is managed by aircraft design — detection, containment, venting ports. A cargo battery's hazard is managed by packaging, quantity limits, documentation and your response. ART-11 m4's five actions are about the first; this course is about the second.</p>
+
+    <h3>What the standard does give you</h3>
+    <p>§12.2.19.1 states the advantage that explains why the hazard exists at all: <strong>aircraft manufacturers are increasingly using Li-ion batteries to provide electrical power to aircraft systems. The main advantage of Li-ion batteries is their ability to provide greater electrical power than previous battery types while being smaller and lighter.</strong></p>
+    <p>That is the whole reason lithium cargo exists and the whole reason the hazard grew: better energy density in a package small enough to be profitable to ship. Read as a hazard statement it reads the other way too — the property that makes it useful is what makes it dangerous.</p>
+    <p>And §12.2.19.2 gives the mechanism, which is the part worth memorising because it is behaviour rather than chemistry: <strong>each Li-ion battery contains numerous cells which, if they become overheated (a process known as thermal runaway) could lead to the emission of gas, smoke and the spillage of flammable electrolytes.</strong></p>
+    <p>Three products, three different problems: <strong>gas</strong> (pressurisation and asphyxiation in a hold), <strong>smoke</strong> (the visibility and respiratory problem ART-07 m1 addresses), and <strong>flammable electrolytes</strong> (a fuel spill of its own, from the most damaged package, at the worst possible moment).</p>
+
+    <h3>Why chemistry is the question you must answer elsewhere</h3>
+    <p>You cannot read chemistry off a package. §12.4.8 requires the proper shipping name, the 4-digit UN number and hazard labels — which tell you it is a lithium battery and its class. They do not tell you the cathode chemistry, the cell format, the mass, or the thermal runaway threshold.</p>
+    <p>That information is in the transport documentation (§12.4.9) and in the technical documents you do not currently hold. Which is why the questions below are the ones to ask rather than generalities.</p>
+
+    <h3>What to obtain, and the questions to ask of each</h3>
+    <ol>
+      <li><strong>ICAO Doc 9284, Technical Instructions.</strong> What lithium batteries are permitted, in what quantities, on passenger and cargo aircraft, and with what packaging and marking. This is the document that governs what may be on your aircraft.</li>
+      <li><strong>IATA Dangerous Goods Regulations.</strong> The operational detail: UN numbers in use, packing instructions, state-of-charge restrictions, and the guidance document that accompanies shipments.</li>
+      <li><strong>ICAO Doc 9481, Emergency Response Guidance.</strong> The per-UN-number response guidance — this is the document that tells a responder what to do for the specific UN number they are looking at.</li>
+      <li><strong>Battery manufacturer technical data.</strong> Thermal runaway behaviour, venting characteristics, and the manufacturer's own extinguishing and cooling recommendations.</li>
+      <li><strong>Your State requirements.</strong> What your authority requires beyond the international framework.</li>
+    </ol>
+    <p>Item 3 is the one that most directly changes your response, and it is the one most services have not obtained. Doc 9481 is what you would actually consult on scene with a UN number in your hand.</p>
+
+    <blockquote>
+      <p><strong>SME action:</strong> obtain Doc 9481 <em>Emergency Response Guidance for Aircraft Incidents Involving Dangerous Goods</em> for your service. It is the document §12.4.22.3 identifies as particularly useful for ground response to dangerous goods accidents, and it is the reference that turns a UN number into an action. Confirm you hold a current copy at the station and on the response vehicles, and that your crews know how to use it rather than merely having it. Then, from your own recent manifests, list the lithium UN numbers your aerodrome actually handles — that is a short list, it is your real exposure, and it is what your training should be built on rather than the full catalogue.</p>
+    </blockquote>
+  `,
+  refs: [
+    'ICAO Doc 9137 Part 1 — §12.2.19 note scope limit to installed Li-ion batteries and exclusion of cargo batteries; §12.2.19.1 the power, size and weight advantage; §12.2.19.2 numerous cells, thermal runaway, emission of gas, smoke and spillage of flammable electrolytes',
+    'ICAO Doc 9137 Part 1 — §12.4.21 batteries containing lithium listed among Class 9 miscellaneous dangerous goods; §12.4.8 package markings and labels; §12.4.9 transport documentation',
+    'ICAO Doc 9137 Part 1 — §12.4.22.3 ICAO publication Emergency Response Guidance for Aircraft Incidents Involving Dangerous Goods (Doc 9481), identified as providing detailed guidance for ground response',
+    'Course ART-11 m4 — composite, lithium and metal hazards, including the installed-battery five actions in 12.2.19.4',
+    'Course ART-13 m2 — classes, labels and markings; m3 — reading the load document',
+    'Course ART-04 m5 — environmental drivers in agent choice (fluorinated concentrate families)'
+  ],
+  smeChecked: false
+},
+
+  'art14-m2': {
+  title: 'Thermal runaway and warning signs',
+  brief:
+    'Four ways a cell gets hot, and one sign that tells you it has ' +
+    'already happened.',
+  points: [
+    'Thermal runaway: each Li-ion battery contains numerous cells which, if they become overheated could lead to the emission of gas, smoke and the spillage of flammable electrolytes (§12.2.19.2).',
+    'Li-ion batteries can also present a fire and explosion hazard, not only a thermal one (§12.2.19.2).',
+    'Four routes to involvement: external overheating from fire in other aircraft systems; short-circuiting internally or externally; damage caused during an aircraft accident; and manufacturing defects within the battery (§12.2.19.3).',
+    'Venting is the recognised sign of Li-ion battery failure reaction (§12.2.19.4(c)).',
+    'Aircraft may have battery containment and venting ports designed for thermal runaway (§12.2.19.4(b)).',
+    'Where substances are unknown, RFF services may want basic detection equipment including chemical, biological or radioactive detectors (§12.4.24).',
+    'RFF personnel should stay upwind and out of smoke, fumes and dust (§12.4.11).',
+    'Careful: §12.2.19.4(c) applies to ground operations personnel as well as RFF — your freight handling staff may see venting before you do.'
+  ],
+  body: `
+    <h3>The mechanism, and why it is different from everything else you fight</h3>
+    <p>§12.2.19.2 gives it: <strong>each Li-ion battery contains numerous cells which, if they become overheated (a process known as thermal runaway) could lead to the emission of gas, smoke and the spillage of flammable electrolytes.</strong> And then the sentence that distinguishes it from every other hazard in this curriculum: <em>while Li-ion batteries have many advantages, they can also present a fire and explosion hazard.</em></p>
+    <p>So three products from one event, and each one is a different problem:</p>
+    <ul>
+      <li><strong>Gas.</strong> Expansion in a confined space. A hold or a container is a pressure vessel once the cells start venting.</li>
+      <li><strong>Smoke.</strong> Which is ART-07 m1's respiratory problem, and §6.2.1 makes SCBA the requirement for entry into any environment where fire is present.</li>
+      <li><strong>Flammable electrolytes.</strong> A fuel spill produced by the most damaged package, at the moment you are least able to deal with it.</li>
+    </ul>
+    <p>And note that the manual frames it as fire <em>and explosion</em>. A lithium event is not only a fire you fight; it is a possibility of violence.</p>
+
+    <h3>Four routes in, and three of them you can influence</h3>
+    <p>§12.2.19.3 is the operationally valuable list, because it tells you where to look:</p>
+    <ol>
+      <li><strong>External overheating caused by exposure to fire in other aircraft systems</strong> — for example engine fires, wheel fires, cargo hold fires.</li>
+      <li><strong>Short-circuiting</strong>, either internally within the battery cells or externally.</li>
+      <li><strong>Damage caused during an aircraft accident.</strong></li>
+      <li><strong>Manufacturing defects within the battery.</strong></li>
+    </ol>
+    <p>Route 1 is the one your service most often causes, and it is the one worth focusing on. A cargo hold fire that is not lithium can become a lithium event, because the batteries are being heated by the fire you are fighting. That is why the answer to a hold fire is not "get the batteries out quickly" without considering what getting them out means.</p>
+    <p>Route 3 is the aircraft accident case — and §12.2.19.3's own list is the reason it is separated. An impact-damaged battery is a different object from a battery in an intact package, exactly as §12.4.13 makes the point for explosives with *"unless the package has been degraded"*. Degraded package, degraded behaviour.</p>
+    <p>Route 4 is the one you cannot see, and it is why this is on your aerodrome's manifest review rather than your incident response plan.</p>
+
+    <h3>The sign that matters: venting</h3>
+    <p>§12.2.19.4(c) is short and it is the single most useful recognition provision in the whole section: <strong>ensure that RFF and other ground operations personnel can recognize signs of Li-ion battery failure reaction (that is, venting).</strong></p>
+    <p>Read the parenthetical carefully. The standard treats <em>venting</em> as the definition of the failure reaction — the point at which the battery is no longer an intact object and is now venting gas, smoke and electrolyte. That is your trigger to stop treating it as cargo and start treating it as an incident.</p>
+    <p>And note "RFF <em>and other ground operations personnel</em>". The freight handlers, the load controllers, the warehouse staff — they are on the batteries before you are. §12.2.19.4(a) makes the same point for aircraft types, and §12.2.19.4(b) for containment and venting ports. <strong>A lithium incident on your aerodrome may begin in the warehouse, and the person who sees it may not be a firefighter.</strong> That makes briefing freight handling staff part of your response capability, not a courtesy.</p>
+
+    <h3>Containment and venting ports</h3>
+    <p>§12.2.19.4(b) requires you to <strong>identify aircraft and familiarize personnel with existing battery containment and venting ports in case of thermal runaway</strong>.</p>
+    <p>Two things in that clause. <em>Identify aircraft</em> — which types in your fleet have the feature, because it is not universal. And <em>existing</em> ports, meaning the ports the manufacturer fitted, not ones you would improvise. Their purpose is to direct the vented product away from occupied areas and away from ignition sources, and they only work if you know where they are and you are not standing downstream of one.</p>
+    <p>This is the installed-battery provision, so it sits in ART-11 m4's territory as well. The reason to repeat it here is that it changes your positioning on a cargo event too: a container of batteries venting, in a hold, is directing its product somewhere, and your crew needs to know where that is before they are close to it.</p>
+
+    <h3>When you do not know what it is</h3>
+    <p>§12.4.24 addresses the case where substances are unknown, and it makes a resourcing statement: <strong>although all dangerous goods are required to be clearly labelled and packed, there could be scenarios where substances are unknown and that they may be unlawfully released in an aircraft or within the aerodrome premises. For RFF personnel who may need to identify unknown substances, RFF services may want to equip themselves with the basic equipment to detect the nature of such substances. These include any chemical, biological or radioactive detectors.</strong></p>
+    <p>So detection equipment is named as something your service <em>may want to equip itself with</em>. Whether that is proportionate is your decision, but the clause puts it on the table as a resourcing question rather than leaving it unasked.</p>
+    <p>And the response to an unknown is the same as the response to a known lithium event: §12.4.11 — size up, PPE and breathing apparatus as a minimum, and <em>as far as possible stay positioned upwind and out of smoke, fumes and dust</em>. The dust point matters more than usual here, because §6.2.4 established that high-impact damage can release particulate that requires filtration, and a battery event produces particulate and electrolyte spray.</p>
+
+    <h3>What to brief, and to whom</h3>
+    <ul>
+      <li><strong>All RFF personnel:</strong> venting is the trigger; upwind and out of dust; SCBA minimum; the four involvement routes and which of them you can influence.</li>
+      <li><strong>Ground operations and freight handling:</strong> the same recognition signs, and what to do and who to call. They will see it first.</li>
+      <li><strong>Load controllers:</strong> the UN numbers your aerodrome actually handles, taken from recent manifests — ART-14 m3.</li>
+      <li><strong>Supervisors:</strong> §12.2.19.4(d) — develop tactics to contain the battery failure event. That is a written plan, and it is a supervisor's deliverable.</li>
+    </ul>
+
+    <blockquote>
+      <p><strong>SME action:</strong> treat §12.2.19.4 as five actions with owners, not as awareness. Can your crews recognise venting — and have you defined what they will actually see? Have you identified which aircraft types in your fleet have containment and venting ports, and where they are? <em>Have you briefed freight handling and ground operations personnel on the recognition signs?</em> That one is outside your service&rsquo;s control and is the most likely to be missing. Have you developed written tactics to contain a battery failure event? And have you decided, from your own risk assessment, whether §12.4.24 detection equipment is proportionate for your operation?</p>
+    </blockquote>
+  `,
+  refs: [
+    'ICAO Doc 9137 Part 1 — §12.2.19.2 thermal runaway, numerous cells, emission of gas, smoke and spillage of flammable electrolytes, fire and explosion hazard',
+    'ICAO Doc 9137 Part 1 — §12.2.19.3 the four routes to involvement: external overheating from other aircraft fires, short-circuiting, accident damage, manufacturing defects',
+    'ICAO Doc 9137 Part 1 — §12.2.19.4 the five actions including recognition of aircraft types and battery locations, containment and venting ports, recognition of venting as the sign of failure reaction, tactics to contain the event, and additional training with suitable agents and equipment',
+    'ICAO Doc 9137 Part 1 — §12.4.11 size-up, breathing apparatus as a minimum, stay upwind and out of smoke, fumes and dust',
+    'ICAO Doc 9137 Part 1 — §12.4.24 unknown substances and the option of chemical, biological or radioactive detectors',
+    'Course ART-07 m1 — what SCBA protects you from, and 6.2.4 on particulate from high-impact damage',
+    'Course ART-13 m2 — Class 9 and the residual class',
+    'Course ART-11 m4 — installed lithium batteries'
+  ],
+  smeChecked: false
+},
+
+  'art14-m3': {
+  title: 'Agent selection and cooling',
+  brief:
+    'Part 1 gives no lithium-specific agent provision. This lesson ' +
+    'gives you the sourced frame, the sourced prohibitions, and the ' +
+    'precise question list for your own determination.',
+  points: [
+    'Doc 9137 Part 1 contains no lithium-specific extinguishing agent or cooling provision. The standard requires that suitable extinguishing agents and equipment be provided, without specifying them (§12.2.19.4(e)).',
+    'Sourced prohibitions: stay upwind and out of smoke, fumes and dust (§12.4.11); breathing apparatus as a minimum (§12.4.11); SCBA for entry into any environment where fire is present including overhaul (§6.2.1).',
+    'Thermal runaway emits flammable electrolytes, so a lithium event includes a fuel hazard (§12.2.19.2).',
+    'Damaged and leaking packages require special precautions after the rescue and pre-identified trained personnel (§12.4.22.1).',
+    'Whenever ventilation is introduced, a charged hand-controlled water-spray line must be available (§12.3.9).',
+    'Foam blanket integrity and wind (§2.4.3, ART-03 m4) apply to any liquid fuel hazard, including electrolytes.',
+    'Agent selection guidance is in Doc 9284, the IATA DGR and Doc 9481 per UN number, and from the battery manufacturer.'
+  ],
+  body: `
+    <h3>The honest statement first</h3>
+    <p>Doc 9137 Part 1 contains <strong>no lithium-specific extinguishing agent provision and no lithium-specific cooling provision.</strong> There is no clause telling you to use water, no clause telling you to use foam, no flow rate, no application method for a lithium battery fire.</p>
+    <p>What §12.2.19.4(e) actually requires is an obligation without a specification: <strong>consider additional training and provide suitable extinguishing agents and equipment to deal with Li-ion battery failures.</strong></p>
+    <p>So the word doing the work is <em>suitable</em>. The standard obliges you to have the right agent and equipment; it does not tell you what they are, because that determination depends on the chemistry, the UN number, the packaging and the manufacturer — and those live in documents this platform does not hold.</p>
+    <p>What this lesson gives you instead is three things: the prohibitions that <em>are</em> sourced and non-negotiable, the frame within which your agent decision sits, and the precise question list to put to the documents you need to obtain.</p>
+
+    <h3>The sourced prohibitions</h3>
+    <p>These are not lithium-specific but they bind you on any incident, and three of them are the ones most often relaxed under the urgency of an unfamiliar event.</p>
+    <ul>
+      <li><strong>Breathing apparatus as a minimum (§12.4.11).</strong> <em>Personal protective clothing, including breathing apparatus (as a minimum), should always be worn.</em> Always. And §6.2.1 extends the requirement to overhaul operations, so the crew doing the cooling and monitoring afterwards is in scope.</li>
+      <li><strong>Upwind and out of smoke, fumes and dust (§12.4.11).</strong> <em>As far as possible, RFF personnel should stay positioned upwind and out of smoke, fumes and dust.</em></li>
+      <li><strong>A charged hand-controlled water-spray line whenever ventilation is introduced (§12.3.9).</strong> And per ART-10 m3, that line must be crewed and positioned <em>before</em> the air starts moving.</li>
+    </ul>
+
+    <h3>The frame your agent decision sits in</h3>
+    <p>Three sourced facts shape it, none of which settles the question but all of which constrain it.</p>
+    <p><strong>One: there is a fuel hazard as well as a fire hazard.</strong> §12.2.19.2 — thermal runaway leads to <em>the spillage of flammable electrolytes</em>. So a lithium event is partly a Class 3 problem. That brings in §12.4.15's properties: flammable liquid vapours are usually heavier than air, and most such liquids float on water. Heavier-than-air vapour collects in the hold and in low areas. And a liquid that floats on water will spread on your foam blanket rather than being contained by it — which is the same property that makes aviation fuel a containment problem in the first place.</p>
+    <p><strong>Two: the aircraft fire still governs.</strong> ART-10 m1: if a fire situation exists within the aircraft it must be controlled before any other operation commences. A lithium cargo fire in a hold is a fire in the aircraft. The critical area, the fuselage, the egress routes and the occupants do not stop mattering because the load is unusual.</p>
+    <p><strong>Three: cooling is a controlled task, not a flood.</strong> §12.3.5's residual-heat principle applies to any heat source you have not extinguished: if there is no fire but material is decomposing because of residual heat, the decomposition must be stopped with water spray. And §12.4.20's warning is worth generalising — some substances produce toxic gases when decomposed by very high temperatures. Aggressive cooling of a battery that is venting may drive decomposition rather than arrest it, and that judgement belongs to the commander with the guidance in hand, not to a crew working alone.</p>
+
+    <h3>The question list for your own determination</h3>
+    <p>Put these to Doc 9481, the IATA DGR and the battery manufacturer, and record the answers with their sources. This is a real list and it is the work this course cannot do for you:</p>
+    <ol>
+      <li>For each lithium UN number your aerodrome actually handles, what is the recommended extinguishing agent, and at what application rate?</li>
+      <li>Does the recommendation change between chemistries, and how would you tell the chemistry apart on scene if you could not read the documentation?</li>
+      <li>What cooling is recommended for a cell that is venting but not in flame, and what flow rate?</li>
+      <li>Is water recommended, and does the recommendation change between a battery that is burning, one that is venting, and one that is intact but hot?</li>
+      <li>What containment is recommended — the packaging, the ULD, or a purpose-built device — and does your fleet carry it?</li>
+      <li>What is the recommended approach distance and what protective equipment does the answer assume?</li>
+      <li>What is the manufacturer's position on the pack being made safe to transport afterwards, and what does that mean for your handling?</li>
+      <li>What does your State require beyond the international framework?</li>
+    </ol>
+    <p>Question 4 is the one that matters most and the one most likely to have a "it depends" answer. A crew that has a single memorised answer for "what do we put on a lithium battery fire" is going to be wrong at least half the time, and the source of the wrongness will be an over-simple rule that was never qualified.</p>
+
+    <h3>What you can decide today, without the guidance</h3>
+    <ol>
+      <li><strong>What stops you.</strong> Upwind, out of dust, breathing apparatus on. §12.4.11.</li>
+      <li><strong>What you protect.</strong> The occupants and the fuselage, on the usual critical area reasoning. ART-03 m3.</li>
+      <li><strong>When you call for help.</strong> A venting battery is an escalation, not an incident you manage. §12.2.19.4(e) obliges you to have considered the equipment; the tactical decision is the commander's.</li>
+      <li><strong>Who handles the package afterwards.</strong> §12.4.22.1: special precautions after the rescue, with pre-identified trained personnel.</li>
+      <li><strong>What you tell the operator.</strong> §12.2.16 — the nature of the agent used, so they can take preventive action.</li>
+    </ol>
+
+    <h3>The post-rescue phase is part of this</h3>
+    <p>§12.4.22.1 applies directly and is easy to miss because it is filed under spills and leaks rather than lithium: <em>dangerous goods packages not consumed in or affected by an aircraft fire may be found damaged and leaking at an accident site. Such damaged and leaking packages may pose a significant risk of injury or adverse health effects to aircraft occupants and RFF personnel.</em> And: <strong>once initial rescue operations are completed, special precautions should be taken with such packages and, if necessary, pre-identified trained personnel assembled to deal with the problems involved.</strong></p>
+    <p>A lithium incident has no clean end. The package that did not burn is still a package that may have vented, and the standard puts the response to that in a different phase with different people.</p>
+
+    <blockquote>
+      <p><strong>SME action:</strong> answer question 4 from m3 in writing — <em>is water recommended, and does the answer change between a burning battery, a venting battery, and an intact but hot one?</em> — with your source cited. If your service&rsquo;s current answer is a single agent for all three states, that is the finding this lesson is designed to produce. Then confirm two resourcing items §12.2.19.4(e) obliges you to provide: what agents and equipment do you actually hold for a lithium failure, and when were they last checked as being suitable? And identify your pre-identified trained personnel for the post-rescue package phase per §12.4.22.1 — named now, not found during an incident.</p>
+    </blockquote>
+  `,
+  refs: [
+    'ICAO Doc 9137 Part 1 — §12.2.19.4(e) consider additional training and provide suitable extinguishing agents and equipment to deal with Li-ion battery failures',
+    'ICAO Doc 9137 Part 1 — §12.2.19.2 spillage of flammable electrolytes as a product of thermal runaway',
+    'ICAO Doc 9137 Part 1 — §12.4.11 breathing apparatus as a minimum, stay upwind and out of smoke, fumes and dust; §6.2.1 SCBA including during overhaul',
+    'ICAO Doc 9137 Part 1 — §12.4.15 flammable liquids, heavier-than-air vapours and floating on water',
+    'ICAO Doc 9137 Part 1 — §12.3.5 decomposition from residual heat stopped with water spray; §12.3.9 charged hose lines with hand-controlled water-spray nozzles required whenever ventilation is introduced',
+    'ICAO Doc 9137 Part 1 — §12.4.22.1 damaged and leaking packages, special precautions and pre-identified trained personnel; §12.4.20 toxic gases on decomposition',
+    'ICAO Doc 9137 Part 1 — §12.2.16 inform aircraft operators of the nature of the agent used',
+    'ICAO Doc 9481 — Emergency Response Guidance for Aircraft Incidents Involving Dangerous Goods (the document to which the question list should be put; not reproduced by this platform)',
+    'Course ART-03 m3 — the water calculation; ART-04 m2 — the agent selection matrix; ART-10 m1 — the rescue decision'
+  ],
+  smeChecked: false
+},
+'art14-m4': {
+  title: 'Re-ignition and post-incident isolation',
+  brief:
+    'The course summary says "re-ignition days later". Part 1 does ' +
+    'not say it — and that gap is the most important thing here.',
+  points: [
+    'Doc 9137 Part 1 contains no re-ignition provision for lithium batteries and no lithium stand-down doctrine.',
+    'It does require position for reflash: vehicles should be positioned so they can be repositioned in the event of reflash (§12.3.25(e)).',
+    'Vehicles should be repositionable on direction of the incident commander (§12.3.25(e)).',
+    'Preserving the accident site should be given consideration (§12.3.25(h)); wreckage including controls shall not be disturbed or moved (§12.5.5).',
+    'It is important to inform aircraft operators of the nature of the agent used so they may take preventive action (§12.2.16).',
+    'Once initial rescue is complete, special precautions for damaged and leaking packages, with pre-identified trained personnel (§12.4.22.1).',
+    'Weather can disrupt an established foam blanket (§8.1.1) — the general reflash mechanism.',
+    'Re-ignition triggers and isolation procedures must come from your own determination, Doc 9481, the manufacturer and your State.'
+  ],
+  body: `
+    <h3>What this lesson will not claim</h3>
+    <p>This course is titled re-ignition, and the honest position has to come first: <strong>Doc 9137 Part 1 contains no re-ignition provision for lithium batteries and no lithium stand-down doctrine.</strong></p>
+    <p>I have said the same thing about pressurisation in ART-11 m4 and about NFPA 412 in ART-05 m1, and the reason is the same. Re-ignition interval and isolation guidance are properties of the specific chemistry, the specific packaging and the specific manufacturer, and they live in Doc 9481, the battery manufacturer's data and your State's requirements. Inventing them would be the most dangerous thing this course could do, because a crew given a confident but wrong re-ignition interval will make a real decision on it.</p>
+    <p>What follows is what <em>is</em> sourced, and then the determination your service must make.</p>
+
+    <h3>What the standard does give you</h3>
+    <p><strong>Position for reflash (§12.3.25(e)).</strong> <em>Ideally, vehicles should be positioned so they can be repositioned in the event of reflash or on direction of the incident commander.</em> ART-09 m5 makes the point that this instruction is a forecast, and for a lithium event the forecast is unusually important — the heat source may be internal to the package, unseen, and unaffected by the blanket you applied.</p>
+    <p><strong>Wind disrupts a blanket (§8.1.1).</strong> The general mechanism behind reflash: a foam blanket must <em>resist disruption due to wind or exposure to heat or flame</em> and be capable of <em>resealing any ruptures</em>. If the blanket has been disturbed and cannot reseal, the fuel vapour is no longer excluded, and that is true of electrolytes as much as aviation fuel.</p>
+    <p><strong>Preserve the site (§12.3.25(h), §12.5.5).</strong> <em>Consideration should be given to preserving the accident site</em>. And §12.5.5 is more precise than most crews realise: <em>the wreckage of an aircraft involved in an accident, including controls, shall not be disturbed (moved) until released for removal by the investigational authority having jurisdiction.</em></p>
+    <p>Then the exception, which is the part that matters when a battery is making its own hazards: <em>if the aircraft, parts, or controls must be moved because they directly present a hazard to human life, efforts should be made to record their original condition, positions, and locations, and due care should be afforded to preserve all physical evidence. If circumstances permit, photographs should be taken showing the location and position of all major components marked on the ground.</em></p>
+    <p>So movement is not forbidden — it is deferred until released by the authority, or justified by a direct hazard to life and then documented. For a lithium incident the justification is often real, and the recording is what makes it defensible. Photograph the package positions before you move them.</p>
+    <p><strong>Tell the operator (§12.2.16).</strong> <em>It is important to inform aircraft operators of the nature of the agent used when the incident is concluded so that they may take preventive action against corrosion or other effects as the situation may require.</em> A lithium incident that involved a battery product — electrolyte on the structure — is a corrosion event as well as a fire event.</p>
+
+    <h3>The determination you must make</h3>
+    <p>ART-09 m5 established that Doc 9137 gives the <em>order</em> of priorities but no stand-down criteria, and that a service with no written doctrine has a doctrine — it just cannot explain it. That is exactly the position on lithium re-ignition, and the same solution applies.</p>
+    <p>Write it down, per battery chemistry and packaging as they appear in your actual manifests:</p>
+    <ol>
+      <li><strong>What evidences that a cell has stopped thermally reacting?</strong> Not "it looks out" — ART-09 m5's thermal imaging point applies, and for a sealed package the answer may require instrumentation rather than observation.</li>
+      <li><strong>What evidences that the package is safe to move?</strong> Who makes that determination, and under what authority?</li>
+      <li><strong>What is your re-ignition watch period, and what triggers extending it?</strong> Where does the figure come from — Doc 9481, the manufacturer, your State?</li>
+      <li><strong>Who re-inspects, and at what interval?</strong></li>
+      <li><strong>What is the isolation procedure</strong> — where does the package go, with what containment, and who owns it?</li>
+      <li><strong>What is handed to the operator</strong> — the package, the area, the record? §12.2.16 covers the agent; what covers the rest?</li>
+      <li><strong>What is your crew exposure position during the watch?</strong> A watch kept by someone standing next to the package is not a watch.</li>
+    </ol>
+
+    <h3>The phase that actually exists in the standard</h3>
+    <p>There is a sourced post-incident phase, and it sits in the spills and leaks provision rather than in lithium material, which is why it is easy to miss: §12.4.22.1 — <em>dangerous goods packages not consumed in or affected by an aircraft fire may be found damaged and leaking at an accident site. Such damaged and leaking packages may pose a significant risk of injury or adverse health effects to aircraft occupants and RFF personnel.</em> And: <strong>once initial rescue operations are completed, special precautions should be taken with such packages and, if necessary, pre-identified trained personnel assembled to deal with the problems involved.</strong></p>
+    <p>So the standard's own structure gives you the shape of the answer even where it does not give the content: the incident ends at the rescue, and a second resourced phase begins. §12.2.19.4(d) asks you to <em>develop tactics to contain the battery failure event</em> — and containment includes what happens to the package afterwards.</p>
+
+    <h3>The honest way to run your exercise</h3>
+    <p>If you run a lithium scenario in a full-scale or partial exercise — and you should, because §12.2.19.4(e) obliges you to consider additional training — then the inject should end with the question rather than the answer:</p>
+    <p><strong>"The package is not burning. The crew is asking whether the incident is over."</strong></p>
+    <p>Then let your own written doctrine answer it. That tests the thing that actually matters, which is not the crew's recall of a re-ignition interval nobody can recall — it is whether the decision has been made in advance, in writing, by somebody, and whether the crew knows to look for it.</p>
+
+    <blockquote>
+      <p><strong>SME action:</strong> the first action is to obtain the figure you are missing. Write down your re-ignition watch period and your isolation procedure per chemistry and packaging, with the source — Doc 9481, the manufacturer, or your State&rsquo;s requirement — cited beside it. If you cannot obtain a figure for a chemistry you actually ship, that is a finding about your documentation and it belongs on the manifest review, not in an incident. Then confirm three things: that the packages are handed to the operator with a record of what was used and what state they were in; that your §12.4.22.1 pre-identified trained personnel exist for the post-rescue phase; and that your pre-planned tactics include the reflash repositioning requirement from §12.3.25(e) for a lithium incident specifically.</p>
+    </blockquote>
+  `,
+  refs: [
+    'ICAO Doc 9137 Part 1 — §12.3.25(e) positioning to allow repositioning on reflash or on direction of the incident commander; §12.3.25(h) consideration should be given to preserving the accident site',
+    'ICAO Doc 9137 Part 1 — §12.5.5 wreckage shall not be disturbed (moved) until released for removal by the investigational authority having jurisdiction; if moved because of a direct hazard to human life, record original condition, positions and locations and photograph if circumstances permit',
+    'ICAO Doc 9137 Part 1 — §8.1.1 a foam must resist disruption due to wind or exposure to heat or flame and be capable of resealing ruptures',
+    'ICAO Doc 9137 Part 1 — §12.2.16 inform aircraft operators of the nature of the agent used so they may take preventive action',
+    'ICAO Doc 9137 Part 1 — §12.4.22.1 special precautions and pre-identified trained personnel once initial rescue is complete',
+    'ICAO Doc 9137 Part 1 — §12.2.19.4(d) develop tactics to contain the battery failure event; §12.2.19.4(e) additional training and suitable agents and equipment',
+    'ICAO Doc 9481 — Emergency Response Guidance for Aircraft Incidents Involving Dangerous Goods (source for re-ignition and isolation guidance; not reproduced by this platform)',
+    'Course ART-09 m5 — stand-down decisions and the absence of doctrine; ART-03 m4 — consumption under real conditions'
+  ],
+  smeChecked: false
+},
 };
 
 /**
