@@ -358,3 +358,9 @@ your operator's SOPs. Real practice varies between operators and States.
 
 See [`deploy/nomad.md`](deploy/nomad.md) for serving this from your
 `project-amriskoffline` fork, including the zero-code Supply Depot option.
+
+[`deploy/nomad-ai.md`](deploy/nomad-ai.md) covers NOMAD's local AI assistant:
+which of the ARFF source documents are worth loading into its knowledge base,
+the hardware it actually requires, questions to test it against before anyone
+else uses it, and the warning learners must see. It is a separate decision from
+deploying this platform — the platform does not need it, and does not use it.
