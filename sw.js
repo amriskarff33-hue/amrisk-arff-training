@@ -27,9 +27,15 @@ const SHELL = [
   'js/curriculum.js',
   'js/lessons.js',
   'js/store.js',
+  'js/diagrams.js',
+  'js/videos.js',
   'js/app.js',
   'assets/logo.svg',
-  'assets/icon.svg'
+  'assets/logo.png',
+  'assets/icon.svg',
+  'assets/icon-192.png',
+  'assets/icon-512.png',
+  'assets/icon-180.png'
 ];
 
 self.addEventListener('install', (event) => {

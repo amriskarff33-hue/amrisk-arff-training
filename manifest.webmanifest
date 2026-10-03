@@ -2,7 +2,7 @@
   "name": "AM RISK AND TRAINING — Aviation & ARFF Training",
   "short_name": "AM RISK Training",
   "description": "Offline aviation, airport rescue and fire fighting training. 25 courses from ARFF foundations to emergency command.",
-  "id": "/arff-training/",
+  "id": "./index.html",
   "start_url": "./index.html",
   "scope": "./",
   "display": "standalone",
