@@ -39,8 +39,19 @@ unfinished.
 
 ## Running it
 
-**Double-click `index.html`.** It works straight off the filesystem. The scripts are
-deliberately classic (non-module) so `file://` is not blocked by CORS.
+**It is already live:**
+
+> **https://amriskarff33-hue.github.io/amrisk-arff-training/**
+
+Open that on any phone or tablet and use "Add to Home Screen" — it installs as
+an app and works with no connection. Requires HTTPS, which is why the live URL
+matters; the local options below are for development.
+
+Source of truth is `github.com/amriskarff33-hue/amrisk-arff-training` (branch
+`main`, GitHub Pages from the repo root). Pushing is all the deployment there is.
+
+**Double-click `index.html`.** It also works straight off the filesystem. The scripts
+are deliberately classic (non-module) so `file://` is not blocked by CORS.
 
 To serve it instead (needed for installability and offline caching):
 
@@ -197,9 +208,52 @@ SME has actually verified the content against the current edition of the standar
 
 ### Shipping changes to learners
 
-Bump the cache-buster in `index.html` on all four `<script>` tags and the
-stylesheet (`?v=1` → `?v=2`), and bump `CACHE_VERSION` in `sw.js`. Without this,
+Bump the cache-buster in `index.html` on all six `<script>` tags and the
+stylesheet (`?v=4` → `?v=5`), and bump `CACHE_VERSION` in `sw.js`. Without this,
 returning learners keep running the old build from the service worker cache.
+
+`CACHE_VERSION` is the one that matters — it names the cache itself, and the
+`activate` handler deletes every other one. The `?v=` query is only there to
+bypass the HTTP cache on GitHub Pages.
+
+### Checking that offline actually works
+
+A service worker's console is invisible from the page, so a precache that fails
+leaves you with an app that looks installed and is not. On every install the
+worker writes its own audit into the cache:
+
+```sh
+# after loading the app once, with the cache name from sw.js
+caches.open('amrisk-arff-v6').then(c => c.match('./precache-report.json'))
+  .then(r => r.json()).then(console.log)
+```
+
+or paste `await (await caches.open('amrisk-arff-v6')).match('./precache-report.json').json()`
+into the browser console. It reports how many files were expected, how many were
+stored, which are missing, and the error message for any that failed. A healthy
+install reports `missing: []` and `failures: {}`.
+
+One trap worth knowing: the precache stores plain paths (`js/app.js`) while
+`index.html` requests cache-busted ones (`js/app.js?v=4`), and Cache Storage
+compares the whole URL including the query. `matchShell()` in `sw.js` falls back
+to a path-only match for exactly this reason — without it, the precache is
+decorative and the app only works online because the fetch handler happens to
+stash the versioned URLs as it streams them.
+
+To test properly, delete the versioned entries and reload:
+
+```js
+const c = await caches.open('amrisk-arff-v6');
+for (const r of await c.keys()) if (new URL(r.url).search) await c.delete(r);
+location.reload();
+```
+
+If the app still comes up, the precache is doing its job.
+
+Note that removing the cache does **not** re-trigger the worker's `install`
+handler, so a cache emptied underneath a live registration stays empty until
+`CACHE_VERSION` changes. Delete the registration as well when testing a
+genuinely cold install.
 
 ---
 
