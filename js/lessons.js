@@ -5874,6 +5874,309 @@ const LESSON_OVERRIDES = {
   ],
   smeChecked: false
 },
+
+  'art11-m1': {
+  title: 'Your fleet mix',
+  brief:
+    'ICAO publishes representative information and says so. The only ' +
+    'way to know your fleet is to examine your fleet.',
+  points: [
+    'ICAO states that the quantity of flammable liquids and combustible materials aboard an aircraft varies according to the aircraft model and the operations in which it is engaged (§Appendix 1(a)).',
+    'Published information is representative only — personal inspections are necessary to appreciate the variations likely at your particular airport (§Appendix 1(a)).',
+    'Each aircraft must be examined individually to know how doors and windows may be most easily opened from outside (§Appendix 1).',
+    'Most main passenger doors are on the left side aft; most swing outward, hinged forward; some open inward (§Appendix 1).',
+    'Cockpit access doors are normally on the right side forward, some on the left (§Appendix 1).',
+    'A thorough knowledge of the airport and its immediate vicinity is essential, and mental mapping techniques are recommended to counter complacency (§14.5.1).',
+    'Drivers should be able to select alternative routes to any point on the movement area when normal routes are blocked (§14.5.1(a)).',
+    'Detailed aircraft characteristics and crash charts are held by ICAO and by each manufacturer — the manual directs you there rather than reproducing them (§Appendix 1(c)).'
+  ],
+  body: `
+    <h3>The manual tells you it cannot tell you</h3>
+    <p>Appendix 1(a) is the most honest paragraph in the whole chapter, and it should be quoted in every familiarisation briefing: <strong>as the quantity of flammable liquids and combustible materials aboard an aircraft varies according to the aircraft model and the operations in which it is engaged, this material can provide only representative information. Personal inspections are necessary to appreciate the variations likely to be encountered in aircraft operations at a particular airport.</strong></p>
+    <p>Read the structure of that sentence. ICAO gives representative information. ICAO tells you that is not enough. <strong>Personal inspections are necessary.</strong> So a service that has read the manual and a service that has walked its fleet are not equivalent, and only one of them can state where the fuel is on a particular aircraft.</p>
+
+    <h3>Where the authoritative information actually lives</h3>
+    <p>Appendix 1(c) points rather than reproduces. It directs you to ICAO's own aircraft characteristics table for wingspan, fuselage length and width, overall length and maximum passenger capacity, and then directs you to <em>the corresponding hyperlink under the column "aircraft model"</em> for the crash charts.</p>
+    <p>So the chain is: manual gives principles, ICAO table gives the class figures, manufacturer gives the crash chart. Your service's job is to hold the third link and use the first two — and to know which types you actually get.</p>
+    <p>Same discipline in §12.2.19.5 for lithium-ion: <em>for more information on specific aircraft types, follow the aircraft manufacturer's guidance, which may be available on their respective websites.</em> The manual names Boeing and Airbus as examples and stops there.</p>
+
+    <h3>Each aircraft, individually</h3>
+    <p>Appendix 1's access principles open with the instruction that matters most: <strong>each aircraft must be examined individually to know how doors and windows may be most easily opened from outside.</strong></p>
+    <p>Then the general patterns, which are useful precisely because they tell you what to look for:</p>
+    <ul>
+      <li><strong>Main passenger doors</strong> are normally on the left side aft. Most swing outward, hinged forward; <em>some inward</em>.</li>
+      <li><strong>Cockpit access door</strong> is normally provided on the right side forward; some aircraft have it on the left.</li>
+      <li>Most handles turn clockwise.</li>
+      <li>Doors may require pushing in and sliding aft, pulling out, or sliding upwards.</li>
+      <li>Some aircraft have <strong>integral stairs</strong> in the nose or at the extreme aft end under the tail.</li>
+      <li>Emergency window exits vary in location, recognisable by the outline of the joint between hatch and fuselage and by marking of the release devices.</li>
+      <li>Some emergency window exits have knotted ropes to aid evacuation; others have red handles, or rings, or bars.</li>
+      <li>Access is sometimes possible through the <strong>lavatory service door or cargo compartment door</strong>.</li>
+    </ul>
+    <p>Those are tendencies, not specifications. The reason the manual bothers to list "most" and "some" for every single item is that the exceptions are the whole point.</p>
+
+    <h3>What the fleet mix decides</h3>
+    <p>The fleet mix is not administrative data. It sets, directly:</p>
+    <ol>
+      <li><strong>Your aerodrome category</strong>, through the critical aircraft — the longest, widest in normal operations (§2.1.2, ART-02 m1).</li>
+      <li><strong>Whether §2.3.7 recalculation applies</strong> — any aircraft larger than the category average (§2.3.7, ART-03 m1).</li>
+      <li><strong>Your access and extrication knowledge</strong> per type (ART-10 m2 and m4).</li>
+      <li><strong>Which hazard zones exist</strong> — where fuel, oil, batteries and hydraulic reservoirs sit on each type.</li>
+      <li><strong>Which specialist hazards apply</strong> — lithium-ion fitted as part of the aviation system (§12.2.19.4), magnesium in the structure (§12.2.17), titanium in the engines (§12.2.13).</li>
+    </ol>
+    <p>Point 5 is the one with a named action attached. §12.2.19.4 requires that <strong>RFFS personnel should be aware of the types of aircraft operating at their aerodrome that have Li-ion batteries as part of the aviation system</strong>, and where such aircraft operate the RFFS unit should initiate action including ensuring personnel are trained to recognise those types and their battery location within the airframe. That is a fleet-mix question, so it belongs in this lesson.</p>
+
+    <h3>The aerodrome, not just the aircraft</h3>
+    <p>§14.5.1 covers the other half of familiarisation and does something most services skip: <strong>to counter the effects of complacency, it is recommended that vehicle operators practice mental mapping techniques to supplement routine on-site familiarization.</strong></p>
+    <p>And the specific competencies, which are worth reading as a checklist of your own training programme:</p>
+    <ul>
+      <li>Select alternative routes to any point on the movement area when normal routes are blocked.</li>
+      <li>Know the existence of ground which may become impassable from time to time in any part of the area.</li>
+      <li>Recognise landmarks which may be indistinctly seen.</li>
+      <li>Operate vehicles over all types of terrain during all kinds of weather.</li>
+      <li>Select the best routes to any point on the airport.</li>
+      <li>Use detailed grid maps as a aid in responding to an aircraft accident or incident.</li>
+    </ul>
+    <p>Item 3 is the one that catches experienced crews. A landmark that is obvious in daylight in summer is not obvious at 04:00 in rain, and mental mapping is the control that does not depend on seeing it.</p>
+
+    <h3>Building the fleet file</h3>
+    <p>One file per type, held current, containing: the manufacturer's crash chart; overall length and maximum fuselage width for the category check; fuel, oil, battery and hydraulic reservoir locations; access points and their operation from outside; emergency exit locations and devices; fixed halon installations; Li-ion battery locations, containment and venting ports; and the cabin materials. Then a review trigger: any change to the schedule, any new type entering, any manufacturer bulletin affecting any of it.</p>
+
+    <blockquote>
+      <p><strong>SME action:</strong> take your current schedule and produce the fleet file for each type. Then answer three questions honestly. Which types in your fleet have Li-ion batteries fitted as part of the aviation system, where are they, and do your crews know the containment and venting ports for thermal runaway — §12.2.19.4 names recognising those aircraft and their locations as the first action the RFFS unit should initiate. Which types have magnesium in the structure or titanium in the engines? And has anyone in your service physically examined the doors of every type in the fleet, or has the knowledge come from a manual that says personal inspections are necessary?</p>
+    </blockquote>
+  `,
+  refs: [
+    'ICAO Doc 9137 Part 1 — Appendix 1(a) representative information only, personal inspections necessary',
+    'ICAO Doc 9137 Part 1 — Appendix 1 principles of rescue, each aircraft examined individually, door and window exit patterns and exceptions',
+    'ICAO Doc 9137 Part 1 — Appendix 1(c) aircraft characteristics table and manufacturer crash charts',
+    'ICAO Doc 9137 Part 1 — §12.2.19.4 know the types of aircraft operating with Li-ion batteries as part of the aviation system and their location within the airframe; §12.2.19.5 follow manufacturer guidance for specific types',
+    'ICAO Doc 9137 Part 1 — §14.5.1 thorough knowledge of the airport, mental mapping to counter complacency, the six driver competencies',
+    'ICAO Doc 9137 Part 1 — §12.2.13 titanium; §12.2.17 magnesium alloys in aircraft structures',
+    'Course ART-02 m1 — aircraft categories and the critical aircraft',
+    'Course ART-10 m2 — airframe access points'
+  ],
+  smeChecked: false
+},
+
+  'art11-m2': {
+  title: 'Systems, fuels and fluids',
+  brief:
+    'Where the fuel is, where the oil is, where the batteries are. ' +
+    'The general layout is consistent enough to learn — and the exceptions are what kill you.',
+  points: [
+    'Fuel tanks are normally in the wings; some run through the fuselage, others all outboard of inboard engines (Appendix 1(b)).',
+    'Fuel tanks are interconnected and have cross-feed valves — so shutting one does not necessarily isolate the rest (Appendix 1(b)).',
+    'Tank vents are normally at the trailing edge of the wing (Appendix 1(b)).',
+    'Oil tanks are normally in nacelles behind the engine firewall; some forward of the firewall (Appendix 1(b)).',
+    'Batteries are normally located forward, marked on the exterior; some are in the nose wheel well. Disconnect if no fire after crash. Quick-disconnect fittings are normally provided (Appendix 1(b)).',
+    'Gasoline combustion heaters are located in wings, fuselage or tail on reciprocating-engine aircraft only (Appendix 1(b)).',
+    'Hydraulic fluid reservoirs are located in the fuselage forward or near the wing root (Appendix 1(b)).',
+    'Broken fuel, hydraulic fluid (flammable type), alcohol and oil lines should be plugged or crimmed when possible to reduce spill and extent of fire (§12.1.13).',
+    'Fuel tanks exposed but not involved should be protected by appropriate agents to prevent involvement or explosion (§12.1.14).'
+  ],
+  body: `
+    <h3>The general layout, and why it is worth learning</h3>
+    <p>Appendix 1(b) gives simplified drawings of the principal fire hazard zones. Read them as a map of where to look first, not as a specification for any aircraft — the appendix says so, and the type's crash chart overrides it.</p>
+
+    <p><strong>Fuel.</strong> <em>Fuel tanks normally in wings — some run through fuselage — others all outboard of inboard engines. Fuel tanks are interconnected and have cross-feed valves. Tank vents are normally at the trailing edge of wing.</em></p>
+    <p>Three separate facts there, and the middle one is the operational one. <strong>Interconnected with cross-feed valves</strong> means that isolating one tank may not isolate the aircraft, and that a fuel fire which has one tank involved can involve another without any line being broken. The cross-feed valve positions are part of the per-type file.</p>
+    <p>And <strong>tank vents at the trailing edge</strong> tells you where a vented fuel fire can appear — which may be behind and outboard of the fuselage rather than where the tank is. A crew expecting the fire at the tank will be looking in the wrong place.</p>
+
+    <p><strong>Oil.</strong> <em>Oil tanks normally in nacelles behind the firewall — some forward of the firewall.</em> So on most engines the oil is behind the section you can see, which is why an engine fire can reappear after an apparently successful attack on the front of the nacelle. The forward-of-firewall exceptions are exactly the cases that catch a crew who has only ever seen the common layout.</p>
+
+    <p><strong>Batteries.</strong> <em>Batteries normally located forward as shown and marked on the exterior — disconnect if no fire after crash. Some located in the nose wheel well. Quick-disconnect fittings normally are provided.</em></p>
+    <p>That phrase is a short procedure with a condition attached: disconnect them <em>if no fire</em> after the crash. A battery in a post-crash fire is a live hazard; a battery next to a burnt-out aircraft is a post-incident task. And the location note matters — a nose wheel well battery is in a place a crew searching under the nose will find, and it is marked, so look for the marking.</p>
+
+    <p><strong>Heating and hydraulics.</strong> <em>Gasoline combustion heaters located in wings, fuselage or tail (reciprocating-engine aircraft only). Hydraulic fluid reservoirs located in fuselage forward or near the wing root.</em></p>
+    <p>Note the fuel type and the location. A gasoline combustion heater is a fuel-fed device that most people forget exists, sitting in the wing or tail of a reciprocating aircraft — and on an aircraft accident the tail cone is often the least-inspected area.</p>
+    <p>Hydraulic reservoirs forward in the fuselage or near the wing root — and §12.1.13 names the fluid type that matters: <strong>broken fuel, hydraulic fluid (flammable type), alcohol and oil lines should be plugged or crimped when possible to reduce the amount of spill and extent of fire.</strong></p>
+
+    <h3>Two provisions that turn knowledge into action</h3>
+    <p>§12.1.13 is a suppression task and §12.1.14 is a protective one. Together they are the reason the layout knowledge above is worth having.</p>
+    <p><strong>§12.1.13 — stop the spread.</strong> Plug or crimp broken lines where you can. That requires knowing where the lines run on the type in front of you, because a line you cannot find cannot be crimped.</p>
+    <p><strong>§12.1.14 — protect what is not yet involved.</strong> <em>If the source of heat and fire cannot be controlled, fuel tanks exposed but not involved should be protected by appropriate agents to prevent involvement or explosion.</em></p>
+    <p>Read the conditional carefully: this applies <em>when the source of heat and fire cannot be controlled</em>. Once you are controlling the fire, the first-arriving crew's priority task is the precautionary blanketing of the fuel covered area (§12.3.3, ART-10 m1) and the agent goes on the wetted area. But if the source is not under control — a fuel fire you cannot reach, a spread you are not winning — then protecting the undamaged tanks is the task. That is a different tactic under a different condition, and the condition is worth briefing.</p>
+
+    <h3>Working the tank layout in practice</h3>
+    <ol>
+      <li><strong>Locate.</strong> On the type, from the chart, before arrival if possible — and by the exterior markings and vents on scene if not.</li>
+      <li><strong>Assess involvement.</strong> Which tanks, which oil tanks, which batteries. Involved versus exposed is the distinction that selects between §12.3.3 and §12.1.14.</li>
+      <li><strong>Control.</strong> If controlling, blanket the wetted area. If not controlling, protect the exposed tanks.</li>
+      <li><strong>Isolate.</strong> Cross-feed valves, battery quick-disconnects, and lines plugged or crimped.</li>
+      <li><strong>Watch the vents.</strong> Tank vents at the trailing edge are where a vented fire shows, and they can be behind the line you are holding.</li>
+    </ol>
+    <p>Step 5 is the one that is almost never briefed and it costs nothing to add.</p>
+
+    <h3>The per-type file</h3>
+    <p>For each aircraft type, from the manufacturer's crash chart and your own inspection, record: fuel tank locations including any through-fuselage or outboard of inboard engines; cross-feed valve locations and positions; tank vent locations; oil tank locations relative to the firewall; battery locations with the exterior markings; hydraulic reservoir locations; gasoline combustion heater locations if the type has them; and the fuel line and hydraulic line runs where cutting is contemplated.</p>
+
+    <blockquote>
+      <p><strong>SME action:</strong> produce the per-type hazard zone file above for every type in your fleet. Then confirm three things about your own crews. Can they point to the cross-feed valves on each type, so they know that isolating one tank may not isolate the aircraft? Do they know where the tank vents are, so they are not surprised by a fire behind and outboard of the fuselage? And has anyone rehearsed plugging or crimping a broken line on a specific type, with the actual fittings rather than in principle? Item three is a task with an owner and a time cost — it needs a station and a line and a crew, and it is the kind of task that gets planned once the incident count has risen.</p>
+    </blockquote>
+  `,
+  refs: [
+    'ICAO Doc 9137 Part 1 — Appendix 1(b) principal fire hazard zones: fuel tanks, interconnection and cross-feed valves, tank vents; oil tanks relative to the firewall; batteries, markings and quick-disconnects; gasoline combustion heaters; hydraulic fluid reservoirs',
+    'ICAO Doc 9137 Part 1 — §12.1.13 broken fuel, hydraulic fluid (flammable type), alcohol and oil lines to be plugged or crimped',
+    'ICAO Doc 9137 Part 1 — §12.1.14 fuel tanks exposed but not involved protected by appropriate agents where the source of heat and fire cannot be controlled',
+    'ICAO Doc 9137 Part 1 — §12.3.3 precautionary blanketing of the fuel covered area as a first-arriving vehicle priority task',
+    'ICAO Doc 9137 Part 1 — Appendix 1(c) manufacturer crash charts for specific aircraft',
+    'Course ART-10 m1 — the rescue decision; ART-15 m1 — engine systems and titanium',
+    'Course ART-12 — aviation fuel, refuelling and spill response'
+  ],
+  smeChecked: false
+},
+
+  'art11-m3': {
+  title: 'Materials and cabin behaviour',
+  brief:
+    'The cabin is a chemical event waiting for heat. ' +
+    'Fuselage integrity is what keeps it survivable.',
+  points: [
+    'The cabin interior of modern passenger aircraft comprises synthetic materials which, during fire or charring, will produce dangerous toxic gases (§6.2.2).',
+    'Gases include carbon monoxide, hydrogen chloride, chlorine, hydrogen cyanide and carbonyl chloride (phosgene) (§6.2.2).',
+    'If there is no fire but trim and upholstery materials are decomposing because of residual heat, the decomposition must be stopped with water spray and the environment made habitable (§12.3.5).',
+    'Maintaining fuselage integrity is the first principle to allow passenger evacuation (Appendix 1(c)).',
+    'Ventilation of the aircraft is the only satisfactory means of creating a survivable atmosphere (§12.3.6).',
+    'Ventilation carries a risk of promoting fire in any smouldering materials, so a charged hand-controlled water-spray line must be available (§12.3.9).',
+    'When exits are used for ventilation they should be opened on the downwind side (§12.1.15.1).',
+    'The no smoking rule must be rigidly enforced at the scene of the accident and in the immediate vicinity (§12.1.16).'
+  ],
+  body: `
+    <h3>The cabin is a chemical event</h3>
+    <p>§6.2.2 states the mechanism: <strong>the cabin interior of modern passenger aircraft comprises synthetic materials which, during fire or charring, will produce dangerous toxic gases. Such gases include carbon monoxide, hydrogen chloride, chlorine, hydrogen cyanide and carbonyl chloride (phosgene).</strong></p>
+    <p>Charring, not burning. That distinction is worth holding, because a cabin can char without any visible flame and still be producing phosgene and hydrogen cyanide. Which is precisely why the respiratory protection requirement in §6.2.1 is triggered by <em>environment</em> and includes overhaul operations — the crew working a cooled, non-burning aircraft is in exactly the atmosphere that charring produces.</p>
+
+    <h3>Fuselage integrity is the first principle</h3>
+    <p>Appendix 1's firefighting principles state it directly: <strong>maintaining fuselage integrity is the first principle to allow passenger evacuation.</strong></p>
+    <p>One principle, and it explains a great deal of the rest of this course. The fires RFF crews are set to control are not the most intense ones — they are the ones adjacent to the fuselage. The critical area concept in ART-03 exists for the same reason. You are not trying to put out the fire; you are trying to stop the heat from reaching a skin that is the only thing between a 90 °C cabin atmosphere and the occupants.</p>
+    <p>And it is why §12.2.16 gives priority to exposures on an engine fire, and why the positioning priority in §12.3.25(d) protects egress routes ahead of fuselage coverage. All of it is the same principle, applied at different scales.</p>
+
+    <h3>Residual heat is the cabin hazard with no flame</h3>
+    <p>§12.3.5's second branch is the one that belongs in this lesson rather than in ART-10: <em>if there is no fire but trim and upholstery materials are decomposing because of residual heat, the decomposition must be stopped by the use of water-spray and the environment made habitable by natural or induced ventilation.</em></p>
+    <p>So the sequence for a post-fire cabin with no active flame is: stop the decomposition with water spray, then make the space habitable by ventilation. Two tasks, and the order matters — ventilating a space where decomposition is still running delivers the products of that decomposition through the aircraft faster, not slower.</p>
+
+    <h3>The ventilation trade, again</h3>
+    <p>§12.3.6 gives the reason ventilation is mandatory: <em>smoke and fumes will impair vision, make movement difficult and may rapidly prove fatal to all occupants</em>, and <em>ventilation of the aircraft is the only satisfactory means</em> of creating a survivable atmosphere.</p>
+    <p>§12.3.9 gives the price: introducing air to a space with smouldering material can promote fire, and <strong>personnel equipped with charged hose lines terminating in hand-controlled water-spray nozzles must be available to meet any sudden outbreak of fire.</strong></p>
+    <p>And §12.1.15.1 gives the orientation, which is a genuinely useful practical detail: <em>when exits are used for ventilation they should be opened on the downwind side.</em> Natural ventilation needs a through-flow, and §12.3.7 notes the limitation — there may be smouldering materials outside on the upwind side which will contaminate the air drawn in. Opening on the downwind side both gives you the flow and keeps the contaminated side out.</p>
+
+    <h3>Two rules that are about the crew, not the aircraft</h3>
+    <p><strong>§12.1.16:</strong> <em>the "no smoking" rule must be rigidly enforced at the scene of the accident and in the immediate vicinity.</em></p>
+    <p>At an accident scene there will be smokers — occupants, staff, drivers, somebody waiting. And the scene may have fuel, vapours, and damaged aircraft. "Rigidly enforced" is doing the work: this is a rule about the behaviour of people on your scene, including your own, and it is the rule most easily forgotten once the incident is under way.</p>
+    <p><strong>Fuel vapour.</strong> It connects to §12.1.16 directly and to §12.3.10(a) — the caution about portable power sources in a fuel vapour atmosphere. The scene may have a fuel spill, damaged tanks, and an ignition source in the form of a generator or a light.</p>
+
+    <h3>What this means for a crew in the cabin</h3>
+    <ol>
+      <li><strong>SCBA, per §6.2.1.</strong> Not "where the smoke is" — the environment is the trigger, and overhaul counts.</li>
+      <li><strong>Water spray on residual heat in trim and upholstery</strong> before ventilation, to stop the decomposition.</li>
+      <li><strong>Natural ventilation opens downwind first</strong>, then upwind, giving a through-flow.</li>
+      <li><strong>A charged hand-controlled line crewed</strong> before the air starts moving.</li>
+      <li><strong>Egress protected before any window or door is opened</strong>, per §12.3.3.1 and §12.3.14.</li>
+      <li><strong>Fuselage integrity before interior work</strong> — the first principle, and the reason exterior cooling usually precedes entry.</li>
+    </ol>
+    <p>Items 2, 3 and 4 are one task with three parts, and doing them out of order is the failure. Item 6 is the habit that makes the others possible.</p>
+
+    <blockquote>
+      <p><strong>SME action:</strong> confirm four things. Does your service have a written sequence for a post-fire cabin with no active flame — water spray on residual heat, then ventilation — rather than an assumption that the crew will work it out? Is a charged hand-controlled water-spray line crewed and positioned as a briefed step before ventilation begins on any type? Do your crews know which exits open for ventilation and from which side, per type? And is the no-smoking rule at the scene something your crews enforce, including on their own smoke, and is it in your incident plan rather than assumed as courtesy?</p>
+    </blockquote>
+  `,
+  refs: [
+    'ICAO Doc 9137 Part 1 — §6.2.1 respiratory protection where fire is present and during overhaul; §6.2.2 synthetic cabin interiors and the toxic gases produced in fire or charring',
+    'ICAO Doc 9137 Part 1 — §12.3.5 decomposition of trim and upholstery from residual heat stopped by water spray, environment made habitable',
+    'ICAO Doc 9137 Part 1 — §12.3.6 smoke and fumes impair vision, make movement difficult and may rapidly prove fatal; ventilation the only satisfactory means; SCBA for entry',
+    'ICAO Doc 9137 Part 1 — §12.3.7 natural ventilation and its limitation from smouldering material on the upwind side; §12.3.9 charged hand-controlled lines required',
+    'ICAO Doc 9137 Part 1 — §12.1.15.1 exits used for ventilation opened on the downwind side; §12.1.16 no smoking rule rigidly enforced at the scene',
+    'ICAO Doc 9137 Part 1 — Appendix 1(c) maintaining fuselage integrity is the first principle to allow passenger evacuation; §12.2.16 priority given to exposures',
+    'Course ART-03 m1 — how foam works; ART-07 m1 — what SCBA protects you from',
+    'Course ART-10 m3 — stabilisation before access'
+  ],
+  smeChecked: false
+},
+'art11-m4': {
+  title: 'Composite, lithium and metal hazards',
+  brief:
+    'Four materials where the standard answer is "your agents will not work", ' +
+    'and the standard response is a plan rather than a technique.',
+  points: [
+    'Composite fibre in fire can produce hydrogen cyanide, hydrogen chloride, hydrogen sulfide, hydrogen fluoride, acrolein and nitrogen dioxide (§6.2.3).',
+    'Composite fibre in high impact without fire may release minute particles; self-contained apparatus or, as a minimum, full face respirators with appropriate filtration (§6.2.4).',
+    'Some engines have titanium parts which, if ignited, cannot be extinguished with the conventional agents available to most RFF crews (§12.2.13).',
+    'Titanium may be allowed to burn out provided two conditions hold: no external flammable vapour-air mixtures, and foam or water spray available to maintain nacelle integrity (§12.2.13).',
+    'This guidance on lithium-ion relates to batteries installed by the manufacturer as part of the aviation system, not batteries carried as cargo (§12.2.19).',
+    'Li-ion cells that overheat may undergo thermal runaway, emitting gas and smoke and spilling flammable electrolytes (§12.2.19.2).',
+    'Magnesium fires may be attacked in incipient stages by agents designed for combustible metal fires; where a large mass is involved, coarse water streams give the best ultimate control (§12.2.18).',
+    'After rescue and salvage, coarse water streams are advisable on still-burning magnesium even if the immediate result is localised flame intensification and considerable sparking (§12.2.18).',
+    'Doc 9137 Part 1 does not address pressurised system hazards. Those come from the type documentation and your State.'
+  ],
+  body: `
+    <h3>An honest boundary first</h3>
+    <p>This module is titled for composite, lithium and pressurisation. Two of those three are covered in depth by Doc 9137 Part 1 and one is not, so the honest thing is to say which is which.</p>
+    <p><strong>Composite and lithium</strong> — §6.2.3, §6.2.4, §12.2.13, §12.2.17 to §12.2.19.5. Covered properly.</p>
+    <p><strong>Pressurised system hazards</strong> — the manual contains no treatment of them. Not a gap in this lesson; a gap in the source. Overpressure, pressure-vessel failure and hydraulic accumulator behaviour come from the aircraft manufacturer's documentation and your State's requirements. This platform does not supply them and will not invent them.</p>
+    <p>What the manual does say that bears on the area is already covered elsewhere: hydraulic reservoirs are located in the fuselage forward or near the wing root (Appendix 1(b)), and broken hydraulic fluid of the flammable type should be plugged or crimmed (§12.1.13). Put those alongside your type documentation and you have the start of the picture.</p>
+
+    <h3>Composite: two different hazards from one material</h3>
+    <p><strong>In fire</strong> — §6.2.3: <em>composite fibre, if involved in fire, can produce dangerous substances such as hydrogen cyanide, hydrogen chloride, hydrogen sulfide, hydrogen fluoride, acrolein and nitrogen dioxide.</em> Self-contained respiratory equipment of an approved design is required.</p>
+    <p><strong>In high impact, without fire</strong> — §6.2.4: <em>composite fibre, if involved in high impact, such as an aircraft crash landing without the presence of fire, may become damaged to the extent minute particles of composite fibres are released into the atmosphere.</em> Here the requirement is lower — <em>self-contained breathing apparatus or, as a minimum, full face respirators with the appropriate filtration filters</em>.</p>
+    <p>That difference is deliberate and operationally important. Fire means the whole toxic-gas set and you need air. Impact means particle filtration, and a filtered facepiece will do. The 03:00 call where an aircraft has been damaged and there is no fire is a different respiratory problem from the one your training day rehearsed.</p>
+
+    <h3>Titanium: the answer is sometimes to stop</h3>
+    <p>§12.2.13 is the clause that surprises people and it should be known cold: <strong>some engines have titanium parts which, if ignited, cannot be extinguished with the conventional extinguishing agents available to most RFF crews.</strong></p>
+    <p>So: <em>if these fires are contained within the nacelle, it should be possible to allow them to burn out without seriously threatening the aircraft itself</em> — <strong>provided, as long as</strong> two conditions hold:</p>
+    <ol>
+      <li><strong>there are no external flammable vapour-air mixtures</strong> which could be ignited by the flames or hot engine surfaces; and</li>
+      <li><strong>foam or water spray is available</strong> to maintain the integrity of the nacelle and surrounding exposed aircraft structures.</li>
+    </ol>
+    <p>Read that correctly. Burn-out is permitted only while the fire stays inside the nacelle, and only while you can hold the structure around it cool. Both are continuous judgements, not a decision made once. The moment either fails — a vapour release outside, or agent not available — the calculus inverts completely and you are back to an ordinary engine fire that your conventional agents will not put out.</p>
+    <p>And you still need the aircraft to be told. §12.2.16 requires that <em>it is important to inform aircraft operators of the nature of the agent used when the incident is concluded so that they may take preventive action against corrosion or other effects</em> — and a titanium burn-out is an even more significant event for the operator than a foam attack.</p>
+
+    <h3>Magnesium: the water is counterintuitive</h3>
+    <p>§12.2.17 sets the ignition context: <em>the form and mass of magnesium-based components in normal airframes is such that ignition does not occur until there has been considerable exposure to flame but exceptions occur in the thin forms of magnesium found in some aircraft power plant and landing gear components.</em></p>
+    <p>So magnesium rarely ignites early, but the thin forms in power plant and landing gear are where it happens.</p>
+    <p>§12.2.18 then gives the tactic, which reads backwards to most crews: <strong>magnesium fires may be attacked in their incipient stages by extinguishing agents specifically designed for combustible metal fires, but where a large mass of magnesium becomes involved the application of large volumes of coarse water streams provides the best ultimate control method.</em></p>
+    <p>Water, in volume, on a burning metal. And then the qualification, which is the operational crux: <em>attack by water streams is undesirable where the primary fire control technique is with foam as the water streams would damage the foam blanket.</em></p>
+    <p>So magnesium creates a genuine conflict: the agent that controls a large magnesium fire is the agent that destroys your foam blanket. §12.2.18 resolves it by sequence — <em>following completion of rescue and all possible salvage of effects, it is advisable to apply coarse water streams to still-burning magnesium components even if the immediate result might be a localized intensification of flame and considerable sparking.</em></p>
+    <p>Read that ordering carefully. Rescue first. Salvage second. Magnesium third. And accept that the magnesium application will make the fire look worse immediately, because it will.</p>
+
+    <h3>Lithium-ion: five actions, not a technique</h3>
+    <p>§12.2.19 opens with the scope, and it is a scope limit that matters: <em>this guidance relates to lithium-ion (Li-ion) batteries installed by the aircraft manufacturer as part of the aircraft's aviation system and not Li-ion batteries being carried as cargo.</em></p>
+    <p>So this is the APU battery, the flight-control backup, the battery that powers systems when the mains are gone — not a pallet of cells in the hold, which is ART-14.</p>
+    <p>The mechanism (§12.2.19.2): each Li-ion battery contains numerous cells which, <em>if they become overheated (a process known as thermal runaway) could lead to the emission of gas, smoke and the spillage of flammable electrolytes.</em></p>
+    <p>And the ways it happens (§12.2.19.3), which are worth knowing because three of the four are things you can see or influence: external overheating from fire in other systems — engine fires, wheel fires, cargo hold fires; short-circuiting, internally or externally; damage during an aircraft accident; and manufacturing defects.</p>
+    <p>Then §12.2.19.4, which is the clause to build your procedure from. Where such aircraft operate, the RFFS unit should initiate action <strong>including, but not limited to</strong>:</p>
+    <ol>
+      <li><strong>Ensure personnel are trained to recognise the types of aircraft that have Li-ion batteries and their location within the airframe.</strong></li>
+      <li><strong>Identify aircraft and familiarise personnel with existing battery containment and venting ports</strong> in case of thermal runaway.</li>
+      <li><strong>Ensure that RFF and other ground operations personnel can recognise signs of Li-ion battery failure reaction (that is, venting).</strong></li>
+      <li><strong>Develop tactics to contain the battery failure event.</strong></li>
+      <li><strong>Consider additional training and provide suitable extinguishing agents and equipment</strong> to deal with Li-ion battery failures.</li>
+    </ol>
+    <p>Note what this is. It is not a technique, it is not an agent and it is not a flow rate. It is five organisational actions, four of which are about knowing which aircraft you have and where the batteries are. A service that meets all five has a plan; a service that has a bag of powder has an improvisation.</p>
+    <p>Item 2 is the one that requires the manufacturer's information specifically: containment and venting ports are type-specific features, and they are the difference between containing a thermal runaway and standing next to it.</p>
+
+    <h3>What the four materials have in common</h3>
+    <p>Composite, titanium, magnesium and lithium share a property that changes how you plan rather than how you attack. For all four, <em>the standard answer is that your conventional agents are insufficient</em>. Composite gives you toxic gases. Titanium will not extinguish. Magnesium needs water that fights your foam. Lithium is governed by venting and containment rather than by application rate.</p>
+    <p>Which means the control for all four is the same, and it is not equipment: <strong>know which aircraft you have, know where these features are on it, and have a written plan for each.</strong> That is why ART-11 m1's fleet file is the first lesson in this course and this is the lesson that pays for it.</p>
+
+    <blockquote>
+      <p><strong>SME action:</strong> work through §12.2.19.4 item by item for the Li-ion aircraft in your fleet. Can your crews recognise the types and their battery locations? Do they know the containment and venting ports for each? Can they recognise venting as a sign of failure? Do you have written tactics to contain the event? Have you decided what additional training and what agents and equipment you will provide? Any "no" is a specific, closable finding, and the manual asks for action rather than awareness.</p>
+      <p>Then confirm your position on titanium burn-out per type — who judges the two §12.2.13 conditions in real time, and what happens when either fails. Then confirm your magnesium tactic, including the ordering in §12.2.18: rescue, salvage, then coarse water streams, accepting the temporary flame intensification. And close the gap this module could not: obtain the pressurised system and hydraulic accumulator documentation for your fleet from the manufacturers, and establish what your State requires.</p>
+    </blockquote>
+  `,
+  refs: [
+    'ICAO Doc 9137 Part 1 — §6.2.3 composite fibre toxic products in fire; §6.2.4 composite fibre particles in high impact without fire and the filtration minimum',
+    'ICAO Doc 9137 Part 1 — §12.2.13 titanium fire control and the two conditions permitting burn-out',
+    'ICAO Doc 9137 Part 1 — §12.2.16 agent choice is a matter for local decision; priority given to exposures; inform operators of the nature of the agent used',
+    'ICAO Doc 9137 Part 1 — §12.2.17 magnesium alloys in aircraft structures and the thin-form exceptions; §12.2.18 combustible metal agents, coarse water streams, the foam conflict, and the ordering after rescue and salvage',
+    'ICAO Doc 9137 Part 1 — §12.2.19 to §12.2.19.5 Li-ion installed batteries: scope excluding cargo, thermal runaway, the four involvement routes, the five actions for the RFFS unit, and manufacturer guidance for specific types',
+    'ICAO Doc 9137 Part 1 — Appendix 1(b) hydraulic fluid reservoir locations; §12.1.13 flammable hydraulic fluid lines plugged or crimped',
+    'Course ART-11 m1 — your fleet mix; m2 — systems, fuels and fluids',
+    'Course ART-14 — lithium battery cargo hazards and response',
+    'Course ART-15 m1 — engine fires and the titanium burn-out tactic'
+  ],
+  smeChecked: false
+},
 };
 
 /**
