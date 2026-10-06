@@ -593,6 +593,12 @@ html[data-theme="day"] .hero { background: linear-gradient(155deg, var(--navy) 0
 .dg-brake  { fill: var(--copper); stroke: var(--copper-deep); stroke-width: 1.6; }
 .dg-panel { fill: var(--surface); stroke: none; }
 .dg-chip   { fill: var(--slate); stroke: none; }
+/* Triage priority tags. Doc 9137 Part 7 §9.3.2 fixes these colours and the
+   §9.5.1 care sub-areas use the same three, so they are tokens rather than
+   inline fills and re-theme with everything else. */
+.dg-tag-red    { fill: var(--fail); fill-opacity: .18; stroke: var(--fail); stroke-opacity: .6; stroke-width: 1.4; }
+.dg-tag-yellow { fill: var(--warn); fill-opacity: .18; stroke: var(--warn); stroke-opacity: .6; stroke-width: 1.4; }
+.dg-tag-green  { fill: var(--pass); fill-opacity: .18; stroke: var(--pass); stroke-opacity: .6; stroke-width: 1.4; }
 .dg-cell   { fill: var(--slate); stroke: var(--line-soft); stroke-width: 1; }
 
 /* Text */

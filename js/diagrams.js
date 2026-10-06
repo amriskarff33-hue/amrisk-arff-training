@@ -622,6 +622,92 @@ function dFuellingStand() {
 }
 
 /* =========================================================================
+   9. CASUALTY FLOW — COLLECTION TO TRANSPORTATION
+   Doc 9137 Part 7 §9.5.1: the injured should pass through four areas which
+   should be carefully located and easily identified — collection, triage,
+   care and transportation. The triage area "should be located at least 90 m
+   upwind of the accident site to avoid possible exposure to fire and smoke".
+   §9.2.5 adds the two other placement rules: shortest distance possible, and
+   "well away from fire fighting operations, and upwind and uphill".
+   The 90 m is quoted. The drawn distances are schematic and not to scale.
+   ========================================================================= */
+function dCasualtyFlow() {
+  const W = 680, H = 620;
+
+  const badge = (x, y, n) =>
+    `<circle cx="${x}" cy="${y}" r="12" class="dg-chip"/>` +
+    dgText(x, y + 0.5, String(n), 'dg-t--chip', 'middle');
+
+  let s = '';
+  s += dgText(20, 22, 'Casualty flow — collection to transport', 'dg-t--title');
+  s += dgText(20, 42, 'Doc 9137 Part 7 §9.5.1 and §9.2.5. Plan view. Distances schematic — not to scale.', 'dg-t--dim');
+
+  s += `<rect x="20" y="58" width="640" height="400" rx="10" class="dg-ground"/>`;
+
+  // Wind sets the upwind direction; uphill is the other axis.
+  s += dgArrow(38, 96, 176, 96, 'dg-accent', 2.8);
+  s += dgText(38, 82, 'WIND', 'dg-t--accent');
+  s += dgText(186, 100, 'upwind \u2192', 'dg-t--dim');
+  s += dgArrow(56, 430, 56, 330, 'dg-dim', 2.4);
+  s += dgText(64, 336, 'UPHILL', 'dg-t--dim');
+
+  // The accident site: downwind and downhill of everything else.
+  s += `<ellipse cx="146" cy="404" rx="66" ry="26" class="dg-hazard"/>`;
+  s += `<rect x="112" y="372" width="76" height="16" rx="8" class="dg-solid"/>`;
+  s += `<path d="M132,372 q6,-20 12,0 q6,-24 12,0 q6,-18 12,0 q6,-22 12,0" class="dg-flame"/>`;
+  s += dgText(146, 442, 'ACCIDENT SITE', 'dg-t--danger', 'middle');
+
+  // 1. Collection — at the debris.
+  s += `<rect x="112" y="300" width="122" height="46" rx="9" class="dg-cell"/>`;
+  s += badge(126, 314, 1);
+  s += dgText(146, 326, 'COLLECTION', 'dg-t--chip', 'middle');
+
+  // 2. Triage — at least 90 m upwind, and uphill.
+  s += dgAxis(214, 300, 268, 300);
+  s += dgText(241, 292, '\u2265 90 m', 'dg-t--accent', 'middle');
+  s += `<rect x="268" y="236" width="128" height="52" rx="9" class="dg-cell"/>`;
+  s += badge(282, 250, 2);
+  s += dgText(306, 264, 'TRIAGE', 'dg-t--chip', 'middle');
+
+  // 3. Care area, subdivided by priority. Colours are §9.5.1(c) and match §9.3.2 tags.
+  s += dgArrow(398, 260, 428, 258, 'dg-good', 2.4);
+  s += `<rect x="428" y="176" width="118" height="40" rx="8" class="dg-tag-red"/>`;
+  s += dgText(437, 200, 'I  IMMEDIATE', 'dg-t--chip');
+  s += `<rect x="428" y="220" width="118" height="40" rx="8" class="dg-tag-yellow"/>`;
+  s += dgText(437, 244, 'II  DELAYED', 'dg-t--chip');
+  s += `<rect x="428" y="264" width="118" height="40" rx="8" class="dg-tag-green"/>`;
+  s += dgText(437, 288, 'III  MINOR', 'dg-t--chip');
+  s += badge(414, 240, 3);
+
+  // 4. Transportation — between the care area and the egress road.
+  s += dgArrow(548, 240, 578, 240, 'dg-good', 2.4);
+  s += `<rect x="578" y="216" width="70" height="48" rx="9" class="dg-cell"/>`;
+  s += dgText(613, 244, 'TRANSPORT', 'dg-t--chip', 'middle');
+  s += badge(566, 240, 4);
+  s += `<line x1="654" y1="196" x2="654" y2="286" class="dg-dimline" stroke-width="2.4"/>`;
+  s += dgText(646, 186, 'EGRESS ROAD', 'dg-t--dim', 'end');
+
+  // Legend.
+  const ly = 470;
+  s += `<rect x="20" y="${ly}" width="640" height="140" rx="14" class="dg-panel"/>`;
+  const rows = [
+    ['1', 'Collection area \u2014 initial collection of the seriously injured from the debris. Custody transfers from RFF personnel to medical services here, though usually at the triage area. §9.5.1(a)'],
+    ['2', 'Triage area \u2014 at least 90 m upwind of the accident site to avoid exposure to fire and smoke. More than one may be established. §9.5.1(b)'],
+    ['3', 'Care area \u2014 one area subdivided into Immediate (I), Delayed (II) and Minor (III). Colour coded red, yellow, green; cones or flags may be used. §9.5.1(c)'],
+    ['4', 'Transportation area \u2014 recording, dispatching and evacuation, sited between the care area and the egress road. §9.5.1(d)'],
+    ['\u2191', 'Where movement is unavoidable: shortest distance possible, well away from firefighting operations, and upwind and uphill. §9.2.5']
+  ];
+  rows.forEach((r, i) => {
+    const y = ly + 24 + i * 24;
+    s += `<circle cx="42" cy="${y - 4}" r="10" class="dg-chip"/>`;
+    s += dgText(42, y - 3.5, r[0], 'dg-t--chip', 'middle');
+    s += dgText(62, y, r[1], 'dg-t--dim');
+  });
+
+  return dgSvg(W, H, 'Plan view of casualty flow from an aircraft accident site through four areas — collection, triage at least 90 metres upwind, a care area subdivided into three priority sub-areas, and a transportation area beside the egress road — with the wind and uphill directions marked.', s);
+}
+
+/* =========================================================================
    REGISTRY
    ========================================================================= */
 
@@ -641,7 +727,9 @@ const DIAGRAMS = {
   'level-determination':  { draw: dLevelDetermination,
     caption: '<b>Category determination.</b> The aerodrome category is determined from the overall length of the longest aeroplane normally using the aerodrome and its maximum fuselage width — ICAO Doc 9137 Part 1 §2.1.2, Annex 14 Table 9-1 note. The matrix shown is a schematic of the lookup; confirm every cell against Table 2-1 and Table 2-3 in the current edition and against your own State&rsquo;s adopted requirements before operational use.' },
   'fuelling-stand':      { draw: dFuellingStand,
-    caption: '<b>Fuelling stand geometry.</b> Positioning requirements while fuelling is in progress — ICAO Doc 9137 Part 1 §15.2. The 15 m figure is quoted from §15.2(e); the circle is drawn large enough to read on the page and is <b>not to scale</b>. Bonding and grounding under §15.2(b) are referred to §15.4, which is not reproduced in Part 1 — see lesson ART-12 m3.' }
+    caption: '<b>Fuelling stand geometry.</b> Positioning requirements while fuelling is in progress — ICAO Doc 9137 Part 1 §15.2. The 15 m figure is quoted from §15.2(e); the circle is drawn large enough to read on the page and is <b>not to scale</b>. Bonding and grounding under §15.2(b) are referred to §15.4, which is not reproduced in Part 1 — see lesson ART-12 m3.' },
+  'casualty-flow':      { draw: dCasualtyFlow,
+    caption: '<b>Casualty flow.</b> The injured pass through four areas — collection, triage, care and transportation. The triage area should be located <b>at least 90 m upwind</b> of the accident site to avoid exposure to fire and smoke, and where movement is unavoidable casualties should go the shortest distance possible, well away from firefighting operations, upwind and uphill — ICAO Doc 9137 Part 7 §9.5.1 and §9.2.5. Care sub-area colours match the casualty identification tags of §9.3.2. Distances other than the 90 m are schematic.' }
 };
 
 const DIAGRAM_KEYS = Object.keys(DIAGRAMS);

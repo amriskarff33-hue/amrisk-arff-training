@@ -8408,6 +8408,396 @@ const LESSON_OVERRIDES = {
   ],
   smeChecked: false
 },
+'art24-m1': {
+  title: 'Immediate life threats',
+  brief:
+    'In the first minutes the objective is not treatment. It is reaching the ' +
+    'people who will die without it, and stopping everything else.',
+  points: [
+    'Many lives may be lost and many injuries aggravated if immediate medical attention is not provided by trained rescue personnel; survivors should be triaged, given available emergency medical aid as required, and then promptly evacuated to appropriate medical facilities (Doc 9137 Part 7 §9.1).',
+    'Airport RFF personnel should receive training to satisfy locally acceptable emergency medical standards, because they may be the only rescue personnel on the scene during the critical period immediately following an accident and possibly for an extended period of time (Doc 9137 Part 7 §3.3.2).',
+    'Stabilization of the seriously injured should be accomplished at the accident site; the immediate transportation of the seriously injured before stabilization should be avoided (§9.4.1).',
+    'On or adjacent to the airport, RFF personnel are generally the first emergency personnel on the scene, and in cases where fire control or prevention does not require the efforts of all personnel, available persons should immediately commence casualty stabilization under the direction of the most qualified trauma-trained individual on the scene (§9.4.2).',
+    'First response rescue vehicles should carry artificial airways, compresses, bandages, oxygen and other equipment used for stabilization of smoke inhalation casualties and severe trauma (§9.4.2).',
+    'Sufficient oxygen should be available for use on RFF personnel; however, oxygen should not be used in areas where fuel spills or fuel soaked clothing is present due to the explosion hazard (§9.4.2).',
+    'Actions during the first few minutes should stabilize casualties until more qualified medical care is available; when specialized trauma teams arrive, cardiopulmonary resuscitation and more sophisticated care will be provided (§9.4.3).',
+    'Priority I casualties include major haemorrhages, severe smoke inhalation, asphyxiating thoracic and cervico-maxillo-facial injuries, cranial traumata with coma and rapidly progressive shock, compound fractures, extensive burns of more than 30 per cent, crush injuries, any type of shock, and spinal cord injuries (§9.4.7).',
+    'Recommended actions for Priority I: first aid including clearing the wind pipe, stopping haemorrhages with haemostatic pads and positioning in the recovery position; resuscitation; oxygen administration except in areas of fuel or fuel soaked clothing; and placing the injured under shelter pending transportation (§9.4.8).'
+  ],
+  body: `
+    <h3>What the standard says happens in the first minutes</h3>
+    <p>Chapter 9 of Doc 9137 Part 7 opens with the reason this course exists:</p>
+    <p><strong>In the aftermath of an aircraft accident, many lives may be lost and many injuries aggravated if immediate medical attention is not provided by trained rescue personnel. Survivors should be triaged, given available emergency medical aid as required, and then promptly evacuated to appropriate medical facilities.</strong> — §9.1</p>
+    <p>Read that carefully. It is not addressed to doctors. <em>Trained rescue personnel.</em> Part 7 §3.3.2 gives the same point as a training requirement and a reason: <strong>airport rescue and fire fighting personnel should receive training to satisfy locally acceptable, emergency medical standards. They may be the only rescue personnel on the scene during the critical period immediately following an accident and possibly for an extended period of time.</strong> That last clause is why the standard bothers — not because medical care is a nice extra, but because in the period this course covers, there is frequently nobody else there to do it. The standard places casualty care inside the RFF service's competence, not as a handover to somebody else who arrives later. That is the single most important framing fact in this course, and it is why the rest of Chapter 9 spends its detail on stabilising rather than treating.</p>
+
+    <h3>The governing rule: stabilise here, not in the ambulance</h3>
+    <p>Two sentences, and everything else in the medical chain follows from them:</p>
+    <p><strong>Stabilization of the seriously injured should be accomplished at the accident site. The immediate transportation of the seriously injured before stabilization should be avoided.</strong> — §9.4.1</p>
+    <p>This runs against a very strong instinct. Loading the worst casualties into an ambulance fast feels like progress and is measured as progress by everyone watching. The standard says it is not — because an unstable casualty moved immediately arrives at hospital no better and sometimes worse, and the time in transit is time that was available for stabilisation.</p>
+    <p>And note the word <em>immediate</em> doing work in the second sentence. It is not transportation that is discouraged. It is transportation <em>before stabilisation</em>. There is no objection here to getting a casualty to a hospital, provided the hospital is the right next step rather than the first one.</p>
+
+    <h3>You are first, and that is a task</h3>
+    <p>§9.4.2 is the clause that tells an RFF service what it is actually responsible for:</p>
+    <p><strong>In accidents occurring on or adjacent to the airport, rescue and fire fighting personnel are generally the first emergency personnel on the scene. These personnel must be aware that it is imperative that seriously injured casualties be located and stabilized as quickly as possible. In cases where fire control or prevention does not require the efforts of all rescue and fire fighting personnel, available persons should immediately commence casualty stabilization under the direction of the most qualified trauma-trained individual on the scene.</strong></p>
+    <p>Three things packed in. <em>Generally the first emergency personnel</em> — generally, because an aircraft accident near a hospital or an ambulance station on the aerodrome may go differently. <em>Located and stabilised as quickly as possible</em> — located, which is a searching task and not only a treatment one. And then the operational instruction, which is conditional and easy to misread: <em>in cases where fire control or prevention does not require the efforts of all personnel</em>.</p>
+    <p>That last clause is a conditional authority, not a standing instruction. If the fire needs everyone, the fire gets everyone. What the standard forbids is treating medical work as a justification for under-resourcing a fire that has not been controlled — ART-16 and ART-20 are the same doctrine arriving from the fire side.</p>
+    <p>And <strong>under the direction of the most qualified trauma-trained individual on the scene</strong> is a named authority that has to exist before you need it. Identify it on arrival, out loud, and hand over explicitly. If your service cannot say who the most qualified trauma-trained individual is at 03:00, the clause cannot be complied with and that is a training and rostering finding.</p>
+
+    <h3>What the vehicles must carry</h3>
+    <p>Same clause, and it is an equipment requirement for your vehicles rather than an ambulance:</p>
+    <p><strong>First response rescue vehicles should carry initial supplies of casualty-care equipment, including artificial airways, compresses, bandages, oxygen and other related equipment used for the stabilization of smoke inhalation casualties and severe trauma. Sufficient oxygen should be available for use on rescue and fire fighting personnel.</strong></p>
+    <p>Read the first sentence for what it implies. Airways, compresses and bandages are not ambulance inventories that someone has forgotten — they are on <em>first response rescue vehicles</em>, the vehicles that arrive in the first two to three minutes and will do the stabilisation before any ambulance exists. If your first-arriving vehicle cannot support the stabilisation that §9.4.1 requires, the requirement and the capability do not meet.</p>
+    <p>And the second sentence is about your own people, not the casualties. Sufficient oxygen for RFF personnel — which links to ART-07's respiratory protection content and to the fact that a crew working a smoke-filled cabin without SCBA is making a medical decision about themselves.</p>
+
+    <h3>The oxygen exception, and why it is a prohibition</h3>
+    <p>Same clause again, and this is the one people get wrong on a fuel fire:</p>
+    <p><strong>However, oxygen should not be used in areas where fuel spills or fuel soaked clothing is present due to the explosion hazard.</strong></p>
+    <p>Note the words <em>should not be used</em>, not <em>should be used with care</em>. This is a prohibition with a named trigger and two named triggers at that — a fuel spill, or fuel-soaked clothing.</p>
+    <p>The second trigger is the one that catches crews. A casualty pulled from a burning fuselage is a very good candidate for smoke inhalation treatment and is also a very real possibility for fuel-soaked clothing. So the casualty who most obviously needs oxygen is the one you must be most careful about giving it to, and the decision depends on where they are and what is on them.</p>
+    <p>Connect it to ART-12: a spill with no fire is still a spill, §15.2(c)3 requires that the fuelling vehicle does not obstruct evacuation from occupied portions, and the standard's own answer to a casualty needing oxygen near fuel is to move them upwind and uphill — which is §9.2.5's rule and the subject of the next two lessons.</p>
+
+    <h3>What "the first few minutes" are for</h3>
+    <p>§9.4.3 draws the line between what your crew does and what arrives later:</p>
+    <p><strong>Actions taken during the first few minutes of medical treatment should stabilize the casualties until more qualified medical care is available. When specialized trauma teams arrive, more sophisticated medical care (i.e. cardiopulmonary resuscitation, etc.) will be provided.</strong></p>
+    <p>Stabilise, and hold the casualty stable, until better help comes. That is the whole scope. It is a modest-sounding definition and it is the correct one — the standard is not asking a firefighter to be a paramedic, it is asking them not to leave the casualty worse than they found them while waiting for someone better.</p>
+    <p>Note that CPR is named as belonging to the arriving specialist teams, not to the first minutes. If your crews are being trained or expected to perform CPR on this casualty, that is a scope question to resolve deliberately — it belongs in ART-08's competency assessment with a stated standard and a stated refresh cycle, not absorbed informally.</p>
+
+    <h3>Priority I — who dies without you</h3>
+    <p>§9.4.7 lists the category, and the list is a survival list rather than a diagnostic one. Each item is something that kills in minutes:</p>
+    <ol>
+      <li>a) major haemorrhages;</li>
+      <li>b) severe smoke inhalation;</li>
+      <li>c) asphyxiating thoracic and cervico-maxillo-facial injuries;</li>
+      <li>d) cranial traumata with coma and rapidly progressive shock;</li>
+      <li>e) compound fractures;</li>
+      <li>f) extensive burns (more than 30 per cent);</li>
+      <li>g) crush injuries;</li>
+      <li>h) any type of shock; and</li>
+      <li>i) spinal cord injuries.</li>
+    </ol>
+    <p>Three features worth noting. <em>Any type of shock</em> is unqualified — there is no threshold in it. <em>Extensive burns, more than 30 per cent</em> is the only figure in the list, and it is a triage threshold rather than a clinical judgement: it is where burns stop being a Priority I judgement call and become a stated criterion. And <em>spinal cord injuries</em> is included for a reason that is not physiological — handling them wrongly kills them later. Moving a casualty with an unstable spine is a decision you make once and cannot undo.</p>
+
+    <h3>What to do, per §9.4.8</h3>
+    <p>Four recommended actions, and the third repeats the oxygen prohibition because that is how often it has to be said:</p>
+    <ul>
+      <li><strong>a) First aid</strong> — clearing of the wind pipe, stopping of haemorrhages by means of haemostatic pads, and positioning the casualty in the recovery position.</li>
+      <li><strong>b) Resuscitation.</strong></li>
+      <li><strong>c) Oxygen administration, except in areas of fuel or fuel soaked clothing.</strong></li>
+      <li><strong>d) Placing the injured under shelter pending transportation.</strong></li>
+    </ul>
+    <p>That last one is the most neglected. Not "keep them warm" in the abstract — <em>under shelter</em>, a defined thing, because §9.2.5 is about to tell your crew to move casualties upwind and uphill and §9.5.1 is about to place a triage area 90 m upwind, and shelter at the accident site means something quite specific once the wind is in your assessment.</p>
+    <p>It also connects to ART-23's requirement to carry <em>shelter, foil blankets and drinking water</em> in off-airport rescue equipment. Same need, different document, and both are pointing at a casualty who has come out of a survivable accident into a survivable environment and can still be lost to exposure.</p>
+
+    <blockquote>
+      <p><strong>SME action:</strong> five confirmations, all of which are about capability rather than knowledge. One: confirm that the <strong>most qualified trauma-trained individual on the scene</strong> required by §9.4.2 can be identified by name or post at any hour, and that handing over casualty care to that person is a briefed, audible action rather than an assumption. Two: confirm that your <strong>first response rescue vehicles</strong> — not just the ambulance — carry artificial airways, compresses, bandages and oxygen per §9.4.2, and that the quantities match the number of casualties a category 9 aircraft could produce. Three: brief the oxygen prohibition from §9.4.2 explicitly as a prohibition, not a caution, with both triggers named: fuel spills, and fuel soaked clothing. Assess crews on it against a scenario with a fuel spill and a smoke inhalation casualty together, because that is the combination that produces the wrong decision. Four: confirm that casualty stabilisation is a documented task on the incident card with an owner, and that the conditional in §9.4.2 — <em>in cases where fire control or prevention does not require the efforts of all rescue and fire fighting personnel</em> — is written as a condition rather than assumed either way. Five: resolve the CPR scope question. §9.4.3 places cardiopulmonary resuscitation with arriving specialised teams, not with the first few minutes; if your crews are expected to perform it, write it into ART-08 competency with a stated standard and refresh cycle, and if they are not, say so plainly rather than leaving it implied in either direction.</p>
+    </blockquote>
+  `,
+  refs: [
+    'ICAO Doc 9137 Part 7 — §3.3.2 unless seriously injured casualties are stabilized rapidly they may become fatalities; airport rescue and fire fighting personnel should receive training to satisfy locally acceptable, emergency medical standards; they may be the only rescue personnel on the scene during the critical period immediately following an accident and possibly for an extended period of time; on-airport availability of other responding personnel with qualified medical expertise may reduce this need',
+    'ICAO Doc 9137 Part 7 Airport Emergency Planning — §9.1 many lives may be lost and many injuries aggravated if immediate medical attention is not provided by trained rescue personnel; survivors should be triaged, given available emergency medical aid as required, and then promptly evacuated to appropriate medical facilities',
+    'ICAO Doc 9137 Part 7 — §9.4.1 stabilization of the seriously injured should be accomplished at the accident site; the immediate transportation of the seriously injured before stabilization should be avoided',
+    'ICAO Doc 9137 Part 7 — §9.4.2 RFF personnel generally the first emergency personnel on scene; seriously injured casualties located and stabilized as quickly as possible; where fire control or prevention does not require the efforts of all personnel, available persons should immediately commence casualty stabilization under the direction of the most qualified trauma-trained individual on the scene; first response rescue vehicles to carry artificial airways, compresses, bandages, oxygen; sufficient oxygen for RFF personnel; oxygen not to be used in areas where fuel spills or fuel soaked clothing is present due to the explosion hazard',
+    'ICAO Doc 9137 Part 7 — §9.4.3 actions during the first few minutes of medical treatment should stabilize casualties until more qualified medical care is available; specialized trauma teams provide more sophisticated medical care including cardiopulmonary resuscitation',
+    'ICAO Doc 9137 Part 7 — §9.4.7 Care of Priority I casualties: major haemorrhages, severe smoke inhalation, asphyxiating thoracic and cervico-maxillo-facial injuries, cranial traumata with coma and rapidly progressive shock, compound fractures, extensive burns (more than 30 per cent), crush injuries, any type of shock, spinal cord injuries; §9.4.8 recommended actions: first aid including clearing the wind pipe, haemostatic pads and recovery position, resuscitation, oxygen except in areas of fuel or fuel soaked clothing, placing the injured under shelter pending transportation',
+    'Course ART-07 — PPE, SCBA and crew fitness; ART-10 — rescue and extrication; ART-12 — fuel, refuelling and spill response; ART-16 — tactics and agent application; ART-20 — deviation discipline; ART-23 m3 — off-airport equipment including shelter and foil blankets; ART-24 m2 — triage and treatment priorities'
+  ],
+  smeChecked: false
+},
+
+  'art24-m2': {
+  title: 'Triage and treatment priorities',
+  brief:
+    'Four categories, one tag colour each, and a named person who owns the ' +
+    'sorting. Everything else follows from those three things.',
+  points: [
+    '"Triage" is the sorting and classification of casualties to determine the order of priority for treatment and transportation (§9.2.1).',
+    'Casualties should be classified into four categories: Priority I Immediate care, Priority II Delayed care, Priority III Minor care, Priority IV Deceased (§9.2.2).',
+    'The first qualified, medically trained person to arrive at the site must immediately begin initial triage, and continues until relieved by a more qualified person or the designated airport triage officer (§9.2.3).',
+    'Victims should be moved from the triage area to the appropriate care holding areas before definitive treatment is rendered, and stabilised at the care holding areas before transport (§9.2.3).',
+    'Every effort should be made to ensure that Priority I casualties are treated first and receive ambulance transportation priority when stabilised; this is the responsibility of the triage officer (§9.2.4).',
+    'Priority II includes non-asphyxiating thoracic trauma, closed fractures of the extremities, limited burns of less than 30 per cent, cranial trauma without coma or shock, and injuries to soft parts (§9.4.9).',
+    'Priority II care can be delayed until Priority I casualties have stabilised, and transportation follows minimum on-site care (§9.4.10).',
+    'Priority III includes minor injuries only, and such casualties should be transported from the accident or incident site to the designated holding area where they should be re-examined (§9.4.11).',
+    'Casualty identification tags help expedite the treatment of mass casualties and permit more rapid evacuation; the technique is especially suited to multilingual situations (§9.2.6, §9.3.1).',
+    'Tag colours and symbols: Priority I RED, Roman numeral I, rabbit symbol; Priority II YELLOW, Roman numeral II, turtle symbol; Priority III GREEN, Roman numeral III, ambulance with X; Priority IV BLACK (§9.3.2).'
+  ],
+  body: `
+    <h3>The definition, which is narrower than people think</h3>
+    <p>§9.2.1 is one sentence and it defines triage as an ordering task, not a treatment task:</p>
+    <p><strong>"Triage" is the sorting and classification of casualties to determine the order of priority for treatment and transportation.</strong></p>
+    <p>Two words in that do the work. <em>Sorting</em> — triage produces an order, not a diagnosis. <em>Transportation</em> as well as treatment — the categories prioritise both, which is why the categories in §9.2.2 are about care <em>and</em> what gets an ambulance first.</p>
+    <p>So triage is not triage in the clinical sense of deciding what a specific injury is. It is putting people in a queue, quickly, when there are more casualties than hands. ART-24 m1 covered what an individual casualty needs. This lesson is about the queue.</p>
+
+    <h3>Four categories, and IV is a category</h3>
+    <p>{{diagram:casualty-flow}}</p>
+    <p>§9.2.2 sets the whole system:</p>
+    <p><strong>Casualties should be classified into four categories: Priority I: Immediate care — Priority II: Delayed care — Priority III: Minor care — Priority IV: Deceased.</strong></p>
+    <p>Three categories get care and one does not. That is worth sitting with, because it is the point of the system. Without a deceased category, the people who cannot be saved occupy the same queue as the people who can, and the queue stops working — the most severely injured get sorted alongside the hopeless, and everybody moves more slowly.</p>
+    <p>Priority IV also serves a second purpose that nobody mentions and everybody uses: it tells a casualty, and a bystander, that the person they were looking at has been assessed. An untagged body and an unassessed body look identical, and crews need to be able to tell the difference without stopping.</p>
+
+    <h3>Who starts triage, and who takes it off them</h3>
+    <p>§9.2.3 handles the handover that most services never write down:</p>
+    <p><strong>The first qualified, medically trained person to arrive at the site must immediately begin initial triage. This person(s) will continue performing triage until relieved by a more qualified person or the designated airport triage officer.</strong></p>
+    <p>Three elements. <em>First qualified, medically trained person</em> — not the first person, and not necessarily the most senior. Qualification, not rank. <em>Must immediately begin</em> — triage starts as soon as there is someone qualified, not when the fire is out. <em>Until relieved</em> — and the relief is by one of two named things, a more qualified person or <strong>the designated airport triage officer</strong>.</p>
+    <p>That is a post. Not a role to be allocated on the day, but a designated triage officer. If your aerodrome has not designated one by name and post, §9.2.3 cannot be complied with on its own terms, and the handover has nowhere to go but "whoever turns up next".</p>
+    <p>Then the same clause sets the physical flow, and it is easy to read past: <strong>Victims should be moved from the triage area to the appropriate care holding areas before definitive treatment is rendered. Casualties should be stabilized at the care holding areas and then transported to an appropriate facility.</strong></p>
+    <p>Triage area, then care holding area, then transport. Three distinct places. The failure mode is triage happening at the same location as care, at the same location as transport — everybody in one place doing three jobs, and the casualties who cannot walk sitting exactly where the working ones are being carried.</p>
+
+    <h3>The triage officer owns the priority</h3>
+    <p>§9.2.4 is short and load-bearing:</p>
+    <p><strong>Every effort should be made to ensure that Priority I casualties are treated first and receive ambulance transportation priority when stabilised. This is the responsibility of the triage officer.</strong></p>
+    <p>Two different prioritisations in one sentence, and they are not the same. <em>Treated first</em> — clinical priority. <em>Ambulance transportation priority <strong>when stabilised</strong></em> — transport priority, and it is explicitly conditioned on stabilisation rather than on severity. A Priority I casualty who has been stabilised goes first for an ambulance; a Priority I casualty still bleeding does not, because moving them is not the intervention.</p>
+    <p>Which returns to §9.4.1 from the previous lesson and closes the loop: stabilise at the site, and the transport priority follows the stabilisation rather than competing with it. The two clauses are designed to work together and they are frequently applied as if they were in tension.</p>
+    <p>And it is a named responsibility, held by the triage officer, not by whoever is nearest the casualty. Which is why the triage officer must be able to see the whole scene — m4 returns to command.</p>
+
+    <h3>The Priority I and II criteria, and the 30 per cent line</h3>
+    <p>§9.4.7 gave Priority I in m1. §9.4.9 gives Priority II:</p>
+    <p><strong>a) non-asphyxiating thoracic trauma; b) closed fractures of the extremities; c) limited burns (less than 30 per cent); d) cranial trauma without coma or shock; and e) injuries to soft parts.</strong></p>
+    <p>Put the two lists side by side and the sorting principle becomes visible. Priority I contains <em>asphyxiating</em> thoracic injuries; Priority II contains <em>non-asphyxiating</em> ones. Priority I contains <em>cranial traumata with coma and rapidly progressive shock</em>; Priority II contains <em>cranial trauma without coma or shock</em>. The categories are drawn by whether the airway, the breathing or the circulation is currently failing — and the adjectives in each list are doing that work, not the body region.</p>
+    <p>One figure appears in both, as the boundary between them: burns. Priority I is <em>more than 30 per cent</em>, Priority II is <em>less than 30 per cent</em>. That is a triage threshold, stated once, and it is the only number in the chapter. Note what it means operationally — if your service cannot judge burn percentage in the field, this is a training requirement in ART-08 and ART-11, because it is the one triage decision the standard has pre-decided for you.</p>
+
+    <h3>Priority II can wait, and must</h3>
+    <p>§9.4.10:</p>
+    <p><strong>Care of casualties sustaining injuries which do not need immediate emergency medical treatment to sustain life can be delayed until Priority I casualties have been stabilized. Transportation of Priority II casualties will be performed following minimum on-site care.</strong></p>
+    <p>Two operative words. <em>Until Priority I casualties have been stabilised</em> — not until they are treated, not until they are moved, and not until all Priority I have left. Stabilised. And <em>minimum on-site care</em> for Priority II — minimum, deliberately. A closed fracture does not need a good splint before the ambulance. It needs to not be worse when it arrives.</p>
+    <p>The clinical risk in this clause is obvious and it is the reason it exists: a Priority II casualty who is treated attentively early is a Priority I casualty who was not seen in time. The doctrine protects the worst by making the second-worst wait, and crews need to be able to defend that to a bystander or a distressed passenger.</p>
+
+    <h3>Priority III, and why the walking wounded are moved</h3>
+    <p>§9.4.11 is the clause most often treated as housekeeping, and it is not:</p>
+    <p><strong>This type of casualty includes minor injuries only. Certain accidents/incidents will occur where passengers have either minor or no injuries, or appear not to be injured. Because these casualties can interfere with other priorities and operations, it is important that they be transported from the accident/incident site to the designated holding area where they should be re-examined.</strong></p>
+    <p><em>Can interfere with other priorities and operations.</em> That is the whole reason. At a survivable accident the number of walking wounded can exceed the number of stretcher patients, and they are concentrated exactly where you are working — near the aircraft, on the paths, in the way. They are also the group most likely to walk off toward the terminal, toward their family, or toward a road, and be gone from your count.</p>
+    <p>So moving them to a designated holding area is not tidiness. It frees the working space, and it keeps them inside the count so that someone re-examines them — because <em>appear not to be injured</em> is a statement about appearance, and the re-examination in §9.4.11 exists precisely to catch the delayed presentation.</p>
+    <p>§9.4.12 then covers what happens there: <em>it is important that provisions be made for the care, comfort, and identification of Priority III casualties</em>, provided through airport operations, the aircraft operator where involved, or an international relief organisation, with <em>specific treatment areas</em> predesignated — <em>such as an empty hangar</em>.</p>
+    <p>An empty hangar. That is a specific, named destination, and it is predesignated, which means it is a place you can point at rather than improvise. Care, comfort and identification are all named duties, not aspirations, and the aircraft operator is named as a party who may hold them. ART-19 is where you confirm that party is in your plan.</p>
+
+    <h3>The tag system, and why it is a language device</h3>
+    <p>§9.2.6 explains what tags are actually for:</p>
+    <p><strong>Triage of casualties should include the use of casualty identification tags to aid in the sorting of the injured and their transportation to a designated hospital. This technique is especially suited to multilingual situations.</strong></p>
+    <p>Read the last sentence as the primary justification rather than an incidental benefit. An international aerodrome on an international flight has survivors, crew and responders who do not share a language. A red tag needs no translation, needs no interpreter, and cannot be misread by a tired responder at four in the morning. That is a design reason and it is why the system is robust rather than merely tidy.</p>
+    <p>§9.3.1 gives the design principle: <strong>Casualty identification tags should be standardized through colour coding and symbols to make the tag as simple as possible. Tags help to expedite the treatment of mass casualties in a triage situation and thus permit more rapid evacuation of the injured to medical facilities.</strong></p>
+    <p>And §9.3.2 fixes the design and the codes:</p>
+    <ul>
+      <li>Standardized tags should be designed to require only minimal information, be usable under adverse weather conditions, and be water resistant.</li>
+      <li><strong>Priority I or immediate care: RED tag; Roman numeral I; rabbit symbol.</strong></li>
+      <li><strong>Priority II or delayed care: YELLOW tag; Roman numeral II; turtle symbol.</strong></li>
+      <li><strong>Priority III or minor care: GREEN tag; Roman numeral III; ambulance with X symbol.</strong></li>
+      <li><strong>Priority IV or deceased: BLACK tag.</strong></li>
+    </ul>
+    <p>Three channels for the same information — colour, numeral, and a symbol. That redundancy is the point, and it is also why a responder who is colour-blind can still triage correctly. Note that Priority IV has a colour but is given neither a numeral nor a symbol in this list.</p>
+
+    <h3>When the tags run out</h3>
+    <p>§9.3.3 is the clause that gets read after the accident rather than before it:</p>
+    <p><strong>Where tags are unavailable, casualties may be classified by using Roman numerals on adhesive tape or by placing marks directly on the forehead or on other exposed skin areas to indicate priority and/or treatment needs. Where marking pens are unavailable, lipstick can be used. Felt tipped pens are not advisable as they may smear in rain or snow and freeze in low temperatures.</strong></p>
+    <p>A descending ladder of fallbacks, and it is a good one — tape, then skin, then lipstick. And then the reason the felt-tipped pen is singled out and excluded, which is the most useful sentence in the clause: <em>they may smear in rain or snow and freeze in low temperatures</em>.</p>
+    <p>That is a warning about two specific climates and it connects ART-24 to ART-21. In an accident in the wet or in the cold, the obvious marking method is the one that fails. Crews should be able to produce tape or a lipstick without looking it up.</p>
+
+    <blockquote>
+      <p><strong>SME action:</strong> six confirmations. One: name the <strong>designated airport triage officer</strong> required by §9.2.3 by post and by name, and confirm §9.2.4&rsquo;s responsibility — that Priority I casualties are treated first and receive ambulance transportation priority <em>when stabilised</em> — is written against that post rather than distributed generally. Two: check that triage, care holding and transport are three <strong>separate located areas</strong> per §9.2.3 and §9.5.1, and that your incident card has all three on it, because the most common failure is triage happening where care and transport happen. Three: brief the two adjectives that actually sort casualties — <em>asphyxiating</em> versus <em>non-asphyxiating</em> thoracic trauma, and cranial trauma <em>with</em> coma and rapidly progressive shock versus <em>without</em> — so crews understand the categories are drawn by airway, breathing and circulation, not by body region. And confirm they can apply the burn threshold, because 30 per cent is the one triage boundary the standard has pre-decided (§9.4.7 against §9.4.9). Four: confirm your tags match §9.3.2 in all three channels — red/I/rabbit, yellow/II/turtle, green/III/ambulance-with-X, black — and that they are water resistant and usable in adverse weather per §9.3.2. Then confirm the fallback chain of §9.3.3 is physically available on the vehicle: adhesive tape or a means of marking skin, plus a lipstick, and confirm crews know felt-tipped pens are excluded because they smear in rain or snow and freeze in low temperatures. Five: confirm the Priority III holding area is <strong>predesignated and named</strong> per §9.4.12 — the standard suggests an empty hangar — and that care, comfort and identification there are assigned to a specific party, with the aircraft operator named if they will hold it. Six: verify the Priority III flow from §9.4.11 works in practice: moved off the working area to a designated holding area and <em>re-examined</em>, with a named owner for the re-examination and for the count of who has left the site.</p>
+    </blockquote>
+  `,
+  refs: [
+    'ICAO Doc 9137 Part 7 Airport Emergency Planning — §9.2.1 triage defined as the sorting and classification of casualties to determine the order of priority for treatment and transportation; §9.2.2 four categories Priority I Immediate care, II Delayed care, III Minor care, IV Deceased',
+    'ICAO Doc 9137 Part 7 — §9.2.3 the first qualified, medically trained person to arrive at the site must immediately begin initial triage and continues until relieved by a more qualified person or the designated airport triage officer; victims moved from the triage area to care holding areas before definitive treatment; stabilised at the care holding areas then transported',
+    'ICAO Doc 9137 Part 7 — §9.2.4 every effort should be made to ensure Priority I casualties are treated first and receive ambulance transportation priority when stabilised; this is the responsibility of the triage officer',
+    'ICAO Doc 9137 Part 7 — §9.2.5 triage most efficiently accomplished in place; where conditions demand immediate movement, casualties should be moved the shortest distance possible, well away from fire fighting operations, and upwind and uphill from the scene',
+    'ICAO Doc 9137 Part 7 — §9.4.9 Care of Priority II casualties: non-asphyxiating thoracic trauma, closed fractures of the extremities, limited burns (less than 30 per cent), cranial trauma without coma or shock, injuries to soft parts; §9.4.10 care may be delayed until Priority I casualties have been stabilized, transportation following minimum on-site care',
+    'ICAO Doc 9137 Part 7 — §9.4.11 Care of Priority III casualties, minor injuries only; casualties that appear not to be injured can interfere with other priorities and operations and should be transported to the designated holding area where they should be re-examined; §9.4.12 provisions for care, comfort and identification of Priority III casualties through airport operations, the aircraft operator or an international relief organization, with specific treatment areas predesignated such as an empty hangar',
+    'ICAO Doc 9137 Part 7 — §9.2.6 casualty identification tags aid sorting and transportation, especially suited to multilingual situations; §9.3.1 standardized through colour coding and symbols to make the tag as simple as possible, expediting treatment of mass casualties and permitting more rapid evacuation; §9.3.2 tag design requiring only minimal information, usable under adverse weather and water resistant; RED/I/rabbit, YELLOW/II/turtle, GREEN/III/ambulance with X, BLACK',
+    'ICAO Doc 9137 Part 7 — §9.3.3 where tags are unavailable, casualties may be classified using Roman numerals on adhesive tape or marks on the forehead or other exposed skin; lipstick can be used where marking pens are unavailable; felt tipped pens are not advisable as they may smear in rain or snow and freeze in low temperatures',
+    'Course ART-24 m1 — immediate life threats; m3 — casualty care in a wreckage environment; m4 — handover and documentation; ART-19 — aerodrome emergency planning; ART-21 m4 — cold, ice and seasonal readiness'
+  ],
+  smeChecked: false
+},
+'art24-m3': {
+  title: 'Casualty care in a wreckage environment',
+  brief:
+    'The casualty is not the problem. The problem is the structure around ' +
+    'them and the fact that the structure is on fire.',
+  points: [
+    'The injured should pass through four areas which should be carefully located and easily identified — collection area, triage area, care area and transportation area (§9.5.1).',
+    'The triage area should be located at least 90 m upwind of the accident site to avoid possible exposure to fire and smoke; if necessary more than one triage area may be established (§9.5.1(b)).',
+    'The care area should initially be a single area, subsequently subdivided into three subareas for Priority I Immediate, Priority II Delayed and Priority III Minor, and may be colour coded red, yellow and green (§9.5.1(c)).',
+    'A transportation area for the recording, dispatching and evacuation of survivors should be located between the care area and the egress road; if there is more than one, communications between them are essential (§9.5.1(d)).',
+    'Triage is most efficiently accomplished in place; where the conditions demand immediate movement, casualties should be moved the shortest distance possible, well away from fire fighting operations, and upwind and uphill (§9.2.5).',
+    'Custody of casualties is normally transferred from RFF personnel to medical services at the collection area, though in most cases this transfer occurs at the triage area (§9.5.1(a)).',
+    'Only fire fighting and rescue personnel wearing approved protective fire fighting clothing and equipment should be allowed in close proximity to an aircraft accident site, and such clothing should be worn within a distance of approximately 100 m from any point on the aircraft or any fuel spillage (§3.3.3, Doc 9137 Part 7).',
+    'Oxygen should not be used in areas where fuel spills or fuel soaked clothing is present due to the explosion hazard (§9.4.2).',
+    'Boundary: Doc 9137 Part 7 does not prescribe a casualty extraction method or a structural-collapse rescue procedure. Those subjects are not addressed in the library.'
+  ],
+  body: `
+    <h3>The environment is the constraint</h3>
+    <p>Every other emergency medical system assumes a patient on a flat surface with room to work. An aircraft accident gives you a casualty inside a fuel-soaked, possibly burning, possibly unstable structure, on ground that may slope, on an apron, in weather, at night.</p>
+    <p>Doc 9137 Part 7 does not pretend otherwise. It gives you a flow, a geometry and a set of prohibitions, and it leaves the extraction technique to ART-10 and the national rescue standard. That boundary is worth stating at the start rather than discovering it later: <strong>this library does not prescribe a casualty extraction method or a structural-collapse rescue procedure.</strong> What it does prescribe is where the casualty goes once they are out, and that is genuinely useful because the flow is what a service most often improvises badly.</p>
+
+    <h3>Four areas, and the sequence is the content</h3>
+    <p>{{diagram:casualty-flow}}</p>
+    <p>§9.5.1: <strong>The injured should pass through four areas which should be carefully located and easily identified.</strong></p>
+    <p>Four, in order, and each has a specific job.</p>
+
+    <p><strong>(a) Collection area — location where initial collection of the seriously injured from the debris is accomplished.</strong> And then the clause that governs responsibility, which is the one to read twice: <em>need for the establishment of this area will be dependent upon the type of accident and the circumstances surrounding the accident site. <strong>Custody of casualties is normally transferred from rescue and fire fighting personnel to medical services at this point. In most cases, however, this transfer will occur at the triage area.</strong></em></p>
+    <p>So the collection area is optional, dependent on the accident, and <em>in most cases</em> the custody transfer happens at triage instead. That is a practical statement: on a small accident you may not establish a collection area at all and simply hand over at triage, which is why the handover protocol has to name the triage area rather than being generic.</p>
+    <p><strong>(b) Triage area — at least 90 m upwind of the accident site.</strong> The figure is stated, and it exists for a stated reason: <em>to avoid possible exposure to fire and smoke</em>. Ninety metres is not arbitrary, it is the distance at which you are considered to be out of the smoke and the radiant heat of an aircraft fire. And <em>if necessary, more than one triage area may be established</em> — which is the case where the accident geometry does not let one area serve both the aircraft and the off-airport debris field, or where the wind makes one side unusable.</p>
+    <p>This is the single most quotable geometric figure in the whole medical chapter and it is on the diagram. A triage area inside 90 m of a burning aircraft is not a triage area; it is a second set of casualties.</p>
+    <p><strong>(c) Care area — one area, then three.</strong> <em>Initially, there will be a single care area. Subsequently, this area should be subdivided into three subareas according to the three categories of injured, i.e. Immediate care (Priority I), Delayed care (Priority II) and Minor care (Priority III). Care areas can be colour coded for identification purposes (Red — Immediate, Yellow — Delayed, and Green — Minor). The use of coloured traffic cones, flags, etc., may be used.</em></p>
+    <p>Two operational points. <em>Initially a single area, subsequently subdivided</em> — because the first casualties arrive before you know how many there are, and you do not want three empty subareas. And the colour coding is the same three colours as the tags from §9.3.2, so the colour means the same thing on a card and a cone. The standard says cones or flags may be used, which is the standard&rsquo;s way of saying bring something you can see over a hundred metres.</p>
+    <p><strong>(d) Transportation area — between the care area and the egress road.</strong> <em>A transportation area for the recording, dispatching and evacuation of survivors should be located between the care area and the egress road. Only one transportation area is normally required. However, if there is more than one transportation area, it is essential to have communications between them.</em></p>
+    <p>Its position is specified relative to two things — <em>between</em> the care area and <em>the egress road</em> — which is a placement rule that solves a real problem: a transportation area beyond the egress road means ambulances crossing the departing flow, and one before the care area means documentation happening where treatment is happening.</p>
+    <p>And the conditional: one is normally required, but if there is more than one, <strong>it is essential to have communications between them.</strong> Two areas with no comms is worse than one, because the count splits and nobody can say who has left.</p>
+
+    <h3>Where casualties go when they have to move</h3>
+    <p>§9.2.5 is the rule that most directly governs this environment:</p>
+    <p><strong>Triage is most efficiently accomplished in place. However, the conditions at an accident scene may demand the immediate movement of casualties before triage can be safely accomplished. In that case, the casualties should be moved the shortest distance possible, well away from fire fighting operations, and upwind and uphill from the scene.</strong></p>
+    <p>First, the preference: <em>in place</em>. Triage where the casualty is, unless you cannot safely triage there.</p>
+    <p>Then three rules for when you must move them, and each has a reason:</p>
+    <ul>
+      <li><strong>Shortest distance possible.</strong> Not to a nice location — to the nearest safe one. The casualty is being moved out of a hazard, not relocated to a facility.</li>
+      <li><strong>Well away from fire fighting operations.</strong> Your own crew. A casualty parked in the path of a turret or in the middle of a hose route is a casualty you created a second problem for.</li>
+      <li><strong>Upwind and uphill from the scene.</strong> Both. Smoke goes with the wind; heat, fuel and anything spilled go downhill and downhill is where the low ground collects it. §9.5.1(b) states the same principle as a figure — 90 m upwind — and this clause states it as a direction.</li>
+    </ul>
+    <p>Uphill and upwind is also the answer to a problem in the previous lesson. A smoke inhalation casualty who is inside 90 m needs oxygen and needs to be upwind of the fuel. Those two requirements only resolve if the casualty moves, which makes §9.2.5 the placement rule that §9.4.2&rsquo;s oxygen prohibition forces you into.</p>
+
+    <h3>Who is allowed in</h3>
+    <p>Part 7 §3.3.3 gives a distance, and it is the number that makes this a rule rather than a principle:</p>
+    <p><strong>Only fire fighting and rescue personnel wearing approved protective fire fighting clothing and equipment should be allowed in close proximity to an aircraft accident site. Such clothing should be worn within a distance of approximately 100 m from any point on the aircraft or any fuel spillage.</strong></p>
+    <p>Two clauses. The first is who may come close. The second is the boundary itself: <strong>approximately 100 m from any point on the aircraft or any fuel spillage</strong> — and <em>or any fuel spillage</em>, not just the aircraft. So the exclusion zone is measured from the fuel, which after an aircraft accident is a different shape from the aircraft.</p>
+    <p>That is a boundary you can mark, brief and check, and it is the answer to a question this course cannot otherwise answer: how close is close. Compare it with the two figures from the previous lesson — the triage area at <strong>at least 90 m upwind</strong> of the accident site (§9.5.1(b)) and casualties moved <em>upwind and uphill</em> (§9.2.5). Ninety metres upwind for triage, a hundred metres from the aircraft or the fuel spill for who may approach, and both on the same piece of ground in the same incident. If your triage area falls inside the 100 m exclusion zone, the two clauses conflict and the plan is wrong on its face.</p>
+    <p>§3.3.2 explains why the boundary exists and it belongs with §9.1 from m1: <em>airport rescue and fire fighting personnel should receive training to satisfy locally acceptable, emergency medical standards</em>, because <em>they may be the only rescue personnel on the scene during the critical period immediately following an accident and possibly for an extended period of time</em>.</p>
+    <p>And §3.3.4 sets the identification point for the fire officer in command — <strong>a suitable red hard hat and highly visible red apparel such as a vest or coat, with "CHIEF FIRE OFFICER" in reflective lettering displayed front and back</strong> — which pairs with §9.4.6&rsquo;s white hard hat for the medical co-ordinator. Red and white, front and back, reflective. In a smoke scene with fifteen people in breathing apparatus, <strong>who is who is a safety control, not a courtesy</strong>, and the standard specifies both uniforms precisely so that nobody has to guess.</p>
+
+    <h3>The fuel boundary, which is a hard constraint on all of this</h3>
+    <p>Bringing m1&rsquo;s oxygen prohibition into the wreckage context, because this is where it bites:</p>
+    <p><strong>However, oxygen should not be used in areas where fuel spills or fuel soaked clothing is present due to the explosion hazard.</strong> — §9.4.2</p>
+    <p>An aircraft accident is, definitionally, a fuel spill environment. The casualties most likely to need oxygen are the ones pulled from inside the fuselage. So the medical task and the prohibition coexist in the same three square metres, and the resolution is placement — §9.2.5 upwind and uphill, §9.5.1(b) 90 m — rather than a clinical decision made in a contaminated space.</p>
+    <p>Connect the clauses and you get a rule that is not written anywhere but is the whole content of this lesson: <strong>in a fuel-soaked environment, medical treatment happens outside the fuel.</strong> The casualty comes to you, at a distance, or you go to them with a treatment that does not involve an ignition source. Everything else is logistics.</p>
+    <p>ART-12 is the counterpart. §12.1.16 requires the no-smoking rule to be <em>rigidly enforced</em> at the accident scene and in the immediate vicinity, and §12.1.9 requires ignition sources to be eliminated while the spill is neutralised. Both are running on the same ground as the triage area, and a triage area inside 90 m upwind of a fuel spill is in the immediate vicinity.</p>
+
+    <h3>Working the flow</h3>
+    <ol>
+      <li><strong>Establish the wind and the slope first.</strong> Every placement decision follows from them, and they are the first two things the incident commander needs.</li>
+      <li><strong>Collection from the debris</strong> by personnel in protective clothing, under the direction of the most qualified trauma-trained individual (§9.4.2).</li>
+      <li><strong>Move casualties to the triage area, at least 90 m upwind</strong>, and uphill, and well clear of your own firefighting operations. §9.5.1(b), §9.2.5.</li>
+      <li><strong>Triage in place where you safely can</strong>, and hand over to the designated triage officer when they arrive. §9.2.3.</li>
+      <li><strong>Tag on arrival</strong> — colour, numeral and symbol. §9.2.6, §9.3.2.</li>
+      <li><strong>Single care area first, then three subareas</strong> colour-coded red, yellow, green. §9.5.1(c).</li>
+      <li><strong>No oxygen inside the fuel zone</strong>, regardless of the casualty in front of you. §9.4.2.</li>
+      <li><strong>Transportation area between care and the egress road</strong>, with comms if there is more than one. §9.5.1(d).</li>
+      <li><strong>Priority III to the designated holding area, re-examined</strong>, and kept inside the count. §9.4.11, §9.4.12.</li>
+    </ol>
+
+    <blockquote>
+      <p><strong>SME action:</strong> four checks, all of which are spatial and none of which can be done from a plan. One: physically measure and mark your <strong>triage area at not less than 90 m upwind</strong> of the most likely accident locations on your aerodrome — both on the runway and in the off-airport response area — and confirm uphill and clear of your own firefighting operations, per §9.5.1(b) and §9.2.5. If your existing triage point is inside 90 m, that is the finding this course exists to produce. Confirm also that the mark holds in the worst-case season, because smoke direction changes with the prevailing wind and the point that worked in winter may not work in summer. Two: confirm your four areas are <strong>separately located and separately identified</strong>, with the transportation area sited <em>between</em> the care area and the egress road per §9.5.1(d), and that cones or flags are carried for the three care subareas colour-coded red, yellow and green to match §9.3.2 tags. Three: confirm §3.3.3&rsquo;s operational zone boundary is briefed — that only personnel in appropriate protective clothing enter, and that identifiable medical identification (§9.4.6) is carried, because in a smoke scene with multiple agencies who-is-who is a safety control. Four: confirm that the oxygen prohibition from §9.4.2 has a written answer for the hardest version of the problem — a smoke inhalation casualty inside the fuel zone. The answer is placement, not improvisation: treat outside the fuel, upwind and uphill, per §9.2.5. And record the boundary honestly in your own plan: this library gives you the casualty flow and the geometry, but <strong>not</strong> an extraction method or a structural-collapse procedure — those need your national rescue standard and the crew training that supports it.</p>
+    </blockquote>
+  `,
+  refs: [
+    'ICAO Doc 9137 Part 7 Airport Emergency Planning — §9.5.1 the injured should pass through four areas which should be carefully located and easily identified: collection area for initial collection of the seriously injured from the debris with custody normally transferred from RFF personnel to medical services at that point though usually at the triage area; triage area located at least 90 m upwind of the accident site to avoid possible exposure to fire and smoke, more than one may be established; care area initially single then subdivided into Priority I, II and III subareas and colour coded red, yellow and green with cones or flags; transportation area for recording, dispatching and evacuation located between the care area and the egress road, communications essential if more than one',
+    'ICAO Doc 9137 Part 7 — §9.2.5 triage most efficiently accomplished in place; where conditions demand immediate movement, casualties should be moved the shortest distance possible, well away from fire fighting operations, and upwind and uphill from the scene',
+    'ICAO Doc 9137 Part 7 — §9.4.2 oxygen should not be used in areas where fuel spills or fuel soaked clothing is present due to the explosion hazard; casualty stabilization under the direction of the most qualified trauma-trained individual on the scene',
+    'ICAO Doc 9137 Part 7 — §3.3.2 unless seriously injured casualties are stabilized rapidly they may become fatalities; airport RFF personnel should receive training to satisfy locally acceptable emergency medical standards; they may be the only rescue personnel on the scene during the critical period immediately following an accident and possibly for an extended period; on-airport availability of other responding personnel with qualified medical expertise may reduce this need; §3.3.3 only fire fighting and rescue personnel wearing approved protective fire fighting clothing and equipment should be allowed in close proximity to an aircraft accident site, such clothing should be worn within a distance of approximately 100 m from any point on the aircraft or any fuel spillage; §3.3.4 fire officer in command identified by a suitable red hard hat and highly visible red apparel with CHIEF FIRE OFFICER in reflective lettering front and back',
+    'ICAO Doc 9137 Part 7 — §9.4.6 medical co-ordinator identifiable by a white hard hat and highly visible white coat or vest with MEDICAL CO-ORDINATOR displayed front and back in reflective red lettering',
+    'ICAO Doc 9137 Part 7 — §9.4.11 Priority III casualties transported to the designated holding area where they should be re-examined; §9.4.12 provisions for care, comfort and identification with specific treatment areas predesignated',
+    'ICAO Doc 9137 Part 1 — §12.1.16 the "no smoking" rule must be rigidly enforced at the scene of the accident and in the immediate vicinity; §12.1.9 eliminate ignition sources while the spill is neutralized or covered with foam',
+    'NOT IN THIS LIBRARY — casualty extraction method and structural-collapse rescue procedure are not prescribed by Doc 9137 Part 7 or held here. Obtain your national rescue standard.',
+    'Course ART-24 m1 — immediate life threats; m2 — triage and treatment priorities; ART-10 — rescue and extrication; ART-12 — fuel and spill response; ART-23 m2 — access and water supply'
+  ],
+  smeChecked: false
+},
+
+  'art24-m4': {
+  title: 'Handover, documentation and psychological first aid',
+  brief:
+    'Command transfers once, the record is made once, and the people who ' +
+    'were there carry it for years afterwards.',
+  points: [
+    'The triage procedure and subsequent medical care should be placed under the command of one authority, the designated medical co-ordinator, upon that officer\u2019s arrival; prior to this, command of triage should be assumed by the individual designated by the commanding rescue and fire fighting chief and continue until relieved by the predesignated medical co-ordinator (§9.4.4).',
+    'The medical co-ordinator has responsibility for all medical aspects of the incident and should report directly to the on-scene commander; the medical co-ordinator\u2019s primary function will be administrative, not as a participant of the medical team treating the injured (§9.4.5).',
+    'The medical co-ordinator should be identifiable by a white hard hat and highly visible white coat or vest with "MEDICAL CO-ORDINATOR" displayed front and back in reflective red lettering (§9.4.6).',
+    'A medical co-ordinator should be assigned to assume control of the emergency medical operations at the accident site; where airport medical services exist the co-ordinator may be designated from the airport medical staff, and an interim co-ordinator may be appointed from the airport RFF personnel to be relieved on arrival of the designated co-ordinator (§3.6.3).',
+    'Medical and ambulance services may be an integral part of the airport services; where not available, prearrangements with local, private, public or military medical and ambulance services should be made, ensuring dispatch of a satisfactory assignment of personnel, equipment and medical supplies (§3.6.4).',
+    'The purpose of medical services is to save as many lives as possible by locating and stabilizing the most seriously injured, provide comfort to the less seriously injured and administer first aid, and transport casualties to the proper medical facility (§3.6.1).',
+    'Provision of medical services should be carried out in the most expeditious manner possible, with well organised medical resources available at the accident site in the shortest time possible, and integrated with local community emergency plans as agreed in the mutual aid emergency agreement (§3.6.2).',
+    'The emergency plan should include local mental health agencies; therapeutic treatment and follow-up procedures for dealing with the possible long-term effects should be available for survivors, relatives, eyewitnesses and emergency scene personnel (§3.19).',
+    'A grid map showing available medical facilities should be available and revised, and essential telephone numbers should be verified regularly (§7.1.4, §7.1.5, §8.1.2).',
+    'Casualties sustaining Priority IV status are deceased; provisions for care, comfort and identification of Priority III casualties sit with airport operations, the aircraft operator or an international relief organization, with treatment areas predesignated such as an empty hangar (§9.4.12).'
+  ],
+  body: `
+    <h3>Command transfers once, and it transfers to a person</h3>
+    <p>§9.4.4 is the clause that resolves every argument about who is in charge of the medical operation:</p>
+    <p><strong>The triage procedure and subsequent medical care should be placed under the command of one authority, the designated medical co-ordinator, upon this officer\u2019s arrival. Prior to this, the command of triage should be assumed by the individual designated by the commanding rescue and fire fighting chief and should continue until relieved by the predesignated medical co-ordinator.</strong></p>
+    <p><em>One authority.</em> Not a shared command, not a coordination, not whoever is nearest. And the transition is defined by a physical event — <strong>the arrival of a named person</strong> — not by a judgement that the situation has become complex enough.</p>
+    <p>Two named posts, and they are different posts. Before the co-ordinator arrives, the commanding RFF chief <em>designates</em> someone to hold triage — that is a delegated authority and it is the chief&rsquo;s to give. After the co-ordinator arrives, it is the <em>predesignated</em> medical co-ordinator, and the delegated holder stands down. Nobody decides on the day who holds it.</p>
+    <p>§3.6.3 says the same thing from the planning side, and adds the interim arrangement that makes it work at three in the morning:</p>
+    <p><strong>A medical co-ordinator should be assigned to assume control of the emergency medical operations at the accident site. If airport medical services exist, the medical co-ordinator may be designated from the airport medical staff. In some cases, it may be necessary to appoint an interim medical co-ordinator, to be relieved when the designated medical co-ordinator arrives on site. The interim medical co-ordinator can be designated from the airport rescue and fire fighting personnel.</strong></p>
+    <p><em>Can be designated from the airport rescue and fire fighting personnel.</em> That is the load-bearing permission. It means the RFF service may hold the medical co-ordinator&rsquo;s post in the interim, and it may hand it over on arrival. Confirm both halves exist in your plan: a designated co-ordinator, and a named interim holder drawn from your own service.</p>
+
+    <h3>What the co-ordinator actually does, which is not what people assume</h3>
+    <p>§9.4.5:</p>
+    <p><strong>The medical co-ordinator has responsibility for all medical aspects of the incident and should report directly to the on-scene commander. The medical co-ordinator\u2019s primary function will be administrative, not as a participant of the medical team treating the injured.</strong></p>
+    <p>Read the second sentence twice. <strong>Administrative, not a participant.</strong></p>
+    <p>The most common failure in this role is a competent, committed person who starts treating casualties and never takes command. It feels like the highest-value use of the most skilled person available, and it produces exactly the wrong outcome — the triage system of §9.2 stops functioning because the triage officer is now doing hands-on work, the care areas are unstaffed, and the command picture is gone.</p>
+    <p>And <em>report directly to the on-scene commander</em> puts the medical co-ordinator outside the RFF chain of command while still inside the incident structure. That is deliberate: the medical function is a separate authority reporting to incident command, which is ART-09&rsquo;s architecture applied to medicine. It also means the co-ordinator cannot be assigned tasks by an RFF sector commander.</p>
+    <p>The administrative content is real work, and it is the four areas plus the tags plus the count: §9.5.1 areas located and identified, §9.3.2 tags applied, §9.2.4 priority maintained, §9.4.12 Priority III provided for, and §9.5.1(d) recording and dispatch.</p>
+
+    <h3>Being findable</h3>
+    <p>§9.4.6 is a specification and it is unusually specific, which usually means it solves a real problem:</p>
+    <p><strong>As a means to easily identify and distinguish the medical co-ordinator, a white hard hat and highly visible white coat or vest should be worn, with "MEDICAL CO-ORDINATOR" displayed front and back in reflective red lettering.</strong></p>
+    <p>White, reflective red, front and back. Front and back because the co-ordinator will turn away from you to look at a casualty. Reflective because this is a vehicle-mounted incident at night in rain. White because every other helmet on the scene is another colour.</p>
+    <p>And it applies to everyone: §3.3.4 and §3.6.6 and their equivalents set the same pattern for each agency, and §3.6.6 notes that <em>information on medical services at airport is contained</em> in a form that has to reach the responders rather than sit in a plan. Confirm the identifiable medical coordinator is physically on your vehicle, not in a locker.</p>
+
+    <h3>Planning the medical service, not just attending it</h3>
+    <p>§3.6.1 gives the purpose, and it is three objectives rather than one:</p>
+    <p><strong>The purpose of medical services is to provide triage, first aid and medical care in order to: a) save as many lives as possible by locating and stabilizing the most seriously injured, whose lives may be in danger without immediate treatment; b) provide comfort to the less seriously injured and to administer first aid; and c) transport casualties to the proper medical facility.</strong></p>
+    <p>Objective (b) — <em>provide comfort to the less seriously injured</em> — is the one that gets dropped when a plan is written for the worst case. It is a stated objective of the medical service, and §9.4.12 gives it a location and an owner. A plan that only addresses Priority I is not this plan.</p>
+    <p>§3.6.2 is about speed and integration: <strong>It is essential that provision of medical services such as triage, stabilization, first aid, medical care, and the transporting of the injured to hospital(s) be carried out in the most expeditious manner possible. To this end, well organized medical resources (personnel, equipment and medical supplies) should be available at the accident site in the shortest time possible. The medical aspects of the emergency plan should be integrated with local community emergency plans as agreed upon in the mutual aid emergency agreement.</strong></p>
+    <p>Two obligations. The resources arrive fast — which is a mutual aid problem, so a named party with a callout time and a capability, not a good intention. And integration is <em>as agreed upon in the mutual aid emergency agreement</em>. If your medical provision depends on an outside ambulance service, the agreement is the document that makes it real. ART-19 m2.</p>
+    <p>§3.6.4 covers the where-from: <strong>Medical and ambulance services may be an integral part of the airport services, particularly whenever an ambulance service is a part of the airport rescue and fire fighting service. Whenever medical and ambulance services are not available at the airport, prearrangements with local, private, public or military medical and ambulance services should be made. The plan has to ensure the dispatch of a satisfactory assignment of personnel, equipment and medical supplies. To ensure a rapid response, the plan can include arrangements for land, s</strong> [text truncated in source]</p>
+    <p>Note the phrase <em>satisfactory assignment</em>. The requirement is that the dispatch is satisfactory, not merely that a vehicle is sent. And note the options in the second sentence: <em>local, private, public or military</em>. Four sources, and for many aerodromes only one of them is available.</p>
+
+    <h3>Documentation — the record that gets made while you work</h3>
+    <p>There is no dedicated documentation clause in Chapter 9, which is itself a finding worth stating plainly: <strong>this library gives you the identification tags of §9.3 and the recording and dispatch of §9.5.1(d), but it does not prescribe an accident medical record.</strong> What you have, and what is mandatory, is:</p>
+    <ul>
+      <li><strong>Casualty identification tags</strong> carrying minimal information, standardised by colour, numeral and symbol, water resistant and usable in adverse weather (§9.3.2).</li>
+      <li><strong>Recording, dispatching and evacuation</strong> at the transportation area (§9.5.1(d)).</li>
+      <li><strong>The grid map</strong> showing available medical facilities, kept and revised, and telephone numbers verified regularly (§7.1.4, §7.1.5, §8.1.2).</li>
+    </ul>
+    <p>Two further records sit elsewhere and both are ART-12 m4 and ART-16 content that touches this: §12.4.13.1 gives the exemption from preservation of the accident site, and §12.5.6 and §12.5.8 govern evidence and records. The practical point for this lesson is narrow and important: <strong>the tag is the medical record, and there is no second one unless you make one.</strong> If your service needs an accident medical record for its own review, or for the aircraft operator, or for the family enquiries that follow, you have to design it — and it must be consistent with the tag, because the tag is what travels with the casualty and it will be the only thing that arrives with them.</p>
+
+    <h3>Psychological first aid, which the plan names and nobody staffs</h3>
+    <p>§3.19 is one paragraph in the agency responsibilities chapter, and it is the most neglected provision in Part 7:</p>
+    <p><strong>The emergency plan should include local mental health agencies. Therapeutic treatment, as well as follow-up procedures for dealing with the possible long-term effects of the emergency, should be available for survivors, relatives, eyewitnesses, and emergency scene personnel.</strong></p>
+    <p>Four populations, and the fourth is the one an RFF service owns. <em>Survivors</em> and <em>relatives</em> — the relatives are the group nobody plans for, and they arrive at the perimeter asking for information. <em>Eyewitnesses</em> — which on an aerodrome includes passengers who saw the event from the terminal, staff who were not there, and anyone who filmed it. And <em>emergency scene personnel</em> — which is your crew, the medical staff, the police, and the volunteers.</p>
+    <p>Read the second sentence carefully, because it names two things and only one is obvious: <em>therapeutic treatment</em>, and <strong>follow-up procedures for dealing with the possible long-term effects</strong>. The follow-up is the part that fails. Treatment on the day is supplied by whoever is present. The three-month call is not supplied by anybody unless an agency has been named and asked for it.</p>
+    <p>And this is where ART-24 meets ART-07. A crew that has worked an aircraft accident — bodies, children, people it knew — carries it. §3.19 puts them in the same population as survivors. That is not a soft addition to a wellbeing policy; it is the standard naming your people as a group whose long-term effects require an arranged provision, and the arrangement has to be named before the incident, because afterwards nobody chooses it well.</p>
+
+    <h3>Closing out</h3>
+    <ol>
+      <li><strong>Designate the medical co-ordinator by post and name</strong>, and a named interim holder from RFF personnel. §3.6.3.</li>
+      <li><strong>Hand over on arrival, audibly</strong>, and the co-ordinator does not treat. §9.4.4, §9.4.5.</li>
+      <li><strong>Report to the on-scene commander</strong>, not through the RFF chain. §9.4.5.</li>
+      <li><strong>Be identifiable</strong> — white hard hat, white coat or vest, reflective red front and back. §9.4.6.</li>
+      <li><strong>Record at the transportation area</strong>, with tags consistent with any record you design. §9.5.1(d), §9.3.2.</li>
+      <li><strong>Name the mental health provision</strong> for survivors, relatives, eyewitnesses and scene personnel — including the follow-up. §3.19.</li>
+      <li><strong>Verify the grid map and the numbers</strong> on the cycle §7.1.5 and §8.1.2 require.</li>
+    </ol>
+
+    <blockquote>
+      <p><strong>SME action:</strong> five confirmations, and two of them are gaps this course cannot close for you. One: name the <strong>designated medical co-ordinator</strong> by post and name, and name a <strong>interim medical co-ordinator drawn from your RFF personnel</strong> to be relieved on their arrival, per §3.6.3. Brief §9.4.5&rsquo;s second sentence hard, because it is the failure mode — the co-ordinator&rsquo;s function is <em>administrative, not a participant</em> in treating the injured, and reports directly to the on-scene commander rather than through the RFF chain. Confirm the §9.4.6 identification is physically on the vehicle: white hard hat, highly visible white coat or vest, MEDICAL CO-ORDINATOR in reflective red front and back. Two: check that §3.6.2&rsquo;s integration requirement is real in your mutual aid emergency agreement — <em>the medical aspects of the emergency plan should be integrated with local community emergency plans as agreed upon in the mutual aid emergency agreement</em> — and that the agreement commits a named party to a <em>satisfactory assignment</em> of personnel, equipment and medical supplies per §3.6.4, not merely the dispatch of a vehicle. Three: this library prescribes no accident medical record, only the §9.3.2 tag and §9.5.1(d) recording at the transportation area. Decide whether your service needs one, design it to be consistent with the tag, and remember the tag is the only thing that travels with the casualty to hospital — so if the two disagree, the hospital has the tag. Four: <strong>the gap this course cannot close</strong> — §3.19 requires the plan to include local mental health agencies with therapeutic treatment and <em>follow-up procedures for the possible long-term effects</em>, for survivors, relatives, eyewitnesses and emergency scene personnel. Name the agency, name who makes the referral, and name who makes the call at three months. If nobody owns that call in your service, write that down as a finding, because the standard treats your crew as one of the four populations requiring long-term provision. Five: verify the §7.1.4 grid map of available medical facilities is current and that the §8.1.2 telephone numbers are verified on their stated cycle — a medical facility that closed and a number that changed are both invisible until the day they matter.</p>
+    </blockquote>
+  `,
+  refs: [
+    'ICAO Doc 9137 Part 7 Airport Emergency Planning — §9.4.4 triage procedure and subsequent medical care placed under the command of one authority, the designated medical co-ordinator, upon that officer\u2019s arrival; prior to this command of triage assumed by the individual designated by the commanding rescue and fire fighting chief until relieved by the predesignated medical co-ordinator',
+    'ICAO Doc 9137 Part 7 — §9.4.5 the medical co-ordinator has responsibility for all medical aspects of the incident and should report directly to the on-scene commander; primary function administrative, not as a participant of the medical team treating the injured; §9.4.6 identifiable by white hard hat and highly visible white coat or vest with MEDICAL CO-ORDINATOR displayed front and back in reflective red lettering',
+    'ICAO Doc 9137 Part 7 — §3.6.1 purpose of medical services: save as many lives as possible by locating and stabilizing the most seriously injured, provide comfort to the less seriously injured and administer first aid, and transport casualties to the proper medical facility',
+    'ICAO Doc 9137 Part 7 — §3.6.2 provision of medical services such as triage, stabilization, first aid, medical care and transporting of the injured to hospital to be carried out in the most expeditious manner possible; well organized medical resources available at the accident site in the shortest time possible; medical aspects integrated with local community emergency plans as agreed in the mutual aid emergency agreement',
+    'ICAO Doc 9137 Part 7 — §3.6.3 a medical co-ordinator should be assigned to assume control of the emergency medical operations at the accident site; may be designated from airport medical staff; an interim medical co-ordinator may be appointed from the airport rescue and fire fighting personnel to be relieved when the designated co-ordinator arrives',
+    'ICAO Doc 9137 Part 7 — §3.6.4 medical and ambulance services may be an integral part of the airport services; where not available, prearrangements with local, private, public or military medical and ambulance services should be made, ensuring the dispatch of a satisfactory assignment of personnel, equipment and medical supplies. NOTE: the sentence beginning "To ensure a rapid response, the plan can include arrangements for land, s" is truncated in the source text extraction.',
+    'ICAO Doc 9137 Part 7 — §3.19 the emergency plan should include local mental health agencies; therapeutic treatment and follow-up procedures for dealing with the possible long-term effects of the emergency should be available for survivors, relatives, eyewitnesses, and emergency scene personnel',
+    'ICAO Doc 9137 Part 7 — §7.1.4 grid map showing available medical facilities; §7.1.5 essential that whenever the grid map is revised it is distributed; §8.1.2 telephone numbers should be verified monthly',
+    'ICAO Doc 9137 Part 7 — §9.3.2 standardized casualty identification tags requiring minimal information, usable under adverse weather and water resistant; §9.5.1(d) transportation area for the recording, dispatching and evacuation of survivors; §9.4.12 provisions for care, comfort and identification of Priority III casualties',
+    'NOT IN THIS LIBRARY — no accident medical record is prescribed. Chapter 9 of Part 7 specifies identification tags and recording at the transportation area only.',
+    'Course ART-24 m1 — immediate life threats; m2 — triage and treatment priorities; m3 — casualty care in a wreckage environment; ART-07 — crew fitness; ART-09 — emergency command; ART-19 m2 — mutual aid'
+  ],
+  smeChecked: false
+},
 };
 
 /**
