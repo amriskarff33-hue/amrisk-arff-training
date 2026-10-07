@@ -9172,6 +9172,633 @@ const LESSON_OVERRIDES = {
   ],
   smeChecked: false
 },
+
+  'art17-m1': {
+  title: 'Vehicle roles and capability',
+  brief:
+    'The doctrine is in the manual and it is a good one. The word you ' +
+    'typed is not. This lesson teaches the former and is honest about the latter.',
+  points: [
+    'Doc 9137 Part 1 contains no occurrence of the word "rover". Searched in full across every document in this library, "rover", "spot fire", "brush fire", "wildfire", "wildland", "vegetation fire", "grass fire", "fire line", "firestorm", "backburn" and "defensible space" appear nowhere in any source held.',
+    'What Part 1 does contain is the rapid intervention vehicle, and its role statement is the real content of this course (§5.2.2).',
+    'The original concept which created the rapid intervention vehicle was based on the then current inability of major vehicles to meet the response time specifications in §2.7.1; new technical advances in chassis design have produced RFF vehicles with greatly improved performance considered capable of providing an adequate rapid intervention at airports (§5.2.2).',
+    'The role of RFF vehicles is to reach the accident site quickly, protect evacuation paths, control any outbreak of fire and to initiate rescue (§5.2.2).',
+    'Where dual application of principal and complementary agents is considered, the quantity of complementary agent carried on a vehicle may be all or part of that required by the RFF category, with the disposition related to the number of vehicles deployed (§5.2.2).',
+    'Rescue equipment may be carried on one vehicle or distributed among the vehicles making the initial attendance to an aircraft accident (§5.2.2).',
+    'Auxiliary water tank vehicles equipped with a pump and delivery hose provide a useful service, particularly where there are limited installed water supplies, but cannot be described as primary vehicles (§5.2.1).',
+    'Command vehicles used by officers in charge of a duty watch have virtually no rescue or firefighting capability (§5.2.1).',
+    'The operational objective is response times of two minutes, not exceeding three, to the end of each runway and any other part of the movement area, in optimum conditions of visibility and surface conditions (§2.7.1).',
+    'Response time is measured from the initial call to when the first responding vehicle is in position to apply foam at a rate of at least 50 per cent of the discharge rate in Table 2-3 (§2.7.1).'
+  ],
+  body: `
+    <h3>Say this out loud to your SME before you teach it</h3>
+    <p>This course is called <em>Rover, Spot Fire &amp; Follow-up Vehicles</em>. That is the curriculum title and it is in the course shell that already exists.</p>
+    <p><strong>The word "rover" does not appear in any document in this library.</strong> Not once. I searched every extracted text for rover, spot fire, brush fire, wildfire, wildland, vegetation fire, grass fire, fire line, firestorm, backburn and defensible space. Every apparent hit was a false positive inside a longer word — the nine hits for "ember" were all in <em>mem**ber**</em> and <em>r**ember**</em>. There is no wildland firefighting content in ICAO Doc 9137 Parts 1, 7 or 8, in Annex 14 Volume I, in any of the national regulations held, or in any of the sixteen advisory circulars.</p>
+    <p>That matters because a course that names a capability your standard does not address, and cannot describe, is a course someone will be examined on. So this lesson does the only defensible thing available: it teaches the doctrine that <em>is</em> sourced — the rapid intervention vehicle — and tells you plainly what has to be obtained to make the rest teachable.</p>
+
+    <h3>The role statement, which is the whole lesson</h3>
+    <p>§5.2.2 gives four tasks and they are worth having exactly, because "rover" implies speed and this implies purpose:</p>
+    <p><strong>The role of RFF vehicles is to reach the accident site quickly, protect evacuation paths, control any outbreak of fire and to initiate rescue.</strong></p>
+    <p>Read the order, because it is not the order people assume. Reach the site. <em>Protect evacuation paths</em> — second, before firefighting. <em>Control any outbreak of fire</em> — third, and note <em>any</em> and <em>outbreak</em>, which is containment language not extinguishment language. <em>Initiate rescue</em> — fourth, and <em>initiate</em>, the same word Annex 14 uses in the principal objective.</p>
+    <p>So a light or rapid vehicle is not a small big vehicle. It is a vehicle whose value is that it is <strong>there</strong> — on the evacuation path, holding a fire that has just started, into a cabin — before the appliance that can actually put a blanket on it has arrived. That is a distinct doctrine and it is why §5.2.2 opens with a piece of history that explains its origin:</p>
+    <p><strong>The original concept which created the rapid intervention vehicle was based on the then current inability of major vehicles to meet the response time specifications in 2.7.1. New technical advances in chassis design have produced RFF vehicles with greatly improved performance considered capable of providing an adequate rapid intervention at airports.</strong></p>
+    <p>That is worth reading twice, because it is the standard admitting a doctrine <em>arose from a capability gap</em> and has since been absorbed into the main vehicle. It means: if your service has a light or rapid vehicle, the doctrine has a pedigree in the manual and you can teach it from this clause. If your service does not have one, this clause explains why the standard stopped expecting one.</p>
+
+    <h3>What a light vehicle may and may not carry</h3>
+    <p>§5.2.2 permits two distributions, and both are about spreading capability across several vehicles rather than concentrating it:</p>
+    <p><strong>Should the dual application of principal and complementary agents be considered, the quantity of complementary agent to be carried on a vehicle may be all, or some part of, that is required by the RFF category, the disposition of which to be related to the number of vehicles deployed at the airport. The rescue equipment may be carried on one vehicle or distributed among the vehicles that are making the initial attendance to an aircraft accident.</strong></p>
+    <p>Complementary agent may be split. Rescue equipment may be distributed among the initial attendance. Both say the same thing: <strong>capability is a property of the response, not of a single vehicle.</strong> That is the argument for having more than one vehicle and for deciding what goes on each — and it is the design question a rapid intervention vehicle raises, because the smallest vehicle in the fleet cannot carry the full complement and does not need to if the others do.</p>
+    <p>But read the permission narrowly. It permits <em>distribution</em>. It says nothing about reducing the total, and §5.3.1 holds the line: where vehicles are provided as in Table 2-5 they <em>must be capable of conveying and delivering at least the minimum quantities of extinguishing agents specified in Table 2-3, according to the airport category</em>, and <em>the response time requirements specified in 2.7.1 should also be taken into account</em>.</p>
+
+    <h3>Two vehicle types the manual deliberately excludes</h3>
+    <p>§5.2.1 draws two lines and they are useful when a service is deciding what to buy.</p>
+    <p><strong>Auxiliary water tank vehicles</strong> — <em>some airports provide auxiliary water tank vehicles, equipped with a pump and delivery hose, to replenish foam-producing vehicles at an aircraft accident. While these can provide a useful service, particularly where there are limited installed water supplies, they cannot be described as primary vehicles.</em> ART-25 m1 covers this properly; the point here is the word <em>primary</em>.</p>
+    <p><strong>Command vehicles</strong> — <em>there are other vehicle types in use at airports, such as command vehicles, used by officers in charge of a duty watch that have virtually no rescue or firefighting capability.</em></p>
+    <p><em>Virtually no</em> capability. So a command vehicle is a legitimate part of a fleet and is not counted as one of the vehicles in Table 2-5. Confirm your service knows that, because a duty officer arriving in a command vehicle with no pump is a very different callout.</p>
+
+    <h3>What "response time" actually measures, and why it decides this</h3>
+    <p>§2.7.1 is the definition that a light vehicle exists to satisfy, so it needs to be exact:</p>
+    <p><strong>The operational objective of the RFF service should be to achieve response times of two minutes and not exceeding three minutes to the end of each runway, as well as to any other part of the movement area, in optimum conditions of visibility and surface conditions. Response time is considered to be the time between the initial call to the RFF service and the time when the first responding vehicle(s) is(are) in position to apply foam at a rate of at least 50 per cent of the discharge rate specified in Table 2-3.</strong></p>
+    <p>Four things buried in that definition, each one capable of being got wrong:</p>
+    <ul>
+      <li><strong>Two minutes objective, three minutes maximum</strong> — the objective is the target and three is the ceiling.</li>
+      <li><strong>In optimum conditions.</strong> Of visibility and surface conditions. In bad weather it is aspirational, and ART-21 m2's quickest-route-not-shortest-distance rule applies.</li>
+      <li><strong>Measured from the initial call</strong>, not from the sound of the alarm or from the vehicle moving. The clock starts at the notification.</li>
+      <li><strong>To apply foam at 50 per cent of the Table 2-3 discharge rate.</strong> This is the part people miss. <strong>Response time is not arrival time.</strong> A vehicle that arrives in ninety seconds and is not in position to apply foam has not met the response time. That single clause is the entire technical argument for a light vehicle capable of making a foam application on arrival — it is what "rapid intervention" has to deliver.</li>
+    </ul>
+    <p>And §2.7.4 gives you the honest limit: where the first responding vehicle cannot apply foam at 50 per cent of the recommended rate, that <em>should be considered as an objective to be achieved as the airport vehicle fleet is upgraded</em>. A fleet-wide upgrade objective, not a standard.</p>
+
+    <h3>What to obtain</h3>
+    <ol>
+      <li><strong>Your State's definition, if it has one.</strong> If SACAA/CAAB or your adopted rules define a rapid intervention vehicle, a spot fire unit or a light attack vehicle, that document is the authority for this course and it should replace the generic content here.</li>
+      <li><strong>Wildland firefighting capability, which nobody in this library holds.</strong> If your service operates or could be asked to operate on vegetation fire, the fire behaviour, spotting, fireline construction and safety material has to come from a wildland source. NFPA 1001/1002, or your national fire service's equivalent, is the usual reference. <strong>It is not in this library.</strong></li>
+      <li><strong>Interface firefighting.</strong> Building-to-building fire in a wildland-urban interface is a different discipline again, and ART-22 covers how thin that is here.</li>
+      <li><strong>A decision on whether this course is renamed.</strong> "Rover, Spot Fire &amp; Follow-up Vehicles" implies a wildland capability this platform cannot teach. Renaming it to "Rapid Intervention &amp; Follow-up Vehicles" would make it fully teachable from §5.2.2 and would match what your standard actually says. That is your call, not mine.</li>
+    </ol>
+
+    <blockquote>
+      <p><strong>SME action:</strong> four items, and the first is a content decision rather than a technical one. One: <strong>decide what this course teaches.</strong> §5.2.2 gives a complete and defensible doctrine for a rapid intervention vehicle, and §2.7.1 gives the measurement that justifies it. Neither gives you spot fires or wildland firefighting, and nothing in this library does. Either rename the course to match what can be sourced, or obtain the wildland source before teaching it. Do not teach spot fire tactics from a course whose own source has none. Two: obtain your State&rsquo;s adopted requirements for any light or rapid intervention vehicle in your fleet — its capability, its agent quantities, and whether it counts toward the aerodrome category under Annex 14 §9.2.5. §5.2.2 permits distributing complementary agent and rescue equipment across vehicles making the initial attendance, but §5.3.1 still requires that vehicles <em>must be capable of conveying and delivering at least the minimum quantities</em> in Table 9-2, so confirm where your light vehicle sits on that line rather than assuming distribution is unrestricted. Three: measure your response time against §2.7.1&rsquo;s actual definition — <em>in position to apply foam at a rate of at least 50 per cent of the Table 2-3 discharge rate</em>, measured from the initial call, in optimum conditions. Most services measure arrival. Arrival is not the requirement, and a fleet that meets arrival time and not the 50 per cent criterion has not met the standard. Four: confirm your crews know that a command vehicle has <em>virtually no rescue or firefighting capability</em> under §5.2.1, and that the auxiliary water tank vehicles ART-25 m1 covers are explicitly not primary vehicles. Both are fleet facts that belong in every crew&rsquo;s understanding of what is on the run.</p>
+    </blockquote>
+  `,
+  refs: [
+    'ICAO Doc 9137 Part 1 — §5.2.2 the original concept which created the rapid intervention vehicle was based on the then current inability of major vehicles to meet the response time specifications in §2.7.1; new technical advances in chassis design have produced RFF vehicles with greatly improved performance considered capable of providing an adequate rapid intervention at airports; the role of RFF vehicles is to reach the accident site quickly, protect evacuation paths, control any outbreak of fire and to initiate rescue; complementary agent may be all or part of that required by the RFF category with disposition related to the number of vehicles deployed; rescue equipment may be carried on one vehicle or distributed among the vehicles making the initial attendance',
+    'ICAO Doc 9137 Part 1 — §5.2.1 other vehicle types in use at airports include command vehicles used by officers in charge of a duty watch with virtually no rescue or firefighting capability; auxiliary water tank vehicles equipped with a pump and delivery hose to replenish foam-producing vehicles provide a useful service particularly where installed water supplies are limited but cannot be described as primary vehicles',
+    'ICAO Doc 9137 Part 1 — §5.3.1 where vehicles are provided as proposed in Table 2-5 they must be capable of conveying and delivering at least the minimum quantities of extinguishing agents specified in Table 2-3 according to the airport category, with the response time requirements of §2.7.1 taken into account',
+    'ICAO Doc 9137 Part 1 — §2.7.1 operational objective of two minutes and not exceeding three minutes to the end of each runway and any other part of the movement area in optimum conditions of visibility and surface conditions; response time measured from the initial call to when the first responding vehicle is in position to apply foam at a rate of at least 50 per cent of the Table 2-3 discharge rate; realistic response times determined by RFF vehicles operating from their normal locations and not from positions adopted solely for test purposes. §2.7.4 where the first responding vehicle cannot apply foam at 50 per cent of the recommended rate this should be considered as an objective to be achieved as the fleet is upgraded',
+    'VERIFIED ABSENCE — the words rover, spot fire, brush fire, wildfire, wildland, vegetation fire, grass fire, fire line, firestorm, backburn and defensible space appear in no document in this source library. Searches were run across all extracted texts including ICAO Doc 9137 Parts 1, 2, 3, 5, 6, 7, 8 and 9, Annex 14 Volume I, Annex 3, Annex 16, Doc 9640, Doc 9977, Doc 8168, the UAE GCAA CAR Part XI, OTAR 140, OTAC 140-6, the Belize BDCA-AGA-09, Sierra Leone SLCAA-AC-AGA005, ACI emergency preparedness, and the FAA advisory circular set. Apparent hits for "ember" were all inside the words member and remember.',
+    'NOT IN THIS LIBRARY — no wildland or vegetation fire behaviour, spotting, fireline construction or crew safety source; no definition of a rapid intervention vehicle, spot fire unit or light attack vehicle from any State. Obtain your State\u2019s adopted requirements and a wildland firefighting reference (NFPA 1001/1002 or national equivalent).',
+    'Course ART-02 — level of protection and Table 9-2 quantities; ART-06 — RFF vehicles and emergency appliances; ART-16 — tactics and agent application; ART-21 m2 — quickest route and response time; ART-25 m1 — water supply and auxiliary tank vehicles'
+  ],
+  smeChecked: false
+},
+
+  'art17-m2': {
+  title: 'Restrictions on use',
+  brief:
+    'What a light vehicle is for, where the standard says it must not be ' +
+    'relied on, and the four limits that decide whether yours can be relied on.',
+  points: [
+    'The role of RFF vehicles is to reach the accident site quickly, protect evacuation paths, control any outbreak of fire and to initiate rescue (§5.2.2). Initiate, not complete.',
+    'The operational objective is two minutes and not exceeding three minutes, in optimum conditions of visibility and surface conditions, measured to the point of being in position to apply foam at 50 per cent of the Table 2-3 discharge rate (§2.7.1).',
+    'Where the first responding vehicle cannot apply foam at 50 per cent of the recommended discharge rate, this should be considered as an objective to be achieved as the fleet is upgraded, not as a met standard (§2.7.4).',
+    'Auxiliary water tank vehicles cannot be described as primary vehicles (§5.2.1); command vehicles have virtually no rescue or firefighting capability (§5.2.1).',
+    'Vehicles must be capable of conveying and delivering at least the minimum quantities of extinguishing agents specified in Table 2-3 according to the airport category (§5.3.1).',
+    'No corrosion inhibitors, freezing point depressants or other additives should be used in the water supply without prior consultation with, and the approval of, the foam concentrate manufacturer (§8.1.11).',
+    'The prime mission of the airport RFF service is to control the fire in the critical area to be protected in any post-accident fire situation with a view to permitting the evacuation of the aircraft occupants (§12.2.1).',
+    'The recommendations in Chapter 12 are for guidance of the officer-in-charge when responding to aircraft accident or incident (§12.2.1).',
+    'The general purpose extinguishing agent for RFF is foam; water alone is not acceptable for the principal agent role, and the complementary agent is normally dry chemical (§8.1, §2.4).',
+    'Boundary: this library contains no light-vehicle or rapid intervention vehicle operating standard, no driver qualification requirement for one, and no restriction list. Those come from your adopted national requirements.'
+  ],
+  body: `
+    <h3>The first restriction is the word "initiate"</h3>
+    <p>§5.2.2 says the role is to <em>reach the accident site quickly, protect evacuation paths, control any outbreak of fire and to initiate rescue</em>. Four tasks, and the restriction is built into the verbs.</p>
+    <p>Initiate, not complete. Control an outbreak, not extinguish a developed fire. Protect evacuation paths, not the whole aircraft.</p>
+    <p>That is not a demotion. It is a statement of what a vehicle that arrives in two minutes with a small tank can actually do, and it aligns with the principal objective in Annex 14 §9.2 — the service is required to create and maintain survivable conditions, provide egress routes, and <em>initiate</em> the rescue of those unable to escape without direct aid. A light vehicle is a device for being inside the critical area inside the response time. Anything a procedure expects of it beyond that is a procedure written by somebody who has not read §5.2.2.</p>
+    <p>The mirror image is that <strong>the limitations are real and a light vehicle can be overwhelmed.</strong> §5.3.1 is the constraint that bites: vehicles <em>must be capable of conveying and delivering at least the minimum quantities of extinguishing agents specified in Table 2-3, according to the airport category</em>. A vehicle that cannot deliver the category quantity is not a supplement to a compliant fleet — it is a fleet that does not comply unless the others carry the difference, and the disposition of complementary agent is the only distribution §5.2.2 permits.</p>
+
+    <h3>The second restriction is written into the response time definition</h3>
+    <p>§2.7.1's definition has two limbs and the second one is a restriction in disguise:</p>
+    <p><strong>Response time is considered to be the time between the initial call to the RFF service and the time when the first responding vehicle(s) is(are) in position to apply foam at a rate of at least 50 per cent of the discharge rate specified in Table 2-3.</strong></p>
+    <p>So the standard is not asking for a vehicle that arrives. It is asking for a vehicle <em>in position to apply foam at half rate</em>. A light vehicle with a monitor capable of only a token stream has not met this, and neither has a vehicle that arrives at the right moment with the wrong hose or the wrong terrain under it.</p>
+    <p>And §2.7.1 adds the honesty clause: <em>determination of realistic response times should be made by RFF vehicles operating from their normal locations and not from positions adopted solely for test purposes.</em> No staged start from a favourable point. From where it actually sits, at three in the morning, in the weather it is.</p>
+
+    <h3>The third restriction: it is an objective, not a standard</h3>
+    <p>§2.7.4 is the clause to know if you are ever asked why a fleet does not meet the response time:</p>
+    <p><strong>The requirements in 2.7.1 may require an evaluation of the RFF vehicles at airports where the first responding vehicle(s) is(are) not capable of applying foams at the rate of at least 50 per cent of the recommended discharge rate for the airport category. This should be considered as an objective to be achieved as the airport vehicle fleet is upgraded.</strong></p>
+    <p><em>As an objective to be achieved as the fleet is upgraded.</em> That is a planned improvement, not a compliance failure and not a pass. So a light vehicle in your fleet can be justified as the mechanism of the upgrade — that is genuinely what the clause envisages — but the fleet does not meet §2.7.1 until it does.</p>
+
+    <h3>The two vehicle types already excluded</h3>
+    <p>§5.2.1 is the exclusion list, and both entries are worth restating because they are fleet facts that crews get wrong:</p>
+    <ul>
+      <li><strong>Command vehicles</strong> — used by officers in charge of a duty watch, with <em>virtually no rescue or firefighting capability</em>. Not a Table 2-5 vehicle. Not a substitute for anything.</li>
+      <li><strong>Auxiliary water tank vehicles</strong> — <em>while these can provide a useful service, particularly where there are limited installed water supplies, they cannot be described as primary vehicles.</em> Useful, and not primary. Both words at once.</li>
+    </ul>
+
+    <h3>Agent restrictions that apply to any vehicle</h3>
+    <p>Whatever else it is, it is a vehicle producing foam, and two constraints follow from Chapter 8.</p>
+    <p><strong>The principal agent is foam, and water alone will not serve.</strong> §8.1.1 states the mechanism — an air-excluding blanket preventing volatile flammable vapours from mixing with air or oxygen — and the complementary agent role is normally dry chemical. A light vehicle carrying only water is not a reduced version of a compliant vehicle; it is a different vehicle, and its role has to be stated as such.</p>
+    <p><strong>The water supply rule applies to it too.</strong> §8.1.11: <em>no corrosion inhibitors, freezing point depressants or other additives should be used in the water supply without prior consultation with, and the approval of, the foam concentrate manufacturer.</em> A light vehicle drawing from a different tank, or a bowser, or a standpipe, is drawing from a supply that has not necessarily been checked against that approval. Confirm it has.</p>
+
+    <h3>Who decides, on the day</h3>
+    <p>One clause governs the whole of Chapter 12 and it is a restriction of a different kind — on the procedure, not the vehicle:</p>
+    <p><strong>The prime mission of the airport RFF service is to control the fire in the critical area to be protected in any post-accident fire situation with a view to permitting the evacuation of the aircraft occupants. Equipment and techniques recommended are generally directed toward this goal. The recommendations in this section are for guidance of the officer-in-charge when responding to aircraft accident/incident.</strong> — §12.2.1</p>
+    <p><em>For guidance of the officer-in-charge.</em> So every technique in Chapter 12 — including anything this course says about protecting evacuation paths — is advisory to a named person who may depart from it for a good reason and must be able to give that reason. ART-09 m4 and ART-20 cover how that works. The point for this lesson is that a light vehicle's limitations are the kind of thing a competent officer in charge is entitled to reason about, and the procedure should give them the framework to do it rather than a prohibition.</p>
+
+    <h3>The restriction list, written out</h3>
+    <ol>
+      <li><strong>Initiate, do not complete.</strong> §5.2.2. Its job is presence, paths and the first fire.</li>
+      <li><strong>Deliver at least 50 per cent of the category discharge rate.</strong> §2.7.1. Otherwise it is not a first responding vehicle for response time purposes.</li>
+      <li><strong>The fleet must still meet Table 2-3 quantities.</strong> §5.3.1. Distribution of complementary agent is permitted; reduction of the total is not.</li>
+      <li><strong>Foam, not water, for the principal role.</strong> §8.1.1.</li>
+      <li><strong>Water supply checked against the concentrate manufacturer&rsquo;s approval.</strong> §8.1.11.</li>
+      <li><strong>Response time tested from normal locations in real conditions.</strong> §2.7.1.</li>
+      <li><strong>Officer in charge may depart from technique, for a reason, on the day.</strong> §12.2.1.</li>
+      <li><strong>Not for wildland or spot fire work.</strong> No source in this library authorises it and none describes it. Until you obtain a wildland reference, this course does not cover it and your crews should not be examined on it.</li>
+    </ol>
+
+    <blockquote>
+      <p><strong>SME action:</strong> four confirmations. One: for every light or rapid intervention vehicle in your fleet, establish and record its <strong>actual discharge rate against 50 per cent of the Table 2-3 rate for your category</strong> — §2.7.1 defines response time on that basis and §2.7.4 treats a shortfall as a fleet upgrade objective rather than a met standard, so the honest statement of where you stand is a measured number and a planned date. Two: confirm your fleet as a whole still meets Table 2-3 quantities under §5.3.1, and that any distribution of complementary agent across vehicles that §5.2.2 permits is documented rather than assumed. Three: confirm the water supply on any light vehicle, tank vehicle or bowser is covered by the §8.1.11 approval from your foam concentrate manufacturer &mdash; a vehicle drawing from a supply nobody checked is a supply nobody approved. Four: brief crews that <strong>command vehicles have virtually no rescue or firefighting capability</strong> under §5.2.1 and that auxiliary water tank vehicles are not primary vehicles, and confirm your duty officer knows what is in the vehicle they are driving before they drive it. Finally, get a decision on the wildland question: nothing in this library authorises vegetation firefighting or describes it, so either obtain a wildland reference or state on your training record that crews are not assessed on it.</p>
+    </blockquote>
+  `,
+  refs: [
+    'ICAO Doc 9137 Part 1 — §5.2.2 role of RFF vehicles is to reach the accident site quickly, protect evacuation paths, control any outbreak of fire and to initiate rescue; complementary agent disposition related to the number of vehicles deployed; rescue equipment may be distributed among vehicles making the initial attendance',
+    'ICAO Doc 9137 Part 1 — §2.7.1 response time is the time between the initial call to the RFF service and when the first responding vehicle is in position to apply foam at a rate of at least 50 per cent of the discharge rate specified in Table 2-3; realistic response times determined by vehicles operating from normal locations and not from positions adopted solely for test purposes; §2.7.4 shortfall against the 50 per cent rate to be considered as an objective to be achieved as the fleet is upgraded',
+    'ICAO Doc 9137 Part 1 — §5.3.1 vehicles must be capable of conveying and delivering at least the minimum quantities of extinguishing agents specified in Table 2-3 according to the airport category, with §2.7.1 response time taken into account',
+    'ICAO Doc 9137 Part 1 — §5.2.1 command vehicles used by officers in charge of a duty watch have virtually no rescue or firefighting capability; auxiliary water tank vehicles cannot be described as primary vehicles',
+    'ICAO Doc 9137 Part 1 — §12.2.1 the prime mission of the airport RFF service is to control the fire in the critical area to be protected in any post-accident fire situation with a view to permitting the evacuation of the aircraft occupants; the recommendations in this section are for guidance of the officer-in-charge when responding to aircraft accident or incident',
+    'ICAO Doc 9137 Part 1 — §8.1.1 foam used for aircraft RFF is primarily intended to provide an air-excluding blanket which prevents volatile flammable vapours from mixing with air or oxygen; §8.1.11 no corrosion inhibitors, freezing point depressants or other additives in the water supply without prior consultation with and the approval of the foam concentrate manufacturer',
+    'ICAO Annex 14 Volume I — §9.2 principal objective of an RFF service is to save lives in the event of an aircraft accident or incident at or in the immediate vicinity of an aerodrome, providing and maintaining survivable conditions, egress routes, and initiating the rescue of those unable to escape without direct aid',
+    'Course ART-17 m1 — vehicle roles and capability; ART-09 m4 — incident commander size-up; ART-16 — tactics; ART-20 — deviation discipline; ART-02 — level of protection'
+  ],
+  smeChecked: false
+},
+
+  'art17-m3': {
+  title: 'Deployment for a landing aircraft',
+  brief:
+    'The tasks are identified before the tactics, not after. That ordering is ' +
+    'the lesson.',
+  points: [
+    'Before attempting to specify the tactics and equipment to be used in rescue operations following an aircraft accident, it will be necessary to identify the tasks to be performed (§12.3.1).',
+    'The term rescue must be taken to include protection of the routes followed by occupants of the aircraft who are able to escape from the aircraft (§12.3.1).',
+    'Activities external to the aircraft may include firefighting, the blanketing of fuel wetted areas adjacent to the aircraft, assistance in the effective use of emergency escape equipment, and the provision of lighting where this would expedite evacuation and assembly of occupants in a safe area (§12.3.1).',
+    'Entry to the aircraft should not be attempted by any of the routes which are in use by escaping occupants (§12.3.1).',
+    'Evacuation from the aircraft and operations within the fuselage cannot be conducted effectively if a fire situation exists which imperils the occupants or the rescue forces; it may be essential to commence firefighting operations before attempting to rescue any one of the occupants (§12.3.1).',
+    'While the rescue of all occupants may be considered as the primary objective, the overall requirement is to create conditions in which survival is possible and in which rescue operations may be conducted (§12.3.1).',
+    'A precautionary blanketing of the fuel covered area will be a priority task for the first arriving RFF vehicle(s) (§12.3.3).',
+    'The operational objective is two minutes and not exceeding three minutes, in optimum conditions of visibility and surface conditions, measured to the point of being in position to apply foam at 50 per cent of the Table 2-3 discharge rate (§2.7.1).',
+    'To meet the operational objective as nearly as possible in times of traffic or apron congestion or in less than optimum conditions of visibility, it may be necessary to provide suitable guidance, equipment, access routes and/or procedures, which may include a driver enhanced vision system using the global navigation satellite system to provide the driver with the vehicle\u2019s location, tracking using digital radio datalink to assist the driver in locating the accident site and reduce communications workload, and low visibility enhanced vision equipment (§2.7.5).',
+    'Hydrants and access routes must be capable of being traversed in expected conditions, with sufficient vertical clearance for the largest vehicles (§13.3.4).'
+  ],
+  body: `
+    <h3>Tasks before tactics — the standard says so in one sentence</h3>
+    <p>§12.3.1 opens the tactics chapter with a methodological instruction and it is the most important line in it for a course about light vehicles:</p>
+    <p><strong>Before attempting to specify the tactics and equipment to be used in rescue operations following an aircraft accident, it will be necessary to identify the tasks to be performed.</strong></p>
+    <p>Tasks, then tactics. Which sounds obvious and is very often done the other way round — the vehicle arrives and the crew works out what to do with it. This clause is the manual telling you that the tactical discussion in Chapter 12 is downstream of a task list, and that a vehicle that cannot do the tasks is not a tactical question.</p>
+
+    <h3>What "rescue" includes — which is where a light vehicle earns its place</h3>
+    <p>The same clause defines the term, and the definition is wider than most crews hold:</p>
+    <p><strong>First, the term rescue must be taken to include protection of the routes followed by occupants of the aircraft who are able to escape from the aircraft. The activities external to the aircraft may include firefighting, the blanketing of fuel wetted areas adjacent to the aircraft, the assistance in the effective use of the emergency escape equipment deployed from the aircraft and the provision of lighting where this would expedite the evacuation of the aircraft and the assembly of its occupants in a safe area.</strong></p>
+    <p>Four external activities and two of them are not firefighting at all. <em>Protection of the routes</em> is named as part of rescue itself, not as a precursor to it — which is precisely the task §5.2.2 puts second in a light vehicle&rsquo;s role. <em>Assistance in the effective use of emergency escape equipment</em> means slides, and a slide that is deployed onto burning ground is not working. <em>Provision of lighting where this would expedite the evacuation</em> is a named rescue activity, and it is a task a light vehicle with a mast or a scene light can do that a large appliance arriving ninety seconds later cannot.</p>
+    <p>So the task list for the first vehicle is: get there, protect the paths, control the fire that threatens them, light the assembly area, help the slide. None of that requires a category quantity of foam. All of it requires being there.</p>
+
+    <h3>The two rules that are about safety, not tactics</h3>
+    <p>Both are in §12.3.1 and both are the kind of thing that is briefed rather than enforced.</p>
+    <p><strong>It will be obvious that entry to the aircraft at this time should not be attempted by any of the routes which are in use by escaping occupants.</strong></p>
+    <p>Do not enter by the route people are escaping down. On an aircraft accident that is a routing decision made in the first seconds by whoever gets there first — and on a light vehicle, that person is likely to be alone, arriving before anyone has thought about it.</p>
+    <p><strong>While the rescue of all occupants may be considered as the primary objective, the overall requirement is to create conditions in which survival is possible and in which rescue operations may be conducted. For this reason, it may be essential to commence firefighting operations before attempting to rescue any one of the occupants, as failure to suppress the fire or render a fuel wetted area safe from fire may preclude the survival of the survivors.</strong></p>
+    <p>That is the hardest sentence in the chapter and it is the one that decides whether a light vehicle is deployed or held back. <strong>The fire may come first, even though rescue is the primary objective.</strong> The test is not courage and not the aircraft type — it is whether failure to suppress the fire or make a fuel-wetted area safe would <em>preclude the survival of the survivors</em>.</p>
+    <p>And §12.3.3 is the answer for the vehicle that gets there first: <strong>a precautionary blanketing of the fuel covered area will be a priority task for the first arriving RFF vehicle(s).</strong> Precautionary. Blanketing a fuel-wetted area before there is a fire there is a defensive task, and it is named as a priority for whoever arrives first — which on a rapid intervention deployment is the whole point of the vehicle.</p>
+
+    <h3>Getting there: the equipment that closes the gap</h3>
+    <p>§2.7.5 is the clause that turns a light vehicle from an idea into a specification, and it names three systems:</p>
+    <p><strong>To meet the operational objective as nearly as possible in times of traffic/apron congestion or in less than optimum conditions of visibility, it may be necessary to provide suitable guidance, equipment, access routes and/or procedures for RFF vehicles. These may include navigation equipment installed in the vehicles such as: a) a driver enhanced vision system (DEVS) with on-board navigation equipment utilizing the global navigation satellite system to provide the driver with the vehicle's location thus serving as an aid in navigating to the accident sites; b) tracking using digital radio datalink to assist the vehicle driver in locating and navigating to the accident site, thereby reducing driver communications workload and improving situational awareness; and c) low visibility enhanced vision using...</strong></p>
+    <p>Three, and the reasoning behind them is what makes this worth reading. DEVS with GNSS gives the driver <em>the vehicle's location</em> — the driver does not have to recognise where he is, which is the failure mode ART-21 m2 addresses with charts and written instructions. Digital radio datalink <em>reduces driver communications workload and improves situational awareness</em> — and a single-crew driver doing a task list on his own has no radio partner to navigate for him.</p>
+    <p>That last point is the honest constraint on a light vehicle and nobody states it in the manual: <strong>a one-person crew is simultaneously the driver, the comms operator and the rescuer.</strong> DATALINK is not a luxury on a single-crew rapid intervention vehicle, it is what makes the single crew possible. Build that into the specification.</p>
+    <p>And §13.3.4&rsquo;s constraints apply to it exactly as to the appliance: roads <em>capable of being traversed in expected conditions</em>, and <em>sufficient vertical clearance from overhead obstructions for the largest vehicles</em>. Check the route for the light vehicle&rsquo;s dimensions, not the appliance&rsquo;s — a light vehicle can fit where the big one cannot, which cuts both ways.</p>
+
+    <h3>Deploying</h3>
+    <ol>
+      <li><strong>Task list before departure.</strong> §12.3.1 — identify the tasks. Reach the site, protect the paths, control the fire, light the assembly area, assist the escape equipment.</li>
+      <li><strong>Route by the quickest route commensurate with safety, not the shortest distance.</strong> §13.3.5.2. A light vehicle&rsquo;s advantage is speed, and the paved route is where the speed is.</li>
+      <li><strong>Position for the paths and the fuel-wetted area.</strong> §5.2.2 and §12.3.3. That is the deployment.</li>
+      <li><strong>Blanket the fuel-covered area pre-cautionarily.</strong> §12.3.3. Priority task for the first arriving vehicle.</li>
+      <li><strong>Decide the fire-first question explicitly.</strong> §12.3.1 — will failure to suppress the fire or make the fuel-wetted area safe preclude survival? If yes, the fire comes before the cabin.</li>
+      <li><strong>Do not enter by an escape route.</strong> §12.3.1.</li>
+      <li><strong>Light the assembly area if it would expedite evacuation.</strong> §12.3.1 names it as a rescue activity.</li>
+      <li><strong>Hand over to the appliance when it arrives, and say what the situation is.</strong> §12.3.4 transfers command to the on-scene commander on arrival.</li>
+    </ol>
+
+    <blockquote>
+      <p><strong>SME action:</strong> four items. One: confirm your incident procedure for a rapid intervention vehicle is <strong>written as a task list</strong>, not a sequence of positions, because §12.3.1 requires the tasks to be identified before tactics are specified. The task list from §12.3.1 is: protect the routes used by escaping occupants; control fire; blanket fuel-wetted areas adjacent to the aircraft; assist in the effective use of emergency escape equipment; and provide lighting where it would expedite evacuation and assembly. Two: brief the two safety rules that are not tactics. <strong>Do not enter by any route in use by escaping occupants.</strong> And <strong>the fire may have to be suppressed before any occupant is rescued</strong>, because §12.3.1 states failure to suppress the fire or render a fuel wetted area safe from fire may preclude the survival of the survivors &mdash; even though rescue of all occupants is the primary objective. Make that decision criterion explicit and rehearse it. Three: if you operate a single-crew light vehicle, specify <strong>digital radio datalink</strong> as part of the vehicle rather than a later upgrade. §2.7.5(b) gives its purpose precisely: assisting the driver in locating and navigating to the accident site, reducing driver communications workload and improving situational awareness. A single crew is simultaneously driver, operator and rescuer, and that clause is the standard acknowledging the problem. Add DEVS with GNSS per §2.7.5(a) and confirm the access route for the light vehicle&rsquo;s dimensions and vertical clearance under §13.3.4 &mdash; it may fit where the appliance does not, which changes your routes as well as your speed. Four: confirm the handover. §12.3.4 puts the on-scene commander in charge of activities on arrival, so a single-crew light vehicle that has been working alone for three minutes needs a handover that transfers the situation and not just the title.</p>
+    </blockquote>
+  `,
+  refs: [
+    'ICAO Doc 9137 Part 1 — §12.3.1 before attempting to specify the tactics and equipment to be used in rescue operations it will be necessary to identify the tasks to be performed; rescue includes protection of the routes followed by occupants able to escape; activities external to the aircraft may include firefighting, blanketing of fuel wetted areas adjacent to the aircraft, assistance in the effective use of emergency escape equipment and provision of lighting where this would expedite evacuation and assembly; entry should not be attempted by routes in use by escaping occupants; evacuation and operations within the fuselage cannot be conducted effectively if a fire situation exists imperilling occupants or rescue forces; while rescue of all occupants may be the primary objective the overall requirement is to create conditions in which survival is possible, and it may be essential to commence firefighting before attempting to rescue any one of the occupants because failure to suppress the fire or render a fuel wetted area safe from fire may preclude the survival of the survivors',
+    'ICAO Doc 9137 Part 1 — §12.3.3 a precautionary blanketing of the fuel covered area will be a priority task for the first arriving RFF vehicle(s); §12.3.2 activities in the area must be coordinated by the on-scene commander, fire security inside and outside the aircraft may entail periodic reapplication of the foam blanket',
+    'ICAO Doc 9137 Part 1 — §5.2.2 role of RFF vehicles is to reach the accident site quickly, protect evacuation paths, control any outbreak of fire and to initiate rescue',
+    'ICAO Doc 9137 Part 1 — §2.7.1 response time two minutes objective, not exceeding three, in optimum conditions, measured to being in position to apply foam at 50 per cent of the Table 2-3 discharge rate, from normal locations; §2.7.5 to meet the objective as nearly as possible in traffic or apron congestion or less than optimum visibility it may be necessary to provide suitable guidance, equipment, access routes and/or procedures, including a) driver enhanced vision system with on-board navigation equipment using GNSS to provide the driver with the vehicle location, b) tracking using digital radio datalink to assist the driver in locating and navigating to the accident site, reducing driver communications workload and improving situational awareness, and c) low visibility enhanced vision equipment',
+    'ICAO Doc 9137 Part 1 — §13.3.5.2 approach by the quickest route commensurate with safety, which might not be the shortest distance; §13.3.4 roads capable of being traversed in expected conditions and sufficient vertical clearance from overhead obstructions for the largest vehicles',
+    'Course ART-17 m1 — vehicle roles and capability; m2 — restrictions on use; ART-10 — rescue and extrication; ART-16 — tactics; ART-21 m2 — quickest route; ART-18 — communications'
+  ],
+  smeChecked: false
+},
+
+  'art17-m4': {
+  title: 'Follow-up and making it stick',
+  brief:
+    'The blanket has to last longer than the crew who laid it. That is a ' +
+    'quantity problem, a reapplication problem and a fatigue problem.',
+  points: [
+    'Foam provides the capability to extinguish the fire and to give a measure of post-control stability which is not provided by dry chemical powders (§12.3.4).',
+    'At category 1 and 2 airports the foam could be contained in a pressure vessel as a premixed solution and expelled by compressed gas which avoids the need for a pump; the system must be capable of discharging for at least one minute (§12.3.4).',
+    'The crew for the first vehicle of a multi-vehicle response should be proficient enough to ensure the operation of the fire suppression equipment and to provide assistance with evacuation (§12.3.4).',
+    'With the arrival of additional vehicles the crew of the first vehicle will become available to assist in other duties (§12.3.4.1).',
+    'During extended rescue operations it will be imperative to maintain fire security inside and outside the aircraft, which may entail the periodic reapplication of the foam blanket, and there may be a requirement to ventilate the fuselage (§12.3.2).',
+    'If there is no fire but trim and upholstery materials are decomposing because of residual heat, the decomposition must be stopped by the use of water-spray and the environment made habitable by natural or induced ventilation (§12.3.5).',
+    'It is important to create a survivable atmosphere within the aircraft as soon as is practicable to protect any occupants who may be unable to evacuate by their own efforts (§12.3.6).',
+    'Activities in the area must be coordinated by the on-scene commander (§12.3.2).',
+    'The water in Table 2-3 or Table 9-2 is calculated from the practical critical area at a stated application rate and is enough to control the fire; sustaining survivable conditions for far longer than that requires supplementary water supply (§2.4.7 to §2.4.9; §3.1.1).',
+    'Total water is Q1 + Q2, where Q1 controls the fire in the practical critical area and Q2 sustains control and finishes the job (§2.4.7 to §2.4.9).'
+  ],
+  body: `
+    <h3>"Making it stick" is a foam property, not a crew virtue</h3>
+    <p>§12.3.4 gives the technical reason the follow-up task exists:</p>
+    <p><strong>Foam provides the capability to extinguish the fire and to give a measure of post-control stability which is not provided by dry chemical powders.</strong></p>
+    <p><em>Post-control stability.</em> That is the term. Foam does not only knock a fire down — it leaves a blanket that resists re-ignition for a measurable period. And the clause says plainly what it does <em>not</em> do: <strong>which is not provided by dry chemical powders.</strong></p>
+    <p>So the follow-up problem is not that the crew were poor. It is that dry chemical knockdown has no duration, and the manual is telling you so. A deployment that suppresses a fuel fire with powder and then treats the scene as stable has used an agent with, in the manual's own words, no post-control stability, and the fire will return.</p>
+    <p>Read that against ART-12 m1&rsquo;s mechanism: foam separates vapour from air. It only does that while the blanket is intact. §8.1.1 requires that a foam <em>must resist disruption due to wind or exposure to heat or flame and should be capable of resealing any ruptures caused by the disturbance of an established blanket</em>. Resealing is why foam survives being walked on and why an FFFP survives a reapplication. Everything about follow-up is downstream of that one property.</p>
+
+    <h3>The crew problem: the first crew is a firefighting crew</h3>
+    <p>§12.3.4 continues, and the two sentences describe a light-vehicle deployment precisely:</p>
+    <p><strong>The crew for the first vehicle of a multi-vehicle response should be proficient enough to ensure the operation of the fire suppression equipment and to provide assistance with evacuation.</strong></p>
+    <p>Two competences. Ensure the fire suppression equipment is operating. <em>Provide assistance with evacuation.</em> That is the whole job of the first crew and it is a two-person minimum in practice.</p>
+    <p>Then the clause that governs everything after they arrive: <strong>with the arrival of additional vehicles, the crew of the first vehicle will become available to assist in other duties.</strong> — §12.3.4.1</p>
+    <p>Note the conditional. <em>With the arrival of additional vehicles</em>. A rapid intervention vehicle exists precisely to arrive before them, which means its crew has already done its two tasks by the time the appliance arrives — and has nothing to do until then except sustain.</p>
+
+    <h3>Sustaining: the quantity nobody calculates for a small vehicle</h3>
+    <p>§12.3.2 is the requirement:</p>
+    <p><strong>During this phase, it will be imperative to maintain fire security inside and outside the aircraft and this may entail the periodic reapplication of the foam blanket. Additionally, there may be a requirement to ventilate the fuselage to remove smoke and other toxic material providing a more survivable atmosphere and for rescue operations. Activities in the area must be coordinated by the on-scene commander.</strong></p>
+    <p><em>Periodic reapplication of the foam blanket.</em> Periodically — which means the manual is telling you that one application is not the answer, and it has not told you the interval because the interval is a function of your foam, your fire and your aircraft.</p>
+    <p>Here is the arithmetic, and it is where a light vehicle goes wrong. ART-02&rsquo;s water calculation is <strong>Q1 + Q2</strong>: Q1 controls the fire in the practical critical area, Q2 sustains control and finishes the job. Q1 is what arrives in the tank. Q2 is what keeps the blanket alive. §3.1.1 states the purpose of supplementary water supply in exactly these terms — it <em>supports the principle of continuous application of extinguishing media to maintain survivable conditions at the scene of an aircraft accident for far longer than that provided for by the minimum amounts of water</em>.</p>
+    <p>So a light vehicle that arrives, blankets the fuel-wetted area pre-cautionarily as §12.3.3 requires, and then has to hold that blanket while the appliance is en route is spending Q1 on a task that is nominally Q2 work. <strong>Work out how long your blanket lasts at half rate before you rely on it.</strong> If the answer is less than your appliance&rsquo;s arrival time, the light vehicle has bought a fire and not a solution, and the appliance arrives to a re-igniting pool with no water left to re-apply.</p>
+    <p>§12.3.4 also tells you what the small vehicles can physically do: at category 1 and 2 airports the foam could be in a pressure vessel as a premixed solution expelled by compressed gas, <em>which avoids the need for a pump</em>, and <em>the system must be capable of discharging for at least one minute</em>. One minute is the floor, not the target — but it tells you the class of system a light vehicle can carry.</p>
+
+    <h3>Follow-up: the three duties</h3>
+    <p>§12.3.4.1 is the follow-up content and it is introduced well:</p>
+    <p><strong>Operational experience indicates that there are three main requirements once the major fire situation has been controlled or the critical area around the aircraft has been secured.</strong></p>
+    <p>And then §12.3.5 supplies the priority — or rather, denies that there is one:</p>
+    <p><strong>These three tasks are not specified in order of priority and if a fire situation exists within the aircraft it will be essential to control this before any other operation can commence. Similarly, if there is no fire but trim and upholstery materials are decomposing because of residual heat, the decomposition must be stopped by the use of water-spray and the environment made habitable by natural or induced ventilation.</strong></p>
+    <p>Three things in that sentence. <em>Not specified in order of priority</em> — so the crew decides on the day, which makes the on-scene commander&rsquo;s coordination under §12.3.2 load-bearing. <em>Fire within the aircraft before anything else</em> — including before rescue, which is §12.3.1 arriving again. And the one crews forget: <strong>decomposition without fire.</strong> Trim and upholstery decomposing from residual heat, no flames, and the environment has to be made habitable by water-spray and ventilation. That is a survivability task with no fire to justify it, and if nobody is looking for it, survivors inside that cabin are being cooked slowly.</p>
+    <p>§12.3.6 states the objective: <em>it is important to create a survivable atmosphere within the aircraft as soon as is practicable, to protect any occupants who may be unable to evacuate by their own efforts.</em> As soon as is practicable — not after the rescue is complete.</p>
+
+    <h3>Follow-up work</h3>
+    <ol>
+      <li><strong>Measure your blanket life.</strong> How long does the foam hold at half discharge rate on kerosene? That number is the limit of a light vehicle&rsquo;s independence.</li>
+      <li><strong>Reapply periodically.</strong> §12.3.2. Plan the interval and the water for it.</li>
+      <li><strong>Maintain fire security inside and outside.</strong> §12.3.2. The interior is the part that gets forgotten once the exterior is holding.</li>
+      <li><strong>Hunt for decomposition with no flame.</strong> §12.3.5. Water-spray and ventilation to make it habitable.</li>
+      <li><strong>Fire inside the aircraft comes before every other follow-up task.</strong> §12.3.5.</li>
+      <li><strong>Ventilate for survivability, not for comfort.</strong> §12.3.6 — protect occupants unable to evacuate unaided.</li>
+      <li><strong>Coordinate, don&rsquo;t freelance.</strong> §12.3.2 — the on-scene commander owns the area. The first crew of a light vehicle arriving alone is the arrangement most likely to break this.</li>
+      <li><strong>Supplementary water is what makes follow-up possible.</strong> §3.1.1 and ART-25. A light vehicle with no replenishment path cannot sustain a blanket.</li>
+    </ol>
+
+    <blockquote>
+      <p><strong>SME action:</strong> four items, and the first is a measurement you may not have taken. One: <strong>measure how long your foam blanket holds at half discharge rate</strong> on the fuel you actually use, and write the number on your procedure. It is the single figure that determines how independent a light vehicle can be, and §12.3.2&rsquo;s requirement to maintain fire security by <em>periodic reapplication of the foam blanket</em> cannot be planned without it. Two: reconcile that number against your appliance arrival time. If the blanket life is shorter than the time for the second vehicle to reach you, a rapid intervention vehicle has bought you a fire rather than a solution &mdash; it has spent Q1 on what ART-02 treats as Q2 work. Either reduce the arrival gap or do not rely on the light vehicle to hold the pool. Three: brief the two requirements crews reliably miss. <strong>Decomposition without flame</strong> &mdash; §12.3.5 requires that where trim and upholstery are decomposing from residual heat the decomposition must be stopped by water-spray and the environment made habitable by ventilation, and nobody is looking for a fire that is not there. And <strong>fire inside the aircraft before any other follow-up task</strong>, with §12.3.5&rsquo;s explicit statement that the three follow-up tasks are not in priority order so the on-scene commander decides. Four: confirm the coordination point. §12.3.2 puts activities in the area under the on-scene commander, and §12.3.4.1 says the first crew become available for other duties only <em>with the arrival of additional vehicles</em> &mdash; which means a light vehicle&rsquo;s crew is unsupervised and sustaining for a period, and the handover has to transfer the situation rather than the title. Also record what §12.3.4 gives you: foam gives post-control stability which dry chemical powders do not, so a scene stabilised with powder has no holding period at all in the manual&rsquo;s own words.</p>
+    </blockquote>
+  `,
+  refs: [
+    'ICAO Doc 9137 Part 1 — §12.3.4 foam provides the capability to extinguish the fire and to give a measure of post-control stability which is not provided by dry chemical powders; at category 1 and 2 airports the foam could be contained in a pressure vessel as a premixed solution and expelled by compressed gas which avoids the need for a pump, the system must be capable of discharging for at least one minute; the crew for the first vehicle of a multi-vehicle response should be proficient enough to ensure the operation of the fire suppression equipment and to provide assistance with evacuation; §12.3.4.1 with the arrival of additional vehicles the crew of the first vehicle will become available to assist in other duties',
+    'ICAO Doc 9137 Part 1 — §12.3.1 if there is a fire situation which imperils occupants or rescue forces it may be essential to commence firefighting before attempting to rescue any one of the occupants; §12.3.2 during extended operations it will be imperative to maintain fire security inside and outside the aircraft, which may entail the periodic reapplication of the foam blanket, there may be a requirement to ventilate the fuselage, and activities in the area must be coordinated by the on-scene commander',
+    'ICAO Doc 9137 Part 1 — §12.3.4.1 operational experience indicates there are three main requirements once the major fire situation has been controlled or the critical area around the aircraft has been secured; §12.3.5 these three tasks are not specified in order of priority, if a fire situation exists within the aircraft it will be essential to control this before any other operation can commence, and if there is no fire but trim and upholstery materials are decomposing because of residual heat the decomposition must be stopped by the use of water-spray and the environment made habitable by natural or induced ventilation',
+    'ICAO Doc 9137 Part 1 — §12.3.6 it is important to create a survivable atmosphere within the aircraft as soon as is practicable to protect any occupants who may be unable to evacuate by their own efforts; §12.3.3 a precautionary blanketing of the fuel covered area will be a priority task for the first arriving RFF vehicle(s)',
+    'ICAO Doc 9137 Part 1 — §8.1.1 a foam must flow freely over the fuel surface, must resist disruption due to wind or exposure to heat or flame and should be capable of resealing any ruptures caused by the disturbance of an established blanket; §2.4.7 to §2.4.9 total water Q1 plus Q2 where Q1 controls the fire in the practical critical area and Q2 sustains control and finishes the job; §3.1.1 supplementary water supplies support the principle of continuous application of extinguishing media to maintain survivable conditions for far longer than that provided for by the minimum amounts of water',
+    'Course ART-17 m2 — restrictions on use; m3 — deployment for a landing aircraft; ART-02 — Q1 and Q2 water calculation; ART-04 m2 — dry chemical and foam properties; ART-12 m1 — blanket integrity and the FFFP film; ART-16 m4 — blanket degradation at temperature; ART-25 m1 — supplementary water supply; ART-09 — on-scene command'
+  ],
+  smeChecked: false
+},
+'art22-m1': {
+  title: 'Vegetation fire risk',
+  brief:
+    'Your aerodrome keeps its grass short. The manual tells you why — ' +
+    'and it is not because of fire.',
+  points: [
+    'Annex 14 Volume I Eighth Edition contains no occurrence of the word "grass" or "vegetation". Verified across the full 1.05 MB text, all ten chapters present.',
+    'ICAO Doc 9137 Part 1 contains no occurrence of "vegetation", "wildfire", "brush fire" or "grass fire". Verified.',
+    'Doc 9137 Part 9 Airport Maintenance Practices contains 44 references to grass and none of them concern fire. They concern soil erosion, jet ingestion, rolling drag and bird strikes.',
+    'Grass in the strips should not exceed 10 cm in height; regular mowing will be necessary to keep the grass low, the frequency depending on the climate (§6.2.4, Doc 9137 Part 9).',
+    'The cut material should be picked up since otherwise it might be sucked into jet engines, thus creating a potential hazard to aircraft operation (§6.2.4).',
+    'Grass height should be kept as low as practicable on unpaved runways and taxiways as a rolling drag increases markedly with grass height; take-off distances can increase by some 20 per cent when grass on runways is too high (§6.3.1).',
+    'Mowing attracts birds as the freshly mowed areas are rich in bird food; mowing should take place preferably before periods of lowest air traffic (§6.2.5).',
+    'Where growth retardant can be used to control growth rate, its application is often limited by national or municipal rules for ground water protection (§6.2.4).',
+    'The rupture of fuel tanks and consequent spillage of highly volatile fuels present a high degree of probability of ignition if these liquids contact hot metal parts of the aircraft, or because of sparks caused by movement of wreckage or disturbance of the electrical circuit (§1.1.2, Doc 9137 Part 1).',
+    'UAE GCAA CAR Part XI 33.1: the main areas of concern for RFFS activities are water and media run-off, hot fire training, foam testing and air quality. Worked example only — not a South African requirement.'
+  ],
+  body: `
+    <h3>The finding, stated first because it is the lesson</h3>
+    <p><strong>There is no vegetation fire provision in ICAO Annex 14, and no wildland firefighting provision in Doc 9137.</strong> Both of those statements were verified, not assumed.</p>
+    <p>Annex 14 Volume I, Eighth Edition July 2018 — all ten chapters present in the source, 1.05 MB of text. It contains <strong>zero</strong> occurrences of "grass" and <strong>zero</strong> of "vegetation". Its Chapter 4 is Obstacles; its Chapter 9 §9.4 is Wildlife strike hazard reduction. Neither is about fire.</p>
+    <p>Doc 9137 Part 1 — <strong>zero</strong> occurrences of "vegetation", "wildfire", "brush fire" or "grass fire". Chapter 12 is the entire firefighting doctrine of the manual and none of it is about the ground the aircraft is sitting on.</p>
+    <p>Doc 9137 Part 9, Airport Maintenance Practices, has forty-four references to grass. Every one of them is about birds, soil erosion, jet ingestion or rolling drag. Not one is about fire.</p>
+    <p>That is a strange result for an aviation standard and it is worth asking why. The most likely answer is that grass height on an aerodrome <em>is</em> regulated, but as an <strong>wildlife hazard control</strong> and a <strong>jet ingestion hazard control</strong> — and those are the two things the manual actually writes down. Wildfire risk is managed by whoever owns the land around your aerodrome, under national vegetation and fire law, not by ICAO. Which means <strong>the vegetation fire risk on your aerodrome is controlled by a document this library does not contain.</strong></p>
+
+    <h3>What the manual actually requires, and why each one matters</h3>
+    <p>Even though none of it is about fire, four Part 9 provisions are the closest thing to a vegetation risk assessment here, and they are worth having because they describe the state of the grass.</p>
+
+    <p><strong>Height (§6.2.4).</strong> <em>Grass in the strips should not exceed 10 cm in height. Regular mowing will be necessary to keep the grass low, the frequency depending on the climate.</em></p>
+    <p>Ten centimetres, in the strips, with a frequency that depends on the climate. Read that last clause carefully — it is the manual acknowledging that a hot, wet growing season changes the interval, and that the interval is a local decision.</p>
+
+    <p><strong>Arising hazard (§6.2.4).</strong> <em>The cut material should be picked up since otherwise it might be sucked into jet engines, thus creating a potential hazard to aircraft operation.</em></p>
+    <p>Cut grass is a fuel load, but the manual's stated reason is jet ingestion. Say so honestly: <strong>the manual tells you to pick up cut grass to protect engines, not to reduce fire risk.</strong> The fire reduction is a consequence, and a good one — loose cut material lying in the sun is exactly what carries a grass fire across an apron. But it is our inference, not the standard&rsquo;s reason, and a service that says "the standard requires we pick up grass to prevent fire" is quoting something the standard does not say.</p>
+
+    <p><strong>Aircraft performance (§6.3.1).</strong> <em>Grass height should be kept as low as practicable on unpaved runways and taxiways as a rolling drag increases markedly with grass height. Take-off distances can increase by some 20 per cent when grass on runways is too high.</em></p>
+    <p>Twenty per cent on take-off distance. That is a <em>quantified</em> figure and it is the reason grass height is an aviation control rather than a horticultural one — an aircraft that cannot achieve its required take-off performance on a contaminated surface is an aircraft that cannot depart, and on a high-elevation or hot day with a full load that becomes an operational limit rather than a nuisance.</p>
+
+    <p><strong>Timing (§6.2.5).</strong> <em>Mowing attracts birds as the freshly mowed areas are rich in bird food. To minimize the ever-present risk of bird strikes, mowing should take place preferably before periods of lowest air traffic.</em></p>
+    <p>And this one has an RFF consequence nobody draws out. Mowing is a grass-cutting operation on an aerodrome with aircraft parked on it and crews working. It is a fire risk in exactly the way the manual does not describe.</p>
+
+    <h3>The ground-water restriction, which is the only environmental rule here</h3>
+    <p>§6.2.4 ends with a genuine environmental provision, and it is the only one in the entire library that constrains something an aerodrome does to its own vegetation:</p>
+    <p><em>Where applicable, growth retardant can be used to control growth rate. Its application, however, is often limited by national or municipal rules for ground water protection, since some growth retardant chemicals can detrimentally affect the quality of drinking water.</em></p>
+    <p>Three things in it. Growth retardant is a permitted option for grass height control, which means a short-grass aerodrome may be <em>chemically</em> held short in a growing season. Its use is <em>often limited by national or municipal rules</em> — so the binding constraint is not ICAO, it is your local water authority. And the reason is <em>ground water protection</em>.</p>
+    <p>Confirm what growth retardant your service is permitted to use and on whose authority. If your grass is held short chemically, that is a document you need, and it is a national or municipal one rather than an aviation one.</p>
+
+    <h3>What this course cannot teach you</h3>
+    <p>Four gaps, and they are the whole of a vegetation fire capability:</p>
+    <ol>
+      <li><strong>Fire behaviour on vegetation.</strong> Fuel load, moisture content, rate of spread, spotting distance, flame length, the effect of wind and slope. None of it is in this library. These are the numbers every vegetation fire tactical decision depends on.</li>
+      <li><strong>Grass and bush fire tactics.</strong> Fireline construction, mop-up, burnout, flank and back attacks, the safety offsets that make them survivable. ART-22 m2 cannot teach this and does not pretend to.</li>
+      <li><strong>Interface firefighting.</strong> Structures fire in a built-up area adjacent to wildland fuel is a different discipline with a different set of hazards, and it is where aerodrome-adjacent incidents become worst.</li>
+      <li><strong>Crew safety in wildland fire.</strong> Watch outs and outs, escape routes, the fatality patterns. Every one of those has killed firefighters in this and other countries.</li>
+    </ol>
+    <p>And two aerodrome-specific gaps: <strong>no wildland capability standard is held</strong> (NFPA 1001/1002, or your national fire service equivalent, is the usual reference), and <strong>no national vegetation or fire law is held</strong> — which is the document that actually governs the grass around your aerodrome.</p>
+
+    <h3>What you can do on Monday</h3>
+    <ol>
+      <li><strong>Get the national vegetation and fire law</strong> for your aerodrome&rsquo;s surroundings. That is the binding instrument and it is not here.</li>
+      <li><strong>Get a wildland firefighting reference</strong> — NFPA 1001/1002 or the national equivalent — and have a competent wildland instructor, not an ARFF instructor, teach from it.</li>
+      <li><strong>Walk your strips and measure the grass.</strong> §6.2.4&rsquo;s ten centimetres, in the strips, is a number you can check today.</li>
+      <li><strong>Ask whether your grass is chemically held short</strong> and under whose authority. §6.2.4.</li>
+      <li><strong>Confirm cut grass is being picked up</strong> — for the reason the manual gives, which is jet ingestion. §6.2.4.</li>
+      <li><strong>Treat the fuel load as an observation, not a standard.</strong> Record what condition your grass and any timber or scrub around the perimeter are in during a dry season, because that observation is the beginning of a risk assessment you will have to write yourself.</li>
+    </ol>
+
+    <blockquote>
+      <p><strong>SME action:</strong> this lesson is a gap register and it should be treated as a procurement document. Six items. One: obtain the <strong>national vegetation and fire law</strong> that governs the land around your aerodrome. ICAO is not the authority on grass height here and Annex 14 does not mention it &mdash; Annex 14 Volume I Eighth Edition contains zero occurrences of "grass" and zero of "vegetation", which is a verified fact about the document rather than an inference. Two: obtain a <strong>wildland firefighting reference and a competent instructor</strong>. Fire behaviour, spotting, flame length, rate of spread, fireline tactics and the safety offsets that make them survivable are absent from every document in this library, and no ARFF instructor should be asked to invent them. Three: measure your grass against §6.2.4 &mdash; <strong>not to exceed 10 cm in the strips</strong>, at the frequency your climate requires &mdash; and confirm cut material is being picked up, citing the reason the manual actually gives, which is <em>sucked into jet engines</em>, not fire. Do not quote a fire rationale the standard does not contain. Four: confirm whether growth retardant is in use on your grass and under whose authority, because §6.2.4 notes that its application is often limited by national or municipal rules for ground water protection. Five: get the aircraft performance consequence on the record &mdash; §6.3.1&rsquo;s <strong>take-off distances can increase by some 20 per cent when grass on runways is too high</strong> &mdash; and make sure your operations staff know it, because it turns grass height into a departure limitation rather than a groundskeeping preference. Six: write down what your grass, scrub and perimeter timber actually look like in the dry season. That observation, plus the four documents above, is the beginning of a vegetation fire risk assessment. This platform cannot write the rest of it and it is not going to pretend the standard does.</p>
+    </blockquote>
+  `,
+  refs: [
+    'ICAO Doc 9137 Part 9 Airport Maintenance Practices — §6.2.4 grass in the strips should not exceed 10 cm in height, regular mowing necessary to keep the grass low with the frequency depending on the climate, the cut material should be picked up since otherwise it might be sucked into jet engines thus creating a potential hazard to aircraft operation, growth retardant may be used to control growth rate but its application is often limited by national or municipal rules for ground water protection since some growth retardant chemicals can detrimentally affect the quality of drinking water; §6.2.5 mowing attracts birds as freshly mowed areas are rich in bird food, mowing preferably before periods of lowest air traffic; §6.3.1 grass height kept as low as practicable on unpaved runways and taxiways as rolling drag increases markedly with grass height, take-off distances can increase by some 20 per cent when grass on runways is too high',
+    'ICAO Doc 9137 Part 9 — §6.1.1 maintenance of unpaved areas essential for safety of aircraft on operating areas where grass is capable of protecting the soil against blast erosion, safety of airborne aircraft where trees and bushes may grow within the defined flight pattern, and reducing bird hazards; §6.4.6 trees and bushes need no special maintenance except controlling their height, and when trees penetrate an obstacle limitation surface they should be shortened; all bushes carrying berries should be eliminated to discourage birds',
+    'ICAO Doc 9137 Part 1 — §1.1.2 the rupture of fuel tanks and consequent spillage of highly volatile fuels present a high degree of probability of ignition if these liquids come into contact with hot metal parts of the aircraft or because of sparks caused by the movement of wreckage or disturbance of the electrical circuit; a distinctive characteristic of aircraft fires is their tendency to reach lethal intensity within a very short time',
+    'UAE GCAA CAR Part XI Issue 04 November 2020 — 33.1 the effects on the environment of RFFS activities should be considered and mitigated wherever possible; the main areas of concern the RFFS should consider are water and media run-off, hot fire training, foam testing and air quality. UNITED ARAB EMIRATES DOCUMENT — worked example of adoption mechanics, NOT a South African requirement.',
+    'VERIFIED ABSENCE — Annex 14 Volume I Eighth Edition July 2018 contains zero occurrences of "grass" and zero of "vegetation" across all ten chapters. ICAO Doc 9137 Part 1 contains zero occurrences of "vegetation", "wildfire", "brush fire" and "grass fire". Searches across the full source library found no vegetation fire behaviour, wildland firefighting tactic, interface firefighting or wildland crew safety content; apparent hits for "ember" were all inside the words member and remember.',
+    'NOT IN THIS LIBRARY — no wildland fire behaviour data (fuel load, moisture content, rate of spread, spotting, flame length, wind and slope effects); no grass or bush fire tactics; no interface firefighting doctrine; no wildland crew safety guidance; no wildland capability standard; no national vegetation or fire law governing aerodrome surroundings. Obtain NFPA 1001/1002 or the national equivalent, and your State\u2019s vegetation and fire law.',
+    'Course ART-22 m2 — tactics for grass and bush fires; m3 — protecting aircraft and infrastructure; m4 — interface coordination; ART-03 — Wildlife Hazard Management (Doc 9137 Part 3) is held and is the closest document on vegetation management, though addressed to bird strikes rather than fire'
+  ],
+  smeChecked: false
+},
+
+  'art22-m2': {
+  title: 'Tactics for grass and bush fires',
+  brief:
+    'There are no wildland firefighting tactics in this library. There is ' +
+    'one fire provision, and it is about a bird gun.',
+  points: [
+    'ICAO Doc 9137 Part 3 Wildlife Hazard Management §5.3.2.7: in very dry conditions, proactive fire prevention is needed after a shot is taken; in these conditions, any trace should be followed until it has landed to check it has not ignited the vegetation.',
+    'This is the only wildfire or vegetation ignition provision in any document in this library. Verified by exhaustive search.',
+    'Grass in the strips should not exceed 10 cm in height, with regular mowing frequency depending on the climate (Doc 9137 Part 9 §6.2.4).',
+    'Mowing grass too short may expose invertebrates or other small animals, making them available to predatory birds; when vegetation becomes too tall it could fall down providing shelter and a fertile layer for mice or other wildlife (Doc 9137 Part 3 §4.2.1.2).',
+    'When planning any habitat modification, one must consider how the change may increase the availability of prey, and therefore the risk of a wildlife strike (§4.2.1.2).',
+    'Pyrotechnics may present a FOD hazard to aircraft which should be managed accordingly (§5.3.2.4).',
+    'Each aerodrome should coordinate with ATC concerning the use of pyrotechnics (§5.3.2.6).',
+    'Where growth retardant can be used to control growth rate, its application is often limited by national or municipal rules for ground water protection (Doc 9137 Part 9 §6.2.4).',
+    'UAE GCAA CAR Part XI 33.1 names water and media run-off, hot fire training, foam testing and air quality as the main areas of environmental concern for RFFS activities. Worked example only.',
+    'Boundary: no fire behaviour data, no wildland tactics, no interface doctrine, no wildland crew safety guidance is held. This lesson states that rather than filling it.'
+  ],
+  body: `
+    <h3>The one provision, and where it hides</h3>
+    <p>You will not find wildland firefighting tactics in this library, because they are not in it. But there is exactly one vegetation ignition provision in any document held, and it is worth quoting in full because of how unexpected it is:</p>
+    <p><strong>In very dry conditions, proactive fire prevention is needed after a shot is taken. In these conditions, any trace should be followed until it has landed to check it has not ignited the vegetation.</strong> — ICAO Doc 9137 Part 3, Wildlife Hazard Management, §5.3.2.7</p>
+    <p>It sits in a chapter on pyrotechnic wildlife scaring — cartridges from shotguns, specialised pistols, stationary cannons. The clause is telling a wildlife officer that firing a flare gun at birds in a drought is an ignition risk to the grass, and that "proactive fire prevention" is required, which in context means watching the projectile's fall.</p>
+    <p><strong>That is the entire wildfire content of this source library.</strong> Eighteen lessons of ARFF doctrine, twenty-five courses, and one sentence about vegetation ignition, in the wildlife manual.</p>
+
+    <h3>Why the absence is itself information</h3>
+    <p>It is worth understanding rather than just recording, because it tells you where the authority sits.</p>
+    <p>ICAO Doc 9137 is an airport services manual. It covers what aerodrome operators and their contractors do. Grass height on an aerodrome is a wildlife hazard control, a jet ingestion control and a take-off performance control — all of which Part 9 says explicitly — and a vegetation fire is none of those. Vegetation fire on and around an aerodrome belongs to whoever manages the land: the municipality, the landowner, the national fire service, and the environment or disaster management authority. It is governed by national vegetation and fire law, not by aviation standards.</p>
+    <p>So the absence is not an oversight in the standards. It is a boundary. Which means <strong>the binding document for the biggest fire risk on your aerodrome is not in your library at all.</strong></p>
+
+    <h3>What the manual does give you, and it is more than nothing</h3>
+    <p>Three pieces of sourced content bear on vegetation fire, even though none is a tactic.</p>
+
+    <p><strong>The fuel load is specified. §6.2.4.</strong> <em>Grass in the strips should not exceed 10 cm in height. Regular mowing will be necessary to keep the grass low, the frequency depending on the climate.</em></p>
+    <p>Ten centimetres in the strips. That is a height, and height is a rough proxy for fuel load and therefore for how a grass fire would behave in it. The manual states the figure for birds, ingestion and performance. Its fire consequence is our inference — but it is a reasonable one, and <em>frequency depending on the climate</em> means the fuel load is understood by the manual's authors to vary seasonally and regionally.</p>
+
+    <p><strong>There is a height floor, not just a ceiling. Part 3 §4.2.1.2.</strong></p>
+    <p><em>Management actions targeted at vegetation can increase the risk of exposing prey items in the short-term. For example, mowing grass too short may expose invertebrates or other small animals, making them available to predatory birds. On the other hand, when the vegetation becomes too tall, it could fall down, providing shelter and a fertile layer for mice or other wildlife.</em></p>
+    <p>Read this as a two-sided constraint, because it is one: too short creates a predator food source, too tall creates a fertile layer. Both are wildlife arguments. But both are arguments about <em>the height of the grass</em>, and they bracket the range an aerodrome can hold grass in. That range is your vegetation regime, and it is set by a wildlife manual rather than a fire one — which is itself the clearest possible signal that the fire authority sits elsewhere.</p>
+
+    <p><strong>Ignition sources you control. §5.3.2.4, §5.3.2.6, §6.2.4.</strong> Three separate provisions constrain ignition on a dry aerodrome, and they are all yours to comply with:</p>
+    <ul>
+      <li><em>Pyrotechnics may present a FOD hazard to aircraft which should be managed accordingly</em> — §5.3.2.4. FOD is the stated concern; ignition is the §5.3.2.7 concern.</li>
+      <li><em>Each aerodrome should coordinate with ATC concerning the use of pyrotechnics</em> — §5.3.2.6.</li>
+      <li><em>Growth retardant application is often limited by national or municipal rules for ground water protection</em> — §6.2.4, Part 9. A chemical on grass near an apron is a designed control with a designed risk.</li>
+    </ul>
+
+    <h3>What tactics this lesson cannot give you</h3>
+    <p>And the reason matters, because a partial list of wildland firefighting is dangerous. To attack grass or bush fire you need, at minimum:</p>
+    <ul>
+      <li><strong>Fire behaviour.</strong> Rate of spread, flame length, heat output, fuel moisture, how wind and slope change each. Without these you cannot decide whether an attack is survivable.</li>
+      <li><strong>Spotting.</strong> How far embers travel, and what happens when they land in dry grass. The single mechanism that turns a grass fire into a perimeter fire.</li>
+      <li><strong>Attack construction.</strong> Flank, head, rear, indirect. Point, line, anchor point. Where the fireline goes and who holds it.</li>
+      <li><strong>Safety offsets.</strong> The distances and escape routes that make an attack survivable, and the watch-outs that trigger a withdrawal.</li>
+      <li><strong>Structure fire in vegetation.</strong> Interface fires behave differently again, and they are where fatalities concentrate.</li>
+    </ul>
+    <p>None of that is in this library. <strong>A partial wildland firefighting course is worse than none</strong>, because it teaches confidence without the knowledge that makes confidence valid. This lesson will not do that. It will tell you what fuel you have and what the manual requires, and it will tell you plainly what to go and buy.</p>
+
+    <h3>What to obtain</h3>
+    <ol>
+      <li><strong>A wildland firefighting standard or manual.</strong> NFPA 1001, NFPA 1002, or your national fire service equivalent. This is the document that teaches the five things above.</li>
+      <li><strong>A competent wildland instructor.</strong> Not an ARFF instructor. The competence is different and it is not transferable from aircraft firefighting.</li>
+      <li><strong>Your national vegetation and fire law</strong> for the land around the aerodrome.</li>
+      <li><strong>Your mutual aid position.</strong> Who responds to a vegetation fire at your aerodrome — the municipal fire service, the national service, or nobody. ART-19 m2 is where this belongs, and ART-22 m4 covers it.</li>
+      <li><strong>Your aerodrome&rsquo;s dry-season grass regime</strong> as an observation: height achieved, whether chemically held, cut material pickup, and what the perimeter scrub and timber look like.</li>
+    </ol>
+
+    <blockquote>
+      <p><strong>SME action:</strong> five items, and this lesson is a procurement list. One: <strong>obtain a wildland firefighting reference</strong> &mdash; NFPA 1001, NFPA 1002, or your national fire service equivalent. Fire behaviour, spotting distances, flame length, attack construction and the safety offsets that make an attack survivable are in none of the documents this platform holds, and there is no partial substitute. Do not let anyone assess ARFF personnel on vegetation fire tactics from this course; it states the gap and that is all it can honestly do. Two: <strong>obtain a competent wildland instructor.</strong> The competence is not transferable from aircraft firefighting and treating it as though it is has injured and killed firefighters elsewhere. Three: check your grass regime against §6.2.4 &mdash; <strong>not to exceed 10 cm in the strips</strong>, frequency depending on the climate &mdash; and against the two-sided constraint in Part 3 §4.2.1.2, where mowing too short exposes invertebrates to predatory birds and vegetation too tall creates a fertile layer for mice. That manual is setting your grass height range and it is doing it for bird strikes. Record what range you actually hold and who set it. Four: implement §5.3.2.7 properly. <strong>In very dry conditions, proactive fire prevention is needed after a shot is taken, and any trace should be followed until it has landed to check it has not ignited the vegetation.</strong> Confirm that whoever fires pyrotechnics on your aerodrome follows the trace to the ground in dry conditions, and confirm the §5.3.2.6 coordination with ATC. That is the only vegetation ignition rule in this library and it belongs in your wildlife procedure as well as your fire one. Five: confirm whether growth retardant is used on your grass and under whose authority, noting §6.2.4&rsquo;s reference to national or municipal ground water protection rules &mdash; a chemical control on grass near an apron is a decision somebody made, and that somebody should be identifiable.</p>
+    </blockquote>
+  `,
+  refs: [
+    'ICAO Doc 9137 Part 3 Wildlife Hazard Management — §5.3.2.7 in very dry conditions, proactive fire prevention is needed after a shot is taken; in these conditions, any trace should be followed until it has landed to check it has not ignited the vegetation. THIS IS THE ONLY VEGETATION IGNITION PROVISION IN THE SOURCE LIBRARY.',
+    'ICAO Doc 9137 Part 3 — §5.3.2.4 pyrotechnics may present a FOD hazard to aircraft which should be managed accordingly; §5.3.2.6 each aerodrome should coordinate with ATC concerning the use of pyrotechnics; §5.3.2.1 pyrotechnic wildlife scaring techniques from cartridge, specialised pistol or stationary cannon, used to disperse wildlife',
+    'ICAO Doc 9137 Part 3 — §4.2.1.2 management actions targeted at vegetation can increase the risk of exposing prey items in the short-term; mowing grass too short may expose invertebrates or other small animals making them available to predatory birds; when vegetation becomes too tall it could fall down providing shelter and a fertile layer for mice or other wildlife; when planning any habitat modification one must consider how the change may increase the availability of prey and therefore the risk of a wildlife strike',
+    'ICAO Doc 9137 Part 9 Airport Maintenance Practices — §6.2.4 grass in the strips should not exceed 10 cm in height, regular mowing necessary with frequency depending on the climate; cut material should be picked up since otherwise it might be sucked into jet engines; growth retardant application often limited by national or municipal rules for ground water protection',
+    'UAE GCAA CAR Part XI Issue 04 November 2020 — 33.1 the effects on the environment of RFFS activities should be considered and mitigated wherever possible; the main areas of concern are water and media run-off, hot fire training, foam testing and air quality. UNITED ARAB EMIRATES DOCUMENT — worked example of adoption mechanics, NOT a South African requirement.',
+    'VERIFIED ABSENCE — no fire behaviour data (rate of spread, flame length, heat output, fuel moisture, wind and slope effects), no spotting data, no wildland attack construction, no safety offsets or watch-outs and outs, no interface firefighting doctrine and no wildland crew safety guidance is held in any document in this library.',
+    'NOT IN THIS LIBRARY — NFPA 1001/1002 or national equivalent wildland firefighting standard; national vegetation and fire law; a competent wildland instructor. A partial wildland firefighting course is more dangerous than none, because it confers confidence without the knowledge that makes confidence valid.',
+    'Course ART-22 m1 — vegetation fire risk; m3 — protecting aircraft and infrastructure; m4 — interface coordination; ART-19 m2 — mutual aid; ART-25 m3 — environmental provisions'
+  ],
+  smeChecked: false
+},
+'art22-m3': {
+  title: 'Protecting aircraft and infrastructure',
+  brief:
+    'An aerodrome is the most expensive thing on your grass. The manual ' +
+    'says almost nothing about saving it from fire, and says a great deal ' +
+    'about not damaging it.',
+  points: [
+    'The rupture of fuel tanks and consequent spillage of highly volatile fuels present a high degree of probability of ignition if these liquids contact hot metal parts of the aircraft, or because of sparks caused by the movement of wreckage or disturbance of the electrical circuit (Doc 9137 Part 1 §1.1.2).',
+    'A distinctive characteristic of aircraft fires is their tendency to reach lethal intensity within a very short time (§1.1.2).',
+    'Should spill of a flammable liquid occur without fire breaking out, it is important to eliminate as many ignition sources as possible while the spill is being neutralized or covered with foam, and engine ignition sources should be made inert or cooled (§12.1.9).',
+    'If the source of heat and fire cannot be controlled, fuel tanks exposed but not involved should be protected by appropriate agents to prevent involvement or explosion (§12.1.14).',
+    'The "no smoking" rule must be rigidly enforced at the scene of the accident and in the immediate vicinity (§12.1.16).',
+    'For optimum foam firefighting and burn-back performance the foam-making equipment should produce expansions and 25 per cent drainage times of acceptable levels; expansion 6 to 10 for film-forming or fluorine free synthetic foams and 8 to 12 for protein based foams (§5.7.16).',
+    'Trees and bushes need no special maintenance except for controlling their height, and when trees penetrate an obstacle limitation surface they should be shortened (Doc 9137 Part 9 §6.4.6).',
+    'The use of urea for winter service on runways and taxiways will often kill the grass along the edges of treated pavement areas (§6.2.3, Doc 9137 Part 9).',
+    'Equipment and work performed by contractors on unpaved areas often must be monitored by authorized personnel to safeguard air traffic safety requirements (§6.1.2, Doc 9137 Part 9).',
+    'Boundary: no source in this library addresses protecting an aircraft or structure from an approaching vegetation fire, nor aircraft protection in wildfire conditions.'
+  ],
+  body: `
+    <h3>The one thing the manual says about protecting things, and it is about fuel</h3>
+    <p>§1.1.2 is the paragraph that starts the whole manual&rsquo;s fire doctrine, and it is the only place in Chapter 1 that speaks to protecting an aircraft from ignition:</p>
+    <p><strong>The rupture of fuel tanks in an aircraft crash and the consequent spillage of highly volatile fuels, and other flammable liquids used by aircraft, present a high degree of probability of ignition if these liquids come into contact with hot metal parts of the aircraft or because of sparks caused by the movement of wreckage or disturbance of the electrical circuit. Fires may also occur through the discharge of accumulated electrostatic charges at the time of ground contact or during fuelling operations. A distinctive characteristic of aircraft fires is their tendency to reach lethal intensity within a very short time.</strong></p>
+    <p>Note what the ignition sources are: <strong>hot metal parts of the aircraft</strong>, <em>sparks caused by the movement of wreckage</em>, <em>disturbance of the electrical circuit</em>, and <em>electrostatic discharge</em>.</p>
+    <p>All four of those are things a vegetation fire can deliver to an aircraft. Hot metal is a burnt-through wing skin. Movement of wreckage is an aircraft shifted by convective heat or by someone pulling it clear. Disturbance of the electrical circuit is any damage to a harness. Electrostatic discharge is dry conditions.</p>
+    <p>So the manual&rsquo;s own ignition analysis tells you that <strong>an aircraft sitting on an aerodrome in a dry season with vegetation fire within reach is standing in a documented ignition set</strong> — and then the manual says nothing further about it, in any chapter, ever. That is the honest position and ART-22 m2 covers what to obtain.</p>
+
+    <h3>Protection without fire: §12.1.14 is the transferable clause</h3>
+    <p>This is the most useful thing in the manual for a vegetation incident, and it is written for a fire you have already lost control of:</p>
+    <p><strong>If the source of heat and fire cannot be controlled, fuel tanks exposed but not involved should be protected by appropriate agents to prevent involvement or explosion.</strong> — §12.1.14</p>
+    <p><em>Exposed but not involved.</em> <em>Prevent involvement <strong>or explosion</strong>.</em> Three words doing separate work. Exposed but not involved is the triage rule from ART-20: sort the things at risk into involved, exposed, and uninvolved, and spend your agent on the middle category. And <em>or explosion</em> is a second outcome — a fuel tank that has not caught can still fail catastrophically without having burned.</p>
+    <p>Applied to a vegetation incident on a stand: an aircraft is involved in nothing yet. It is exposed. It is sitting on fuel. The manual&rsquo;s answer to exactly that state is <em>protect it with appropriate agents</em>, and the priority is that aircraft over everything else on the field.</p>
+    <p>The adjacent clause that prevents it becoming a fire: <strong>should spill of a flammable liquid occur without fire breaking out, it is important to eliminate as many ignition sources as possible while the spill is being neutralized or covered with foam.</strong> §12.1.9. And the one that is absolute regardless of what is happening outside: <strong>the "no smoking" rule must be rigidly enforced at the scene of the accident and in the immediate vicinity.</strong> §12.1.16.</p>
+
+    <h3>Foam that survives: §5.7.16, and why it matters here</h3>
+    <p>Reapplying ART-21 m1&rsquo;s clause because it is the specification your equipment is set to and it is what will have to hold a protective film over a fuel tank in hot, dirty conditions:</p>
+    <p><strong>For optimum foam firefighting and burn-back performance the foam-making equipment should produce expansions and 25 per cent drainage times of acceptable levels. Generally, expansion ranges from 6 to 10 for film-forming or fluorine free synthetic foams and from 8 to 12 for protein based foams. Drainage time should be in excess of 3 minutes for film-forming foams and in excess of 5 minutes for protein-based foams when tested in accordance with their respective methods.</strong></p>
+    <p><em>Generally.</em> A band, not a constant, and measured in whatever conditions your acceptance test was run in. A protective application onto a heated fuel tank in dry summer conditions is not the test condition.</p>
+
+    <h3>What the manual says about vegetation near infrastructure, which is not fire</h3>
+    <p>Three Part 9 provisions bear on protecting infrastructure from vegetation, and all three are obstacle and performance controls rather than fire controls.</p>
+    <p><strong>Trees and their height (§6.4.6).</strong> <em>Trees and bushes need no special maintenance except for controlling their height. When trees penetrate an obstacle limitation surface they should be shortened. One suitable technique is to cut the trees or bushes but leave their roots in the ground so that they may sprout again.</em></p>
+    <p>Stump-sprouting. Read that in a wildfire context: a tree cut to clear an obstacle limitation surface regrows from the root, and a regrown tree or bush is both an obstacle issue and a fuel load. The manual does not connect those two things. You should.</p>
+    <p><strong>Urea and dead grass (§6.2.3).</strong> <em>The use of urea for winter service on runways and taxiways will often kill the grass along the edges of treated pavement areas.</em></p>
+    <p>Urea applied for winter service kills the grass along the treated edges. Dead grass along a runway edge in a dry summer is a fuel load with a documented cause and a seasonal pattern. ART-21 m4 covers the winter procedure that causes it; this is the fire consequence the winter chapter does not mention.</p>
+    <p><strong>Contractor work (§6.1.2).</strong> <em>Work performed by contractors must be monitored by authorized personnel to safeguard air traffic safety requirements.</em></p>
+    <p>Mowing, spraying, cutting and clearance on an aerodrome is contractor work. Somebody authorised must be watching it. That is an aviation safety requirement in the manual and it is the natural place to hang an ignition control in a dry season.</p>
+
+    <h3>Working the incident</h3>
+    <ol>
+      <li><strong>Identify what is exposed but not involved.</strong> §12.1.14. Aircraft first, in the order §12.2.1 makes them the prime mission.</li>
+      <li><strong>Protect with appropriate agents.</strong> §12.1.14. Foam per §5.7.16, in the drainage band you measured.</li>
+      <li><strong>Eliminate ignition sources while you do it.</strong> §12.1.9 — not afterwards.</li>
+      <li><strong>Expect involvement or explosion</strong> from an uninvolved tank. §12.1.14 gives two outcomes for a reason.</li>
+      <li><strong>No smoking, rigidly, in the immediate vicinity.</strong> §12.1.16.</li>
+      <li><strong>Remember the ignition set.</strong> §1.1.2 — hot metal, wreckage movement, circuit disturbance, static. All four are available to you and to the fire.</li>
+      <li><strong>Coordinate.</strong> §12.3.2 — activities in the area under the on-scene commander. A vegetation fire brings the aerodrome operator, ATC, wildlife, contractors and possibly municipal fire services into one area.</li>
+      <li><strong>This is a mutual aid event.</strong> §12.1.5 — additional resources should be dispatched when the site is beyond normal fire-protected zones or where water relays may be required.</li>
+    </ol>
+
+    <blockquote>
+      <p><strong>SME action:</strong> five items. One: audit your aircraft protection for a vegetation incident using §12.1.14 as the criterion &mdash; <em>if the source of heat and fire cannot be controlled, fuel tanks exposed but not involved should be protected by appropriate agents to prevent involvement <strong>or explosion</strong></em>. Confirm you can identify, in the first minute, which aircraft on which stands are exposed but not involved, because that list is the whole of your protection priority and it is a list somebody has to have prepared. Two: confirm the agent available for it, and that your foam-making system still produces expansion and 25 per cent drainage inside §5.7.16&rsquo;s band in hot, dry conditions &mdash; <strong>6 to 10 expansion and over 3 minutes drainage</strong> for film-forming and fluorine-free synthetic foams, <strong>8 to 12 and over 5 minutes</strong> for protein-based. The manual says <em>generally</em>, which means it is a band and not a constant, and a protective application over a heated tank in summer is not your acceptance test condition. Three: note the two vegetation facts the maintenance manual records and connects to nothing. §6.2.3 &mdash; <strong>urea for winter service will often kill the grass along the edges of treated pavement areas</strong>, which is a documented fuel load with a seasonal pattern. And §6.4.6 &mdash; trees cut to clear an obstacle limitation surface are cut but <em>left to sprout again</em>, so clearance creates regrowth. Put both into your dry-season fuel observation. Four: confirm the §6.1.2 contractor monitoring requirement is actually staffed during dry-season mowing and clearance, since that is the natural control point for ignition on an aerodrome and it is already an aviation safety duty. Five: treat this as a mutual aid event under §12.1.5 and confirm it appears in your aerodrome emergency plan &mdash; additional resources should be dispatched when the site is beyond normal fire-protected zones or where water relays may be required. Nobody in this library tells you who brings a vegetation fire to your aerodrome, so that name has to be in your plan rather than discovered.</p>
+    </blockquote>
+  `,
+  refs: [
+    'ICAO Doc 9137 Part 1 — §1.1.2 rupture of fuel tanks and spillage of highly volatile fuels present a high degree of probability of ignition if these liquids contact hot metal parts of the aircraft or because of sparks caused by movement of wreckage or disturbance of the electrical circuit; fires may also occur through discharge of accumulated electrostatic charges at ground contact or during fuelling; a distinctive characteristic of aircraft fires is their tendency to reach lethal intensity within a very short time',
+    'ICAO Doc 9137 Part 1 — §12.1.9 should spill of a flammable liquid occur without fire breaking out it is important to eliminate as many ignition sources as possible while the spill is being neutralized or covered with foam, and engine ignition sources should be made inert or cooled; §12.1.14 if the source of heat and fire cannot be controlled, fuel tanks exposed but not involved should be protected by appropriate agents to prevent involvement or explosion; §12.1.16 the "no smoking" rule must be rigidly enforced at the scene of the accident and in the immediate vicinity',
+    'ICAO Doc 9137 Part 1 — §5.7.16 for optimum foam firefighting and burn-back performance the foam-making equipment should produce expansions and 25 per cent drainage times of acceptable levels; expansion 6 to 10 for film-forming or fluorine free synthetic foams and 8 to 12 for protein based foams; drainage in excess of 3 minutes for film-forming foams and in excess of 5 minutes for protein-based foams',
+    'ICAO Doc 9137 Part 1 — §12.2.1 the prime mission of the airport RFF service is to control the fire in the critical area to be protected in any post-accident fire situation with a view to permitting the evacuation of the aircraft occupants; §12.3.2 activities in the area must be coordinated by the on-scene commander; §12.1.5 additional resources should be dispatched when the accident site is known to be beyond normal fire-protected zones or where water relays may be required, with prearrangements to assure that additional supplies of extinguishing agents are brought to the scene',
+    'ICAO Doc 9137 Part 9 Airport Maintenance Practices — §6.4.6 trees and bushes need no special maintenance except for controlling their height; when trees penetrate an obstacle limitation surface they should be shortened; one suitable technique is to cut the trees or bushes but leave their roots in the ground so that they may sprout again. §6.2.3 the use of urea for winter service on runways and taxiways will often kill the grass along the edges of treated pavement areas. §6.1.2 work performed by contractors must be monitored by authorized personnel to safeguard air traffic safety requirements',
+    'VERIFIED ABSENCE — no source in this library addresses protecting an aircraft, vehicle or structure from an approaching vegetation fire, nor aircraft protection measures in wildfire conditions, nor aerodrome infrastructure protection from wildfire.',
+    'Course ART-22 m1 — vegetation fire risk; m2 — tactics; m4 — interface coordination; ART-20 m2 — protecting what is not yet involved; ART-21 m1 — heat and foam performance; ART-21 m4 — winter urea and de-icing; ART-12 m4 — spill response'
+  ],
+  smeChecked: false
+},
+
+  'art22-m4': {
+  title: 'Interface coordination',
+  brief:
+    'Nobody in this library tells you who brings a vegetation fire to your ' +
+    'aerodrome. That is not an oversight in your plan, it is a hole in it.',
+  points: [
+    'ICAO Doc 9137 Part 7 §3.14.1: airport emergencies may be of such magnitude that local rescue and fire fighting, security, law enforcement and medical services are inadequate to handle the situation; it is therefore strongly recommended that written mutual aid programmes be initiated to ensure the prompt response of adequate services elsewhere.',
+    'Mutual aid agreements are normally co-ordinated by the airport authority as well as the agencies involved, and implemented by the airport authority (Doc 9137 Part 7 §3.14.1).',
+    'All mutual aid agreements shall be reviewed or revised annually, and telephone and personnel contacts shall be reviewed and updated monthly (§3.14.2).',
+    'Each airport authority should be responsible for establishing emergency plans and procedures to deal with all unusual conditions at the airport and for co-ordinating the plan with surrounding community authorities (§1.2.1).',
+    'Where a military installation is located on or in the vicinity of an airport, a mutual aid agreement shall be initiated to integrate these personnel within the command, communication and co-ordination functions of the emergency plan (§3.15).',
+    'The aerodrome emergency plan shall be tested by conducting a full-scale aerodrome emergency exercise and/or review of the aerodrome emergency plan, with opportunities for interested parties to participate (Annex 14 §9.1.13).',
+    'Additional resources should be dispatched when the accident site is known to be beyond normal fire-protected zones or where water relays may be required, and prearrangements should be made to assure that additional supplies of extinguishing agents are brought to the scene (Doc 9137 Part 1 §12.1.5).',
+    'Activities in the area must be coordinated by the on-scene commander (Doc 9137 Part 1 §12.3.2).',
+    'The RFF service at an airport should normally be under the administrative control of the airport management (Doc 9137 Part 1 §1.2.1).',
+    'Boundary: no source in this library identifies a wildland fire agency, a mutual aid arrangement for vegetation fire, or an interface fire coordination procedure.'
+  ],
+  body: `
+    <h3>The honest headline first</h3>
+    <p><strong>No document in this library tells you who responds to a vegetation fire at your aerodrome.</strong></p>
+    <p>Not one. Searched across every document held, there is no wildland fire agency named, no mutual aid arrangement for vegetation fire, no interface coordination procedure, and no aerodrome vegetation fire plan. The courses in ART-22 exist in your curriculum because a real service has to answer those questions, and the sources this platform holds do not.</p>
+    <p>So this lesson teaches the coordination framework — which <em>is</em> well sourced, and is the part you can build on today — and it converts the missing piece into a specific list of documents to obtain rather than leaving you to find the gap on the day.</p>
+
+    <h3>The framework is right there in Part 7</h3>
+    <p>§3.14.1 is the clause and it is written for exactly the situation this course describes:</p>
+    <p><strong>Airport emergencies may be of such magnitude that local rescue and fire fighting, security, law enforcement and medical services are inadequate to handle the situation. It is therefore strongly recommended that written mutual aid programmes be initiated to ensure the prompt response of adequate rescue and fire fighting, security, law enforcement and medical services elsewhere. Such mutual aid agreements are normally co-ordinated by the airport authority as well as the agencies involved, and implemented by the airport authority.</strong></p>
+    <p>Three things in it that matter for vegetation fire.</p>
+    <p><em>May be of such magnitude that local services are inadequate.</em> That is the standard acknowledging that a capability gap is likely rather than exceptional — and a vegetation fire on or near an aerodrome is the textbook case. You are not asking for a favour; you are discharging a planning obligation the standard has already framed.</p>
+    <p><em>Written</em> mutual aid programmes. Written. A phone number and goodwill is not a mutual aid programme, and a vegetation fire is the scenario where that distinction gets tested at three in the morning in a smoke layer.</p>
+    <p><em>Co-ordinated by the airport authority as well as the agencies involved, and implemented by the airport authority.</em> Two words doing different work. <strong>Co-ordinated</strong> means the airport authority convenes the parties. <strong>Implemented</strong> means the airport authority does it — the agreement is not a document the agencies maintain between themselves. If your vegetation fire mutual aid sits in a municipal file and your aerodrome emergency plan does not reference it, it does not meet this clause.</p>
+
+    <h3>The maintenance requirement is the part everybody misses</h3>
+    <p>§3.14.2 is two sentences with two different intervals, and the second one is the operational one:</p>
+    <p><strong>All mutual aid agreements shall be reviewed or revised annually. Telephone and personnel contacts shall be reviewed and updated monthly.</strong></p>
+    <p>Annual review of the agreement. <strong>Monthly</strong> review of telephone numbers and personnel contacts. Monthly, because the thing that fails in a mutual aid arrangement is almost never the agreement &mdash; it is that the person named on it left the service nine months ago.</p>
+    <p>Apply this to a vegetation fire partner specifically. You are asking a municipal or national fire service to attend your aerodrome. Their station commander changes. Their dispatch number does not. Their vehicle capability does. <strong>Monthly contact review is the mechanism that stops your plan naming someone who no longer holds the role.</strong> ART-19 m2 covers the general requirement; what makes it operational here is that your mutual aid partner is an organisation outside your chain of command that you do not train with.</p>
+
+    <h3>Command, and who owns the plan</h3>
+    <p>Two provisions that decide who is actually in charge when a grass fire and an aircraft accident meet on your aerodrome.</p>
+    <p><strong>§1.2.1:</strong> <em>each airport authority should be responsible for establishing emergency plans and procedures to deal with all unusual conditions at the airport and for co-ordinating the plan with surrounding community authorities.</em> And from Part 1 §1.2.1, the RFF service itself: <em>should normally be under the administrative control of the airport management.</em></p>
+    <p>So the plan is the airport authority&rsquo;s, not the fire service&rsquo;s, and the RFF service is under airport management. Practically: a vegetation fire plan belongs in the aerodrome emergency plan, and your service contributes to it rather than owning it. That is a useful thing to know when you are told a vegetation fire is &ldquo;not our problem.&rdquo;</p>
+    <p><strong>§12.3.2:</strong> <em>activities in the area must be coordinated by the on-scene commander.</em> That is the on-scene commander for the aerodrome accident. If a grass fire is approaching an aircraft accident site, one person coordinates the area. Confirm your procedure says so, and confirm who that person is when the fire is coming from outside your perimeter.</p>
+    <p>§12.1.5 is the resourcing clause and it is the one that bites in a vegetation incident: <em>additional resources should be dispatched when the accident site is known to be beyond normal fire-protected zones (underground water mains and hydrants) or where water relays may be required. Prearrangements should be made to assure that additional supplies of extinguishing agents are brought to the accident scene.</em></p>
+
+    <h3>Military, and the one that might already exist near you</h3>
+    <p>§3.15 is a short clause with real content and it is worth checking whether it applies to you before you go looking for a municipal partner:</p>
+    <p><strong>Where a military installation is located on or in the vicinity of an airport, a mutual aid agreement shall be initiated to integrate these personnel within the command, communication and co-ordination functions of the emergency plan.</strong></p>
+    <p><em>Shall be initiated</em>, not may. And the integration required is into <em>command, communication and co-ordination</em> — the three functions, not just manpower. A wildland capability is exactly what a military or para-military formation near your aerodrome may hold, and §3.15 gives you a documented basis to ask for it.</p>
+    <p>Two things to check: is there a military installation on or near your aerodrome, and if so is there a mutual aid agreement that integrates their command, communication and co-ordination into your plan? If there is an installation and no agreement, that is a §3.15 finding you can act on this month.</p>
+
+    <h3>Test it, or it is a document</h3>
+    <p>Annex 14 §9.1.13 requires that the plan <em>shall be tested by conducting a full-scale aerodrome emergency exercise and/or review of the aerodrome emergency plan, with opportunities for interested parties to participate.</em></p>
+    <p>Interested parties participate. Your vegetation fire partner is an interested party. ART-19 m4 covers the exercise programme and the six-phase TRA method from CAP 1150; what this lesson adds is that <strong>a vegetation fire scenario has to be in it, with the partner agency in the room, not represented by a letter.</strong></p>
+    <p>Because every framework in this lesson reduces to one question that only an exercise answers: <em>on the day, does the number in the agreement still reach a person who will come?</em></p>
+
+    <h3>Build the interface plan</h3>
+    <ol>
+      <li><strong>Identify the vegetation fire agency.</strong> Municipal, national, or para-military. Name it. §3.14.1.</li>
+      <li><strong>Written mutual aid agreement</strong>, coordinated by the airport authority and implemented by it &mdash; in the aerodrome emergency plan, not in a municipal file. §3.14.1, §1.2.1.</li>
+      <li><strong>Monthly contact review.</strong> §3.14.2. The name, the number, and who actually has the capability.</li>
+      <li><strong>Check the military case.</strong> §3.15 &mdash; installation on or nearby, agreement integrating command, communication and co-ordination.</li>
+      <li><strong>Command.</strong> One on-scene commander coordinates the area. §12.3.2. Say who, when the fire is external.</li>
+      <li><strong>Resourcing.</strong> §12.1.5 &mdash; additional resources beyond the normal fire-protected zones, and water relays.</li>
+      <li><strong>Exercise it</strong> with the partner present. Annex 14 §9.1.13, ART-19 m4.</li>
+      <li><strong>Get the wildland competence question answered separately.</strong> §3.14.1 gets you a partner who will come. It does not make your crews competent at vegetation fire. That is ART-22 m2&rsquo;s gap and it needs an instructor and a reference, not an agreement.</li>
+    </ol>
+
+    <blockquote>
+      <p><strong>SME action:</strong> five items, and the first is the one that closes the biggest hole. One: <strong>find out who brings a vegetation fire to your aerodrome and put it in writing.</strong> No document in this library names a wildland fire agency or an arrangement for vegetation fire, so this is a document you must obtain, not one you can look up. §3.14.1 strongly recommends written mutual aid programmes precisely because local services may be inadequate &mdash; and it requires the agreement to be co-ordinated by the airport authority as well as the agencies involved and implemented by the airport authority, which means it belongs in your aerodrome emergency plan and not in a file at the municipality. Two: implement §3.14.2 exactly as written. <strong>All mutual aid agreements shall be reviewed or revised annually. Telephone and personnel contacts shall be reviewed and updated monthly.</strong> Put a monthly diary item in for the vegetation fire partner&rsquo;s contact and capability &mdash; their station commander changes and your plan does not. Three: check §3.15. <em>Where a military installation is located on or in the vicinity of an airport, a mutual aid agreement shall be initiated to integrate these personnel within the command, communication and co-ordination functions of the emergency plan.</em> That is <em>shall</em>, and a wildland capability is exactly what such an installation may hold. If there is one near you and no agreement, that is a finding you can act on. Four: write the command question down. §12.3.2 puts activities in the area under the on-scene commander; confirm your procedure identifies who holds it when the fire is coming from outside your perimeter and the aerodrome operator, ATC, the RFF service, the wildlife contractor and the fire agency are all on the same ground. Five: separate the two problems. <strong>An agreement gets someone to come; it does not make your crews competent at vegetation fire.</strong> Get the partner, and separately obtain the wildland reference and instructor that ART-22 m2 says you need. Then put a vegetation fire scenario into your full-scale exercise with the partner agency in the room &mdash; Annex 14 §9.1.13 requires the plan to be tested with opportunities for interested parties to participate, and a partner represented by a letter is not a participant.</p>
+    </blockquote>
+  `,
+  refs: [
+    'ICAO Doc 9137 Part 7 Airport Emergency Planning — §3.14.1 airport emergencies may be of such magnitude that local rescue and fire fighting, security, law enforcement and medical services are inadequate to handle the situation; it is therefore strongly recommended that written mutual aid programmes be initiated to ensure the prompt response of adequate services elsewhere; such mutual aid agreements are normally co-ordinated by the airport authority as well as the agencies involved, and implemented by the airport authority. §3.14.2 all mutual aid agreements shall be reviewed or revised annually; telephone and personnel contacts shall be reviewed and updated monthly. §3.15 where a military installation is located on or in the vicinity of an airport a mutual aid agreement shall be initiated to integrate these personnel within the command, communication and co-ordination functions of the emergency plan',
+    'ICAO Doc 9137 Part 7 — §1.2.1 each airport authority should be responsible for establishing emergency plans and procedures to deal with all unusual conditions at the airport and for co-ordinating the plan with surrounding community authorities, and for assignment of emergency personnel and equipment provided by all concerned departments and agencies, and for providing maximum aircraft/airport emergency services and mutual aid',
+    'ICAO Doc 9137 Part 1 — §1.2.1 the RFF service at an airport should normally be under the administrative control of the airport management; §12.1.5 additional resources should be dispatched when the accident site is known to be beyond normal fire-protected zones (underground water mains and hydrants) or where water relays may be required, with prearrangements to assure that additional supplies of extinguishing agents are brought to the accident scene; §12.3.2 activities in the area must be coordinated by the on-scene commander',
+    'ICAO Annex 14 Volume I — §9.1.13 the plan shall be tested by conducting a full-scale aerodrome emergency exercise and/or review of the aerodrome emergency plan, with opportunities for interested parties to participate',
+    'VERIFIED ABSENCE — no source in this library identifies a wildland or vegetation fire agency, a mutual aid arrangement for vegetation fire, an interface fire coordination procedure, or an aerodrome vegetation fire plan.',
+    'NOT IN THIS LIBRARY — wildland firefighting standard (NFPA 1001/1002 or national equivalent), competent wildland instructor, national vegetation and fire law. An agreement gets a partner to attend; it does not confer competence, and ART-22 m2&rsquo;s gap is a separate procurement.',
+    'Course ART-22 m1 — vegetation fire risk; m2 — tactics for grass and bush fires; m3 — protecting aircraft and infrastructure; ART-19 m2 — mutual aid; m2 — agencies and capabilities; m4 — full-scale exercise; ART-09 — command and control'
+  ],
+  smeChecked: false
+},
 };
 
 /**

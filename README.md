@@ -14,18 +14,20 @@ The **platform is complete and working**: navigation, course catalogue, lesson
 reader, assessments with explanations, progress tracking, offline caching,
 installable as an app, and a portable training record.
 
-The **course content is a scaffold.** What exists today:
+The **lesson text is complete but unreviewed.** What exists today:
 
 | Built | Not built |
 |-------|-----------|
-| All 25 course structures | Lesson body text (99 of 107 written) |
-| All learning outcomes | SME verification of the technical claims |
-| All governing standards references | Questions beyond the 30 seeded |
-| Nine technical diagrams | Video of your own crews and equipment |
-| 18 verified FAA training videos | SME-reviewed local footage |
-| Full assessment engine | Content review sign-off |
+| All 25 course structures | SME verification of the technical claims |
+| All 107 lesson bodies written | Questions beyond the 30 seeded |
+| All learning outcomes | Video of your own crews and equipment |
+| All governing standards references | SME-reviewed local footage |
+| Nine technical diagrams | Photographs (system built, no images bundled) |
+| 18 verified FAA training videos | Content review sign-off |
+| Full assessment engine | A binding national instrument (none held) |
+| Photo figure system, offline precached | |
 
-**Fully written courses (23 of 25):** ART-01 ARFF Foundations & the Regulatory
+**All 25 courses fully written.** ART-01 ARFF Foundations & the Regulatory
 Framework, ART-02 Determining the Required ARFF Level, ART-03 Levels 1-10 Agents
 Vehicles & Discharge Rates, ART-04 Extinguishing Agents, ART-05 Foam Systems
 Chambers & Turbines, ART-08 RFF Personnel Training & Competency, ART-09 Emergency
@@ -35,7 +37,15 @@ ART-06 RFF Vehicles & Emergency Appliances, ART-07 PPE SCBA & Crew Fitness, ART-
 & Live Fire, ART-19 Aerodrome Emergency Planning & Full-Scale Exercise, ART-13 Dangerous Goods & Hazardous Cargo, ART-14 Lithium Battery Hazards &
 Response, ART-20 Responding to the Unexpected, ART-23 Off-Airport & Remote Stand Response, ART-12 Aviation Fuel, Refuelling & Spill Response, ART-25 Water Supply, Hydrants & Sustainability,
 ART-24 Emergency Medical Response & Casualty Care,
-and ART-21 RFF Operations in Adverse Weather.
+ART-21 RFF Operations in Adverse Weather,
+ART-17 Rover, Spot Fire & Follow-up Vehicles, and
+ART-22 Wildfire Interface & Airfield Vegetation Fires.
+
+ART-17 and ART-22 are complete but carry large declared source gaps. `rover`,
+`spot fire`, `wildfire`, `vegetation fire` and `brush fire` appear in no document
+in the source library, and Annex 14 Volume I Eighth Edition contains no
+occurrence of "grass" or "vegetation". Those lessons teach what is sourced and
+state what must be obtained. See the gap register in `deploy/review-pack.html`.
 
 **No unreviewed content is ever presented as fact.** Every lesson without written
 body content renders a visible **"Lesson not yet written"** banner. Every assessment
