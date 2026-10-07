@@ -187,7 +187,7 @@ html[data-theme="night"] .i-sun, html[data-theme="day"] .i-moon { display: none;
 /* ── Tab bar ─────────────────────────────────────────────────────────── */
 .tabbar {
   position: fixed; left: 0; right: 0; bottom: 0; z-index: 50;
-  display: grid; grid-template-columns: repeat(4, 1fr);
+  display: grid; grid-template-columns: repeat(5, 1fr);
   height: calc(var(--tabbar-h) + env(safe-area-inset-bottom));
   padding-bottom: env(safe-area-inset-bottom);
   background: color-mix(in srgb, var(--bg-2) 92%, transparent);
@@ -596,6 +596,49 @@ html[data-theme="day"] .hero { background: linear-gradient(155deg, var(--navy) 0
 }
 .diagram--missing code, .video--missing code { font-family: var(--mono); font-size: .95em; }
 
+/* ==========================================================================
+   PHOTOS
+   Structurally identical to .diagram so a photograph and a drawing sit
+   identically in the flow of a lesson and the reader cannot tell from the
+   frame which one they are looking at.
+   ========================================================================== */
+.fig--photo {
+  margin: 22px 0; padding: 8px;
+  background: var(--surface-2); border: 1px solid var(--line-soft);
+  border-radius: 14px;
+}
+.fig--photo img {
+  display: block; width: 100%; height: auto;
+  border-radius: 8px;
+  /* Photographs are colour evidence. Never let a theme filter lie about the
+     colour of a fire, an aircraft marking or an agent. */
+  filter: none;
+  background: var(--surface-3);
+}
+.fig--photo figcaption {
+  margin-top: 10px; padding: 10px 4px 2px;
+  border-top: 1px solid var(--line-soft);
+  font-size: .78rem; line-height: 1.5; color: var(--text-2);
+}
+.fig--photo figcaption b { color: var(--text); }
+/* Credit line sits under the caption in a smaller, quieter face. Required for
+   anything the operator did not photograph themselves. */
+.fig__credit {
+  margin: 6px 4px 2px; font-size: .7rem; color: var(--text-3);
+  font-family: var(--mono); letter-spacing: .01em;
+}
+/* An unregistered key renders a visible note during authoring. It must never
+   reach a learner as a broken image, and it must never be mistaken for
+   content — hence the dashed gold frame used for missing diagrams. */
+.fig--missing {
+  margin: 22px 0; padding: 13px 15px;
+  background: var(--surface-2); border: 1px dashed var(--gold);
+  border-radius: 12px; color: var(--gold-bright); font-size: .82rem;
+}
+.fig__missing strong { display: block; color: var(--gold-lift); margin-bottom: 4px; }
+.fig__missing span { color: var(--text-2); line-height: 1.5; }
+.fig--missing code { font-family: var(--mono); font-size: .95em; }
+
 /* Structural strokes and fills */
 .dg-s   { stroke: var(--line); fill: none; }
 .dg-tyre   { fill: var(--slate-lift); stroke: var(--line); stroke-width: 1.6; }
@@ -724,4 +767,67 @@ html[data-theme="day"] .hero { background: linear-gradient(155deg, var(--navy) 0
   .hero__title { font-size: 1.9rem; }
   .ring__dial { width: 124px; height: 124px; }
   .tabbar { max-width: 940px; left: 50%; transform: translateX(-50%); border-left: 1px solid var(--line-soft); border-right: 1px solid var(--line-soft); }
+}
+
+/* ==========================================================================
+   VIDEO LIBRARY
+   A plain list of every verified source with its direct link. Deliberately
+   not a grid of thumbnails: this is a reference list a learner uses on a
+   laptop over a connection, and the thumbnail images are remote anyway.
+   ========================================================================== */
+.vidlib__series {
+  font-size: .82rem; font-weight: 700; letter-spacing: .04em;
+  text-transform: uppercase; color: var(--gold-lift);
+  margin: 22px 0 8px; display: flex; align-items: baseline; gap: 8px;
+}
+.vidlib__series small {
+  font: 600 .7rem/1 var(--font); letter-spacing: .02em;
+  text-transform: none; color: var(--text-3);
+}
+.vidlib { list-style: none; margin: 0 0 4px; padding: 0; }
+.vidlib li {
+  display: flex; align-items: center; flex-wrap: wrap; gap: 8px;
+  padding: 9px 11px; margin: 0 0 5px;
+  background: var(--surface-2); border: 1px solid var(--line-soft);
+  border-radius: var(--radius-sm);
+}
+.vidlib__link {
+  display: flex; align-items: center; gap: 9px;
+  flex: 1; min-width: 220px;
+  color: var(--text); text-decoration: none;
+}
+.vidlib__link:hover .vidlib__title { color: var(--gold-lift); }
+.vidlib__glyph {
+  display: grid; place-items: center;
+  width: 30px; height: 30px; flex: none;
+  border-radius: 7px; background: var(--slate); color: var(--text-2);
+}
+.vidlib__link:hover .vidlib__glyph { background: var(--copper); color: #fff; }
+.vidlib__glyph svg { width: 15px; height: 15px; }
+.vidlib__title { font-size: .86rem; font-weight: 600; }
+.vidlib__link code { font-family: var(--mono); font-size: .68rem; color: var(--text-3); }
+.vidlib__uses {
+  font-family: var(--mono); font-size: .66rem; color: var(--text-3);
+  letter-spacing: .02em; white-space: nowrap;
+}
+.vidlib__uses--none { color: var(--warn); }
+
+/* The gap notice. Stated as content, not as an apology — a learner should be
+   able to see that this subject has no verified source and therefore has to
+   come from their own service or their own instructor. */
+.vidlib__gap {
+  margin-top: 26px; padding: 14px 16px;
+  background: color-mix(in srgb, var(--warn) 7%, transparent);
+  border: 1px solid color-mix(in srgb, var(--warn) 32%, transparent);
+  border-radius: 12px;
+}
+.vidlib__gap p { font-size: .82rem; color: var(--text-2); margin: 0 0 8px; }
+.vidlib__gaplist { list-style: none; margin: 0; padding: 0; }
+.vidlib__gaplist li {
+  font-family: var(--mono); font-size: .74rem; color: var(--text-2);
+  padding: 4px 0 4px 14px; position: relative;
+}
+.vidlib__gaplist li::before {
+  content: ''; position: absolute; left: 0; top: 11px;
+  width: 5px; height: 5px; border-radius: 50%; background: var(--warn);
 }

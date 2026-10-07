@@ -225,3 +225,73 @@ function courseVideoSection(courseId) {
     <p class="videos__note">These are remote FAA training videos and need a connection to play. Everything else on this
       platform — all lesson text, diagrams and assessments — works with no network at all.</p>`;
 }
+
+/* =========================================================================
+   THE WHOLE LIBRARY, IN ONE PLACE
+   Every verified source, grouped by series, with its direct YouTube link and
+   the courses it is mapped to.
+
+   WHY THIS EXISTS
+   Three courses have no video mapped at all — lithium-batteries,
+   adverse-weather and wildfire-interface — because the FAA series does not
+   cover those subjects. Rather than leave a learner on a course with an empty
+   video section and no explanation, this view lists everything that does
+   exist and states plainly which subjects the library does not cover. A gap
+   that is visible is a gap someone can fix; a gap that is invisible is a
+   course that quietly teaches nothing on that subject.
+   ========================================================================= */
+function videoLibrarySection() {
+  const series = [];
+  const seen = {};
+  Object.keys(VIDEO_LIBRARY).forEach((k) => {
+    const v = VIDEO_LIBRARY[k];
+    const s = v.series || 'Unassigned';
+    if (!seen[s]) { seen[s] = []; series.push({ name: s, items: [] }); }
+    seen[s].push({ key: k, v: v });
+  });
+
+  const blocks = series.map((s) =>
+    `<h3 class="vidlib__series">${esc(s.name)} <small>${s.items.length} video${s.items.length > 1 ? 's' : ''}</small></h3>
+     <ul class="vidlib">${s.items.map((i) => {
+       const uses = Object.keys(VIDEO_COURSES).filter((cid) => (VIDEO_COURSES[cid] || []).includes(i.key))
+         .map((cid) => {
+           const c = allCourses.find((x) => x.id === cid);
+           return c ? esc(c.code) : cid;
+         });
+       return `<li>
+         <a class="vidlib__link" href="${esc(videoWatchUrl(i.v))}" target="_blank" rel="noopener noreferrer">
+           <span class="vidlib__glyph" aria-hidden="true">
+             <svg viewBox="0 0 24 24"><path d="M8 5.5v13l11-6.5z" fill="currentColor"/></svg>
+           </span>
+           <span class="vidlib__title">${esc(i.v.title)}</span>
+           <code>${esc(i.v.id)}</code>
+         </a>
+         ${uses.length ? `<span class="vidlib__uses">used on ${uses.join(', ')}</span>`
+                       : '<span class="vidlib__uses vidlib__uses--none">not mapped to a course</span>'}
+       </li>`;
+     }).join('')}</ul>`).join('');
+
+  const total = Object.keys(VIDEO_LIBRARY).length;
+  const unmapped = Object.keys(VIDEO_COURSES).filter((cid) => !(VIDEO_COURSES[cid] || []).length)
+    .map((cid) => {
+      const c = allCourses.find((x) => x.id === cid);
+      return c ? `${c.code} ${c.title}` : cid;
+    });
+
+  return `<div class="section-title"><h2>Video library</h2><small>${total} verified source${total > 1 ? 's' : ''}</small></div>
+    <div class="prose">
+      <p>Every video below was checked and confirmed to resolve to a live, official upload before it was added here. They are
+      all <strong>United States Federal Aviation Administration</strong> training material, which means they are written to
+      <strong>14 CFR Part 139</strong>. Every card carries that warning. For compliance teaching in South Africa, treat them as
+      technique and sequence reference and verify every regulatory point against SACAA/CAAB requirements and your own SOP.</p>
+      <p><strong>These need a connection to play.</strong> Everything else on the platform — all lesson text, all diagrams, all
+      assessments, the whole offline search — works with no network at all.</p>
+    </div>
+    ${blocks}
+    ${unmapped.length ? `<div class="vidlib__gap">
+      <h3 class="vidlib__series">Courses with no verified video source</h3>
+      <p>These subjects are <strong>not covered by the FAA series in this library</strong>. That is a known gap, stated rather
+      than hidden. It needs either locally recorded footage or a verified source for your jurisdiction.</p>
+      <ul class="vidlib__gaplist">${unmapped.map((u) => `<li>${esc(u)}</li>`).join('')}</ul>
+    </div>` : ''}`;
+}

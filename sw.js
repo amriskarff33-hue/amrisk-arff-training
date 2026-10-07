@@ -17,7 +17,7 @@
    Bump CACHE_VERSION to ship new content. The old cache is dropped on activate.
    ========================================================================= */
 
-const CACHE_VERSION = 'amrisk-arff-v34';
+const CACHE_VERSION = 'amrisk-arff-v35';
 
 const SHELL = [
   './',
@@ -28,6 +28,7 @@ const SHELL = [
   'js/lessons.js',
   'js/store.js',
   'js/diagrams.js',
+  'js/photos.js',
   'js/videos.js',
   'js/app.js',
   'assets/logo.svg',
@@ -37,6 +38,26 @@ const SHELL = [
   'assets/icon-512.png',
   'assets/icon-180.png'
 ];
+
+/* Photographs registered in js/photos.js are appended to the precache list
+   automatically, so an author who follows the three steps in that file does
+   not have to remember to edit this array. A photo that is registered but not
+   precached would render on a good connection and fail in the hangar, which
+   is the worst possible failure for this material — so it is worth doing
+   automatically. LOCAL_VIDEO entries are treated the same way. */
+if (typeof PHOTOS === 'object') {
+  Object.keys(PHOTOS).forEach(function (k) {
+    const src = PHOTOS[k] && PHOTOS[k].src;
+    if (src && SHELL.indexOf(src) === -1) SHELL.push(src);
+  });
+}
+if (typeof LOCAL_VIDEO === 'object') {
+  Object.keys(LOCAL_VIDEO).forEach(function (k) {
+    const v = LOCAL_VIDEO[k];
+    const src = typeof v === 'string' ? v : (v && v.src);
+    if (src && SHELL.indexOf(src) === -1) SHELL.push(src);
+  });
+}
 
 self.addEventListener('install', (event) => {
   event.waitUntil((async () => {

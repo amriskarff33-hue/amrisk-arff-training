@@ -334,7 +334,7 @@ function viewLesson(courseId, moduleId) {
   // Expand {{diagram:key}} and {{video:key}} placeholders before the body is
   // injected. A missing key renders a visible marker rather than vanishing.
   const body = lesson.body
-    ? `<div class="prose">${renderVideos(renderDiagrams(lesson.body))}</div>`
+    ? `<div class="prose">${renderVideos(renderPhotos(renderDiagrams(lesson.body)))}</div>`
     : `<div class="card"><h3>What this lesson must cover</h3>
         <p style="color:var(--text-2);font-size:.88rem">The body content for this lesson has not been written.
         An SME should cover, at minimum:</p>
@@ -749,6 +749,7 @@ function render() {
   if (tab === 'home')            { view.innerHTML = viewHome(); sub.textContent = 'Aviation & ARFF Training'; }
   else if (tab === 'learn')      { view.innerHTML = viewLearn(); sub.textContent = 'Course catalogue'; wireLearnFilters(); }
   else if (tab === 'progress')   { view.innerHTML = viewProgress(); sub.textContent = 'Progress & record'; }
+  else if (tab === 'videos')     { view.innerHTML = videoLibrarySection(); sub.textContent = 'Video library'; }
   else if (tab === 'coach')      { view.innerHTML = viewCoach(); sub.textContent = 'Offline curriculum search'; }
   else if (tab === 'course')     { view.innerHTML = viewCourse(parts[1]); sub.textContent = 'Course'; }
   else if (tab === 'lesson')     { view.innerHTML = viewLesson(parts[1], parts[2]); sub.textContent = 'Lesson'; }
