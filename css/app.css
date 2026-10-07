@@ -130,6 +130,17 @@ blockquote {
   color: var(--text-2);
 }
 blockquote p:last-child { margin: 0; }
+/* A reading caution inside a lesson body. Distinguished from the SME action
+   blockquote at the end of each lesson: this one flags a misread of the source
+   and sits in the flow, whereas blockquote is reserved for the action list. */
+p.caution {
+  border-left: 3px solid var(--warn);
+  background: color-mix(in srgb, var(--warn) 9%, transparent);
+  padding: .7em .95em;
+  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+  color: var(--text);
+}
+p.caution strong { color: var(--text); }
 
 button { font: inherit; color: inherit; cursor: pointer; }
 :focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; border-radius: 4px; }
