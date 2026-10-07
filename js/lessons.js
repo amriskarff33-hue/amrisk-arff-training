@@ -170,6 +170,8 @@ const LESSON_OVERRIDES = {
     ],
     body: `
       <h3>Learn the three verbs first</h3>
+
+    {{diagram:document-hierarchy}}
       <p>Before ranking anything, learn what the words mean. Annex 14 defines its
       own components, and the distinction is not academic — it decides whether
       something is mandatory or merely desirable.</p>
@@ -1731,6 +1733,8 @@ const LESSON_OVERRIDES = {
     ],
     body: `
       <h3>Why this lesson exists</h3>
+
+    {{diagram:alert-chain}}
       <p>Every other part of the response is visible when it fails. A vehicle with
       a broken pump, a turret that will not elevate, a crew that cannot reach the
       aircraft — all of it announces itself. An alerting system fails
@@ -3531,6 +3535,31 @@ const LESSON_OVERRIDES = {
     <h3>What the table is not</h3>
     <p>The water quantity in the table is for the <em>service</em>, not for one incident. It is calculated against the practical critical area of a worst-case fuel spill against the fuselage. An engine fire, an APU fire, a wheel fire — none of these get the whole practical critical area. Applying the table quantity to a localised fire is a serious error and the single most common misuse of this calculation.</p>
 
+
+    <div class="section-title"><h2>Video</h2><small>Official FAA source — needs a connection</small></div>
+    <p class="vidsrc">Related official video: <b>Section 7 — Fire Extinguishing Agents</b> — United States 14 CFR Part 139 material. Verify every regulatory point against SACAA/CAAB requirements and your own SOP.</p>
+    {{video:faa-intro-7}}
+
+
+    <div class="section-title"><h2>Video</h2><small>Official FAA source — needs a connection</small></div>
+    <p class="vidsrc">Related official video: <b>Section 4 — Personnel Safety</b> — United States 14 CFR Part 139 material. Verify every regulatory point against SACAA/CAAB requirements and your own SOP.</p>
+    {{video:faa-intro-4}}
+
+
+    <div class="section-title"><h2>Video</h2><small>Official FAA source — needs a connection</small></div>
+    <p class="vidsrc">Related official video: <b>Section 9 — Fire Fighting Operations</b> — United States 14 CFR Part 139 material. Verify every regulatory point against SACAA/CAAB requirements and your own SOP.</p>
+    {{video:faa-intro-9}}
+
+
+    <div class="section-title"><h2>Video</h2><small>Official FAA source — needs a connection</small></div>
+    <p class="vidsrc">Related official video: <b>Section 5 — Airport Emergency Communications</b> — United States 14 CFR Part 139 material. Verify every regulatory point against SACAA/CAAB requirements and your own SOP.</p>
+    {{video:faa-intro-5}}
+
+
+    <div class="section-title"><h2>Video</h2><small>Official FAA source — needs a connection</small></div>
+    <p class="vidsrc">Related official video: <b>Section 1 — Introduction</b> — United States 14 CFR Part 139 material. Verify every regulatory point against SACAA/CAAB requirements and your own SOP.</p>
+    {{video:faa-tact-1}}
+
     <blockquote>
       <p><strong>SME action:</strong> identify the longest and widest aircraft in your current schedule and confirm the category it sets; state the foam performance level actually stocked and confirm the table row you are using matches it; confirm whether any aircraft exceeds the category average and whether the §2.3.7 recalculation has been done; record your measured response times against the table column; and check all of this against your State's adopted requirements, which may differ from the ICAO table.</p>
     </blockquote>
@@ -3739,6 +3768,11 @@ const LESSON_OVERRIDES = {
 
     <h3>When to re-evaluate</h3>
     <p>If the schedule changes — a new aircraft type, a variant with a longer fuselage or wider body, the retirement of the current critical aircraft — the category must be re-determined. Annex 14 §9.2.3 requires the level of protection to be appropriate to the aerodrome category. A category that was correct last year but wrong this year is a finding.</p>
+
+
+    <div class="section-title"><h2>Video</h2><small>Official FAA source — needs a connection</small></div>
+    <p class="vidsrc">Related official video: <b>Section 1 — Introduction</b> — United States 14 CFR Part 139 material. Verify every regulatory point against SACAA/CAAB requirements and your own SOP.</p>
+    {{video:faa-intro-1}}
 
     <blockquote>
       <p><strong>SME action:</strong> list every aircraft type in your current schedule with its overall length and maximum fuselage width. Identify the critical aircraft (longest, then widest). Confirm the category from Table 2-1. Then check: has the schedule changed since the last determination? If the critical aircraft is retired, what is the new critical aircraft and does the category drop?</p>
@@ -4031,6 +4065,11 @@ const LESSON_OVERRIDES = {
     <h3>Re-positioning is part of the plan</h3>
     <p>§12.3.25(e) states: <strong>ideally, vehicles should be positioned so they can be repositioned in the event of reflash or on direction of the incident commander</strong>. A vehicle that is boxed in by other vehicles, by terrain, or by its own hose lay cannot re-position. The incident commander needs the option to move vehicles — which means the initial positions must leave an exit route.</p>
 
+
+    <div class="section-title"><h2>Video</h2><small>Official FAA source — needs a connection</small></div>
+    <p class="vidsrc">Related official video: <b>Section 9 — Fire Fighting Operations</b> — United States 14 CFR Part 139 material. Verify every regulatory point against SACAA/CAAB requirements and your own SOP.</p>
+    {{video:faa-intro-9}}
+
     <blockquote>
       <p><strong>SME action:</strong> attach your positioning plan per aircraft type and fire type (engine, APU, fuel spill, cabin). Confirm it is drawn from your aerodrome's actual layout, taxiways, hardstanding and water points. Confirm sector assignments for your vehicle fleet, the foam type/performance level match, and the communication plan for wind-shift re-sectoring. Verify your turret operators have all demonstrated the sweep at the required rate on the actual appliances.</p>
     </blockquote>
@@ -4155,6 +4194,13 @@ const LESSON_OVERRIDES = {
     <p>§2.7.3: additional vehicles should arrive within three minutes and no more than four minutes from the initial call so as to provide continuous agent application. A foam blanket that breaks up because the first wave ran dry and the second wave was late has to be rebuilt from nothing.</p>
     <p>Continuous application is not a nicety. It is the difference between a fire that stays out and a fire that re-ignites on the apron at 03:00.</p>
 
+
+    <div class="section-title"><h2>Video</h2><small>Official FAA source — needs a connection</small></div>
+    <p class="vidsrc">Related official video: <b>Section 9 — Fire Fighting Operations</b> — United States 14 CFR Part 139 material. Verify every regulatory point against SACAA/CAAB requirements and your own SOP.</p>
+    {{video:faa-intro-9}}
+    <p class="vidsrc">Related official video: <b>Section 1 — Introduction</b> — United States 14 CFR Part 139 material. Verify every regulatory point against SACAA/CAAB requirements and your own SOP.</p>
+    {{video:faa-tact-1}}
+
     <blockquote>
       <p><strong>SME action:</strong> for each fire type at your aerodrome (engine, APU, fuel spill, cabin, cargo, electrical), state the primary agent, the secondary agent, the delivery method (turret, handline, HRET, access panel), the maximum reach height, and the safe position. Confirm foam performance level is standardised across the fleet. Verify the 3–4 minute second-wave arrival is met in exercises.</p>
     </blockquote>
@@ -4223,6 +4269,11 @@ const LESSON_OVERRIDES = {
     <h3>Re-positioning is part of the plan</h3>
     <p>A vehicle that is boxed in by other vehicles, by terrain, or by its own hose lay cannot re-position. The initial positions must leave an exit route. The incident commander needs the option to move vehicles.</p>
 
+
+    <div class="section-title"><h2>Video</h2><small>Official FAA source — needs a connection</small></div>
+    <p class="vidsrc">Related official video: <b>Section 3 — High Reach Extendible Turret (HRET)</b> — United States 14 CFR Part 139 material. Verify every regulatory point against SACAA/CAAB requirements and your own SOP.</p>
+    {{video:faa-tact-3}}
+
     <blockquote>
       <p><strong>SME action:</strong> attach your positioning plan per aircraft type, drawn from your aerodrome's actual layout, taxiways, hardstanding and water points. Confirm sector assignments for your vehicle fleet, the foam type/performance level match, and the communication plan for wind-shift re-sectoring. Verify the first-vehicle route decision is briefed to every driver. Run a drill where the first vehicle deliberately takes a wrong position and the IC must redirect the following vehicles.</p>
     </blockquote>
@@ -4289,6 +4340,11 @@ const LESSON_OVERRIDES = {
     <h3>What this means for the agent in your tank</h3>
     <p>§8.1.1 is emphatic that the manufacturer of the foam-making equipment should be consulted as to the correct concentrate for any particular system, and that <em>the proportioners installed must be properly designed and/or set for the concentrate being used</em>. Your proportioner is calibrated for a specific concentrate at a specific percentage. Changing concentrate without recalibrating the proportioner does not give you a different foam — it gives you the wrong foam.</p>
     <p>And the quantity is not a free choice. The amount of foam needed to safeguard fuselage integrity adjacent to a fire is calculated using the practical critical area concept — which is why the table figure in ART-03 is a service size, and why a localised engine fire does not get the whole area.</p>
+
+
+    <div class="section-title"><h2>Video</h2><small>Official FAA source — needs a connection</small></div>
+    <p class="vidsrc">Related official video: <b>Section 7 — Fire Extinguishing Agents</b> — United States 14 CFR Part 139 material. Verify every regulatory point against SACAA/CAAB requirements and your own SOP.</p>
+    {{video:faa-intro-7}}
 
     <blockquote>
       <p><strong>SME action:</strong> state the concentrate family and mix percentage your vehicles are set to, and confirm the proportioner is calibrated for that exact concentrate. Record the measured expansion ratio and 25% drainage time at the nozzle from your last acceptance test. Confirm the concentrate in the tank matches the concentrate in the reserve store — a vehicle converted to AFFF while the reserve is protein is a finding waiting to happen.</p>
@@ -4586,6 +4642,11 @@ const LESSON_OVERRIDES = {
       <li><strong>Your post-incident obligations.</strong> Who notifies the operator, what they are told, and how the corrosion inspection is tracked to completion.</li>
     </ol>
 
+
+    <div class="section-title"><h2>Video</h2><small>Official FAA source — needs a connection</small></div>
+    <p class="vidsrc">Related official video: <b>Fluorine Free Foam (F3) Transition for ARFF Departments</b> — United States 14 CFR Part 139 material. Verify every regulatory point against SACAA/CAAB requirements and your own SOP.</p>
+    {{video:faa-f3}}
+
     <blockquote>
       <p><strong>SME action:</strong> items 1 and 2 are the two this platform cannot do for you. Establish your State's position on fluorinated extinguishing agents and record the instrument and clause. Confirm whether any aircraft types at your field carry fixed halon installations. Then confirm items 3, 4 and 5 from your own records — the water chemistry letter from your concentrate manufacturer, the list of fires your agents cannot handle with their response, and the agent-notification procedure. If item 1 cannot be answered from your own authority, that is the first call to make.</p>
     </blockquote>
@@ -4659,6 +4720,11 @@ const LESSON_OVERRIDES = {
       <li>Where you are permitted to use penetrating technology, and who authorises it on the day.</li>
     </ol>
 
+
+    <div class="section-title"><h2>Video</h2><small>Official FAA source — needs a connection</small></div>
+    <p class="vidsrc">Related official video: <b>Section 3 — High Reach Extendible Turret (HRET)</b> — United States 14 CFR Part 139 material. Verify every regulatory point against SACAA/CAAB requirements and your own SOP.</p>
+    {{video:faa-tact-3}}
+
     <blockquote>
       <p><strong>SME action:</strong> for each vehicle on your inventory, produce a one-page capability sheet from the manufacturer's data — every foam-making device with its expansion and drainage figures, every monitor with jet range and spray pattern, every applicator with its reach height, and whether foam-on-the-move is fitted. Then state which appliances your national instrument requires you to hold, and confirm your fleet meets it. Anything Doc 9137 does not cover must come from the manufacturer document and your own regulator, and both should be filed.</p>
     </blockquote>
@@ -4729,6 +4795,11 @@ const LESSON_OVERRIDES = {
       <li>Is the monitor position visible to the operator? If no, go to low level application.</li>
       <li>Is the required rate achievable across the whole practical critical area in one minute from this position? If no, the position is wrong, not the technique.</li>
     </ol>
+
+
+    <div class="section-title"><h2>Video</h2><small>Official FAA source — needs a connection</small></div>
+    <p class="vidsrc">Related official video: <b>Section 3 — High Reach Extendible Turret (HRET)</b> — United States 14 CFR Part 139 material. Verify every regulatory point against SACAA/CAAB requirements and your own SOP.</p>
+    {{video:faa-tact-3}}
 
     <blockquote>
       <p><strong>SME action:</strong> for each of your monitors, record the discharge settings available and the pattern at each — solid, dispersed, or both. Confirm your pre-planned tactics state the pattern to be used per fire type, not just the position. Then verify something that is easy to leave out: has every turret operator on your roster demonstrated the sweep across a marked-out critical area at the required rate, with the sector boundaries of a neighbouring vehicle? If that demonstration has not happened in the last year, schedule it, because it is the single highest-leverage training event in the service.</p>
@@ -4963,6 +5034,13 @@ const LESSON_OVERRIDES = {
     <h3>Where vehicles are not specified</h3>
     <p>Two carve-outs from Chapter 5, both useful to know. §5.1.2 says the chapter does not consider <em>the specialized vehicles intended for use in difficult environments</em> — those are Chapter 13, and they are ART-23 off-airport response. Communications equipment is Chapter 4, which is ART-18. Station location and housing are Chapter 9. So if you are specifying a vehicle, three things that feel like vehicle questions are not, and chasing them in the wrong chapter wastes time.</p>
 
+
+    <div class="section-title"><h2>Video</h2><small>Official FAA source — needs a connection</small></div>
+    <p class="vidsrc">Related official video: <b>Section 6 — Fire Suppression Equipment</b> — United States 14 CFR Part 139 material. Verify every regulatory point against SACAA/CAAB requirements and your own SOP.</p>
+    {{video:faa-intro-6}}
+    <p class="vidsrc">Related official video: <b>Section 3 — High Reach Extendible Turret (HRET)</b> — United States 14 CFR Part 139 material. Verify every regulatory point against SACAA/CAAB requirements and your own SOP.</p>
+    {{video:faa-tact-3}}
+
     <blockquote>
       <p><strong>SME action:</strong> produce your vehicle inventory against Annex 14 §9.2.41 — category, vehicles required, vehicles held, and vehicles out of service at any given time. Then confirm two things that catch services out. First, that a single vehicle out of service does not put you below the §9.2.41 minimum, and what happens if it does. Second, that your station layout actually achieves the response time to the far end of the movement area, or that you have the satellite station §9.2.37 contemplates. If you cannot answer the second from a measured response time, that is a planning finding.</p>
     </blockquote>
@@ -5094,6 +5172,11 @@ const LESSON_OVERRIDES = {
 
     <h3>Recording the check</h3>
     <p>Record the check with enough detail to be useful later: date, vehicle, the fault found, the class it fell into, who authorised the roll, and the rectification due. The trend is worth more than any single entry — three vehicles with the same pump pressure drift across a quarter is a maintenance finding, and three crews reporting the same brake judder is an operational one.</p>
+
+
+    <div class="section-title"><h2>Video</h2><small>Official FAA source — needs a connection</small></div>
+    <p class="vidsrc">Related official video: <b>Section 6 — Fire Suppression Equipment</b> — United States 14 CFR Part 139 material. Verify every regulatory point against SACAA/CAAB requirements and your own SOP.</p>
+    {{video:faa-intro-6}}
 
     <blockquote>
       <p><strong>SME action:</strong> write your three classes of finding and the stop criteria in each, and get them agreed by the person who authorises the roll. Then test the list against reality: pick the five faults most likely on your fleet and confirm each has a defined class and a defined action. Finally, check two things that are structural rather than procedural — that the crew compartment genuinely allows your crew to don their protective clothing without leaving it, and that the driver and monitor operator can communicate during a discharge. If either fails, that is a finding about the vehicle, not the crew.</p>
@@ -5308,6 +5391,11 @@ const LESSON_OVERRIDES = {
     <h3>Deciding whether to enter</h3>
     <p>The standard tells you what the equipment is for. It does not give you an entry decision, and that is correct — an entry decision belongs to the incident commander in front of the actual atmosphere, informed by the fire behaviour, the aircraft type and the state of the airframe.</p>
     <p>What this lesson can give you is the question to ask before the alarm rather than after it: for each aircraft type you handle, do you know whether it is aluminium, composite, or both; do you know what your equipment is approved for; and does your service hold equipment rated for the duration of the longest entry you would authorise?</p>
+
+
+    <div class="section-title"><h2>Video</h2><small>Official FAA source — needs a connection</small></div>
+    <p class="vidsrc">Related official video: <b>Section 4 — Personnel Safety</b> — United States 14 CFR Part 139 material. Verify every regulatory point against SACAA/CAAB requirements and your own SOP.</p>
+    {{video:faa-intro-4}}
 
     <blockquote>
       <p><strong>SME action:</strong> for each aircraft type based at or transiting your aerodrome, establish whether it is aluminium, composite or mixed, and record the toxic products identified for it in fire and in high-impact-without-fire. Then confirm three equipment facts against your manufacturer&rsquo;s data and your State&rsquo;s approval: the equipment is approved for the anticipated environment, its rated duration, and the duration of the longest entry you would authorise. If the rated duration is less than your longest authorised entry, that is a finding and the answer is either shorter entries or better equipment — not a hope. Finally, confirm the pure-air recharge arrangement and where spare parts are held.</p>
@@ -5625,6 +5713,8 @@ const LESSON_OVERRIDES = {
   ],
   body: `
     <h3>Regular doors and hatches first</h3>
+
+    {{diagram:airframe-access}}
     <p>§12.1.11 sets the order of preference and the caution in the same breath: <strong>rescue operations should be accomplished through regular doors and hatches wherever possible but RFF personnel must be trained in forcible entry procedures and be provided with the necessary tools.</strong></p>
     <p>Then the note that should be read by every crew member: <em>in a number of cases, misuse of forcible entry tools has resulted in unnecessary fuel spills increasing the fire hazard.</em></p>
     <p>That is a fire-service truth stated plainly by ICAO. Forcible entry is a technique, and a badly placed cut through a fuel line or a damaged skin panel will create a fuel spill on an aircraft that did not previously have one. Trained crews know where the tanks and the lines are. That knowledge is the tool.</p>
@@ -5658,6 +5748,11 @@ const LESSON_OVERRIDES = {
       <li>The flight deck access route, and how to open the flight deck door from outside.</li>
     </ol>
     <p>Item 3 is the one that connects directly to the §12.1.11 warning, and item 6 is the one your crew needs for the intercom coordination in ART-15 m4.</p>
+
+
+    <div class="section-title"><h2>Video</h2><small>Official FAA source — needs a connection</small></div>
+    <p class="vidsrc">Related official video: <b>Section 2 — Forcible Entry</b> — United States 14 CFR Part 139 material. Verify every regulatory point against SACAA/CAAB requirements and your own SOP.</p>
+    {{video:faa-tact-2}}
 
     <blockquote>
       <p><strong>SME action:</strong> take the types on your current schedule and confirm you hold a current rescue and fire fighting chart for each. Then check three things that are commonly assumed rather than verified. Do you know where the fuel tanks and lines are on each type, in enough detail to plan a cut? Can your crew open the flight deck door from outside for each type? And does each type in your fleet have emergency exit devices you have actually seen deploy — or are you relying on the manual? An exit mechanism nobody has watched work is an exit mechanism you do not have. Feed every finding into your pre-planned tactics.</p>
@@ -5789,6 +5884,13 @@ const LESSON_OVERRIDES = {
       <li><strong>Respiratory protection</strong> — <em>which may consist of an SCBA</em>, consistent with §6.2.1.</li>
       <li><strong>Communication</strong> — telephones and radios on the RFF frequency, providing two-way communication with other emergency vehicles, air traffic control, CTAF when ATC is not operating, and the flight crew where that arrangement has been established.</li>
     </ul>
+
+
+    <div class="section-title"><h2>Video</h2><small>Official FAA source — needs a connection</small></div>
+    <p class="vidsrc">Related official video: <b>Section 8 — Emergency Aircraft Evacuation</b> — United States 14 CFR Part 139 material. Verify every regulatory point against SACAA/CAAB requirements and your own SOP.</p>
+    {{video:faa-intro-8}}
+    <p class="vidsrc">Related official video: <b>Section 2 — Forcible Entry</b> — United States 14 CFR Part 139 material. Verify every regulatory point against SACAA/CAAB requirements and your own SOP.</p>
+    {{video:faa-tact-2}}
 
     <blockquote>
       <p><strong>SME action:</strong> build a per-type extrication card for each aircraft at or transiting your aerodrome: access points, fuel tank and line locations, the tool combination for the likely entrapments, and the emergency exit operations from outside. Then verify against your actual inventory three things. Does your powered tool set cover the precision cuts the standard describes as needed close to a trapped person, or only the bulk cuts? Are the hydraulic forcing combinations your crew can assemble the ones you need for the types you handle — and has anyone assembled them under instruction? And do the hand tools match the latch and fastener types on your fleet? Finally, confirm your stated position on penetrating aircraft skin for agent application, and that your authority agrees with it.</p>
@@ -5942,6 +6044,11 @@ const LESSON_OVERRIDES = {
     <h3>Building the fleet file</h3>
     <p>One file per type, held current, containing: the manufacturer's crash chart; overall length and maximum fuselage width for the category check; fuel, oil, battery and hydraulic reservoir locations; access points and their operation from outside; emergency exit locations and devices; fixed halon installations; Li-ion battery locations, containment and venting ports; and the cabin materials. Then a review trigger: any change to the schedule, any new type entering, any manufacturer bulletin affecting any of it.</p>
 
+
+    <div class="section-title"><h2>Video</h2><small>Official FAA source — needs a connection</small></div>
+    <p class="vidsrc">Related official video: <b>Section 2 — Airport Familiarization</b> — United States 14 CFR Part 139 material. Verify every regulatory point against SACAA/CAAB requirements and your own SOP.</p>
+    {{video:faa-intro-2}}
+
     <blockquote>
       <p><strong>SME action:</strong> take your current schedule and produce the fleet file for each type. Then answer three questions honestly. Which types in your fleet have Li-ion batteries fitted as part of the aviation system, where are they, and do your crews know the containment and venting ports for thermal runaway — §12.2.19.4 names recognising those aircraft and their locations as the first action the RFFS unit should initiate. Which types have magnesium in the structure or titanium in the engines? And has anyone in your service physically examined the doors of every type in the fleet, or has the knowledge come from a manual that says personal inspections are necessary?</p>
     </blockquote>
@@ -6010,6 +6117,11 @@ const LESSON_OVERRIDES = {
 
     <h3>The per-type file</h3>
     <p>For each aircraft type, from the manufacturer's crash chart and your own inspection, record: fuel tank locations including any through-fuselage or outboard of inboard engines; cross-feed valve locations and positions; tank vent locations; oil tank locations relative to the firewall; battery locations with the exterior markings; hydraulic reservoir locations; gasoline combustion heater locations if the type has them; and the fuel line and hydraulic line runs where cutting is contemplated.</p>
+
+
+    <div class="section-title"><h2>Video</h2><small>Official FAA source — needs a connection</small></div>
+    <p class="vidsrc">Related official video: <b>Section 3 — Aircraft Familiarization</b> — United States 14 CFR Part 139 material. Verify every regulatory point against SACAA/CAAB requirements and your own SOP.</p>
+    {{video:faa-intro-3}}
 
     <blockquote>
       <p><strong>SME action:</strong> produce the per-type hazard zone file above for every type in your fleet. Then confirm three things about your own crews. Can they point to the cross-feed valves on each type, so they know that isolating one tank may not isolate the aircraft? Do they know where the tank vents are, so they are not surprised by a fire behind and outboard of the fuselage? And has anyone rehearsed plugging or crimping a broken line on a specific type, with the actual fittings rather than in principle? Item three is a task with an owner and a time cost — it needs a station and a line and a crew, and it is the kind of task that gets planned once the incident count has risen.</p>
@@ -6235,6 +6347,13 @@ const LESSON_OVERRIDES = {
 
     <h3>Ownership, plainly</h3>
     <p>A plan without a named owner decays. §9.1.3 assigns the plan's scope to "the appropriate authority", §9.1.5 gives it minimum content, and §9.1.10 names people for the two coordination facilities. What your service must add is the rest: who reviews the plan on what cycle, who owns the grid maps and the contact list, who schedules the exercises in §9.1.13, and who closes the corrective actions that come out of them. Those are four jobs with four names, and if none of them is yours, the plan is not being maintained.</p>
+
+
+    <div class="section-title"><h2>Video</h2><small>Official FAA source — needs a connection</small></div>
+    <p class="vidsrc">Related official video: <b>Section 5 — Airport Emergency Communications</b> — United States 14 CFR Part 139 material. Verify every regulatory point against SACAA/CAAB requirements and your own SOP.</p>
+    {{video:faa-intro-5}}
+    <p class="vidsrc">Related official video: <b>Section 1 — Introduction</b> — United States 14 CFR Part 139 material. Verify every regulatory point against SACAA/CAAB requirements and your own SOP.</p>
+    {{video:faa-tact-1}}
 
     <blockquote>
       <p><strong>SME action:</strong> take your current plan and check it against Annex 14 §9.1.5 item by item — types of emergency, agencies, roles <em>per type</em>, contacts, grid map. Then against §9.1.7 to §9.1.11: is there a fixed EOC and a mobile command post, are people assigned to both, and do they talk to each other and to the agencies? Then check the two clauses that are easiest to have on paper and absent in practice — §9.1.6 human factors, and §9.1.12 procedures for periodic testing <em>and reviewing the results</em>. Finally, name the four owners above and confirm the RFF–ATC chief link has a person at each end.</p>
@@ -6642,6 +6761,11 @@ const LESSON_OVERRIDES = {
     </ol>
     <p>And one standing habit from §12.4.13.1: <em>rff personnel should be familiar with local air cargo loading procedures.</em> Where freight is loaded tells you where it will be when it burns, and no crew learns that from a DG document.</p>
 
+
+    <div class="section-title"><h2>Video</h2><small>Official FAA source — needs a connection</small></div>
+    <p class="vidsrc">Related official video: <b>Section 10 — Use of the DOT Emergency Guide Book</b> — United States 14 CFR Part 139 material. Verify every regulatory point against SACAA/CAAB requirements and your own SOP.</p>
+    {{video:faa-intro-10}}
+
     <blockquote>
       <p><strong>SME action:</strong> identify, from your own State&rsquo;s requirements, the four instruments that bind you: Annex 18 as applied domestically, Doc 9284 as adopted, the IATA DGR for international sectors if applicable, and your national civil aviation dangerous goods regulations. Record the citation and issue date for each — your service is currently unable to state, with a document reference, what governs a specific shipment on a specific sector. Then confirm your familiarity with local air cargo loading procedures, which §12.4.13.1 requires and which determines where the load will be on scene.</p>
     </blockquote>
@@ -6677,6 +6801,8 @@ const LESSON_OVERRIDES = {
   ],
   body: `
     <h3>What the package tells you</h3>
+
+    {{diagram:dg-placard}}
     <p>§12.4.8 is the clause that makes the labelling regime operational: <strong>packages of dangerous goods are required to be marked with the "proper shipping name" of the dangerous goods, as listed in the Technical Instructions, and with the corresponding 4-digit "United Nations (UN) number", used to identify the substance. The package is also required to bear one or more hazard labels. These labels are in the form of a 100 mm × 100 mm square on point, with a distinctive symbol and colour.</strong></p>
     <p>And the stated purpose: <em>these package markings and labels enable emergency response personnel to immediately recognize the nature of the hazards presented by any dangerous goods that may be encountered.</em></p>
     <p>So three things to read on a package in the first seconds: the <strong>UN number</strong> (which identifies the substance precisely), the <strong>proper shipping name</strong> (which tells you what it is in words), and the <strong>hazard label</strong> (which tells you the class at a glance). The 100 mm diamond is sized to be read from a distance and at an angle, which is exactly when you will be reading it.</p>
@@ -6713,6 +6839,11 @@ const LESSON_OVERRIDES = {
     <h3>The reading habit</h3>
     <p>On scene, in this order: read the hazard label for the class, read the UN number for the specific substance, read the proper shipping name in words, and check whether the package is intact or fire-damaged. Then ask the one question that decides your approach for Classes 4 and 5: <em>does water make this worse?</em></p>
     <p>And if you can get it, the crew's information (§12.4.10) — because the notification tells you the stowage location, which tells you how many packages you are dealing with and how they are packed together.</p>
+
+
+    <div class="section-title"><h2>Video</h2><small>Official FAA source — needs a connection</small></div>
+    <p class="vidsrc">Related official video: <b>Section 10 — Use of the DOT Emergency Guide Book</b> — United States 14 CFR Part 139 material. Verify every regulatory point against SACAA/CAAB requirements and your own SOP.</p>
+    {{video:faa-intro-10}}
 
     <blockquote>
       <p><strong>SME action:</strong> build a reference card for your service: the nine classes with one line each on behaviour rather than definition — particularly the four that change your approach, being Division 1.4 explosives (package integrity is the variable), Class 2 gases (heat on a pressure vessel), Class 4 flammable solids (water may react violently) and Class 5 oxidizers (may cause combustion of other material, and organic peroxides may detonate when mixed with jet fuel). Add a section for the UN numbers and proper shipping names your aerodrome actually handles — take them from your recent manifests, not from a textbook list. Then confirm your crew can read a 100 mm diamond label from a distance and at an angle, because that is how they will actually see it.</p>
@@ -7177,6 +7308,11 @@ const LESSON_OVERRIDES = {
     <p>§12.4.22.1 applies directly and is easy to miss because it is filed under spills and leaks rather than lithium: <em>dangerous goods packages not consumed in or affected by an aircraft fire may be found damaged and leaking at an accident site. Such damaged and leaking packages may pose a significant risk of injury or adverse health effects to aircraft occupants and RFF personnel.</em> And: <strong>once initial rescue operations are completed, special precautions should be taken with such packages and, if necessary, pre-identified trained personnel assembled to deal with the problems involved.</strong></p>
     <p>A lithium incident has no clean end. The package that did not burn is still a package that may have vented, and the standard puts the response to that in a different phase with different people.</p>
 
+
+    <div class="section-title"><h2>Video</h2><small>Official FAA source — needs a connection</small></div>
+    <p class="vidsrc">Related official video: <b>Fluorine Free Foam (F3) Transition for ARFF Departments</b> — United States 14 CFR Part 139 material. Verify every regulatory point against SACAA/CAAB requirements and your own SOP.</p>
+    {{video:faa-f3}}
+
     <blockquote>
       <p><strong>SME action:</strong> answer question 4 from m3 in writing — <em>is water recommended, and does the answer change between a burning battery, a venting battery, and an intact but hot one?</em> — with your source cited. If your service&rsquo;s current answer is a single agent for all three states, that is the finding this lesson is designed to produce. Then confirm two resourcing items §12.2.19.4(e) obliges you to provide: what agents and equipment do you actually hold for a lithium failure, and when were they last checked as being suitable? And identify your pre-identified trained personnel for the post-rescue package phase per §12.4.22.1 — named now, not found during an incident.</p>
     </blockquote>
@@ -7316,6 +7452,11 @@ const LESSON_OVERRIDES = {
       <li><strong>Your scale of provision.</strong> <em>The scale of provision of rescue equipment should be related to the capacities of the larger aircraft using the airport</em> (§13.1.3.1) — which is the same capacity principle as the critical area, applied to survivors rather than water.</li>
       <li><strong>Your coordination.</strong> Rescue coordination centre, in exercises as well as operations. §13.1.2.</li>
     </ol>
+
+
+    <div class="section-title"><h2>Video</h2><small>Official FAA source — needs a connection</small></div>
+    <p class="vidsrc">Related official video: <b>Section 5 — Conclusion</b> — United States 14 CFR Part 139 material. Verify every regulatory point against SACAA/CAAB requirements and your own SOP.</p>
+    {{video:faa-tact-5}}
 
     <blockquote>
       <p><strong>SME action:</strong> draw the line. Establish and record, in advance as §13.1.1 requires, the response area within which your service undertakes to provide a rescue service — and obtain the delineation against your national search and rescue organisation under Annex 12 §4.2.1, with the rescue coordination centre involved. Then check the other side of it: is the rescue coordination centre included in your exercise programme for this response area, or only in the real-operations plan? §13.1.2 names both. Finally, confirm your crews have been briefed that the off-airport objective is survival and succour and need not include firefighting, because that is the belief most likely to arrive at a marine accident scene and it will shape their first ten minutes.</p>
@@ -7819,6 +7960,8 @@ const LESSON_OVERRIDES = {
   ],
   body: `
     <h3>The state of the source, before anything else</h3>
+
+    {{diagram:bonding-circuit}}
     <p>§15.2(b) is a short clause and it is the only requirement in Chapter 15 that points outside Chapter 15:</p>
     <p><strong>Bonding and/or grounding, as appropriate, should be done in accordance with 15.4.</strong></p>
     <p>And then the finding, which you should know before you rely on this course for anything: <strong>§15.4 is not in Part 1.</strong> Chapter 15's table of contents lists three sections — §15.1 introduction, §15.2 general precautionary measures, §15.3 additional precautionary measures when passengers remain on board or embark/disembark — and stops. The string "15.4" appears exactly once in the whole of Doc 9137 Part 1, and it is the cross-reference in §15.2(b) itself.</p>
@@ -7889,6 +8032,11 @@ const LESSON_OVERRIDES = {
       <li><strong>Your fuel supplier's operator procedure</strong> under §15.1 — developed for the equipment actually fitted to your dispensers and your State's requirements. This is the document your crews are assessed against, and it is the one that closes the §15.4 gap in practice.</li>
     </ol>
     <p>Then audit your own position against it: what bonding and grounding equipment is on each fuelling vehicle, who inspects it, and on what cycle. Is it recorded per vehicle? Does a damaged or missing cable take the dispenser out of service, or does it get noted? §15.2(i)'s logic — <em>regular inspection and maintenance that this equipment is maintained in a fully serviceable condition</em> — applies to the extinguisher in that clause, and the principle generalises to anything on the vehicle whose absence removes a control.</p>
+
+
+    <div class="section-title"><h2>Video</h2><small>Official FAA source — needs a connection</small></div>
+    <p class="vidsrc">Related official video: <b>Section 4 — Cargo Aircraft Firefighting</b> — United States 14 CFR Part 139 material. Verify every regulatory point against SACAA/CAAB requirements and your own SOP.</p>
+    {{video:faa-tact-4}}
 
     <blockquote>
       <p><strong>SME action:</strong> this lesson is deliberately incomplete and the incompleteness is the finding. Close it by obtaining NFPA 407 and NFPA 704 into the reference library, and by obtaining the fuel supplier&rsquo;s operator procedure, which §15.1 identifies as the document this material does not replace. Until NFPA 407 is held, treat bonding training as covered by your supplier&rsquo;s procedure and nothing else. Then four operational checks. One: confirm the bonding and grounding equipment fitted to every fuelling vehicle, and that its inspection and replacement cycle is written down and evidenced — including what happens to a vehicle when a cable or clamp is damaged or missing. Two: confirm the bonding step is a documented, assessed action in the fuelling procedure, not a habit that some drivers perform and others skip. Three: brief crews on §5.7.8 — identify which powered rescue tools on your vehicles have internal combustion engines, and confirm they know that before selecting a tool at a scene with an unblanketed fuel spill. Four: confirm §12.1.9&rsquo;s thermal companion is briefed alongside bonding, including the 30-minute turbine and 10-minute piston figures, because a bonded fuelling operation still has a hot engine under the wing and the bonding step does nothing about it.</p>
@@ -8104,6 +8252,11 @@ const LESSON_OVERRIDES = {
     <p>Three details in that framework are worth lifting whatever your jurisdiction. <strong>Refill timings</strong> — measured, not assumed. <strong>Twining 1000 m hoses</strong> — the relay arrangement, treated as a procedure with an aerodrome-specific route rather than improvised on the day. And <strong>systematic review through the SMS</strong>, which is what stops the assessment becoming a document.</p>
     <p>And Appendix 3.1.5's companion, Appendix 1.4, is the provision most services have never seen: <em>the availability of supplementary water supplies following an aircraft accident shall be described within the Aerodrome Manual. Details of the policy to be followed in the event of any operation which requires isolation or depletion of any supplementary water supply shall also be included.</em> ART-25 m4 is built on that.</p>
 
+
+    <div class="section-title"><h2>Video</h2><small>Official FAA source — needs a connection</small></div>
+    <p class="vidsrc">Related official video: <b>Section 6 — Fire Suppression Equipment</b> — United States 14 CFR Part 139 material. Verify every regulatory point against SACAA/CAAB requirements and your own SOP.</p>
+    {{video:faa-intro-6}}
+
     <blockquote>
       <p><strong>SME action:</strong> three things. One: establish whether your service has actually carried out a written water needs assessment, or whether the provision you have is a set of quantities derived from Table 2-3 with no analysis behind them. §3.1.2 requires an analysis and §3.1.3 names fourteen factors to put into it — an assessment that omits (g) historical data of water used during aircraft accidents has skipped the factor that tells you whether any of the rest is right. Two: confirm the arithmetic on your own fleet. Given your vehicles&rsquo; actual tank capacities and your performance level&rsquo;s application rate, how long does a full discharge last, and does your replenishment plan deliver water before the tank is empty? §3.1.2 says five minutes, and Chapter 5 says the tank may be empty in two to three. Three: work through §3.1.3 honestly and mark each of the fourteen factors as provided, partial, or absent — particularly (l) fixed pumps, which §3.1.3 notes are <em>a rapid and less resource-intensive method of replenishment</em>, and (m) supplies adjacent to the training area, which is small in capability but decides whether your crews can practise a refill at all. Then set a review date and attach the assessment to your SMS so it does not become a shelf document.</p>
     </blockquote>
@@ -8140,6 +8293,8 @@ const LESSON_OVERRIDES = {
   ],
   body: `
     <h3>Why a single hydrant test proves nothing</h3>
+
+    {{diagram:refill-chain}}
     <p>The most useful thing written about hydrant testing anywhere in this library is UAE GCAA CAR Part XI Appendix 3.1.8. It is a United Arab Emirates document and it does not bind you, but it names the failure mode that a conventional test misses:</p>
     <p><strong>All hydrant water supplies provided for supplementary water supplies shall be assessed for flow and pressure, with two or more hydrants open to simulate multi-refill operations during aircraft fire-fighting from the same water main.</strong></p>
     <p>Read the last clause again. <em>Two or more hydrants open. From the same water main.</em></p>
@@ -8294,6 +8449,11 @@ const LESSON_OVERRIDES = {
       <li><strong>Know your own discharge.</strong> CAR XI 33.1 names four areas of concern and three of them are training and testing, which you control and can measure.</li>
       <li><strong>Treat the rest as a documented gap.</strong> Run-off containment, discharge limits, retention and environmental reporting are not in this library. They are in your State&rsquo;s law, and until you have read them this course cannot tell you what they require.</li>
     </ol>
+
+
+    <div class="section-title"><h2>Video</h2><small>Official FAA source — needs a connection</small></div>
+    <p class="vidsrc">Related official video: <b>Fluorine Free Foam (F3) Transition for ARFF Departments</b> — United States 14 CFR Part 139 material. Verify every regulatory point against SACAA/CAAB requirements and your own SOP.</p>
+    {{video:faa-f3}}
 
     <blockquote>
       <p><strong>SME action:</strong> two actions and one gap, and the gap is the important part of this lesson. One: build a one-page assessment against the four headings in CAR Part XI 33.1 — water and media run-off, hot fire training, foam testing, air quality — and for each, record what you currently do and what document tells you to do it. Where no document exists in your operation, write <em>none</em>. That single word, four times, is a more useful management document than a page of intent, because it defines the work. Two: two concrete checks with sourced backing. Confirm with your foam concentrate manufacturer and your water supplier whether any corrosion inhibitor or freezing point depressant is present in your supply, because §8.1.11 prohibits additives without their prior consultation and approval, and a hard-water or winterised main is exactly where one appears without anybody deciding to add it. And if your service uses, or is considering, a fluorine-free or organohalogen-free foam, confirm the expansion and drainage figures your foam-making system produces against §5.7.16 — 6 to 10 expansion and over 3 minutes drainage for film-forming or fluorine-free synthetic, against 8 to 12 and over 5 minutes for protein-based — because the equipment settings that were correct for one are wrong for the other. Then close the gap: obtain your State&rsquo;s environmental protection and water pollution legislation and any discharge consent attaching to your aerodrome, and add it to the reference library. This platform holds Annex 16 Volumes I to IV and they cover noise, engine emissions, CO2 and CORSIA — nothing in them addresses firefighting media discharge. Until your own State&rsquo;s instrument is in the library, this lesson can tell you what the manual says and cannot tell you what you are required to do.</p>
@@ -8487,6 +8647,11 @@ const LESSON_OVERRIDES = {
     </ul>
     <p>That last one is the most neglected. Not "keep them warm" in the abstract — <em>under shelter</em>, a defined thing, because §9.2.5 is about to tell your crew to move casualties upwind and uphill and §9.5.1 is about to place a triage area 90 m upwind, and shelter at the accident site means something quite specific once the wind is in your assessment.</p>
     <p>It also connects to ART-23's requirement to carry <em>shelter, foil blankets and drinking water</em> in off-airport rescue equipment. Same need, different document, and both are pointing at a casualty who has come out of a survivable accident into a survivable environment and can still be lost to exposure.</p>
+
+
+    <div class="section-title"><h2>Video</h2><small>Official FAA source — needs a connection</small></div>
+    <p class="vidsrc">Related official video: <b>Section 8 — Emergency Aircraft Evacuation</b> — United States 14 CFR Part 139 material. Verify every regulatory point against SACAA/CAAB requirements and your own SOP.</p>
+    {{video:faa-intro-8}}
 
     <blockquote>
       <p><strong>SME action:</strong> five confirmations, all of which are about capability rather than knowledge. One: confirm that the <strong>most qualified trauma-trained individual on the scene</strong> required by §9.4.2 can be identified by name or post at any hour, and that handing over casualty care to that person is a briefed, audible action rather than an assumption. Two: confirm that your <strong>first response rescue vehicles</strong> — not just the ambulance — carry artificial airways, compresses, bandages and oxygen per §9.4.2, and that the quantities match the number of casualties a category 9 aircraft could produce. Three: brief the oxygen prohibition from §9.4.2 explicitly as a prohibition, not a caution, with both triggers named: fuel spills, and fuel soaked clothing. Assess crews on it against a scenario with a fuel spill and a smoke inhalation casualty together, because that is the combination that produces the wrong decision. Four: confirm that casualty stabilisation is a documented task on the incident card with an owner, and that the conditional in §9.4.2 — <em>in cases where fire control or prevention does not require the efforts of all rescue and fire fighting personnel</em> — is written as a condition rather than assumed either way. Five: resolve the CPR scope question. §9.4.3 places cardiopulmonary resuscitation with arriving specialised teams, not with the first few minutes; if your crews are expected to perform it, write it into ART-08 competency with a stated standard and refresh cycle, and if they are not, say so plainly rather than leaving it implied in either direction.</p>
@@ -8970,6 +9135,11 @@ const LESSON_OVERRIDES = {
       <li><strong>In wind, expect FOD</strong> on your route rather than on the runway. §6.4.3.</li>
     </ol>
 
+
+    <div class="section-title"><h2>Video</h2><small>Official FAA source — needs a connection</small></div>
+    <p class="vidsrc">Related official video: <b>Section 2 — Airport Familiarization</b> — United States 14 CFR Part 139 material. Verify every regulatory point against SACAA/CAAB requirements and your own SOP.</p>
+    {{video:faa-intro-2}}
+
     <blockquote>
       <p><strong>SME action:</strong> five checks, and three of them are physical. One: walk or drive the <strong>quickest route</strong> rather than the shortest distance to at least your two most likely accident locations, in poor visibility, and record the difference in minutes. §13.3.5.2 is explicit that the two diverge and that traversing unimproved areas can take longer than a greater distance on paved surfaces — if your crews have never compared them, they are choosing by instinct. Two: confirm your vehicle carries an airfield chart showing taxiways, runways, holding points and marked vehicle routes with their designations, <strong>and</strong> the written instructions for what the driver does on vehicle breakdown or on becoming unsure of position. §13.3.5.3 requires both. The second is the one missing from most vehicles and the one that decides whether a crew recovers in thirty seconds or stops. Three: confirm the LVP arrangement in three places — that your crews <strong>continuously monitor the minimum visibility operating conditions</strong> per §13.3.5.7; that you receive the LVP commencement notice that §6.6.4.2(e) requires to be sent to airport rescue and fire fighting service; and that ATC have a procedure to stop or divert conflicting traffic for a responding RFFS vehicle per §13.3.5.7. Then confirm what your own routes become when §6.6.4.2(a) restricts airside access. Four: re-run your §10.5.7.4 worst-case location analysis with wet-surface conditions, because §10.5.7.4.5 requires an estimated and recorded delay for each factor including surface conditions — your current figure is probably a dry-weather figure and optimistic by that delay in the wet season. Five: brief crews that wind produces FOD on operational areas and therefore on their route — §6.4.3 puts collection duty on airport operations, so your crews should expect to encounter it rather than assume the route is clean.</p>
     </blockquote>
@@ -9388,6 +9558,13 @@ const LESSON_OVERRIDES = {
       <li><strong>Light the assembly area if it would expedite evacuation.</strong> §12.3.1 names it as a rescue activity.</li>
       <li><strong>Hand over to the appliance when it arrives, and say what the situation is.</strong> §12.3.4 transfers command to the on-scene commander on arrival.</li>
     </ol>
+
+
+    <div class="section-title"><h2>Video</h2><small>Official FAA source — needs a connection</small></div>
+    <p class="vidsrc">Related official video: <b>Section 6 — Fire Suppression Equipment</b> — United States 14 CFR Part 139 material. Verify every regulatory point against SACAA/CAAB requirements and your own SOP.</p>
+    {{video:faa-intro-6}}
+    <p class="vidsrc">Related official video: <b>Section 3 — High Reach Extendible Turret (HRET)</b> — United States 14 CFR Part 139 material. Verify every regulatory point against SACAA/CAAB requirements and your own SOP.</p>
+    {{video:faa-tact-3}}
 
     <blockquote>
       <p><strong>SME action:</strong> four items. One: confirm your incident procedure for a rapid intervention vehicle is <strong>written as a task list</strong>, not a sequence of positions, because §12.3.1 requires the tasks to be identified before tactics are specified. The task list from §12.3.1 is: protect the routes used by escaping occupants; control fire; blanket fuel-wetted areas adjacent to the aircraft; assist in the effective use of emergency escape equipment; and provide lighting where it would expedite evacuation and assembly. Two: brief the two safety rules that are not tactics. <strong>Do not enter by any route in use by escaping occupants.</strong> And <strong>the fire may have to be suppressed before any occupant is rescued</strong>, because §12.3.1 states failure to suppress the fire or render a fuel wetted area safe from fire may preclude the survival of the survivors &mdash; even though rescue of all occupants is the primary objective. Make that decision criterion explicit and rehearse it. Three: if you operate a single-crew light vehicle, specify <strong>digital radio datalink</strong> as part of the vehicle rather than a later upgrade. §2.7.5(b) gives its purpose precisely: assisting the driver in locating and navigating to the accident site, reducing driver communications workload and improving situational awareness. A single crew is simultaneously driver, operator and rescuer, and that clause is the standard acknowledging the problem. Add DEVS with GNSS per §2.7.5(a) and confirm the access route for the light vehicle&rsquo;s dimensions and vertical clearance under §13.3.4 &mdash; it may fit where the appliance does not, which changes your routes as well as your speed. Four: confirm the handover. §12.3.4 puts the on-scene commander in charge of activities on arrival, so a single-crew light vehicle that has been working alone for three minutes needs a handover that transfers the situation and not just the title.</p>

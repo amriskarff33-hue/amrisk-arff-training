@@ -831,3 +831,21 @@ html[data-theme="day"] .hero { background: linear-gradient(155deg, var(--navy) 0
   content: ''; position: absolute; left: 0; top: 11px;
   width: 5px; height: 5px; border-radius: 50%; background: var(--warn);
 }
+
+/* ==========================================================================
+   IN-LESSON VIDEO SOURCE NOTE
+   Sits immediately above a video card placed inside a lesson body. States
+   what the footage is and what it is not, because an FAA training video
+   embedded in a South African course without that caveat is a compliance
+   risk, not a teaching aid.
+   ========================================================================== */
+p.vidsrc {
+  margin: 22px 0 -6px;
+  padding: 9px 12px;
+  font-size: .76rem; line-height: 1.5;
+  color: var(--text-2);
+  background: color-mix(in srgb, var(--gold) 8%, transparent);
+  border-left: 3px solid var(--gold-lift);
+  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+}
+p.vidsrc b { color: var(--gold-lift); }

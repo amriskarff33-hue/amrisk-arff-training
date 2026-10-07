@@ -707,6 +707,362 @@ function dCasualtyFlow() {
   return dgSvg(W, H, 'Plan view of casualty flow from an aircraft accident site through four areas — collection, triage at least 90 metres upwind, a care area subdivided into three priority sub-areas, and a transportation area beside the egress road — with the wind and uphill directions marked.', s);
 }
 
+/* ============================================================================
+   10. DOCUMENT HIERARCHY — WHICH DOCUMENT WINS
+   Doc 9137 Part 1 Chapter 1 and Annex 14 Volume I. The relationship between
+   an ICAO standard, an ICAO guidance manual, a State regulation and an
+   operator SOP is a hierarchy, and hierarchies are geometry. Drawn as a
+   stack because that is exactly how it behaves on a conflict.
+   ========================================================================= */
+function dDocumentHierarchy() {
+  const W = 680, H = 470;
+
+  const tier = (y, h, cls, title, sub, cite) => {
+    let s = '';
+    s += `<rect x="120" y="${y}" width="440" height="${h}" rx="10" class="${cls}"/>`;
+    s += dgText(340, y + h / 2 - 8, title, 'dg-t--head', 'middle');
+    s += dgText(340, y + h / 2 + 12, sub, 'dg-t--dim', 'middle');
+    if (cite) s += dgText(340, y + h + 15, cite, 'dg-t--dim', 'middle');
+    return s;
+  };
+
+  let s = '';
+  s += dgText(20, 22, 'Which document wins', 'dg-t--title');
+  s += dgText(20, 42, 'On a conflict, resolve downward. A lower tier can be more demanding — never less.', 'dg-t--dim');
+
+  // Tier 1 — the standard.
+  s += tier(62, 54, 'dg-theory', 'ICAO STANDARD', 'Annex 14 Volume I — Aerodromes', 'NORMATIVE. Adopted by States.');
+  // Tier 2 — the manual.
+  s += tier(146, 54, 'dg-cell', 'ICAO GUIDANCE', 'Doc 9137 Part 1 — Airport Services Manual', 'Explains the standard. Not law.');
+  // Tier 3 — the State.
+  s += tier(230, 54, 'dg-hazard', 'STATE REGULATION', 'SACAA / CAAB adopted requirements', 'BINDING on you. This is what you comply with.');
+  // Tier 4 — the SOP.
+  s += tier(314, 54, 'dg-cell', 'OPERATOR SOP', 'Your service procedure', 'BINDING on your crews. Must meet or exceed above.');
+
+  // The rule that makes it a hierarchy.
+  s += dgArrow(596, 116, 596, 116, 'dg-dim', 1);
+  s += `<line x1="600" y1="118" x2="600" y2="360" class="dg-accent" stroke-width="2.6"/>`;
+  s += dgArrow(600, 356, 600, 372, 'dg-accent', 2.6);
+  s += dgText(612, 200, 'resolve', 'dg-t--accent');
+  s += dgText(612, 216, 'downward', 'dg-t--accent');
+
+  // The two traps.
+  s += `<rect x="20" y="388" width="310" height="66" rx="10" class="dg-panel"/>`;
+  s += dgText(34, 408, 'A more detailed lower tier', 'dg-t--warn');
+  s += dgText(34, 425, 'may add requirements. It can never', 'dg-t--dim');
+  s += dgText(34, 439, 'reduce one above it.', 'dg-t--dim');
+
+  s += `<rect x="350" y="388" width="310" height="66" rx="10" class="dg-panel"/>`;
+  s += dgText(364, 408, 'Guidance is not optional', 'dg-t--warn');
+  s += dgText(364, 425, 'where it explains how to meet a', 'dg-t--dim');
+  s += dgText(364, 439, 'standard — and you depart from it,', 'dg-t--dim');
+  s += dgText(364, 452, 'you need a reason on the day.', 'dg-t--dim');
+
+  return dgSvg(W, H, 'A four tier stack showing the relationship between ICAO Annex 14 as a standard, Doc 9137 as guidance, State adopted regulations and operator standard operating procedures, with conflicts resolved downward.', s);
+}
+
+/* ============================================================================
+   11. ALERT CHAIN — WHO TELLS WHOM
+   Annex 14 §9.2.39 and §9.2.40 require a discrete communication system linking
+   the tower to the fire station and an alerting system for personnel.
+   §9.2.37 and §9.2.38 cover the fire station itself. The chain from the
+   initial report to a rolling appliance is the thing that has to work in
+   ninety seconds, so it is drawn as a chain with its timings.
+   ========================================================================= */
+function dAlertChain() {
+  const W = 680, H = 420;
+
+  const node = (x, y, w, h, label, sub, cls) =>
+    `<rect x="${x}" y="${y}" width="${w}" height="${h}" rx="9" class="${cls || 'dg-cell'}"/>` +
+    dgText(x + w / 2, y + h / 2 - (sub ? 9 : 0), label, 'dg-t--chip', 'middle') +
+    (sub ? dgText(x + w / 2, y + h / 2 + 11, sub, 'dg-t--dim', 'middle') : '');
+
+  let s = '';
+  s += dgText(20, 22, 'The alert chain', 'dg-t--title');
+  s += dgText(20, 42, 'Annex 14 §9.2.39 communication system · §9.2.40 alerting system. The clock starts at the initial call.', 'dg-t--dim');
+
+  s += node(20, 78, 118, 54, 'Aircraft', 'initial report', 'dg-hazard');
+  s += dgArrow(142, 105, 178, 105, 'dg-accent', 2.6);
+
+  s += node(182, 78, 126, 54, 'ATC / tower', 'raises the alarm');
+  s += dgArrow(312, 105, 348, 105, 'dg-accent', 2.6);
+
+  s += node(352, 78, 126, 54, 'Fire station', 'crew mustered');
+  s += dgArrow(482, 105, 518, 105, 'dg-good', 2.8);
+
+  s += node(522, 78, 138, 54, 'Appliance rolling', 'response clock', 'dg-theory');
+
+  // The measurable objective underneath.
+  s += `<rect x="182" y="164" width="296" height="52" rx="10" class="dg-panel"/>`;
+  s += dgText(330, 184, 'Response time objective', 'dg-t--head', 'middle');
+  s += dgText(330, 204, '2 min target · 3 min ceiling · in position to apply foam at 50% of the Table 2-3 rate', 'dg-t--warn', 'middle');
+
+  // What the chain depends on.
+  s += dgText(20, 250, 'What the chain depends on', 'dg-t--head');
+  const deps = [
+    ['Discrete system', 'Tower to station to vehicle — Annex 14 §9.2.39. Not a personal mobile phone.'],
+    ['Alerting system', 'Operable from station, other stations and the tower — §9.2.40.'],
+    ['Correct location', 'The aircraft position. A good chain to the wrong place is no chain.'],
+    ['Grid map', 'Carried on the vehicle. Where the water is, the gates, the hazards.'],
+    ['Access route', 'Open, and passable by your largest vehicle in the conditions.'],
+    ['Rehearsed', 'The chain is exercised, not assumed. A live test is the only test.']
+  ];
+  deps.forEach((d, i) => {
+    const x = 20 + (i % 2) * 330;
+    const y = 262 + Math.floor(i / 2) * 48;
+    s += `<rect x="${x}" y="${y}" width="310" height="40" rx="8" class="dg-cell"/>`;
+    s += dgText(x + 12, y + 17, d[0], 'dg-t--chip');
+    s += dgText(x + 12, y + 32, d[1], 'dg-t--dim');
+  });
+
+  return dgSvg(W, H, 'A left to right chain from aircraft initial report through air traffic control, the fire station and the responding appliance, with the two minute response time objective shown beneath and the six dependencies of the chain listed.', s);
+}
+
+/* ============================================================================
+   12. HAZARD PLACARD — THE DIAMOND GEOMETRY
+   ICAO Doc 9137 Part 1 Chapter 12 and Annex 18. A placard is not a label
+   you read, it is a fixed geometry: a red diamond, a class number in the
+   bottom half and a subsidiary risk in the lower corner. Drawn at true
+   proportions because the shape is half of what it means.
+   ========================================================================= */
+function dDgPlacard() {
+  const W = 680, H = 470;
+
+  let s = '';
+  s += dgText(20, 22, 'The hazard placard — reading the geometry', 'dg-t--title');
+  s += dgText(20, 42, 'A red diamond, a class number, and a subsidiary risk where there is more than one.', 'dg-t--dim');
+
+  // The diamond, drawn square on a point so proportions are honest.
+  const cx = 196, cy = 176, h = 118, w = 118;
+  const half = w / 2;
+  s += `<path d="M${cx},${cy - h} L${cx + half},${cy} L${cx},${cy + h} L${cx - half},${cy} Z" class="dg-hazard"/>`;
+  s += `<path d="M${cx},${cy - h} L${cx + half},${cy} L${cx},${cy + h} L${cx - half},${cy} Z" class="dg-bad" stroke-width="2"/>`;
+  // Class number in the bottom half.
+  s += dgText(cx, cy + 56, '3', 'dg-t--title', 'middle');
+  // Subsidiary risk, lower corner.
+  s += dgText(cx + 30, cy + 34, '6', 'dg-t--title', 'middle');
+  s += dgAxis(cx, cy, cx, cy + h - 4);
+  s += dgAxis(cx - half, cy, cx + half, cy);
+
+  // Annotation to the diamond.
+  s += dgArrow(268, 122, 322, 108, 'dg-dim', 2);
+  s += dgText(328, 104, 'Red diamond', 'dg-t--head');
+  s += dgText(328, 120, 'Square on a point. The shape', 'dg-t--dim');
+  s += dgText(328, 134, 'is a recognition cue before', 'dg-t--dim');
+  s += dgText(328, 148, 'the number is read.', 'dg-t--dim');
+
+  s += dgArrow(224, 232, 300, 262, 'dg-dim', 2);
+  s += dgText(306, 266, 'Class number', 'dg-t--head');
+  s += dgText(306, 282, 'Bottom half. 3 = flammable', 'dg-t--dim');
+  s += dgText(306, 296, 'liquid. The number is', 'dg-t--dim');
+  s += dgText(306, 310, 'the hazard class.', 'dg-t--dim');
+
+  s += dgArrow(226, 210, 336, 348, 'dg-dim', 2);
+  s += dgText(342, 352, 'Subsidiary risk', 'dg-t--head');
+  s += dgText(342, 368, 'Lower corner. 6 = toxic.', 'dg-t--dim');
+  s += dgText(342, 382, 'Shown only where a second', 'dg-t--dim');
+  s += dgText(342, 396, 'hazard applies. Read it', 'dg-t--dim');
+  s += dgText(342, 410, 'before the class number.', 'dg-t--dim');
+
+  // The reading order.
+  s += `<rect x="20" y="330" width="150" height="112" rx="10" class="dg-panel"/>`;
+  s += dgText(95, 352, 'Read in order', 'dg-t--head', 'middle');
+  const order = ['Shape', 'Subsidiary', 'Class'];
+  order.forEach((o, i) => {
+    s += `<circle cx="42" cy="${374 + i * 20}" r="8" class="dg-chip"/>`;
+    s += dgText(42, 374 + i * 20 + 0.5, String(i + 1), 'dg-t--chip', 'middle');
+    s += dgText(58, 378 + i * 20, o, 'dg-t--dim');
+  });
+
+  return dgSvg(W, H, 'A hazard placard diamond drawn at true proportions showing the red diamond shape, the class number 3 for flammable liquids in the bottom half, and a subsidiary risk 6 for toxic in the lower corner, with the three step reading order alongside.', s);
+}
+
+/* ============================================================================
+   13. BONDING AND EARTHING — WHAT THE CIRCUIT IS
+   Doc 9137 Part 1 §15.2(b) requires bonding and/or grounding in accordance
+   with §15.4, which is not reproduced in Part 1. That gap is why this figure
+   carries a caption saying it shows the arrangement the clause requires and
+   not the procedure, which must come from the fuel supplier and NFPA 407.
+   Drawn as a circuit so the two things being joined are unambiguous.
+   ========================================================================= */
+function dBondingCircuit() {
+  const W = 680, H = 440;
+
+  let s = '';
+  s += dgText(20, 22, 'Bonding and earthing — the arrangement', 'dg-t--title');
+  s += dgText(20, 42, '§15.2(b) requires it in accordance with §15.4. §15.4 is not in Part 1 — the method is not shown here.', 'dg-t--dim');
+
+  // The aircraft as the object being bonded.
+  s += `<rect x="60" y="150" width="200" height="70" rx="14" class="dg-solid"/>`;
+  s += dgText(160, 190, 'AIRCRAFT', 'dg-t--head', 'middle');
+  s += dgText(160, 208, 'chassis / structure', 'dg-t--dim', 'middle');
+
+  // Bond point on the aircraft.
+  s += `<circle cx="260" cy="185" r="9" class="dg-vehicle"/>`;
+  s += dgText(284, 182, 'BOND POINT', 'dg-t--chip');
+  s += dgText(284, 198, 'attached to structure,', 'dg-t--dim');
+  s += dgText(284, 212, 'not to a moving part', 'dg-t--dim');
+
+  // The cable.
+  s += `<path d="M269,185 C330,185 340,120 404,120" class="dg-good" stroke-width="4" fill="none" stroke-linecap="round"/>`;
+  s += dgText(322, 112, 'BONDING CABLE', 'dg-t--chip', 'middle');
+  s += dgText(322, 100, 'the equipotential path', 'dg-t--dim', 'middle');
+
+  // The dispenser.
+  s += `<rect x="408" y="88" width="150" height="64" rx="10" class="dg-cell"/>`;
+  s += dgText(483, 114, 'FUELLING VEHICLE', 'dg-t--chip', 'middle');
+  s += dgText(483, 132, 'dispenser body', 'dg-t--dim', 'middle');
+
+  // The separate earth path — this is the distinction the lesson turns on.
+  s += `<path d="M160,220 L160,300" class="dg-accent" stroke-width="3.4" fill="none"/>`;
+  s += dgText(176, 262, 'EARTH PATH', 'dg-t--chip');
+  s += dgText(176, 278, 'vehicle to earth point', 'dg-t--dim');
+  s += dgText(176, 292, 'where the supply provides one', 'dg-t--dim');
+
+  // Earth symbol.
+  s += `<path d="M136,300 L184,300 M142,308 L178,308 M148,316 L172,316 M154,324 L166,324" class="dg-accent" stroke-width="2.6" fill="none" stroke-linecap="round"/>`;
+  s += dgText(196, 312, 'EARTH', 'dg-t--chip');
+
+  // What the two are for.
+  s += `<rect x="20" y="330" width="628" height="94" rx="10" class="dg-panel"/>`;
+  s += dgText(36, 352, 'Why they are not interchangeable', 'dg-t--head');
+  s += dgText(36, 372, 'Bonding equalises potential between the aircraft and the vehicle so a difference cannot', 'dg-t--dim');
+  s += dgText(36, 388, 'discharge through the fuel path. Earthing removes charge to earth. A service that treats', 'dg-t--dim');
+  s += dgText(36, 404, 'them as one action will get one of them wrong. Which equipment, where, and in what', 'dg-t--dim');
+  s += dgText(36, 418, 'order is §15.4\u2019s content — and §15.4 is not in Part 1.', 'dg-t--warn');
+
+  return dgSvg(W, H, 'A schematic showing the aircraft bonded to the fuelling vehicle by a bonding cable between a bond point on the airframe and the dispenser body, with a separate earthing path from the aircraft to an earth point, and a note that bonding and earthing are not interchangeable.', s);
+}
+
+/* ============================================================================
+   14. GATE AND ROUTE CHECK — THE FAILURE CHAIN
+   UAE GCAA CAR Part XI Appendix 3 1.8 requires hydrants to be assessed with
+   two or more open from the same main. Doc 9137 Part 1 §3.2.5 requires the
+   gate and road to be inspected and physically tested, and §3.2.6 keys in
+   the vehicle. The refill is a chain, and the chain is only as strong as its
+   weakest link. Drawn as a chain so a walk-through follows it.
+   ========================================================================= */
+function dRefillChain() {
+  const W = 680, H = 430;
+
+  const link = (x, y, w, h, n, label, sub, danger) => {
+    let s = '';
+    s += `<rect x="${x}" y="${y}" width="${w}" height="${h}" rx="9" class="${danger ? 'dg-hazard' : 'dg-cell'}"/>`;
+    s += `<circle cx="${x + 16}" cy="${y + 14}" r="10" class="dg-chip"/>`;
+    s += dgText(x + 16, y + 14.5, String(n), 'dg-t--chip', 'middle');
+    s += dgText(x + 12, y + 38, label, 'dg-t--chip');
+    sub.forEach((t, i) => s += dgText(x + 12, y + 56 + i * 14, t, 'dg-t--dim'));
+    return s;
+  };
+
+  let s = '';
+  s += dgText(20, 22, 'The refill chain', 'dg-t--title');
+  s += dgText(20, 42, 'Full supply, no reach. Every link is a way the whole thing fails.', 'dg-t--dim');
+
+  const y = 74, h = 96;
+  s += link(20, y, 124, h, 1, 'MAIN', ['can it carry', 'the load?'], false);
+  s += dgArrow(148, y + h / 2, 168, y + h / 2, 'dg-dim', 2.2);
+  s += link(172, y, 124, h, 2, 'HYDRANT', ['flow AND', 'pressure'], false);
+  s += dgArrow(300, y + h / 2, 320, y + h / 2, 'dg-dim', 2.2);
+  s += link(324, y, 124, h, 3, 'OUTLET', ['hose and', 'coupling'], false);
+  s += dgArrow(452, y + h / 2, 472, y + h / 2, 'dg-dim', 2.2);
+  s += link(476, y, 184, h, 4, 'VEHICLE', ['pump, tank,', 'and the driver'], false);
+
+  // The weak-link row.
+  s += dgText(20, 200, 'Where it breaks in practice', 'dg-t--head');
+  const breaks = [
+    ['Single-hydrant test', 'Proves the hydrant. Not the main. Two or more open is the real case.'],
+    ['Pressure at the riser', 'The number that matters is at the vehicle inlet, under load.'],
+    ['Road not passable', 'Seasonal. Snow, water, soft ground — expected conditions, not ideal ones.'],
+    ['Gate never opened', 'Not tested is not available. §3.2.5 physical tests.'],
+    ['Key in a cabinet', '§3.2.6 puts the key in the vehicle. A locked gate is a supply failure.'],
+    ['Clearance unknown', 'Vertical clearance for the largest vehicle, on the whole route.']
+  ];
+  breaks.forEach((b, i) => {
+    const x = 20 + (i % 2) * 330;
+    const yy = 214 + Math.floor(i / 2) * 62;
+    s += `<rect x="${x}" y="${yy}" width="310" height="54" rx="8" class="dg-hazard"/>`;
+    s += dgText(x + 12, yy + 19, b[0], 'dg-t--danger');
+    s += dgText(x + 12, yy + 34, b[1].slice(0, 52), 'dg-t--dim');
+    s += dgText(x + 12, yy + 47, b[1].slice(52), 'dg-t--dim');
+  });
+
+  return dgSvg(W, H, 'A four link chain from water main to hydrant to outlet to vehicle, with six common failure points listed beneath including single hydrant testing, pressure measured at the riser, untraversable roads, gates that have never been opened, keys not carried in the vehicle, and unknown vertical clearance.', s);
+}
+
+/* ============================================================================
+   15. AIRFRAME ACCESS — WHERE YOU CUT
+   Doc 9137 Part 1 §12.1.11 warns that misuse of forcible entry tools has in
+   a number of cases resulted in unnecessary fuel spills increasing the fire
+   hazard. That makes the choice of access point a fire-safety decision, not
+   only a rescue one, and it is a geometry problem. Schematic plan and side
+   view of a fuselage showing where the service points are and why each one
+   is chosen.
+   ========================================================================= */
+function dAirframeAccess() {
+  const W = 680, H = 500;
+
+  let s = '';
+  s += dgText(20, 22, 'Airframe access — choosing the point', 'dg-t--title');
+  s += dgText(20, 42, 'A rescue decision that is also a fire decision. §12.1.11 — misuse of tools has caused fuel spills.', 'dg-t--dim');
+
+  // Plan view of a fuselage.
+  const y0 = 86;
+  s += `<rect x="60" y="${y0}" width="500" height="74" rx="37" class="dg-solid"/>`;
+  s += `<path d="M560,${y0 + 20} l30,17 l0,0 l-30,17 z" class="dg-solid"/>`;
+  // Tail.
+  s += `<path d="M92,${y0 + 18} L56,${y0 - 4} L80,${y0 + 2} L80,${y0 + 20} Z" class="dg-solid"/>`;
+  s += `<path d="M92,${y0 + 56} L56,${y0 + 78} L80,${y0 + 72} L80,${y0 + 54} Z" class="dg-solid"/>`;
+
+  // Service points.
+  const pts = [
+    [180, 'AFT CABIN DOOR', 'first, before the fire', 'ok'],
+    [300, 'GALLEY / LAVATORY', 'access, not casualty', 'ok'],
+    [420, 'CARGO HOLD', 'follow-up, not first', 'warn'],
+    [530, 'COCKPIT', 'last, and only if needed', 'warn']
+  ];
+  pts.forEach((p) => {
+    s += `<circle cx="${p[0]}" cy="${y0 + 37}" r="7" class="dg-vehicle"/>`;
+  });
+
+  // Leader lines down to labels.
+  pts.forEach((p, i) => {
+    const lx = 40 + i * 156;
+    s += dgAxis(p[0], y0 + 74, p[0], y0 + 92);
+    s += dgAxis(p[0], y0 + 92, lx + 50, y0 + 92);
+    s += dgAxis(lx + 50, y0 + 92, lx + 50, y0 + 112);
+    s += `<rect x="${lx}" y="${y0 + 112}" width="140" height="58" rx="9" class="dg-cell"/>`;
+    s += dgText(lx + 10, y0 + 130, p[1], 'dg-t--chip');
+    s += dgText(lx + 10, y0 + 148, p[2].slice(0, 26), 'dg-t--dim');
+    s += dgText(lx + 10, y0 + 162, p[2].slice(26), 'dg-t--dim');
+  });
+
+  // The rule.
+  s += `<rect x="20" y="292" width="640" height="86" rx="10" class="dg-hazard"/>`;
+  s += dgText(36, 314, 'The two rules that make this a fire decision', 'dg-t--danger');
+  s += dgText(36, 334, '1.  Rescue should be accomplished through regular doors and hatches wherever possible — §12.1.11.', 'dg-t--ink');
+  s += dgText(36, 350, '2.  Misuse of forcible entry tools has in a number of cases resulted in unnecessary fuel spills,', 'dg-t--ink');
+  s += dgText(36, 364, '     increasing the fire hazard. A cut in the wrong place converts a survivable accident into an', 'dg-t--dim');
+  s += dgText(36, 376, '     unsurvivable one, in the most exposed phase of the operation. — §12.1.11 note', 'dg-t--dim');
+
+  // Keep clear of these.
+  s += `<rect x="20" y="392" width="310" height="92" rx="10" class="dg-panel"/>`;
+  s += dgText(34, 412, 'Do not cut here', 'dg-t--danger');
+  s += dgText(34, 430, 'Fuel tanks and their immediately', 'dg-t--dim');
+  s += dgText(34, 444, 'adjacent structure. Engine and', 'dg-t--dim');
+  s += dgText(34, 458, 'APU intakes or exhausts. Hydraulic', 'dg-t--dim');
+  s += dgText(34, 472, 'and fuel lines running through.', 'dg-t--dim');
+
+  s += `<rect x="350" y="392" width="310" height="92" rx="10" class="dg-panel"/>`;
+  s += dgText(364, 412, 'Also remember', 'dg-t--head');
+  s += dgText(364, 430, 'Entry should not be attempted by', 'dg-t--dim');
+  s += dgText(364, 444, 'any route in use by occupants', 'dg-t--dim');
+  s += dgText(364, 458, 'escaping. §12.3.1. And crews must', 'dg-t--dim');
+  s += dgText(364, 472, 'be trained in forcible entry. §12.1.11.', 'dg-t--dim');
+
+  return dgSvg(W, H, 'A schematic side view of an aircraft fuselage marking four access points — aft cabin door, galley and lavatory, cargo hold and cockpit — with their order of priority, and two panels noting where not to cut and the two standard rules.', s);
+}
+
 /* =========================================================================
    REGISTRY
    ========================================================================= */
@@ -729,7 +1085,19 @@ const DIAGRAMS = {
   'fuelling-stand':      { draw: dFuellingStand,
     caption: '<b>Fuelling stand geometry.</b> Positioning requirements while fuelling is in progress — ICAO Doc 9137 Part 1 §15.2. The 15 m figure is quoted from §15.2(e); the circle is drawn large enough to read on the page and is <b>not to scale</b>. Bonding and grounding under §15.2(b) are referred to §15.4, which is not reproduced in Part 1 — see lesson ART-12 m3.' },
   'casualty-flow':      { draw: dCasualtyFlow,
-    caption: '<b>Casualty flow.</b> The injured pass through four areas — collection, triage, care and transportation. The triage area should be located <b>at least 90 m upwind</b> of the accident site to avoid exposure to fire and smoke, and where movement is unavoidable casualties should go the shortest distance possible, well away from firefighting operations, upwind and uphill — ICAO Doc 9137 Part 7 §9.5.1 and §9.2.5. Care sub-area colours match the casualty identification tags of §9.3.2. Distances other than the 90 m are schematic.' }
+    caption: '<b>Casualty flow.</b> The injured pass through four areas — collection, triage, care and transportation. The triage area should be located <b>at least 90 m upwind</b> of the accident site to avoid exposure to fire and smoke, and where movement is unavoidable casualties should go the shortest distance possible, well away from firefighting operations, upwind and uphill — ICAO Doc 9137 Part 7 §9.5.1 and §9.2.5. Care sub-area colours match the casualty identification tags of §9.3.2. Distances other than the 90 m are schematic.' },
+  'document-hierarchy':  { draw: dDocumentHierarchy,
+    caption: '<b>Which document wins.</b> Conflicts resolve downward: ICAO Annex 14 is a standard and is adopted by States; Doc 9137 is guidance and explains it; the State&rsquo;s adopted regulation is what you comply with; an operator SOP is binding on your crews and must meet or exceed everything above it. A more detailed lower tier may add requirements but can never reduce one above it.' },
+  'alert-chain':         { draw: dAlertChain,
+    caption: '<b>The alert chain.</b> From the initial report to a rolling appliance, with the response time objective underneath and the six things the chain depends on. Annex 14 §9.2.39 requires a discrete communication system linking the fire station, other stations and the tower; §9.2.40 requires an alerting system. The clock starts at the initial call and is measured to the point of being in position to apply foam at 50 per cent of the Table 2-3 rate — Doc 9137 Part 1 §2.7.1.' },
+  'dg-placard':          { draw: dDgPlacard,
+    caption: '<b>Reading a hazard placard.</b> A red diamond square on a point, the class number in the bottom half, and a subsidiary risk in the lower corner where a second hazard applies. The shape is a recognition cue before the number is read. Read subsidiary before class. ICAO Annex 18 — Safe Transport of Dangerous Goods by Air; see also Doc 9137 Part 1 Chapter 12.' },
+  'bonding-circuit':     { draw: dBondingCircuit,
+    caption: '<b>Bonding and earthing are not the same action.</b> Bonding equalises potential between the aircraft and the fuelling vehicle; earthing removes charge to earth. §15.2(b) requires bonding and/or grounding in accordance with §15.4 — <b>and §15.4 is not reproduced in Doc 9137 Part 1.</b> This figure shows the arrangement the clause requires, not the procedure. The method must come from the fuel supplier&rsquo;s operator procedure under §15.1 and from NFPA 407.' },
+  'refill-chain':        { draw: dRefillChain,
+    caption: '<b>The refill chain.</b> Main, hydrant, outlet, vehicle — and the six places it fails in practice. UAE GCAA CAR Part XI Appendix 3 1.8 requires hydrant supplies to be assessed for flow and pressure with two or more hydrants open to simulate multi-refill operations from the same main, because a single-hydrant test proves the hydrant rather than the main. Worked example of adoption mechanics, not a South African requirement. §3.2.5 and §3.2.6 cover the gate and the key.' },
+  'airframe-access':     { draw: dAirframeAccess,
+    caption: '<b>Choosing an access point.</b> A rescue decision that is also a fire decision. §12.1.11 states that rescue should be accomplished through regular doors and hatches wherever possible, and its note records that misuse of forcible entry tools has in a number of cases resulted in unnecessary fuel spills increasing the fire hazard. §12.3.1 adds that entry should not be attempted by any route in use by escaping occupants. Schematic only — confirm every mark against the aircraft type in your own fleet.' }
 };
 
 const DIAGRAM_KEYS = Object.keys(DIAGRAMS);
