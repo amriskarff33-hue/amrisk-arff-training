@@ -240,14 +240,20 @@ function courseVideoSection(courseId) {
    that is visible is a gap someone can fix; a gap that is invisible is a
    course that quietly teaches nothing on that subject.
    ========================================================================= */
+/* The course list, resolved by id. allCourses() in app.js renders the
+   catalogue markup and returns a string — it is not the data. CURRICULUM is. */
+function courseById(id) {
+  return (typeof CURRICULUM !== 'undefined' ? CURRICULUM : []).find((c) => c.id === id) || null;
+}
+
 function videoLibrarySection() {
   const series = [];
   const seen = {};
   Object.keys(VIDEO_LIBRARY).forEach((k) => {
     const v = VIDEO_LIBRARY[k];
-    const s = v.series || 'Unassigned';
-    if (!seen[s]) { seen[s] = []; series.push({ name: s, items: [] }); }
-    seen[s].push({ key: k, v: v });
+    const name = v.series || 'Unassigned';
+    if (!seen[name]) { seen[name] = []; series.push({ name: name, items: seen[name] }); }
+    seen[name].push({ key: k, v: v });
   });
 
   const blocks = series.map((s) =>
@@ -255,7 +261,7 @@ function videoLibrarySection() {
      <ul class="vidlib">${s.items.map((i) => {
        const uses = Object.keys(VIDEO_COURSES).filter((cid) => (VIDEO_COURSES[cid] || []).includes(i.key))
          .map((cid) => {
-           const c = allCourses.find((x) => x.id === cid);
+           const c = courseById(cid);
            return c ? esc(c.code) : cid;
          });
        return `<li>
@@ -274,7 +280,7 @@ function videoLibrarySection() {
   const total = Object.keys(VIDEO_LIBRARY).length;
   const unmapped = Object.keys(VIDEO_COURSES).filter((cid) => !(VIDEO_COURSES[cid] || []).length)
     .map((cid) => {
-      const c = allCourses.find((x) => x.id === cid);
+      const c = courseById(cid);
       return c ? `${c.code} ${c.title}` : cid;
     });
 
