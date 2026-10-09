@@ -41,7 +41,7 @@ const CURRICULUM = [
   title: 'ARFF Foundations & the Regulatory Framework',
   track: 'core',
   level: 'Foundation',
-  minutes: 75,
+  minutes: 100,
   review: 'scaffold',
   standards: [
     'ICAO Annex 14 Vol I — Aerodromes, Chapter 9 (Rescue and Fire Fighting)',
@@ -100,7 +100,7 @@ const CURRICULUM = [
   title: 'Determining the Required ARFF Level',
   track: 'core',
   level: 'Intermediate',
-  minutes: 90,
+  minutes: 50,
   review: 'scaffold',
   standards: [
     'ICAO Annex 14 Vol I — Ch 9, level determination provisions',
@@ -157,7 +157,7 @@ const CURRICULUM = [
   title: 'Levels 1–10: Agents, Vehicles & Discharge Rates',
   track: 'core',
   level: 'Intermediate',
-  minutes: 90,
+  minutes: 75,
   review: 'scaffold',
   standards: [
     'ICAO Annex 14 Vol I — Ch 9, requirements per level',
@@ -217,7 +217,7 @@ const CURRICULUM = [
   title: 'Extinguishing Agents: Foam, Water and Dry Chemical',
   track: 'equipment',
   level: 'Intermediate',
-  minutes: 100,
+  minutes: 90,
   review: 'scaffold',
   standards: [
     'ICAO Annex 14 Vol I — Ch 9, agent requirements',
@@ -280,7 +280,7 @@ const CURRICULUM = [
   title: 'Foam Systems, Chambers & Turbines',
   track: 'equipment',
   level: 'Advanced',
-  minutes: 105,
+  minutes: 75,
   review: 'scaffold',
   standards: [
     'NFPA 412 — Standard for the Testing and Maintenance of Fixed and Mobile Fire Extinguishing Systems',
@@ -329,7 +329,7 @@ const CURRICULUM = [
   title: 'RFF Vehicles & Emergency Appliances',
   track: 'equipment',
   level: 'Intermediate',
-  minutes: 85,
+  minutes: 95,
   review: 'scaffold',
   standards: [
     'ICAO Annex 14 Vol I — Ch 9, vehicle and appliance requirements',
@@ -379,7 +379,7 @@ const CURRICULUM = [
   title: 'PPE, SCBA & Crew Fitness',
   track: 'equipment',
   level: 'Foundation',
-  minutes: 70,
+  minutes: 80,
   review: 'scaffold',
   standards: [
     'NFPA 600 — Personal Protective Equipment for Fire and Emergency Services',
@@ -429,7 +429,7 @@ const CURRICULUM = [
   title: 'RFF Personnel Training & Competency',
   track: 'core',
   level: 'Foundation',
-  minutes: 60,
+  minutes: 70,
   review: 'scaffold',
   standards: [
     'ICAO Annex 14 Vol I — Ch 9, personnel requirements',
@@ -479,7 +479,7 @@ const CURRICULUM = [
   title: 'Emergency Command & On-Scene Command',
   track: 'emergency',
   level: 'Advanced',
-  minutes: 90,
+  minutes: 75,
   review: 'scaffold',
   standards: [
     'ICAO Doc 9137 Part 1 — command and control',
@@ -530,7 +530,7 @@ const CURRICULUM = [
   title: 'Aircraft Rescue, Access & Extrication',
   track: 'operations',
   level: 'Advanced',
-  minutes: 120,
+  minutes: 90,
   review: 'scaffold',
   standards: [
     'ICAO Doc 9137 Part 1 — rescue and extrication',
@@ -629,7 +629,7 @@ const CURRICULUM = [
   title: 'Aviation Fuel, Refuelling & Spill Response',
   track: 'operations',
   level: 'Intermediate',
-  minutes: 85,
+  minutes: 150,
   review: 'scaffold',
   standards: [
     'IATA Guidance Material for Aviation Fuel Operations (IGAMS)',
@@ -680,7 +680,7 @@ const CURRICULUM = [
   title: 'Dangerous Goods & Hazardous Cargo',
   track: 'operations',
   level: 'Advanced',
-  minutes: 95,
+  minutes: 105,
   review: 'scaffold',
   standards: [
     'IATA Dangerous Goods Regulations (DGR)',
@@ -730,7 +730,7 @@ const CURRICULUM = [
   title: 'Lithium Battery Hazards & Response',
   track: 'operations',
   level: 'Advanced',
-  minutes: 60,
+  minutes: 80,
   review: 'scaffold',
   standards: [
     'IATA Dangerous Goods Regulations — lithium battery provisions',
@@ -780,7 +780,7 @@ const CURRICULUM = [
   title: 'Aircraft Engine, APU & Fuel System Fires',
   track: 'operations',
   level: 'Advanced',
-  minutes: 105,
+  minutes: 60,
   review: 'scaffold',
   standards: [
     'ICAO Doc 9137 Part 1 — engine and fuel system firefighting',
@@ -824,7 +824,7 @@ const CURRICULUM = [
   title: 'Firefighting Tactics & Agent Application',
   track: 'operations',
   level: 'Advanced',
-  minutes: 110,
+  minutes: 55,
   review: 'scaffold',
   standards: [
     'ICAO Doc 9137 Part 1 — firefighting tactics',
@@ -874,7 +874,7 @@ const CURRICULUM = [
   title: 'Rover, Spot Fire & Follow-up Vehicles',
   track: 'operations',
   level: 'Intermediate',
-  minutes: 70,
+  minutes: 125,
   review: 'scaffold',
   standards: [
     'ICAO Annex 14 Vol I — Ch 9, vehicle requirements',
@@ -923,7 +923,7 @@ const CURRICULUM = [
   title: 'Communications, Alerting & Air Traffic Coordination',
   track: 'emergency',
   level: 'Intermediate',
-  minutes: 75,
+  minutes: 50,
   review: 'scaffold',
   standards: [
     'ICAO Annex 14 Vol I — Ch 11 (aerodrome alerting system)',
@@ -973,7 +973,7 @@ const CURRICULUM = [
   title: 'Aerodrome Emergency Planning & Full-Scale Exercise',
   track: 'leadership',
   level: 'Advanced',
-  minutes: 100,
+  minutes: 110,
   review: 'scaffold',
   standards: [
     'ICAO Annex 14 Vol I — Ch 9, emergency planning provisions',
@@ -1024,7 +1024,7 @@ const CURRICULUM = [
   title: 'Responding to the Unexpected: Contingency Decision Making',
   track: 'emergency',
   level: 'Advanced',
-  minutes: 90,
+  minutes: 65,
   review: 'scaffold',
   standards: [
     'ICAO Annex 14 Vol I — Ch 9',
@@ -1075,7 +1075,7 @@ const CURRICULUM = [
   title: 'RFF Operations in Adverse Weather',
   track: 'operations',
   level: 'Intermediate',
-  minutes: 75,
+  minutes: 165,
   review: 'scaffold',
   standards: [
     'ICAO Annex 14 Vol I — Ch 9, operational requirements',
@@ -1124,7 +1124,7 @@ const CURRICULUM = [
   title: 'Wildfire Interface & Airfield Vegetation Fires',
   track: 'operations',
   level: 'Intermediate',
-  minutes: 70,
+  minutes: 125,
   review: 'scaffold',
   standards: [
     'ICAO Annex 14 Vol I — Ch 9 & Ch 4 (obstacles, surfaces)',
@@ -1174,7 +1174,7 @@ const CURRICULUM = [
   title: 'Off-Airport & Remote Stand Response',
   track: 'emergency',
   level: 'Intermediate',
-  minutes: 70,
+  minutes: 95,
   review: 'scaffold',
   standards: [
     'ICAO Annex 14 Vol I — Ch 9',
@@ -1223,7 +1223,7 @@ const CURRICULUM = [
   title: 'Emergency Medical Response & Casualty Care',
   track: 'emergency',
   level: 'Advanced',
-  minutes: 85,
+  minutes: 160,
   review: 'scaffold',
   standards: [
     'ICAO Doc 9137 Part 1 — medical response',
@@ -1274,7 +1274,7 @@ const CURRICULUM = [
   title: 'Water Supply, Hydrants & Sustainability',
   track: 'equipment',
   level: 'Intermediate',
-  minutes: 80,
+  minutes: 175,
   review: 'scaffold',
   standards: [
     'ICAO Annex 14 Vol I — Ch 9, water supply provisions',
