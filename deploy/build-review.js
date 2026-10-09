@@ -122,6 +122,7 @@ for (const [id, o] of Object.entries(O)) {
     }
   }
 }
+console.log(JSON.stringify(GAP));
 const gapRows = GAP.map(g => `<tr><td class="id">${esc(g.code)}</td><td class="id">${esc(g.id)}</td><td>${esc(g.t)}</td></tr>`).join('');
 
 const stat = (n, l, s) => `<div class="stat"><b>${n}</b><span>${l}</span><i>${s}</i></div>`;

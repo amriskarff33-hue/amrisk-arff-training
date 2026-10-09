@@ -32,7 +32,7 @@
 
 /* Arrows are drawn by hand rather than with SVG <marker> so that several
    diagrams can appear on one page without id collisions. */
-function dgArrow(x1, y1, x2, y2, cls, w) {
+function dgArrow(x1, y1, x2, y2, cls, w, dash) {
   const a = Math.atan2(y2 - y1, x2 - x1);
   const len = 10;
   const spread = 0.44;
@@ -40,7 +40,8 @@ function dgArrow(x1, y1, x2, y2, cls, w) {
   const hy = y2 - len * Math.sin(a - spread);
   const tx = x2 - len * Math.cos(a + spread);
   const ty = y2 - len * Math.sin(a + spread);
-  return `<line x1="${x1}" y1="${y1}" x2="${x2}" y2="${y2}" class="${cls}" stroke-width="${w || 2.4}"/>` +
+  return `<line x1="${x1}" y1="${y1}" x2="${x2}" y2="${y2}" class="${cls}" stroke-width="${w || 2.4}"` +
+         (dash ? ` stroke-dasharray="${dash}"` : '') + `/>` +
          `<path d="M${hx.toFixed(1)},${hy.toFixed(1)} L${x2},${y2} L${tx.toFixed(1)},${ty.toFixed(1)} Z" class="dg-head"/>`;
 }
 
@@ -64,6 +65,30 @@ function dgSvg(w, h, title, body) {
 function dgChip(x, y, w, h, label, cls) {
   return `<rect x="${x}" y="${y}" width="${w}" height="${h}" rx="${h / 2}" class="dg-chip ${cls || ''}"/>` +
          dgText(x + w / 2, y + h / 2 + 0.5, label, 'dg-t--chip', 'middle');
+}
+
+/* Diagram labels are placed by hand, so a long sentence has to be broken to a
+   fixed character count at the only point available: the call site. 30
+   characters is what fits inside a 196-unit cell at the .dg-t--dim size, with
+   margin for the widest word. */
+function dgWrap(t, n) {
+  const out = [];
+  let cur = '';
+  String(t).split(' ').forEach(w => {
+    if (!cur) { cur = w; return; }
+    if ((cur + ' ' + w).length <= n) cur += ' ' + w;
+    else { out.push(cur); cur = w; }
+  });
+  if (cur) out.push(cur);
+  return out;
+}
+
+/* Wrapped paragraph. Returns the markup; callers that need to know where the
+   last line ended ask dgWrap for the count. */
+function dgPara(x, y, text, cls, n, lh) {
+  let s = '', cy = y;
+  dgWrap(text, n || 30).forEach(l => { s += dgText(x, cy, l, cls); cy += lh || 12; });
+  return s;
 }
 
 /* =========================================================================
@@ -163,11 +188,11 @@ function dHotBrakeCooling() {
 
   // Failure.
   s += `<path d="M240,236 l14,26 l-10,4 l12,24 l-30,-18 l10,-5 l-14,-20 z" class="dg-burst"/>`;
-  s += dgText(258, 250, 'EXPLOSIVE', 'dg-t--danger');
-  s += dgText(258, 266, 'FAILURE', 'dg-t--danger');
-  s += dgText(258, 290, 'steam flash', 'dg-t--dim');
-  s += dgText(258, 304, 'shatters the', 'dg-t--dim');
-  s += dgText(258, 318, 'wheel', 'dg-t--dim');
+  s += dgText(252, 250, 'EXPLOSIVE', 'dg-t--danger');
+  s += dgText(252, 266, 'FAILURE', 'dg-t--danger');
+  s += dgText(252, 290, 'steam flash', 'dg-t--dim');
+  s += dgText(252, 304, 'shatters the', 'dg-t--dim');
+  s += dgText(252, 318, 'wheel', 'dg-t--dim');
 
   s += dgChip(44, 340, 258, 26, 'Last resort only — §12.2.4', 'dg-chip--danger');
 
@@ -253,7 +278,9 @@ function dCriticalArea() {
 
   // Tail extremity note.
   s += `<line x1="${cx - fusL / 2}" y1="${cy - fusW / 2 - 22}" x2="${cx - fusL / 2}" y2="${cy + fusW / 2 + 22}" class="dg-dimline"/>`;
-  s += dgText(cx - fusL / 2 - 10, cy - fusW / 2 - 34, 'whole length is protected', 'dg-t--dim', 'end');
+  /* Below the fuselage, not beside the upwind callout: the two used to print
+     on top of each other. */
+  s += dgText(cx - fusL / 2 - 10, cy + fusW / 2 + 34, 'whole length is protected', 'dg-t--dim', 'end');
 
   // Formula panel.
   const fy = 400;
@@ -273,7 +300,7 @@ function dCriticalArea() {
    to 500 m from the rear depending on aircraft size.
    ========================================================================= */
 function dJetBlast() {
-  const W = 680, H = 360;
+  const W = 680, H = 400;
   let s = '';
 
   s += dgText(20, 22, 'Turbine engine — danger zones', 'dg-t--title');
@@ -296,7 +323,7 @@ function dJetBlast() {
 
   // Intake keep-out — a 10 m radius around the front intake.
   s += `<circle cx="${nose + 103}" cy="${cy - 35}" r="58" class="dg-keepout"/>`;
-  s += dgText(nose + 103, cy - 108, '10 m minimum', 'dg-t--danger', 'middle');
+  s += dgText(nose + 103, cy - 108, '10 m minimum — §12.2.11', 'dg-t--danger', 'middle');
   s += dgText(nose + 103, cy - 92, 'front &amp; side intake', 'dg-t--danger', 'middle');
 
   // Dimension bar for the 500 m.
@@ -307,7 +334,6 @@ function dJetBlast() {
 
   // Forward clearance dimension.
   s += dgAxis(nose + 103, cy - 58, nose + 103, cy - 116);
-  s += dgText(nose + 112, cy - 92, '10 m — §12.2.11', 'dg-t--danger');
 
   s += dgText(20, H - 40, 'Never stand behind an operating engine, and never cross the intake plane.', 'dg-t--warn');
   s += dgText(20, H - 22, 'Distances are for an aircraft at rest or running; treat a live engine as a hard exclusion zone.', 'dg-t--dim');
@@ -323,7 +349,7 @@ function dJetBlast() {
    everyone behind them.
    ========================================================================= */
 function dVehiclePositioning() {
-  const W = 680, H = 500;
+  const W = 680, H = 522;
   let s = '';
 
   s += dgText(20, 22, 'Positioning apparatus at the scene', 'dg-t--title');
@@ -373,8 +399,9 @@ function dVehiclePositioning() {
   s += dgText(96, 216, 'for a reflash', 'dg-t--dim');
 
   // Do-not list.
-  s += `<rect x="20" y="466" width="640" height="26" rx="13" class="dg-panel"/>`;
-  s += dgText(32, 483, 'Do not drive through smoke · do not drive over wreckage · do not block emergency vehicle entry or exit', 'dg-t--warn');
+  s += `<rect x="20" y="460" width="640" height="46" rx="13" class="dg-panel"/>`;
+  s += dgText(32, 476, 'Do not drive through smoke · do not drive over wreckage · do not block emergency vehicle', 'dg-t--warn');
+  s += dgText(32, 494, 'entry or exit. Every one of those is a second vehicle arriving to the same fire.', 'dg-t--warn');
 
   return dgSvg(W, H, 'Plan view of a crash site showing an RFF vehicle positioned uphill and upwind with its turret covering the fuselage while protecting the egress route.', s);
 }
@@ -403,8 +430,9 @@ function dWaterQuantity() {
   s += box(20, 46, 200, 132, '1 · The area',
     dgText(30, 66, 'Ap = 0.667 × AT', 'dg-t--mono') +
     dgText(30, 90, 'Ap — practical critical area (m²)', 'dg-t--dim') +
-    dgText(30, 110, 'AT — theoretical, from aircraft L and W', 'dg-t--dim') +
-    dgText(30, 136, 'See the critical area diagram', 'dg-t--dim'), 'accent');
+    dgText(30, 112, 'AT — theoretical, from', 'dg-t--dim') +
+    dgText(30, 126, 'aircraft L and W', 'dg-t--dim') +
+    dgText(30, 150, 'See the critical area diagram', 'dg-t--dim'), 'accent');
 
   // Step 2 — the rate and time.
   s += box(240, 46, 200, 132, '2 · Rate × time',
@@ -416,10 +444,12 @@ function dWaterQuantity() {
   // Step 3 — the sustainment term.
   s += box(460, 46, 200, 132, '3 · Then sustain',
     dgText(470, 66, 'Q = Q1 + Q2', 'dg-t--mono') +
-    dgText(470, 90, 'Q2 — hold control, then extinguish', 'dg-t--dim') +
-    dgText(470, 110, 'Not calculated — read from', 'dg-t--dim') +
-    dgText(470, 124, 'the Annex 14 graph', 'dg-t--dim') +
-    dgText(470, 146, '≈0% at cat 1 → ≈190% at cat 10', 'dg-t--warn'), 'warn');
+    dgText(470, 90, 'Q2 — hold control,', 'dg-t--dim') +
+    dgText(470, 104, 'then extinguish', 'dg-t--dim') +
+    dgText(470, 126, 'Not calculated — read', 'dg-t--dim') +
+    dgText(470, 140, 'from the Annex 14 graph', 'dg-t--dim') +
+    dgText(470, 160, '≈0% at cat 1 →', 'dg-t--warn') +
+    dgText(470, 174, '≈190% at cat 10', 'dg-t--warn'), 'warn');
 
   // Connectors.
   s += dgArrow(224, 112, 236, 112, 'dg-accent');
@@ -453,13 +483,14 @@ function dWaterQuantity() {
 
 function dLevelDetermination() {
   const W = 680, H = 500;
+  const vw = W;
   let s = '';
 
   s += dgText(20, 22, 'Category determination — the lookup', 'dg-t--title');
   s += dgText(20, 42, 'Find the row for overall length, then the column for maximum fuselage width. The cell is the category.', 'dg-t--dim');
 
   // Matrix geometry: 7 width columns, 6 length rows.
-  const gx = 168, gy = 66;
+  const gx = 168, gy = 108;
   const cw = 62, ch = 34;
   const widths  = ['up to 2', '2–3', '3–4', '4–5', '5–6', '6–7', 'over 7'];
   const lengths = ['under 9 m', '9 – 12 m', '12 – 18 m', '18 – 24 m', '24 – 39 m', 'over 39 m'];
@@ -503,8 +534,10 @@ function dLevelDetermination() {
   // misreads happen, so show it as a hard edge.
   const stepX = gx + 6 * cw;
   s += `<line x1="${stepX}" y1="${gy - 22}" x2="${stepX}" y2="${gy + lengths.length * ch + 6}" class="dg-dimline"/>`;
-  s += dgText(stepX + 8, gy - 34, '6-7 m vs over 7 m —', 'dg-t--accent');
-  s += dgText(stepX + 8, gy - 20, 'one step, big consequence', 'dg-t--accent');
+  /* Right-anchored: at this size a start-anchored run at stepX + 8 runs off
+     the canvas, and it also collides with the column header above it. */
+  s += dgText(20, 58, '6-7 m vs over 7 m —', 'dg-t--accent');
+  s += dgText(20, 74, 'one step, big consequence', 'dg-t--accent');
 
   // Worked reading, marked as the method and not an authority for any
   // particular aerodrome.
@@ -531,7 +564,7 @@ function dLevelDetermination() {
    on a 680-unit-wide canvas and is NOT to scale.
    ========================================================================= */
 function dFuellingStand() {
-  const W = 680, H = 620;
+  const W = 680, H = 684;
 
   /* A numbered badge, so the drawing stays uncluttered and the wording lives
      in one legend instead of in leader lines across the artwork. */
@@ -602,7 +635,7 @@ function dFuellingStand() {
 
   // Legend. The wording is the standard's, cited per row.
   const ly = 468;
-  s += `<rect x="20" y="${ly}" width="640" height="140" rx="14" class="dg-panel"/>`;
+  s += `<rect x="20" y="${ly}" width="640" height="196" rx="14" class="dg-panel"/>`;
   const rows = [
     ['1', '§15.2(c)2 — a cleared path is maintained to permit rapid removal of the fuelling vehicle from the aircraft in an emergency'],
     ['2', '§15.2(c)1 — the fuelling vehicle is positioned so that accessibility to the aircraft by RFF vehicles is not interrupted'],
@@ -612,10 +645,10 @@ function dFuellingStand() {
     ['6', '§15.2(h) — abnormally heated undercarriage: the RFF service is called and fuelling does not take place until the heat dissipates']
   ];
   rows.forEach((r, i) => {
-    const y = ly + 26 + i * 20;
+    const y = ly + 26 + i * 30;
     s += `<circle cx="42" cy="${y - 4}" r="10" class="dg-chip"/>`;
     s += dgText(42, y - 3.5, r[0], 'dg-t--chip', 'middle');
-    s += dgText(62, y, r[1], 'dg-t--dim');
+    s += dgPara(62, y - 6, r[1], 'dg-t--dim', 94, 13);
   });
 
   return dgSvg(W, H, 'Plan view of an aircraft stand during fuelling, showing the 15 metre no-open-flame zone centred on the fuelling vehicle, the under-wing keep-out with engines crossed out, the cleared path for rapid removal, the unobstructed RFF access route and the egress arrows from occupied portions of the aircraft.', s);
@@ -632,7 +665,7 @@ function dFuellingStand() {
    The 90 m is quoted. The drawn distances are schematic and not to scale.
    ========================================================================= */
 function dCasualtyFlow() {
-  const W = 680, H = 620;
+  const W = 680, H = 674;
 
   const badge = (x, y, n) =>
     `<circle cx="${x}" cy="${y}" r="12" class="dg-chip"/>` +
@@ -689,7 +722,7 @@ function dCasualtyFlow() {
 
   // Legend.
   const ly = 470;
-  s += `<rect x="20" y="${ly}" width="640" height="140" rx="14" class="dg-panel"/>`;
+  s += `<rect x="20" y="${ly}" width="640" height="184" rx="14" class="dg-panel"/>`;
   const rows = [
     ['1', 'Collection area \u2014 initial collection of the seriously injured from the debris. Custody transfers from RFF personnel to medical services here, though usually at the triage area. §9.5.1(a)'],
     ['2', 'Triage area \u2014 at least 90 m upwind of the accident site to avoid exposure to fire and smoke. More than one may be established. §9.5.1(b)'],
@@ -698,10 +731,10 @@ function dCasualtyFlow() {
     ['\u2191', 'Where movement is unavoidable: shortest distance possible, well away from firefighting operations, and upwind and uphill. §9.2.5']
   ];
   rows.forEach((r, i) => {
-    const y = ly + 24 + i * 24;
+    const y = ly + 24 + i * 34;
     s += `<circle cx="42" cy="${y - 4}" r="10" class="dg-chip"/>`;
     s += dgText(42, y - 3.5, r[0], 'dg-t--chip', 'middle');
-    s += dgText(62, y, r[1], 'dg-t--dim');
+    s += dgPara(62, y - 6, r[1], 'dg-t--dim', 94, 13);
   });
 
   return dgSvg(W, H, 'Plan view of casualty flow from an aircraft accident site through four areas — collection, triage at least 90 metres upwind, a care area subdivided into three priority sub-areas, and a transportation area beside the egress road — with the wind and uphill directions marked.', s);
@@ -770,7 +803,7 @@ function dDocumentHierarchy() {
    ninety seconds, so it is drawn as a chain with its timings.
    ========================================================================= */
 function dAlertChain() {
-  const W = 680, H = 420;
+  const W = 680, H = 458;
 
   const node = (x, y, w, h, label, sub, cls) =>
     `<rect x="${x}" y="${y}" width="${w}" height="${h}" rx="9" class="${cls || 'dg-cell'}"/>` +
@@ -809,10 +842,10 @@ function dAlertChain() {
   ];
   deps.forEach((d, i) => {
     const x = 20 + (i % 2) * 330;
-    const y = 262 + Math.floor(i / 2) * 48;
-    s += `<rect x="${x}" y="${y}" width="310" height="40" rx="8" class="dg-cell"/>`;
-    s += dgText(x + 12, y + 17, d[0], 'dg-t--chip');
-    s += dgText(x + 12, y + 32, d[1], 'dg-t--dim');
+    const y = 262 + Math.floor(i / 2) * 62;
+    s += `<rect x="${x}" y="${y}" width="310" height="54" rx="8" class="dg-cell"/>`;
+    s += dgText(x + 12, y + 16, d[0], 'dg-t--chip');
+    s += dgPara(x + 12, y + 33, d[1], 'dg-t--dim', 44, 13);
   });
 
   return dgSvg(W, H, 'A left to right chain from aircraft initial report through air traffic control, the fire station and the responding appliance, with the two minute response time objective shown beneath and the six dependencies of the chain listed.', s);
@@ -983,8 +1016,8 @@ function dRefillChain() {
     const yy = 214 + Math.floor(i / 2) * 62;
     s += `<rect x="${x}" y="${yy}" width="310" height="54" rx="8" class="dg-hazard"/>`;
     s += dgText(x + 12, yy + 19, b[0], 'dg-t--danger');
-    s += dgText(x + 12, yy + 34, b[1].slice(0, 52), 'dg-t--dim');
-    s += dgText(x + 12, yy + 47, b[1].slice(52), 'dg-t--dim');
+    s += dgText(x + 12, yy + 34, b[1].slice(0, 44), 'dg-t--dim');
+    s += dgText(x + 12, yy + 47, b[1].slice(44), 'dg-t--dim');
   });
 
   return dgSvg(W, H, 'A four link chain from water main to hydrant to outlet to vehicle, with six common failure points listed beneath including single hydrant testing, pressure measured at the riser, untraversable roads, gates that have never been opened, keys not carried in the vehicle, and unknown vertical clearance.', s);
@@ -1077,11 +1110,11 @@ function dAirframeAccess() {
    three-step sequence are from the manual; the pool geometry is schematic.
    ========================================================================= */
 function dSpillBlanket() {
-  const W = 680, H = 560;
+  const W = 680, H = 610;
 
   let s = '';
   s += dgText(20, 22, 'Blanketing a fuel pool', 'dg-t--title');
-  s += dgText(20, 42, '§12.1.9 eliminate ignition sources *while* covering. §8.1.1 the blanket must flow freely, resist disruption, reseal.', 'dg-t--dim');
+  s += dgText(20, 42, '§12.1.9 eliminate ignition sources while covering · §8.1.1 flow freely, resist, reseal', 'dg-t--dim');
 
   /* ---- The pool, plan view. Irregular because pools are. ---- */
   s += `<path d="M60,150 C120,120 250,132 300,120 C380,102 470,126 520,110 C580,94 620,120 626,164
@@ -1130,10 +1163,9 @@ function dSpillBlanket() {
   ];
   props.forEach((p, i) => {
     const x = 20 + i * 214;
-    s += `<rect x="${x}" y="500" width="200" height="52" rx="8" class="dg-cell"/>`;
-    s += dgText(x + 10, 517, p[0], 'dg-t--chip');
-    s += dgText(x + 10, 532, p[1].slice(0, 34), 'dg-t--dim');
-    s += dgText(x + 10, 546, p[1].slice(34), 'dg-t--dim');
+    s += `<rect x="${x}" y="500" width="200" height="94" rx="8" class="dg-cell"/>`;
+    s += dgText(x + 10, 518, p[0], 'dg-t--chip');
+    s += dgPara(x + 10, 536, p[1], 'dg-t--dim', 29, 13);
   });
 
   return dgSvg(W, H, 'Plan view of an irregular fuel pool with the applied foam blanket on the upwind third, the film forming foam reaching further, exposed fuel still downwind, and the three required blanket properties listed with what each one fails on.', s);
@@ -1163,19 +1195,19 @@ function dAgentSelection() {
   s += dgArrow(174, 84, 216, 84, 'dg-dim', 2.2);
   s += box(220, 66, 132, 54, 'Liquid fuel', 'Jet A, kerosene');
   s += dgArrow(356, 84, 398, 84, 'dg-dim', 2.2);
-  s += box(402, 66, 258, 54, 'FFFP foam', '§8.1(d) — fluid, film forming, oleophobic. Highly effective on fuel spills.', 'dg-fog');
+  s += box(402, 66, 258, 54, 'FFFP foam', '§8.1(d) — fluid, film forming', 'dg-fog');
 
   s += dgArrow(292, 124, 292, 158, 'dg-dim', 2.2);
   s += box(20, 162, 150, 54, 'Solid combustibles', 'Class A');
   s += dgArrow(174, 180, 216, 180, 'dg-dim', 2.2);
-  s += box(220, 162, 132, 54, 'Water fog', '§12.2.2 cooling and quenching. Not a knock-down by jet.');
+  s += box(220, 162, 132, 54, 'Water fog', '§12.2.2 cooling');
   s += dgArrow(356, 180, 398, 180, 'dg-dim', 2.2);
   s += box(402, 162, 258, 54, 'Water fog + foam on fuel', 'water cools, foam excludes the vapour', 'dg-fog');
 
   s += dgArrow(292, 220, 292, 254, 'dg-dim', 2.2);
   s += box(20, 258, 150, 54, 'Live electrical', 'Class C');
   s += dgArrow(174, 276, 216, 276, 'dg-dim', 2.2);
-  s += box(220, 258, 132, 54, 'De-energise first', 'then the agent you would otherwise use');
+  s += box(220, 258, 132, 54, 'De-energise first', 'then the same agent');
   s += dgArrow(356, 276, 398, 276, 'dg-dim', 2.2);
   s += box(402, 258, 258, 54, 'Water fog, once dead', 'BC dry chemical is also rated for Class C', 'dg-fog');
 
@@ -1195,15 +1227,284 @@ function dAgentSelection() {
   // The two warnings that change the choice.
   s += `<rect x="20" y="506" width="310" height="58" rx="10" class="dg-hazard"/>`;
   s += dgText(34, 524, 'Performance level is not a preference', 'dg-t--danger');
-  s += dgText(34, 541, '§2.3 / Annex 14 §9.2.9 — A, B or C as the category', 'dg-t--dim');
-  s += dgText(34, 556, 'requires. A fluorine-free foam must still meet it.', 'dg-t--dim');
+  s += dgText(34, 540, '§2.3 / Annex 14 §9.2.9 —', 'dg-t--dim');
+  s += dgText(34, 554, 'A, B or C as the category requires.', 'dg-t--dim');
 
   s += `<rect x="350" y="506" width="310" height="58" rx="10" class="dg-hazard"/>`;
   s += dgText(364, 524, 'Fluorine-free changes the equipment', 'dg-t--danger');
-  s += dgText(364, 541, '§5.7.16 — expansion 6-10 not 8-12, drainage over 3 min', 'dg-t--dim');
-  s += dgText(364, 556, 'not over 5. Recommission the system, §8.1(e).', 'dg-t--dim');
+  s += dgText(364, 540, '§5.7.16 — expansion 6-10 not 8-12,', 'dg-t--dim');
+  s += dgText(364, 554, 'drainage over 3 min, not over 5. §8.1(e).', 'dg-t--dim');
 
   return dgSvg(W, H, 'A decision tree starting from the class of fire and resolving to a named agent for each of liquid fuel, solid combustibles, live electrical and flammable metal, with the complementary dry chemical agent and two warnings about performance level and fluorine-free equipment settings.', s);
+}
+
+/* ============================================================================
+   18. TASK AND RESOURCE ANALYSIS — THE SIX PHASES
+   CAP 1150 (UK CAA Information Paper 04, January 2014) is the one source in
+   this library that sets out a defensible way to justify a staffing number. It
+   is a method illustration, not a binding requirement, and is labelled as such.
+   Phases 1 to 4 are inputs, Phase 5 is the combination, and Phase 6 is the only
+   place the analysis is actually carried out. That ordering is the teaching
+   point: you cannot run a tabletop without having scored your worst case first.
+   ========================================================================= */
+function dTraPhases() {
+  const W = 700, H = 706;
+
+  const PH = [
+    ['1', 'Aims and tasks',
+     'The aims and objectives of the RFF services must be clear as to the required tasks that personnel are expected to carry out.',
+     'Not exhaustive. Find them all.'],
+    ['2', 'Accident types',
+     'Identify representative realistic and feasible accidents that may occur at the airport. All incidents should involve fire.',
+     'From statistics and local data.'],
+    ['3', 'Aircraft types',
+     'Identify the types of aircraft commonly in use. Type and configuration bear directly on the resources required.',
+     'Configuration, not just type.'],
+    ['4', 'Locations',
+     'Every airport is unique in configuration, movements, infrastructure and boundary. Score the credible worst-case locations.',
+     'Record the rationale for each.'],
+    ['5', 'The scenario',
+     'Correlate the accident types, the aircraft and the locations into one complete accident scenario ready for analysis.',
+     'One scenario, ready to analyse.'],
+    ['6', 'Tabletop analysis',
+     'Run the scenarios as tabletop exercises or simulations, with experienced supervisors and firefighters.',
+     'Minimum at any one time, in sequence.']
+  ];
+
+  const COLX = [20, 252, 484], BW = 196, ROWY = [66, 256], BH = 180;
+  let s = '';
+  s += dgText(20, 22, 'Task and resource analysis: six phases', 'dg-t--title');
+  s += dgText(20, 42, 'CAP 1150 — a method for justifying a number, not a requirement for one.', 'dg-t--dim');
+
+  PH.forEach((p, i) => {
+    const x = COLX[i % 3], y = ROWY[Math.floor(i / 3)];
+    s += `<rect x="${x}" y="${y}" width="${BW}" height="${BH}" rx="10" class="dg-cell"/>`;
+    s += `<circle cx="${x + 24}" cy="${y + 26}" r="14" class="dg-chip"/>`;
+    s += dgText(x + 24, y + 26.5, p[0], 'dg-t--chip', 'middle');
+    s += dgText(x + 46, y + 26, p[1], 'dg-t--head');
+    const body = dgWrap(p[2], 26);
+    body.forEach((l, n) => { s += dgText(x + 12, y + 56 + n * 12, l, 'dg-t--dim'); });
+    const rule = y + 56 + body.length * 12 + 4;
+    s += `<line x1="${x + 12}" y1="${rule}" x2="${x + BW - 12}" y2="${rule}" class="dg-dimline"/>`;
+    s += dgPara(x + 12, rule + 16, p[3], 'dg-t--accent', 26, 12);
+    if (i % 3 < 2) s += dgArrow(x + BW + 4, y + 26, x + BW + 28, y + 26, 'dg-accent', 1.8);
+  });
+
+  s += dgText(20, 462, 'Sequential, and the order is the argument', 'dg-t--head');
+  s += dgText(20, 480, 'Phases 1 to 4 are inputs. Phase 5 combines them into one scenario. Phase 6 is where the analysis is', 'dg-t--dim');
+  s += dgText(20, 494, 'carried out — a tabletop run without a scored worst-case location and a named aircraft is not evidence.', 'dg-t--dim');
+
+  s += dgText(20, 514, 'What Phase 6 must record', 'dg-t--head');
+  const REC = [
+    'Receipt of message and dispatch of the RFF response',
+    'Time — from the initial receipt of the call onwards',
+    'List of assessed tasks, functions and priorities achieved',
+    'Resources — personnel, vehicles and equipment — per task',
+    'Comments, to enable team members to record findings',
+    'Identified pinch points'
+  ];
+  REC.forEach((r, i) => {
+    const x = COLX[i % 3], y = 528 + Math.floor(i / 3) * 56;
+    s += `<rect x="${x}" y="${y}" width="${BW}" height="52" rx="8" class="dg-cell"/>`;
+    s += `<circle cx="${x + 16}" cy="${y + 18}" r="3.5" class="dg-arc"/>`;
+    s += dgPara(x + 26, y + 18, r, 'dg-t--dim', 25, 12);
+  });
+
+  s += `<rect x="20" y="648" width="660" height="48" rx="8" class="dg-panel dg-panel--warn"/>`;
+  s += dgText(36, 666, 'A UK CAA Information Paper — a method illustration, not a binding requirement. Your', 'dg-t--warn');
+  s += dgText(36, 684, 'regulator sets the category, and therefore the floor the analysis has to justify.', 'dg-t--dim');
+
+  return dgSvg(W, H, 'The six phases of a task and resource analysis: aims and tasks, representative accidents, aircraft types, locations, the combined scenario, and tabletop analysis, followed by the six items the analysis must record.', s);
+}
+
+/* ============================================================================
+   19. QUICKEST IS NOT SHORTEST
+   Doc 9137 Part 1 §13.3.5.2 is a single sentence that overturns the instinct to
+   take the straight line: vehicles approach "by the quickest route
+   commensurate with safety, although this might not necessarily be the shortest
+   distance to the incident site". The two routes below are drawn to the same
+   scale. The paved one is longer and arrives first.
+   ========================================================================= */
+function dQuickestRoute() {
+  const W = 700, H = 598;
+  let s = '';
+  s += dgText(20, 22, 'Quickest is not shortest', 'dg-t--title');
+  s += dgText(20, 42, '§13.3.5.2 — the rule that overturns the instinct to take the direct line across the grass.', 'dg-t--dim');
+
+  s += `<rect x="20" y="60" width="660" height="300" rx="10" class="dg-panel"/>`;
+  s += `<rect x="36" y="76" width="628" height="268" rx="6" class="dg-ground"/>`;
+
+  // Pavement: runway plus two taxiways, so the dog-leg is a real route.
+  s += `<rect x="36" y="210" width="628" height="30" class="dg-solid"/>`;
+  s += dgAxis(44, 225, 656, 225);
+  s += `<rect x="120" y="110" width="26" height="190" class="dg-solid"/>`;
+  s += `<rect x="430" y="110" width="26" height="190" class="dg-solid"/>`;
+
+  s += dgText(155, 192, 'QUICKEST — §13.3.5.2', 'dg-t--good');
+  s += dgText(360, 192, 'RUNWAY', 'dg-t--dim', 'middle');
+  s += dgText(300, 322, 'SHORTEST — AND NOT THE QUICKEST', 'dg-t--bad');
+
+  // The route instinct takes: straight across unimproved ground.
+  s += dgArrow(136, 296, 586, 104, 'dg-bad', 2.4, '8 5');
+  // The route §13.3.5.2 tells you to take.
+  s += dgArrow(92, 296, 131, 296, 'dg-good', 3);
+  s += dgArrow(133, 294, 133, 228, 'dg-good', 3);
+  s += dgArrow(135, 225, 429, 225, 'dg-good', 3);
+  s += dgArrow(443, 223, 443, 122, 'dg-good', 3);
+  s += dgArrow(445, 120, 578, 112, 'dg-good', 3);
+
+  s += `<rect x="52" y="292" width="72" height="34" rx="6" class="dg-cell"/>`;
+  s += dgText(88, 309, 'RFF', 'dg-t--chip', 'middle');
+  s += `<circle cx="600" cy="110" r="22" class="dg-hazard"/>`;
+  s += dgText(600, 110.5, 'INC', 'dg-t--chip', 'middle');
+
+  s += dgText(20, 378, 'Both routes are drawn to the same scale. The green one is longer on the ground. The difference in time is', 'dg-t--dim');
+  s += dgText(20, 392, 'yours to measure on your own aerodrome — the manual sets the rule, not the number.', 'dg-t--dim');
+
+  const CELL = [
+    ['§13.3.5.3 Chart', 'An airfield chart showing all taxiways, runways, holding points and vehicle routes marked with their designations, plus written instructions for breakdown or disorientation.'],
+    ['§13.3.5.4 Kit', 'Surface movement radar, infrared vision systems, taxiway centreline lighting, vehicle positioning equipment and other navigation aids that enhance response in low visibility.'],
+    ['§13.3.5.5 / .6', 'Once low visibility operations are initiated it may be necessary to restrict vehicles in the manoeuvring area, and personnel must know which areas become impassable.']
+  ];
+  CELL.forEach((c, i) => {
+    const x = 20 + i * 232;
+    s += `<rect x="${x}" y="412" width="212" height="118" rx="10" class="dg-cell"/>`;
+    s += dgText(x + 12, 432, c[0], 'dg-t--head');
+    s += dgPara(x + 12, 456, c[1], 'dg-t--dim', 30, 12);
+  });
+
+  s += `<rect x="20" y="542" width="660" height="48" rx="8" class="dg-hazard"/>`;
+  s += dgText(36, 562, 'Knowledge of the topography for all weather conditions is what makes this work — grid', 'dg-t--danger');
+  s += dgText(36, 580, 'maps and careful selection of routes are what turn the rule into a response time.', 'dg-t--dim');
+
+  return dgSvg(W, H, 'A plan view of an aerodrome showing a longer paved dog-leg route in green as the quickest route and a shorter diagonal route across unimproved ground in red as the shortest but not quickest, with the chart, equipment and low visibility requirements listed below.', s);
+}
+
+/* ============================================================================
+   20. LITHIUM-ION THERMAL RUNAWAY — FOUR WAYS IN
+   Doc 9137 Part 1 §12.2.19.2 to §12.2.19.4. What matters here is that the
+   entry route determines whether you can influence it: two of the four are
+   things that happen to the aircraft, two are things you can act on before it
+   does. The section note — installed batteries, not cargo — is on the panel at
+   the foot because it is the first thing an SME will check.
+   ========================================================================= */
+function dLithiumRunaway() {
+  const W = 700, H = 640;
+  let s = '';
+  s += dgText(20, 22, 'Thermal runaway: four ways in', 'dg-t--title');
+  s += dgText(20, 42, '§12.2.19.2 to §12.2.19.4 — what causes it, what it produces, and what you must have in place first.', 'dg-t--dim');
+
+  const ROUTE = [
+    ['a', 'external overheating from fire in another aircraft system'],
+    ['b', 'short-circuiting, internal within the cells or external'],
+    ['c', 'damage caused during an aircraft accident'],
+    ['d', 'manufacturing defect within the battery']
+  ];
+  const CX = [20, 186, 352, 518], RW = 162;
+  ROUTE.forEach((r, i) => {
+    const x = CX[i];
+    s += `<rect x="${x}" y="64" width="${RW}" height="76" rx="9" class="dg-cell"/>`;
+    s += dgText(x + 12, 84, r[0] + ')', 'dg-t--chip');
+    s += dgPara(x + 12, 104, r[1], 'dg-t--dim', 25, 12);
+    s += dgArrow(x + RW / 2, 140, x + RW / 2, 160, 'dg-accent', 1.8);
+  });
+
+  s += dgText(24, 160, 'four routes in', 'dg-t--accent');
+  s += `<line x1="101" y1="160" x2="599" y2="160" class="dg-accent" stroke-width="1.8"/>`;
+  s += dgArrow(350, 162, 350, 196, 'dg-accent', 2.2);
+
+  s += `<rect x="240" y="200" width="220" height="68" rx="10" class="dg-cell"/>`;
+  s += dgText(350, 226, 'Li-ion battery', 'dg-t--head', 'middle');
+  s += dgText(350, 246, 'numerous cells, overheated', 'dg-t--dim', 'middle');
+
+  const OUT = ['gas', 'smoke', 'spillage of flammable electrolytes'];
+  const OX = [26, 248, 470];
+  OUT.forEach((o, i) => {
+    s += dgArrow(350, 270, OX[i] + 102, 288, 'dg-bad', 2);
+    s += dgChip(OX[i], 292, 204, 34, o, 'dg-tag-yellow');
+  });
+
+  s += `<rect x="20" y="348" width="660" height="84" rx="10" class="dg-panel dg-panel--warn"/>`;
+  s += dgText(36, 368, '§12.2.19.4(c) — the sign that matters is venting', 'dg-t--warn');
+  s += dgText(36, 388, 'RFFS and ground operations personnel must be able to recognise signs of battery failure', 'dg-t--dim');
+  s += dgText(36, 402, 'reaction, that is venting — the earliest thing you can see, and the trigger for everything the', 'dg-t--dim');
+  s += dgText(36, 416, 'section then requires of you.', 'dg-t--dim');
+
+  s += dgText(20, 448, 'What §12.2.19.4 requires of the RFFS unit where these aircraft operate', 'dg-t--head');
+  const ACT = [
+    ['a', 'trained to recognise the types and the location'],
+    ['b', 'containment and venting ports identified'],
+    ['c', 'able to recognise venting'],
+    ['d', 'tactics to contain the event'],
+    ['e', 'training, agents and equipment']
+  ];
+  ACT.forEach((a, i) => {
+    const x = 20 + i * 134;
+    s += `<rect x="${x}" y="462" width="126" height="88" rx="9" class="dg-cell"/>`;
+    s += dgText(x + 10, 482, a[0] + ')', 'dg-t--chip');
+    s += dgPara(x + 10, 504, a[1], 'dg-t--dim', 19, 12);
+  });
+
+  s += `<rect x="20" y="564" width="660" height="66" rx="8" class="dg-hazard"/>`;
+  s += dgText(36, 584, 'The scope limit, before anything else — §12.2.19 note:', 'dg-t--danger');
+  s += dgText(36, 602, 'This is for lithium-ion batteries installed by the manufacturer as part of the', 'dg-t--dim');
+  s += dgText(36, 618, 'aviation system, and not for Li-ion batteries being carried as cargo.', 'dg-t--dim');
+
+  return dgSvg(W, H, 'Four routes into lithium-ion thermal runaway feeding a battery and producing gas, smoke and flammable electrolyte, with the venting sign and the five actions the rescue and firefighting service must have in place, and the installed-battery scope limit.', s);
+}
+
+/* ============================================================================
+   21. MUTUAL AID — WHO ARRIVES, AND WHEN
+   Doc 9137 Part 7 §3.14.1 is the reason this is a diagram and not a paragraph:
+   the binding moment in a mutual aid arrangement is not the agreement, it is
+   crossing the perimeter, because that is where command changes hands. §3.4.6
+   is why the rendezvous point exists — mutual aid vehicles often cannot reach
+   the site directly, and §3.14.2 is why the phone numbers are a monthly task.
+   ========================================================================= */
+function dMutualAid() {
+  const W = 700, H = 642;
+  let s = '';
+  s += dgText(20, 22, 'Mutual aid: the two things that actually fail', 'dg-t--title');
+  s += dgText(20, 42, 'Part 7 §3.14.1, §3.4.6 and §3.14.2 — command at the perimeter, and a rendezvous point that works.', 'dg-t--dim');
+
+  // The perimeter, and the command change across it.
+  s += `<rect x="20" y="64" width="320" height="132" rx="10" class="dg-panel"/>`;
+  s += dgText(36, 86, 'On-airport', 'dg-t--head');
+  s += dgText(36, 110, 'In an on-airport incident the airport', 'dg-t--dim');
+  s += dgText(36, 124, 'authority will normally be in command.', 'dg-t--dim');
+
+  s += `<rect x="360" y="64" width="320" height="132" rx="10" class="dg-hazard"/>`;
+  s += dgText(376, 86, 'Off-airport', 'dg-t--danger');
+  s += dgText(376, 110, 'The agency in command is the agency', 'dg-t--dim');
+  s += dgText(376, 122, 'agreed in the mutual aid emergency', 'dg-t--dim');
+  s += dgText(376, 134, 'agreement pre-arranged with the', 'dg-t--dim');
+  s += dgText(376, 146, 'surrounding community.', 'dg-t--dim');
+
+  s += dgArrow(240, 206, 240, 228, 'dg-accent', 2.2);
+  s += dgArrow(460, 206, 460, 228, 'dg-bad', 2.2);
+  s += `<line x1="20" y1="228" x2="680" y2="228" class="dg-axis" stroke-width="2"/>`;
+  s += dgChip(238, 238, 224, 28, 'THE PERIMETER IS THE HANDOVER', 'dg-chip');
+
+  s += `<rect x="20" y="282" width="320" height="160" rx="10" class="dg-cell"/>`;
+  s += dgText(36, 304, '§3.14.1 Written, not assumed', 'dg-t--head');
+  s += dgPara(36, 326, 'Local rescue and fire fighting, security, law enforcement and medical services may be inadequate to handle the situation. Written mutual aid programmes are strongly recommended to ensure a prompt response from elsewhere, coordinated by the airport authority and the agencies involved and implemented by the airport authority.', 'dg-t--dim', 42, 12);
+
+  s += `<rect x="360" y="282" width="320" height="160" rx="10" class="dg-cell"/>`;
+  s += dgText(376, 304, '§3.4.6 Why a rendezvous point exists', 'dg-t--head');
+  s += dgPara(376, 326, 'Mutual aid vehicles may not be able to proceed directly to the site. Units meet at a designated rendezvous point, which can also serve as a staging area. This helps to eliminate traffic jams and confusion, and personnel controlling it should consider vehicle suitability for adverse terrain and prevent obstruction of the access route by disabled vehicles.', 'dg-t--dim', 42, 12);
+
+  s += `<rect x="20" y="456" width="660" height="76" rx="10" class="dg-panel dg-panel--warn"/>`;
+  s += dgText(36, 476, '§3.14.2 The part that rots quietly', 'dg-t--warn');
+  s += dgText(36, 498, 'All mutual aid agreements shall be reviewed or revised annually.', 'dg-t--dim');
+  s += dgText(36, 510, 'Telephone and personnel contacts shall be reviewed and updated monthly.', 'dg-t--dim');
+  s += dgText(36, 522, 'An agreement carrying last year\'s contact numbers is not an agreement.', 'dg-t--dim');
+
+  s += `<rect x="20" y="546" width="660" height="76" rx="10" class="dg-hazard"/>`;
+  s += dgText(36, 568, '§3.15 — a military installation on or near the airport requires a mutual aid agreement', 'dg-t--danger');
+  s += dgText(36, 590, 'integrating its personnel within the command, communication and co-ordination functions', 'dg-t--dim');
+  s += dgText(36, 604, 'of the emergency plan.', 'dg-t--dim');
+
+  return dgSvg(W, H, 'Mutual aid: the command change across the aerodrome perimeter, the written agreement required, the rendezvous point and its purpose, and the annual and monthly review requirements.', s);
 }
 
 /* =========================================================================
@@ -1246,6 +1547,16 @@ const DIAGRAMS = {
     caption: '<b>Blanketing a fuel pool.</b> Start upwind and work down — §8.1.1 requires a foam to flow freely over the fuel surface, resist disruption from wind or heat or flame, and reseal ruptures. Film forming foam reaches fuel no blanket has covered and is self-sealing §8.1, so it extends the covered area but does not replace the blanket, which must still cover the fuel surface to ensure extinction. §12.1.9 requires ignition sources to be eliminated <em>while</em> the spill is being covered, not before. Pool outline is schematic.' },
   'agent-selection':     { draw: dAgentSelection,
     caption: '<b>Which agent.</b> Start at the class of fire rather than at the shelf. Liquid fuel takes FFFP foam §8.1(d); solid combustibles take water fog for cooling and quenching §12.2.2; live electrical must be de-energised before any agent; flammable metal needs a specialised agent §8.2.3 that is not the powder you carry. The complementary agent is dry chemical powder alongside all of them §2.4 — knockdown only, no post-control stability §12.3.4, and corrosive §8.2.5. Performance level A, B or C is required by category §2.3 and Annex 14 §9.2.9 and is not a preference, and a fluorine-free foam must still meet it while requiring different expansion and drainage settings §5.7.16, §8.1(e).' }
+  ,
+  'tra-phases':          { draw: dTraPhases,
+    caption: '<b>The six phases of a task and resource analysis.</b> Phase 1 fixes the aims and the task list, not exhaustive, all of which must be identified before moving on. Phase 2 selects representative realistic and feasible accidents from statistical analysis of previous accidents and data from international, national and local sources, and all incidents should involve fire so as to represent a feasible worst-case scenario requiring an RFFS response. Phase 3 identifies the aircraft types commonly in use, because type and configuration bear directly on the resources required. Phase 4 is the phase most aerodromes skip: every airport is unique, and a facilitator working with experienced personnel must score credible worst-case locations by additional response time and record the rationale for each. Phase 5 correlates accident type, aircraft and location into one complete scenario. Phase 6 is where the analysis happens, in a series of tabletop exercises or simulations, identifying in real time and in sequential order the minimum number of RFF personnel required at any one time. CAP 1150 is a UK CAA Information Paper and a method illustration, not a binding requirement; your regulator sets the category, and therefore the floor.' },
+  'quickest-route':      { draw: dQuickestRoute,
+    caption: '<b>Quickest is not shortest.</b> §13.3.5.2 requires vehicles to approach any aircraft accident or incident by the quickest route commensurate with safety, although this might not necessarily be the shortest distance to the incident site, because traversing unimproved areas can take longer than travelling a greater distance on paved surfaces. Both routes above are drawn to the same scale, and the green one is longer. Thorough knowledge by RFFS personnel of the topography of the aerodrome and its immediate vicinity for all weather conditions is paramount, and the use of grid maps and careful selection of routes is essential for success in meeting the response objectives. §13.3.5.3 requires an airfield chart clearly showing all taxiways, runways, holding points and vehicle routes marked with their appropriate designation, accompanied by written instructions detailing the action a driver should take on breakdown or if unsure of position. §13.3.5.4 points to surface movement radar, infrared vision systems, taxiway centreline lighting, vehicle positioning equipment and other navigation aids. §13.3.5.5 notes that once low visibility operations are initiated it may be necessary to restrict vehicle operation in the manoeuvring area, and §13.3.5.6 requires personnel to be made aware of areas that may become impassable. The time difference between the two routes is yours to measure; the manual sets the rule, not the number.' },
+  'lithium-runaway':     { draw: dLithiumRunaway,
+    caption: '<b>Four ways into thermal runaway.</b> §12.2.19.3 lists them: external overheating caused by exposure to fire in other aircraft systems, short-circuiting either internally within the battery cells or externally, damage caused during an aircraft accident, and manufacturing defects within the battery. §12.2.19.2 states the consequence: each Li-ion battery contains numerous cells which, if they become overheated, a process known as thermal runaway, could lead to the emission of gas, smoke and the spillage of flammable electrolytes. §12.2.19.4(c) makes venting the sign that matters, and §12.2.19.4(a) to (e) are what must be in place beforehand — knowing which aircraft types carry these batteries and where within the airframe, identifying existing battery containment and venting ports, being able to recognise signs of battery failure reaction, developing tactics to contain the battery failure event, and considering additional training with suitable extinguishing agents and equipment. §12.2.19.5 directs you to the aircraft manufacturer guidance for specific types. The section note governs scope: this is for lithium-ion batteries installed by the aircraft manufacturer as part of the aviation system, and not for Li-ion batteries being carried as cargo.' },
+  'mutual-aid':          { draw: dMutualAid,
+    caption: '<b>Mutual aid fails in two places.</b> First, at the perimeter: in an on-airport aircraft accident or incident the airport authority will normally be in command, whereas in an off-airport incident the agency in command is the agency agreed upon in the mutual aid emergency agreement pre-arranged with the surrounding community, and this should not affect the immediate response by airport personnel. Second, on arrival: §3.4.6 states that in many cases it may not be possible or practicable for vehicles of mutual aid fire departments and ambulances to proceed directly to the accident or incident site, so the plan must include procedures for meeting at a designated rendezvous point, which can also serve as a staging area where responding units are held until needed. This helps to eliminate traffic jams and confusion, and personnel controlling the rendezvous point should consider the suitability of vehicles for adverse terrain conditions and prevent obstruction of the access route by disabled vehicles. §3.14.1 requires written mutual aid programmes where local rescue and fire fighting, security, law enforcement and medical services are inadequate, normally co-ordinated by the airport authority as well as the agencies involved and implemented by the airport authority. §3.14.2 is the requirement that rots quietly: all mutual aid agreements shall be reviewed or revised annually, and telephone and personnel contacts reviewed and updated monthly. §3.15 requires a mutual aid agreement integrating military personnel into the command, communication and co-ordination functions of the emergency plan where a military installation is located on or near the airport.' }
+
 };
 
 const DIAGRAM_KEYS = Object.keys(DIAGRAMS);

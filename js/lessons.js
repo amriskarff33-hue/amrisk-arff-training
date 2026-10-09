@@ -6414,6 +6414,7 @@ const LESSON_OVERRIDES = {
     <p>And the note on demonstrating commitment, which is a useful planning test: where a permanent airport-based ambulance service is not feasible, <em>commitment by the ambulance service provider(s) can also be demonstrated by the activation, deployment and response of resources during full-scale aircraft crash exercises.</em></p>
     <p>So an exercise is how you test the mutual aid commitment you cannot otherwise verify. That connects straight into m3.</p>
 
+    {{diagram:mutual-aid}}
     <h3>Rendezvous and staging, defined</h3>
     <p>§11.1.1 defines both, and the definitions are the difference between a plan and a gesture:</p>
     <p><strong>Rendezvous point</strong> — <em>a prearranged reference point, i.e. road junction, crossroad or other specified place, to which personnel/vehicles responding to an emergency situation initially proceed to receive directions to staging areas and/or the accident/incident site.</em></p>
@@ -6502,6 +6503,7 @@ const LESSON_OVERRIDES = {
       <li><strong>Correlate them</strong> into a complete scenario and analyse it as a timeline, looking for pinch points.</li>
     </ol>
 
+    {{diagram:tra-phases}}
     <h3>Pinch points are the exercise agenda</h3>
     <p>This is the useful part. §12.3.25 already told you that <em>tactical decision-making starts at the time when the alert tone is sounded</em> — so an exercise that injects the scenario when the vehicles are already rolling has missed the part that matters.</p>
     <p>So: inject from the initial call. Then the exercise questions are the ones the task resource analysis already produces:</p>
@@ -7230,6 +7232,7 @@ const LESSON_OVERRIDES = {
       <li><strong>Supervisors:</strong> §12.2.19.4(d) — develop tactics to contain the battery failure event. That is a written plan, and it is a supervisor's deliverable.</li>
     </ul>
 
+    {{diagram:lithium-runaway}}
     <blockquote>
       <p><strong>SME action:</strong> treat §12.2.19.4 as five actions with owners, not as awareness. Can your crews recognise venting — and have you defined what they will actually see? Have you identified which aircraft types in your fleet have containment and venting ports, and where they are? <em>Have you briefed freight handling and ground operations personnel on the recognition signs?</em> That one is outside your service&rsquo;s control and is the most likely to be missing. Have you developed written tactics to contain a battery failure event? And have you decided, from your own risk assessment, whether §12.4.24 detection equipment is proportionate for your operation?</p>
     </blockquote>
@@ -9078,6 +9081,7 @@ const LESSON_OVERRIDES = {
     <p>§13.3.5.2 is the clause to memorise for this whole lesson:</p>
     <p><strong>RFFS vehicles should approach any aircraft accident or incident by the quickest route commensurate with safety, although this might not necessarily be the shortest distance to the incident site. Traversing through unimproved areas can take longer than travelling a greater distance on paved surfaces, therefore a thorough knowledge by RFFS personnel of the topography of the aerodrome and its immediate vicinity for all weather conditions is paramount. The use of grid maps and careful selection of routes is essential for success in meeting the response objectives.</strong></p>
     <p>Read the second clause against the first. <em>The quickest route</em>, <em>although this might not necessarily be the shortest distance</em>. Two different things, and every crew under pressure will choose the shortest distance.</p>
+    {{diagram:quickest-route}}
     <p>The reason is in the next sentence and it is not subtle: <strong>traversing through unimproved areas can take longer than travelling a greater distance on paved surfaces.</strong> A hundred metres across grass in a Category B vehicle at walking pace can cost more time than three hundred metres of taxiway at forty. And in low visibility the grass crossing is worse, because you cannot see the boundary and you stop to work out where you are.</p>
     <p>So the doctrinal statement is: <em>the shortest distance and the quickest route diverge, and it is your knowledge of the aerodrome that tells you which is which.</em> That is why the clause ends with topography knowledge being <em>paramount</em> rather than merely useful.</p>
 
