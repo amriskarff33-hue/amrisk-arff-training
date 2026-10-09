@@ -63,10 +63,6 @@ const LESSON_OVERRIDES = {
       <h3>T    {{photo:57726252385-f5c2dcb1-3acb-4e25-8b5f-d547cef0}}
     {{photo:57790738354-1b9c1cc5-08b0-4663-a01b-da68af08}}
     {{photo:57855928595-c8e01ad1-0cb4-48c9-8f7c-69a28696}}
-    {{photo:20130720-091358-1}}
-    {{photo:20130821-204100-1}}
-    {{photo:20130821-204105-1}}
-    {{photo:20130920-113843-1}}
     {{photo:20130920-113843}}
 he objective, in the regulator's words</h3>
       <p>Annex 14 Volume I opens §9.2 — Rescue and firefighting — with an
@@ -2737,7 +2733,6 @@ wo things that look identical</h3>
       <h3>T    {{photo:img-3479}}
     {{photo:img-3481}}
     {{photo:img-4289-copy-2}}
-    {{photo:img-4290-copy-2}}
     {{photo:dscn1267}}
     {{photo:dscn1269}}
     {{photo:img-4290-2}}
@@ -3273,8 +3268,6 @@ hy you cannot learn this from incidents</h3>
     ],
     body: `
       <h3>T    {{photo:screenshot-2019-06-14-21-02-52}}
-    {{photo:screenshot-2019-06-14-21-02-58}}
-    {{photo:screenshot-2019-06-14-21-03-06}}
     {{photo:screenshot-2019-06-14-21-03-24}}
     {{photo:screenshot-2019-06-14-21-03-52}}
     {{photo:screenshot-2019-06-14-21-03-58}}
@@ -5903,7 +5896,6 @@ egular doors and hatches first</h3>
     {{photo:work-7}}
     {{photo:work-1}}
     {{photo:work-2}}
-    {{photo:work-3}}
     {{photo:work-4}}
     {{photo:work-5}}
 atch the tool to the cut, not to the inventory</h3>

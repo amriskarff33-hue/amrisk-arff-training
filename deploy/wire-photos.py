@@ -37,7 +37,7 @@ import subprocess
 import sys
 
 try:
-    from PIL import Image
+    from PIL import Image, ImageOps
 except ImportError:
     sys.exit("PIL is required: python3 -m pip install --user pillow")
 
@@ -152,9 +152,64 @@ def slug(s):
     return s[:44]
 
 
+
+def dhash(path, size=8):
+    """64-bit difference hash, orientation-corrected.
+
+    SHA-1 catches byte-identical copies and nothing else. A burst sequence is
+    five frames five seconds apart: different bytes, same photograph to any eye.
+    Two of the first batch shipped because SHA-1 called them distinct.
+    """
+    with Image.open(path) as im:
+        im = ImageOps.exif_transpose(im).convert("L").resize((size + 1, size), Image.LANCZOS)
+    px = list(im.get_flattened_data())
+    bits = 0
+    for r in range(size):
+        row = px[r * (size + 1):(r + 1) * (size + 1)]
+        for c in range(size):
+            bits = (bits << 1) | (1 if row[c] < row[c + 1] else 0)
+    return bits
+
+
+NEAR_DUPE_BITS = 14   # of 64; 3 was a genuine burst pair, 25+ is a different photo
+
+
+def drop_near_duplicates(paths, verbose=True):
+    kept, hashes = [], []
+    for path in paths:
+        if not os.path.exists(path):
+            continue
+        try:
+            h = dhash(path)
+        except Exception:
+            kept.append(path)
+            continue
+        dup = None
+        for k, kh in zip(kept, hashes):
+            if bin(h ^ kh).count("1") <= NEAR_DUPE_BITS:
+                dup = k
+                break
+        if dup:
+            if verbose:
+                print("  NEAR-DUPE dropped %-46s (of %s)"
+                      % (os.path.basename(path)[:46], os.path.basename(dup)[:34]))
+            continue
+        kept.append(path)
+        hashes.append(h)
+    return kept
+
+
 def optimise(src, dst):
-    """Copy to web-optimal. Returns (bytes, w, h)."""
+    """Copy to web-optimal. Returns (bytes, w, h).
+
+    exif_transpose() is not optional. A phone or camera that shoots portrait or
+    flips the sensor does not rotate the pixels, it records a transform in EXIF
+    tag 274 and leaves every viewer to apply it. Stripping the EXIF without
+    applying the transform first ships the photograph upside down, which is what
+    happened to four of the first batch. Apply the transform, then strip.
+    """
     with Image.open(src) as im:
+        im = ImageOps.exif_transpose(im)
         im = im.convert("RGB")
         w, h = im.size
         if max(w, h) > MAX_EDGE:
@@ -187,6 +242,9 @@ def patch_photos_js(entries):
     # Detect real entries by their key pattern, not by "is this a comment".
     # The registry ships with an /* Add real entries below this line. */ marker,
     # and treating that as a real entry puts a stray comma into the file.
+    # Drop any entries a previous run wrote, so a rerun cannot leave a registry
+    # pointing at media files that have been deleted.
+    body = "\n".join(l for l in body.split("\n") if "src: 'media/" not in l)
     real = [l for l in body.split("\n") if re.match(r"^\s*'[a-z0-9-]+'\s*:", l)]
     sep = "  ,\n" if real else ""
     block = body.rstrip() + "\n" + sep + ",\n".join(entries) + "\n"
@@ -206,11 +264,18 @@ def patch_sw(filenames):
     i = s.index("const SHELL = [")
     j = s.index("\n];", i)
     block = s[i + len("const SHELL = ["):j]
-    have = set(re.findall(r"'([^']*media/[^']*)'", block))
-    add = [f for f in filenames if f not in have]
-    if not add:
-        print("  sw.js already precaches all %d photographs" % len(filenames))
-        return
+    # Replace, never append. A photograph removed from a lesson leaves a stale
+    # entry behind, and cache.addAll() rejects the whole batch if a single URL
+    # 404s -- so one deleted image would stop the service worker installing and
+    # take the whole offline platform with it.
+    kept = [l for l in block.split("\n") if not re.search(r"'media/[^']*'", l)]
+    block = "\n".join(kept).rstrip()
+    if not block.endswith(","):
+        block += ","
+    lines = "".join("\n  '%s'," % f for f in filenames)
+    open(p, "w", encoding="utf-8").write(s[:i + len("const SHELL = [")] + block + lines + s[j:])
+    print("  sw.js: precache list replaced with %d media files" % len(filenames))
+    return
     # The last entry in SHELL carries no trailing comma, so appending straight
     # after it produces "'assets/icon-180.png'\n  'media/x.jpg'," and the file
     # stops parsing. Add the comma first.
@@ -261,6 +326,7 @@ def main():
     if len(sys.argv) < 2:
         sys.exit(__doc__)
     sel = [l.strip() for l in open(sys.argv[1], encoding="utf-8") if l.strip()]
+    sel = drop_near_duplicates(sel)
     if not sel:
         sys.exit("selection file is empty")
     os.makedirs(MEDIA, exist_ok=True)
