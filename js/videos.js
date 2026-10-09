@@ -121,15 +121,15 @@ const VIDEO_COURSES = {
   'foam-systems':            ['faa-intro-7', 'faa-f3'],
   'vehicles-appliances':     ['faa-intro-6', 'faa-tact-3'],
   'ppe-scba':                ['faa-intro-4'],
-  'personnel-training':      ['faa-intro-4', 'faa-intro-1'],
+  'personnel-training':      ['faa-intro-4', 'faa-intro-1', 'own-acsa1003-film'],
   'emergency-command':       ['faa-intro-5', 'faa-tact-1'],
   'rescue-extrication':      ['faa-intro-8', 'faa-tact-2'],
   'aircraft-familiarisation':['faa-intro-3'],
   'fuel-handling':           ['faa-tact-4', 'faa-intro-10'],
   'dangerous-goods':         ['faa-intro-10', 'faa-tact-4'],
   'lithium-batteries':       [],
-  'aircraft-engine-fires':   ['faa-intro-9', 'faa-tact-3'],
-  'firefighting-tactics':    ['faa-intro-9'],
+  'aircraft-engine-fires':   ['faa-intro-9', 'faa-tact-3', 'own-pilatus-approach'],
+  'firefighting-tactics':    ['faa-intro-9', 'own-tswalu-drill'],
   'rover-vehicles':          ['faa-intro-6', 'faa-tact-3'],
   'communications':          ['faa-intro-5'],
   'emergency-planning':      ['faa-intro-5', 'faa-tact-1'],
@@ -152,7 +152,23 @@ const VIDEO_COURSES = {
      credit: 'AM RISK AND TRAINING — recorded on station'
    },
 --------------------------------------------------------------------------- */
-const LOCAL_VIDEO = {};
+const LOCAL_VIDEO = {
+  'own-pilatus-approach': {
+    local: 'media/fire-on-engine-pilatus.mp4',
+    title: 'Marshaller with wands at the nose of a Pilatus (12 s)',
+    credit: 'AM RISK AND TRAINING — recorded on station'
+  },
+  'own-tswalu-drill': {
+    local: 'media/tswalu-drill.mp4',
+    title: 'Hose team and tender drill at Tswalu (4 min)',
+    credit: 'AM RISK AND TRAINING — recorded on station'
+  },
+  'own-acsa1003-film': {
+    local: 'media/acsa1003-training-film.mp4',
+    title: 'ARFF 2017 ACSA NFPA 1003 course film (59 s)',
+    credit: 'AM RISK AND TRAINING — recorded on station'
+  }
+};
 
 /* ── Rendering ──────────────────────────────────────────────────────────── */
 

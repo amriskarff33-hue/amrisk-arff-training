@@ -1640,6 +1640,7 @@ he objective, in the regulator's words</h3>
     {{photo:1-436-110-arff-3}}
     {{photo:fire-fighters-3}}
     {{photo:art16-training-live-fire-night-033}}
+    {{video:own-tswalu-drill}}
 wo things that look identical</h3>
       <p>Doc 9137 Part 1 opens this topic by making a distinction it considers
       important enough to state first: it is necessary to distinguish between
@@ -2564,7 +2565,8 @@ wo things that look identical</h3>
       'Fitness training must match the intensity of the operations, not the fitness of the average person.'
     ],
     body: `
-      <h3>The standard is automatic, not competent</h3>
+      <h3>T    {{video:own-acsa1003-film}}
+he standard is automatic, not competent</h3>
       <p>§14.6.1 sets the test for operational tactics training, and it is a
       demanding one. When personnel are well versed in handling firefighting
       equipment, they should receive training in operational tactics to be
@@ -2727,6 +2729,7 @@ wo things that look identical</h3>
       <h3>T    {{photo:screenshot-2019-06-14-21-04-22}}
     {{photo:screenshot-2019-06-14-21-04-15}}
     {{photo:art15-engine-engine-danger-001}}
+    {{video:own-pilatus-approach}}
 he geometry decides where you can stand</h3>
       <p>Before any tactical discussion, the physical constraints. RFF personnel
       should stay <strong>at least 10 m from the front and side intake</strong>

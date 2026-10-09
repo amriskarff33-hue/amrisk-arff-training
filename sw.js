@@ -76,6 +76,9 @@ const SHELL = [
   'media/art13-dg-dg-class-7-radio-active-iii-001.jpg',
   'media/art15-engine-engine-danger-001.jpg',
   'media/art16-training-live-fire-night-033.jpg',
+  'media/fire-on-engine-pilatus.mp4',
+  'media/tswalu-drill.mp4',
+  'media/acsa1003-training-film.mp4',
 ];
 
 /* Photographs registered in js/photos.js are appended to the precache list
