@@ -1639,6 +1639,7 @@ he objective, in the regulator's words</h3>
       <h3>T    {{photo:original}}
     {{photo:1-436-110-arff-3}}
     {{photo:fire-fighters-3}}
+    {{photo:art16-training-live-fire-night-033}}
 wo things that look identical</h3>
       <p>Doc 9137 Part 1 opens this topic by making a distinction it considers
       important enough to state first: it is necessary to distinguish between
@@ -2725,6 +2726,7 @@ wo things that look identical</h3>
     body: `
       <h3>T    {{photo:screenshot-2019-06-14-21-04-22}}
     {{photo:screenshot-2019-06-14-21-04-15}}
+    {{photo:art15-engine-engine-danger-001}}
 he geometry decides where you can stand</h3>
       <p>Before any tactical discussion, the physical constraints. RFF personnel
       should stay <strong>at least 10 m from the front and side intake</strong>
@@ -5802,7 +5804,10 @@ egular doors and hatches first</h3>
     'Chocks, wedges and tarpaulins are category-scaled rescue equipment items in the standard table — stabilisation is resourced, not improvised.'
   ],
   body: `
-    <h3>Speed, and what it does not override</h3>
+    <h3>S    {{photo:art10-recovery-saa-bogged-009}}
+    {{photo:art10-recovery-saa-bogged-012}}
+    {{photo:art10-recovery-saa-bogged-018}}
+peed, and what it does not override</h3>
     <p>§12.1.12 sets the priority: <strong>rescue of aircraft occupants is a priority and should proceed with the greatest possible speed.</strong> That is the correct instinct and it is the standard's own.</p>
     <p>It is also the sentence most often read as an override. Speed of rescue does not mean speed of access into an aircraft that is still moving, still settling, or still shedding load. An airframe that shifts during an entry does not injure the occupant you were reaching — it injures the crew reaching for them. The way to reconcile speed with safety is not to slow down; it is to fix the airframe quickly so that access can then be fast.</p>
     <p>So the sequence is: stabilise, then access, then move quickly. What you must never do is access first and stabilise afterwards, because the casualty you create belongs to your own service.</p>
@@ -6834,6 +6839,8 @@ he manual tells you it cannot tell you</h3>
     {{photo:picture-002}}
     {{photo:wchr-wet-cell-battery}}
     {{photo:handling-label-danger}}
+    {{photo:art13-dg-dg-class-1-1-001}}
+    {{photo:art13-dg-dg-class-7-radio-active-iii-001}}
 hat the package tells you</h3>
 
     {{diagram:dg-placard}}

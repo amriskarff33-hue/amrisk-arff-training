@@ -101,7 +101,7 @@ CREDIT = "Photograph: AM RISK AND TRAINING library"
 # lesson id from a filename is how photographs end up in the wrong lesson.
 FOLDER_LESSON = {
     "PICS MASTER/AM RISK":                    "art01-m1",
-    "PICS MASTER/BURNOUT":                    "art15-m1",
+    "PICS MASTER/BURNOUT":                    "art16-m3",
     "PICS MASTER/engine ingestion":           "art15-m1",
     "PICS MASTER/ENGINE DANGERS":             "art15-m1",
     "PICS MASTER/jetblast":                   "art15-m4",
@@ -113,7 +113,7 @@ FOLDER_LESSON = {
     "PICS MASTER/bird strike":                "art11-m1",
     "PICS MASTER/aircraft":                   "art11-m1",
     "PICS MASTER/JAN SMUTS":                  "art11-m1",
-    "PICS MASTER/SAA - Cape Town":            "art11-m1",
+    "PICS MASTER/SAA - Cape Town":            "art10-m3",
     "PICS MASTER/piper alpha":                "art11-m1",
     "PICS MASTER/WASH BAY":                   "art25-m3",
     "PICS MASTER/PPE":                        "art07-m1",
@@ -227,11 +227,11 @@ def optimise(src, dst):
 def patch_photos_js(entries):
     """Append entries to the PHOTOS registry in js/photos.js.
 
-    The registry ships with commented-out example entries, so the naive approach
-    of "strip the trailing comma then add a comma before mine" puts a stray comma
-    straight after a // comment and the file stops parsing. Decide from the real
-    (non-comment) entries whether a separator is needed at all.
+    Incremental runs must ADD, never replace: an earlier version dropped every
+    previously written entry on each run and wiped a 31-photo registry down to
+    the 8 newest. Only keys present in `entries` are rewritten.
     """
+    import re as _re
     p = os.path.join(ROOT, "js", "photos.js")
     s = open(p, encoding="utf-8").read()
     anchor = "const PHOTOS = {"
@@ -239,52 +239,53 @@ def patch_photos_js(entries):
     i = s.index(anchor)
     j = s.index("\n};", i)
     body = s[i + len(anchor):j]
-    # Detect real entries by their key pattern, not by "is this a comment".
-    # The registry ships with an /* Add real entries below this line. */ marker,
-    # and treating that as a real entry puts a stray comma into the file.
-    # Drop any entries a previous run wrote, so a rerun cannot leave a registry
-    # pointing at media files that have been deleted.
-    body = "\n".join(l for l in body.split("\n") if "src: 'media/" not in l)
-    real = [l for l in body.split("\n") if re.match(r"^\s*'[a-z0-9-]+'\s*:", l)]
-    sep = "  ,\n" if real else ""
-    block = body.rstrip() + "\n" + sep + ",\n".join(entries) + "\n"
+    new_keys = set(_re.findall(r"^\s*'([a-z0-9-]+)'\s*:", "\n".join(entries), _re.M))
+    kept = []
+    skipping = False
+    for line in body.split("\n"):
+        m = _re.match(r"^\s*'([a-z0-9-]+)'\s*:\s*\{", line)
+        if m:
+            skipping = m.group(1) in new_keys
+            if skipping:
+                continue
+        if skipping:
+            if _re.search(r"\},?\s*$", line):
+                skipping = False
+            continue
+        kept.append(line)
+    block = "\n".join(kept).rstrip()
+    if block and not block.endswith(","):
+        block += ","
+    block += "\n" + ",\n".join(entries) + "\n"
     open(p, "w", encoding="utf-8").write(s[:i + len(anchor)] + block + s[j:])
 
 
 def patch_sw(filenames):
-    """Add each media file to the service worker's precache list.
+    """Precache every photograph in media/, not just the newest batch.
 
-    sw.js cannot read the PHOTOS registry: a service worker has no access to the
-    page's scripts, so `typeof PHOTOS === "object"` is always false there and
-    the auto-append that was supposed to precache every photograph silently did
-    nothing. check-media.js caught it. The list has to be written into sw.js.
+    An earlier version replaced the whole SHELL media list with only the files
+    from the current run, orphaning 31 photographs from the offline cache in a
+    single command. The source of truth is the media/ directory itself.
     """
     p = os.path.join(ROOT, "sw.js")
     s = open(p, encoding="utf-8").read()
     i = s.index("const SHELL = [")
     j = s.index("\n];", i)
+    have = set(re.findall(r"'media/[^']*'", s[i:j]))
+    on_disk = set("'media/%s'" % f for f in sorted(os.listdir(MEDIA)) if f.endswith(".jpg"))
+    missing = sorted(on_disk - have)
+    stale = sorted(have - on_disk)
     block = s[i + len("const SHELL = ["):j]
-    # Replace, never append. A photograph removed from a lesson leaves a stale
-    # entry behind, and cache.addAll() rejects the whole batch if a single URL
-    # 404s -- so one deleted image would stop the service worker installing and
-    # take the whole offline platform with it.
-    kept = [l for l in block.split("\n") if not re.search(r"'media/[^']*'", l)]
-    block = "\n".join(kept).rstrip()
-    if not block.endswith(","):
-        block += ","
-    lines = "".join("\n  '%s'," % f for f in filenames)
-    open(p, "w", encoding="utf-8").write(s[:i + len("const SHELL = [")] + block + lines + s[j:])
-    print("  sw.js: precache list replaced with %d media files" % len(filenames))
-    return
-    # The last entry in SHELL carries no trailing comma, so appending straight
-    # after it produces "'assets/icon-180.png'\n  'media/x.jpg'," and the file
-    # stops parsing. Add the comma first.
-    tail = block.rstrip()
-    if not tail.endswith(","):
-        tail += ","
-    lines = "".join("\n  '%s'," % f for f in add)
-    open(p, "w", encoding="utf-8").write(s[:i + len("const SHELL = [")] + tail + lines + s[j:])
-    print("  sw.js: added %d media files to SHELL" % len(add))
+    for st in stale:
+        block = re.sub(r"^\s*%s,?\s*\n" % re.escape(st), "", block, flags=re.M)
+    if missing:
+        tail = block.rstrip()
+        if not tail.endswith(","):
+            tail += ","
+        block = tail + "".join("\n  %s," % m for m in missing)
+    open(p, "w", encoding="utf-8").write(s[:i + len("const SHELL = [")] + block + s[j:])
+    print("  sw.js: %d media precached (%d added, %d stale removed)"
+          % (len(on_disk), len(missing), len(stale)))
 
 
 def insert_placeholders(lesson, block):
@@ -295,6 +296,9 @@ def insert_placeholders(lesson, block):
     the next line-start lesson key and searching only inside that window is the
     only reliable bound, and without it a lesson whose close is indented
     differently swallows every lesson after it.
+
+    Lessons that already show photographs get the new ones AFTER the existing
+    photo block, so incremental wiring adds rather than silently skipping.
     """
     p = os.path.join(ROOT, "js", "lessons.js")
     s = open(p, encoding="utf-8").read()
@@ -313,11 +317,17 @@ def insert_placeholders(lesson, block):
         return []
     body = s[bs + 7:m.start()]
     if "{{photo:" in body:
-        print("  SKIP %s already has photos" % lesson)
-        return []
-    h3 = body.find('<h3>')
-    at = h3 + len('<h3>\n') if h3 >= 0 else 0
-    body = body[:at] + block + "\n" + body[at:]
+        # append after the last existing placeholder
+        parts = list(re.finditer(r"\{\{photo:[a-z0-9-]+\}\}", body))
+        at = parts[-1].end()
+        # consume the rest of that line so the block stays together
+        nl = body.find("\n", at)
+        at = nl + 1 if nl >= 0 else len(body)
+        body = body[:at] + block + "\n" + body[at:]
+    else:
+        h3 = body.find('<h3>')
+        at = h3 + len('<h3>\n') if h3 >= 0 else 0
+        body = body[:at] + block + "\n" + body[at:]
     open(p, "w", encoding="utf-8").write(s[:bs + 7] + body + s[m.start():])
     return [lesson]
 

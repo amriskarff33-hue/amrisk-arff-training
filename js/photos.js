@@ -179,6 +179,28 @@ const PHOTOS = {
   'img-1177-2': { src: 'media/img-1177-2.jpg', alt: 'Open aircraft shelter with marked apron and drainage channel in front',
     caption: 'An open shelter with marked apron and drainage. Run-off from washing, foam and fuel goes where the drainage sends it — know where yours sends it before the incident.',
     credit: 'Photograph: AM RISK AND TRAINING library' },
+  'art10-recovery-saa-bogged-009': { src: 'media/art10-recovery-saa-bogged-009.jpg', alt: 'Aircraft at Cape Town',
+    caption: 'Aircraft operating at a South African aerodrome.',
+    credit: 'Photograph: AM RISK AND TRAINING library' },
+  'art10-recovery-saa-bogged-012': { src: 'media/art10-recovery-saa-bogged-012.jpg', alt: 'Aircraft at Cape Town',
+    caption: 'Aircraft operating at a South African aerodrome.',
+    credit: 'Photograph: AM RISK AND TRAINING library' },
+  'art10-recovery-saa-bogged-018': { src: 'media/art10-recovery-saa-bogged-018.jpg', alt: 'Aircraft at Cape Town',
+    caption: 'Aircraft operating at a South African aerodrome.',
+    credit: 'Photograph: AM RISK AND TRAINING library' },
+  'art15-engine-engine-danger-001': { src: 'media/art15-engine-engine-danger-001.jpg', alt: 'Engine hazard area',
+    caption: 'Engine hazard reference.',
+    credit: 'Photograph: AM RISK AND TRAINING library' },
+  'art16-training-live-fire-night-033': { src: 'media/art16-training-live-fire-night-033.jpg', alt: 'Aircraft brake and wheel assembly after a hot brake event',
+    caption: 'Hot brake damage photographed by AM RISK AND TRAINING at a South African aerodrome. Hot brakes and wheels is one of the four recurring aircraft fires, and the brake is the part the crew can reach without entering the danger zone.',
+    credit: 'Photograph: AM RISK AND TRAINING library' },
+  'art13-dg-dg-class-1-1-001': { src: 'media/art13-dg-dg-class-1-1-001.jpg', alt: 'Dangerous goods placard, label or package',
+    caption: 'Dangerous goods marking. The placard geometry is fixed: red diamond, class number in the bottom half, subsidiary risk in the lower corner.',
+    credit: 'Photograph: AM RISK AND TRAINING library' },
+  'art13-dg-dg-class-7-radio-active-iii-001': { src: 'media/art13-dg-dg-class-7-radio-active-iii-001.jpg', alt: 'Class 7 Radioactive III placard, yellow and white diamond with trefoil',
+    caption: 'Radioactive III. Time, distance and shielding start at recognition, and recognition starts at this trefoil.',
+    credit: 'Photograph: AM RISK AND TRAINING library' }
+
 };
 
 /* Keys registered. Used by the offline check and by the review pack. */

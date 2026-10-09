@@ -69,6 +69,13 @@ const SHELL = [
   'media/screenshot-2019-06-14-21-04-15.jpg',
   'media/screenshot-2019-06-14-21-04-22.jpg',
   'media/img-1177-2.jpg',
+  'media/art10-recovery-saa-bogged-009.jpg',
+  'media/art10-recovery-saa-bogged-012.jpg',
+  'media/art10-recovery-saa-bogged-018.jpg',
+  'media/art13-dg-dg-class-1-1-001.jpg',
+  'media/art13-dg-dg-class-7-radio-active-iii-001.jpg',
+  'media/art15-engine-engine-danger-001.jpg',
+  'media/art16-training-live-fire-night-033.jpg',
 ];
 
 /* Photographs registered in js/photos.js are appended to the precache list
