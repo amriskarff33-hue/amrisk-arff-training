@@ -60,7 +60,15 @@ const LESSON_OVERRIDES = {
       'Read the scope exclusion before you decide a demand is not your problem.'
     ],
     body: `
-      <h3>The objective, in the regulator's words</h3>
+      <h3>T    {{photo:57726252385-f5c2dcb1-3acb-4e25-8b5f-d547cef0}}
+    {{photo:57790738354-1b9c1cc5-08b0-4663-a01b-da68af08}}
+    {{photo:57855928595-c8e01ad1-0cb4-48c9-8f7c-69a28696}}
+    {{photo:20130720-091358-1}}
+    {{photo:20130821-204100-1}}
+    {{photo:20130821-204105-1}}
+    {{photo:20130920-113843-1}}
+    {{photo:20130920-113843}}
+he objective, in the regulator's words</h3>
       <p>Annex 14 Volume I opens §9.2 — Rescue and firefighting — with an
       introductory note that states the purpose better than any training text
       manages to, and it is worth having memorised before you memorise anything
@@ -1634,7 +1642,15 @@ const LESSON_OVERRIDES = {
       'Dry chemical is effective but is not recommended on this type of fire.'
     ],
     body: `
-      <h3>Two things that look identical</h3>
+      <h3>T    {{photo:arff081717e}}
+    {{photo:iso-incident-command}}
+    {{photo:original}}
+    {{photo:c9tvkjguwaaoanq}}
+    {{photo:586099620-fire-department-wallpaper}}
+    {{photo:1-436-110-arff-3}}
+    {{photo:1000w-q95-2}}
+    {{photo:fire-fighters-3}}
+wo things that look identical</h3>
       <p>Doc 9137 Part 1 opens this topic by making a distinction it considers
       important enough to state first: it is necessary to distinguish between
       <strong>hot brakes</strong> and <strong>brake fires</strong>. They present
@@ -2718,7 +2734,15 @@ const LESSON_OVERRIDES = {
       'Tell the operator what agent you used. Corrosion is a consequence you created.'
     ],
     body: `
-      <h3>The geometry decides where you can stand</h3>
+      <h3>T    {{photo:img-3479}}
+    {{photo:img-3481}}
+    {{photo:img-4289-copy-2}}
+    {{photo:img-4290-copy-2}}
+    {{photo:dscn1267}}
+    {{photo:dscn1269}}
+    {{photo:img-4290-2}}
+    {{photo:maxresdefault-3}}
+he geometry decides where you can stand</h3>
       <p>Before any tactical discussion, the physical constraints. RFF personnel
       should stay <strong>at least 10 m from the front and side intake</strong>
       of a turbine engine to avoid being ingested, and remain
@@ -2992,7 +3016,15 @@ const LESSON_OVERRIDES = {
       'A plan that has never been questioned has not been tested.'
     ],
     body: `
-      <h3>Why you cannot learn this from incidents</h3>
+      <h3>W    {{photo:china-airlines-in-hangars-2}}
+    {{photo:china-airlines-in-hangars-4}}
+    {{photo:pic00019}}
+    {{photo:china-airlines-crash3-2}}
+    {{photo:a380}}
+    {{photo:china-airlines-in-hangars-5}}
+    {{photo:china-airlines-in-hangars-6}}
+    {{photo:china-airlines-in-hangars-8}}
+hy you cannot learn this from incidents</h3>
       <p>Start from the constraint established in Course 08. RFF crews are
       infrequently called upon to face a serious situation involving lifesaving at
       a major aircraft fire (§14.1.1). They will see a few incidents and a larger
@@ -3240,7 +3272,15 @@ const LESSON_OVERRIDES = {
       'Decide deliberately which resource is committed and which is held — and say it aloud.'
     ],
     body: `
-      <h3>Three states, not one</h3>
+      <h3>T    {{photo:screenshot-2019-06-14-21-02-52}}
+    {{photo:screenshot-2019-06-14-21-02-58}}
+    {{photo:screenshot-2019-06-14-21-03-06}}
+    {{photo:screenshot-2019-06-14-21-03-24}}
+    {{photo:screenshot-2019-06-14-21-03-52}}
+    {{photo:screenshot-2019-06-14-21-03-58}}
+    {{photo:screenshot-2019-06-14-21-04-15}}
+    {{photo:screenshot-2019-06-14-21-04-22}}
+hree states, not one</h3>
       <p>§11.2.1 classifies the aircraft emergencies for which services may be
       required, and the distinction is operationally significant:</p>
       <ul>
@@ -5714,7 +5754,10 @@ const LESSON_OVERRIDES = {
     'Doors and exits must not be opened indiscriminately — this may permit entry of flames or toxic gases into the fuselage (§12.3.14).'
   ],
   body: `
-    <h3>Regular doors and hatches first</h3>
+    <h3>R    {{photo:image}}
+    {{photo:r117-9-galley-g1-drawing-monument}}
+    {{photo:20150291281-04}}
+egular doors and hatches first</h3>
 
     {{diagram:airframe-access}}
     <p>§12.1.11 sets the order of preference and the caution in the same breath: <strong>rescue operations should be accomplished through regular doors and hatches wherever possible but RFF personnel must be trained in forcible entry procedures and be provided with the necessary tools.</strong></p>
@@ -5855,7 +5898,15 @@ const LESSON_OVERRIDES = {
     'Hand-held skin penetrating agent applicator tool (SPAAT) and manual penetrating nozzles are recognised alternatives (§8.1.15).'
   ],
   body: `
-    <h3>Match the tool to the cut, not to the inventory</h3>
+    <h3>M    {{photo:dsc00553}}
+    {{photo:dsc00554}}
+    {{photo:work-7}}
+    {{photo:work-1}}
+    {{photo:work-2}}
+    {{photo:work-3}}
+    {{photo:work-4}}
+    {{photo:work-5}}
+atch the tool to the cut, not to the inventory</h3>
     <p>§12.3.10(b) specifies the division of work and it is a sensible one: <strong>ideally a common source should serve all powered tools, including a rotary saw for major cutting and a reciprocating saw or percussion operated chisel for more precise cuts, including those which may be made close to a trapped person.</strong></p>
     <p>Two distinct jobs. A rotary saw is for opening structure quickly — a bulkhead, a floor beam, a cargo door frame. A reciprocating saw or percussion chisel is for the cut next to a person: controlled, precise, and workable in the confined space where somebody's arm is trapped.</p>
     <p>Read the phrase carefully — <em>including those which may be made close to a trapped person</em>. That is the standard telling you that the precision tools are a safety requirement, not a convenience. Cutting close to a person is where a tool's momentum, its start-up, and its failure mode become somebody's injury.</p>
@@ -5995,7 +6046,15 @@ const LESSON_OVERRIDES = {
     'Detailed aircraft characteristics and crash charts are held by ICAO and by each manufacturer — the manual directs you there rather than reproducing them (§Appendix 1(c)).'
   ],
   body: `
-    <h3>The manual tells you it cannot tell you</h3>
+    <h3>T    {{photo:08919afb-3ade-4aae-9019-394677e683f1}}
+    {{photo:46a187c0-8768-4b60-b0a0-d05e56c7d773}}
+    {{photo:49f67e0f-02a8-4112-8bda-4dda28f94530}}
+    {{photo:5258e675-08e5-46ed-9d9a-cdbcdf524449}}
+    {{photo:6e0fa816-6a92-44b6-af5c-4b2076feeebd}}
+    {{photo:b88d3575-d44b-40b6-8f75-2fc77cff3bf5}}
+    {{photo:4259040f-c908-476e-a132-cde6e64167e5}}
+    {{photo:aircraft-parking-stand-apron}}
+he manual tells you it cannot tell you</h3>
     <p>Appendix 1(a) is the most honest paragraph in the whole chapter, and it should be quoted in every familiarisation briefing: <strong>as the quantity of flammable liquids and combustible materials aboard an aircraft varies according to the aircraft model and the operations in which it is engaged, this material can provide only representative information. Personal inspections are necessary to appreciate the variations likely to be encountered in aircraft operations at a particular airport.</strong></p>
     <p>Read the structure of that sentence. ICAO gives representative information. ICAO tells you that is not enough. <strong>Personal inspections are necessary.</strong> So a service that has read the manual and a service that has walked its fleet are not equivalent, and only one of them can state where the fuel is on a particular aircraft.</p>
 
@@ -6804,7 +6863,13 @@ const LESSON_OVERRIDES = {
     'Oxidizing substances are not necessarily combustible but may cause or contribute to the combustion of other material; organic peroxides may explode when mixed with jet fuel (§12.4.17).'
   ],
   body: `
-    <h3>What the package tells you</h3>
+    <h3>W    {{photo:class-1-hazard-labels}}
+    {{photo:picture}}
+    {{photo:handling-labels}}
+    {{photo:picture-002}}
+    {{photo:wchr-wet-cell-battery}}
+    {{photo:handling-label-danger}}
+hat the package tells you</h3>
 
     {{diagram:dg-placard}}
     <p>§12.4.8 is the clause that makes the labelling regime operational: <strong>packages of dangerous goods are required to be marked with the "proper shipping name" of the dangerous goods, as listed in the Technical Instructions, and with the corresponding 4-digit "United Nations (UN) number", used to identify the substance. The package is also required to bear one or more hazard labels. These labels are in the form of a 100 mm × 100 mm square on point, with a distinctive symbol and colour.</strong></p>
@@ -8395,7 +8460,8 @@ const LESSON_OVERRIDES = {
     'Boundary: Doc 9137 Part 1 and Annex 14 contain no run-off containment, discharge, retention, water quality limit or environmental reporting requirement. Annex 16 in this library covers aircraft noise, engine emissions, CO2 and CORSIA — not foam or water.'
   ],
   body: `
-    <h3>Start with what exists, which is not very much</h3>
+    <h3>S    {{photo:img-1177-2}}
+tart with what exists, which is not very much</h3>
     <p>The honest opening for this lesson is a count. Across the entire source library held by this platform — ICAO Doc 9137 Parts 1 and 7, Annex 14 Volume I, Annex 19, the national regulations in the library, and the advisory circulars — there is exactly one provision addressed to the environmental effects of rescue and firefighting operations as such.</p>
     <p>It is <strong>UAE GCAA CAR Part XI 33.1</strong>, and it reads in full:</p>
     <p><strong>The effects on the environment of RFFS activities should be considered and mitigated wherever possible. The main areas of concern the RFFS should consider are water and media run-off, hot fire training, foam testing and air quality.</strong></p>
