@@ -230,6 +230,42 @@ const AIP_RFF = [
   ['FASZ', 'Skukuza', 'NIL INFO AVBL.', '10 firemen total, 6 per shift. MAN 2440 fire engine, 8 000 L water, 1 000 L foam, 225 kg DCP. Discharge capability 4 000 L foam solution per minute.', 'MOU drafted with Pala Steel for cranes and low-bed trucks.', '']
 ];
 
+/* CAR Part 92 Conveyance of dangerous goods. Same 2011 CARs book. Part 92 is
+   the dangerous goods Part — Part 141 is aviation training organisations, which
+   is an easy and consequential mistake to make from a filename. These four
+   provisions are the ones an RFF service actually touches. */
+const CAR92_DG = [
+  {
+    ref: '92.00.22 (4)',
+    head: 'Duty to tell the emergency services — this is the one that matters at a scene',
+    body: 'In the event of an aircraft accident or a serious incident where dangerous goods carried as cargo may be involved, the operator of the aircraft carrying the dangerous goods as cargo must provide information, without delay, to emergency services responding to the accident or serious incident about the dangerous goods on board, as shown on the written information to the PIC.',
+    note: 'Sub-regulation (5) carries the same duty for an aircraft incident, but on request. The accident and serious incident case is not on request — it is without delay. If you are reading this on an aerodrome, the thing to check is whether the written information to the PIC actually reaches the responding services, because the regulation puts the obligation on the operator, not on you.'
+  },
+  {
+    ref: '92.00.29',
+    head: 'Aerodrome operator powers over loading and unloading',
+    body: 'If in the opinion of the aerodrome operator a possibility exists that persons on a licensed aerodrome may be endangered through the loading or unloading of dangerous goods, he or she may take any of the steps as contemplated in sub-regulations (2), (3) and (4) of this regulation.',
+    subs: [
+      ['(2)', 'If the operator of an aircraft has informed the aerodrome operator of the proposed loading or unloading and the aerodrome operator considers that persons of property on the licensed aerodrome will be endangered by the proposed loading or unloading, the aerodrome operator may — (a) permit such loading or unloading subject to such conditions as the aerodrome operator may deem necessary to impose with a view to safeguarding persons or property on the aerodrome, or (b) prohibit such loading or unloading.'],
+      ['(3)', 'If dangerous goods have been loaded in or unloaded from an aircraft without the permission of the aerodrome operator, the aerodrome operator may direct that such dangerous cargo be unloaded from or reloaded in such aircraft, or give such other directions or impose such conditions as the aerodrome operator may deem necessary with a view to safeguarding persons or property on the aerodrome.'],
+      ['(4)', 'The operator of an aircraft carrying dangerous goods on an aerodrome shall, if directed to do so by the aerodrome operator, move such aircraft to another place on the aerodrome and keep such aircraft in that place until the aerodrome operator grants permission for such aircraft to be moved.']
+    ],
+    note: 'The trigger is a possibility of endangerment, in the aerodrome operator\'s opinion. That is a lower bar than certainty, and it is the operator\'s call, not the handler\'s.'
+  },
+  {
+    ref: '92.00.30 (1)',
+    head: 'A named dangerous goods person',
+    body: 'Each operator, ramp handling organisation, ground handling organisation and aerodrome manager shall designate a dangerous goods person who shall be responsible for the following matters involving dangerous goods: (a) Compliance with the regulations; (b) Quality control; (c) Reporting of accidents and incidents.',
+    note: 'The aerodrome manager is in that list. Know the name.'
+  },
+  {
+    ref: '92.00.16',
+    head: 'Damaged or leaking consignments do not fly',
+    body: 'No damaged or leaking package, overpack, freight container or unit load device shall be loaded in an aircraft.',
+    note: 'Where damage or leakage is found after loading, the operator removes or arranges removal and ensures the remainder of the consignment is in a proper condition and that no other package has been contaminated. On unloading, the area where the consignment was stowed must be inspected for damage or contamination.'
+  }
+];
+
 /* ------------------------------------------------------------------ render */
 
 function stdTable(head, rows, cls) {
@@ -293,6 +329,10 @@ function standardsSection() {
   h += '<p class="std-lede">In-force published data, not a proposal. This is the strongest corroboration available that the framework above is real: these are the figures South African aerodromes publish and are held to.</p>';
   h += stdTable(['ICAO', 'Aerodrome', 'Category and staffing', 'Vehicles and agents', 'Disabled aircraft removal', 'Notes'],
                 AIP_RFF, 'std-aip');
+
+  h += '<h3 class="std-h3">CAR Part 92 &mdash; conveyance of dangerous goods</h3>';
+  h += '<p class="std-lede">Dangerous goods in the 2011 CARs are <strong>Part 92</strong>, not Part 141 &mdash; Part 141 is aviation training organisations, and the PDF is filed under a Part 141 name. The four provisions below are the ones an RFF service actually touches at an aerodrome.</p>';
+  CAR92_DG.forEach(r => { h += stdReg(r); });
 
   return h;
 }
