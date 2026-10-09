@@ -200,14 +200,29 @@ def main():
         json.dump(inventory, f, indent=1)
 
     write_sheet(inventory, out_dir)
+
+    # The intake sheet is ~1000 images. Inlining every thumbnail would make it
+    # roughly 15 MB, so it keeps relative src="thumbs/..." references and ships
+    # as a folder instead of a bare file. Copying only the HTML to the Desktop
+    # is what left every photograph blank: the paths resolved against a folder
+    # that was not there.
+    desk = os.path.expanduser("~/Desktop/ARFF-PHOTO-INTAKE")
+    if os.path.isdir(desk):
+        shutil.rmtree(desk)
+    os.makedirs(desk)
+    shutil.copytree(thumb_dir, os.path.join(desk, "thumbs"))
     shutil.copy(os.path.join(out_dir, "ARFF-PHOTO-INTAKE.html"),
-                os.path.expanduser("~/Desktop/ARFF-PHOTO-INTAKE.html"))
+                os.path.join(desk, "index.html"))
+    stale = os.path.expanduser("~/Desktop/ARFF-PHOTO-INTAKE.html")
+    if os.path.exists(stale):
+        os.remove(stale)
 
     ok = sum(1 for r in inventory if r["ok"])
     print("\n%d images, %d readable, %d thumbnails"
           % (len(inventory), ok, sum(1 for r in inventory if r["thumb"])))
-    print("wrote %s/ARFF-PHOTO-INTAKE.html and ~/Desktop/ARFF-PHOTO-INTAKE.html"
-          % out_dir)
+    print("wrote %s/ARFF-PHOTO-INTAKE.html" % out_dir)
+    print("copied sheet + %d thumbnails to ~/Desktop/ARFF-PHOTO-INTAKE/"
+          % len(os.listdir(thumb_dir)))
 
 
 def write_sheet(inv, out_dir):

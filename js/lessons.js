@@ -61,7 +61,6 @@ const LESSON_OVERRIDES = {
     ],
     body: `
       <h3>T    {{photo:57726252385-f5c2dcb1-3acb-4e25-8b5f-d547cef0}}
-    {{photo:57790738354-1b9c1cc5-08b0-4663-a01b-da68af08}}
     {{photo:57855928595-c8e01ad1-0cb4-48c9-8f7c-69a28696}}
     {{photo:20130920-113843}}
 he objective, in the regulator's words</h3>
@@ -1638,13 +1637,9 @@ he objective, in the regulator's words</h3>
       'Dry chemical is effective but is not recommended on this type of fire.'
     ],
     body: `
-      <h3>T    {{photo:arff081717e}}
-    {{photo:iso-incident-command}}
-    {{photo:original}}
-    {{photo:c9tvkjguwaaoanq}}
+      <h3>T    {{photo:original}}
     {{photo:586099620-fire-department-wallpaper}}
     {{photo:1-436-110-arff-3}}
-    {{photo:1000w-q95-2}}
     {{photo:fire-fighters-3}}
 wo things that look identical</h3>
       <p>Doc 9137 Part 1 opens this topic by making a distinction it considers
@@ -2730,14 +2725,7 @@ wo things that look identical</h3>
       'Tell the operator what agent you used. Corrosion is a consequence you created.'
     ],
     body: `
-      <h3>T    {{photo:img-3479}}
-    {{photo:img-3481}}
-    {{photo:img-4289-copy-2}}
-    {{photo:dscn1267}}
-    {{photo:dscn1269}}
-    {{photo:img-4290-2}}
-    {{photo:maxresdefault-3}}
-he geometry decides where you can stand</h3>
+      <h3>The geometry decides where you can stand</h3>
       <p>Before any tactical discussion, the physical constraints. RFF personnel
       should stay <strong>at least 10 m from the front and side intake</strong>
       of a turbine engine to avoid being ingested, and remain
@@ -3270,7 +3258,6 @@ hy you cannot learn this from incidents</h3>
       <h3>T    {{photo:screenshot-2019-06-14-21-02-52}}
     {{photo:screenshot-2019-06-14-21-03-24}}
     {{photo:screenshot-2019-06-14-21-03-52}}
-    {{photo:screenshot-2019-06-14-21-03-58}}
     {{photo:screenshot-2019-06-14-21-04-15}}
     {{photo:screenshot-2019-06-14-21-04-22}}
 hree states, not one</h3>
@@ -5891,8 +5878,7 @@ egular doors and hatches first</h3>
     'Hand-held skin penetrating agent applicator tool (SPAAT) and manual penetrating nozzles are recognised alternatives (§8.1.15).'
   ],
   body: `
-    <h3>M    {{photo:dsc00553}}
-    {{photo:dsc00554}}
+    <h3>M    {{photo:dsc00554}}
     {{photo:work-7}}
     {{photo:work-1}}
     {{photo:work-2}}
@@ -6038,14 +6024,9 @@ atch the tool to the cut, not to the inventory</h3>
     'Detailed aircraft characteristics and crash charts are held by ICAO and by each manufacturer — the manual directs you there rather than reproducing them (§Appendix 1(c)).'
   ],
   body: `
-    <h3>T    {{photo:08919afb-3ade-4aae-9019-394677e683f1}}
-    {{photo:46a187c0-8768-4b60-b0a0-d05e56c7d773}}
-    {{photo:49f67e0f-02a8-4112-8bda-4dda28f94530}}
-    {{photo:5258e675-08e5-46ed-9d9a-cdbcdf524449}}
+    <h3>T    {{photo:49f67e0f-02a8-4112-8bda-4dda28f94530}}
     {{photo:6e0fa816-6a92-44b6-af5c-4b2076feeebd}}
     {{photo:b88d3575-d44b-40b6-8f75-2fc77cff3bf5}}
-    {{photo:4259040f-c908-476e-a132-cde6e64167e5}}
-    {{photo:aircraft-parking-stand-apron}}
 he manual tells you it cannot tell you</h3>
     <p>Appendix 1(a) is the most honest paragraph in the whole chapter, and it should be quoted in every familiarisation briefing: <strong>as the quantity of flammable liquids and combustible materials aboard an aircraft varies according to the aircraft model and the operations in which it is engaged, this material can provide only representative information. Personal inspections are necessary to appreciate the variations likely to be encountered in aircraft operations at a particular airport.</strong></p>
     <p>Read the structure of that sentence. ICAO gives representative information. ICAO tells you that is not enough. <strong>Personal inspections are necessary.</strong> So a service that has read the manual and a service that has walked its fleet are not equivalent, and only one of them can state where the fuel is on a particular aircraft.</p>

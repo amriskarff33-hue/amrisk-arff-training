@@ -20,6 +20,7 @@ Where the script cannot know, it says so in the sheet.
 Writes ARFF-PHOTO-SHORTLIST.html and shortlist.json next to the inventory.
 """
 
+import base64
 import collections
 import json
 import os
@@ -64,6 +65,8 @@ GRAPHIC = ("PICS MASTER/aircraft accidents", "PICS MASTER/RAMP ACCIDENTS",
 # for no visible gain. Measured across the 823 unique candidates: 351 are under
 # 800px and a further 61 sit between 800 and 1000, which is why several folders
 # return nothing at all.
+THUMBS = ''
+
 MAX_EDGE = 1000
 BAD_ASPECT = (0.35, 3.0)  # outside this it is a crop or a scan artefact
 
@@ -102,6 +105,8 @@ def main():
     if len(sys.argv) < 2:
         sys.exit(__doc__)
     inv_dir = sys.argv[1]
+    global THUMBS
+    THUMBS = os.path.join(inv_dir, 'thumbs')
     per = int(sys.argv[2]) if len(sys.argv) > 2 else 10
     inv = json.load(open(os.path.join(inv_dir, "inventory.json")))
 
@@ -151,6 +156,23 @@ def main():
     print("copied to ~/Desktop/ARFF-PHOTO-SHORTLIST.html")
 
 
+def data_uri(thumb_path):
+    """Inline the thumbnail as a data URI.
+
+    The sheet has to survive being copied to the Desktop, which is where it
+    actually gets looked at. A relative src="thumbs/x.jpg" resolves against the
+    Desktop and every photograph comes up blank, which is exactly what happened.
+    Inlining costs about a third more bytes and makes the file portable.
+    """
+    if not thumb_path:
+        return None
+    try:
+        with open(thumb_path, "rb") as f:
+            return "data:image/jpeg;base64," + base64.b64encode(f.read()).decode("ascii")
+    except Exception:
+        return None
+
+
 def cell(r):
     meta = ["%dx%d" % (r["w"], r["h"]), "%.0f KB" % (r["bytes"] / 1024.0)]
     if r.get("date"):
@@ -158,7 +180,9 @@ def cell(r):
     if r.get("lat") is not None:
         meta.append("GPS %.3f,%.3f" % (r["lat"], r["lon"]))
     meta.append("fits" if not r.get("needs_resize") else "resize")
-    thumb = '<img src="thumbs/%s" alt="%s" loading="lazy">' % (r["thumb"], escape(r["name"])) if r.get("thumb") else ""
+    uri = data_uri(os.path.join(THUMBS, r["thumb"])) if r.get("thumb") else None
+    thumb = '<img src="%s" alt="%s" loading="lazy">' % (uri, escape(r["name"])) if uri else \
+            '<span class="nothumb">no thumbnail</span>'
     return ('<figure data-path="%s"><div class="pic">%s</div>'
             '<figcaption><span class="fn">%s</span><span class="m">%s</span></figcaption>'
             '<label><input type="checkbox" class="pick"> use</label></figure>'
