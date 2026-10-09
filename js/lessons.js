@@ -60,8 +60,7 @@ const LESSON_OVERRIDES = {
       'Read the scope exclusion before you decide a demand is not your problem.'
     ],
     body: `
-      <h3>T    {{photo:57726252385-f5c2dcb1-3acb-4e25-8b5f-d547cef0}}
-    {{photo:57855928595-c8e01ad1-0cb4-48c9-8f7c-69a28696}}
+      <h3>T    {{photo:57855928595-c8e01ad1-0cb4-48c9-8f7c-69a28696}}
     {{photo:20130920-113843}}
 he objective, in the regulator's words</h3>
       <p>Annex 14 Volume I opens §9.2 — Rescue and firefighting — with an
@@ -1638,7 +1637,6 @@ he objective, in the regulator's words</h3>
     ],
     body: `
       <h3>T    {{photo:original}}
-    {{photo:586099620-fire-department-wallpaper}}
     {{photo:1-436-110-arff-3}}
     {{photo:fire-fighters-3}}
 wo things that look identical</h3>
@@ -2725,7 +2723,9 @@ wo things that look identical</h3>
       'Tell the operator what agent you used. Corrosion is a consequence you created.'
     ],
     body: `
-      <h3>The geometry decides where you can stand</h3>
+      <h3>T    {{photo:screenshot-2019-06-14-21-04-22}}
+    {{photo:screenshot-2019-06-14-21-04-15}}
+he geometry decides where you can stand</h3>
       <p>Before any tactical discussion, the physical constraints. RFF personnel
       should stay <strong>at least 10 m from the front and side intake</strong>
       of a turbine engine to avoid being ingested, and remain
@@ -3000,12 +3000,8 @@ wo things that look identical</h3>
     ],
     body: `
       <h3>W    {{photo:china-airlines-in-hangars-2}}
-    {{photo:china-airlines-in-hangars-4}}
-    {{photo:pic00019}}
     {{photo:china-airlines-crash3-2}}
-    {{photo:a380}}
     {{photo:china-airlines-in-hangars-5}}
-    {{photo:china-airlines-in-hangars-6}}
     {{photo:china-airlines-in-hangars-8}}
 hy you cannot learn this from incidents</h3>
       <p>Start from the constraint established in Course 08. RFF crews are
@@ -3255,12 +3251,7 @@ hy you cannot learn this from incidents</h3>
       'Decide deliberately which resource is committed and which is held — and say it aloud.'
     ],
     body: `
-      <h3>T    {{photo:screenshot-2019-06-14-21-02-52}}
-    {{photo:screenshot-2019-06-14-21-03-24}}
-    {{photo:screenshot-2019-06-14-21-03-52}}
-    {{photo:screenshot-2019-06-14-21-04-15}}
-    {{photo:screenshot-2019-06-14-21-04-22}}
-hree states, not one</h3>
+      <h3>Three states, not one</h3>
       <p>§11.2.1 classifies the aircraft emergencies for which services may be
       required, and the distinction is operationally significant:</p>
       <ul>
@@ -5008,7 +4999,8 @@ hree states, not one</h3>
     'The role of the vehicle is to reach the accident site quickly, protect evacuation paths, control any outbreak of fire and to initiate rescue (§5.2.2).'
   ],
   body: `
-    <h3>What counts as an RFF vehicle</h3>
+    <h3>W    {{photo:pic00019}}
+hat counts as an RFF vehicle</h3>
     <p>§5.2.1 draws the boundary explicitly, because airports buy vehicles that do not do the job. There are other vehicle types in use at airports, <em>such as command vehicles, used by officers in charge of a duty watch that have virtually no rescue or firefighting capability</em>. Some airports provide <em>auxiliary water tank vehicles, equipped with a pump and delivery hose, to replenish foam-producing vehicles at an aircraft accident. While these can provide a useful service, particularly where there are limited installed water supplies, they cannot be described as primary vehicles</em>.</p>
     <p>That is not a criticism of either vehicle. A command vehicle is genuinely useful, and a water tanker genuinely solves a real problem where hydrant coverage is thin. But neither discharges agent on the fire, so neither counts towards the response capability the level determination assumes. Chapter 5 considers only the RFF vehicles.</p>
 
@@ -5879,7 +5871,6 @@ egular doors and hatches first</h3>
   ],
   body: `
     <h3>M    {{photo:dsc00554}}
-    {{photo:work-7}}
     {{photo:work-1}}
     {{photo:work-2}}
     {{photo:work-4}}
@@ -6024,7 +6015,8 @@ atch the tool to the cut, not to the inventory</h3>
     'Detailed aircraft characteristics and crash charts are held by ICAO and by each manufacturer — the manual directs you there rather than reproducing them (§Appendix 1(c)).'
   ],
   body: `
-    <h3>T    {{photo:49f67e0f-02a8-4112-8bda-4dda28f94530}}
+    <h3>T    {{photo:a380}}
+    {{photo:49f67e0f-02a8-4112-8bda-4dda28f94530}}
     {{photo:6e0fa816-6a92-44b6-af5c-4b2076feeebd}}
     {{photo:b88d3575-d44b-40b6-8f75-2fc77cff3bf5}}
 he manual tells you it cannot tell you</h3>
