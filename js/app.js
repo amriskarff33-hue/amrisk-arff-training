@@ -750,6 +750,7 @@ function render() {
   else if (tab === 'learn')      { view.innerHTML = viewLearn(); sub.textContent = 'Course catalogue'; wireLearnFilters(); }
   else if (tab === 'progress')   { view.innerHTML = viewProgress(); sub.textContent = 'Progress & record'; }
   else if (tab === 'videos')     { view.innerHTML = videoLibrarySection(); sub.textContent = 'Video library'; }
+  else if (tab === 'standards') { view.innerHTML = standardsSection(); sub.textContent = 'South African regulatory basis'; }
   else if (tab === 'coach')      { view.innerHTML = viewCoach(); sub.textContent = 'Offline curriculum search'; }
   else if (tab === 'course')     { view.innerHTML = viewCourse(parts[1]); sub.textContent = 'Course'; }
   else if (tab === 'lesson')     { view.innerHTML = viewLesson(parts[1], parts[2]); sub.textContent = 'Lesson'; }
