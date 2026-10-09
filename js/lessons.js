@@ -4377,6 +4377,8 @@ const LESSON_OVERRIDES = {
   ],
   body: `
     <h3>The line between the two agent families</h3>
+
+    {{diagram:agent-selection}}
     <p>Annex 14 §9.2.8 requires that <strong>both principal and complementary agents should normally be provided at an aerodrome</strong>, and §9.2.10 states that <strong>the complementary extinguishing agent should be a dry chemical powder suitable for extinguishing hydrocarbon fires</strong> — with a note that when selecting dry chemical powders for use with foam, <em>care must be exercised to ensure compatibility</em>.</p>
     <p>So the selection is not free. Annex 14 names the family for you. What you choose within it, and how it interacts with your foam, is your responsibility.</p>
 
@@ -8075,6 +8077,8 @@ const LESSON_OVERRIDES = {
   ],
   body: `
     <h3>The accident where nothing is burning</h3>
+
+    {{diagram:spill-blanket}}
     <p>§12.1.9 is the opening instruction and it is written for the case everyone finds easier than they should:</p>
     <p><strong>Should spill of a flammable liquid occur without fire breaking out, it is important to eliminate as many ignition sources as possible while the spill is being neutralized or covered with foam. Engine ignition sources should be made inert or cooled.</strong></p>
     <p>Two activities running at once, and the sentence is structured so that they overlap. You are not supposed to finish clearing ignition sources and then start dealing with the spill. The ignition sources are being eliminated <em>while</em> the spill is neutralised or blanketed — because the spill is the thing making every ignition source significant.</p>

@@ -1063,6 +1063,149 @@ function dAirframeAccess() {
   return dgSvg(W, H, 'A schematic side view of an aircraft fuselage marking four access points — aft cabin door, galley and lavatory, cargo hold and cockpit — with their order of priority, and two panels noting where not to cut and the two standard rules.', s);
 }
 
+
+/* ============================================================================
+   16. FOAM BLANKET ON A FUEL POOL — SEQUENCE AND GEOMETRY
+   Doc 9137 Part 1 §12.1.9 requires ignition sources to be eliminated *while*
+   the spill is neutralised or covered with foam, and §8.1.1 sets the three
+   properties a blanket must have: flow freely over the fuel surface, resist
+   disruption by wind or heat or flame, and reseal ruptures. §8.1's FFFP film
+   spreads across fuel not covered by foam and is self-sealing.
+
+   This is drawn because "lay the blanket" is a sequence and an edge, and both
+   are invisible in prose. The 30 per cent of small-pour coverage and the
+   three-step sequence are from the manual; the pool geometry is schematic.
+   ========================================================================= */
+function dSpillBlanket() {
+  const W = 680, H = 560;
+
+  let s = '';
+  s += dgText(20, 22, 'Blanketing a fuel pool', 'dg-t--title');
+  s += dgText(20, 42, '§12.1.9 eliminate ignition sources *while* covering. §8.1.1 the blanket must flow freely, resist disruption, reseal.', 'dg-t--dim');
+
+  /* ---- The pool, plan view. Irregular because pools are. ---- */
+  s += `<path d="M60,150 C120,120 250,132 300,120 C380,102 470,126 520,110 C580,94 620,120 626,164
+         C636,214 600,246 610,268 C624,300 570,320 520,310 C450,296 380,330 300,318
+         C230,308 170,332 110,312 C52,292 34,258 48,222 C60,190 44,172 60,150 Z" class="dg-hazard"/>`;
+
+  // Airflow over the pool — the reason wind direction decides where you start.
+  s += dgArrow(70, 88, 250, 88, 'dg-accent', 2.8);
+  s += dgText(70, 74, 'WIND', 'dg-t--accent');
+  s += dgArrow(560, 88, 380, 88, 'dg-accent', 2.8);
+  s += dgChip(276, 100, 156, 26, 'START UPWIND — §8.1.1', 'dg-chip');
+
+  /* ---- Applied blanket: the upwind third is down first. ---- */
+  s += `<path d="M60,150 C120,120 180,132 210,128 L214,318 C170,332 130,318 110,312 C52,292 34,258 48,222 C60,190 44,172 60,150 Z" class="dg-fog"/>`;
+  s += dgText(120, 232, 'BLANKET', 'dg-t--warn', 'middle');
+  s += dgText(120, 250, 'APPLIED', 'dg-t--warn', 'middle');
+
+  /* ---- The film reaches further than the blanket. §8.1 FFFP. ---- */
+  s += `<path d="M210,128 C260,124 300,132 340,124 L344,316 C296,320 250,320 214,318 Z" class="dg-fogline"/>`;
+  s += dgText(278, 350, 'FFFP FILM', 'dg-t--accent', 'middle');
+  s += dgText(278, 366, 'reaches fuel no blanket has', 'dg-t--dim', 'middle');
+  s += dgText(278, 380, 'covered — self-sealing', 'dg-t--dim', 'middle');
+
+  /* ---- Downwind, still exposed. The last and hardest part. ---- */
+  s += `<path d="M520,116 C570,102 614,120 624,164 C634,212 600,246 610,268 C622,296 576,316 528,308 Z" class="dg-keepout"/>`;
+  s += dgText(578, 214, 'EXPOSED', 'dg-t--danger', 'middle');
+  s += dgText(578, 230, 'FUEL', 'dg-t--danger', 'middle');
+
+  /* ---- Crew position: upwind, never downwind. ---- */
+  s += `<circle cx="196" cy="104" r="15" class="dg-vehicle"/>`;
+  s += dgText(196, 108, 'C', 'dg-t--chip', 'middle');
+  s += dgArrow(196, 122, 186, 138, 'dg-good', 2.2);
+
+  /* ---- Ignition sources being eliminated at the same time. §12.1.9 ---- */
+  s += `<rect x="20" y="404" width="628" height="60" rx="10" class="dg-hazard"/>`;
+  s += dgText(36, 424, 'Not a sequence — a simultaneity', 'dg-t--danger');
+  s += dgText(36, 442, '§12.1.9: eliminate as many ignition sources as possible *while* the spill is neutralised', 'dg-t--ink');
+  s += dgText(36, 458, 'or covered. Done in series, the fuel is unprotected while you look for the ignition source.', 'dg-t--dim');
+
+  /* ---- The three properties, and what each one fails on. ---- */
+  s += dgText(20, 490, 'Three properties — §8.1.1', 'dg-t--head');
+  const props = [
+    ['Flows freely', 'if it will not spread it does not blanket. That is why the practical area is 2/3 of theoretical'],
+    ['Resists disruption', 'a blanket that breaks lets vapour and air meet again. Wind and vehicle movement both break it'],
+    ['Reseals', 'self-sealing is the difference between a transient disturbance and losing control entirely']
+  ];
+  props.forEach((p, i) => {
+    const x = 20 + i * 214;
+    s += `<rect x="${x}" y="500" width="200" height="52" rx="8" class="dg-cell"/>`;
+    s += dgText(x + 10, 517, p[0], 'dg-t--chip');
+    s += dgText(x + 10, 532, p[1].slice(0, 34), 'dg-t--dim');
+    s += dgText(x + 10, 546, p[1].slice(34), 'dg-t--dim');
+  });
+
+  return dgSvg(W, H, 'Plan view of an irregular fuel pool with the applied foam blanket on the upwind third, the film forming foam reaching further, exposed fuel still downwind, and the three required blanket properties listed with what each one fails on.', s);
+}
+
+/* ============================================================================
+   17. EXTINGUISHING AGENT SELECTION — DECISION PATH
+   Doc 9137 Part 1 Chapter 8 classifies the agents and ART-04 m2 turns that
+   into a selection problem. A selection problem is a decision tree, and a
+   decision tree is far clearer drawn than read. Every branch resolves to a
+   named agent and a cited clause.
+   ========================================================================= */
+function dAgentSelection() {
+  const W = 680, H = 580;
+
+  const box = (x, y, w, h, label, sub, cls) =>
+    `<rect x="${x}" y="${y}" width="${w}" height="${h}" rx="9" class="${cls || 'dg-cell'}"/>` +
+    dgText(x + w / 2, sub ? y + h / 2 - 10 : y + h / 2, label, 'dg-t--chip', 'middle') +
+    (sub ? dgText(x + w / 2, y + h / 2 + 10, sub, 'dg-t--dim', 'middle') : '');
+
+  let s = '';
+  s += dgText(20, 22, 'Which agent', 'dg-t--title');
+  s += dgText(20, 42, 'Start at the fire, not at the shelf. §2.3 principal agent · §2.4 complementary.', 'dg-t--dim');
+
+  s += box(20, 66, 150, 54, 'The fire', 'class A/B/C/D or AFFF', 'dg-hazard');
+
+  s += dgArrow(174, 84, 216, 84, 'dg-dim', 2.2);
+  s += box(220, 66, 132, 54, 'Liquid fuel', 'Jet A, kerosene');
+  s += dgArrow(356, 84, 398, 84, 'dg-dim', 2.2);
+  s += box(402, 66, 258, 54, 'FFFP foam', '§8.1(d) — fluid, film forming, oleophobic. Highly effective on fuel spills.', 'dg-fog');
+
+  s += dgArrow(292, 124, 292, 158, 'dg-dim', 2.2);
+  s += box(20, 162, 150, 54, 'Solid combustibles', 'Class A');
+  s += dgArrow(174, 180, 216, 180, 'dg-dim', 2.2);
+  s += box(220, 162, 132, 54, 'Water fog', '§12.2.2 cooling and quenching. Not a knock-down by jet.');
+  s += dgArrow(356, 180, 398, 180, 'dg-dim', 2.2);
+  s += box(402, 162, 258, 54, 'Water fog + foam on fuel', 'water cools, foam excludes the vapour', 'dg-fog');
+
+  s += dgArrow(292, 220, 292, 254, 'dg-dim', 2.2);
+  s += box(20, 258, 150, 54, 'Live electrical', 'Class C');
+  s += dgArrow(174, 276, 216, 276, 'dg-dim', 2.2);
+  s += box(220, 258, 132, 54, 'De-energise first', 'then the agent you would otherwise use');
+  s += dgArrow(356, 276, 398, 276, 'dg-dim', 2.2);
+  s += box(402, 258, 258, 54, 'Water fog, once dead', 'BC dry chemical is also rated for Class C', 'dg-fog');
+
+  s += dgArrow(292, 316, 292, 350, 'dg-dim', 2.2);
+  s += box(20, 354, 150, 54, 'Flammable metal', 'Class D');
+  s += dgArrow(174, 372, 216, 372, 'dg-dim', 2.2);
+  s += box(220, 354, 132, 54, 'Specialised agent', '§8.2.3', 'dg-hazard');
+  s += dgArrow(356, 372, 398, 372, 'dg-dim', 2.2);
+  s += box(402, 354, 258, 54, 'Not the powder you carry', 'conventional agents are not for Class D', 'dg-hazard');
+
+  // The complementary agent, always present.
+  s += `<rect x="20" y="432" width="640" height="62" rx="10" class="dg-cell"/>`;
+  s += dgText(36, 452, 'Alongside all of it: the complementary agent', 'dg-t--head');
+  s += dgText(36, 470, 'Dry chemical powder — §2.4. Knockdown, and §8.2.4 for inaccessible locations and running', 'dg-t--dim');
+  s += dgText(36, 486, 'fuel fires where foams are largely ineffective. No post-control stability. §12.3.4. Corrosive.', 'dg-t--dim');
+
+  // The two warnings that change the choice.
+  s += `<rect x="20" y="506" width="310" height="58" rx="10" class="dg-hazard"/>`;
+  s += dgText(34, 524, 'Performance level is not a preference', 'dg-t--danger');
+  s += dgText(34, 541, '§2.3 / Annex 14 §9.2.9 — A, B or C as the category', 'dg-t--dim');
+  s += dgText(34, 556, 'requires. A fluorine-free foam must still meet it.', 'dg-t--dim');
+
+  s += `<rect x="350" y="506" width="310" height="58" rx="10" class="dg-hazard"/>`;
+  s += dgText(364, 524, 'Fluorine-free changes the equipment', 'dg-t--danger');
+  s += dgText(364, 541, '§5.7.16 — expansion 6-10 not 8-12, drainage over 3 min', 'dg-t--dim');
+  s += dgText(364, 556, 'not over 5. Recommission the system, §8.1(e).', 'dg-t--dim');
+
+  return dgSvg(W, H, 'A decision tree starting from the class of fire and resolving to a named agent for each of liquid fuel, solid combustibles, live electrical and flammable metal, with the complementary dry chemical agent and two warnings about performance level and fluorine-free equipment settings.', s);
+}
+
 /* =========================================================================
    REGISTRY
    ========================================================================= */
@@ -1098,6 +1241,11 @@ const DIAGRAMS = {
     caption: '<b>The refill chain.</b> Main, hydrant, outlet, vehicle — and the six places it fails in practice. UAE GCAA CAR Part XI Appendix 3 1.8 requires hydrant supplies to be assessed for flow and pressure with two or more hydrants open to simulate multi-refill operations from the same main, because a single-hydrant test proves the hydrant rather than the main. Worked example of adoption mechanics, not a South African requirement. §3.2.5 and §3.2.6 cover the gate and the key.' },
   'airframe-access':     { draw: dAirframeAccess,
     caption: '<b>Choosing an access point.</b> A rescue decision that is also a fire decision. §12.1.11 states that rescue should be accomplished through regular doors and hatches wherever possible, and its note records that misuse of forcible entry tools has in a number of cases resulted in unnecessary fuel spills increasing the fire hazard. §12.3.1 adds that entry should not be attempted by any route in use by escaping occupants. Schematic only — confirm every mark against the aircraft type in your own fleet.' }
+  ,
+  'spill-blanket':       { draw: dSpillBlanket,
+    caption: '<b>Blanketing a fuel pool.</b> Start upwind and work down — §8.1.1 requires a foam to flow freely over the fuel surface, resist disruption from wind or heat or flame, and reseal ruptures. Film forming foam reaches fuel no blanket has covered and is self-sealing §8.1, so it extends the covered area but does not replace the blanket, which must still cover the fuel surface to ensure extinction. §12.1.9 requires ignition sources to be eliminated <em>while</em> the spill is being covered, not before. Pool outline is schematic.' },
+  'agent-selection':     { draw: dAgentSelection,
+    caption: '<b>Which agent.</b> Start at the class of fire rather than at the shelf. Liquid fuel takes FFFP foam §8.1(d); solid combustibles take water fog for cooling and quenching §12.2.2; live electrical must be de-energised before any agent; flammable metal needs a specialised agent §8.2.3 that is not the powder you carry. The complementary agent is dry chemical powder alongside all of them §2.4 — knockdown only, no post-control stability §12.3.4, and corrosive §8.2.5. Performance level A, B or C is required by category §2.3 and Annex 14 §9.2.9 and is not a preference, and a fluorine-free foam must still meet it while requiring different expansion and drainage settings §5.7.16, §8.1(e).' }
 };
 
 const DIAGRAM_KEYS = Object.keys(DIAGRAMS);
